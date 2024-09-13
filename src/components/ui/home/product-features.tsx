@@ -11,13 +11,13 @@ function ProductFeatures() {
   return (
     <div className="bg-primary rounded-xxl text-primary-foreground px-8  lg:px-16 pt-20 tracking-wide">
       <div className="flex flex-col justify-between space-y-16 lg:flex-row lg:space-y-0">
-        <div className="w-[100%] lg:w-[50%]">
+        <div className="w-[100%] lg:w-[55%]">
           <h6> Newly Launched!</h6>
-          <h1 className="font-piepie text-3xl lg:text-6xl tracking-wide">
+          <h1 className="font-piepie text-3xl lg:text-5xl tracking-wide">
             Meet <span className="text-yellow-300">Zing</span>: The Fun and
             Lively Humanoid Robot
           </h1>
-          <p className="py-2 lg:py-6 text-lg font-body font-thin md:text-xl">
+          <p className="py-2 lg:py-6 text-lg font-body font-thin ">
             A 30 cm marvel with 17 degrees of freedom, crafted for endless
             exploration and creativity.
           </p>

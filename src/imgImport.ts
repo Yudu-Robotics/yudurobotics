@@ -4,10 +4,14 @@ const favicon = "/assets/favicon.png";
 
 // home
 const headerSection = "/assets/home/Section.png";
+const footerSection = "/assets/home/FooterSection.png";
 const homeImage = "/assets/home/homeImage.png";
 const star1 = "/assets/home/star1.png";
 const star2 = "/assets/home/star2.png";
 const blurStar = "/assets/home/blurStar.png";
+const avtarGroup = "/assets/home/Avatar group.png";
+const appStore = "/assets/home/AppStoreBadge.png";
+const googlePlay = "/assets/home/GooglePlayBadge.png";
 
 // zing
 const humanoid = "/assets/zing/Humanoid.png";
@@ -17,6 +21,9 @@ const productDetail1 = "/assets/zing/productDetail1.png";
 // other
 const arrow = "/assets/other/arrow.png";
 const searchIcon = "/assets/other/searchIcon.png";
+const arrowUpRight = "/assets/other/arrow-up-right.png";
+
+
 
 function renderImg(imgName: string) {
   switch (imgName) {
@@ -30,6 +37,15 @@ function renderImg(imgName: string) {
     case "headerSection":
       return headerSection;
 
+    case "footerSection":
+      return footerSection;
+
+      case "appStore":
+        return appStore;
+
+      case "googlePlay":
+        return googlePlay;
+
     case "homeImage":
       return homeImage;
 
@@ -41,6 +57,9 @@ function renderImg(imgName: string) {
 
     case "star2":
       return star2;
+
+    case "avtarGroup":
+      return avtarGroup;
 
     // zing
     case "humanoid":
@@ -54,6 +73,9 @@ function renderImg(imgName: string) {
     // other
     case "arrow":
       return arrow;
+
+    case "arrowUpRight":
+      return arrowUpRight;
 
     case "searchIcon":
       return searchIcon;

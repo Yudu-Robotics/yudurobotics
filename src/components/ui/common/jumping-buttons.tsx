@@ -6,7 +6,9 @@ const JumpingButtons: React.FC<{ ishorizontal: string }> = ({
   return (
     <div
       className={`${
-        ishorizontal == "true" ? "flex flex-row" : "flex flex-row lg:flex-col lg:space-y-10"
+        ishorizontal == "true"
+          ? "flex flex-row"
+          : "flex flex-row lg:flex-col lg:space-y-10"
       } justify-center items-center space-x-10 px-12`}
     >
       <div>
@@ -15,7 +17,7 @@ const JumpingButtons: React.FC<{ ishorizontal: string }> = ({
           <span className="block font-bold italic">Explore</span>
         </div>
 
-        <div className="rounded-full border-green-400 -mt-28 border h-20 w-20 lg:h-40 lg:w-40"></div>
+        <div className="rounded-full border-green-400 -mt-24 border h-20 w-20 lg:h-40 lg:w-40 lg:-mt-32"></div>
       </div>
 
       <div>
@@ -24,7 +26,7 @@ const JumpingButtons: React.FC<{ ishorizontal: string }> = ({
           <span className="block font-bold italic">Join Forces</span>
         </div>
 
-        <div className="rounded-full border-white -mt-28 border h-20 w-20 lg:h-40 lg:w-40"></div>
+        <div className="rounded-full border-white -mt-24 border h-20 w-20 lg:h-40 lg:w-40 lg:-mt-32"></div>
       </div>
     </div>
   );

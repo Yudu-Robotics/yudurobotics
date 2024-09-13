@@ -27,7 +27,7 @@ export default function ProductGrid() {
   ];
 
   return (
-    <div className="container w-[100%] ml-10 px-24">
+    <div className="container w-[100%] lg:ml-10 lg:px-24">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {products.map((product, index) => (
           <div key={index} className="flex flex-col space-y-2 p-4 hover:bg-card-foreground rounded-lg hover:scale-90">
@@ -40,9 +40,9 @@ export default function ProductGrid() {
               />
             </div>
             {/* Product Title */}
-            <h3 className="text-xl font-light mb-2 lg:text-2xl">{product.name}</h3>
+            <h3 className="text-lg font-light mb-2 lg:text-xl">{product.name}</h3>
             {/* Product Description */}
-            <p className="text-start text-gray-600 text-base tracking-wider lg:text-lg">{product.description}</p>
+            <p className="text-start text-gray-600 text-xs tracking-wide lg:text-sm">{product.description}</p>
           </div>
         ))}
       </div>

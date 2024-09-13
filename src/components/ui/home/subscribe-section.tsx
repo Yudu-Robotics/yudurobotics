@@ -2,18 +2,18 @@ export default function SubscribeSection() {
   return (
     <div className="bg-primary rounded-xxl text-white px-8 py-16 flex flex-col items-center justify-center">
       {/* Main Heading */}
-      <h1 className="text-3xl md:text-5xl mb-4 text-center font-piepie">
+      <h1 className="text-3xl md:text-5xl mb-4 text-center font-piepie tracking-wide">
         Partner with Yudu
       </h1>
 
       {/* Subtitle */}
-      <p className="text-base md:text-xl text-center font-thin w-[60%]">
+      <p className="text-base md:text-lg text-center font-thin w-[60%]">
         Join us in revolutionizing robotics. Get exclusive updates,
         collaboration opportunities, and insights straight to your inbox. Let’s
         innovate together.
       </p>
 
-      <p className="text-base text-center py-8 font-thin lg:text-xl">
+      <p className="text-base text-center py-8 font-thin lg:text-lg">
         Stay connected. Stay innovative.
       </p>
 

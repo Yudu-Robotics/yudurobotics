@@ -13,6 +13,7 @@ import {
 
 import React from "react";
 import renderImg from "@/imgImport";
+import Footer from "@/components/ui/footer/footer";
 
 export default function HomeLayout({
   children,
@@ -22,7 +23,7 @@ export default function HomeLayout({
   const NavBarItems = [
     "Y/Our Products",
     "The Partner Program",
-    "Crazier Behind",
+    "Crazies Behind",
     "Resources",
     "Blogs",
   ];
@@ -54,8 +55,10 @@ export default function HomeLayout({
         </div>
       </div>
       {children}
+      <div className="w-full -mb-1"><img src={renderImg("footerSection")} className="w-full"/></div>
+      <div className="px-12 lg:px-28 py-4 bg-primary">
+        <Footer />
+      </div>
     </div>
   );
 }
-
-

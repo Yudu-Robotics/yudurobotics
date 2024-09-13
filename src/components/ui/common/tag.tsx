@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
 
-const ProductTag:React.FC<{ title: string }> = ({title}) => {
+const ProductTag: React.FC<{ title: string; color: string }> = ({
+  title,
+  color,
+}) => {
   return (
-    <div className='bg-green-100 rounded-2xl text-sm border font-medium border-green-500 font-body text-green-900 w-12 p-1 text-center'>{title}</div>
-  )
-}
+    <div
+      className={`rounded-2xl text-xs border font-medium border-${color} font-body text-${color} px-2 py-1 text-center`}
+    >
+      {title}
+    </div>
+  );
+};
 
-export default ProductTag
+export default ProductTag;

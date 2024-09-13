@@ -10,7 +10,14 @@ import ProductCategories from "@/components/ui/home/product-categories";
 import SubscribeSection from "@/components/ui/home/subscribe-section";
 import TeamGrid from "@/components/ui/home/team-grid";
 import Ourteam from "@/components/ui/home/our-team";
-import FAQs from "@/components/ui/home/faqs";
+import LatestPosts from "@/components/ui/home/latest-posts";
+import dynamic from "next/dynamic";
+
+import GetInTouch from "@/components/ui/common/get-in-touch";
+
+const FAQs = dynamic(() => import("@/components/ui/home/faqs"), {
+  ssr: false, // This disables server-side rendering for the FAQ component
+});
 
 export default function HomePage() {
   return (
@@ -52,7 +59,7 @@ export default function HomePage() {
           <CeoReviewsContainer />
         </div>
       </div>
-      <div className="">
+      <div className="w-full -mt-1">
         <img src={renderImg("headerSection")} className="w-full" />
       </div>
       {/* Middle Part */}
@@ -73,11 +80,18 @@ export default function HomePage() {
           <SubscribeSection />
         </div>
 
-        <div className="py-20">
+        <div className="py-10 lg:py-20">
           <Ourteam />
         </div>
-        <div className="py-20">
+        <div>
+          <LatestPosts />
+        </div>
+        <div className="py-5 lg:py-20">
           <FAQs />
+        </div>
+
+        <div>
+          <GetInTouch />
         </div>
       </div>
     </>

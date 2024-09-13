@@ -24,7 +24,7 @@ export default function SearchAndFilter() {
       </div>
 
       <div className="flex flex-col lg:flex-row lg:space-x-4 space-y-6 lg:space-y-0 font-bold">
-        <div className="flex items-center space-x-2 bg-white border border-gray-500 rounded-full px-2 py-1 text-sm lg:text-base">
+        <div className="flex items-center space-x-2 bg-white border border-gray-500 rounded-full px-2 py-1 text-sm lg:text-sm">
           {filters.map((filter, index) => (
             <button
               key={index}
@@ -37,7 +37,7 @@ export default function SearchAndFilter() {
           ))}
         </div>
 
-        <div className="flex items-center space-x-2 border border-gray-500 rounded-full px-2 py-1 text-sm lg:text-base">
+        <div className="flex items-center space-x-2 border border-gray-500 rounded-full px-2 py-1 text-sm lg:text-sm">
           {ageGroups.map((age, index) => (
             <button
               key={index}
