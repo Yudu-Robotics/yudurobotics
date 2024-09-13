@@ -2,26 +2,81 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* White for background and text elements */
+    --background: 0 0% 100%; /* White background */
+    --foreground: 0 0% 100%; /* White text */
+    --card: 257 79% 52%; /* White card background */
+    --card-foreground: 255, 95%, 93%; /* White card text */
+    --popover: 252 92%, 66%; /* White popover background */
+    --popover-foreground: 210 20% 70%; /* White popover text */
+    --primary-foreground: 0 0% 100%; /* White primary text */
+    --secondary-foreground: 0 0% 100%; /* White secondary text */
+    --muted-foreground: 0 0% 100%; /* White muted text */
+    --accent-foreground: 0 0% 100%; /* White accent text */
+    --destructive-foreground: 0 0% 100%; /* White destructive text */
+
+    /* Blue for buttons, fills, and other elements */
+    --primary: 255, 80%, 52%; /* Blue shade for buttons, fills */
+    --secondary: 252 92% 66%; /* Blue shade for secondary elements */
+    --muted: 257 79% 52%; /* Blue shade for muted elements */
+    --accent: 257 79% 52%; /* Blue shade for accent elements */
+    --destructive: 257 79% 52%; /* Blue shade for destructive elements */
+    --border: 257 79% 52%; /* Blue for borders */
+    --input: 257 79% 52%; /* Blue input fill */
+    --ring: 257 79% 52%; /* Blue ring (e.g., focus ring) */
+
+    /* White for chart backgrounds, keeping charts colored */
+    --chart-1: 257 79% 52%; /* Blue shade */
+    --chart-2: 257 79% 52%; /* Blue shade */
+    --chart-3: 257 79% 52%; /* Blue shade */
+    --chart-4: 257 79% 52%; /* Blue shade */
+    --chart-5: 257 79% 52%; /* Blue shade */
+
+    --radius: 1rem; /* Keep the border radius unchanged */
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 263.4 70% 50.4%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 263.4 70% 50.4%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+@font-face {
+  font-family: "PiePie";
+  src: url("../../fonts/PiepieFonts.ttf") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
