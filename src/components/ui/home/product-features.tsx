@@ -14,7 +14,7 @@ function ProductFeatures() {
         <div className="w-[100%] lg:w-[55%]">
           <h6> Newly Launched!</h6>
           <h1 className="font-piepie text-3xl lg:text-5xl tracking-wide">
-            Meet <span className="text-yellow-300">Zing</span>: The Fun and
+            Meet <span className="text-destructive">Zing</span>: The Fun and
             Lively Humanoid Robot
           </h1>
           <p className="py-2 lg:py-6 text-lg font-body font-thin ">

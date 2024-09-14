@@ -53,19 +53,24 @@ const FAQs = () => {
         <h1 className="font-piepie text-xl lg:text-2xl text-black tracking-wider">
           Got Questions? We{"'"} Got Answers
         </h1>
-        <p className="text-gray-600">
+        <p className="text-secondary-foreground">
           Find the information you need with our frequently asked questions.
         </p>
       </div>
       {/* <div className="flex flex-col space-y-6 justify-start items-center"> */}
       <div className="max-w-4xl mx-auto px-4 py-0 lg:py-10">
         {faqData.map((item, index) => (
-          <div key={index} className="border-b border-gray-300 py-6">
+          <div
+            key={index}
+            className="border-b border-secondary-foreground py-6"
+          >
             <button
               onClick={() => toggleFAQ(index)}
               className="flex justify-between items-center w-full focus:outline-none"
             >
-              <h3 className="text-sm text-start lg:text-lg text-black">{item.question}</h3>
+              <h3 className="text-sm text-start lg:text-lg text-black">
+                {item.question}
+              </h3>
               <img
                 src={
                   openIndex === index
@@ -77,7 +82,7 @@ const FAQs = () => {
               />
             </button>
             <div
-              className={`mt-2 text-gray-600 transition-max-height duration-500 ease-in-out overflow-hidden text-xs lg:text-base ${
+              className={`mt-2 text-secondary-foreground transition-max-height duration-500 ease-in-out overflow-hidden text-xs lg:text-base ${
                 openIndex === index ? "max-h-40" : "max-h-0"
               }`}
             >

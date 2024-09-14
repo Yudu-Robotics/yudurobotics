@@ -3,6 +3,7 @@ import JumpingButtons from "../common/jumping-buttons";
 import renderImg from "@/imgImport";
 import ContactForm from "../common/contact-us-form";
 import BottomFooter from "./bottom-footer";
+import renderSvg from "@/svgImport";
 
 const Footer = () => {
   const contact_options = [
@@ -10,36 +11,36 @@ const Footer = () => {
       type: "Email",
       text: "Our friendly team is here to help.",
       contact_by: "support@yudurobotics.com",
-      icon_image: "/assets/icons/mail-01.png",
+      icon_image: "mailIcon",
     },
     {
       type: "Live chat",
       text: "Our friendly team is here to help.",
       contact_by: "start new chat",
-      icon_image: "/assets/icons/message-chat-circle.png",
+      icon_image: "liveChatIcon",
     },
     {
       type: "Office",
       text: "Come say hello at our office HQ.",
       contact_by:
         "No.29, Bereterna Agrahara Next to Play Factor Hosur Main Road, Electronic City Bangalore Karnataka, India",
-      icon_image: "/assets/icons/marker-pin-02.png",
+      icon_image: "mapIcon",
     },
     {
       type: "Phone",
       text: "Mon-Fri from 8am to 5pm.",
       contact_by: "+1 (555) 000-0000",
-      icon_image: "/assets/icons/phone.png",
+      icon_image: "phoneIcon",
     },
   ];
 
   const social_share = [
-    "/assets/icons/Social icon.png",
-    "/assets/icons/Social icon (1).png",
-    "/assets/icons/Social icon (2).png",
-    "/assets/icons/Social icon (3).png",
-    "/assets/icons/Social icon (4).png",
-    "/assets/icons/Social icon (5).png",
+    "twitterIcon",
+    "linkedInIcon",
+    "fbIcon",
+    "instaIcon",
+    "ytIcon",
+    "googleIcon",
   ];
 
   return (
@@ -85,12 +86,12 @@ const Footer = () => {
                       type: string;
                       text: string;
                       contact_by: string;
-                      icon_image?: undefined;
+                      icon_image: string;
                     },
                 key: number
               ) => (
                 <div key={key} className="flex flex-col space-y-2">
-                  <img src={value.icon_image} className="w-6" />
+                  {renderSvg(value.icon_image)}
                   <h1>{value.type}</h1>
                   <p className="font-thin">{value.text}</p>
                   <p className="w-[70%] text-sm">{value.contact_by}</p>
@@ -107,8 +108,7 @@ const Footer = () => {
         <div className="flex justify-between">
           <div className="flex flex-col space-y-4">
             <div className="flex space-x-3 justify-start items-center">
-              <img className="" src={renderImg("favicon")} />
-              <img className="" src={renderImg("logo")} />
+              {renderSvg("logoYudoRobo")}
             </div>
             <p className="font-thin w-[70%] text-sm">
               Empowering innovation and creativity through cutting-edge
@@ -131,9 +131,7 @@ const Footer = () => {
           </p>
           <div className="flex space-x-6">
             {social_share.map((value: string, key: number) => (
-              <div key={key}>
-                <img src={value} className="w-6" />
-              </div>
+              <div key={key}>{renderSvg(value)}</div>
             ))}
           </div>
         </div>

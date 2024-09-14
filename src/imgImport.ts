@@ -3,7 +3,7 @@ const logo = "/assets/Logo.png";
 const favicon = "/assets/favicon.png";
 
 // home
-const headerSection = "/assets/home/Section.png";
+const headerSection = "/assets/other/Section Seperators.svg";
 const footerSection = "/assets/home/FooterSection.png";
 const homeImage = "/assets/home/homeImage.png";
 const star1 = "/assets/home/star1.png";
@@ -23,8 +23,6 @@ const arrow = "/assets/other/arrow.png";
 const searchIcon = "/assets/other/searchIcon.png";
 const arrowUpRight = "/assets/other/arrow-up-right.png";
 
-
-
 function renderImg(imgName: string) {
   switch (imgName) {
     // home
@@ -40,11 +38,11 @@ function renderImg(imgName: string) {
     case "footerSection":
       return footerSection;
 
-      case "appStore":
-        return appStore;
+    case "appStore":
+      return appStore;
 
-      case "googlePlay":
-        return googlePlay;
+    case "googlePlay":
+      return googlePlay;
 
     case "homeImage":
       return homeImage;

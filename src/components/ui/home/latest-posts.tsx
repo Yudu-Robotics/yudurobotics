@@ -44,7 +44,7 @@ const LatestPosts = () => {
         <h2 className="text-lg lg:text-3xl font-piepie tracking-wider">
           Dive into Our Insights
         </h2>
-        <h3 className="text-gray-600 text-center text-sm lg:text-lg">
+        <h3 className="text-secondary-foreground text-center text-sm lg:text-lg">
           Interviews, tips, guides, industry best practices and news.
         </h3>
       </div>
@@ -75,7 +75,7 @@ const LatestPosts = () => {
                   className="w-4 h-4 lg:w-8 lg:h-8"
                 />
               </div>
-              <p className="text-sm lg:text-base text-gray-600">
+              <p className="text-sm lg:text-base text-secondary-foreground">
                 {" "}
                 {value.desc}
               </p>

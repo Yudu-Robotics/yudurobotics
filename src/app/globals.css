@@ -4,37 +4,69 @@
 
 @layer base {
   :root {
-    /* White for background and text elements */
-    --background: 0 0% 100%; /* White background */
-    --foreground: 0 0% 100%; /* White text */
-    --card: 257 79% 52%; /* White card background */
-    --card-foreground: 255, 95%, 93%; /* White card text */
-    --popover: 252 92%, 66%; /* White popover background */
-    --popover-foreground: 210 20% 70%; /* White popover text */
-    --primary-foreground: 0 0% 100%; /* White primary text */
-    --secondary-foreground: 0 0% 100%; /* White secondary text */
-    --muted-foreground: 0 0% 100%; /* White muted text */
-    --accent-foreground: 0 0% 100%; /* White accent text */
-    --destructive-foreground: 0 0% 100%; /* White destructive text */
+    --primary: 255, 80%, 52%; /* Blue*/
+    --primary-foreground: 0 0% 100%; /* white for background and other */
+    --destructive: 55, 80%, 52%; /* Yellow for Highlight*/
+    --secondary: 252 92% 66%;
+    --secondary-foreground: 240, 3%, 30%; /* gray color for light text*/
 
-    /* Blue for buttons, fills, and other elements */
-    --primary: 255, 80%, 52%; /* Blue shade for buttons, fills */
-    --secondary: 252 92% 66%; /* Blue shade for secondary elements */
-    --muted: 257 79% 52%; /* Blue shade for muted elements */
-    --accent: 257 79% 52%; /* Blue shade for accent elements */
-    --destructive: 257 79% 52%; /* Blue shade for destructive elements */
-    --border: 257 79% 52%; /* Blue for borders */
-    --input: 257 79% 52%; /* Blue input fill */
-    --ring: 257 79% 52%; /* Blue ring (e.g., focus ring) */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 100%;
+    --card: 257 79% 52%;
+    --card-foreground: 255, 95%, 93%;
+    --popover: 252 92%, 66%;
+    --popover-foreground: 210 20% 70%;
+    --muted: 257 79% 52%;
+    --accent: 257 79% 52%;
+    --border: 257 79% 52%;
+    --input: 257 79% 52%;
+    --ring: 257 79% 52%;
+    --muted-foreground: 0 0% 100%;
+    --accent-foreground: 0 0% 100%;
+    --destructive-foreground: 0 0% 100%;
 
     /* White for chart backgrounds, keeping charts colored */
-    --chart-1: 257 79% 52%; /* Blue shade */
-    --chart-2: 257 79% 52%; /* Blue shade */
-    --chart-3: 257 79% 52%; /* Blue shade */
-    --chart-4: 257 79% 52%; /* Blue shade */
-    --chart-5: 257 79% 52%; /* Blue shade */
+    --chart-1: 257 79% 52%;
+    --chart-2: 257 79% 52%;
+    --chart-3: 257 79% 52%;
+    --chart-4: 257 79% 52%;
+    --chart-5: 257 79% 52%;
 
     --radius: 1rem; /* Keep the border radius unchanged */
+  }
+
+  .peecee {
+    --primary: 55, 80%, 52%; /* Yellow  */
+    --primary-foreground: 55, 73%, 6%; /* Black */
+    --destructive: 354, 86%, 56%; /* red for highlight text*/
+    --secondary-foreground: 240, 3%, 30%; /* gray color for light text*/
+
+    --background: 0 0% 100%;
+    --foreground: 0 0% 100%;
+    --card: 257 79% 52%;
+    --card-foreground: 255, 95%, 93%;
+    --popover: 252 92%, 66%;
+    --popover-foreground: 210 20% 70%;
+    --muted-foreground: 0 0% 100%;
+    --accent-foreground: 0 0% 100%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Yellow for buttons, fills, and other elements */
+
+    --secondary: 252 92% 66%;
+    --muted: 257 79% 52%;
+    --accent: 257 79% 52%;
+    --border: 257 79% 52%;
+    --input: 257 79% 52%;
+    --ring: 257 79% 52%;
+
+    --chart-1: 257 79% 52%;
+    --chart-2: 257 79% 52%;
+    --chart-3: 257 79% 52%;
+    --chart-4: 257 79% 52%;
+    --chart-5: 257 79% 52%;
+
+    --radius: 1rem;
   }
 
   .dark {

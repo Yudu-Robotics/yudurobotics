@@ -13,13 +13,13 @@ const Ourteam = () => {
             <span className="text-primary">work with you</span>
           </p>
           <div className="flex space-x-4">
-            <Button className="bg-primary-foreground text-gray-800 border border-gray-400 hover:text-secondary-foreground">
+            <Button className="bg-primary-foreground text-gray-800 border border-secondary-foreground hover:text-secondary-foreground">
               About us{" "}
             </Button>
             <Button className="hover:border "> Open positions </Button>
           </div>
         </div>
-        <p className="text-sm lg:text-base lg:w-[50%] text-gray-700">
+        <p className="text-sm lg:text-base lg:w-[50%] text-secondary-foreground">
           Here are some of the talented people who bring Yudu Robotics to life.
           Creative thinkers, tech innovators, and problem solvers—get to know
           the team that turns "crazy" ideas into groundbreaking realities.

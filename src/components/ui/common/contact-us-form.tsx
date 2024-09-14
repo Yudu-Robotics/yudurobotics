@@ -30,7 +30,7 @@ export default function ContactForm() {
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="flex space-x-4">
             <div className="w-1/2">
-              <label className="block text-xs font-medium text-gray-700">
+              <label className="block text-xs font-medium text-secondary-foreground">
                 First name <span className="text-primary">*</span>
               </label>
               <input
@@ -38,14 +38,14 @@ export default function ContactForm() {
                 name="firstName"
                 value={formData.firstName}
                 onChange={handleChange}
-                className="mt-1 block w-full px-4 py-2 border border-gray-300 text-sm text-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                className="mt-1 block w-full px-4 py-2 border border-secondary-foreground text-sm text-secondary-foreground rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="First name"
                 required
               />
             </div>
 
             <div className="w-1/2">
-              <label className="block text-xs font-medium text-gray-700">
+              <label className="block text-xs font-medium text-secondary-foreground">
                 Last name <span className="text-primary">*</span>
               </label>
               <input
@@ -53,7 +53,7 @@ export default function ContactForm() {
                 name="lastName"
                 value={formData.lastName}
                 onChange={handleChange}
-                className="mt-1 block w-full px-4 py-2 border border-gray-300 text-sm text-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                className="mt-1 block w-full px-4 py-2 border border-secondary-foreground text-sm text-secondary-foreground rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="Last name"
                 required
               />
@@ -61,7 +61,7 @@ export default function ContactForm() {
           </div>
 
           <div>
-            <label className="block text-xs font-medium text-gray-700">
+            <label className="block text-xs font-medium text-secondary-foreground">
               Email <span className="text-primary">*</span>
             </label>
             <input
@@ -69,21 +69,21 @@ export default function ContactForm() {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="mt-1 block w-full px-4 py-2 border border-gray-300 text-sm rounded-md text-gray-600 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+              className="mt-1 block w-full px-4 py-2 border border-secondary-foreground text-sm rounded-md text-secondary-foreground shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="you@company.com"
               required
             />
           </div>
 
           <div>
-            <label className="block text-xs font-medium text-gray-700">
+            <label className="block text-xs font-medium text-secondary-foreground">
               Message <span className="text-primary">*</span>
             </label>
             <textarea
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className="mt-1 block w-full px-4 py-2 border border-gray-300 text-sm text-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+              className="mt-1 block w-full px-4 py-2 border border-secondary-foreground text-sm text-secondary-foreground rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="Leave us a message..."
               rows={4}
               required
@@ -98,14 +98,14 @@ export default function ContactForm() {
                 type="checkbox"
                 checked={formData.privacyPolicy}
                 onChange={handleChange}
-                className="focus:ring-primary h-4 w-4 text-primary border-gray-300 text-sm text-gray-600 rounded-lg"
+                className="focus:ring-primary h-4 w-4 border-secondary-foreground text-sm text-secondary-foreground rounded-lg"
                 required
               />
             </div>
             <div className="ml-2 text-xs">
               <label
                 htmlFor="privacyPolicy"
-                className="font-medium text-gray-700"
+                className="font-medium text-secondary-foreground"
               >
                 You agree to our friendly{" "}
                 <a href="#" className="text-primary underline">
@@ -119,7 +119,7 @@ export default function ContactForm() {
           <div>
             <button
               type="submit"
-              className="w-full py-3 px-6 bg-primary text-white rounded-md shadow-lg font-semibold text-lg hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+              className="w-full py-3 px-6 bg-primary cursor-pointer text-primary-foreground rounded-md shadow-lg font-semibold text-lg hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
             >
               Send message
             </button>

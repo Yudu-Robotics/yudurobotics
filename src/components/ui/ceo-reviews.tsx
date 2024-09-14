@@ -15,7 +15,7 @@ function CeoReviewsContainer() {
         </div>
 
         <div className="flex items-center">
-          <p className="text-center  items-center font-piepie text-2xl md:text-4xl lg:text-6xl tracking-wider text-white">
+          <p className="text-center  items-center font-piepie text-2xl md:text-4xl lg:text-6xl tracking-wider text-primary-foreground">
             Yudu Robotics has been an incredible partner, blending creativity
             with cutting-edge tech to drive innovation like never before.
           </p>

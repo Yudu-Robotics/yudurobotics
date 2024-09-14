@@ -74,18 +74,16 @@ export default function BottomFooter() {
   return (
     <footer className="py-6">
       <div className="">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-12">
           {footerData.map((section, index) => (
             <div key={index}>
-              <h4 className="text-white font-thin mb-4 text-xs">
-                {section.title}
-              </h4>
+              <h4 className="font-thin mb-4 text-xs">{section.title}</h4>
               <ul>
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex} className="">
                     <a
                       href={link.href}
-                      className="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-semibold"
+                      className=" text-primary-foreground transition-colors duration-200 text-sm font-semibold"
                     >
                       {link.name}
                     </a>

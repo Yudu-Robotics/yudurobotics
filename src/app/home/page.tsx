@@ -14,6 +14,7 @@ import LatestPosts from "@/components/ui/home/latest-posts";
 import dynamic from "next/dynamic";
 
 import GetInTouch from "@/components/ui/common/get-in-touch";
+import renderSvg from "@/svgImport";
 
 const FAQs = dynamic(() => import("@/components/ui/home/faqs"), {
   ssr: false, // This disables server-side rendering for the FAQ component
@@ -22,7 +23,7 @@ const FAQs = dynamic(() => import("@/components/ui/home/faqs"), {
 export default function HomePage() {
   return (
     <>
-      <div className="px-12 lg:px-28 py-4 bg-primary">
+      <div className="px-8 lg:px-28 py-4 bg-primary">
         <div className="flex flex-col space-y-16 lg:flex-row lg:space-y-0 justify-between py-10">
           <div className="w-full">
             <div className="mb-6">
@@ -33,15 +34,15 @@ export default function HomePage() {
 
             <div className="space-y-4">
               {/* Main Headline */}
-              <div className="font-piepie text-5xl md:text-6xl lg:text-7xl tracking-wider">
-                <span className="text-white">From</span>{" "}
-                <span className="text-yellow-400">Precision 3D Printers</span>{" "}
-                <span className="text-white">to Playful</span>{" "}
-                <span className="text-yellow-400">Robots and Drones</span>
+              <div className="font-piepie text-5xl md:text-6xl lg:text-7xl tracking-wider text-primary-foreground">
+                <span className="">From</span>{" "}
+                <span className="text-destructive">Precision 3D Printers</span>{" "}
+                <span className="">to Playful</span>{" "}
+                <span className="text-destructive">Robots and Drones</span>
               </div>
 
               {/* Subtext */}
-              <div className="text-secondary-foreground text-lg md:text-xl lg:text-2xl font-body w-[100%] lg:w-[75%]">
+              <div className="text-primary-foreground text-lg md:text-xl lg:text-2xl font-body w-[100%] lg:w-[75%]">
                 Unleash the power of creative robotics. Yudu makes the
                 impossible fun, helping you build, play, and explore with
                 groundbreaking tech.
@@ -60,7 +61,8 @@ export default function HomePage() {
         </div>
       </div>
       <div className="w-full -mt-1">
-        <img src={renderImg("headerSection")} className="w-full" />
+        {/* <img src={renderImg("headerSection")} className="w-full" /> */}
+        {renderSvg("headerSection")}
       </div>
       {/* Middle Part */}
       <div className="px-12 lg:px-28 text-black py-5 lg:py-10 ">

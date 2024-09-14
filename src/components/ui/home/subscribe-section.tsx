@@ -1,6 +1,6 @@
 export default function SubscribeSection() {
   return (
-    <div className="bg-primary rounded-xxl text-white px-8 py-16 flex flex-col items-center justify-center">
+    <div className="bg-primary rounded-xxl text-primary-foreground px-8 py-16 flex flex-col items-center justify-center">
       {/* Main Heading */}
       <h1 className="text-3xl md:text-5xl mb-4 text-center font-piepie tracking-wide">
         Partner with Yudu
@@ -23,9 +23,9 @@ export default function SubscribeSection() {
           <input
             type="email"
             placeholder="Enter your email"
-            className="rounded-2xl px-4 py-2 w-full md:w-80 text-gray-700 focus:outline-none"
+            className="rounded-2xl px-4 py-2 w-full md:w-80 text-secondary-foreground focus:outline-none"
           />
-          <button className="bg-primary shadow-xl border hover:border-primary-foreground text-white px-6 py-2 rounded-full md:ml-4 w-full md:w-auto">
+          <button className="bg-primary shadow-xl border hover:border-primary-foreground text-primary-foreground px-6 py-2 rounded-full md:ml-4 w-full md:w-auto">
             Subscribe
           </button>
         </div>
