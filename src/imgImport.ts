@@ -23,6 +23,9 @@ const arrow = "/assets/other/arrow.png";
 const searchIcon = "/assets/other/searchIcon.png";
 const arrowUpRight = "/assets/other/arrow-up-right.png";
 
+// peecee
+const peecee = "/assets/peecee/peecee.png";
+
 function renderImg(imgName: string) {
   switch (imgName) {
     // home
@@ -67,6 +70,10 @@ function renderImg(imgName: string) {
       return productBackground;
     case "productDetail1":
       return productDetail1;
+
+    // peecee
+    case "peecee":
+      return peecee;
 
     // other
     case "arrow":

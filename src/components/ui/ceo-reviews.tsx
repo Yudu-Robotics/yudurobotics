@@ -4,7 +4,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 function CeoReviewsContainer() {
   return (
-    <div className="w-full">
+    <div className="w-full ">
       <div>
         <img src={renderImg("star1")} className="" />
       </div>
