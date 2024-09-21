@@ -36,7 +36,7 @@ export default function ProductLayout({
   return (
     <html lang="en">
       <body className={currentProduct == "klaw_b" ? 'klaw' : currentProduct}> <div className="">
-      <div className="px-8 lg:px-28 py-4 bg-primary">
+      <div className=" px-8 lg:px-28 py-4 bg-primary">
         {/* TopBar/NavBar */}
         <div className="flex justify-between">
           <div className="flex space-x-3 justify-start items-center w-[50%]">

@@ -22,9 +22,19 @@ const productDetail1 = "/assets/zing/productDetail1.png";
 const arrow = "/assets/other/arrow.png";
 const searchIcon = "/assets/other/searchIcon.png";
 const arrowUpRight = "/assets/other/arrow-up-right.png";
+const iphone = "/assets/other/iphone.png";
+const monitorAndPhone = "/assets/other/monitor-phone.png";
+const imagePlaceholder = "/assets/other/imagePlaceholder.png";
+const imagePlaceholder2 = "/assets/other/imagePlaceholder2.png";
+const stars = "/assets/other/Stars.png";
+const girls = "/assets/other/girls.png";
+const macbook = "/assets/other/macbook.png";
 
 // peecee
 const peecee = "/assets/peecee/peecee.png";
+const avatar = "/assets/peecee/Avatar.png";
+const profileImage = "/assets/peecee/profileImage.png";
+const handArrow = "/assets/peecee/hand-arrow.png";
 
 function renderImg(imgName: string) {
   switch (imgName) {
@@ -74,16 +84,36 @@ function renderImg(imgName: string) {
     // peecee
     case "peecee":
       return peecee;
+    case "avatar":
+      return avatar;
+    case "profileImage":
+      return profileImage;
+    case "handArrow":
+      return handArrow;
 
     // other
     case "arrow":
       return arrow;
+    case "monitorAndPhone":
+      return monitorAndPhone;
+    case "imagePlaceholder":
+      return imagePlaceholder;
+    case "imagePlaceholder2":
+      return imagePlaceholder2;
+    case "girls":
+      return girls;
+    case "macbook":
+      return macbook;
 
     case "arrowUpRight":
       return arrowUpRight;
 
     case "searchIcon":
       return searchIcon;
+    case "iphone":
+      return iphone;
+    case "stars":
+      return stars;
   }
 }
 
