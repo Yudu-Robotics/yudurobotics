@@ -42,9 +42,12 @@ export default function ProductCategories() {
               Auto Layout is a constraint-based layout system to create an
               adaptive UI.
             </p>
-            <h3 className="text-primary mt-4 text-base font-bold">
+            <a
+              href="/crawl_e"
+              className="text-primary mt-4 text-base font-bold hover:scale-125"
+            >
               Learn More {"->"}
-            </h3>
+            </a>
           </div>
         </div>
       </div>

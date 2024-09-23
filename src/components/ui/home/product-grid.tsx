@@ -10,7 +10,7 @@ export default function ProductGrid() {
       name: "Zing",
       description:
         "Advanced humanoid robot designed for interactive learning, companionship, and play.",
-      image: "/assets/zing/ProductImage2.png",
+      image : "/assets/zing/ProductImage2.png",
     },
     {
       name: "Firepen 3D",
@@ -26,11 +26,12 @@ export default function ProductGrid() {
     },
   ];
 
-  return (
+  return (  
     <div className="container w-[100%] lg:ml-10 lg:px-24">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {products.map((product, index) => (
-          <div
+          <a
+            href="/zing"
             key={index}
             className="flex flex-col space-y-2 p-4 hover:bg-card-foreground rounded-lg hover:scale-90"
           >
@@ -50,7 +51,7 @@ export default function ProductGrid() {
             <p className="text-start text-secondary-foreground text-xs tracking-wide lg:text-sm">
               {product.description}
             </p>
-          </div>
+          </a>
         ))}
       </div>
     </div>

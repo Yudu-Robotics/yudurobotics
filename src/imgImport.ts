@@ -22,6 +22,7 @@ const productDetail1 = "/assets/zing/productDetail1.png";
 const arrow = "/assets/other/arrow.png";
 const searchIcon = "/assets/other/searchIcon.png";
 const arrowUpRight = "/assets/other/arrow-up-right.png";
+const handDrawArrow2 = "/assets/other/Hand-drawn-arrow-2.png";
 const iphone = "/assets/other/iphone.png";
 const monitorAndPhone = "/assets/other/monitor-phone.png";
 const imagePlaceholder = "/assets/other/imagePlaceholder.png";
@@ -29,6 +30,7 @@ const imagePlaceholder2 = "/assets/other/imagePlaceholder2.png";
 const stars = "/assets/other/Stars.png";
 const girls = "/assets/other/girls.png";
 const macbook = "/assets/other/macbook.png";
+const videoPlayer = "/assets/other/video-player.png";
 
 // peecee
 const peecee = "/assets/peecee/peecee.png";
@@ -71,6 +73,8 @@ function renderImg(imgName: string) {
 
     case "avtarGroup":
       return avtarGroup;
+    case "videoPlayer":
+      return videoPlayer;
 
     // zing
     case "humanoid":
@@ -104,6 +108,8 @@ function renderImg(imgName: string) {
       return girls;
     case "macbook":
       return macbook;
+    case "handDrawArrow2":
+      return handDrawArrow2;
 
     case "arrowUpRight":
       return arrowUpRight;

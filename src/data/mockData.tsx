@@ -1,3 +1,6 @@
+import { describe } from "node:test";
+import { title } from "process";
+
 // mockData.js
 type ProductData = {
   heading: string;
@@ -31,6 +34,16 @@ type ProductData = {
       heading: string;
       subheading: string;
       centerImage: string;
+    };
+    hardware_precision?: {
+      heading: string;
+      subheading: string;
+      centerImage: string;
+      features: {
+        icon: string;
+        heading: string;
+        description: string;
+      }[];
     };
     software_experience: {
       heading: string;
@@ -90,6 +103,21 @@ type ProductData = {
     unique: string[];
   };
 };
+
+type BlogData = {
+  title: string;
+  description: string;
+  image: string;
+  content: string;
+  topic: string;
+  tag: string;
+  timeToRead: string;
+  writter: {
+    name: string;
+    avatar: string;
+    date: Date;
+  };
+}[];
 
 export const mockData: { [key: string]: ProductData } = {
   home: {
@@ -920,6 +948,38 @@ export const mockData: { [key: string]: ProductData } = {
           },
         ],
       },
+      hardware_precision: {
+        heading: "Precision Redefined",
+        subheading:
+          "With advanced mechanics and flexible reach, Klaw-B handles complex tasks effortlessly. Its robust build ensures reliable performance, while intuitive controls make integration seamless.",
+        centerImage: "/assets/klawb/klaw-2.png",
+        features: [
+          {
+            icon: "strong",
+            heading: "Robust Design",
+            description:
+              "Klaw-b features a sturdy metal body and a built-in gripper for precise handling and manipulation of objects. With a lift capacity of up to 100 grams, it’s designed to tackle a range of tasks.",
+          },
+          {
+            icon: "dimension",
+            heading: "Dimensions",
+            description:
+              "Compact and efficient,Klaw-b measures [insert dimensions here] and offers a range of motion that suits various applications.",
+          },
+          {
+            icon: "flexibleControl",
+            heading: "Flexible Control",
+            description:
+              "Switch between manual mode and programmable control to suit your project needs. Easily connect to additional accessories for expanded functionality.",
+          },
+          {
+            icon: "tech",
+            heading: "Tech-Packed Features",
+            description:
+              "Includes digital servos with clutch protection to prevent damage and ensure long-lasting performance.",
+          },
+        ],
+      },
       software_experience: {
         heading: "Effortless Experience",
         subheading:
@@ -1065,7 +1125,7 @@ export const mockData: { [key: string]: ProductData } = {
         heading: "Effortless Experience",
         subheading:
           "Everything about Plode is designed to make your experience smooth, simple, and super fun.",
-        centerImage: "/assets/other/imagePlaceholder2.png",
+        centerImage: "/assets/klawb/klaw-2.png",
         features: [
           {
             icon: "userFriendly",
@@ -1144,3 +1204,115 @@ export const mockData: { [key: string]: ProductData } = {
     },
   },
 };
+
+export const blogData: BlogData = [
+  {
+    title: "UX review presentations",
+    description:
+      "How do you create compelling presentations that wow your colleagues and impress your managers?",
+    image: "/assets/blog/image1.png",
+    content:
+      "Artificial Intelligence (AI) has become a key player in shaping the future of technology. From self-driving cars to intelligent personal assistants, AI is pushing the boundaries of what machines can do...",
+    topic: "Technology",
+    tag: "Design",
+    timeToRead: "5 min",
+    writter: {
+      name: "Jane Doe",
+      avatar: "/assets/other/avatar.png",
+      date: new Date("2024-09-01"),
+    },
+  },
+  {
+    title: "Migrating to Linear 101",
+    description:
+      "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get started.",
+    image: "/assets/blog/image2.png",
+    content:
+      "Sustainable living is not just a trend; it's a necessity. By making small, conscious changes in our daily lives, we can significantly reduce our carbon footprint and help protect the environment...",
+    topic: "Lifestyle",
+    tag: "Design",
+    timeToRead: "3 min",
+    writter: {
+      name: "John Smith",
+      avatar: "/assets/other/avatar.png",
+      date: new Date("2024-08-15"),
+    },
+  },
+  {
+    title: "Mastering JavaScript: A Beginner's Guide",
+    description: "Everything you need to know to get started with JavaScript.",
+    image: "/assets/blog/image2.png",
+    content:
+      "JavaScript is a powerful and versatile language that every web developer should master. In this guide, we'll cover the basics of JavaScript and provide tips on how to become proficient in the language...",
+    topic: "Programming",
+    tag: "JavaScript",
+    timeToRead: "7 min",
+    writter: {
+      name: "Emily Johnson",
+      avatar: "/assets/other/avatar.png",
+      date: new Date("2024-09-10"),
+    },
+  },
+  {
+    title: "Migrating to Linear 101",
+    description:
+      "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get started.",
+    image: "/assets/blog/image2.png",
+    content:
+      "Sustainable living is not just a trend; it's a necessity. By making small, conscious changes in our daily lives, we can significantly reduce our carbon footprint and help protect the environment...",
+    topic: "Lifestyle",
+    tag: "Design",
+    timeToRead: "3 min",
+    writter: {
+      name: "John Smith",
+      avatar: "/assets/other/avatar.png",
+      date: new Date("2024-08-15"),
+    },
+  },
+  {
+    title: "Mastering JavaScript: A Beginner's Guide",
+    description: "Everything you need to know to get started with JavaScript.",
+    image: "/assets/blog/image2.png",
+    content:
+      "JavaScript is a powerful and versatile language that every web developer should master. In this guide, we'll cover the basics of JavaScript and provide tips on how to become proficient in the language...",
+    topic: "Programming",
+    tag: "JavaScript",
+    timeToRead: "7 min",
+    writter: {
+      name: "Emily Johnson",
+      avatar: "/assets/other/avatar.png",
+      date: new Date("2024-09-10"),
+    },
+  },
+  {
+    title: "Migrating to Linear 101",
+    description:
+      "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get started.",
+    image: "/assets/blog/image2.png",
+    content:
+      "Sustainable living is not just a trend; it's a necessity. By making small, conscious changes in our daily lives, we can significantly reduce our carbon footprint and help protect the environment...",
+    topic: "Lifestyle",
+    tag: "Design",
+    timeToRead: "3 min",
+    writter: {
+      name: "John Smith",
+      avatar: "/assets/other/avatar.png",
+      date: new Date("2024-08-15"),
+    },
+  },
+  {
+    title: "Mastering JavaScript: A Beginner's Guide",
+    description: "Everything you need to know to get started with JavaScript.",
+    image: "/assets/blog/image2.png",
+    content:
+      "JavaScript is a powerful and versatile language that every web developer should master. In this guide, we'll cover the basics of JavaScript and provide tips on how to become proficient in the language...",
+    topic: "Programming",
+    tag: "JavaScript",
+    timeToRead: "7 min",
+    writter: {
+      name: "Emily Johnson",
+      avatar: "/assets/other/avatar.png",
+      date: new Date("2024-09-10"),
+    },
+  },
+];

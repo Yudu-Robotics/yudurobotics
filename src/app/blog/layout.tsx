@@ -16,7 +16,7 @@ import renderImg from "@/imgImport";
 import Footer from "@/components/ui/footer/footer";
 import renderSvg from "@/svgImport";
 
-export default function HomeLayout({
+export default function BlogLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -33,9 +33,10 @@ export default function HomeLayout({
       <div className="px-8 lg:px-28 py-4 bg-primary">
         {/* TopBar/NavBar */}
         <div className="flex justify-between">
-          <a 
-          href="/home"
-          className="flex space-x-3 justify-start items-center w-[50%]">
+          <a
+            href="/home"
+            className="flex space-x-3 justify-start items-center w-[50%]"
+          >
             {/* <img className="" src={renderImg("favicon")} />
             <img className="" src={renderImg("logo")} /> */}
             {renderSvg("logoYudoRobo")}

@@ -31,6 +31,7 @@ import CeoComments from "@/components/ui/common/ceo-comments";
 import FlexibleLearning from "@/components/ui/common/flexible-learning";
 import CurriculumSteps from "@/components/ui/common/curriculum-steps";
 import AdaptiveLMS from "@/components/ui/common/adaptive-lms";
+import Unboxing from "@/components/ui/common/unboxing";
 
 const FAQs = dynamic(() => import("@/components/ui/home/faqs"), {
   ssr: false, // This disables server-side rendering for the FAQ component
@@ -88,6 +89,18 @@ export default async function ProductPage({ params }: any) {
         <div className="py-8 lg:py-16">
           <ProductCeoReviewsContainer comment={data.ceoComment} />
         </div>
+        <div className="py-8 lg:py-12">
+          <Unboxing />
+        </div>
+        {params.product == "klaw_b" && (
+          <div>
+            <ExtraFeatures
+              // @ts-ignore
+              data={data.features_data?.hardware_precision}
+              title="software"
+            />
+          </div>
+        )}
         <div className="text-sm py-8 lg:py-16 text-center font-bold flex flex-col space-y-6 justify-center items-center">
           <p>
             Hover over each feature below to{" "}
@@ -97,11 +110,12 @@ export default async function ProductPage({ params }: any) {
         </div>
         <div>{<HardwareProductFeatures hardware={data.features_data} />}</div>
         {params.product == "peecee" && (
-          <div>
+          <div className="">
             <ExtraFeatures
               // @ts-ignore
               data={data.features_data.section2}
               title="hardware"
+              showArrow={true}
             />
             <TeamPlay
               // @ts-ignore

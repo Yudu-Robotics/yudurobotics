@@ -1,4 +1,5 @@
 import { highlightWords } from "@/app/utility/highlightWords";
+import renderImg from "@/imgImport";
 import renderSvg from "@/svgImport";
 import React from "react";
 
@@ -13,12 +14,18 @@ interface data {
   }[];
 }
 
-const ExtraFeatures: React.FC<{ data: data; title: string }> = ({
-  data,
-  title,
-}) => {
+const ExtraFeatures: React.FC<{
+  data: data;
+  title: string;
+  showArrow?: boolean;
+}> = ({ data, title, showArrow }) => {
   return (
-    <div className="flex flex-col space-y-8 md:space-y-10">
+    <div className="flex flex-col space-y-2 lg:space-y-0">
+      {showArrow && (
+        <div className="hidden lg:flex lg:flex-row lg:justify-center lg:items-center lg:-mb-32 lg:ml-40">
+          {renderSvg("handDrawArrow2")}
+        </div>
+      )}
       <div className="flex flex-col space-y-2 ">
         <h1 className="text-primary text-xs font-semibold ">{title}</h1>
         <h2 className="text-4xl lg:text-5xl font-piepie tracking-wide  w-[100%] lg:w-[50%]">
