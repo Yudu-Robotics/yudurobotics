@@ -1,6 +1,3 @@
-import { describe } from "node:test";
-import { title } from "process";
-
 // mockData.js
 type ProductData = {
   heading: string;
@@ -1218,7 +1215,7 @@ export const blogData: BlogData = [
     timeToRead: "5 min",
     writter: {
       name: "Jane Doe",
-      avatar: "/assets/other/avatar.png",
+      avatar: "/assets/peecee/avatar.png",
       date: new Date("2024-09-01"),
     },
   },
@@ -1234,13 +1231,14 @@ export const blogData: BlogData = [
     timeToRead: "3 min",
     writter: {
       name: "John Smith",
-      avatar: "/assets/other/avatar.png",
+      avatar: "/assets/peecee/avatar.png",
       date: new Date("2024-08-15"),
     },
   },
   {
     title: "Mastering JavaScript: A Beginner's Guide",
-    description: "Everything you need to know to get started with JavaScript.",
+    description:
+      "Everything you need to know to get started with JavaScript. Everything you need to know to get started with JavaScript.Everything you need to know to get started with JavaScript.Everything you need to know to get started with JavaScript.Everything you need to know to get started with JavaScript.Everything you need to know to get started with JavaScript.",
     image: "/assets/blog/image2.png",
     content:
       "JavaScript is a powerful and versatile language that every web developer should master. In this guide, we'll cover the basics of JavaScript and provide tips on how to become proficient in the language...",
@@ -1249,7 +1247,7 @@ export const blogData: BlogData = [
     timeToRead: "7 min",
     writter: {
       name: "Emily Johnson",
-      avatar: "/assets/other/avatar.png",
+      avatar: "/assets/peecee/avatar.png",
       date: new Date("2024-09-10"),
     },
   },
@@ -1265,13 +1263,14 @@ export const blogData: BlogData = [
     timeToRead: "3 min",
     writter: {
       name: "John Smith",
-      avatar: "/assets/other/avatar.png",
+      avatar: "/assets/peecee/avatar.png",
       date: new Date("2024-08-15"),
     },
   },
   {
     title: "Mastering JavaScript: A Beginner's Guide",
-    description: "Everything you need to know to get started with JavaScript.",
+    description:
+      "Everything you need to know to get started with JavaScript. Everything you need to know to get started with JavaScript.Everything you need to know to get started with JavaScript.Everything you need to know to get started with JavaScript.Everything you need to know to get started with JavaScript.Everything you need to know to get started with JavaScript.",
     image: "/assets/blog/image2.png",
     content:
       "JavaScript is a powerful and versatile language that every web developer should master. In this guide, we'll cover the basics of JavaScript and provide tips on how to become proficient in the language...",
@@ -1280,7 +1279,7 @@ export const blogData: BlogData = [
     timeToRead: "7 min",
     writter: {
       name: "Emily Johnson",
-      avatar: "/assets/other/avatar.png",
+      avatar: "/assets/peecee/avatar.png",
       date: new Date("2024-09-10"),
     },
   },
@@ -1296,7 +1295,71 @@ export const blogData: BlogData = [
     timeToRead: "3 min",
     writter: {
       name: "John Smith",
-      avatar: "/assets/other/avatar.png",
+      avatar: "/assets/peecee/avatar.png",
+      date: new Date("2024-08-15"),
+    },
+  },
+  {
+    title: "Mastering JavaScript: A Beginner's Guide",
+    description:
+      "Everything you need to know to get started with JavaScript. Everything you need to know to get started with JavaScript.Everything you need to know to get started with JavaScript.Everything you need to know to get started with JavaScript.Everything you need to know to get started with JavaScript.Everything you need to know to get started with JavaScript.",
+    image: "/assets/blog/image2.png",
+    content:
+      "JavaScript is a powerful and versatile language that every web developer should master. In this guide, we'll cover the basics of JavaScript and provide tips on how to become proficient in the language...",
+    topic: "Programming",
+    tag: "JavaScript",
+    timeToRead: "7 min",
+    writter: {
+      name: "Emily Johnson",
+      avatar: "/assets/peecee/avatar.png",
+      date: new Date("2024-09-10"),
+    },
+  },
+  {
+    title: "Migrating to Linear 101",
+    description:
+      "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get started.",
+    image: "/assets/blog/image2.png",
+    content:
+      "Sustainable living is not just a trend; it's a necessity. By making small, conscious changes in our daily lives, we can significantly reduce our carbon footprint and help protect the environment...",
+    topic: "Lifestyle",
+    tag: "Design",
+    timeToRead: "3 min",
+    writter: {
+      name: "John Smith",
+      avatar: "/assets/peecee/avatar.png",
+      date: new Date("2024-08-15"),
+    },
+  },
+  {
+    title: "Mastering JavaScript: A Beginner's Guide",
+    description:
+      "Everything you need to know to get started with JavaScript. Everything you need to know to get started with JavaScript.Everything you need to know to get started with JavaScript.Everything you need to know to get started with JavaScript.Everything you need to know to get started with JavaScript.Everything you need to know to get started with JavaScript.",
+    image: "/assets/blog/image2.png",
+    content:
+      "JavaScript is a powerful and versatile language that every web developer should master. In this guide, we'll cover the basics of JavaScript and provide tips on how to become proficient in the language...",
+    topic: "Programming",
+    tag: "JavaScript",
+    timeToRead: "7 min",
+    writter: {
+      name: "Emily Johnson",
+      avatar: "/assets/peecee/avatar.png",
+      date: new Date("2024-09-10"),
+    },
+  },
+  {
+    title: "Migrating to Linear 101",
+    description:
+      "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get started.",
+    image: "/assets/blog/image2.png",
+    content:
+      "Sustainable living is not just a trend; it's a necessity. By making small, conscious changes in our daily lives, we can significantly reduce our carbon footprint and help protect the environment...",
+    topic: "Lifestyle",
+    tag: "Design",
+    timeToRead: "3 min",
+    writter: {
+      name: "John Smith",
+      avatar: "/assets/peecee/avatar.png",
       date: new Date("2024-08-15"),
     },
   },
@@ -1311,8 +1374,91 @@ export const blogData: BlogData = [
     timeToRead: "7 min",
     writter: {
       name: "Emily Johnson",
-      avatar: "/assets/other/avatar.png",
+      avatar: "/assets/peecee/avatar.png",
+      date: new Date("2024-09-10"),
+    },
+  },
+  {
+    title: "Migrating to Linear 101",
+    description:
+      "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get started.",
+    image: "/assets/blog/image2.png",
+    content:
+      "Sustainable living is not just a trend; it's a necessity. By making small, conscious changes in our daily lives, we can significantly reduce our carbon footprint and help protect the environment...",
+    topic: "Lifestyle",
+    tag: "Design",
+    timeToRead: "3 min",
+    writter: {
+      name: "John Smith",
+      avatar: "/assets/peecee/avatar.png",
+      date: new Date("2024-08-15"),
+    },
+  },
+  {
+    title: "Mastering JavaScript: A Beginner's Guide",
+    description: "Everything you need to know to get started with JavaScript.",
+    image: "/assets/blog/image2.png",
+    content:
+      "JavaScript is a powerful and versatile language that every web developer should master. In this guide, we'll cover the basics of JavaScript and provide tips on how to become proficient in the language...",
+    topic: "Programming",
+    tag: "JavaScript",
+    timeToRead: "7 min",
+    writter: {
+      name: "Emily Johnson",
+      avatar: "/assets/peecee/avatar.png",
       date: new Date("2024-09-10"),
     },
   },
 ];
+
+export const positions = [
+  {
+    title: "Product Designer",
+    department: "Design",
+    departmentColor: "text-blue-600 bg-blue-100 border-blue-200",
+    description: "We’re looking for a mid-level product designer to join our team.",
+    remote: true,
+    type: "Full-time",
+  },
+  {
+    title: "Engineering Manager",
+    department: "Software Development",
+    departmentColor: "text-red-600 bg-red-100 border-red-200",
+    description: "We’re looking for an experienced engineering manager to join our team.",
+    remote: true,
+    type: "Full-time",
+  },
+  {
+    title: "Product Designer",
+    department: "Design",
+    departmentColor: "text-blue-600 bg-blue-100 border-blue-200",
+    description: "We’re looking for a mid-level product designer to join our team.",
+    remote: true,
+    type: "Full-time",
+  },
+  {
+    title: "Engineering Manager",
+    department: "Software Development",
+    departmentColor: "text-red-600 bg-red-100 border-red-200",
+    description: "We’re looking for an experienced engineering manager to join our team.",
+    remote: true,
+    type: "Full-time",
+  },
+  {
+    title: "Product Designer",
+    department: "Design",
+    departmentColor: "text-blue-600 bg-blue-100 border-blue-200",
+    description: "We’re looking for a mid-level product designer to join our team.",
+    remote: true,
+    type: "Full-time",
+  },
+  {
+    title: "Engineering Manager",
+    department: "Software Development",
+    departmentColor: "text-red-600 bg-red-100 border-red-200",
+    description: "We’re looking for an experienced engineering manager to join our team.",
+    remote: true,
+    type: "Full-time",
+  },
+];
+

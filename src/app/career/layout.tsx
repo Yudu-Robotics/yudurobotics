@@ -16,7 +16,7 @@ import renderImg from "@/imgImport";
 import Footer from "@/components/ui/footer/footer";
 import renderSvg from "@/svgImport";
 
-export default function BlogLayout({
+export default function CareerLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -30,7 +30,7 @@ export default function BlogLayout({
   ];
   return (
     <div className="">
-      <div className="px-8 lg:px-28 py-4 bg-primary ">
+      <div className="px-8 lg:px-28 py-4 bg-primary">
         {/* TopBar/NavBar */}
         <div className="flex justify-between ">
           <a

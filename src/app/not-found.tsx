@@ -1,3 +1,4 @@
+// pages/404.tsx
 "use client";
 import Link from "next/link";
 import {
@@ -15,12 +16,9 @@ import React from "react";
 import renderImg from "@/imgImport";
 import Footer from "@/components/ui/footer/footer";
 import renderSvg from "@/svgImport";
+import { WrongPageComponent } from "@/components/ui/not-found-component";
 
-export default function BlogLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const NotFoundPage = () => {
   const NavBarItems = [
     "Y/Our Products",
     "The Partner Program",
@@ -68,11 +66,14 @@ export default function BlogLayout({
           </div>
         </div>
       </div>
-      {children}
+      <WrongPageComponent />
       <div className="w-full -mb-1">{renderSvg("bottomSection")}</div>
+
       <div className="px-8 lg:px-28 py-4 bg-primary">
         <Footer />
       </div>
     </div>
   );
-}
+};
+
+export default NotFoundPage;

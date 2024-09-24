@@ -32,6 +32,7 @@ import FlexibleLearning from "@/components/ui/common/flexible-learning";
 import CurriculumSteps from "@/components/ui/common/curriculum-steps";
 import AdaptiveLMS from "@/components/ui/common/adaptive-lms";
 import Unboxing from "@/components/ui/common/unboxing";
+import { notFound } from "next/navigation";
 
 const FAQs = dynamic(() => import("@/components/ui/home/faqs"), {
   ssr: false, // This disables server-side rendering for the FAQ component
@@ -41,6 +42,11 @@ export default async function ProductPage({ params }: any) {
   const { product } = params;
 
   const data = mockData[product as keyof typeof mockData];
+
+  if (!data) {
+    // Redirect or render 404 page when the product doesn't exist
+    notFound();
+  }
 
   return (
     <>
