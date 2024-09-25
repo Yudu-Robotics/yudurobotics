@@ -1231,7 +1231,7 @@ export const blogData: BlogData = [
     timeToRead: "3 min",
     writter: {
       name: "John Smith",
-      avatar: "assets/peecee/avatar.png",
+      avatar: "assets/peecee/Avatar.png",
       date: new Date("2024-08-15"),
     },
   },
@@ -1247,7 +1247,7 @@ export const blogData: BlogData = [
     timeToRead: "7 min",
     writter: {
       name: "Emily Johnson",
-      avatar: "assets/peecee/avatar.png",
+      avatar: "assets/peecee/Avatar.png",
       date: new Date("2024-09-10"),
     },
   },
@@ -1263,7 +1263,7 @@ export const blogData: BlogData = [
     timeToRead: "3 min",
     writter: {
       name: "John Smith",
-      avatar: "assets/peecee/avatar.png",
+      avatar: "assets/peecee/Avatar.png",
       date: new Date("2024-08-15"),
     },
   },
@@ -1279,7 +1279,7 @@ export const blogData: BlogData = [
     timeToRead: "7 min",
     writter: {
       name: "Emily Johnson",
-      avatar: "assets/peecee/avatar.png",
+      avatar: "assets/peecee/Avatar.png",
       date: new Date("2024-09-10"),
     },
   },
@@ -1295,7 +1295,7 @@ export const blogData: BlogData = [
     timeToRead: "3 min",
     writter: {
       name: "John Smith",
-      avatar: "assets/peecee/avatar.png",
+      avatar: "assets/peecee/Avatar.png",
       date: new Date("2024-08-15"),
     },
   },
@@ -1311,7 +1311,7 @@ export const blogData: BlogData = [
     timeToRead: "7 min",
     writter: {
       name: "Emily Johnson",
-      avatar: "assets/peecee/avatar.png",
+      avatar: "assets/peecee/Avatar.png",
       date: new Date("2024-09-10"),
     },
   },
@@ -1327,7 +1327,7 @@ export const blogData: BlogData = [
     timeToRead: "3 min",
     writter: {
       name: "John Smith",
-      avatar: "assets/peecee/avatar.png",
+      avatar: "assets/peecee/Avatar.png",
       date: new Date("2024-08-15"),
     },
   },
@@ -1343,7 +1343,7 @@ export const blogData: BlogData = [
     timeToRead: "7 min",
     writter: {
       name: "Emily Johnson",
-      avatar: "assets/peecee/avatar.png",
+      avatar: "assets/peecee/Avatar.png",
       date: new Date("2024-09-10"),
     },
   },
@@ -1359,7 +1359,7 @@ export const blogData: BlogData = [
     timeToRead: "3 min",
     writter: {
       name: "John Smith",
-      avatar: "assets/peecee/avatar.png",
+      avatar: "assets/peecee/Avatar.png",
       date: new Date("2024-08-15"),
     },
   },
@@ -1374,7 +1374,7 @@ export const blogData: BlogData = [
     timeToRead: "7 min",
     writter: {
       name: "Emily Johnson",
-      avatar: "assets/peecee/avatar.png",
+      avatar: "assets/peecee/Avatar.png",
       date: new Date("2024-09-10"),
     },
   },
@@ -1390,7 +1390,7 @@ export const blogData: BlogData = [
     timeToRead: "3 min",
     writter: {
       name: "John Smith",
-      avatar: "assets/peecee/avatar.png",
+      avatar: "assets/peecee/Avatar.png",
       date: new Date("2024-08-15"),
     },
   },
@@ -1405,7 +1405,7 @@ export const blogData: BlogData = [
     timeToRead: "7 min",
     writter: {
       name: "Emily Johnson",
-      avatar: "assets/peecee/avatar.png",
+      avatar: "assets/peecee/Avatar.png",
       date: new Date("2024-09-10"),
     },
   },
