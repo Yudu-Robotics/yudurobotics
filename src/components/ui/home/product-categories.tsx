@@ -3,6 +3,7 @@ import ProductTag from "../common/tag";
 import ProductGrid from "./product-grid";
 import renderImg from "@/imgImport";
 import SearchAndFilter from "./search-filter";
+import Link from "next/link";
 
 export default function ProductCategories() {
   const product_categories = ["Micro-controller", "Animatronics", "Toys"];
@@ -42,12 +43,12 @@ export default function ProductCategories() {
               Auto Layout is a constraint-based layout system to create an
               adaptive UI.
             </p>
-            <a
+            <Link
               href="/crawl_e"
               className="text-primary mt-4 text-base font-bold hover:scale-125"
             >
               Learn More {"->"}
-            </a>
+            </Link>
           </div>
         </div>
       </div>

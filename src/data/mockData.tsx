@@ -1207,7 +1207,7 @@ export const blogData: BlogData = [
     title: "UX review presentations",
     description:
       "How do you create compelling presentations that wow your colleagues and impress your managers?",
-    image: "assets/blog/image1.png",
+    image: "assets/blog/Image1.png",
     content:
       "Artificial Intelligence (AI) has become a key player in shaping the future of technology. From self-driving cars to intelligent personal assistants, AI is pushing the boundaries of what machines can do...",
     topic: "Technology",
@@ -1215,7 +1215,7 @@ export const blogData: BlogData = [
     timeToRead: "5 min",
     writter: {
       name: "Jane Doe",
-      avatar: "assets/peecee/avatar.png",
+      avatar: "assets/peecee/Avatar.png",
       date: new Date("2024-09-01"),
     },
   },
