@@ -40,6 +40,7 @@ export default async function BlogPage() {
           <div className="grid grid-cols-2 gap-2 lg:flex lg:flex-col lg:space-y-4 lg:ml-10">
             {blogCategories.map((category: string, index: number) => (
               <h2
+                key={index}
                 className={`${
                   index == 0 ? "text-black" : "text-secondary-foreground"
                 } font-semibold text-sm`}
@@ -52,7 +53,7 @@ export default async function BlogPage() {
 
         <div className="flex flex-col space-y-10">
           <div className="flex flex-col lg:flex-row lg:justify-between">
-            <img src={data[0].image}/>              
+            <img src={data[0].image} />
             <div className="flex flex-col space-y-3 lg:w-[50%] px-10">
               <div className="py-2">
                 <div className="flex items-center space-x-2 px-1 py-1 bg-[#f4f1fe] border border-[#bba5fe] rounded-full w-[45%] text-xs">
@@ -108,7 +109,7 @@ export default async function BlogPage() {
                 index: number
               ) =>
                 index > 0 && (
-                  <div className="flex flex-col space-y-2">
+                  <div key={index} className="flex flex-col space-y-2">
                     <div>
                       <img src={value.image} className="w-full" />
                     </div>
