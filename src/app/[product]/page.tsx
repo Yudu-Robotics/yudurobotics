@@ -38,6 +38,15 @@ const FAQs = dynamic(() => import("@/components/ui/home/faqs"), {
   ssr: false, // This disables server-side rendering for the FAQ component
 });
 
+export async function generateStaticParams() {
+  // Fetch or define the list of product slugs/IDs
+  const products = ["roboki", "peecee", "zing", "crawl_e", "klaw_b"]; // Example product slugs
+
+  return products.map((product) => ({
+    product, // This will create paths like /roboki, /peecee, etc.
+  }));
+}
+
 export default async function ProductPage({ params }: any) {
   const { product } = params;
 
