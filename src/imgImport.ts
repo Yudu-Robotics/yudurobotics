@@ -16,7 +16,7 @@ const googlePlay = "assets/home/GooglePlayBadge.png";
 // zing
 const humanoid = "assets/zing/Humanoid.png";
 const productBackground = "assets/zing/productBackground.png";
-const productDetail1 = "assets/zing/productDetail1.png";
+const productCrawle = "assets/zing/productCrawle.png";
 
 // other
 const arrow = "assets/other/arrow.png";
@@ -82,8 +82,8 @@ function renderImg(imgName: string) {
 
     case "productBackground":
       return productBackground;
-    case "productDetail1":
-      return productDetail1;
+    case "productCrawle":
+      return productCrawle;
 
     // peecee
     case "peecee":

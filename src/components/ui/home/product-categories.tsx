@@ -34,7 +34,7 @@ export default function ProductCategories() {
         </div>
         <div className="flex flex-col space-y-3 bg-card-foreground rounded-xlg lg:w-[90%] p-8">
           <div className="">
-            <img src={renderImg("productDetail1")} className="w-[100%]" />
+            <img src={renderImg("productCrawle")} className="w-[100%]" />
           </div>
           <div>
             <h1 className="font-bold text-xl">Crawl-e</h1>
