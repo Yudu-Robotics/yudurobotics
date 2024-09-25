@@ -18,6 +18,7 @@ import { useState } from "react";
 import { Drawer, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
+import FloatingWhatsApp from "@/components/ui/common/floating-whatsapp";
 
 export default function ProductLayout({
   children,
@@ -102,27 +103,27 @@ export default function ProductLayout({
               <div className="space-x-4 hidden lg:flex lg:justify-center lg:items-center text-primary-foreground">
                 {NavBarItems.map((item: string, key: number) => (
                   <div key={key}>
-                    {key == 0 ? (
-                      <NavigationMenu>
-                        <NavigationMenuList>
-                          <NavigationMenuItem>
-                            <NavigationMenuTrigger>
-                              {item}
-                            </NavigationMenuTrigger>
-                            <NavigationMenuContent>
-                              {/* <NavigationMenuLink>Link</NavigationMenuLink> */}
-                            </NavigationMenuContent>
-                          </NavigationMenuItem>
-                        </NavigationMenuList>
-                      </NavigationMenu>
-                    ) : (
+                    {
+                      // key === 0 ? (
+                      //   <NavigationMenu>
+                      //     <NavigationMenuList>
+                      //       <NavigationMenuItem>
+                      //         <NavigationMenuTrigger>{item}</NavigationMenuTrigger>
+                      //         <NavigationMenuContent>
+                      //           {/* Add Dropdown Content Here */}
+                      //         </NavigationMenuContent>
+                      //       </NavigationMenuItem>
+                      //     </NavigationMenuList>
+                      //   </NavigationMenu>
+                      // ) :
+
                       <Link
                         href="/blog"
                         className="text-primary-foreground text-center text-sm px-3 hover:text-destructive"
                       >
                         {item}
                       </Link>
-                    )}
+                    }
                   </div>
                 ))}
               </div>
@@ -137,6 +138,8 @@ export default function ProductLayout({
           >
             {drawerList()}
           </Drawer>
+
+          <FloatingWhatsApp />
 
           {/* Main Content */}
           {children}

@@ -2,9 +2,9 @@ import React from "react";
 
 function GlobalAwards() {
   const awardsImage = [
-    "/assets/home/company3.png",
-    "/assets/home/company1.png",
-    "/assets/home/company2.png",
+    "assets/home/company3.png",
+    "assets/home/company1.png",
+    "assets/home/company2.png",
   ];
 
   return (

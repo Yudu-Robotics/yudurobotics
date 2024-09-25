@@ -29,9 +29,9 @@ export default async function HomePage() {
       <div className="px-8 lg:px-28 py-4 bg-primary">
         <div className="flex flex-col space-y-16 lg:flex-row lg:space-y-0 justify-between py-10">
           <div className="w-full">
-            <div className="mb-6">
+            <a href="#product-features-component" className="mb-6">
               <NewFeaturesCard />
-            </div>
+            </a>
 
             {/* Main Text */}
 
@@ -57,7 +57,7 @@ export default async function HomePage() {
           <JumpingButtons ishorizontal="true" />
         </div>
         <div className="py-10">
-          <a href={`/peecee`}>
+          <a href="">
             <img src={renderImg("homeImage")} className="w-full" />
           </a>
         </div>
@@ -74,7 +74,7 @@ export default async function HomePage() {
         <div className="py-5 lg:py-10">
           <GlobalAwards />
         </div>
-        <div className="py-5 lg:py-10">
+        <div id="product-features-component" className="py-5 lg:py-10">
           <ProductFeatures />
         </div>
         <div>

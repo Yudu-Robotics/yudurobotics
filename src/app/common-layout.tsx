@@ -14,6 +14,7 @@ import {
   NavigationMenuTrigger,
   NavigationMenuContent,
 } from "@/components/ui/navigation-menu";
+import FloatingWhatsApp from "@/components/ui/common/floating-whatsapp";
 
 const ClientLayout = ({ children }: { children: React.ReactNode }) => {
   const NavBarItems = [
@@ -66,7 +67,10 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
         {/* TopBar/NavBar */}
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link href="/home" className="flex space-x-3 items-center w-[50%] lg:w-[20%]">
+          <Link
+            href="/home"
+            className="flex space-x-3 items-center w-[50%] lg:w-[20%]"
+          >
             {renderSvg("logoYudoRobo")}
           </Link>
 
@@ -87,22 +91,27 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
           <div className="space-x-4 hidden lg:flex lg:justify-center lg:items-center text-primary-foreground">
             {NavBarItems.map((item, key) => (
               <div key={key}>
-                {key === 0 ? (
-                  <NavigationMenu>
-                    <NavigationMenuList>
-                      <NavigationMenuItem>
-                        <NavigationMenuTrigger>{item}</NavigationMenuTrigger>
-                        <NavigationMenuContent>
-                          {/* Add Dropdown Content Here */}
-                        </NavigationMenuContent>
-                      </NavigationMenuItem>
-                    </NavigationMenuList>
-                  </NavigationMenu>
-                ) : (
-                  <Link href="/blog" className="text-primary-foreground text-center text-sm px-3 hover:text-destructive">
+                {
+                  // key === 0 ? (
+                  //   <NavigationMenu>
+                  //     <NavigationMenuList>
+                  //       <NavigationMenuItem>
+                  //         <NavigationMenuTrigger>{item}</NavigationMenuTrigger>
+                  //         <NavigationMenuContent>
+                  //           {/* Add Dropdown Content Here */}
+                  //         </NavigationMenuContent>
+                  //       </NavigationMenuItem>
+                  //     </NavigationMenuList>
+                  //   </NavigationMenu>
+                  // ) :
+
+                  <Link
+                    href="/blog"
+                    className="text-primary-foreground text-center text-sm px-3 hover:text-destructive"
+                  >
                     {item}
                   </Link>
-                )}
+                }
               </div>
             ))}
           </div>
@@ -113,6 +122,8 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
       <Drawer anchor="right" open={isDrawerOpen} onClose={toggleDrawer(false)}>
         {drawerList()}
       </Drawer>
+
+      <FloatingWhatsApp />
 
       {/* Main Content */}
       <main>{children}</main>

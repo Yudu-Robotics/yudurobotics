@@ -4,25 +4,25 @@ export default function ProductGrid() {
       name: "Play Trons",
       description:
         "Simple plug-and-play electronics for instant fun, learning, and creativity.",
-      image: "/assets/zing/ProductImage1.png",
+      image: "assets/zing/ProductImage1.png",
     },
     {
       name: "Zing",
       description:
         "Advanced humanoid robot designed for interactive learning, companionship, and play.",
-      image : "/assets/zing/ProductImage2.png",
+      image : "assets/zing/ProductImage2.png",
     },
     {
       name: "Firepen 3D",
       description:
         "High-precision 3D printer for creative, customizable, and rapid prototyping solutions.",
-      image: "/assets/zing/ProductImage3.png",
+      image: "assets/zing/ProductImage3.png",
     },
     {
       name: "Play Dynamex",
       description:
         "Colorful LEGO blocks inspiring creativity, imagination, and hands-on building fun.",
-      image: "/assets/zing/ProductImage4.png",
+      image: "assets/zing/ProductImage4.png",
     },
   ];
 

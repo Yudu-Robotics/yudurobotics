@@ -11,7 +11,7 @@ const LatestPosts = () => {
       title: "Future of Robotics: Trends to Watch",
       desc: "Explore emergin robotics trends shaping the future.",
       tags: ["Design", "Research", "Presentation"],
-      image: "/assets/home/ProductImage1.png",
+      image: "assets/home/ProductImage1.png",
       color: "green-500",
     },
     {
@@ -20,7 +20,7 @@ const LatestPosts = () => {
       title: "How Robotics is Transforming Education",
       desc: "Discover how robots are revolutionizing learning environments.",
       tags: ["Product", "Tools", "Robotics"],
-      image: "/assets/home/ProductImage2.png",
+      image: "assets/home/ProductImage2.png",
       color: "red-100",
     },
     {
@@ -29,7 +29,7 @@ const LatestPosts = () => {
       title: "Behind the Scenes: Building a Robotic Masterpiece",
       desc: "A glimpse into the creative process of our latest project.",
       tags: ["Software Development", "Robotics"],
-      image: "/assets/home/ProductImage3.png",
+      image: "assets/home/ProductImage3.png",
       color: "purple-500",
     },
   ];

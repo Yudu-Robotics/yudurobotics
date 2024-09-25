@@ -4,19 +4,19 @@ import React from "react";
 const VersatileSoftware = () => {
   const features = [
     {
-      image: "/assets/other/imagePlaceholder.png",
+      image: "assets/other/imagePlaceholder.png",
       heading: "3-Step Programming",
       description:
         "Coding is as easy as Select, Assemble, and Code. Perfect for first-timers, this approach makes building projects feel like child’s play.",
     },
     {
-      image: "/assets/other/imagePlaceholder.png",
+      image: "assets/other/imagePlaceholder.png",
       heading: "5 Coding Styles",
       description:
         "3 visual modes (Hexa Programming, Flowchart, Scratch-style) or go pro with C and Python scripts.",
     },
     {
-      image: "/assets/other/imagePlaceholder.png",
+      image: "assets/other/imagePlaceholder.png",
       heading: "AI Mode & App Mode",
       description:
         "Just speak and code, or create apps that control your physical projects—Plode makes it all possible.",

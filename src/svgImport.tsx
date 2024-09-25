@@ -2671,17 +2671,30 @@ const mapIcon = (
   </svg>
 );
 
-const clockIcon = (<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <g clip-path="url(#clip0_14900_14885)">
-  <path d="M9.99984 5V10L13.3332 11.6667M18.3332 10C18.3332 14.6024 14.6022 18.3333 9.99984 18.3333C5.39746 18.3333 1.6665 14.6024 1.6665 10C1.6665 5.39763 5.39746 1.66667 9.99984 1.66667C14.6022 1.66667 18.3332 5.39763 18.3332 10Z" stroke="#BDBDBF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-  </g>
-  <defs>
-  <clipPath id="clip0_14900_14885">
-  <rect width="20" height="20" fill="white"/>
-  </clipPath>
-  </defs>
+const clockIcon = (
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 20 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g clip-path="url(#clip0_14900_14885)">
+      <path
+        d="M9.99984 5V10L13.3332 11.6667M18.3332 10C18.3332 14.6024 14.6022 18.3333 9.99984 18.3333C5.39746 18.3333 1.6665 14.6024 1.6665 10C1.6665 5.39763 5.39746 1.66667 9.99984 1.66667C14.6022 1.66667 18.3332 5.39763 18.3332 10Z"
+        stroke="#BDBDBF"
+        stroke-width="1.66667"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_14900_14885">
+        <rect width="20" height="20" fill="white" />
+      </clipPath>
+    </defs>
   </svg>
-  )
+);
 
 const phoneIcon = (
   <svg
@@ -2752,6 +2765,138 @@ const headerImageBackground = (
           result="effect1_innerShadow_14584_2512"
         />
       </filter>
+    </defs>
+  </svg>
+);
+
+const floatingWhatsApp = (
+  <svg
+    width="72"
+    height="72"
+    viewBox="0 0 136 136"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g filter="url(#filter0_dd_14938_27952)">
+      <path
+        d="M20 24C20 10.7452 30.7452 0 44 0H92C105.255 0 116 10.7452 116 24V72C116 85.2548 105.255 96 92 96H44C30.7452 96 20 85.2548 20 72V24Z"
+        fill="hsl(var(--primary))"
+        shapeRendering="crispEdges"
+      />
+      <path
+        d="M20.5 24C20.5 11.0213 31.0213 0.5 44 0.5H92C104.979 0.5 115.5 11.0213 115.5 24V72C115.5 84.9787 104.979 95.5 92 95.5H44C31.0213 95.5 20.5 84.9787 20.5 72V24Z"
+        stroke="url(#paint0_linear_14938_27952)"
+        shapeRendering="crispEdges"
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M68 78C83.464 78 96 65.464 96 50C96 34.536 83.464 22 68 22C52.536 22 40 34.536 40 50C40 55.0218 41.322 59.7348 43.6369 63.8099L40 78L54.6297 74.6076C58.6028 76.7709 63.1578 78 68 78ZM68 73.6923C81.0849 73.6923 91.6923 63.0849 91.6923 50C91.6923 36.9151 81.0849 26.3077 68 26.3077C54.9151 26.3077 44.3077 36.9151 44.3077 50C44.3077 55.0521 45.889 59.7349 48.5837 63.5804L46.4615 71.5385L54.5599 69.5139C58.3787 72.1491 63.0091 73.6923 68 73.6923Z"
+        fill="#BFC8D0"
+      />
+      <path
+        d="M92 48C92 61.2548 81.2548 72 68 72C62.9443 72 58.2538 70.4368 54.3853 67.7673L46.1818 69.8182L48.3315 61.7568C45.6018 57.8614 44 53.1177 44 48C44 34.7452 54.7452 24 68 24C81.2548 24 92 34.7452 92 48Z"
+        fill="url(#paint1_linear_14938_27952)"
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M68 76C83.464 76 96 63.464 96 48C96 32.536 83.464 20 68 20C52.536 20 40 32.536 40 48C40 53.0218 41.322 57.7348 43.6369 61.8099L40 76L54.6297 72.6076C58.6028 74.7709 63.1578 76 68 76ZM68 71.6923C81.0849 71.6923 91.6923 61.0849 91.6923 48C91.6923 34.9151 81.0849 24.3077 68 24.3077C54.9151 24.3077 44.3077 34.9151 44.3077 48C44.3077 53.0521 45.889 57.7349 48.5837 61.5804L46.4615 69.5385L54.5599 67.5139C58.3787 70.1491 63.0091 71.6923 68 71.6923Z"
+        fill="white"
+      />
+      <path
+        d="M61 35C60.3343 33.6629 59.3131 33.7812 58.2814 33.7812C56.4375 33.7812 53.5625 35.9898 53.5625 40.1002C53.5625 43.4688 55.0469 47.1563 60.0488 52.6725C64.8761 57.996 71.2188 60.7499 76.4844 60.6561C81.75 60.5624 82.8334 56.0311 82.8334 54.5009C82.8334 53.8226 82.4125 53.4842 82.1225 53.3923C80.3281 52.5311 77.0187 50.9265 76.2656 50.625C75.5126 50.3236 75.1194 50.7313 74.875 50.9532C74.1921 51.6039 72.8385 53.5218 72.375 53.9532C71.9115 54.3845 71.2206 54.1662 70.933 54.0032C69.8749 53.5785 67.0059 52.3024 64.7189 50.0855C61.8906 47.3438 61.7247 46.4005 61.1918 45.5609C60.7655 44.8891 61.0783 44.477 61.2344 44.2969C61.8438 43.5938 62.6852 42.5082 63.0625 41.9688C63.4399 41.4293 63.1403 40.6103 62.9606 40.1002C62.1875 37.9063 61.5326 36.0697 61 35Z"
+        fill="white"
+      />
+    </g>
+    <defs>
+      <filter
+        id="filter0_dd_14938_27952"
+        x="0"
+        y="0"
+        width="136"
+        height="136"
+        filterUnits="userSpaceOnUse"
+        colorInterpolationFilters="sRGB"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feMorphology
+          radius="4"
+          operator="erode"
+          in="SourceAlpha"
+          result="effect1_dropShadow_14938_27952"
+        />
+        <feOffset dy="8" />
+        <feGaussianBlur stdDeviation="4" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0.0627451 0 0 0 0 0.0941176 0 0 0 0 0.156863 0 0 0 0.03 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="BackgroundImageFix"
+          result="effect1_dropShadow_14938_27952"
+        />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feMorphology
+          radius="4"
+          operator="erode"
+          in="SourceAlpha"
+          result="effect2_dropShadow_14938_27952"
+        />
+        <feOffset dy="20" />
+        <feGaussianBlur stdDeviation="12" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0.0627451 0 0 0 0 0.0941176 0 0 0 0 0.156863 0 0 0 0.08 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="effect1_dropShadow_14938_27952"
+          result="effect2_dropShadow_14938_27952"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="effect2_dropShadow_14938_27952"
+          result="shape"
+        />
+      </filter>
+      <linearGradient
+        id="paint0_linear_14938_27952"
+        x1="68"
+        y1="0"
+        x2="68"
+        y2="96"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="white" stopOpacity="0.12" />
+        <stop offset="1" stopColor="white" stopOpacity="0" />
+      </linearGradient>
+      <linearGradient
+        id="paint1_linear_14938_27952"
+        x1="89"
+        y1="30"
+        x2="44"
+        y2="72"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#5BD066" />
+        <stop offset="1" stopColor="#27B43E" />
+      </linearGradient>
     </defs>
   </svg>
 );
@@ -2842,6 +2987,8 @@ function renderSvg(svgName: string) {
       return reflective;
     case "clockIcon":
       return clockIcon;
+    case "floatingWhatsApp":
+      return floatingWhatsApp;
 
     // imageBackground
     case "headerImageBackground":

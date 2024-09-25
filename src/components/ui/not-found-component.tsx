@@ -3,21 +3,21 @@ import React from "react";
 export function WrongPageComponent() {
   const redirectOptions = [
     {
-      icon: "/assets/404/documentation.png",
+      icon: "assets/404/documentation.png",
       title: "Documentation",
       desc: "Dive in to learn all about our product.",
       redirectText: "Start learning ->",
       redirectPath: "/",
     },
     {
-      icon: "/assets/404/blogBook.png",
+      icon: "assets/404/blogBook.png",
       title: "Our blog",
       desc: "Read the latest posts on our blog.",
       redirectText: "View latest posts ->",
       redirectPath: "/blog",
     },
     {
-      icon: "/assets/404/message-chat-circleBlog.png",
+      icon: "assets/404/message-chat-circleBlog.png",
       title: "Chat to us",
       desc: "Can’t find what you’re looking for?",
       redirectText: "Chat to our team ->",

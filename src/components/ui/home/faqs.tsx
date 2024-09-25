@@ -74,8 +74,8 @@ const FAQs = () => {
               <img
                 src={
                   openIndex === index
-                    ? "/assets/icons/minus-circle.png"
-                    : "/assets/icons/plus-circle.png"
+                    ? "assets/icons/minus-circle.png"
+                    : "assets/icons/plus-circle.png"
                 }
                 alt={openIndex === index ? "Minus sign" : "Plus sign"}
                 className="w-6 h-6"

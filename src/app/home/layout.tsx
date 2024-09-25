@@ -10,7 +10,9 @@ export default function HomeLayout({
 
   return (
     <div>
-      <ClientLayout>{children}</ClientLayout>
+      <ClientLayout>
+        {children}
+        </ClientLayout>
     </div>
   );
 }
