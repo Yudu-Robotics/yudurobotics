@@ -17,6 +17,7 @@ import { mockData } from "@/data/mockData";
 import GetInTouch from "@/components/ui/common/get-in-touch";
 import renderSvg from "@/svgImport";
 import { highlightWords } from "../utility/highlightWords";
+import TestimonialBanner from "@/components/ui/common/testimonial-banner";
 
 const FAQs = dynamic(() => import("@/components/ui/home/faqs"), {
   ssr: false, // This disables server-side rendering for the FAQ component
@@ -90,9 +91,10 @@ export default async function HomePage() {
         <div className="py-10 lg:py-20">
           <Ourteam />
         </div>
-        <div>
+        {/* <div>
           <LatestPosts />
-        </div>
+        </div> */}
+        <TestimonialBanner />
         <div className="py-5 lg:py-20">
           <FAQs />
         </div>

@@ -31,7 +31,7 @@ function Unboxing() {
           </h2>
         </div>
 
-        <div className="flex flex-col space-y-8 justify-center items-center">
+        <div className="flex flex-col space-y-8 justify-center">
           {features.map(
             (
               value: { icon: string; heading: string; subheading: string },

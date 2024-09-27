@@ -33,6 +33,7 @@ import CurriculumSteps from "@/components/ui/common/curriculum-steps";
 import AdaptiveLMS from "@/components/ui/common/adaptive-lms";
 import Unboxing from "@/components/ui/common/unboxing";
 import { notFound } from "next/navigation";
+import TestimonialBanner from "@/components/ui/common/testimonial-banner";
 
 const FAQs = dynamic(() => import("@/components/ui/home/faqs"), {
   ssr: false, // This disables server-side rendering for the FAQ component
@@ -219,6 +220,7 @@ export default async function ProductPage({ params }: any) {
             desc="Explore our comprehensive curriculum designed to make coding and robotics accessible and exciting. Get started with structured lessons and hands-on projects today!"
           />
         </div>
+        <TestimonialBanner />
         <div className="py-5 lg:py-20">
           <FAQs />
         </div>

@@ -31,12 +31,32 @@ const stars = "assets/other/Stars.png";
 const girls = "assets/other/girls.png";
 const macbook = "assets/other/macbook.png";
 const videoPlayer = "assets/other/video-player.png";
+const testimonial = "assets/other/testimonial.png";
 
 // peecee
 const peecee = "assets/peecee/peecee.png";
 const avatar = "assets/peecee/Avatar.png";
 const profileImage = "assets/peecee/profileImage.png";
 const handArrow = "assets/peecee/hand-arrow.png";
+
+
+// testimonial
+
+const bannerImg1 = "assets/testimonial/Mask group.png";
+const bannerImg2 = "assets/testimonial/Mask group (1).png";
+const bannerImg3 = "assets/testimonial/Mask group (2).png";
+const bannerImg4 = "assets/testimonial/Mask group (3).png";
+const bannerImg5 = "assets/testimonial/Mask group (4).png";
+const bannerImg6 = "assets/testimonial/Mask group (5).png";
+
+const bg1 = "assets/testimonial/bg-featured product.png";
+const bg2 = "assets/testimonial/bg-featured product (1).png";
+const bg3 = "assets/testimonial/bg-featured product (2).png";
+const bg4 = "assets/testimonial/bg-featured product (3).png";
+const bg5 = "assets/testimonial/bg-featured product (4).png";
+const bg6 = "assets/testimonial/bg-featured product (5).png";
+const bg7 = "assets/testimonial/bg-featured product (6).png";
+
 
 function renderImg(imgName: string) {
   switch (imgName) {
@@ -113,6 +133,8 @@ function renderImg(imgName: string) {
 
     case "arrowUpRight":
       return arrowUpRight;
+    case "testimonial":
+      return testimonial;
 
     case "searchIcon":
       return searchIcon;
@@ -120,6 +142,34 @@ function renderImg(imgName: string) {
       return iphone;
     case "stars":
       return stars;
+
+      // testimonial
+      case "bannerImg1":
+      return bannerImg1;
+      case "bannerImg2":
+      return bannerImg2;
+      case "bannerImg3":
+      return bannerImg3;
+      case "bannerImg4":
+      return bannerImg4;
+      case "bannerImg5":
+      return bannerImg5;
+      case "bannerImg6":
+      return bannerImg6;
+      case "bg1":
+      return bg1;
+      case "bg2":
+      return bg2;
+      case "bg3":
+      return bg3;
+      case "bg4":
+      return bg4;
+      case "bg5":
+      return bg5;
+      case "bg6":
+      return bg6;
+      case "bg7":
+      return bg7;
   }
 }
 
