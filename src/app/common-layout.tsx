@@ -56,10 +56,10 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
   );
 
   return (
-    <div className=" ">
+    <div className="">
       <div className="px-8 lg:px-28 py-4 bg-primary ">
         {/* TopBar/NavBar */}
-        <div className="flex justify-between items-center ">
+        <div className="flex justify-between items-center max-w-7xl mx-auto">
           {/* Logo */}
           <Link
             href="/home"
@@ -123,7 +123,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
       <main>{children}</main>
 
       {/* Footer */}
-      <div className="w-full -mb-1">{renderSvg("bottomSection")}</div>
+      <div className="w-full -mb-1 ">{renderSvg("bottomSection")}</div>
       <div className="px-8 lg:px-28 py-4 bg-primary ">
         <Footer />
       </div>

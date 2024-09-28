@@ -44,7 +44,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="text-primary-foreground ">
+    <div className="text-primary-foreground max-w-7xl mx-auto">
       {/* First Section */}
       <div className="flex flex-col space-y-16 lg:flex-row lg:justify-between">
         <div className="flex flex-col justify-center text-center items-center lg:items-start lg:text-start">

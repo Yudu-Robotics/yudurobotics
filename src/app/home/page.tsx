@@ -28,7 +28,7 @@ export default async function HomePage() {
   return (
     <>
       <div className="px-8 lg:px-28 py-4 bg-primary">
-        <div className="flex flex-col space-y-16 lg:flex-row lg:space-y-0 justify-between py-10">
+        <div className="flex flex-col space-y-16 lg:flex-row lg:space-y-0 justify-between py-10 max-w-7xl mx-auto">
           <div className="w-full">
             <a href="#product-features-component" className="mb-6">
               <NewFeaturesCard />
@@ -57,12 +57,12 @@ export default async function HomePage() {
 
           <JumpingButtons ishorizontal="true" />
         </div>
-        <div className="py-10">
+        <div className="py-10  max-w-7xl mx-auto">
           <a href="">
             <img src={renderImg("homeImage")} className="w-full" />
           </a>
         </div>
-        <div className="py-8 lg:py-16">
+        <div className="py-8 lg:py-16  max-w-7xl mx-auto">
           <CeoReviewsContainer />
         </div>
       </div>
@@ -71,7 +71,7 @@ export default async function HomePage() {
         {renderSvg("headerSection")}
       </div>
       {/* Middle Part */}
-      <div className="px-12 lg:px-28 text-black py-5 lg:py-10 ">
+      <div className="px-12 lg:px-28 text-black py-5 lg:py-10  max-w-7xl mx-auto">
         <div className="py-5 lg:py-10">
           <GlobalAwards />
         </div>

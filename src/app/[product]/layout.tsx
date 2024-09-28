@@ -72,7 +72,7 @@ export default function ProductLayout({
         <div className=" ">
           <div className="px-8 lg:px-28 py-4 bg-primary">
             {/* TopBar/NavBar */}
-            <div className="flex justify-between items-center ">
+            <div className="flex justify-between items-center  max-w-7xl mx-auto ">
               <a
                 href="/home"
                 className="flex space-x-3 justify-start items-center w-[50%]"
@@ -94,7 +94,7 @@ export default function ProductLayout({
               </div>
 
               {/* Full Navbar for Desktop */}
-              <div className="space-x-4 hidden lg:flex lg:justify-center lg:items-center text-primary-foreground">
+              <div className="space-x-4 hidden lg:flex lg:justify-center lg:items-center text-primary-foreground ">
                 {NavBarItems.map((item: string, key: number) => (
                   <div key={key}>
                     {

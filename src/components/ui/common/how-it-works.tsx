@@ -21,7 +21,6 @@ interface HowItWork {
 }
 
 const Working: React.FC<{ data: HowItWork }> = ({ data }) => {
-
   return (
     <div className="max-w-full flex flex-col space-y-10 py-10">
       <div className="flex flex-col space-y-2 justify-centerv items-center text-center">
@@ -35,7 +34,7 @@ const Working: React.FC<{ data: HowItWork }> = ({ data }) => {
       </div>
       <div className="flex flex-col items-center space-y-8 md:flex-row justify-center md:space-y-0">
         <div className="flex flex-col justify-center items-center space-y-4">
-          <div>
+          <div className="px-4">
             <img src={data.section1.image} alt="Product Image" className="" />
           </div>
           <div className="flex flex-col justify-center space-y-1 items-center text-center">
@@ -47,7 +46,7 @@ const Working: React.FC<{ data: HowItWork }> = ({ data }) => {
           </div>
         </div>
         <div className="flex flex-col justify-center items-center space-y-4">
-          <div>
+          <div className="px-4">
             <img src={data.section2.image} alt="Product Image" className="" />
           </div>
           <div className="flex flex-col space-y-2 items-center text-center">

@@ -61,7 +61,7 @@ export default async function ProductPage({ params }: any) {
   return (
     <>
       <div className="px-8 lg:px-28 py-4 bg-primary">
-        <div className="flex flex-col space-y-16 lg:flex-row lg:space-y-0 justify-between py-10">
+        <div className="flex flex-col space-y-16 lg:flex-row lg:space-y-0 justify-between py-10  max-w-7xl mx-auto">
           <div className="w-full">
             {/* Main Text */}
 
@@ -84,7 +84,7 @@ export default async function ProductPage({ params }: any) {
           {/* Buttons Section */}
           {<JumpingButtons ishorizontal="true" />}
         </div>
-        <div className="">
+        <div className=" max-w-7xl mx-auto">
           <img src={data.images[0]} className="w-full -mt-[8%]" />
         </div>
         {/* <div className="py-8 lg:py-16">
@@ -96,7 +96,7 @@ export default async function ProductPage({ params }: any) {
         {renderSvg(data.sectionHeader)}
       </div>
       {/* Middle Part */}
-      <div className="px-12 lg:px-28 text-black py-5 lg:py-10">
+      <div className="px-12 lg:px-28 text-black py-5 lg:py-10  max-w-7xl mx-auto">
         {product == "peecee" && (
           <div className="py-5 lg:py-10">
             <GlobalAwards />
