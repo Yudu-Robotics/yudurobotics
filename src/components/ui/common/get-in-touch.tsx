@@ -14,9 +14,9 @@ const GetInTouch = () => {
         </p>
       </div>
 
-      <div className="py-3">
+      <a href="#footer-contact-form-component" className="py-3">
         <Button className="rounded-full">Get in touch</Button>
-      </div>
+      </a>
     </div>
   );
 };

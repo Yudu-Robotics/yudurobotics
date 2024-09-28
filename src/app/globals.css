@@ -174,34 +174,6 @@
   }
 
   /* Keyframes and animation for continuous scrolling */
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-140%);
-    }
-  }
-
-  @keyframes scrolls {
-    0% {
-      transform: translateX(100%); /* Start from the rightmost position */
-    }
-    100% {
-      transform: translateX(0); /* Align to start with the first content */
-    }
-  }
-
-  .animate-scroll-secondary {
-    animation: scrolls 10s linear infinite;
-    display: flex;
-    animation-delay: 10s;
-  }
-
-  .animate-scroll {
-    animation: scroll 20s linear infinite;
-    display: flex;
-  }
 }
 
 @font-face {

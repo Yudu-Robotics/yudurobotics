@@ -88,9 +88,9 @@ export default async function HomePage() {
           <SubscribeSection />
         </div>
 
-        <div className="py-10 lg:py-20">
+        {/* <div className="py-10 lg:py-20">
           <Ourteam />
-        </div>
+        </div> */}
         {/* <div>
           <LatestPosts />
         </div> */}

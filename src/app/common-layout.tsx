@@ -17,13 +17,7 @@ import {
 import FloatingWhatsApp from "@/components/ui/common/floating-whatsapp";
 
 const ClientLayout = ({ children }: { children: React.ReactNode }) => {
-  const NavBarItems = [
-    "Y/Our Products",
-    "The Partner Program",
-    "Crazies Behind",
-    "Resources",
-    "Blogs",
-  ];
+  const NavBarItems = ["Y(Our) Products", "The Partner Program"];
 
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
@@ -62,10 +56,10 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
   );
 
   return (
-    <div>
-      <div className="px-8 lg:px-28 py-4 bg-primary">
+    <div className=" ">
+      <div className="px-8 lg:px-28 py-4 bg-primary ">
         {/* TopBar/NavBar */}
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center ">
           {/* Logo */}
           <Link
             href="/home"
@@ -130,7 +124,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
 
       {/* Footer */}
       <div className="w-full -mb-1">{renderSvg("bottomSection")}</div>
-      <div className="px-8 lg:px-28 py-4 bg-primary">
+      <div className="px-8 lg:px-28 py-4 bg-primary ">
         <Footer />
       </div>
     </div>

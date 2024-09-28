@@ -30,13 +30,7 @@ export default function ProductLayout({
   let currentProduct = params.product == "roboki" ? "peecee" : params.product;
   currentProduct = currentProduct == "crawl_e" ? "zing" : currentProduct;
 
-  const NavBarItems = [
-    "Y/Our Products",
-    "The Partner Program",
-    "Crazies Behind",
-    "Resources",
-    "Blogs",
-  ];
+  const NavBarItems = ["Y(Our) Products", "The Partner Program"];
 
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
@@ -75,10 +69,10 @@ export default function ProductLayout({
   return (
     <html lang="en">
       <body className={currentProduct == "klaw_b" ? "klaw" : currentProduct}>
-        <div className="">
+        <div className=" ">
           <div className="px-8 lg:px-28 py-4 bg-primary">
             {/* TopBar/NavBar */}
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center ">
               <a
                 href="/home"
                 className="flex space-x-3 justify-start items-center w-[50%]"

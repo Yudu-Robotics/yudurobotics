@@ -14,50 +14,6 @@ const footerData = [
     ],
   },
   {
-    title: "Company",
-    links: [
-      { name: "About us", href: "#" },
-      { name: "Careers", href: "#" },
-      { name: "Press", href: "#" },
-      { name: "News", href: "#" },
-      { name: "Media kit", href: "#" },
-      { name: "Contact", href: "#" },
-    ],
-  },
-  {
-    title: "Resources",
-    links: [
-      { name: "Blog", href: "#" },
-      { name: "Newsletter", href: "#" },
-      { name: "Events", href: "#" },
-      { name: "Help centre", href: "#" },
-      { name: "Tutorials", href: "#" },
-      { name: "Support", href: "#" },
-    ],
-  },
-  {
-    title: "Use cases",
-    links: [
-      { name: "Startups", href: "#" },
-      { name: "Enterprise", href: "#" },
-      { name: "Government", href: "#" },
-      { name: "SaaS centre", href: "#" },
-      { name: "Marketplaces", href: "#" },
-      { name: "Ecommerce", href: "#" },
-    ],
-  },
-  {
-    title: "Social",
-    links: [
-      { name: "Twitter", href: "#" },
-      { name: "LinkedIn", href: "#" },
-      { name: "Facebook", href: "#" },
-      { name: "GitHub", href: "#" },
-      { name: "AngelList", href: "#" },
-      { name: "Dribbble", href: "#" },
-    ],
-  },
-  {
     title: "Legal",
     links: [
       { name: "Terms", href: "#" },
@@ -68,13 +24,57 @@ const footerData = [
       { name: "Contact", href: "#" },
     ],
   },
+  {
+    title: "Company",
+    links: [
+      { name: "About us", href: "#" },
+      { name: "Careers", href: "#" },
+      // { name: "Press", href: "#" },
+      // { name: "News", href: "#" },
+      // { name: "Media kit", href: "#" },
+      { name: "Contact", href: "#" },
+    ],
+  },
+  // {
+  //   title: "Resources",
+  //   links: [
+  //     { name: "Blog", href: "#" },
+  //     { name: "Newsletter", href: "#" },
+  //     { name: "Events", href: "#" },
+  //     { name: "Help centre", href: "#" },
+  //     { name: "Tutorials", href: "#" },
+  //     { name: "Support", href: "#" },
+  //   ],
+  // },
+  // {
+  //   title: "Use cases",
+  //   links: [
+  //     { name: "Startups", href: "#" },
+  //     { name: "Enterprise", href: "#" },
+  //     { name: "Government", href: "#" },
+  //     { name: "SaaS centre", href: "#" },
+  //     { name: "Marketplaces", href: "#" },
+  //     { name: "Ecommerce", href: "#" },
+  //   ],
+  // },
+  {
+    title: "Social",
+    links: [
+      { name: "Twitter", href: "#" },
+      { name: "LinkedIn", href: "#" },
+      { name: "Facebook", href: "#" },
+      // { name: "GitHub", href: "#" },
+      // { name: "AngelList", href: "#" },
+      // { name: "Dribbble", href: "#" },
+    ],
+  },
 ];
 
 export default function BottomFooter() {
   return (
     <footer className="py-6">
       <div className="">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-12">
           {footerData.map((section, index) => (
             <div key={index}>
               <h4 className="font-thin mb-4 text-xs">{section.title}</h4>

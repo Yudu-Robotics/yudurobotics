@@ -44,7 +44,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="text-primary-foreground">
+    <div className="text-primary-foreground ">
       {/* First Section */}
       <div className="flex flex-col space-y-16 lg:flex-row lg:justify-between">
         <div className="flex flex-col justify-center text-center items-center lg:items-start lg:text-start">
@@ -71,7 +71,10 @@ const Footer = () => {
           </h1>
         </div>
 
-        <div className="flex flex-col space-y-8 lg:flex-row lg:space-y-0 justify-between py-4 lg:py-20 ">
+        <div
+          id="footer-contact-form-component"
+          className="flex flex-col space-y-8 lg:flex-row lg:space-y-0 justify-between py-4 lg:py-20 "
+        >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:w-[50%] ">
             {contact_options.map(
               (

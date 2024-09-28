@@ -12,13 +12,10 @@ export default function TestimonialBanner() {
         <div>{renderSvg("star1")}</div>
       </div>
 
-      <div className="flex overflow-hidden">
-        <div className="flex animate-scroll space-x-8">
+      <div className="flex overflow-hidden relative">
+        <div className="flex animate-loop-scroll">
           <Content />
         </div>
-        {/* <div className="flex space-x-8 animate-scroll-secondary">
-        <Content />
-      </div> */}
       </div>
 
       <div className="flex justify-center items-center">
