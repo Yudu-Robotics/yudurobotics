@@ -20,7 +20,7 @@ export default function ProductCatalog() {
           push the boundaries of robotics.
         </p>
         <Button className="py-6 px-8 text-xs lg:text-sm rounded-3xl ">
-          Veiw all products {"->"}
+          View all products {"->"}
         </Button>
       </div>
     </div>

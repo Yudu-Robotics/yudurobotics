@@ -21,9 +21,18 @@ export default function ProductCategories() {
     { name: "Age 12+", active: false },
   ];
 
+  const intialProductDetails = {
+    image: "",
+    name: "Crawl-e",
+    description:
+      "Auto Layout is a constraint-based layout system to create an adaptive UI.",
+    link: "/crawl_e",
+  };
+
   const [filters, setFilters] = useState(initialFilters);
   const [ageGroups, setAgeGroups] = useState(initialAgeGroups);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [productDetails, setProductDetails] = useState(intialProductDetails);
 
   const products = [
     {
@@ -34,6 +43,7 @@ export default function ProductCategories() {
       category: "Toys",
       type: "Hardware",
       ageGroup: "Age 9-12",
+      link: "/",
     },
     {
       name: "Zing",
@@ -43,6 +53,7 @@ export default function ProductCategories() {
       category: "Animatronics",
       type: "Hardware",
       ageGroup: "Age 12+",
+      link: "/zing",
     },
     {
       name: "Firepen 3D",
@@ -52,6 +63,7 @@ export default function ProductCategories() {
       category: "Micro-controller",
       type: "Software",
       ageGroup: "Age 12+",
+      link: "/",
     },
     {
       name: "Play Dynamex",
@@ -61,14 +73,20 @@ export default function ProductCategories() {
       category: "Toys",
       type: "Curriculum",
       ageGroup: "Age 5-8",
+      link: "/",
     },
   ];
+
+  // handle ProductClick
+  const handleProductClick = (proDetail: any) => {
+    setProductDetails(proDetail);
+  };
 
   // Handle filter change
   const handleFilterChange = (index: number) => {
     const updatedFilters = filters.map((filter, i) => ({
       ...filter,
-      active: i === index ? !filter.active : false, 
+      active: i === index ? !filter.active : false,
     }));
     setFilters(updatedFilters);
   };
@@ -120,7 +138,9 @@ export default function ProductCategories() {
                 <div
                   key={key}
                   className={`flex justify-center items-center font-bold text-xl lg:text-sm cursor-pointer ${
-                    selectedCategory === category ? "text-primary bg-purple-100 p-2 rounded-full" : ""
+                    selectedCategory === category
+                      ? "text-primary bg-purple-100 p-2 rounded-full"
+                      : ""
                   }`}
                   onClick={() => handleCategorySelection(category)}
                 >
@@ -129,7 +149,7 @@ export default function ProductCategories() {
                     <div className="flex justify-center px-1 items-center">
                       <ProductTag title="New" color="green-500" />
                     </div>
-                  )}     
+                  )}
                 </div>
               );
             })}
@@ -137,7 +157,10 @@ export default function ProductCategories() {
         </div>
         <div className="container">
           {filteredProducts.length > 0 && (
-            <ProductGrid products={filteredProducts} />
+            <ProductGrid
+              products={filteredProducts}
+              handleProductClick={handleProductClick}
+            />
           )}
           {filteredProducts.length == 0 && (
             <div className="flex justify-center items-center font-thin py-20">
@@ -147,16 +170,15 @@ export default function ProductCategories() {
         </div>
         <div className="flex flex-col space-y-3 bg-card-foreground rounded-xlg lg:w-[90%] p-8">
           <div className="">
-            <img src={renderImg("productCrawle")} className="w-[100%]" />
+            <img src={productDetails.image || renderImg("productCrawle")} className="w-[100%]" />
           </div>
           <div>
-            <h1 className="font-bold text-xl">Crawl-e</h1>
+            <h1 className="font-bold text-xl">{productDetails.name}</h1>
             <p className="font-light text-lg py-1">
-              Auto Layout is a constraint-based layout system to create an
-              adaptive UI.
+              {productDetails.description}
             </p>
             <Link
-              href="/crawl_e"
+              href={productDetails.link}
               className="text-primary mt-4 text-base font-bold hover:scale-125"
             >
               Learn More {"->"}

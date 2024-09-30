@@ -29,7 +29,7 @@ const Footer = () => {
     {
       type: "Phone",
       text: "Mon-Fri from 8am to 5pm.",
-      contact_by: "+1 (555) 000-0000",
+      contact_by: "+91 9606755032",
       icon_image: "phoneIcon",
     },
   ];
