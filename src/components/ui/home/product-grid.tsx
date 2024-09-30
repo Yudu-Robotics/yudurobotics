@@ -11,7 +11,7 @@ const ProductGrid: React.FC<{ products: Products[]}> = ({
 }) =>  {
  
   return (
-    <div className="container w-[100%] lg:ml-10 lg:px-24">
+    <div className="container lg:ml-10 lg:w-[80%]">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {products.map((product, index) => (
           <Link
@@ -20,7 +20,7 @@ const ProductGrid: React.FC<{ products: Products[]}> = ({
             className="flex flex-col space-y-2 p-4 hover:bg-card-foreground rounded-lg hover:scale-90"
           >
             {/* Product Image */}
-            <div className="w-full">
+            <div className="max-w-[80%] lg:max-w-full">
               <img
                 src={product.image}
                 alt={product.name}

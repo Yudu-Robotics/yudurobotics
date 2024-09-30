@@ -68,7 +68,7 @@ export default function ProductCategories() {
   const handleFilterChange = (index: number) => {
     const updatedFilters = filters.map((filter, i) => ({
       ...filter,
-      active: i === index ? !filter.active : false, 
+      active: i === index ? !filter.active : false,
     }));
     setFilters(updatedFilters);
   };
@@ -102,7 +102,7 @@ export default function ProductCategories() {
   );
 
   return (
-    <div className="flex flex-col  space-y-10 lg:space-y-20 py-7 lg:py-14">
+    <div className="flex flex-col space-y-10 lg:space-y-20 py-7 lg:py-14">
       <SearchAndFilter
         filters={filters}
         ageGroups={ageGroups}
@@ -110,7 +110,7 @@ export default function ProductCategories() {
         onAgeGroupChange={handleAgeGroupChange}
       />
       <div className="flex flex-col space-y-2 lg:flex-row">
-        <div className="flex flex-col space-y-2 lg:space-y-6 w-[100%] lg:w-[25%]">
+        <div className="flex flex-col space-y-2 lg:space-y-6 w-[100%] lg:w-[30%]">
           <h2 className="text-primary font-semibold text-sm lg:text-sm text-center lg:text-start ">
             Product Catagories
           </h2>
@@ -120,7 +120,9 @@ export default function ProductCategories() {
                 <div
                   key={key}
                   className={`flex justify-center items-center font-bold text-xl lg:text-sm cursor-pointer ${
-                    selectedCategory === category ? "text-primary bg-purple-100 p-2 rounded-full" : ""
+                    selectedCategory === category
+                      ? "text-primary bg-purple-100 p-2 rounded-full"
+                      : ""
                   }`}
                   onClick={() => handleCategorySelection(category)}
                 >
@@ -129,7 +131,7 @@ export default function ProductCategories() {
                     <div className="flex justify-center px-1 items-center">
                       <ProductTag title="New" color="green-500" />
                     </div>
-                  )}     
+                  )}
                 </div>
               );
             })}
@@ -145,9 +147,9 @@ export default function ProductCategories() {
             </div>
           )}
         </div>
-        <div className="flex flex-col space-y-3 bg-card-foreground rounded-xlg lg:w-[90%] p-8">
+        <div className="flex flex-col space-y-3 bg-card-foreground rounded-xlg p-8 w-[90%]">
           <div className="">
-            <img src={renderImg("productCrawle")} className="w-[100%]" />
+            <img src={renderImg("productCrawle")} className="" />
           </div>
           <div>
             <h1 className="font-bold text-xl">Crawl-e</h1>
