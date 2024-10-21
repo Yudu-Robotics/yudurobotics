@@ -116,6 +116,108 @@ type BlogData = {
   };
 }[];
 
+export const products = [
+  {
+    name: "Ted",
+    description: "Auto Layout is a constraint-based layout system to create an adaptive UI.",    
+    image: "assets/products/ted.png",
+    category: "Toys",
+    type: "Hardware",
+    ageGroup: "Age 9-12",
+    link: "/products",
+  },
+  {
+    name: "AI-1",
+    description:
+      "Auto Layout is a constraint-based layout system to create an adaptive UI.",
+    image: "assets/products/ai.png",
+    category: "Toys",
+    type: "Hardware",
+    ageGroup: "Age 9-12",
+    link: "/products",
+  },
+  {
+    name: "Roboki",
+    description:
+    "Auto Layout is a constraint-based layout system to create an adaptive UI.",
+    image: "assets/products/roboki.png",
+    category: "Toys",
+    type: "Hardware",
+    ageGroup: "Age 9-12",
+    link: "/products",
+  },
+  {
+    name: "Toki",
+    description:
+    "Auto Layout is a constraint-based layout system to create an adaptive UI.",
+    image: "assets/products/toki.png",
+    category: "Toys",
+    type: "Hardware",
+    ageGroup: "Age 9-12",
+    link: "/products",
+  },
+  {
+    name: "Plode",
+    description:
+    "Auto Layout is a constraint-based layout system to create an adaptive UI.",
+    image: "assets/products/toki.png",
+    category: "Toys",
+    type: "Software",
+    ageGroup: "Age 9-12",
+    link: "/products",
+  },
+  {
+    name: "Play Trons",
+    description:
+      "Simple plug-and-play electronics for instant fun, learning, and creativity.",
+    image: "assets/zing/ProductImage1.png",
+    category: "Toys",
+    type: "Hardware",
+    ageGroup: "Age 9-12",
+    link: "/products",
+  },
+  {
+    name: "Zing",
+    description:
+      "Advanced humanoid robot designed for interactive learning, companionship, and play.",
+    image: "assets/products/zing.png",
+    category: "Animatronics",
+    type: "Hardware",
+    ageGroup: "Age 12+",
+    link: "/zing",
+  },
+  {
+    name: "Tinker Bunker",
+    description:
+      "Advanced humanoid robot designed for interactive learning, companionship, and play.",
+    image: "assets/products/tinker-bunker.png",
+    category: "Animatronics",
+    type: "Curriculum",
+    ageGroup: "Age 12+",
+    link: "/products",
+  },
+  {
+    name: "Firepen 3D",
+    description:
+      "High-precision 3D printer for creative, customizable, and rapid prototyping solutions.",
+    image: "assets/zing/ProductImage3.png",
+    category: "Micro-controller",
+    type: "Curriculum",
+    ageGroup: "Age 12+",
+    link: "/products",
+  },
+  {
+    name: "Play Dynamex",
+    description:
+      "Colorful LEGO blocks inspiring creativity, imagination, and hands-on building fun.",
+    image: "assets/zing/ProductImage4.png",
+    category: "Toys",
+    type: "Curriculum",
+    ageGroup: "Age 5-8",
+    link: "/products",
+  },
+];
+
 export const mockData: { [key: string]: ProductData } = {
   home: {
     heading: "From Playful Robots and Drones to Precision 3D Printers",
