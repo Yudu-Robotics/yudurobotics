@@ -27,7 +27,7 @@ export default async function ProductsPage() {
                 </div>
             </div>
 
-            <div>
+            <div className='px-8 lg:px-28 py-4'>
                 <AllProductsComponent />
             </div>
         </>
