@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/common/view-products-buttons";
+import Link from "next/link";
 
 export default function ProductCatalog() {
   return (
@@ -19,9 +20,11 @@ export default function ProductCatalog() {
           Discover the exciting products we’ve been developing—each designed to
           push the boundaries of robotics.
         </p>
-        <Button className="py-6 px-8 text-xs lg:text-sm rounded-3xl ">
-          View all products {"->"}
-        </Button>
+        <Link href="/products">
+          <Button className="py-6 px-8 text-xs lg:text-sm rounded-3xl ">
+            View all products {"->"}
+          </Button>
+        </Link>
       </div>
     </div>
   );

@@ -39,7 +39,6 @@ const avatar = "assets/peecee/Avatar.png";
 const profileImage = "assets/peecee/profileImage.png";
 const handArrow = "assets/peecee/hand-arrow.png";
 
-
 // testimonial
 
 const bannerImg1 = "assets/testimonial/Mask group.png";
@@ -57,6 +56,13 @@ const bg5 = "assets/testimonial/bg-featured product (4).png";
 const bg6 = "assets/testimonial/bg-featured product (5).png";
 const bg7 = "assets/testimonial/bg-featured product (6).png";
 
+//Partner
+const play = "assets/partner/playbutton.png";
+const arrow1 = "assets/partner/arrow.svg";
+const Icon = "assets/partner/Icon.svg";
+const peace = "assets/partner/peace.svg";
+const result = "assets/partner/result.svg";
+const robot = "assets/partner/robot.svg";
 
 function renderImg(imgName: string) {
   switch (imgName) {
@@ -143,33 +149,47 @@ function renderImg(imgName: string) {
     case "stars":
       return stars;
 
-      // testimonial
-      case "bannerImg1":
+    // testimonial
+    case "bannerImg1":
       return bannerImg1;
-      case "bannerImg2":
+    case "bannerImg2":
       return bannerImg2;
-      case "bannerImg3":
+    case "bannerImg3":
       return bannerImg3;
-      case "bannerImg4":
+    case "bannerImg4":
       return bannerImg4;
-      case "bannerImg5":
+    case "bannerImg5":
       return bannerImg5;
-      case "bannerImg6":
+    case "bannerImg6":
       return bannerImg6;
-      case "bg1":
+    case "bg1":
       return bg1;
-      case "bg2":
+    case "bg2":
       return bg2;
-      case "bg3":
+    case "bg3":
       return bg3;
-      case "bg4":
+    case "bg4":
       return bg4;
-      case "bg5":
+    case "bg5":
       return bg5;
-      case "bg6":
+    case "bg6":
       return bg6;
-      case "bg7":
+    case "bg7":
       return bg7;
+
+    //partner
+    case "play":
+      return play;
+    case "arrow1":
+      return arrow1;
+    case "Icon":
+      return Icon;
+    case "peace":
+      return peace;
+    case "result":
+      return result;
+    case "robot":
+      return robot;
   }
 }
 

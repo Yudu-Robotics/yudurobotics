@@ -17,7 +17,11 @@ import {
 import FloatingWhatsApp from "@/components/ui/common/floating-whatsapp";
 
 const ClientLayout = ({ children }: { children: React.ReactNode }) => {
-  const NavBarItems = ["Y(Our) Products", "The Partner Program"];
+  const NavBarItems = [
+    { name: "Y(Our) Products", link: "/products" },
+    { name: "The Partner Program", link: "/partner" },
+    // { name: "Blog", link: "/blog" },
+  ];
 
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
@@ -45,10 +49,10 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
         {NavBarItems.map((item, key) => (
           <Link
             key={key}
-            href={key === 0 ? "/" : "/blog"}
+            href={item.link}
             className="text-base font-bold text-primary-foreground transition-colors duration-300 ease-in-out hover:text-destructive"
           >
-            {item}
+            {item.name}
           </Link>
         ))}
       </div>
@@ -100,10 +104,10 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
                   // ) :
 
                   <Link
-                    href="/blog"
+                    href={item.link}
                     className="text-primary-foreground text-center text-sm px-3 hover:text-destructive"
                   >
-                    {item}
+                    {item.name}
                   </Link>
                 }
               </div>
