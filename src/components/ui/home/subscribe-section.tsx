@@ -7,13 +7,13 @@ export default function SubscribeSection() {
       </h1>
 
       {/* Subtitle */}
-      <p className="text-base md:text-lg text-center font-thin w-[60%]">
+      <p className="text-base md:text-lg text-center font-thin w-[60%] opacity-65">
         Join us in revolutionizing robotics. Get exclusive updates,
         collaboration opportunities, and insights straight to your inbox. Let’s
         innovate together.
       </p>
 
-      <p className="text-base text-center py-8 font-thin lg:text-lg">
+      <p className="text-base text-center py-8 font-thin lg:text-lg opacity-65">
         Stay connected. Stay innovative.
       </p>
 
@@ -25,13 +25,13 @@ export default function SubscribeSection() {
             placeholder="Enter your email"
             className="rounded-2xl px-4 py-2 w-full md:w-80 text-secondary-foreground focus:outline-none"
           />
-          <button className="bg-primary shadow-xl border hover:border-primary-foreground text-primary-foreground px-6 py-2 rounded-full md:ml-4 w-full md:w-auto">
+          <button className="bg-[#602CF7] shadow-xl border hover:border-primary-foreground text-primary-foreground px-6 py-2 rounded-full md:ml-4 w-full md:w-auto ">
             Subscribe
           </button>
         </div>
 
         {/* Privacy Policy */}
-        <p className="text-sm py-2 mt-4 lg:mt-0">
+        <p className="text-sm py-2 mt-4 lg:mt-0 opacity-65">
           We care about your data in our{" "}
           <a href="#" className="underline">
             privacy policy

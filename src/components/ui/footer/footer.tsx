@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import JumpingButtons from "../common/jumping-buttons";
 import renderImg from "@/imgImport";
 import ContactForm from "../common/contact-us-form";
 import BottomFooter from "./bottom-footer";
 import renderSvg from "@/svgImport";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
   const contact_options = [
@@ -42,7 +43,15 @@ const Footer = () => {
     "ytIcon",
     "googleIcon",
   ];
+  // const pathname = usePathname();
+  // const [currentUrl, setCurrentUrl] = useState("");
 
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     setCurrentUrl(`${window.location.origin}${pathname}`);
+  //   }
+  // }, [pathname]);
+  // console.log({ currentUrl });
   return (
     <div className="text-primary-foreground flex flex-col justify-around">
       {/* First Section */}
@@ -55,7 +64,22 @@ const Footer = () => {
             Partner with us and drive the futre of robotics
           </h1>
         </div>
-        <JumpingButtons ishorizontal="true" />
+        <div className="flex">
+          <JumpingButtons
+            ishorizontal="true"
+            text1="I'm here to"
+            text2="Join Forces"
+            bgColor="#2CF7A4"
+            textColor="#0A4029"
+          />
+          <JumpingButtons
+            ishorizontal="true"
+            text1="Hmmm, I've"
+            text2="Questions"
+            bgColor="#ffffff"
+            textColor="#12734A"
+          />
+        </div>
       </div>
       {/* Contact us Section */}
       <div className="py-20">

@@ -52,7 +52,6 @@ export default function ProductCategories() {
 
   // Update product details when the category or other filters change
   useEffect(() => {
-    console.log({ filteredProducts });
     if (filteredProducts.length > 0) {
       setProductDetails(filteredProducts[0]);
     } else {
@@ -131,7 +130,7 @@ export default function ProductCategories() {
               >
                 {category}
                 {category === "Toys" && (
-                  <div className="flex justify-center px-1 items-center">
+                  <div className="flex justify-center px-1 items-center text-[#067647] ">
                     <ProductTag title="New" color="green-500" />
                   </div>
                 )}

@@ -11,23 +11,27 @@ export default function Section3() {
   const data = [
     {
       id: 1,
-      title: "Initial Contact",
+      title: "Say Hello",
       desc: "Send us a message or give us a quick call. We’re here to chat, learn about what you need, and figure out how we can help.",
+      src: renderImg("hand"),
     },
     {
       id: 2,
-      title: "Needs Assessment",
-      desc: "We’ll discuss your specific needs and see how we can tailor our services to fit you.",
+      title: "Let’s Make a Plan",
+      desc: "We’ll put together a game plan that fits your needs—nothing cookie-cutter. We’re all about making this partnership work for you.",
+      src: renderImg("plan"),
     },
     {
       id: 3,
-      title: "Proposal",
-      desc: "Receive a customized proposal outlining how we can assist you.",
+      title: "Get Set Up",
+      desc: "We’ll handle all the heavy lifting. Our team will get you up and running with the robots, the curriculum, and any training you need. We’re with you every step of the way.",
+      src: renderImg("strong"),
     },
     {
       id: 4,
-      title: "Get Started",
-      desc: "Once you’re ready, we’ll kick things off and start collaborating!",
+      title: "Keep Winning",
+      desc: "This isn’t a one-and-done. We’ll keep the support rolling, updating your resources, and making sure everything runs smoothly while you focus on the bigger picture.",
+      src: renderImg("winning"),
     },
   ];
 
@@ -52,13 +56,15 @@ export default function Section3() {
               } items-center sm:flex-row flex-col`}
             >
               <div
-                className={`flex-1 sm:h-[10px] w-[10px] ${
+                className={`flex-1 sm:h-[5px] w-[10px] ${
                   index === 0 ? "" : "bg-[#5423E6]"
                 }`}
               ></div>
-              <div className="h-[50px] w-[50px] bg-[#5423E6] rounded-full"></div>
+              <div className="h-[50px] w-[50px] bg-[#5423E6] rounded-full flex justify-center items-center">
+                <img src={data[index].src} />
+              </div>
               <div
-                className={`flex-1 sm:h-[10px] w-[10px] ${
+                className={`flex-1 sm:h-[5px] w-[10px] ${
                   index === 3 ? "" : "bg-[#5423E6]"
                 }`}
               ></div>

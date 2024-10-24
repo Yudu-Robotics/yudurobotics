@@ -40,11 +40,51 @@ function Section1() {
     <div className="w-full h-auto">
       <div></div>
       <div className="flex flex-col items-center space-y-6">
-        <div className="flex items-center justify-center">
-          <p className="px-6 text-center  items-center font-piepie text-2xl md:text-4xl lg:text-6xl xl:text-8xl tracking-wider text-primary-foreground">
-            “We’re not playing small. We’re making robots to blow minds and
-            change the game!”
-          </p>
+        <div className="flex flex-col items-center justify-center">
+          <div className="xl:px-12 ">
+            <p className=" text-center items-center font-piepie text-2xl md:text-4xl lg:text-6xl xl:text-8xl tracking-wider text-primary-foreground">
+              “We’re not{" "}
+              <span className="relative inline-block z-0">
+                playing
+                <img
+                  src={renderImg("imgonp")}
+                  alt="Image"
+                  className="absolute -top-4 -z-10"
+                />
+              </span>{" "}
+              small. We’re{" "}
+              <span className="relative inline-block z-0">
+                making
+                <img
+                  src={renderImg("imgong")}
+                  alt="Image"
+                  className="absolute top-2 right-2 -z-10"
+                />
+              </span>{" "}
+              robots to{" "}
+              <span className=" relative inline-block z-0">
+                blow
+                <img
+                  src={renderImg("afterw")}
+                  alt="Image"
+                  className="absolute top-6 -right-16 -z-10 "
+                />
+              </span>{" "}
+              <br />
+              <span className="relative inline-block z-0">
+                minds
+                <img
+                  src={renderImg("imgonm")}
+                  alt="Image"
+                  className="absolute -top-2 left-2 -z-10"
+                />
+              </span>{" "}
+              and change the game!”
+            </p>
+          </div>
+          <div className="w-full flex items-center justify-center mt-5 ml-64">
+            <img src={renderImg("line")} />
+          </div>
         </div>
       </div>
 

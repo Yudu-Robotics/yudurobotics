@@ -12,6 +12,8 @@ const blurStar = "assets/home/blurStar.png";
 const avtarGroup = "assets/home/Avatar group.png";
 const appStore = "assets/home/AppStoreBadge.png";
 const googlePlay = "assets/home/GooglePlayBadge.png";
+const zigzaginhome = "assets/home/zigzaginhome.svg";
+const curv = "assets/home/curv.png";
 
 // zing
 const humanoid = "assets/zing/Humanoid.png";
@@ -63,6 +65,15 @@ const Icon = "assets/partner/Icon.svg";
 const peace = "assets/partner/peace.svg";
 const result = "assets/partner/result.svg";
 const robot = "assets/partner/robot.svg";
+const hand = "assets/partner/hand.svg";
+const plan = "assets/partner/plan.svg";
+const strong = "assets/partner/strong.svg";
+const winning = "assets/partner/winning.svg";
+const line = "assets/partner/line.svg";
+const imgonp = "assets/partner/imgonp.svg";
+const imgonm = "assets/partner/imgonm.svg";
+const imgong = "assets/partner/imgong.svg";
+const afterw = "assets/partner/afterw.svg";
 
 function renderImg(imgName: string) {
   switch (imgName) {
@@ -101,6 +112,10 @@ function renderImg(imgName: string) {
       return avtarGroup;
     case "videoPlayer":
       return videoPlayer;
+    case "zigzaginhome":
+      return zigzaginhome;
+    case "curv":
+      return curv;
 
     // zing
     case "humanoid":
@@ -190,6 +205,24 @@ function renderImg(imgName: string) {
       return result;
     case "robot":
       return robot;
+    case "hand":
+      return hand;
+    case "plan":
+      return plan;
+    case "strong":
+      return strong;
+    case "winning":
+      return winning;
+    case "line":
+      return line;
+    case "imgonp":
+      return imgonp;
+    case "imgonm":
+      return imgonm;
+    case "imgong":
+      return imgong;
+    case "afterw":
+      return afterw;
   }
 }
 

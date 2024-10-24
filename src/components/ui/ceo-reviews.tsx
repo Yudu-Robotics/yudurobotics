@@ -4,7 +4,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 function CeoReviewsContainer() {
   return (
-    <div className="w-full ">
+    <div className="w-full relative">
       <div>
         <img src={renderImg("star1")} className="" />
       </div>
@@ -22,17 +22,22 @@ function CeoReviewsContainer() {
         </div>
       </div>
       <div className="flex flex-col justify-center items-center mt-8">
-        <div>
-          <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" />
-            <AvatarFallback>CEO</AvatarFallback>
-          </Avatar>
-        </div>
+        <Avatar>
+          <AvatarImage src="https://github.com/shadcn.png" />
+          <AvatarFallback>CEO</AvatarFallback>
+        </Avatar>
+
         <h4 className="mt-2 text-xl font-semibold">Ravi Mehta</h4>
         <p className="font-extralight">CEO, Innovatech Solution</p>
       </div>
-      <div className="lg:flex justify-end lg:-mt-16 lg:px-10 hidden">
+      <div className="lg:flex justify-end lg:-mt-16 lg:px-10 hidden relative ">
         <img src={renderImg("star2")} className="" />
+        <div className=" absolute right-0  -top-9 ">
+          <img src={renderImg("star1")} className=" w-10 " />
+        </div>
+      </div>
+      <div className="absolute -left-28 ">
+        <img src={renderImg("curv")} className="" />
       </div>
     </div>
   );

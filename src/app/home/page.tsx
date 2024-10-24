@@ -27,7 +27,7 @@ export default async function HomePage() {
   const data = mockData.home;
   return (
     <>
-      <div className="px-8 lg:px-28 py-4 bg-primary">
+      <div className="px-8 lg:px-28 py-4 bg-primary ">
         <div className="flex flex-col space-y-16 lg:flex-row lg:space-y-0 justify-between py-10">
           <div className="w-full">
             <a href="#product-features-component" className="mb-6">
@@ -47,7 +47,7 @@ export default async function HomePage() {
               </div>
 
               {/* Subtext */}
-              <div className="text-primary-foreground text-lg md:text-xl lg:text-2xl font-body w-[100%] lg:w-[75%]">
+              <div className="text-[#F2D8FE] text-lg md:text-xl lg:text-2xl font-body w-[100%] lg:w-[75%]">
                 {data.subheading}
               </div>
             </div>
@@ -55,7 +55,13 @@ export default async function HomePage() {
 
           {/* Buttons Section */}
 
-          <JumpingButtons ishorizontal="true" />
+          <JumpingButtons
+            ishorizontal="true"
+            text1="I'm here to"
+            text2="Join Forces"
+            bgColor="#2CF7A4"
+            textColor="#0A4029"
+          />
         </div>
         <div className="py-10">
           <a href="">
@@ -84,17 +90,20 @@ export default async function HomePage() {
         <div className="py-6 w-full">
           <ProductCategories />
         </div>
+        <div className="-mx-8 lg:-mx-28">
+          <TestimonialBanner />
+        </div>
         <div>
           <SubscribeSection />
         </div>
 
-        {/* <div className="py-10 lg:py-20">
+        <div className="py-10 lg:py-20">
           <Ourteam />
-        </div> */}
+        </div>
         {/* <div>
           <LatestPosts />
         </div> */}
-        <TestimonialBanner />
+
         <div className="py-5 lg:py-20">
           <FAQs />
         </div>
