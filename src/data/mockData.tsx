@@ -1185,144 +1185,148 @@ export const mockData: { [key: string]: ProductData } = {
       unique: ["PlodeEntertainmentFeatures", "UserFeedback"],
     },
   },
-  // plode: {
-  //   heading: "Klaw-B - The Heavy-Duty Worker",
-  //   wordsToHighlight: {
-  //     text1: ["PeeCee"],
-  //     text2: ["Zing"],
-  //   },
-  //   subheading: "Strong, durable, and built for tough tasks",
-  //   images: ["assets/klawb/klawb.png", "/images/klaw-b2.jpg"],
-  //   sectionHeader: "headerSection",
-  //   ceoComment:
-  //     "Plode simplifies coding with its user-friendly interface, making it perfect for beginners and experienced coders alike.",
-  //   features_data: {
-  //     section1: {
-  //       heading: "Ready to Go, Right Out of the Box",
-  //       subheading:
-  //         "PeeCee TED is your all-in-one buddy, packed and ready to jump into action whenever you are.",
-  //       centerImage: "assets/peecee/peeceehardware1.png",
-  //       features: [
-  //         {
-  //           icon: "assets/peecee/Featured icon.png",
-  //           heading: "Power-Packed and Portable",
-  //           description:
-  //             "With a built-in battery, PeeCee TED is always ready to roll—no need to worry about recharging during those epic coding sessions.",
-  //         },
-  //         {
-  //           icon: "assets/peecee/Featured icon (6).png",
-  //           heading: "Brainy 3-Core Processor",
-  //           description:
-  //             "PeeCee TED’s got the brains to handle anything you throw at it, making your ideas come to life without a hitch.",
-  //         },
-  //         {
-  //           icon: "assets/peecee/Featured icon (7).png",
-  //           heading: "Buzz-worthy",
-  //           description:
-  //             "PeeCee TED’s buzzer gives you instant audio feedback, making your projects not just fun to see, but fun to hear too!",
-  //         },
-  //         {
-  //           icon: "assets/peecee/Featured icon (8).png",
-  //           heading: "Sensors Galore",
-  //           description:
-  //             "From color and light to touch and temperature, PeeCee TED’s built-in sensors give you the power to interact with the world around you in all kinds of cool ways.",
-  //         },
-  //         {
-  //           icon: "assets/peecee/Featured icon (9).png",
-  //           heading: "Expressive LEDs",
-  //           description:
-  //             "Let PeeCee TED show off with customizable LED displays—whether it’s a smiley face or a light show, the possibilities are endless.",
-  //         },
-  //         {
-  //           icon: "assets/peecee/Featured icon (10).png",
-  //           heading: "Rainbow Bright",
-  //           description:
-  //             "With 12 RGB LEDs, you can add a splash of color to your projects—because everything’s better in color, right?",
-  //         },
-  //       ],
-  //     },
-  //     software_experience: {
-  //       heading: "Effortless Experience",
-  //       subheading:
-  //         "Everything about Plode is designed to make your experience smooth, simple, and super fun.",
-  //       centerImage: "assets/klawb/klaw-2.png",
-  //       features: [
-  //         {
-  //           icon: "userFriendly",
-  //           heading: "User-Friendly and Fun",
-  //           description:
-  //             "Bright colors, playful UX/UI elements, and an interface that feels like an adventure make coding with Plode pure joy.",
-  //         },
-  //         {
-  //           icon: "virtual",
-  //           heading: "Virtual Simulator",
-  //           description:
-  //             "Test your projects in a virtual playground before bringing them to life, ensuring everything works just right.",
-  //         },
+  plode: {
+    heading: "Plode: The Playful Coding Platform",
+    wordsToHighlight: {
+      text1: ["Plode:"],
+      text2: ["Zing"],
+    },
+    subheading:
+      "This 6-legged marvel with 18 motors brings the thrill of robotic exploration to life with nimble moves and high-tech features.",
+    images: ["assets/plode/plodeHomeImg.png", "assets/crawle/crawlehard1.png"],
+    sectionHeader: "middleHeaderSection",
+    ceoComment:
+      "Crawl-E’s versatile design and reliable performance have been key to our exploration projects.",
+    features_data: {
+      section1: {
+        heading: "Ready to Go, Right Out of the Box",
+        subheading:
+          "PeeCee TED is your all-in-one buddy, packed and ready to jump into action whenever you are.",
+        centerImage: "assets/crawle/crawlehardware1.png",
+        features: [
+          {
+            icon: "assets/zing/Featured icon (12).png",
+            heading: "Spider-Like Agility",
+            description:
+              "With 18 motors and 6 legs, Crawl-e moves with the precision and versatility of a spider. Perfect for intricate tasks and dynamic movements.",
+          },
+          {
+            icon: "assets/zing/Featured icon (13).png",
+            heading: "Flexible Movement",
+            description:
+              "From crawling to turning, Crawl-e handles a variety of actions with smooth, coordinated movements.",
+          },
+          {
+            icon: "assets/zing/Featured icon (14).png",
+            heading: "Interactive Fun",
+            description:
+              "Features a high-quality 3W speaker for audio feedback and options for plug-and-play sensors, AI cameras, and laser cannons.",
+          },
+          {
+            icon: "assets/zing/Featured icon (15).png",
+            heading: "Tech-Packed Sensors",
+            description:
+              "Includes an ultrasonic sensor for obstacle detection and a range of other sensors to enhance interaction.",
+          },
+          {
+            icon: "assets/zing/Featured icon (16).png",
+            heading: "Versatile Connectivity",
+            description:
+              "Supports WiFi, Bluetooth 5.0, and USB connections. Program and control Crawl-e using Plode for a comprehensive robotic experience.",
+          },
+          {
+            icon: "assets/zing/Featured icon (17).png",
+            heading: "DIY-Friendly Design",
+            description:
+              "Designed with replaceable parts and a 3D simulator coming soon, making it easy to customize and repair.",
+          },
+        ],
+      },
+      software_experience: {
+        heading: "Effortless Experience",
+        subheading:
+          "Everything about Plode is designed to make your experience smooth, simple, and super fun.",
+        centerImage: "assets/other/imagePlaceholder2.png",
+        features: [
+          {
+            icon: "userFriendly",
+            heading: "User-Friendly and Fun",
+            description:
+              "Bright colors, playful UX/UI elements, and an interface that feels like an adventure make coding with Plode pure joy.",
+          },
+          {
+            icon: "virtual",
+            heading: "Virtual Simulator",
+            description:
+              "Test your projects in a virtual playground before bringing them to life, ensuring everything works just right.",
+          },
 
-  //         {
-  //           icon: "instaLink",
-  //           heading: "InstaLink Real-Time Magic",
-  //           description:
-  //             "Instantly see what your sensors and accessories are up to, tweaking on the fly. InstaLive even makes servo calibration a snap.",
-  //         },
-  //         {
-  //           icon: "data",
-  //           heading: "Data Capture and Visualization Mode",
-  //           description:
-  //             "Turn data into visuals! Plot graphs, capture live sensor data, compare, and store your findings—all in one place. Plode makes data fun and easy to understand.",
-  //         },
-  //       ],
-  //     },
-  //     cirriculum: {
-  //       heading: "Feedback and Reflection",
-  //       subheading: "Enhance learning with continuous feedback and reflection.",
-  //       centerImage: "assets/other/circulamImage.png",
-  //       features: [
-  //         {
-  //           icon: "checkpoint",
-  //           heading: "Assessment Checkpoints",
-  //           description: "Track progress and reinforce understanding.",
-  //         },
-  //         {
-  //           icon: "reflective",
-  //           heading: "Reflective Journaling",
-  //           description:
-  //             "Use activity and design sheets to reflect on learning and growth.",
-  //         },
-  //         {
-  //           icon: "feedback",
-  //           heading: "Collaborative Feedback",
-  //           description: "Peer and teacher insights enrich learning.",
-  //         },
-  //         {
-  //           icon: "fun",
-  //           heading: "FUN and Purposeful Learning",
-  //           description:
-  //             "Emphasizes the 'Make and Play' approach, blending creativity with fun. The Adaptive LMS simplifies resource management and tracking, ensuring a dynamic and enjoyable experience.",
-  //         },
-  //       ],
-  //     },
-  //   },
-  //   working: {
-  //     heading: "How It Works",
-  //     subheading: "",
-  //     section1: {
-  //       image: "",
-  //       heading: "",
-  //       description: "",
-  //     },
-  //     section2: {
-  //       image: "",
-  //       heading: "",
-  //       description: "",
-  //     },
-  //   },
-  //   components: {
-  //     shared: ["Navbar", "Footer", "ContactForm"],
-  //     unique: ["KlawBStrengthTest", "TaskAutomation"],
-  //   },
-  // },
+          {
+            icon: "instaLink",
+            heading: "InstaLink Real-Time Magic",
+            description:
+              "Instantly see what your sensors and accessories are up to, tweaking on the fly. InstaLive even makes servo calibration a snap.",
+          },
+          {
+            icon: "data",
+            heading: "Data Capture and Visualization Mode",
+            description:
+              "Turn data into visuals! Plot graphs, capture live sensor data, compare, and store your findings—all in one place. Plode makes data fun and easy to understand.",
+          },
+        ],
+      },
+      cirriculum: {
+        heading: "Feedback and Reflection",
+        subheading: "Enhance learning with continuous feedback and reflection.",
+        centerImage: "assets/other/circulamImage.png",
+        features: [
+          {
+            icon: "checkpoint",
+            heading: "Assessment Checkpoints",
+            description: "Track progress and reinforce understanding.",
+          },
+          {
+            icon: "reflective",
+            heading: "Reflective Journaling",
+            description:
+              "Use activity and design sheets to reflect on learning and growth.",
+          },
+          {
+            icon: "feedback",
+            heading: "Collaborative Feedback",
+            description: "Peer and teacher insights enrich learning.",
+          },
+          {
+            icon: "fun",
+            heading: "FUN and Purposeful Learning",
+            description:
+              "Emphasizes the 'Make and Play' approach, blending creativity with fun. The Adaptive LMS simplifies resource management and tracking, ensuring a dynamic and enjoyable experience.",
+          },
+        ],
+      },
+    },
+    working: {
+      heading: "How It Works",
+      subheading:
+        "Pair Crawl-e with the Plode app for seamless navigation across any terrain. Customize its movements and exploration patterns with simple coding features.",
+      section1: {
+        image: "assets/crawle/crawle-work.png",
+        heading: "Explore & Create",
+        description:
+          "Dive into projects and experiments, expanding your robotics skills with Crawl-e.",
+      },
+      section2: {
+        image: "assets/crawle/crawle-plode.png",
+        heading: "Program with Plode",
+        description:
+          "Easy-to-use software lets you program actions by moving motors and capturing movements.",
+      },
+    },
+    components: {
+      shared: ["Navbar", "Footer", "ProductCard"],
+      unique: ["CrawlENavigation", "TerrainMapping"],
+    },
+  },
 };
 
 export const blogData: BlogData = [

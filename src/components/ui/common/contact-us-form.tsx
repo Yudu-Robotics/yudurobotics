@@ -206,7 +206,7 @@ export default function ContactForm() {
           <div>
             <button
               type="submit"
-              className="w-full py-3 px-6 bg-primary cursor-pointer text-primary-foreground rounded-md shadow-lg font-semibold text-lg hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+              className="w-full py-3 px-6 bg-primary cursor-pointer text-primary-foreground rounded-full shadow-lg font-semibold text-lg hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
               disabled={isSubmitting}
             >
               {isSubmitting ? "Submitting..." : "Send message"}

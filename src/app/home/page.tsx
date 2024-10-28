@@ -61,6 +61,7 @@ export default async function HomePage() {
             text2="Join Forces"
             bgColor="#2CF7A4"
             textColor="#0A4029"
+            link="/products"
           />
         </div>
         <div className="py-10">
@@ -97,18 +98,18 @@ export default async function HomePage() {
           <SubscribeSection />
         </div>
 
-        <div className="py-10 lg:py-20">
+        {/* <div className="py-10 lg:py-20">
           <Ourteam />
-        </div>
+        </div> */}
         {/* <div>
           <LatestPosts />
         </div> */}
 
-        <div className="py-5 lg:py-20">
+        <div className="py-5 lg:py-20 ">
           <FAQs />
         </div>
 
-        <div>
+        <div className="mb-24">
           <GetInTouch />
         </div>
       </div>

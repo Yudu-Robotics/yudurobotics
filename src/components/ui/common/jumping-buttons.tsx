@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 interface JumpingButtonsProps {
   ishorizontal?: string;
@@ -5,6 +6,7 @@ interface JumpingButtonsProps {
   text2?: string;
   bgColor?: string;
   textColor?: string;
+  link?: string;
 }
 const JumpingButtons: React.FC<JumpingButtonsProps> = ({
   ishorizontal = "false",
@@ -12,6 +14,7 @@ const JumpingButtons: React.FC<JumpingButtonsProps> = ({
   text2,
   bgColor,
   textColor,
+  link = "/product",
 }) => {
   return (
     <div
@@ -22,16 +25,18 @@ const JumpingButtons: React.FC<JumpingButtonsProps> = ({
       } justify-center items-center space-x-10 px-12`}
     >
       <div>
-        <div
-          className={`rounded-full text-xs lg:text-lg h-20 w-20 lg:h-40 lg:w-40 flex flex-col justify-center items-center transform transition duration-500 hover:-translate-y-4`}
-          style={{
-            backgroundColor: bgColor || "#F00",
-            color: textColor || "#FFF",
-          }}
-        >
-          <span className="block ">{text1 || "Lemme"}</span>
-          <span className="block font-bold italic">{text2 || "Explore"}</span>
-        </div>
+        <Link href={link}>
+          <div
+            className={`rounded-full text-xs lg:text-lg h-20 w-20 lg:h-40 lg:w-40 flex flex-col justify-center items-center transform transition duration-500 hover:-translate-y-4`}
+            style={{
+              backgroundColor: bgColor || "#F00",
+              color: textColor || "#FFF",
+            }}
+          >
+            <span className="block ">{text1 || "Lemme"}</span>
+            <span className="block font-bold italic">{text2 || "Explore"}</span>
+          </div>
+        </Link>
 
         <div
           className="rounded-full border-destructive -mt-24 border h-20 w-20 lg:h-40 lg:w-40 lg:-mt-32"

@@ -50,6 +50,7 @@ function ProductFeatures() {
             text2="Meet Zing"
             bgColor="#2CF7A4"
             textColor="#0A4029"
+            link="/zing"
           />
         </div>
         <div className="relative w-full py-16 mt-10 lg:mt-0">
@@ -69,8 +70,8 @@ function ProductFeatures() {
         </div>
         <div className="h-[10px] w-full flex justify-center gap-4">
           <div className="w-[40px] h-full bg-[#602CF7] rounded-xl"></div>
-          <div className="w-[40px] h-full bg-[#ffffff] rounded-xl"></div>
-          <div className="w-[40px] h-full bg-[#ffffff] rounded-xl"></div>
+          {/* <div className="w-[40px] h-full bg-[#ffffff] rounded-xl"></div>
+          <div className="w-[40px] h-full bg-[#ffffff] rounded-xl"></div> */}
         </div>
       </div>
     </>

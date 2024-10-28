@@ -2482,6 +2482,33 @@ const bottomSection = (
     </defs>
   </svg>
 );
+const bottomSectionForNotFound = (
+  <svg
+    className="w-full bg-primary"
+    viewBox="0 0 1440 176"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g clipPath="url(#clip0_14148_25822)">
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M1440 174.817C1440 209.887 1411.57 238.317 1376.5 238.317H63.5C28.4299 238.317 0 209.887 0 174.817C0 139.747 28.4299 111.317 63.5 111.317H472.5C503.152 111.317 528 86.4692 528 55.8174C528 25.1656 552.848 0.317383 583.5 0.317383H856.5C887.152 0.317383 912 25.1656 912 55.8174C912 86.4692 936.848 111.317 967.5 111.317H1376.5C1411.57 111.317 1440 139.747 1440 174.817Z"
+        fill="hsl(var(--primary))"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_14148_25822">
+        <rect
+          width="1440"
+          height="175"
+          fill="white"
+          transform="translate(0 0.317383)"
+        />
+      </clipPath>
+    </defs>
+  </svg>
+);
 
 // social
 const twitterIcon = (
@@ -2993,6 +3020,9 @@ function renderSvg(svgName: string) {
     // imageBackground
     case "headerImageBackground":
       return headerImageBackground;
+
+    case "bottomSectionForNotFound":
+      return bottomSectionForNotFound;
   }
 }
 

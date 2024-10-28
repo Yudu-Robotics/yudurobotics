@@ -22,9 +22,9 @@ const NotFoundPage = () => {
   const NavBarItems = [
     "Y/Our Products",
     "The Partner Program",
-    "Crazies Behind",
-    "Resources",
-    "Blogs",
+    // "Crazies Behind",
+    // "Resources",
+    // "Blogs",
   ];
   return (
     <div className="">
@@ -56,7 +56,7 @@ const NotFoundPage = () => {
                 ) : (
                   <a
                     href="/blog"
-                    className="text-primary-foreground text-center text-sm px-3 hover:text-destructive"
+                    className="text-primary-foreground text-center text-sm px-3 hover:text-destructive bg-primary"
                   >
                     {item}
                   </a>
@@ -67,7 +67,9 @@ const NotFoundPage = () => {
         </div>
       </div>
       <WrongPageComponent />
-      <div className="w-full -mb-1">{renderSvg("bottomSection")}</div>
+      <div className="w-full -mb-1">
+        {renderSvg("bottomSectionForNotFound")}
+      </div>
 
       <div className="px-8 lg:px-28 py-4 bg-primary">
         <Footer />

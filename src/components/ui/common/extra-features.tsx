@@ -29,17 +29,17 @@ const ExtraFeatures: React.FC<{
       <div className="flex flex-col space-y-2 ">
         <h1 className="text-primary text-xs font-semibold ">{title}</h1>
         <h2 className="text-4xl lg:text-5xl font-piepie tracking-wide  w-[100%] lg:w-[50%]">
-          {highlightWords(data.heading, ["Effortless"], "text-primary")}
+          {highlightWords(data?.heading, ["Effortless"], "text-primary")}
         </h2>
         <h2 className="text-sm text-secondary-foreground  w-[100%] lg:w-[35%]">
-          {data.subheading}
+          {data?.subheading}
         </h2>
       </div>
       <div className="">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Side: Feature Icons and Text */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {data.features.map((feature, index) => (
+            {data?.features.map((feature, index) => (
               <div key={index} className="flex flex-col items-start space-y-1">
                 <div className="">
                   {/* Icon for the feature */}
@@ -58,7 +58,7 @@ const ExtraFeatures: React.FC<{
           {/* Right Side: Central Image */}
           <div className="relative flex justify-start items-start">
             <img
-              src={data.centerImage}
+              src={data?.centerImage}
               alt="Product Image"
               className="max-w-full h-auto"
             />

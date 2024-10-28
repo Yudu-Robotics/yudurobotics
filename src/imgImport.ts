@@ -75,6 +75,15 @@ const imgonm = "assets/partner/imgonm.svg";
 const imgong = "assets/partner/imgong.svg";
 const afterw = "assets/partner/afterw.svg";
 
+//plode
+const plodeHomeImg = "assets/plode/plodeHomeImg.png";
+
+//Not Found
+const notFound = "assets/notFound.png";
+
+//footer
+const madeInIndia = "assets/madeInIndia.svg";
+
 function renderImg(imgName: string) {
   switch (imgName) {
     // home
@@ -223,6 +232,18 @@ function renderImg(imgName: string) {
       return imgong;
     case "afterw":
       return afterw;
+
+    //plode
+    case "plodeHomeImg":
+      return plodeHomeImg;
+
+    //Not Found
+    case "notFound":
+      return notFound;
+
+    //footer
+    case "madeInIndia":
+      return madeInIndia;
   }
 }
 

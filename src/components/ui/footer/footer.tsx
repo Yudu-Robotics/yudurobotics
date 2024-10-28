@@ -5,8 +5,19 @@ import ContactForm from "../common/contact-us-form";
 import BottomFooter from "./bottom-footer";
 import renderSvg from "@/svgImport";
 import { usePathname } from "next/navigation";
+import { tree } from "next/dist/build/templates/app-page";
 
 const Footer = () => {
+  const route = [
+    "home",
+    "peecee",
+    "roboki",
+    "zing",
+    "crawl_e",
+    "klaw_b",
+    "plode",
+  ];
+
   const contact_options = [
     {
       type: "Email",
@@ -43,15 +54,48 @@ const Footer = () => {
     "ytIcon",
     "googleIcon",
   ];
-  // const pathname = usePathname();
-  // const [currentUrl, setCurrentUrl] = useState("");
+  const pathname = usePathname();
+  const [currentUrl, setCurrentUrl] = useState("");
 
-  // useEffect(() => {
-  //   if (typeof window !== "undefined") {
-  //     setCurrentUrl(`${window.location.origin}${pathname}`);
-  //   }
-  // }, [pathname]);
-  // console.log({ currentUrl });
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setCurrentUrl(`${window.location.origin}${pathname}`);
+    }
+  }, [pathname]);
+  const lastSegment = currentUrl.split("/").pop() || "-1";
+
+  const index =
+    route.indexOf(lastSegment) !== -1 ? route.indexOf(lastSegment) : -1;
+
+  let ishorizontal: string = "true";
+  let text1: string = "I'm here to";
+  let text2: string = "Join Forces";
+  let bgColor: string = "#2CF7A4";
+  let textColor: string = "#0A4029";
+
+  interface Style {
+    bgColor: string;
+    textColor: string;
+  }
+
+  const styles: Record<number, Style> = {
+    0: { bgColor: "#2CF7A4", textColor: "#0A4029" },
+    1: { bgColor: "#602CF7", textColor: "#FAF9FE" },
+    2: { bgColor: "#602CF7", textColor: "#FAF9FE" },
+    3: { bgColor: "#F72D3E", textColor: "#FEF9F9" },
+    4: { bgColor: "#F72D3E", textColor: "#FEF9F9" },
+    5: { bgColor: "#F7812D", textColor: "#FEFBF9" },
+    6: { bgColor: "#2CF7A4", textColor: "#0A4029" },
+  };
+
+  if (index in styles) {
+    const { bgColor: newBgColor, textColor: newTextColor } = styles[index];
+    bgColor = newBgColor;
+    textColor = newTextColor;
+    text1 = "I'm Ready to";
+    text2 = "Join Forces";
+  }
+
   return (
     <div className="text-primary-foreground flex flex-col justify-around">
       {/* First Section */}
@@ -65,20 +109,16 @@ const Footer = () => {
           </h1>
         </div>
         <div className="flex">
-          <JumpingButtons
-            ishorizontal="true"
-            text1="I'm here to"
-            text2="Join Forces"
-            bgColor="#2CF7A4"
-            textColor="#0A4029"
-          />
-          <JumpingButtons
-            ishorizontal="true"
-            text1="Hmmm, I've"
-            text2="Questions"
-            bgColor="#ffffff"
-            textColor="#12734A"
-          />
+          {index !== -1 && (
+            <JumpingButtons
+              ishorizontal={ishorizontal}
+              text1={text1}
+              text2={text2}
+              bgColor={bgColor}
+              textColor={textColor}
+              link=""
+            />
+          )}
         </div>
       </div>
       {/* Contact us Section */}
@@ -182,6 +222,9 @@ const Footer = () => {
             ))}
           </div>
         </div>
+      </div>
+      <div className="h-[40vh] w-full flex justify-center items-center">
+        <img src={renderImg("madeInIndia")} />
       </div>
     </div>
   );
