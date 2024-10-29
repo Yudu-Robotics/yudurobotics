@@ -30,7 +30,10 @@ export default function ProductLayout({
   let currentProduct = params.product == "roboki" ? "peecee" : params.product;
   currentProduct = currentProduct == "crawl_e" ? "zing" : currentProduct;
 
-  const NavBarItems = ["Y(Our) Products", "The Partner Program"];
+  const NavBarItems = [
+    { name: "Y(Our) Products", link: "/products" },
+    { name: "The Partner Program", link: "/partner" },
+  ];
 
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
@@ -56,10 +59,10 @@ export default function ProductLayout({
         {NavBarItems.map((item, key) => (
           <Link
             key={key}
-            href={key === 0 ? "/" : "/blog"}
+            href={item.link}
             className="text-base font-bold text-primary-foreground transition-colors duration-300 ease-in-out hover:text-destructive"
           >
-            {item}
+            {item.name}
           </Link>
         ))}
       </div>
@@ -95,7 +98,7 @@ export default function ProductLayout({
 
               {/* Full Navbar for Desktop */}
               <div className="space-x-4 hidden lg:flex lg:justify-center lg:items-center text-primary-foreground">
-                {NavBarItems.map((item: string, key: number) => (
+                {NavBarItems.map((item, key: number) => (
                   <div key={key}>
                     {
                       // key === 0 ? (
@@ -112,10 +115,10 @@ export default function ProductLayout({
                       // ) :
 
                       <Link
-                        href="/blog"
+                        href={item.link}
                         className="text-primary-foreground text-center text-sm px-3 hover:text-destructive"
                       >
-                        {item}
+                        {item.name}
                       </Link>
                     }
                   </div>
