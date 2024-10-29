@@ -142,7 +142,13 @@ export default async function ProductPage({ params }: any) {
     bgColor = newBgColor;
     textColor = newTextColor;
   }
-
+  if (params.product === "zing") {
+    return (
+      <>
+        <Zing />
+      </>
+    );
+  }
   return (
     <>
       <div className="px-8 lg:px-28 py-4 bg-primary">
