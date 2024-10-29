@@ -1194,9 +1194,9 @@ export const mockData: { [key: string]: ProductData } = {
     subheading:
       "This 6-legged marvel with 18 motors brings the thrill of robotic exploration to life with nimble moves and high-tech features.",
     images: ["assets/plode/plodeHomeImg.png", "assets/crawle/crawlehard1.png"],
-    sectionHeader: "middleHeaderSection",
+    sectionHeader: "headerSection",
     ceoComment:
-      "Crawl-E’s versatile design and reliable performance have been key to our exploration projects.",
+      "Plode simplifies coding with its user-friendly interface, making it perfect for beginners and experienced coders alike",
     features_data: {
       section1: {
         heading: "Ready to Go, Right Out of the Box",
@@ -1243,35 +1243,35 @@ export const mockData: { [key: string]: ProductData } = {
         ],
       },
       software_experience: {
-        heading: "Effortless Experience",
+        heading: "Dynamic Play Mode - Tailored to Your Kit",
         subheading:
-          "Everything about Plode is designed to make your experience smooth, simple, and super fun.",
+          "With Plode, the Play mode adapts to the unique features of each kit, delivering an intuitive and interactive experience. No coding required—just one-tap actions designed for seamless control and fun exploration.",
         centerImage: "assets/other/imagePlaceholder2.png",
         features: [
           {
             icon: "userFriendly",
-            heading: "User-Friendly and Fun",
+            heading: "Joystick",
             description:
-              "Bright colors, playful UX/UI elements, and an interface that feels like an adventure make coding with Plode pure joy.",
+              "Customizable control interface, varying by kit capabilities, allowing you to unlock unique behaviours like gestures, musical tones, or movement patterns.",
           },
           {
             icon: "virtual",
-            heading: "Virtual Simulator",
+            heading: "Speech",
             description:
-              "Test your projects in a virtual playground before bringing them to life, ensuring everything works just right.",
+              "Speak commands directly to your kit with a simple tap—empowering voice interaction for hands-free control.",
           },
 
           {
-            icon: "instaLink",
-            heading: "InstaLink Real-Time Magic",
+            icon: "data",
+            heading: "Music",
             description:
-              "Instantly see what your sensors and accessories are up to, tweaking on the fly. InstaLive even makes servo calibration a snap.",
+              "Play with sound by interacting with virtual instruments like a piano, triggering real-time responses from your device.",
           },
           {
-            icon: "data",
-            heading: "Data Capture and Visualization Mode",
+            icon: "instaLink",
+            heading: "Camera",
             description:
-              "Turn data into visuals! Plot graphs, capture live sensor data, compare, and store your findings—all in one place. Plode makes data fun and easy to understand.",
+              "Use vision-based control to see your kit react to movements or gestures detected through the camera.",
           },
         ],
       },

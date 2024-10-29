@@ -57,6 +57,89 @@ export default async function ProductPage({ params }: any) {
     // Redirect or render 404 page when the product doesn't exist
     notFound();
   }
+  const route = [
+    "home",
+    "peecee",
+    "roboki",
+    "zing",
+    "crawl_e",
+    "klaw_b",
+    "plode",
+  ];
+
+  const index = route.indexOf(params.product);
+
+  let ishorizontal: string = "true";
+  let text1: string = "I'm here to";
+  let text2: string = "Join Forces";
+  let bgColor: string = "#2CF7A4";
+  let textColor: string = "#0A4029";
+
+  interface Style {
+    text1: string;
+    text2: string;
+    bgColor: string;
+    textColor: string;
+  }
+
+  const styles: Record<number, Style> = {
+    0: {
+      text1: "I’m here to",
+      text2: "Join Forces",
+      bgColor: "#2CF7A4",
+      textColor: "#0A4029",
+    },
+    1: {
+      text1: "Own One",
+      text2: "Now!",
+      bgColor: "#602CF7",
+      textColor: "#FAF9FE",
+    },
+    2: {
+      text1: "Own One",
+      text2: "Now!",
+      bgColor: "#602CF7",
+      textColor: "#FAF9FE",
+    },
+    3: {
+      text1: "Own One",
+      text2: "Now!",
+      bgColor: "#F72D3E",
+      textColor: "#FEF9F9",
+    },
+    4: {
+      text1: "Own One",
+      text2: "Now!",
+      bgColor: "#F72D3E",
+      textColor: "#FEF9F9",
+    },
+    5: {
+      text1: "Own One",
+      text2: "Now!",
+      bgColor: "#F7812D",
+      textColor: "#FEFBF9",
+    },
+    6: {
+      text1: "Button",
+      text2: "CTA",
+      bgColor: "#2CF7A4",
+      textColor: "#0A4029",
+    },
+  };
+
+  if (index >= 0 && index in styles) {
+    const {
+      text1: newText1,
+      text2: newText2,
+      bgColor: newBgColor,
+      textColor: newTextColor,
+    } = styles[index];
+
+    text1 = newText1;
+    text2 = newText2;
+    bgColor = newBgColor;
+    textColor = newTextColor;
+  }
 
   return (
     <>
@@ -84,7 +167,16 @@ export default async function ProductPage({ params }: any) {
                 </div>
               </div>
               {/* Buttons Section */}
-              {<JumpingButtons ishorizontal="true" />}
+              {
+                <JumpingButtons
+                  ishorizontal={ishorizontal}
+                  text1={text1}
+                  text2={text2}
+                  bgColor={bgColor}
+                  textColor={textColor}
+                  link=""
+                />
+              }
             </div>
 
             <div className="">
@@ -113,7 +205,16 @@ export default async function ProductPage({ params }: any) {
                     {data.subheading}
                   </div>
                   <div className="pt-20">
-                    {<JumpingButtons ishorizontal="true" />}
+                    {
+                      <JumpingButtons
+                        ishorizontal={ishorizontal}
+                        text1={text1}
+                        text2={text2}
+                        bgColor={bgColor}
+                        textColor={textColor}
+                        link=""
+                      />
+                    }
                   </div>
                 </div>
 
@@ -132,38 +233,51 @@ export default async function ProductPage({ params }: any) {
         {/* <img src={renderImg("headerSection")} className="w-full" /> */}
         {renderSvg(data.sectionHeader)}
       </div>
+
       {params.product === "plode" && (
-        <div className="px-12 lg:px-28 text-black py-5 lg:py-10">
-          <SoftwareAdaptive />
+        <div className="px-12 lg:px-28">
+          <div className="py-8 lg:py-16">
+            <ProductCeoReviewsContainer comment={data.ceoComment} />
+          </div>
+          <div className="text-sm py-8  text-center font-bold flex flex-col space-y-6 justify-center items-center">
+            <p className="text-[#4A4A4F]">
+              Hover over each feature below to{" "}
+              <span className="text-primary italic">see it in action!</span>
+            </p>
+            {renderSvg("doubleArrow")}
+          </div>
+          <div className=" text-black py-5 lg:py-10 ">
+            <SoftwareAdaptive />
+          </div>
         </div>
       )}
       {params.product === "plode" && (
-        <div className="px-12 lg:px-28 text-black py-5 lg:py-10">
-          <Working
-            // @ts-ignore
-            data={data.working}
-          />{" "}
-        </div>
-      )}
-      {params.product == "plode" && (
-        <div className="px-12 lg:px-28 text-black py-5 lg:py-10">
-          <div>
-            <ExtraFeatures
-              // @ts-ignore
-              data={data.features_data?.software_experience}
-              title="software"
-            />
+        <div className="flex flex-col justify-center items-center">
+          <div className="px-12 lg:px-28 text-black py-5 lg:py-10">
+            <VersatileSoftware />
+          </div>
+
+          <div className="px-12 lg:px-28 text-black py-5 lg:py-10 flex ">
+            <div>
+              <ExtraFeatures
+                // @ts-ignore
+                data={data.features_data?.software_experience}
+                title=""
+              />
+            </div>
           </div>
         </div>
       )}
       {params.product == "plode" && (
-        <div className="px-12 lg:px-28 text-black py-5 lg:py-10">
-          <p>
-            Not every Play option is available for all kits — only the features
-            specific to the selected kit will be enabled, ensuring a streamlined
-            and engaging experience. Each interaction is tailored to enhance
-            creativity and functionality, bringing your robotics journey to life
-            with effortless, hands-on fun.
+        <div className="px-12 lg:px-28 text-black py-5 lg:py-10 flex justify-center">
+          <p className="w-1/2 text-[#4A4A4F] text-xl font-semibold italic">
+            <span className="text-[#5423E6]">
+              Not every Play option is available for all kits{" "}
+            </span>
+            — only the features specific to the selected kit will be enabled,
+            ensuring a streamlined and engaging experience. Each interaction is
+            tailored to enhance creativity and functionality, bringing your
+            robotics journey to life with effortless, hands-on fun.
           </p>
         </div>
       )}
@@ -241,8 +355,22 @@ export default async function ProductPage({ params }: any) {
           </div>
         )}
         {params.product == "plode" && (
-          <div className="py-8 lg:py-16">
-            <div className="w-full h-[30vh] bg-red-700"></div>
+          <div className="py-8 lg:py-16 min-h-[30vh] flex ">
+            <div className="w-1/2 flex justify-center items-center ">
+              <div className="w-2/3 h-full bg-[#2CF7A4] rounded-xxl"></div>
+            </div>
+            <div className="w-1/2 p-5">
+              <p className="text-black font-piepie text-5xl md:text-6xl lg:text-6xl tracking-wider  w-[70%]">
+                <span className="text-[#5423E6]">Script Programming – </span>
+                Take Control with Text-Based Code
+              </p>
+              <p className="text-[#4A4A4F] w-[70%] mt-6">
+                Script programming introduces users to real-world coding
+                languages. If you’re ready to dive deeper, you can explore C
+                programming and Python—both powerful tools for building advanced
+                hardware solutions.
+              </p>
+            </div>
           </div>
         )}
         {params.product == "plode" && (
