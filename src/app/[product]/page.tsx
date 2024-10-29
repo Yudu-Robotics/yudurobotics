@@ -34,6 +34,8 @@ import AdaptiveLMS from "@/components/ui/common/adaptive-lms";
 import Unboxing from "@/components/ui/common/unboxing";
 import { notFound } from "next/navigation";
 import TestimonialBanner from "@/components/ui/common/testimonial-banner";
+import Plode from "@/page/Plode";
+import Zing from "@/page/Zing";
 
 const FAQs = dynamic(() => import("@/components/ui/home/faqs"), {
   ssr: false, // This disables server-side rendering for the FAQ component
