@@ -39,6 +39,7 @@ import Zing from "@/page/Zing";
 import Peecee from "@/page/Peecee";
 import Roboki from "@/page/Roboki";
 import CrawlE from "@/page/CrawlE";
+import KlawB from "@/page/KlawB";
 
 const FAQs = dynamic(() => import("@/components/ui/home/faqs"), {
   ssr: false, // This disables server-side rendering for the FAQ component
@@ -145,10 +146,10 @@ export default async function ProductPage({ params }: any) {
     bgColor = newBgColor;
     textColor = newTextColor;
   }
-  if (params.product === "crawl_e") {
+  if (params.product === "klaw_b") {
     return (
       <>
-        <CrawlE />
+        <KlawB />
       </>
     );
   }
