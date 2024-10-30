@@ -20,8 +20,8 @@ import { WrongPageComponent } from "@/components/ui/not-found-component";
 
 const NotFoundPage = () => {
   const NavBarItems = [
-    "Y/Our Products",
-    "The Partner Program",
+    { name: "Y/Our Products", link: "/products" },
+    { name: "The Partner Program", link: "/partner" },
     // "Crazies Behind",
     // "Resources",
     // "Blogs",
@@ -40,27 +40,29 @@ const NotFoundPage = () => {
             {renderSvg("logoYudoRobo")}
           </a>
           <div className="space-x-4 hidden lg:flex lg:justify-center lg:items-center text-primary-foreground">
-            {NavBarItems.map((item: string, key: number) => (
+            {NavBarItems.map((item, key: number) => (
               <div key={key}>
-                {key == 0 ? (
+                {/* {key == 0 ? (
                   <NavigationMenu>
                     <NavigationMenuList>
                       <NavigationMenuItem>
-                        <NavigationMenuTrigger>{item}</NavigationMenuTrigger>
-                        <NavigationMenuContent>
-                          {/* <NavigationMenuLink>Link</NavigationMenuLink> */}
-                        </NavigationMenuContent>
-                      </NavigationMenuItem>
+                        <NavigationMenuTrigger>
+                          {item.name}
+                        </NavigationMenuTrigger>
+                        {/* <NavigationMenuContent> */}
+                {/* <NavigationMenuLink>Link</NavigationMenuLink> */}
+                {/* </NavigationMenuContent> */}
+                {/* </NavigationMenuItem>
                     </NavigationMenuList>
                   </NavigationMenu>
-                ) : (
-                  <a
-                    href="/blog"
-                    className="text-primary-foreground text-center text-sm px-3 hover:text-destructive bg-primary"
-                  >
-                    {item}
-                  </a>
-                )}
+                ) : ( */}
+                <a
+                  href={item.link}
+                  className="text-primary-foreground text-center text-sm px-3 hover:text-destructive bg-primary"
+                >
+                  {item.name}
+                </a>
+                {/* // )} */}
               </div>
             ))}
           </div>
