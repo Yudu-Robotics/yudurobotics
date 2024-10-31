@@ -56,7 +56,7 @@ const ExtraFeatures: React.FC<{
           </div>
 
           {/* Right Side: Central Image */}
-          <div className="relative flex justify-start items-start">
+          <div className="relative flex justify-center items-center ">
             <img
               src={data?.centerImage}
               alt="Product Image"

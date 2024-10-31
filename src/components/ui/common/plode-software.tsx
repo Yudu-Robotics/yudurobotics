@@ -3,8 +3,17 @@ import { NewFeaturesCard } from "../NewFeaturesCard";
 import JumpingButtons from "./jumping-buttons";
 import renderSvg from "@/svgImport";
 import renderImg from "@/imgImport";
+interface JumppingData {
+  text1?: string;
+  text2?: string;
+  bgColor?: string;
+  textColor?: string;
+}
 
-const PlodeSoftware = () => {
+interface PlodeSoftwareProps {
+  jumppingdata?: JumppingData; // Use the defined structure
+}
+const PlodeSoftware: React.FC<PlodeSoftwareProps> = ({ jumppingdata }) => {
   return (
     <>
       <div className="w-full -rotate-180">
@@ -37,7 +46,13 @@ const PlodeSoftware = () => {
 
           {/* Buttons Section */}
 
-          <JumpingButtons ishorizontal="true" />
+          <JumpingButtons
+            ishorizontal="true"
+            text1={jumppingdata?.text1 || ""}
+            text2={jumppingdata?.text2 || ""}
+            bgColor={jumppingdata?.bgColor || ""}
+            textColor={jumppingdata?.textColor || ""}
+          />
         </div>
       </div>
       <div className="w-full -mt-1">

@@ -27,9 +27,9 @@ export default function KlawB() {
           <div className="w-full">
             {/* Main Text */}
 
-            <div className="space-y-4">
+            <div className="space-y-4 h-full">
               {/* Main Headline */}
-              <div className="font-piepie text-5xl md:text-6xl lg:text-7xl tracking-wider text-primary-foreground lg:w-[80%]">
+              <div className="w-2/3 font-piepie text-5xl md:text-6xl lg:text-7xl tracking-wider text-primary-foreground ">
                 {highlightWords(
                   data.heading,
                   data.wordsToHighlight.text1,
@@ -38,26 +38,30 @@ export default function KlawB() {
               </div>
 
               {/* Subtext */}
-              <div className="text-primary-foreground text-xs md:text-sm lg:text-base font-body w-[100%] lg:w-[60%]">
+              <div className="w-[50%] text-primary-foreground text-xs md:text-sm lg:text-base font-body ">
                 {data.subheading}
+              </div>
+              {/* Buttons Section */}
+              <div className="flex justify-start w-full">
+                <JumpingButtons
+                  ishorizontal="true"
+                  text1={data?.jumppingButton?.[0]?.text1 || ""}
+                  text2={data?.jumppingButton?.[0]?.text2 || ""}
+                  bgColor={data?.jumppingButton?.[0]?.bgColor || ""}
+                  textColor={data?.jumppingButton?.[0]?.textColor || ""}
+                  link=""
+                />
               </div>
             </div>
           </div>
-          {/* Buttons Section */}
-          {
-            <JumpingButtons
-            // ishorizontal={ishorizontal}
-            // text1={text1}
-            // text2={text2}
-            // bgColor={bgColor}
-            // textColor={textColor}
-            // link=""
-            />
-          }
         </div>
 
-        <div className="">
-          <img src={data.images[0]} className="w-full -mt-[8%]" />
+        <div className="" style={{ marginTop: "-37rem" }}>
+          <img
+            src={data.images[0]}
+            className="w-full"
+            style={{ marginTop: "-8%" }}
+          />
         </div>
       </div>
       <div className="w-full -mt-1">
@@ -70,6 +74,13 @@ export default function KlawB() {
         </div>
         <div className="py-8 lg:py-12">
           <Unboxing />
+        </div>
+        <div className="text-sm py-8 lg:py-16 text-center font-bold flex flex-col space-y-6 justify-center items-center">
+          <p>
+            Hover over each feature below to{" "}
+            <span className="text-primary italic">see it in action!</span>
+          </p>
+          {renderSvg("doubleArrow")}
         </div>
         <div>
           <ExtraFeatures
@@ -93,7 +104,7 @@ export default function KlawB() {
           />{" "}
         </div>
         <div className="">
-          <PlodeSoftware />
+          <PlodeSoftware jumppingdata={data.jumppingButton?.[1] || {}} />
         </div>
         <div className="lg:-mt-52 ">
           <SoftwareAdaptive />
@@ -103,43 +114,45 @@ export default function KlawB() {
         </div>
         <div>
           <ExtraFeatures
-            data={data.features_data?.software_experience}
+            data={data.features_data?.software_experience[0]}
             title="software"
           />
         </div>
         <div className="py-16 lg:py-20">
           <PlodeDownloade
+            jumppingdata={data.jumppingButton?.[2] || {}}
             heading="Unleash Your Creativity with Plode"
             desc="Download the Plode app today and start coding fun, engaging projects. Whether you’re new to coding or a seasoned pro, Plode makes learning and creating a breeze!"
           />
         </div>
-      </div>
-      <div>
-        <CeoComments />
-      </div>{" "}
-      <div className="py-20">
-        <FlexibleLearning />
-      </div>
-      <div className="py-16 md:py-20">
-        <ExtraFeatures
-          data={data.features_data.cirriculum}
-          title="Curriculum"
-        />
-      </div>
-      <div className="py-16 lg:py-20">
-        <PlodeDownloade
-          heading="Transform Your Learning with Our Curriculum"
-          desc="Explore our comprehensive curriculum designed to make coding and robotics accessible and exciting. Get started with structured lessons and hands-on projects today!"
-        />
-      </div>
-      <div className="-mx-8 lg:-mx-28">
-        <TestimonialBanner />
-      </div>
-      <div className="py-5 lg:py-20">
-        <FAQs />
-      </div>
-      <div>
-        <GetInTouch />
+        <div>
+          <CeoComments />
+        </div>{" "}
+        <div className="py-20">
+          <FlexibleLearning />
+        </div>
+        <div className="py-16 md:py-20">
+          <ExtraFeatures
+            data={data.features_data.cirriculum}
+            title="Curriculum"
+          />
+        </div>
+        <div className="py-16 lg:py-20">
+          <PlodeDownloade
+            jumppingdata={data.jumppingButton?.[3] || {}}
+            heading="Transform Your Learning with Our Curriculum"
+            desc="Explore our comprehensive curriculum designed to make coding and robotics accessible and exciting. Get started with structured lessons and hands-on projects today!"
+          />
+        </div>
+        <div className="-mx-8 lg:-mx-28">
+          <TestimonialBanner />
+        </div>
+        <div className="py-5 lg:py-20">
+          <FAQs />
+        </div>
+        <div>
+          <GetInTouch />
+        </div>
       </div>
     </>
   );

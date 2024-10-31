@@ -142,7 +142,7 @@ export default function ProductLayout({
           {children}
 
           {/* Footer */}
-          <div className="w-full -mb-1">{renderSvg("bottomSection")}</div>
+          <div className="w-full -mb-1 mt-24">{renderSvg("bottomSection")}</div>
           <div className="px-8 lg:px-28 py-4 bg-primary">
             <Footer />
           </div>

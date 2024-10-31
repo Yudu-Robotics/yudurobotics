@@ -27,7 +27,7 @@ export function WrongPageComponent() {
   ];
 
   return (
-    <div className="px-8 lg:px-28 py-20 text-black flex justify-center flex-col items-center space-y-20 bg-primary">
+    <div className="px-8 lg:px-28  text-black flex justify-center flex-col items-center space-y-20 bg-primary">
       {/* <div className="flex flex-col space-y-3 ">
         <h1 className="text-xs text-primary">404 error</h1>
         <h2 className="text-2xl lg:text-4xl font-piepie">We lost this page</h2>
@@ -65,8 +65,8 @@ export function WrongPageComponent() {
           )
         )}
       </div> */}
-      <div>
-        <img src={renderImg("notFound")} />
+      <div className="w-[100vw]">
+        <img src={renderImg("notFound")} className="w-full" />
       </div>
       <div className="w-1/2  flex flex-col justify-center items-center text-[#BBA5FE] gap-5">
         <p>

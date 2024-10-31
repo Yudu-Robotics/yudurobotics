@@ -11,6 +11,7 @@ import JumpingButtons from "@/components/ui/common/jumping-buttons";
 import PlodeDownloade from "@/components/ui/common/plode-download";
 import PlodeSoftware from "@/components/ui/common/plode-software";
 import TestimonialBanner from "@/components/ui/common/testimonial-banner";
+import Unboxing from "@/components/ui/common/unboxing";
 import VersatileSoftware from "@/components/ui/common/versatile-software";
 import FAQs from "@/components/ui/home/faqs";
 import { mockData } from "@/data/mockData";
@@ -45,12 +46,12 @@ export default function CrawlE() {
           {/* Buttons Section */}
           {
             <JumpingButtons
-            // ishorizontal={ishorizontal}
-            // text1={text1}
-            // text2={text2}
-            // bgColor={bgColor}
-            // textColor={textColor}
-            // link=""
+              ishorizontal="true"
+              text1={data?.jumppingButton?.[0]?.text1 || ""}
+              text2={data?.jumppingButton?.[0]?.text2 || ""}
+              bgColor={data?.jumppingButton?.[0]?.bgColor || ""}
+              textColor={data?.jumppingButton?.[0]?.textColor || ""}
+              link=""
             />
           }
         </div>
@@ -67,6 +68,16 @@ export default function CrawlE() {
         <div className="py-8 lg:py-16">
           <ProductCeoReviewsContainer comment={data.ceoComment} />
         </div>
+        <div className="py-8 lg:py-12">
+          <Unboxing />
+        </div>
+        <div className="text-sm py-8 lg:py-16 text-center font-bold flex flex-col space-y-6 justify-center items-center">
+          <p>
+            Hover over each feature below to{" "}
+            <span className="text-primary italic">see it in action!</span>
+          </p>
+          {renderSvg("doubleArrow")}
+        </div>
         <div>{<HardwareProductFeatures hardware={data.features_data} />}</div>
         <div>
           <Working
@@ -75,7 +86,7 @@ export default function CrawlE() {
           />{" "}
         </div>
         <div className="">
-          <PlodeSoftware />
+          <PlodeSoftware jumppingdata={data.jumppingButton?.[1] || {}} />
         </div>
         <div className="lg:-mt-52 ">
           <SoftwareAdaptive />
@@ -85,12 +96,13 @@ export default function CrawlE() {
         </div>
         <div>
           <ExtraFeatures
-            data={data.features_data?.software_experience}
+            data={data.features_data?.software_experience[0]}
             title="software"
           />
         </div>
         <div className="py-16 lg:py-20">
           <PlodeDownloade
+            jumppingdata={data.jumppingButton?.[2] || {}}
             heading="Unleash Your Creativity with Plode"
             desc="Download the Plode app today and start coding fun, engaging projects. Whether you’re new to coding or a seasoned pro, Plode makes learning and creating a breeze!"
           />
@@ -109,6 +121,7 @@ export default function CrawlE() {
         </div>
         <div className="py-16 lg:py-20">
           <PlodeDownloade
+            jumppingdata={data.jumppingButton?.[3] || {}}
             heading="Transform Your Learning with Our Curriculum"
             desc="Explore our comprehensive curriculum designed to make coding and robotics accessible and exciting. Get started with structured lessons and hands-on projects today!"
           />

@@ -1,7 +1,10 @@
+import { title } from "process";
+
 // mockData.js
 type ProductData = {
   heading: string;
   wordsToHighlight: { text1: string[]; text2: string[] };
+
   subheading: string;
   images: string[];
   sectionHeader: string;
@@ -51,7 +54,7 @@ type ProductData = {
         heading: string;
         description: string;
       }[];
-    };
+    }[];
     cirriculum: {
       heading: string;
       subheading: string;
@@ -99,8 +102,30 @@ type ProductData = {
     shared: string[];
     unique: string[];
   };
+  jumppingButton?: {
+    text1: string;
+    text2: string;
+    bgColor: string;
+    textColor: string;
+    link: "#";
+  }[];
+  plugandplay?: {
+    title: string;
+    heading: string;
+    wordsToHighlight: {
+      text1: string[];
+    };
+    subheading: string;
+    tableData: {
+      title: string;
+      desc: string;
+    }[];
+  };
 };
-
+interface PlugAndPlayAccessory {
+  title: string;
+  desc: string;
+}
 type BlogData = {
   title: string;
   description: string;
@@ -296,39 +321,41 @@ export const mockData: { [key: string]: ProductData } = {
           },
         ],
       },
-      software_experience: {
-        heading: "Effortless Experience",
-        subheading:
-          "Everything about Plode is designed to make your experience smooth, simple, and super fun.",
-        centerImage: "assets/other/imagePlaceholder2.png",
-        features: [
-          {
-            icon: "userFriendly",
-            heading: "User-Friendly and Fun",
-            description:
-              "Bright colors, playful UX/UI elements, and an interface that feels like an adventure make coding with Plode pure joy.",
-          },
-          {
-            icon: "virtual",
-            heading: "Virtual Simulator",
-            description:
-              "Test your projects in a virtual playground before bringing them to life, ensuring everything works just right.",
-          },
+      software_experience: [
+        {
+          heading: "Effortless Experience",
+          subheading:
+            "Everything about Plode is designed to make your experience smooth, simple, and super fun.",
+          centerImage: "assets/other/imagePlaceholder2.png",
+          features: [
+            {
+              icon: "userFriendly",
+              heading: "User-Friendly and Fun",
+              description:
+                "Bright colors, playful UX/UI elements, and an interface that feels like an adventure make coding with Plode pure joy.",
+            },
+            {
+              icon: "virtual",
+              heading: "Virtual Simulator",
+              description:
+                "Test your projects in a virtual playground before bringing them to life, ensuring everything works just right.",
+            },
 
-          {
-            icon: "instaLink",
-            heading: "InstaLink Real-Time Magic",
-            description:
-              "Instantly see what your sensors and accessories are up to, tweaking on the fly. InstaLive even makes servo calibration a snap.",
-          },
-          {
-            icon: "data",
-            heading: "Data Capture and Visualization Mode",
-            description:
-              "Turn data into visuals! Plot graphs, capture live sensor data, compare, and store your findings—all in one place. Plode makes data fun and easy to understand.",
-          },
-        ],
-      },
+            {
+              icon: "instaLink",
+              heading: "InstaLink Real-Time Magic",
+              description:
+                "Instantly see what your sensors and accessories are up to, tweaking on the fly. InstaLive even makes servo calibration a snap.",
+            },
+            {
+              icon: "data",
+              heading: "Data Capture and Visualization Mode",
+              description:
+                "Turn data into visuals! Plot graphs, capture live sensor data, compare, and store your findings—all in one place. Plode makes data fun and easy to understand.",
+            },
+          ],
+        },
+      ],
       cirriculum: {
         heading: "Feedback and Reflection",
         subheading: "Enhance learning with continuous feedback and reflection.",
@@ -459,39 +486,41 @@ export const mockData: { [key: string]: ProductData } = {
           "Got more than one PeeCee TED? Let them chat and collaborate on projects together—because teamwork makes the dream work!",
         centerImage: "assets/peecee/peeceehardware3.png",
       },
-      software_experience: {
-        heading: "Effortless Experience",
-        subheading:
-          "Everything about Plode is designed to make your experience smooth, simple, and super fun.",
-        centerImage: "assets/other/imagePlaceholder2.png",
-        features: [
-          {
-            icon: "userFriendly",
-            heading: "User-Friendly and Fun",
-            description:
-              "Bright colors, playful UX/UI elements, and an interface that feels like an adventure make coding with Plode pure joy.",
-          },
-          {
-            icon: "virtual",
-            heading: "Virtual Simulator",
-            description:
-              "Test your projects in a virtual playground before bringing them to life, ensuring everything works just right.",
-          },
+      software_experience: [
+        {
+          heading: "Effortless Experience",
+          subheading:
+            "Everything about Plode is designed to make your experience smooth, simple, and super fun.",
+          centerImage: "assets/other/imagePlaceholder2.png",
+          features: [
+            {
+              icon: "userFriendly",
+              heading: "User-Friendly and Fun",
+              description:
+                "Bright colors, playful UX/UI elements, and an interface that feels like an adventure make coding with Plode pure joy.",
+            },
+            {
+              icon: "virtual",
+              heading: "Virtual Simulator",
+              description:
+                "Test your projects in a virtual playground before bringing them to life, ensuring everything works just right.",
+            },
 
-          {
-            icon: "instaLink",
-            heading: "InstaLink Real-Time Magic",
-            description:
-              "Instantly see what your sensors and accessories are up to, tweaking on the fly. InstaLive even makes servo calibration a snap.",
-          },
-          {
-            icon: "data",
-            heading: "Data Capture and Visualization Mode",
-            description:
-              "Turn data into visuals! Plot graphs, capture live sensor data, compare, and store your findings—all in one place. Plode makes data fun and easy to understand.",
-          },
-        ],
-      },
+            {
+              icon: "instaLink",
+              heading: "InstaLink Real-Time Magic",
+              description:
+                "Instantly see what your sensors and accessories are up to, tweaking on the fly. InstaLive even makes servo calibration a snap.",
+            },
+            {
+              icon: "data",
+              heading: "Data Capture and Visualization Mode",
+              description:
+                "Turn data into visuals! Plot graphs, capture live sensor data, compare, and store your findings—all in one place. Plode makes data fun and easy to understand.",
+            },
+          ],
+        },
+      ],
       cirriculum: {
         heading: "Feedback and Reflection",
         subheading: "Enhance learning with continuous feedback and reflection.",
@@ -596,6 +625,71 @@ export const mockData: { [key: string]: ProductData } = {
       shared: ["Navbar", "Footer", "ProductCard"],
       unique: ["PeeCeeSpecs", "UserReviews"],
     },
+    jumppingButton: [
+      {
+        text1: "Own One",
+        text2: "Now!",
+        bgColor: "#602CF7",
+        textColor: "#FAF9FE",
+        link: "#",
+      },
+      {
+        text1: "Learn",
+        text2: "More",
+        bgColor: "#602CF7",
+        textColor: "#FAF9FE",
+        link: "#",
+      },
+      {
+        text1: "Download",
+        text2: "Plode App",
+        bgColor: "#602CF7",
+        textColor: "#FAF9FE",
+        link: "#",
+      },
+      {
+        text1: "Start",
+        text2: "Learning",
+        bgColor: "#602CF7",
+        textColor: "#FAF9FE",
+        link: "#",
+      },
+    ],
+    plugandplay: {
+      title: "Hardware",
+      heading: "Plug and Play Accessories",
+      wordsToHighlight: {
+        text1: ["Plug and Play "],
+      },
+      subheading:
+        "PeeCee TED comes with a treasure trove of accessories—from sensors and switches to motors and displays, the possibilities are endless!",
+      tableData: [
+        {
+          title: "Plug and Play Accessories",
+          desc: "PeeCee TED comes with a treasure trove of accessories—from sensors and switches to motors and displays, the possibilities are endless!",
+        },
+        {
+          title: "IR Distance and Ultrasonic Sensors",
+          desc: "Measure distances like a pro.",
+        },
+        {
+          title: "Joysticks and Switches",
+          desc: "Get hands-on with controls that put you in charge.",
+        },
+        {
+          title: "Lasers, LEDs, and Displays",
+          desc: "Add some pizzazz with lasers, RGB lights, and OLED screens.",
+        },
+        {
+          title: "Motors and Rotors",
+          desc: "Make your projects move with servo and DC motors.",
+        },
+        {
+          title: "Sound and More",
+          desc: "Pump up the volume with an audio module and 3W speaker, or go high-tech with metal geared motors and propellers.",
+        },
+      ],
+    },
   },
   roboki: {
     heading: "Roboki: The Ultimate Fun-Packed Robotics Kit",
@@ -654,39 +748,41 @@ export const mockData: { [key: string]: ProductData } = {
           },
         ],
       },
-      software_experience: {
-        heading: "Effortless Experience",
-        subheading:
-          "Everything about Plode is designed to make your experience smooth, simple, and super fun.",
-        centerImage: "assets/other/imagePlaceholder2.png",
-        features: [
-          {
-            icon: "userFriendly",
-            heading: "User-Friendly and Fun",
-            description:
-              "Bright colors, playful UX/UI elements, and an interface that feels like an adventure make coding with Plode pure joy.",
-          },
-          {
-            icon: "virtual",
-            heading: "Virtual Simulator",
-            description:
-              "Test your projects in a virtual playground before bringing them to life, ensuring everything works just right.",
-          },
+      software_experience: [
+        {
+          heading: "Effortless Experience",
+          subheading:
+            "Everything about Plode is designed to make your experience smooth, simple, and super fun.",
+          centerImage: "assets/other/imagePlaceholder2.png",
+          features: [
+            {
+              icon: "userFriendly",
+              heading: "User-Friendly and Fun",
+              description:
+                "Bright colors, playful UX/UI elements, and an interface that feels like an adventure make coding with Plode pure joy.",
+            },
+            {
+              icon: "virtual",
+              heading: "Virtual Simulator",
+              description:
+                "Test your projects in a virtual playground before bringing them to life, ensuring everything works just right.",
+            },
 
-          {
-            icon: "instaLink",
-            heading: "InstaLink Real-Time Magic",
-            description:
-              "Instantly see what your sensors and accessories are up to, tweaking on the fly. InstaLive even makes servo calibration a snap.",
-          },
-          {
-            icon: "data",
-            heading: "Data Capture and Visualization Mode",
-            description:
-              "Turn data into visuals! Plot graphs, capture live sensor data, compare, and store your findings—all in one place. Plode makes data fun and easy to understand.",
-          },
-        ],
-      },
+            {
+              icon: "instaLink",
+              heading: "InstaLink Real-Time Magic",
+              description:
+                "Instantly see what your sensors and accessories are up to, tweaking on the fly. InstaLive even makes servo calibration a snap.",
+            },
+            {
+              icon: "data",
+              heading: "Data Capture and Visualization Mode",
+              description:
+                "Turn data into visuals! Plot graphs, capture live sensor data, compare, and store your findings—all in one place. Plode makes data fun and easy to understand.",
+            },
+          ],
+        },
+      ],
       cirriculum: {
         heading: "Feedback and Reflection",
         subheading: "Enhance learning with continuous feedback and reflection.",
@@ -727,6 +823,36 @@ export const mockData: { [key: string]: ProductData } = {
       shared: ["Navbar", "Footer", "ProductCard"],
       unique: ["RobokiFeatures", "PerformanceChart"],
     },
+    jumppingButton: [
+      {
+        text1: "Own One",
+        text2: "Now!",
+        bgColor: "#602CF7",
+        textColor: "#FAF9FE",
+        link: "#",
+      },
+      {
+        text1: "Button",
+        text2: "CTA",
+        bgColor: "#602CF7",
+        textColor: "#FAF9FE",
+        link: "#",
+      },
+      {
+        text1: "Download",
+        text2: "Plode App",
+        bgColor: "#602CF7",
+        textColor: "#FAF9FE",
+        link: "#",
+      },
+      {
+        text1: "Start",
+        text2: "Learning",
+        bgColor: "#602CF7",
+        textColor: "#FAF9FE",
+        link: "#",
+      },
+    ],
   },
   zing: {
     heading: "Meet Zing: The Fun and Lively Humanoid Robot",
@@ -785,39 +911,41 @@ export const mockData: { [key: string]: ProductData } = {
           },
         ],
       },
-      software_experience: {
-        heading: "Effortless Experience",
-        subheading:
-          "Everything about Plode is designed to make your experience smooth, simple, and super fun.",
-        centerImage: "assets/other/imagePlaceholder2.png",
-        features: [
-          {
-            icon: "userFriendly",
-            heading: "User-Friendly and Fun",
-            description:
-              "Bright colors, playful UX/UI elements, and an interface that feels like an adventure make coding with Plode pure joy.",
-          },
-          {
-            icon: "virtual",
-            heading: "Virtual Simulator",
-            description:
-              "Test your projects in a virtual playground before bringing them to life, ensuring everything works just right.",
-          },
+      software_experience: [
+        {
+          heading: "Effortless Experience",
+          subheading:
+            "Everything about Plode is designed to make your experience smooth, simple, and super fun.",
+          centerImage: "assets/other/imagePlaceholder2.png",
+          features: [
+            {
+              icon: "userFriendly",
+              heading: "User-Friendly and Fun",
+              description:
+                "Bright colors, playful UX/UI elements, and an interface that feels like an adventure make coding with Plode pure joy.",
+            },
+            {
+              icon: "virtual",
+              heading: "Virtual Simulator",
+              description:
+                "Test your projects in a virtual playground before bringing them to life, ensuring everything works just right.",
+            },
 
-          {
-            icon: "instaLink",
-            heading: "InstaLink Real-Time Magic",
-            description:
-              "Instantly see what your sensors and accessories are up to, tweaking on the fly. InstaLive even makes servo calibration a snap.",
-          },
-          {
-            icon: "data",
-            heading: "Data Capture and Visualization Mode",
-            description:
-              "Turn data into visuals! Plot graphs, capture live sensor data, compare, and store your findings—all in one place. Plode makes data fun and easy to understand.",
-          },
-        ],
-      },
+            {
+              icon: "instaLink",
+              heading: "InstaLink Real-Time Magic",
+              description:
+                "Instantly see what your sensors and accessories are up to, tweaking on the fly. InstaLive even makes servo calibration a snap.",
+            },
+            {
+              icon: "data",
+              heading: "Data Capture and Visualization Mode",
+              description:
+                "Turn data into visuals! Plot graphs, capture live sensor data, compare, and store your findings—all in one place. Plode makes data fun and easy to understand.",
+            },
+          ],
+        },
+      ],
       cirriculum: {
         heading: "Feedback and Reflection",
         subheading: "Enhance learning with continuous feedback and reflection.",
@@ -869,6 +997,36 @@ export const mockData: { [key: string]: ProductData } = {
       shared: ["Navbar", "Footer", "ContactForm"],
       unique: ["ZingSpeedChart", "DeliveryOptions"],
     },
+    jumppingButton: [
+      {
+        text1: "Own One",
+        text2: "Now!",
+        bgColor: "#F72D3E",
+        textColor: "#FAF9FE",
+        link: "#",
+      },
+      {
+        text1: "Button",
+        text2: "CTA",
+        bgColor: "#F72D3E",
+        textColor: "#FAF9FE",
+        link: "#",
+      },
+      {
+        text1: "Download",
+        text2: "Plode App",
+        bgColor: "#F72D3E",
+        textColor: "#FAF9FE",
+        link: "#",
+      },
+      {
+        text1: "Start",
+        text2: "Learning",
+        bgColor: "#F72D3E",
+        textColor: "#FAF9FE",
+        link: "#",
+      },
+    ],
   },
   crawl_e: {
     heading: "Meet Crawl-e: The Agile Hexapod Robot",
@@ -927,39 +1085,41 @@ export const mockData: { [key: string]: ProductData } = {
           },
         ],
       },
-      software_experience: {
-        heading: "Effortless Experience",
-        subheading:
-          "Everything about Plode is designed to make your experience smooth, simple, and super fun.",
-        centerImage: "assets/other/imagePlaceholder2.png",
-        features: [
-          {
-            icon: "userFriendly",
-            heading: "User-Friendly and Fun",
-            description:
-              "Bright colors, playful UX/UI elements, and an interface that feels like an adventure make coding with Plode pure joy.",
-          },
-          {
-            icon: "virtual",
-            heading: "Virtual Simulator",
-            description:
-              "Test your projects in a virtual playground before bringing them to life, ensuring everything works just right.",
-          },
+      software_experience: [
+        {
+          heading: "Effortless Experience",
+          subheading:
+            "Everything about Plode is designed to make your experience smooth, simple, and super fun.",
+          centerImage: "assets/other/imagePlaceholder2.png",
+          features: [
+            {
+              icon: "userFriendly",
+              heading: "User-Friendly and Fun",
+              description:
+                "Bright colors, playful UX/UI elements, and an interface that feels like an adventure make coding with Plode pure joy.",
+            },
+            {
+              icon: "virtual",
+              heading: "Virtual Simulator",
+              description:
+                "Test your projects in a virtual playground before bringing them to life, ensuring everything works just right.",
+            },
 
-          {
-            icon: "instaLink",
-            heading: "InstaLink Real-Time Magic",
-            description:
-              "Instantly see what your sensors and accessories are up to, tweaking on the fly. InstaLive even makes servo calibration a snap.",
-          },
-          {
-            icon: "data",
-            heading: "Data Capture and Visualization Mode",
-            description:
-              "Turn data into visuals! Plot graphs, capture live sensor data, compare, and store your findings—all in one place. Plode makes data fun and easy to understand.",
-          },
-        ],
-      },
+            {
+              icon: "instaLink",
+              heading: "InstaLink Real-Time Magic",
+              description:
+                "Instantly see what your sensors and accessories are up to, tweaking on the fly. InstaLive even makes servo calibration a snap.",
+            },
+            {
+              icon: "data",
+              heading: "Data Capture and Visualization Mode",
+              description:
+                "Turn data into visuals! Plot graphs, capture live sensor data, compare, and store your findings—all in one place. Plode makes data fun and easy to understand.",
+            },
+          ],
+        },
+      ],
       cirriculum: {
         heading: "Feedback and Reflection",
         subheading: "Enhance learning with continuous feedback and reflection.",
@@ -1011,6 +1171,36 @@ export const mockData: { [key: string]: ProductData } = {
       shared: ["Navbar", "Footer", "ProductCard"],
       unique: ["CrawlENavigation", "TerrainMapping"],
     },
+    jumppingButton: [
+      {
+        text1: "Own One",
+        text2: "Now!",
+        bgColor: "#F72D3E",
+        textColor: "#FAF9FE",
+        link: "#",
+      },
+      {
+        text1: "Button",
+        text2: "CTA",
+        bgColor: "#F72D3E",
+        textColor: "#FAF9FE",
+        link: "#",
+      },
+      {
+        text1: "Download",
+        text2: "Plode App",
+        bgColor: "#F72D3E",
+        textColor: "#FAF9FE",
+        link: "#",
+      },
+      {
+        text1: "Start",
+        text2: "Learning",
+        bgColor: "#F72D3E",
+        textColor: "#FAF9FE",
+        link: "#",
+      },
+    ],
   },
   klaw_b: {
     heading: "Meet Klaw-b: The Dynamic 5-DOF Robotic Arm",
@@ -1100,39 +1290,41 @@ export const mockData: { [key: string]: ProductData } = {
           },
         ],
       },
-      software_experience: {
-        heading: "Effortless Experience",
-        subheading:
-          "Everything about Plode is designed to make your experience smooth, simple, and super fun.",
-        centerImage: "assets/other/imagePlaceholder2.png",
-        features: [
-          {
-            icon: "userFriendly",
-            heading: "User-Friendly and Fun",
-            description:
-              "Bright colors, playful UX/UI elements, and an interface that feels like an adventure make coding with Plode pure joy.",
-          },
-          {
-            icon: "virtual",
-            heading: "Virtual Simulator",
-            description:
-              "Test your projects in a virtual playground before bringing them to life, ensuring everything works just right.",
-          },
+      software_experience: [
+        {
+          heading: "Effortless Experience",
+          subheading:
+            "Everything about Plode is designed to make your experience smooth, simple, and super fun.",
+          centerImage: "assets/other/imagePlaceholder2.png",
+          features: [
+            {
+              icon: "userFriendly",
+              heading: "User-Friendly and Fun",
+              description:
+                "Bright colors, playful UX/UI elements, and an interface that feels like an adventure make coding with Plode pure joy.",
+            },
+            {
+              icon: "virtual",
+              heading: "Virtual Simulator",
+              description:
+                "Test your projects in a virtual playground before bringing them to life, ensuring everything works just right.",
+            },
 
-          {
-            icon: "instaLink",
-            heading: "InstaLink Real-Time Magic",
-            description:
-              "Instantly see what your sensors and accessories are up to, tweaking on the fly. InstaLive even makes servo calibration a snap.",
-          },
-          {
-            icon: "data",
-            heading: "Data Capture and Visualization Mode",
-            description:
-              "Turn data into visuals! Plot graphs, capture live sensor data, compare, and store your findings—all in one place. Plode makes data fun and easy to understand.",
-          },
-        ],
-      },
+            {
+              icon: "instaLink",
+              heading: "InstaLink Real-Time Magic",
+              description:
+                "Instantly see what your sensors and accessories are up to, tweaking on the fly. InstaLive even makes servo calibration a snap.",
+            },
+            {
+              icon: "data",
+              heading: "Data Capture and Visualization Mode",
+              description:
+                "Turn data into visuals! Plot graphs, capture live sensor data, compare, and store your findings—all in one place. Plode makes data fun and easy to understand.",
+            },
+          ],
+        },
+      ],
       cirriculum: {
         heading: "Feedback and Reflection",
         subheading: "Enhance learning with continuous feedback and reflection.",
@@ -1184,7 +1376,38 @@ export const mockData: { [key: string]: ProductData } = {
       shared: ["Navbar", "Footer", "ProductCard"],
       unique: ["PlodeEntertainmentFeatures", "UserFeedback"],
     },
+    jumppingButton: [
+      {
+        text1: "Own One",
+        text2: "Now!",
+        bgColor: "#F7812D",
+        textColor: "#FAF9FE",
+        link: "#",
+      },
+      {
+        text1: "Button",
+        text2: "CTA",
+        bgColor: "#F7812D",
+        textColor: "#FAF9FE",
+        link: "#",
+      },
+      {
+        text1: "Download",
+        text2: "Plode App",
+        bgColor: "#F7812D",
+        textColor: "#FAF9FE",
+        link: "#",
+      },
+      {
+        text1: "Start",
+        text2: "Learning",
+        bgColor: "#F7812D",
+        textColor: "#FAF9FE",
+        link: "#",
+      },
+    ],
   },
+
   plode: {
     heading: "Plode: The Playful Coding Platform",
     wordsToHighlight: {
@@ -1196,85 +1419,202 @@ export const mockData: { [key: string]: ProductData } = {
     images: ["assets/plode/plodeHomeImg.png", "assets/crawle/crawlehard1.png"],
     sectionHeader: "headerSection",
     ceoComment:
-      "Plode simplifies coding with its user-friendly interface, making it perfect for beginners and experienced coders alike",
+      "Plode simplifies coding with its user-friendly interface, making it perfect for beginners and experienced coders alike.",
     features_data: {
       section1: {
-        heading: "Ready to Go, Right Out of the Box",
+        heading: "Data Mode - Explore, Measure, and Visualise",
         subheading:
-          "PeeCee TED is your all-in-one buddy, packed and ready to jump into action whenever you are.",
+          "Plode’s Data Mode provides a powerful way to monitor, measure, and visualise data from both internal sensors and external accessories. Tailored to your kit’s capabilities, it offers a seamless step-by-step setup for precise data capture and analysis.",
         centerImage: "assets/crawle/crawlehardware1.png",
         features: [
           {
-            icon: "assets/zing/Featured icon (12).png",
-            heading: "Spider-Like Agility",
+            icon: "assets/partner/icon/selector.png",
+            heading: "Select Sensor",
             description:
-              "With 18 motors and 6 legs, Crawl-e moves with the precision and versatility of a spider. Perfect for intricate tasks and dynamic movements.",
+              "Choose from built-in sensors such as Microphone, Temperature, Battery, and various Touch or Gesture Sensors.",
           },
           {
-            icon: "assets/zing/Featured icon (13).png",
-            heading: "Flexible Movement",
+            icon: "assets/partner/icon/settime.png",
+            heading: "Set Time Interval",
             description:
-              "From crawling to turning, Crawl-e handles a variety of actions with smooth, coordinated movements.",
+              "Customise the frequency for data readings, ensuring your measurements align with your experiment’s needs.",
           },
           {
-            icon: "assets/zing/Featured icon (14).png",
-            heading: "Interactive Fun",
+            icon: "assets/partner/icon/plot.png",
+            heading: "Plot Data",
             description:
-              "Features a high-quality 3W speaker for audio feedback and options for plug-and-play sensors, AI cameras, and laser cannons.",
+              "Monitor real-time data with dynamic plotting, keeping you informed with every reading.",
           },
           {
-            icon: "assets/zing/Featured icon (15).png",
-            heading: "Tech-Packed Sensors",
+            icon: "assets/partner/icon/select.png",
+            heading: "Select Port",
             description:
-              "Includes an ultrasonic sensor for obstacle detection and a range of other sensors to enhance interaction.",
+              "Configure external accessories using available Digital and Analog ports, which differ based on the kit in use.",
           },
           {
-            icon: "assets/zing/Featured icon (16).png",
-            heading: "Versatile Connectivity",
+            icon: "assets/partner/icon/setgraph.png",
+            heading: "Set Graph Type",
             description:
-              "Supports WiFi, Bluetooth 5.0, and USB connections. Program and control Crawl-e using Plode for a comprehensive robotic experience.",
-          },
-          {
-            icon: "assets/zing/Featured icon (17).png",
-            heading: "DIY-Friendly Design",
-            description:
-              "Designed with replaceable parts and a 3D simulator coming soon, making it easy to customize and repair.",
+              " Visualise your data with Line or Bar Graphs to spot trends or analyse patterns effortlessly.",
           },
         ],
       },
-      software_experience: {
-        heading: "Dynamic Play Mode - Tailored to Your Kit",
-        subheading:
-          "With Plode, the Play mode adapts to the unique features of each kit, delivering an intuitive and interactive experience. No coding required—just one-tap actions designed for seamless control and fun exploration.",
-        centerImage: "assets/other/imagePlaceholder2.png",
-        features: [
-          {
-            icon: "userFriendly",
-            heading: "Joystick",
-            description:
-              "Customizable control interface, varying by kit capabilities, allowing you to unlock unique behaviours like gestures, musical tones, or movement patterns.",
-          },
-          {
-            icon: "virtual",
-            heading: "Speech",
-            description:
-              "Speak commands directly to your kit with a simple tap—empowering voice interaction for hands-free control.",
-          },
+      software_experience: [
+        {
+          heading: "Dynamic Play Mode - Tailored to Your Kit",
+          subheading:
+            "With Plode, the Play mode adapts to the unique features of each kit, delivering an intuitive and interactive experience. No coding required—just one-tap actions designed for seamless control and fun exploration.",
+          centerImage: "assets/other/imagePlaceholder2.png",
+          features: [
+            {
+              icon: "userFriendly",
+              heading: "Joystick",
+              description:
+                "Customizable control interface, varying by kit capabilities, allowing you to unlock unique behaviours like gestures, musical tones, or movement patterns.",
+            },
+            {
+              icon: "virtual",
+              heading: "Speech",
+              description:
+                "Speak commands directly to your kit with a simple tap—empowering voice interaction for hands-free control.",
+            },
 
-          {
-            icon: "data",
-            heading: "Music",
-            description:
-              "Play with sound by interacting with virtual instruments like a piano, triggering real-time responses from your device.",
-          },
-          {
-            icon: "instaLink",
-            heading: "Camera",
-            description:
-              "Use vision-based control to see your kit react to movements or gestures detected through the camera.",
-          },
-        ],
-      },
+            {
+              icon: "data",
+              heading: "Music",
+              description:
+                "Play with sound by interacting with virtual instruments like a piano, triggering real-time responses from your device.",
+            },
+            {
+              icon: "instaLink",
+              heading: "Camera",
+              description:
+                "Use vision-based control to see your kit react to movements or gestures detected through the camera.",
+            },
+          ],
+        },
+        {
+          heading: "App Mode - Smart Control with Minimal Coding",
+          subheading:
+            "Enable smart features through the app and design custom logic to control the kit with your phone.",
+          centerImage: "assets/other/imagePlaceholder2.png",
+          features: [
+            {
+              icon: "userFriendly",
+              heading: "Interact via Phone Sensors",
+              description:
+                "Use the phone's camera, mic, or Bluetooth remote to send inputs and trigger actions.",
+            },
+            {
+              icon: "virtual",
+              heading: "Define Logic with Simple IF-THEN Rules",
+              description:
+                "For example, if the camera detects an object (like a backpack), display a message or send a command to the kit.",
+            },
+
+            {
+              icon: "data",
+              heading: "Bluetooth Remote Control",
+              description:
+                "Configure the remote to send numbers or commands to the kit for dynamic, hands-on control.",
+            },
+            {
+              icon: "instaLink",
+              heading: "Adaptive Mode",
+              description:
+                "The phone seamlessly integrates with the hardware, ensuring all features are relevant to the connected kit.",
+            },
+          ],
+        },
+        {
+          heading:
+            "Block-Based Programming - Play with Logic, Master the Basics",
+          subheading:
+            "In block-based programming, users assemble pre-defined code blocks that connect like puzzle pieces. It’s a fun and intuitive way to learn the fundamentals of coding.",
+          centerImage: "assets/other/imagePlaceholder2.png",
+          features: [
+            {
+              icon: "userFriendly",
+              heading: "Error-Free Coding",
+              description:
+                "Blocks fit together only in ways that make sense, eliminating syntax errors.",
+            },
+            {
+              icon: "virtual",
+              heading: "Instant Feedback",
+              description:
+                "See the result of each change immediately, helping learners understand logic on the go.",
+            },
+
+            {
+              icon: "data",
+              heading: "Modular Design",
+              description:
+                "Combine blocks to build larger, more complex solutions over time.",
+            },
+          ],
+        },
+        {
+          heading: "Python Programming - Simple Syntax, Powerful Control",
+          subheading:
+            "Python programming provides an easy entry point into text-based coding. It’s focused on controlling hardware with accessible syntax and pre-configured libraries.",
+          centerImage: "assets/other/imagePlaceholder2.png",
+          features: [
+            {
+              icon: "userFriendly",
+              heading: "Clean, Simple Code",
+              description:
+                "Focus on what matters—controlling hardware with intuitive commands.",
+            },
+            {
+              icon: "virtual",
+              heading: "Built-In Libraries",
+              description:
+                "All essential libraries for device control come pre-loaded, ensuring a smooth experience.",
+            },
+
+            {
+              icon: "data",
+              heading: "Instant Execution",
+              description:
+                "See the impact of your code in real-time, perfect for prototyping and quick testing.",
+            },
+          ],
+        },
+        {
+          heading: "Project-Based Programming - Create Real-World Solutions",
+          subheading:
+            "Take your learning to the next level by building your own projects. With project-based programming, you can design, assemble, and control your hardware, experiencing how ideas take shape through hands-on experimentation.",
+          centerImage: "assets/other/imagePlaceholder2.png",
+          features: [
+            {
+              icon: "userFriendly",
+              heading: "Design Custom Projects",
+              description:
+                "Use the drag-and-drop interface to assign inputs and outputs.",
+            },
+            {
+              icon: "virtual",
+              heading: "Use Live Sensor Input",
+              description:
+                "Utilise the live input button for real-time sensor readings to fine-tune and verify your setup.",
+            },
+
+            {
+              icon: "data",
+              heading: "Conditional Logic Simplified",
+              description:
+                "Program actions based on sensor triggers, device inputs, or timed events without complex code.",
+            },
+            {
+              icon: "data",
+              heading: "Prototyping Made Simple",
+              description:
+                "Build, test, and iterate your ideas, seeing them come to life instantly.",
+            },
+          ],
+        },
+      ],
       cirriculum: {
         heading: "Feedback and Reflection",
         subheading: "Enhance learning with continuous feedback and reflection.",
@@ -1325,6 +1665,71 @@ export const mockData: { [key: string]: ProductData } = {
     components: {
       shared: ["Navbar", "Footer", "ProductCard"],
       unique: ["CrawlENavigation", "TerrainMapping"],
+    },
+    jumppingButton: [
+      {
+        text1: "Own One",
+        text2: "Now!",
+        bgColor: "#2CF7A4",
+        textColor: "#FAF9FE",
+        link: "#",
+      },
+      {
+        text1: "Button",
+        text2: "CTA",
+        bgColor: "#2CF7A4",
+        textColor: "#FAF9FE",
+        link: "#",
+      },
+      {
+        text1: "Download",
+        text2: "Plode App",
+        bgColor: "#2CF7A4",
+        textColor: "#FAF9FE",
+        link: "#",
+      },
+      {
+        text1: "Start",
+        text2: "Learning",
+        bgColor: "#2CF7A4",
+        textColor: "#FAF9FE",
+        link: "#",
+      },
+    ],
+    plugandplay: {
+      title: "Features",
+      heading: "Seamlessly Unlock Kit-Specific Experiences",
+      wordsToHighlight: {
+        text1: ["Seamlessly Unlock Kit-Specific Experiences"],
+      },
+      subheading:
+        "Plode is ready for anything, handling everything from your first coding steps to your wildest ideas.",
+      tableData: [
+        {
+          title: "A.I.",
+          desc: "Experience intelligent responses and behaviours specific to your selected kit.",
+        },
+        {
+          title: "Play Mode",
+          desc: "Instantly interact with your kit using intuitive one-tap buttons. Control movements, trigger actions, or explore pre-set behaviours—no coding required!",
+        },
+        {
+          title: "Code Mode",
+          desc: "Dive deeper with hands-on coding experiences. Different kits unlock various programming challenges, from beginner-friendly scripts to advanced logic.",
+        },
+        {
+          title: "App Mode",
+          desc: "Explore extended features and tools customised for each kit, ensuring seamless control, project management, and creative possibilities.",
+        },
+        {
+          title: "Data Mode",
+          desc: "Monitor real-time performance and insights, giving you a deeper understanding of your projects and progress.",
+        },
+        {
+          title: "Learn Mode",
+          desc: "Access videos, tutorials, and lessons tailored to your kit to level up your skills at every step.",
+        },
+      ],
     },
   },
 };

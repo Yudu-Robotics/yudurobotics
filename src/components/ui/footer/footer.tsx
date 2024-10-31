@@ -161,11 +161,12 @@ const Footer = () => {
                   {renderSvg(value.icon_image)}
                   <h1>{value.type}</h1>
                   <p className="font-thin">{value.text}</p>
-                  <p className="w-[70%] text-sm">{value.contact_by}</p>
+                  <p className="w-[70%] text-xl">{value.contact_by}</p>
                 </div>
               )
             )}
           </div>
+
           <ContactForm />
         </div>
       </div>
@@ -177,14 +178,14 @@ const Footer = () => {
             <div className="flex space-x-3 justify-start items-center">
               {renderSvg("logoYudoRobo")}
             </div>
-            <p className="font-thin w-[70%] text-sm">
+            <p className="font-thin w-[70%] text-xl">
               Empowering innovation and creativity through cutting-edge
               robotics.
             </p>
           </div>
 
           <div className="flex flex-col space-y-4">
-            <h1 className="text-sm">Get the Plode app</h1>
+            <h1 className="text-xl">Get the Plode app</h1>
             <a
               href="https://apps.apple.com/us/app/plode/id1580203387"
               target="_blank"
@@ -213,7 +214,7 @@ const Footer = () => {
         <BottomFooter />
 
         <div className="flex flex-col space-y-4 justify-between lg:flex-row lg:space-y-0 ">
-          <p className="text-xs lg:text-sm font-thin">
+          <p className="text-xs lg:text-xl font-thin">
             © 2024 Yudu Robotics. All rights reserved.
           </p>
           <div className="flex space-x-6">

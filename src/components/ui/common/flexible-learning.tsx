@@ -3,8 +3,11 @@ import React from "react";
 import { NewFeaturesCard } from "../NewFeaturesCard";
 import JumpingButtons from "./jumping-buttons";
 import renderImg from "@/imgImport";
-
-function FlexibleLearning() {
+interface propsValue {
+  title?: string;
+  desc?: string;
+}
+function FlexibleLearning({ title, desc }: propsValue) {
   return (
     <div>
       <div className="w-full -rotate-180">
@@ -23,23 +26,21 @@ function FlexibleLearning() {
             <div className="space-y-4">
               {/* Main Headline */}
               <div className="font-piepie text-2xl md:text-4xl lg:text-6xl text-primary-foreground">
-                Flexible Learning Paths
+                {title || "Flexible Learning Paths"}
               </div>
 
               {/* Subtext */}
-              <div className="text-primary-foreground text-xs md:text-sm lg:text-lg font-body lg:w-[80%]">
-                PeeCee TED’s curriculum offers flexibility, allowing kits to be
-                used independently or combined. The Adaptive LMS supports a
-                self-paced learning approach, suitable for both individual study
-                and flipped classrooms.
+              <div className="text-primary-foreground text-xs md:text-sm lg:text-lg font-body lg:w-[80%] text-[#E2D8FE]">
+                {desc ||
+                  "PeeCee TED’s curriculum offers flexibility, allowing kits to be used independently or combined. The Adaptive LMS supports a self-paced learning approach, suitable for both individual study and flipped classrooms."}
               </div>
             </div>
-            <div className="pt-8 md:pt-0">
+            {/* <div className="pt-8 md:pt-0">
               <JumpingButtons ishorizontal="true" />
-            </div>
+            </div> */}
           </div>
           <div className="w-full">
-            <img src={renderImg("girls")} className="w-full" />
+            <img src={renderImg("girls")} className="w-full h-[60vh]" />
           </div>
         </div>
       </div>

@@ -63,15 +63,7 @@ export default async function ProductPage({ params }: any) {
     // Redirect or render 404 page when the product doesn't exist
     notFound();
   }
-  const route = [
-    "home",
-    "peecee",
-    "roboki",
-    "zing",
-    "crawl_e",
-    "klaw_b",
-    "plode",
-  ];
+  const route = ["peecee", "roboki", "zing", "crawl_e", "klaw_b", "plode"];
 
   const index = route.indexOf(params.product);
 
@@ -146,12 +138,20 @@ export default async function ProductPage({ params }: any) {
     bgColor = newBgColor;
     textColor = newTextColor;
   }
-  if (params.product === "klaw_b") {
-    return (
-      <>
-        <KlawB />
-      </>
-    );
+  if (index >= 0) {
+    if (index == 0) {
+      return <Peecee />;
+    } else if (index == 1) {
+      return <Roboki />;
+    } else if (index == 2) {
+      return <Zing />;
+    } else if (index == 3) {
+      return <CrawlE />;
+    } else if (index == 4) {
+      return <KlawB />;
+    } else if (index == 5) {
+      return <Plode />;
+    }
   }
   return (
     <>
@@ -273,7 +273,7 @@ export default async function ProductPage({ params }: any) {
             <div>
               <ExtraFeatures
                 // @ts-ignore
-                data={data.features_data?.software_experience}
+                data={data.features_data?.software_experience[0]}
                 title=""
               />
             </div>
@@ -318,7 +318,7 @@ export default async function ProductPage({ params }: any) {
             <div>
               <ExtraFeatures
                 // @ts-ignore
-                data={data.features_data?.software_experience}
+                data={data.features_data?.software_experience[0]}
                 title="software"
               />
             </div>
@@ -339,7 +339,7 @@ export default async function ProductPage({ params }: any) {
             <div>
               <ExtraFeatures
                 // @ts-ignore
-                data={data.features_data?.software_experience}
+                data={data.features_data?.software_experience[0]}
                 title="software"
               />
             </div>
@@ -355,7 +355,7 @@ export default async function ProductPage({ params }: any) {
             <div>
               <ExtraFeatures
                 // @ts-ignore
-                data={data.features_data?.software_experience}
+                data={data.features_data?.software_experience[0]}
                 title="software"
               />
             </div>
@@ -396,7 +396,7 @@ export default async function ProductPage({ params }: any) {
               <div>
                 <ExtraFeatures
                   // @ts-ignore
-                  data={data.features_data?.software_experience}
+                  data={data.features_data?.software_experience[0]}
                   title="software"
                 />
               </div>
@@ -485,7 +485,7 @@ export default async function ProductPage({ params }: any) {
             </div>
             <div>
               <ExtraFeatures
-                data={data.features_data?.software_experience}
+                data={data.features_data?.software_experience[0]}
                 title="software"
               />
             </div>
