@@ -76,12 +76,12 @@ export default function ProductLayout({
           <div className="px-8 lg:px-28 py-4 bg-primary">
             {/* TopBar/NavBar */}
             <div className="flex justify-between items-center ">
-              <a
+              <Link
                 href="/home"
                 className="flex space-x-3 justify-start items-center w-[50%]"
               >
                 {renderSvg("logoYudoRobo")}
-              </a>
+              </Link>
 
               {/* Hamburger Menu for Mobile */}
               <div className="lg:hidden">
