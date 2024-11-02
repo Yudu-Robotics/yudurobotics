@@ -36,7 +36,7 @@ function CeoReviewsContainer() {
           <img src={renderImg("star1")} className=" w-10 " />
         </div>
       </div>
-      <div className="absolute -left-28 ">
+      <div className="hidden 2xl:block absolute -left-28">
         <img src={renderImg("curv")} className="" />
       </div>
     </div>

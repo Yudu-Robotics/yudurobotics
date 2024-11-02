@@ -121,11 +121,10 @@ export default function ProductCategories() {
             {product_categories.map((category: string, key: number) => (
               <div
                 key={key}
-                className={`flex justify-start w-full p-2  items-center font-bold text-xl lg:text-sm cursor-pointer ${
-                  selectedCategory === category
-                    ? "text-primary bg-purple-100 rounded-full "
-                    : ""
-                }`}
+                className={`flex justify-start w-full p-2  items-center font-bold text-xl lg:text-sm cursor-pointer ${selectedCategory === category
+                  ? "text-primary bg-purple-100 rounded-full "
+                  : ""
+                  }`}
                 onClick={() => handleCategorySelection(category)}
               >
                 {category}
@@ -150,7 +149,7 @@ export default function ProductCategories() {
                   />
                 )}
               </div>
-              <div className="flex justify-center my-8">
+              <div className="hidden sm:flex justify-center my-8">
                 <Link href="/products">
                   <button className="px-4 py-2 bg-primary font-bold text-white rounded-lg border-2 hover:border-destructive transition-all duration-200">
                     All Products
@@ -158,7 +157,7 @@ export default function ProductCategories() {
                 </Link>
               </div>
             </div>
-            <div className="h-full flex flex-col space-y-3 bg-card-foreground rounded-xlg lg:w-[90%] p-8">
+            <div className="hidden h-full sm:flex flex-col space-y-3 bg-card-foreground rounded-xlg lg:w-[90%] p-8">
               <div>
                 <img src={productDetails.image} className="w-[100%]" />
               </div>

@@ -6,8 +6,11 @@ export default function ProductCatalog() {
   return (
     <>
       <div className="relative ">
-        <div className="w-full flex justify-end items-start absolute -top-28 right-24">
-          <img src={renderImg("zigzaginhome")} />
+        <div className="w-full  justify-end items-start absolute -top-14 lg:-top-28 lg:right-24 hidden right-0">
+          <img
+            src={renderImg("zigzaginhome")}
+            className="w-[100px] lg:w-[200px]"
+          />
         </div>
         <div className="flex flex-col space-y-4 pt-14">
           <h2 className="text-primary font-semibold text-xl lg:text-base text-center lg:text-start ">

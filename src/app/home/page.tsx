@@ -27,7 +27,7 @@ export default async function HomePage() {
   const data = mockData.home;
   return (
     <>
-      <div className="px-8 lg:px-28 py-4 bg-primary ">
+      <div className="px-4 sm:px-16 md:px-20 lg:px-24 xl:px-28 py-4 bg-primary ">
         <div className="flex flex-col space-y-16 lg:flex-row lg:space-y-0 justify-between py-10">
           <div className="w-full">
             <a href="#product-features-component" className="mb-6">
@@ -82,7 +82,7 @@ export default async function HomePage() {
         <div className="py-5 lg:py-10">
           <GlobalAwards />
         </div>
-        <div id="product-features-component" className="py-5 lg:py-10">
+        <div id="product-features-component" className="-mx-5 lg:mx-0 py-5 lg:py-10">
           <ProductFeatures />
         </div>
         <div>
@@ -94,7 +94,7 @@ export default async function HomePage() {
         <div className="-mx-8 lg:-mx-28">
           <TestimonialBanner />
         </div>
-        <div>
+        <div className="-mx-8 sm:mx-0">
           <SubscribeSection />
         </div>
 
@@ -105,7 +105,7 @@ export default async function HomePage() {
           <LatestPosts />
         </div> */}
 
-        <div className="py-5 lg:py-20 ">
+        <div className="py-5 lg:py-20 -mx-8 sm:mx-0">
           <FAQs />
         </div>
 
