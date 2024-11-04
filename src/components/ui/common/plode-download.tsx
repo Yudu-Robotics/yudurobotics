@@ -6,6 +6,7 @@ interface JumppingData {
   text2?: string;
   bgColor?: string;
   textColor?: string;
+  link?: string;
 }
 
 interface PlodeDownloadeProps {
@@ -45,6 +46,7 @@ const PlodeDownloade: React.FC<PlodeDownloadeProps> = ({
             text2={jumppingdata?.text2 || ""}
             bgColor={jumppingdata?.bgColor || ""}
             textColor={jumppingdata?.textColor || ""}
+            link={jumppingdata?.link || ""}
           />
         }
       </div>

@@ -107,7 +107,7 @@ type ProductData = {
     text2: string;
     bgColor: string;
     textColor: string;
-    link: "#";
+    link: string;
   }[];
   plugandplay?: {
     title: string;
@@ -145,7 +145,7 @@ export const products = [
   {
     name: "Ted",
     description:
-      "Auto Layout is a constraint-based layout system to create an adaptive UI.",
+      "TED is your all-in-one buddy, packed and ready to jump into action whenever you are.",
     image: "assets/products/ted.svg",
     category: "Micro-controller",
     type: "Hardware",
@@ -160,12 +160,12 @@ export const products = [
     category: "Micro-controller",
     type: "Hardware",
     ageGroup: "Age 12+",
-    link: "#",
+    link: "",
   },
   {
     name: "Roboki",
     description:
-      "Auto Layout is a constraint-based layout system to create an adaptive UI.",
+      "A durable and upgradable kit packed with everything you need to build, learn and explore robotics.",
     image: "assets/products/roboki.svg",
     category: "Micro-controller",
     type: "Hardware",
@@ -180,17 +180,17 @@ export const products = [
     category: "Micro-controller",
     type: "Hardware",
     ageGroup: "Age 12+",
-    link: "#",
+    link: "",
   },
   {
     name: "Plode",
     description:
-      "Auto Layout is a constraint-based layout system to create an adaptive UI.",
+      "The one-stop-shop to interact with your devices and learn more about robotics and logic.",
     image: "assets/products/plode.svg",
     category: "",
     type: "Software",
     ageGroup: "Age 12+",
-    link: "#",
+    link: "/plode",
   },
   {
     name: "Play Trons",
@@ -200,7 +200,7 @@ export const products = [
     category: "Toys",
     type: "Hardware",
     ageGroup: "Age 9-12",
-    link: "#",
+    link: "",
   },
   {
     name: "Zing",
@@ -220,7 +220,7 @@ export const products = [
     category: "",
     type: "Curriculum",
     ageGroup: "Age 12+",
-    link: "#",
+    link: "",
   },
   {
     name: "Firepen 3D",
@@ -230,7 +230,7 @@ export const products = [
     category: "",
     type: "Hardware",
     ageGroup: "Age 12+",
-    link: "#",
+    link: "",
   },
   {
     name: "Play Dynamex",
@@ -240,12 +240,12 @@ export const products = [
     category: "Toys",
     type: "Hardware",
     ageGroup: "Age 5-8",
-    link: "#",
+    link: "",
   },
   {
     name: "Crawl-e",
     description:
-      "Auto Layout is a constraint-based layout system to create an adaptive UI.",
+      "A 6-legged marvel with 18 motors which brings the thrill of robotic exploration to life.",
     image: "assets/zing/cral-e.svg",
     category: "Animatronics",
     type: "Hardware",
@@ -255,7 +255,7 @@ export const products = [
   {
     name: "Klaw-b",
     description:
-      "Auto Layout is a constraint-based layout system to create an adaptive UI.",
+      "A versatile robotic arm with a built-in gripper, perfect for hands-on learning and creative projects.",
     image: "assets/zing/klaw-b.svg",
     category: "Animatronics",
     type: "Hardware",
@@ -390,6 +390,15 @@ export const mockData: { [key: string]: ProductData } = {
       shared: ["Navbar", "Footer", "ContactForm"],
       unique: ["HomeBanner", "ProductOverview"],
     },
+    jumppingButton: [
+      {
+        text1: "Lemme",
+        text2: "Explore",
+        bgColor: "#FF0000",
+        textColor: "#FAF9FE",
+        link: "#footer-contact-form-component",
+      }
+    ]
   },
   peecee: {
     heading: "PeeCee: Your Cute Codable Computer",
@@ -631,21 +640,21 @@ export const mockData: { [key: string]: ProductData } = {
         text2: "Now!",
         bgColor: "#602CF7",
         textColor: "#FAF9FE",
-        link: "#",
+        link: "#footer-contact-form-component",
       },
       {
         text1: "Learn",
         text2: "More",
         bgColor: "#602CF7",
         textColor: "#FAF9FE",
-        link: "#",
+        link: "/plode",
       },
       {
         text1: "Download",
         text2: "Plode App",
         bgColor: "#602CF7",
         textColor: "#FAF9FE",
-        link: "#",
+        link: "https://play.google.com/store/apps/details?id=com.bibox.bisoftsuite&hl=en_IN&pli=1",
       },
       {
         text1: "Start",
@@ -829,21 +838,21 @@ export const mockData: { [key: string]: ProductData } = {
         text2: "Now!",
         bgColor: "#602CF7",
         textColor: "#FAF9FE",
-        link: "#",
+        link: "#footer-contact-form-component",
       },
       {
-        text1: "Button",
-        text2: "CTA",
+        text1: "Learn",
+        text2: "More",
         bgColor: "#602CF7",
         textColor: "#FAF9FE",
-        link: "#",
+        link: "/plode",
       },
       {
         text1: "Download",
         text2: "Plode App",
         bgColor: "#602CF7",
         textColor: "#FAF9FE",
-        link: "#",
+        link: "https://play.google.com/store/apps/details?id=com.bibox.bisoftsuite&hl=en_IN&pli=1",
       },
       {
         text1: "Start",
@@ -861,7 +870,7 @@ export const mockData: { [key: string]: ProductData } = {
       text2: ["Zing"],
     },
     subheading:
-      "A 30 cm marvel with 17 degrees of freedom, crafted for endless exploration and creativity.",
+      "A 38 cm marvel with 17 degrees of freedom, crafted for endless exploration and creativity.",
     images: ["assets/zing/zing.png", "assets/zing/zinghardware1.png"],
     sectionHeader: "sideHeaderSection",
     ceoComment:
@@ -1003,28 +1012,28 @@ export const mockData: { [key: string]: ProductData } = {
         text2: "Now!",
         bgColor: "#F72D3E",
         textColor: "#FAF9FE",
-        link: "#",
+        link: "#footer-contact-form-component",
       },
       {
-        text1: "Button",
-        text2: "CTA",
+        text1: "Learn",
+        text2: "More",
         bgColor: "#F72D3E",
         textColor: "#FAF9FE",
-        link: "#",
+        link: "/plode",
       },
       {
         text1: "Download",
         text2: "Plode App",
         bgColor: "#F72D3E",
         textColor: "#FAF9FE",
-        link: "#",
+        link: "https://play.google.com/store/apps/details?id=com.bibox.bisoftsuite&hl=en_IN&pli=1",
       },
       {
         text1: "Start",
         text2: "Learning",
         bgColor: "#F72D3E",
         textColor: "#FAF9FE",
-        link: "#",
+        link: "",
       },
     ],
   },
@@ -1177,21 +1186,21 @@ export const mockData: { [key: string]: ProductData } = {
         text2: "Now!",
         bgColor: "#F72D3E",
         textColor: "#FAF9FE",
-        link: "#",
+        link: "#footer-contact-form-component",
       },
       {
-        text1: "Button",
-        text2: "CTA",
+        text1: "Learn",
+        text2: "More",
         bgColor: "#F72D3E",
         textColor: "#FAF9FE",
-        link: "#",
+        link: "/plode",
       },
       {
         text1: "Download",
         text2: "Plode App",
         bgColor: "#F72D3E",
         textColor: "#FAF9FE",
-        link: "#",
+        link: "https://play.google.com/store/apps/details?id=com.bibox.bisoftsuite&hl=en_IN&pli=1",
       },
       {
         text1: "Start",
@@ -1382,21 +1391,21 @@ export const mockData: { [key: string]: ProductData } = {
         text2: "Now!",
         bgColor: "#F7812D",
         textColor: "#FAF9FE",
-        link: "#",
+        link: "#footer-contact-form-component",
       },
       {
-        text1: "Button",
-        text2: "CTA",
+        text1: "Learn",
+        text2: "More",
         bgColor: "#F7812D",
         textColor: "#FAF9FE",
-        link: "#",
+        link: "/plode",
       },
       {
         text1: "Download",
         text2: "Plode App",
         bgColor: "#F7812D",
         textColor: "#FAF9FE",
-        link: "#",
+        link: "https://play.google.com/store/apps/details?id=com.bibox.bisoftsuite&hl=en_IN&pli=1",
       },
       {
         text1: "Start",
@@ -1415,7 +1424,7 @@ export const mockData: { [key: string]: ProductData } = {
       text2: ["Zing"],
     },
     subheading:
-      "This 6-legged marvel with 18 motors brings the thrill of robotic exploration to life with nimble moves and high-tech features.",
+      "The one-stop-shop to interact with your devices and learn more about coding and robotics. Play with your device or write a creative code of your own.",
     images: ["assets/plode/plodeHomeImg.png", "assets/crawle/crawlehard1.png"],
     sectionHeader: "headerSection",
     ceoComment:
@@ -1675,8 +1684,8 @@ export const mockData: { [key: string]: ProductData } = {
         link: "#",
       },
       {
-        text1: "Button",
-        text2: "CTA",
+        text1: "Learn",
+        text2: "More",
         bgColor: "#2CF7A4",
         textColor: "#FAF9FE",
         link: "#",
@@ -1686,7 +1695,7 @@ export const mockData: { [key: string]: ProductData } = {
         text2: "Plode App",
         bgColor: "#2CF7A4",
         textColor: "#FAF9FE",
-        link: "#",
+        link: "https://play.google.com/store/apps/details?id=com.bibox.bisoftsuite&hl=en_IN&pli=1",
       },
       {
         text1: "Start",
@@ -1732,6 +1741,295 @@ export const mockData: { [key: string]: ProductData } = {
       ],
     },
   },
+  partner: {
+    heading: "Plode: The Playful Coding Platform",
+    wordsToHighlight: {
+      text1: ["Plode:"],
+      text2: ["Zing"],
+    },
+    subheading:
+      "The one-stop-shop to interact with your devices and learn more about coding and robotics. Play with your device or write a creative code of your own.",
+    images: ["assets/plode/plodeHomeImg.png", "assets/crawle/crawlehard1.png"],
+    sectionHeader: "headerSection",
+    ceoComment:
+      "Plode simplifies coding with its user-friendly interface, making it perfect for beginners and experienced coders alike.",
+    features_data: {
+      section1: {
+        heading: "Data Mode - Explore, Measure, and Visualise",
+        subheading:
+          "Plode’s Data Mode provides a powerful way to monitor, measure, and visualise data from both internal sensors and external accessories. Tailored to your kit’s capabilities, it offers a seamless step-by-step setup for precise data capture and analysis.",
+        centerImage: "assets/crawle/crawlehardware1.png",
+        features: [
+          {
+            icon: "assets/partner/icon/selector.png",
+            heading: "Select Sensor",
+            description:
+              "Choose from built-in sensors such as Microphone, Temperature, Battery, and various Touch or Gesture Sensors.",
+          },
+          {
+            icon: "assets/partner/icon/settime.png",
+            heading: "Set Time Interval",
+            description:
+              "Customise the frequency for data readings, ensuring your measurements align with your experiment’s needs.",
+          },
+          {
+            icon: "assets/partner/icon/plot.png",
+            heading: "Plot Data",
+            description:
+              "Monitor real-time data with dynamic plotting, keeping you informed with every reading.",
+          },
+          {
+            icon: "assets/partner/icon/select.png",
+            heading: "Select Port",
+            description:
+              "Configure external accessories using available Digital and Analog ports, which differ based on the kit in use.",
+          },
+          {
+            icon: "assets/partner/icon/setgraph.png",
+            heading: "Set Graph Type",
+            description:
+              " Visualise your data with Line or Bar Graphs to spot trends or analyse patterns effortlessly.",
+          },
+        ],
+      },
+      software_experience: [
+        {
+          heading: "Dynamic Play Mode - Tailored to Your Kit",
+          subheading:
+            "With Plode, the Play mode adapts to the unique features of each kit, delivering an intuitive and interactive experience. No coding required—just one-tap actions designed for seamless control and fun exploration.",
+          centerImage: "assets/other/imagePlaceholder2.png",
+          features: [
+            {
+              icon: "userFriendly",
+              heading: "Joystick",
+              description:
+                "Customizable control interface, varying by kit capabilities, allowing you to unlock unique behaviours like gestures, musical tones, or movement patterns.",
+            },
+            {
+              icon: "virtual",
+              heading: "Speech",
+              description:
+                "Speak commands directly to your kit with a simple tap—empowering voice interaction for hands-free control.",
+            },
+
+            {
+              icon: "data",
+              heading: "Music",
+              description:
+                "Play with sound by interacting with virtual instruments like a piano, triggering real-time responses from your device.",
+            },
+            {
+              icon: "instaLink",
+              heading: "Camera",
+              description:
+                "Use vision-based control to see your kit react to movements or gestures detected through the camera.",
+            },
+          ],
+        },
+        {
+          heading: "App Mode - Smart Control with Minimal Coding",
+          subheading:
+            "Enable smart features through the app and design custom logic to control the kit with your phone.",
+          centerImage: "assets/other/imagePlaceholder2.png",
+          features: [
+            {
+              icon: "userFriendly",
+              heading: "Interact via Phone Sensors",
+              description:
+                "Use the phone's camera, mic, or Bluetooth remote to send inputs and trigger actions.",
+            },
+            {
+              icon: "virtual",
+              heading: "Define Logic with Simple IF-THEN Rules",
+              description:
+                "For example, if the camera detects an object (like a backpack), display a message or send a command to the kit.",
+            },
+
+            {
+              icon: "data",
+              heading: "Bluetooth Remote Control",
+              description:
+                "Configure the remote to send numbers or commands to the kit for dynamic, hands-on control.",
+            },
+            {
+              icon: "instaLink",
+              heading: "Adaptive Mode",
+              description:
+                "The phone seamlessly integrates with the hardware, ensuring all features are relevant to the connected kit.",
+            },
+          ],
+        },
+        {
+          heading:
+            "Block-Based Programming - Play with Logic, Master the Basics",
+          subheading:
+            "In block-based programming, users assemble pre-defined code blocks that connect like puzzle pieces. It’s a fun and intuitive way to learn the fundamentals of coding.",
+          centerImage: "assets/other/imagePlaceholder2.png",
+          features: [
+            {
+              icon: "userFriendly",
+              heading: "Error-Free Coding",
+              description:
+                "Blocks fit together only in ways that make sense, eliminating syntax errors.",
+            },
+            {
+              icon: "virtual",
+              heading: "Instant Feedback",
+              description:
+                "See the result of each change immediately, helping learners understand logic on the go.",
+            },
+
+            {
+              icon: "data",
+              heading: "Modular Design",
+              description:
+                "Combine blocks to build larger, more complex solutions over time.",
+            },
+          ],
+        },
+        {
+          heading: "Python Programming - Simple Syntax, Powerful Control",
+          subheading:
+            "Python programming provides an easy entry point into text-based coding. It’s focused on controlling hardware with accessible syntax and pre-configured libraries.",
+          centerImage: "assets/other/imagePlaceholder2.png",
+          features: [
+            {
+              icon: "userFriendly",
+              heading: "Clean, Simple Code",
+              description:
+                "Focus on what matters—controlling hardware with intuitive commands.",
+            },
+            {
+              icon: "virtual",
+              heading: "Built-In Libraries",
+              description:
+                "All essential libraries for device control come pre-loaded, ensuring a smooth experience.",
+            },
+
+            {
+              icon: "data",
+              heading: "Instant Execution",
+              description:
+                "See the impact of your code in real-time, perfect for prototyping and quick testing.",
+            },
+          ],
+        },
+        {
+          heading: "Project-Based Programming - Create Real-World Solutions",
+          subheading:
+            "Take your learning to the next level by building your own projects. With project-based programming, you can design, assemble, and control your hardware, experiencing how ideas take shape through hands-on experimentation.",
+          centerImage: "assets/other/imagePlaceholder2.png",
+          features: [
+            {
+              icon: "userFriendly",
+              heading: "Design Custom Projects",
+              description:
+                "Use the drag-and-drop interface to assign inputs and outputs.",
+            },
+            {
+              icon: "virtual",
+              heading: "Use Live Sensor Input",
+              description:
+                "Utilise the live input button for real-time sensor readings to fine-tune and verify your setup.",
+            },
+
+            {
+              icon: "data",
+              heading: "Conditional Logic Simplified",
+              description:
+                "Program actions based on sensor triggers, device inputs, or timed events without complex code.",
+            },
+            {
+              icon: "data",
+              heading: "Prototyping Made Simple",
+              description:
+                "Build, test, and iterate your ideas, seeing them come to life instantly.",
+            },
+          ],
+        },
+      ],
+      cirriculum: {
+        heading: "Feedback and Reflection",
+        subheading: "Enhance learning with continuous feedback and reflection.",
+        centerImage: "assets/other/circulamImage.png",
+        features: [
+          {
+            icon: "checkpoint",
+            heading: "Assessment Checkpoints",
+            description: "Track progress and reinforce understanding.",
+          },
+          {
+            icon: "reflective",
+            heading: "Reflective Journaling",
+            description:
+              "Use activity and design sheets to reflect on learning and growth.",
+          },
+          {
+            icon: "feedback",
+            heading: "Collaborative Feedback",
+            description: "Peer and teacher insights enrich learning.",
+          },
+          {
+            icon: "fun",
+            heading: "FUN and Purposeful Learning",
+            description:
+              "Emphasizes the 'Make and Play' approach, blending creativity with fun. The Adaptive LMS simplifies resource management and tracking, ensuring a dynamic and enjoyable experience.",
+          },
+        ],
+      },
+    },
+    working: {
+      heading: "",
+      subheading:
+        "",
+      section1: {
+        image: "",
+        heading: "",
+        description:
+          "",
+      },
+      section2: {
+        image: "",
+        heading: "",
+        description:
+          "",
+      },
+    },
+    components: {
+      shared: ["Navbar", "Footer", "ProductCard"],
+      unique: ["CrawlENavigation", "TerrainMapping"],
+    },
+    jumppingButton: [
+      {
+        text1: "Lemme",
+        text2: "Explore",
+        bgColor: "#2CF7A4",
+        textColor: "#FAF9FE",
+        link: "#footer-contact-form-container",
+      },
+      {
+        text1: "Learn",
+        text2: "More",
+        bgColor: "#2CF7A4",
+        textColor: "#FAF9FE",
+        link: "#",
+      },
+      {
+        text1: "Download",
+        text2: "Plode App",
+        bgColor: "#2CF7A4",
+        textColor: "#FAF9FE",
+        link: "https://play.google.com/store/apps/details?id=com.bibox.bisoftsuite&hl=en_IN&pli=1",
+      },
+      {
+        text1: "Start",
+        text2: "Learning",
+        bgColor: "#2CF7A4",
+        textColor: "#FAF9FE",
+        link: "#",
+      },
+    ],    
+  }
 };
 
 export const blogData: BlogData = [

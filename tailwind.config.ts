@@ -11,7 +11,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         heading: "Poppins",
-        body: ["Roboto", "sans-serif"],
+        body: ["TTHovesRegular", "sans-serif"],
         piepie: ["PiePie", "sans-serif"],
       },
       colors: {

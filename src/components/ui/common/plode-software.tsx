@@ -8,6 +8,7 @@ interface JumppingData {
   text2?: string;
   bgColor?: string;
   textColor?: string;
+  link?: string;
 }
 
 interface PlodeSoftwareProps {
@@ -52,6 +53,7 @@ const PlodeSoftware: React.FC<PlodeSoftwareProps> = ({ jumppingdata }) => {
             text2={jumppingdata?.text2 || ""}
             bgColor={jumppingdata?.bgColor || ""}
             textColor={jumppingdata?.textColor || ""}
+            link={jumppingdata?.link || ""}
           />
         </div>
       </div>

@@ -61,7 +61,7 @@ export default async function HomePage() {
             text2="Join Forces"
             bgColor="#2CF7A4"
             textColor="#0A4029"
-            link="/products"
+            link="/partner"
           />
         </div>
         <div className="py-10">

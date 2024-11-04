@@ -19,7 +19,7 @@ function ProductFeatures() {
               Lively Humanoid Robot
             </h1>
             <p className="py-2 lg:py-6 text-lg font-body font-thin opacity-80">
-              A 30 cm marvel with 17 degrees of freedom, crafted for endless
+              A 38 cm marvel with 17 degrees of freedom, crafted for endless
               exploration and creativity.
             </p>
             <ul className="space-y-4 opacity-50">

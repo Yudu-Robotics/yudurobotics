@@ -51,7 +51,7 @@ export default function CrawlE() {
               text2={data?.jumppingButton?.[0]?.text2 || ""}
               bgColor={data?.jumppingButton?.[0]?.bgColor || ""}
               textColor={data?.jumppingButton?.[0]?.textColor || ""}
-              link=""
+              link={data?.jumppingButton?.[0]?.link || ""}
             />
           }
         </div>

@@ -182,3 +182,31 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "TTHovesBold";
+  src: url("../../fonts/TT\ Hoves\ Bold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TTHovesDemiBold";
+  src: url("../../fonts/TT\ Hoves\ DemiBold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TTHovesMedium";
+  src: url("../../fonts/TT\ Hoves\ Medium.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TTHovesRegular";
+  src: url("../../fonts/TT\ Hoves\ Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}

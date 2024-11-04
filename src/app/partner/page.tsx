@@ -62,6 +62,7 @@ export default async function HomePage() {
 
       <div className="py-16 lg:py-20 px-8 lg:px-16">
         <PlodeDownloade
+          jumppingdata={data?.jumppingButton?.[0] || {}}
           heading="Say No More! This is exactly what I’ve been Looking For!"
           desc=""
         />

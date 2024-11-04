@@ -14,7 +14,7 @@ const JumpingButtons: React.FC<JumpingButtonsProps> = ({
   text2,
   bgColor,
   textColor,
-  link = "/product",
+  link = "#",
 }) => {
   return (
     <div
