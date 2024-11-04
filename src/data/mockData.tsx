@@ -1677,11 +1677,11 @@ export const mockData: { [key: string]: ProductData } = {
     },
     jumppingButton: [
       {
-        text1: "Own One",
+        text1: "Own",
         text2: "Now!",
         bgColor: "#2CF7A4",
         textColor: "#FAF9FE",
-        link: "#",
+        link: "https://play.google.com/store/apps/details?id=com.bibox.bisoftsuite&hl=en_IN&pli=1",
       },
       {
         text1: "Learn",

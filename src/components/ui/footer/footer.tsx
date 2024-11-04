@@ -116,7 +116,7 @@ const Footer = () => {
               text2={text2}
               bgColor={bgColor}
               textColor={textColor}
-              link=""
+              link="/partner"
             />
           )}
         </div>
