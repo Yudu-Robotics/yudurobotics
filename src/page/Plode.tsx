@@ -2,21 +2,22 @@
 import { highlightWords } from "@/app/utility/highlightWords";
 import SoftwareAdaptive from "@/components/ui/common/adaptive-software";
 import CeoComments from "@/components/ui/common/ceo-comments";
+import PlodeDifference from "@/components/ui/plode/plodeDifference";
 import ProductCeoReviewsContainer from "@/components/ui/common/ceo-product-review";
 import ExtraFeatures from "@/components/ui/common/extra-features";
 import FlexibleLearning from "@/components/ui/common/flexible-learning";
 import GetInTouch from "@/components/ui/common/get-in-touch";
 import HardwareProductFeatures from "@/components/ui/common/hardware-product-feature";
 import JumpingButtons from "@/components/ui/common/jumping-buttons";
-import PlodeDownloade from "@/components/ui/common/plode-download";
-import PlodeSoftware from "@/components/ui/common/plode-software";
 import TestimonialBanner from "@/components/ui/common/testimonial-banner";
 import VersatileSoftware from "@/components/ui/common/versatile-software";
 import FAQs from "@/components/ui/home/faqs";
 import SixBlock from "@/components/ui/SixBlock";
 import { mockData } from "@/data/mockData";
+import renderImg from "@/imgImport";
 import renderSvg from "@/svgImport";
 import React from "react";
+import Getstart from "@/components/ui/plode/getStart";
 
 export default function Plode() {
   const data = mockData.plode;
@@ -44,9 +45,9 @@ export default function Plode() {
   };
   return (
     <>
-      <div className="px-8 lg:px-28 py-4 bg-primary">
+      <div className="px-8 lg:px-28 py-4 bg-primary overflow-x-hidden">
         <div className="flex flex-col space-y-16 lg:flex-row lg:space-y-0 justify-between py-10 ">
-          <div className=" flex justify-between">
+          <div className="flex justify-between">
             {/* Main Text */}
 
             <div className="space-y-4 flex flex-col items-start ">
@@ -63,7 +64,7 @@ export default function Plode() {
               <div className="text-xl w-[100%] lg:w-[60%] text-[#E2D8FE]">
                 {data.subheading}
               </div>
-              <div className="pt-20">
+              <div className="sm:pt-20 ">
                 {
                   <JumpingButtons
                     ishorizontal="true"
@@ -77,8 +78,8 @@ export default function Plode() {
               </div>
             </div>
 
-            <div className="w-1/2">
-              <img src={data.images[0]} className="w-full " />
+            <div className="sm:w-1/2  ">
+              <img src={data.images[0]} className="w-full  p-5 sm:p-0" />
             </div>
           </div>
         </div>
@@ -87,23 +88,25 @@ export default function Plode() {
         {/* <img src={renderImg("headerSection")} className="w-full" /> */}
         {renderSvg(data.sectionHeader)}
       </div>
-      <div className="px-12 lg:px-28">
-        <div className="py-8 lg:py-16">
+      <div className="px-4 sm:px-12 lg:px-28">
+        <div className="py-8 lg:py-16 -mx-10">
           <ProductCeoReviewsContainer comment={data.ceoComment} />
         </div>
         <div className="text-sm py-8  text-center font-bold flex flex-col space-y-6 justify-center items-center">
           <p className="text-[#4A4A4F]">
-            Hover over each feature below to{" "}
+            <span className="text-black ">
+              Hover over each feature below to{" "}
+            </span>
             <span className="text-primary italic">see it in action!</span>
           </p>
           {renderSvg("doubleArrow")}
         </div>
-        <div className=" text-black py-5 lg:py-10 ">
-          <SoftwareAdaptive />
+        <div className=" text-black py-5 lg:py-10 flex justify-center items-center">
+          <SoftwareAdaptive data={data.adaptive} />
         </div>
       </div>
       <div className="flex flex-col justify-center items-center">
-        <div className="px-12 lg:px-28 text-black py-5 lg:py-10">
+        <div className="px-4 sm:px-12 lg:px-28 text-black py-5 lg:py-10 overflow-x-hidden">
           <SixBlock data={data?.plugandplay || defaultPlugAndPlayData} />
         </div>
 
@@ -117,8 +120,11 @@ export default function Plode() {
           </div>
         </div>
       </div>
-      <div className="px-12 lg:px-28 text-black py-5 lg:py-10 flex justify-center">
-        <p className="w-1/2 text-[#4A4A4F] text-xl font-semibold italic">
+      <div className="flex justify-center">
+        <img src={renderImg("uparrow")} className="" />
+      </div>
+      <div className="sm:px-12 px-4 lg:px-28 text-black py-5 lg:py-10 flex justify-center">
+        <p className="sm:w-1/2 text-[#4A4A4F] sm:text-xl text-sm text-center font-semibold italic ">
           <span className="text-[#5423E6]">
             Not every Play option is available for all kits{" "}
           </span>
@@ -128,14 +134,17 @@ export default function Plode() {
           robotics journey to life with effortless, hands-on fun.
         </p>
       </div>
-      <div className="px-12 lg:px-28 text-black py-5 lg:py-10">
+      <div className="px-4 sm:px-12 lg:px-28  text-black py-5 lg:py-10">
         <div className="py-8 lg:py-16">
           <ProductCeoReviewsContainer comment={data.ceoComment} />
         </div>
-        <div className="px-12 lg:px-28 text-black py-5 lg:py-10">
+        <div className="px-4 sm:px-12 lg:px-28 text-black py-5 lg:py-10">
           {<HardwareProductFeatures hardware={data.features_data} />}
-          <div className="flex w-full justify-center">
-            <p className="w-1/2 text-center font-semibold">
+          <div className="flex w-full flex-col items-center justify-center mt-11">
+            <div className="w-full flex justify-center">
+              <img src={renderImg("uparrow")} className="" />
+            </div>
+            <p className="sm:w-1/2 text-center font-semibold">
               This adaptive mode ensures every kit delivers a unique data
               experience, empowering users to experiment, track performance, and
               visualise results{" "}
@@ -145,26 +154,28 @@ export default function Plode() {
             </p>
           </div>
         </div>
-        <div className="px-12 lg:px-28 text-black py-5 lg:py-10">
+        <div className="px-4 sm:px-12 lg:px-28 text-black py-5 lg:py-10">
           <div>
             <ExtraFeatures
               // @ts-ignore
               data={data.features_data?.software_experience[1]}
-              title="software"
+              title=""
             />
           </div>
         </div>
-        <div className="px-12 lg:px-28 text-black py-5 lg:py-10">
+        <div className="px-4 sm:px-12 lg:px-28 text-black py-5 lg:py-10">
           <FlexibleLearning
+            newProduct={false}
             title="Code Mode - Unlock the Future of Learning with Hands-On Programming"
             desc="Designed to blend the power of visual tools and script-based coding, Code Mode empowers users of all ages to seamlessly build, control, and interact with hardware through intuitive platforms. Whether you’re new to coding or an experienced developer, Code Mode makes the learning journey engaging and practical.
 "
           />
         </div>
         <div className="px-12 lg:px-28 text-black py-5 lg:py-10">
-          <VersatileSoftware />
+          <VersatileSoftware data={data.versatile[0]} />
         </div>
         <div className="w-full flex justify-center flex-col items-center font-semibold">
+          <img src={renderImg("uparrow")} />
           <p className="text-[#5423E6]">Why Visual Programming?</p>
           <p className="w-1/3 text-center">
             With instant feedback and error-free assembly, visual programming
@@ -177,11 +188,12 @@ export default function Plode() {
             <ExtraFeatures
               // @ts-ignore
               data={data.features_data?.software_experience[4]}
-              title="software"
+              title=""
             />
           </div>
         </div>
         <div className="w-full flex justify-center flex-col items-center font-semibold">
+          <img src={renderImg("uparrow")} />
           <p className="text-[#5423E6]">Build to Solve, Learn to Innovate</p>
           <p className="w-1/3 text-center">
             Project-based programming helps learners explore real-world
@@ -190,9 +202,10 @@ export default function Plode() {
           </p>
         </div>
         <div className="px-12 lg:px-28 text-black py-5 lg:py-10">
-          <VersatileSoftware />
+          <VersatileSoftware data={data.versatile[1]} />
         </div>
         <div className="w-full flex justify-center flex-col items-center font-semibold">
+          <img src={renderImg("uparrow")} />
           <p className="text-[#5423E6]">Build to Solve, Learn to Innovate</p>
           <p className="w-1/3 text-center">
             Project-based programming helps learners explore real-world
@@ -205,7 +218,7 @@ export default function Plode() {
             <ExtraFeatures
               // @ts-ignore
               data={data.features_data?.software_experience[2]}
-              title="software"
+              title=""
             />
           </div>
         </div>
@@ -214,7 +227,7 @@ export default function Plode() {
         </div>
         <div className="py-8 lg:py-16 min-h-[30vh] flex ">
           <div className="w-1/2 flex justify-center items-center ">
-            <div className="w-2/3 h-full bg-[#2CF7A4] rounded-xxl"></div>
+            <div className="w-2/3 h-full bg-red-600 rounded-xxl"></div>
           </div>
           <div className="w-1/2 p-5">
             <p className="text-black font-piepie text-5xl md:text-6xl lg:text-6xl tracking-wider  w-[70%]">
@@ -230,46 +243,38 @@ export default function Plode() {
           </div>
         </div>
         <div className="px-12 lg:px-28 text-black py-5 lg:py-10">
-          <VersatileSoftware />
+          <VersatileSoftware data={data.versatile[2]} />
         </div>
         <div className="px-12 lg:px-28 text-black py-5 lg:py-10">
           <div>
             <ExtraFeatures
               // @ts-ignore
               data={data.features_data?.software_experience[3]}
-              title="software"
+              title=""
+              horizantal={true}
             />
           </div>
         </div>
-        <div className="py-20">
-          <FlexibleLearning />
+        <div className="w-full flex justify-center flex-col items-center font-semibold">
+          <img src={renderImg("uparrow")} />
+          <p className="text-[#5423E6]">Why Python?</p>
+          <p className="w-1/3 text-center">
+            Python is ideal for learners transitioning to text-based coding,
+            offering a gentle learning curve with direct access to hardware
+            features.
+          </p>
         </div>
-        {/* <div className="">
-          <PlodeSoftware />
+        <div className="py-20 -mx-8 lg:-mx-28">
+          <PlodeDifference data={data.plodeDifference} />
         </div>
-        <div className="lg:-mt-52 ">
-          <SoftwareAdaptive />
-        </div> */}
-        {/* <div className=" md:py-20">
-          <VersatileSoftware />
-        </div>
-        <div>
-          <ExtraFeatures
-            data={data.features_data?.software_experience[0]}
-            title="software"
-          />
-        </div> */}
-        {/* <div className="py-16 lg:py-20">
-          <PlodeDownloade
-            heading="Unleash Your Creativity with Plode"
-            desc="Download the Plode app today and start coding fun, engaging projects. Whether you’re new to coding or a seasoned pro, Plode makes learning and creating a breeze!"
-          />
-        </div> */}
         <div className=" text-black">
-          <CeoComments />
+          <CeoComments title="Plode makes coding accessible and fun for all ages, turning complex programming into an engaging, intuitive experience." />
         </div>{" "}
         <div className="py-20">
-          <FlexibleLearning />
+          <Getstart
+            title="Get Started Today – Create, Code, and Control"
+            desc="Plode’s Code Mode offers a complete learning experience, from drag-and-drop assembly to advanced coding in Python and C. Whether you’re building your first project or perfecting a complex solution, our tools are designed to make learning programming fun, engaging, and rewarding."
+          />
         </div>
         <div className="-mx-8 lg:-mx-28">
           <TestimonialBanner />

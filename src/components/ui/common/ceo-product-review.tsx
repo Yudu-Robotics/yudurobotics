@@ -12,7 +12,7 @@ const ProductCeoReviewsContainer: React.FC<{ comment: string }> = ({
       <div>{renderSvg("star1")}</div>
       <div className="bg-primary py-12 rounded-xxl text-primary-foreground">
         <h1 className="text-center font-thin">Tech</h1>
-        <div className="flex flex-col items-center space-y-6 px-20">
+        <div className="flex flex-col items-center space-y-6 sm:px-20 px-5">
           <div className="flex items-center">
             <p className="text-center  items-center font-piepie text-lg md:text-2xl lg:text-3xl tracking-wider ">
               {comment}

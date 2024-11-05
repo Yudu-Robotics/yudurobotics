@@ -1,4 +1,4 @@
-import { title } from "process";
+import { features, title } from "process";
 
 // mockData.js
 type ProductData = {
@@ -121,6 +121,9 @@ type ProductData = {
       desc: string;
     }[];
   };
+  adaptive?: any;
+  versatile?: any;
+  plodeDifference?: any;
 };
 interface PlugAndPlayAccessory {
   title: string;
@@ -155,7 +158,7 @@ export const products = [
   {
     name: "AI-1",
     description:
-      "Auto Layout is a constraint-based layout system to create an adaptive UI.",
+      "An intelligent camera powered by AI for dynamic object detection, tracking, and insights.",
     image: "assets/products/ai.svg",
     category: "Micro-controller",
     type: "Hardware",
@@ -175,7 +178,7 @@ export const products = [
   {
     name: "Toki",
     description:
-      "Auto Layout is a constraint-based layout system to create an adaptive UI.",
+      "Affordable alternative to Arduino, offering superior customization options and advanced capabilities to unleash your creativity.",
     image: "assets/products/toki.svg",
     category: "Micro-controller",
     type: "Hardware",
@@ -195,7 +198,7 @@ export const products = [
   {
     name: "Play Trons",
     description:
-      "Simple plug-and-play electronics for instant fun, learning, and creativity.",
+      "Big Ideas for Little Hands ! This beginner-friendly kit introduces kids to electronics with plug-and-play modules for endless creative projects.",
     image: "assets/zing/ProductImage1.svg",
     category: "Toys",
     type: "Hardware",
@@ -215,7 +218,7 @@ export const products = [
   {
     name: "Tinker Bunker",
     description:
-      "Advanced humanoid robot designed for interactive learning, companionship, and play.",
+      "Experience hands-on learning with engaging courses and projects that inspire creativity and innovation.",
     image: "assets/products/tinker-bunker.svg",
     category: "",
     type: "Curriculum",
@@ -397,8 +400,8 @@ export const mockData: { [key: string]: ProductData } = {
         bgColor: "#FF0000",
         textColor: "#FAF9FE",
         link: "#footer-contact-form-component",
-      }
-    ]
+      },
+    ],
   },
   peecee: {
     heading: "PeeCee: Your Cute Codable Computer",
@@ -1677,10 +1680,10 @@ export const mockData: { [key: string]: ProductData } = {
     },
     jumppingButton: [
       {
-        text1: "Own",
-        text2: "Now!",
+        text1: "Button",
+        text2: "CTA",
         bgColor: "#2CF7A4",
-        textColor: "#FAF9FE",
+        textColor: "#0A4029",
         link: "https://play.google.com/store/apps/details?id=com.bibox.bisoftsuite&hl=en_IN&pli=1",
       },
       {
@@ -1737,6 +1740,108 @@ export const mockData: { [key: string]: ProductData } = {
         {
           title: "Learn Mode",
           desc: "Access videos, tutorials, and lessons tailored to your kit to level up your skills at every step.",
+        },
+      ],
+    },
+    adaptive: {
+      title: "Features",
+      heading: "Playfully Adaptive",
+      subHeading:
+        "Plode adjusts itself to suit anyone, whether you're just starting out or ready to tackle big projects.",
+      features: [
+        {
+          src: "device",
+          title: "Discover the Perfect Kit",
+          desc: "Easily browse through categories like Codable Kits and Animatronics to find the right tools for your learning journey. Use the search feature to quickly locate specific kits or tap Auto to dive straight into the app. Explore options like Roboki and PeeCee under Codable Kits or advanced animatronics like Klaw-b, Crawl-e, and Zing. Plode ensures you find what you need effortlessly.",
+        },
+        {
+          src: "rocket",
+          title: "Effortless Device Pairing",
+          desc: "With Plode, connecting to your kit is quick and seamless. Select a specific kit or tap Auto to let the app do the work for you. The app instantly scans for the appropriate device, ensuring you’re ready to jump into action without delays. Whether you're working with a specific kit or exploring, Plode keeps things smooth and connected.",
+        },
+      ],
+      img: "zigzag",
+    },
+    versatile: [
+      {
+        title: "Visual Programming - Build, Experiment, and Learn Visually",
+        colorTitle: "Visual Programming -",
+        desc: "Visual programming takes the complexity out of syntax, allowing users to focus on logic and design. With easy-to-use drag-and-drop interfaces, learners can build working prototypes while gaining a solid understanding of coding concepts.",
+        subheading: "What Makes Visual Programming Different?",
+        features: [
+          {
+            title: "Drag-and-Drop Assembly",
+            desc: "Quickly connect sensors, motors, and other accessories to hardware ports using the visual interface—no code required.",
+          },
+          {
+            title: "Real-Time Interaction",
+            desc: "See results instantly by interacting with the hardware as you build, modify, and experiment.",
+          },
+          {
+            title: "Logic using Flowcharts and Blocks",
+            desc: "Create custom workflows with flowcharts or dive into block-based programming with pre-built commands that fit together like puzzle pieces.",
+          },
+        ],
+      },
+      {
+        title: "Flowchart-Based Programming - Visualise Your Code",
+        colorTitle: "Flowchart-Based Programming - ",
+        desc: "Flowchart programming offers a clear and logical approach to building workflows. Arrange visual blocks like decisions, loops, and actions to structure your code.",
+        subheading: "",
+        features: [
+          {
+            title: "Simplify Complex Logic",
+            desc: "Flowcharts break down tasks step-by-step, making them easy to understand.",
+          },
+          {
+            title: "Interactive Blocks",
+            desc: "Modify or rearrange flowcharts to explore different logic paths.",
+          },
+          {
+            title: "Built-in Debugging",
+            desc: "Quickly identify and fix errors without touching any code.",
+          },
+        ],
+      },
+      {
+        title: "C Programming - Power in Your Hands",
+        colorTitle: "C Programming -",
+        desc: "C programming offers low-level control, giving users the ability to manage hardware directly.",
+        subheading: "",
+        features: [
+          {
+            title: "Full Control",
+            desc: "Write code to operate sensors, motors, and accessories.",
+          },
+          {
+            title: "Use System-Level Commands",
+            desc: "Build functions and implement logic through loops, conditions, and more.",
+          },
+          {
+            title: "Immediate Results",
+            desc: "Upload your code and test it live on the hardware to see it in action.",
+          },
+        ],
+      },
+    ],
+    plodeDifference: {
+      title: "The Plode Difference – Learning by Doing",
+      desc: "Code Mode is built on the principle of hands-on learning, providing users with the freedom to experiment, create, and iterate. Whether you start with visual programming or jump into script coding, every feature is designed to bridge the gap between theory and practice.",
+      features: [
+        {
+          src: "fixable",
+          title: "Flexible Learning Paths",
+          desc: "Choose between visual interfaces or dive straight into scripting languages.",
+        },
+        {
+          src: "real",
+          title: "Real-World Applications",
+          desc: "Build practical projects and see your code come to life on real hardware.",
+        },
+        {
+          src: "instant",
+          title: "Instant Feedback",
+          desc: "Get live results with every change, empowering you to learn through trial and error.",
         },
       ],
     },
@@ -1980,19 +2085,16 @@ export const mockData: { [key: string]: ProductData } = {
     },
     working: {
       heading: "",
-      subheading:
-        "",
+      subheading: "",
       section1: {
         image: "",
         heading: "",
-        description:
-          "",
+        description: "",
       },
       section2: {
         image: "",
         heading: "",
-        description:
-          "",
+        description: "",
       },
     },
     components: {
@@ -2028,8 +2130,8 @@ export const mockData: { [key: string]: ProductData } = {
         textColor: "#FAF9FE",
         link: "#",
       },
-    ],    
-  }
+    ],
+  },
 };
 
 export const blogData: BlogData = [

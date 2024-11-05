@@ -18,6 +18,7 @@ const ExtraFeatures: React.FC<{
   data: data;
   title: string;
   showArrow?: boolean;
+  horizantal?: any;
 }> = ({ data, title, showArrow }) => {
   return (
     <div className="flex flex-col space-y-2 lg:space-y-0">

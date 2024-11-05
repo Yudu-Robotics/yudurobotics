@@ -77,6 +77,15 @@ const afterw = "assets/partner/afterw.svg";
 
 //plode
 const plodeHomeImg = "assets/plode/plodeHomeImg.png";
+const zigzag = "assets/plode/zigzag.svg";
+const uparrow = "assets/plode/uparrow.svg";
+const fixable = "assets/plode/fixable.svg";
+const instant = "assets/plode/instant.svg";
+const real = "assets/plode/real.svg";
+const whitezigzag = "assets/plode/whitezigzag.svg";
+const leftarrow = "assets/plode/leftarrow.svg";
+const rightarrow = "assets/plode/rightarrow.svg";
+const playstore = "assets/plode/playstore.png";
 
 //Not Found
 const notFound = "assets/notFound.png";
@@ -236,6 +245,24 @@ function renderImg(imgName: string) {
     //plode
     case "plodeHomeImg":
       return plodeHomeImg;
+    case "zigzag":
+      return zigzag;
+    case "uparrow":
+      return uparrow;
+    case "fixable":
+      return fixable;
+    case "instant":
+      return instant;
+    case "real":
+      return real;
+    case "whitezigzag":
+      return whitezigzag;
+    case "leftarrow":
+      return leftarrow;
+    case "rightarrow":
+      return rightarrow;
+    case "playstore":
+      return playstore;
 
     //Not Found
     case "notFound":
