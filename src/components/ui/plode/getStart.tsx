@@ -28,7 +28,7 @@ const GetStart: React.FC<GetStartProps> = ({ title, desc }) => {
             </div>
           </div>
           {/* Buttons Section */}
-          <div className="h-auto w-1/3 flex justify-center items-center">
+          <div className="h-auto sm:w-1/3 flex justify-center items-center">
             <img src={renderImg("playstore")} alt="Play Store" />
           </div>
         </div>

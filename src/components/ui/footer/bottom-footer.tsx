@@ -1,6 +1,16 @@
 // components/Footer.js
-import React from "react";
-
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import PrivacyContent from "./PrivacyContent";
+import TermsContent from "./TermsContent";
 const footerData = [
   {
     title: "Product",
@@ -16,8 +26,8 @@ const footerData = [
   {
     title: "Legal",
     links: [
-      { name: "Terms", href: "#" },
-      { name: "Privacy", href: "#" },
+      { name: "Terms", href: "#", dialog: "terms" },
+      { name: "Privacy", href: "#", dialog: "privacy" },
       { name: "Cookies", href: "#" },
       { name: "Licenses", href: "#" },
       { name: "Settings", href: "#" },
@@ -71,6 +81,16 @@ const footerData = [
 ];
 
 export default function BottomFooter() {
+  const [activeDialog, setActiveDialog] = useState(null);
+
+  // Function to handle opening of the dialog content
+  const handleDialogOpen = (dialogType: any) => {
+    setActiveDialog(dialogType);
+  };
+
+  const handleDialogClose = () => {
+    setActiveDialog(null);
+  };
   return (
     <footer className="py-6">
       <div className="">
@@ -80,13 +100,22 @@ export default function BottomFooter() {
               <h4 className="font-thin mb-4 text-xs">{section.title}</h4>
               <ul>
                 {section.links.map((link, linkIndex) => (
-                  <li key={linkIndex} className="">
-                    <a
-                      href={link.href}
-                      className=" text-primary-foreground transition-colors duration-200 text-sm font-semibold"
-                    >
-                      {link.name}
-                    </a>
+                  <li key={linkIndex}>
+                    {link.dialog ? (
+                      <button
+                        onClick={() => handleDialogOpen(link.dialog)}
+                        className="text-primary-foreground transition-colors duration-200 text-sm font-semibold"
+                      >
+                        {link.name}
+                      </button>
+                    ) : (
+                      <a
+                        href={link.href}
+                        className="text-primary-foreground transition-colors duration-200 text-sm font-semibold"
+                      >
+                        {link.name}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -94,6 +123,27 @@ export default function BottomFooter() {
           ))}
         </div>
       </div>
+      <Dialog open={!!activeDialog} onOpenChange={handleDialogClose}>
+        <DialogContent className="w-[100%] h-[80vh] overflow-y-auto text-black mx-auto">
+          <DialogHeader>
+            <DialogTitle>
+              {activeDialog === "privacy"
+                ? "Privacy Policy"
+                : "Terms of Service"}
+            </DialogTitle>
+            <DialogDescription className="text-black">
+              {activeDialog === "privacy"
+                ? "Read our Privacy Policy below:"
+                : "Read our Terms of Service below:"}
+            </DialogDescription>
+          </DialogHeader>
+
+          <div className="text-black">
+            {activeDialog === "privacy" && <PrivacyContent />}
+            {activeDialog === "terms" && <TermsContent />}
+          </div>
+        </DialogContent>
+      </Dialog>
     </footer>
   );
 }

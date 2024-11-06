@@ -163,7 +163,7 @@ export default function Plode() {
             />
           </div>
         </div>
-        <div className="px-4 sm:px-12 lg:px-28 text-black py-5 lg:py-10">
+        <div className="sm:px-12 lg:px-28 text-black py-5 lg:py-10">
           <FlexibleLearning
             newProduct={false}
             title="Code Mode - Unlock the Future of Learning with Hands-On Programming"
@@ -171,19 +171,19 @@ export default function Plode() {
 "
           />
         </div>
-        <div className="px-12 lg:px-28 text-black py-5 lg:py-10">
+        <div className="sm:px-12 lg:px-28 text-black py-5 lg:py-10">
           <VersatileSoftware data={data.versatile[0]} />
         </div>
         <div className="w-full flex justify-center flex-col items-center font-semibold">
           <img src={renderImg("uparrow")} />
           <p className="text-[#5423E6]">Why Visual Programming?</p>
-          <p className="w-1/3 text-center">
+          <p className="sm:w-1/3 text-center text-sm sm:text-lg ">
             With instant feedback and error-free assembly, visual programming
             allows you to prototype faster, learn by doing, and transition
             easily into more complex coding.
           </p>
         </div>
-        <div className="px-12 lg:px-28 text-black py-5 lg:py-10">
+        <div className="sm:px-12 lg:px-28 text-black py-5 lg:py-10">
           <div>
             <ExtraFeatures
               // @ts-ignore
@@ -195,25 +195,25 @@ export default function Plode() {
         <div className="w-full flex justify-center flex-col items-center font-semibold">
           <img src={renderImg("uparrow")} />
           <p className="text-[#5423E6]">Build to Solve, Learn to Innovate</p>
-          <p className="w-1/3 text-center">
+          <p className="sm:w-1/3 text-sm sm:text-lg text-center">
             Project-based programming helps learners explore real-world
             applications, fostering creativity and problem-solving through
             experimentation.
           </p>
         </div>
-        <div className="px-12 lg:px-28 text-black py-5 lg:py-10">
+        <div className="sm:px-12 lg:px-28 text-black py-5 lg:py-10">
           <VersatileSoftware data={data.versatile[1]} />
         </div>
         <div className="w-full flex justify-center flex-col items-center font-semibold">
           <img src={renderImg("uparrow")} />
           <p className="text-[#5423E6]">Build to Solve, Learn to Innovate</p>
-          <p className="w-1/3 text-center">
+          <p className="sm:w-1/3 text-sm sm:text-lg text-center">
             Project-based programming helps learners explore real-world
             applications, fostering creativity and problem-solving through
             experimentation.
           </p>
         </div>
-        <div className="px-12 lg:px-28 text-black py-5 lg:py-10">
+        <div className="sm:px-12 lg:px-28 text-black py-5 lg:py-10">
           <div>
             <ExtraFeatures
               // @ts-ignore
@@ -225,12 +225,12 @@ export default function Plode() {
         <div className="py-8 lg:py-16">
           <ProductCeoReviewsContainer comment={data.ceoComment} />
         </div>
-        <div className="py-8 lg:py-16 min-h-[30vh] flex ">
-          <div className="w-1/2 flex justify-center items-center ">
-            <div className="w-2/3 h-full bg-red-600 rounded-xxl"></div>
+        <div className="py-8 lg:py-16 min-h-[30vh] flex flex-col sm:flex-row">
+          <div className="sm:w-1/2 w-full flex justify-center items-center ">
+            <div className="sm:w-2/3 h-full w-full  bg-red-600 rounded-xxl"></div>
           </div>
-          <div className="w-1/2 p-5">
-            <p className="text-black font-piepie text-5xl md:text-6xl lg:text-6xl tracking-wider  w-[70%]">
+          <div className="sm:w-1/2 p-5">
+            <p className="text-black font-piepie text-3xl md:text-6xl lg:text-6xl tracking-wider  sm:w-[70%]">
               <span className="text-[#5423E6]">Script Programming – </span>
               Take Control with Text-Based Code
             </p>
@@ -242,10 +242,10 @@ export default function Plode() {
             </p>
           </div>
         </div>
-        <div className="px-12 lg:px-28 text-black py-5 lg:py-10">
+        <div className="sm:px-12 lg:px-28 text-black py-5 lg:py-10">
           <VersatileSoftware data={data.versatile[2]} />
         </div>
-        <div className="px-12 lg:px-28 text-black py-5 lg:py-10">
+        <div className="sm:px-12 lg:px-28 text-black py-5 lg:py-10">
           <div>
             <ExtraFeatures
               // @ts-ignore
@@ -258,7 +258,7 @@ export default function Plode() {
         <div className="w-full flex justify-center flex-col items-center font-semibold">
           <img src={renderImg("uparrow")} />
           <p className="text-[#5423E6]">Why Python?</p>
-          <p className="w-1/3 text-center">
+          <p className="sm:w-1/3 text-sm sm:text-lg text-center">
             Python is ideal for learners transitioning to text-based coding,
             offering a gentle learning curve with direct access to hardware
             features.
