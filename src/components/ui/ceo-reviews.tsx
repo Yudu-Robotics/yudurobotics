@@ -1,8 +1,10 @@
 import renderImg from "@/imgImport";
 import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-
-function CeoReviewsContainer() {
+interface CeoProps {
+  data?: any;
+}
+const CeoReviewsContainer: React.FC<CeoProps> = ({ data }) => {
   return (
     <div className="w-full relative">
       <div>
@@ -16,8 +18,8 @@ function CeoReviewsContainer() {
 
         <div className="flex items-center">
           <p className="text-center  items-center font-piepie text-2xl md:text-4xl lg:text-6xl tracking-wider text-primary-foreground">
-            Yudu Robotics has been an incredible partner, blending creativity
-            with cutting-edge tech to drive innovation like never before.
+            {data?.desc ||
+              "Yudu Robotics has been an incredible partner, blending creativity with cutting-edge tech to drive innovation like never before."}
           </p>
         </div>
       </div>
@@ -27,8 +29,14 @@ function CeoReviewsContainer() {
           <AvatarFallback>CEO</AvatarFallback>
         </Avatar>
 
-        <h4 className="mt-2 text-xl font-semibold">Ravi Mehta</h4>
-        <p className="font-extralight">CEO, Innovatech Solution</p>
+        <h4 className="mt-2 text-xl font-semibold">
+          {data?.name || "Mr Filepe Gracia"}
+        </h4>
+        <p className="font-extralight">
+          {data?.designation && data?.company
+            ? `${data?.designation} , ${data?.company}`
+            : "Marketing Head , Inroprin - Peru"}
+        </p>
       </div>
       <div className="lg:flex justify-end lg:-mt-16 lg:px-10 hidden relative ">
         <img src={renderImg("star2")} className="" />
@@ -41,6 +49,6 @@ function CeoReviewsContainer() {
       </div>
     </div>
   );
-}
+};
 
 export default CeoReviewsContainer;

@@ -1,4 +1,5 @@
 import { highlightWords } from "@/app/utility/highlightWords";
+import renderImg from "@/imgImport";
 import { title } from "process";
 import React from "react";
 
@@ -6,19 +7,20 @@ interface SoftwareAdaptiveProps {
   data?: any;
 }
 const VersatileSoftware: React.FC<SoftwareAdaptiveProps> = ({ data }) => {
+  const images = ["threestep", "fivecoding", "aimodel"];
   const features = [
     {
-      image: "assets/other/imagePlaceholder.png",
+      image: "assets/other/threestep.png",
       title: "3-Step Programming",
       desc: "Coding is as easy as Select, Assemble, and Code. Perfect for first-timers, this approach makes building projects feel like child’s play.",
     },
     {
-      image: "assets/other/imagePlaceholder.png",
+      image: "assets/other/fivecoding.png",
       title: "5 Coding Styles",
       desc: "3 visual modes (Hexa Programming, Flowchart, Scratch-style) or go pro with C and Python scripts.",
     },
     {
-      image: "assets/other/imagePlaceholder.png",
+      image: "assets/other/aimodel.png",
       title: "AI Mode & App Mode",
       desc: "Just speak and code, or create apps that control your physical projects—Plode makes it all possible.",
     },
@@ -50,9 +52,15 @@ const VersatileSoftware: React.FC<SoftwareAdaptiveProps> = ({ data }) => {
             key={index}
             className="flex flex-col justify-center items-center text-center space-y-2 "
           >
-            <div className="mb-2">
-              <img src="assets/other/imagePlaceholder.png" className="" />
+            <div className="bg-primary h-full p-5 flex justify-center items-center rounded-xxl">
+              <div className="flex justify-between items-center h-full">
+                <img
+                  src={renderImg(images[index])}
+                  className="object-contain  rounded-2xl"
+                />
+              </div>
             </div>
+
             <h1 className="text-sm font-bold">{feature.title}</h1>
             <p className="text-xs text-secondary-foreground w-[100%] lg:w-[85%]">
               {feature.desc}

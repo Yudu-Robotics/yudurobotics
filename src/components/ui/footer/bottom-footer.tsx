@@ -15,12 +15,12 @@ const footerData = [
   {
     title: "Product",
     links: [
-      { name: "Overview", href: "#" },
-      { name: "Features", href: "#" },
-      { name: "Solutions", href: "#" },
-      { name: "Tutorials", href: "#" },
-      { name: "Pricing", href: "#" },
-      { name: "Releases", href: "#" },
+      { name: "Overview", href: "/products" },
+      { name: "TED", href: "/peecee" },
+      { name: "Zing", href: "/zing" },
+      { name: "Crawl-e", href: "/crawl_e" },
+      { name: "Roboki", href: "/roboki" },
+      { name: "Klaw-b", href: "/klaw_b" },
     ],
   },
   {
@@ -28,10 +28,10 @@ const footerData = [
     links: [
       { name: "Terms", href: "#", dialog: "terms" },
       { name: "Privacy", href: "#", dialog: "privacy" },
-      { name: "Cookies", href: "#" },
-      { name: "Licenses", href: "#" },
-      { name: "Settings", href: "#" },
-      { name: "Contact", href: "#" },
+      // { name: "Cookies", href: "#" },
+      // { name: "Licenses", href: "#" },
+      // { name: "Settings", href: "#" },
+      { name: "", href: "#" },
     ],
   },
   {
@@ -124,21 +124,29 @@ export default function BottomFooter() {
         </div>
       </div>
       <Dialog open={!!activeDialog} onOpenChange={handleDialogClose}>
-        <DialogContent className="w-[100%] h-[80vh] overflow-y-auto text-black mx-auto">
+        <DialogContent
+          className="w-[100%] h-[80vh] overflow-y-auto  text-black mx-auto"
+          style={{
+            overflowY: "auto",
+            WebkitOverflowScrolling: "touch", // Smooth scrolling on iOS
+            scrollbarWidth: "none", // Firefox
+            msOverflowStyle: "none", // Internet Explorer/Edge
+          }}
+        >
           <DialogHeader>
             <DialogTitle>
               {activeDialog === "privacy"
                 ? "Privacy Policy"
-                : "Terms of Service"}
+                : "Terms & Conditions"}
             </DialogTitle>
             <DialogDescription className="text-black">
               {activeDialog === "privacy"
-                ? "Read our Privacy Policy below:"
-                : "Read our Terms of Service below:"}
+                ? "Last Updated: 31st October 2024"
+                : "Last Updated: 31st October 2024"}
             </DialogDescription>
           </DialogHeader>
 
-          <div className="text-black">
+          <div className="text-black ">
             {activeDialog === "privacy" && <PrivacyContent />}
             {activeDialog === "terms" && <TermsContent />}
           </div>

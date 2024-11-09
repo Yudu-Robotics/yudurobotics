@@ -34,6 +34,9 @@ const girls = "assets/other/girls.png";
 const macbook = "assets/other/macbook.png";
 const videoPlayer = "assets/other/video-player.png";
 const testimonial = "assets/other/testimonial.png";
+const aimodel = "assets/other/aimodel.png";
+const fivecoding = "assets/other/fivecoding.png";
+const threestep = "assets/other/threestep.png";
 
 // peecee
 const peecee = "assets/peecee/peecee.png";
@@ -181,6 +184,13 @@ function renderImg(imgName: string) {
       return iphone;
     case "stars":
       return stars;
+
+    case "aimodel":
+      return aimodel;
+    case "fivecoding":
+      return fivecoding;
+    case "threestep":
+      return threestep;
 
     // testimonial
     case "bannerImg1":

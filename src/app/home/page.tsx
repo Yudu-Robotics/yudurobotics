@@ -8,9 +8,6 @@ import ProductCatalog from "@/components/ui/productsComponents/product-catalog";
 import SearchAndFilter from "@/components/ui/home/search-filter";
 import ProductCategories from "@/components/ui/productsComponents/product-categories";
 import SubscribeSection from "@/components/ui/home/subscribe-section";
-import TeamGrid from "@/components/ui/home/team-grid";
-import Ourteam from "@/components/ui/home/our-team";
-import LatestPosts from "@/components/ui/home/latest-posts";
 import dynamic from "next/dynamic";
 import { mockData } from "@/data/mockData";
 
@@ -25,6 +22,15 @@ const FAQs = dynamic(() => import("@/components/ui/home/faqs"), {
 
 export default async function HomePage() {
   const data = mockData.home;
+  const partnerDetails = [
+    {
+      name: "Mr Filepe Gracia",
+      company: "Inroprin - Peru",
+      designation: "Marketing Head",
+      src: "",
+      desc: "Impressed by the quality of the kits and program, happy with the services and looking forward to expand in Peru markets.",
+    },
+  ];
   return (
     <>
       <div className="px-4 sm:px-16 md:px-20 lg:px-24 xl:px-28 py-4 bg-primary ">
@@ -70,7 +76,7 @@ export default async function HomePage() {
           </a>
         </div>
         <div className="py-8 lg:py-16">
-          <CeoReviewsContainer />
+          <CeoReviewsContainer data={partnerDetails[0]} />
         </div>
       </div>
       <div className="w-full -mt-1">
@@ -82,7 +88,10 @@ export default async function HomePage() {
         <div className="py-5 lg:py-10">
           <GlobalAwards />
         </div>
-        <div id="product-features-component" className="-mx-5 lg:mx-0 py-5 lg:py-10">
+        <div
+          id="product-features-component"
+          className="-mx-5 lg:mx-0 py-5 lg:py-10"
+        >
           <ProductFeatures />
         </div>
         <div>

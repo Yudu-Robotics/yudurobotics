@@ -12,7 +12,7 @@ export default function TestimonialBanner() {
         <div>{renderSvg("star1")}</div>
       </div>
 
-      <div className="flex overflow-hidden relative">
+      <div className="flex overflow-hidden relative ">
         <div className="sm:h-[100vh]  flex animate-loop-scroll">
           <Content />
         </div>
@@ -38,8 +38,10 @@ function Content() {
             <div className="relative w-full">
               <ImageWithText
                 imgSrc="bg1"
-                text1="Yudu Robotics turned our store into a playground for young inventors. Kids love their robots, and so do we!"
-                text2="- Sarah, Toy Store Owner"
+                text1="PeeCee TED with the Plode app simplifies teaching robotics,
+                  bringing ideas to life through dynamic visual programming."
+                text2="- Dr Shekhar Jain, Founder and Director"
+                text3="On My Own Technology Pvt Ltd"
               />
             </div>
           </div>
@@ -51,12 +53,14 @@ function Content() {
                 alt="Background"
                 className="w-full h-full object-cover rounded-lg"
               />
-              <div className="absolute inset-0 text-secondary-foreground text-xs lg:text-lg flex flex-col justify-between text-center py-24 px-20">
+              <div className="absolute inset-0 text-secondary-foreground text-xs lg:text-lg flex flex-col justify-between text-center py-24 px-10">
                 <h2>
-                  "Yudu Robotics turned our store into a playground for young
-                  inventors. Kids love their robots, and so do we!"
+                  "Yudu Robotics and Roboki with the Plode app have made
+                  robotics fun and easy to learn, simplifying complex concepts
+                  through engaging visual programming."
                 </h2>
-                <h2>- Sarah, Toy Store Owner</h2>
+                <p className=" text-nowrap">Magnum School Solutions</p>
+                <h2>- Mr. Abhishek Reddy, Director</h2>
               </div>
             </div>
             <div className="relative">
@@ -85,12 +89,14 @@ function Content() {
                   alt="Background"
                   className="w-full h-full object-cover rounded-lg"
                 />
-                <div className="absolute inset-0 text-secondary-foreground text-xs lg:text-lg flex flex-col space-y-8 text-center py-16 px-20">
+                <div className="absolute inset-0 text-secondary-foreground text-xs lg:text-lg flex flex-col  text-center py-16 px-20 space-y-2">
                   <h2>
-                    "Yudu Robotics turned our store into a playground for young
-                    inventors. Kids love their robots, and so do we!"
+                    "Crawl-e and Klaw-b, paired with the Plode app, have
+                    transformed our classroom with hands-on, interactive
+                    robotics lessons."
                   </h2>
-                  <h2>- Sarah, Toy Store Owner</h2>
+                  <h2>Dabotics India Pvt Ltd</h2>
+                  <h2>- Sachin Srivastav, Director</h2>
                 </div>
               </div>
             </div>
@@ -112,7 +118,7 @@ function Content() {
                         1M+
                       </h2>
                       <h2 className="lg:text-4xl font-light text-primary">
-                        Innovationa
+                        Innovations
                       </h2>
                     </div>
                   </div>
@@ -123,12 +129,14 @@ function Content() {
                     alt="Background"
                     className="w-full h-full object-cover rounded-lg"
                   />
-                  <div className="absolute inset-0 text-secondary-foreground text-xs lg:text-lg flex flex-col space-y-8 text-center py-16 px-20">
+                  <div className="absolute inset-0 text-secondary-foreground text-xs lg:text-lg flex flex-col space-y-4 text-center py-16 px-20">
                     <h2>
-                      "Yudu Robotics turned our store into a playground for
-                      young inventors. Kids love their robots, and so do we!"
+                      "Zing and the Plode app make robotics accessible to all,
+                      sparking creativity and problem-solving through visual
+                      programming."
                     </h2>
-                    <h2>- Sarah, Toy Store Owner</h2>
+                    <h2>Air Stem Labs</h2>
+                    <h2>- Mr Goutham Paplikar, Co-Founder</h2>
                   </div>
                 </div>
               </div>

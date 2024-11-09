@@ -9,6 +9,9 @@ type ProductData = {
   images: string[];
   sectionHeader: string;
   ceoComment: string;
+  ceoName: string;
+  ceoPosition: string;
+  companyName: string;
   features_data: {
     section1: {
       heading: string;
@@ -18,6 +21,7 @@ type ProductData = {
         icon: string;
         heading: string;
         description: string;
+        video?: any;
       }[];
     };
     section2?: {
@@ -28,6 +32,7 @@ type ProductData = {
         icon: string;
         heading: string;
         description: string;
+        video?: any;
       }[];
     };
     section3?: {
@@ -119,6 +124,7 @@ type ProductData = {
     tableData: {
       title: string;
       desc: string;
+      video?: string;
     }[];
   };
   adaptive?: any;
@@ -279,6 +285,9 @@ export const mockData: { [key: string]: ProductData } = {
     images: ["assets/peecee/peecee.png", "/images/home2.jpg"],
     sectionHeader: "headerSection",
     ceoComment: "",
+    ceoName: "",
+    ceoPosition: "",
+    companyName: "",
     features_data: {
       section1: {
         heading: "Ready to Go, Right Out of the Box",
@@ -415,6 +424,9 @@ export const mockData: { [key: string]: ProductData } = {
     sectionHeader: "headerSection",
     ceoComment:
       "PeeCee’s innovative design and seamless LEGO integration make it a game-changer for our tech projects.",
+    ceoName: "Mr Murugappan Vishwanath",
+    ceoPosition: "Founder",
+    companyName: "iThink",
     features_data: {
       section1: {
         heading: "Ready to Go, Right Out of the Box",
@@ -427,36 +439,42 @@ export const mockData: { [key: string]: ProductData } = {
             heading: "Power-Packed and Portable",
             description:
               "With a built-in battery, PeeCee TED is always ready to roll—no need to worry about recharging during those epic coding sessions.",
+            video: "power",
           },
           {
             icon: "assets/peecee/Featured icon (1).png",
             heading: "Brainy 3-Core Processor",
             description:
               "PeeCee TED’s got the brains to handle anything you throw at it, making your ideas come to life without a hitch.",
+            video: "brainy",
           },
           {
             icon: "assets/peecee/Featured icon (2).png",
             heading: "Buzz-worthy",
             description:
               "PeeCee TED’s buzzer gives you instant audio feedback, making your projects not just fun to see, but fun to hear too!",
+            video: "buzz",
           },
           {
             icon: "assets/peecee/Featured icon (3).png",
             heading: "Sensors Galore",
             description:
               "From color and light to touch and temperature, PeeCee TED’s built-in sensors give you the power to interact with the world around you in all kinds of cool ways.",
+            video: "sensors",
           },
           {
             icon: "assets/peecee/Featured icon (4).png",
             heading: "Expressive LEDs",
             description:
               "Let PeeCee TED show off with customizable LED displays—whether it’s a smiley face or a light show, the possibilities are endless.",
+            video: "expressive",
           },
           {
             icon: "assets/peecee/Featured icon (5).png",
             heading: "Rainbow Bright",
             description:
               "With 12 RGB LEDs, you can add a splash of color to your projects—because everything’s better in color, right?",
+            video: "rainbow",
           },
         ],
       },
@@ -471,24 +489,29 @@ export const mockData: { [key: string]: ProductData } = {
             heading: "IoT Magic via the Cloud",
             description:
               "Connect PeeCee TED to the cloud and unlock a world of IoT possibilities. Smart projects? Data at your fingertips? It’s all just a tap away!",
+            video: "iot",
           },
+
           {
             icon: "plug",
             heading: "Plug and Power",
             description:
               "Need extra juice? Hook up PeeCee TED to an external power bank through USB and keep those big ideas running as long as you need.",
+            video: "plug",
           },
           {
             icon: "wifi",
             heading: "Wire-Free Wonder",
             description:
               "Program PeeCee TED from anywhere—whether you’re on the cloud or on your phone. No wires, no limits—just pure creative freedom.",
+            video: "wire",
           },
           {
             icon: "liveData",
             heading: "Live Data Fun",
             description:
               "Watch PeeCee TED come to life as it relays real-time sensor data, making your projects interactive and exciting.",
+            video: "live",
           },
         ],
       },
@@ -679,27 +702,30 @@ export const mockData: { [key: string]: ProductData } = {
         {
           title: "Plug and Play Accessories",
           desc: "PeeCee TED comes with a treasure trove of accessories—from sensors and switches to motors and displays, the possibilities are endless!",
+          video: "plugandplay",
         },
         {
           title: "IR Distance and Ultrasonic Sensors",
           desc: "Measure distances like a pro.",
+          video: "ird",
         },
         {
           title: "Joysticks and Switches",
           desc: "Get hands-on with controls that put you in charge.",
+          video: "Joystickandswitches",
         },
-        {
-          title: "Lasers, LEDs, and Displays",
-          desc: "Add some pizzazz with lasers, RGB lights, and OLED screens.",
-        },
-        {
-          title: "Motors and Rotors",
-          desc: "Make your projects move with servo and DC motors.",
-        },
-        {
-          title: "Sound and More",
-          desc: "Pump up the volume with an audio module and 3W speaker, or go high-tech with metal geared motors and propellers.",
-        },
+        // {
+        //   title: "Lasers, LEDs, and Displays",
+        //   desc: "Add some pizzazz with lasers, RGB lights, and OLED screens.",
+        // },
+        // {
+        //   title: "Motors and Rotors",
+        //   desc: "Make your projects move with servo and DC motors.",
+        // },
+        // {
+        //   title: "Sound and More",
+        //   desc: "Pump up the volume with an audio module and 3W speaker, or go high-tech with metal geared motors and propellers.",
+        // },
       ],
     },
   },
@@ -709,6 +735,9 @@ export const mockData: { [key: string]: ProductData } = {
       text1: ["Roboki"],
       text2: ["Zing"],
     },
+    ceoName: "Mr Srikanth Sridharan",
+    ceoPosition: "Co-Founder",
+    companyName: "Think Pro Academy",
     subheading:
       "A durable and upgradable kit packed with everything you need to build, learn, and explore robotics. Perfect for kids, hobbyists, and budding engineers alike.",
     images: ["assets/roboki/roboki.png", "assets/roboki/robokihardware1.png"],
@@ -872,6 +901,9 @@ export const mockData: { [key: string]: ProductData } = {
       text1: ["Zing"],
       text2: ["Zing"],
     },
+    ceoName: "Mr Srikanth Sridharan",
+    ceoPosition: "Co-Founder",
+    companyName: "Think Pro Academy",
     subheading:
       "A 38 cm marvel with 17 degrees of freedom, crafted for endless exploration and creativity.",
     images: ["assets/zing/zing.png", "assets/zing/zinghardware1.png"],
@@ -1046,6 +1078,9 @@ export const mockData: { [key: string]: ProductData } = {
       text1: ["Crawl-e"],
       text2: ["Zing"],
     },
+    ceoName: "Mr. Abhishek Reddy",
+    ceoPosition: "Director",
+    companyName: "Magnum School Solutions",
     subheading:
       "This 6-legged marvel with 18 motors brings the thrill of robotic exploration to life with nimble moves and high-tech features.",
     images: ["assets/crawle/crawle.png", "assets/crawle/crawlehard1.png"],
@@ -1064,36 +1099,42 @@ export const mockData: { [key: string]: ProductData } = {
             heading: "Spider-Like Agility",
             description:
               "With 18 motors and 6 legs, Crawl-e moves with the precision and versatility of a spider. Perfect for intricate tasks and dynamic movements.",
+            video: "spider",
           },
           {
             icon: "assets/zing/Featured icon (13).png",
             heading: "Flexible Movement",
             description:
               "From crawling to turning, Crawl-e handles a variety of actions with smooth, coordinated movements.",
+            video: "flexible",
           },
           {
             icon: "assets/zing/Featured icon (14).png",
             heading: "Interactive Fun",
             description:
               "Features a high-quality 3W speaker for audio feedback and options for plug-and-play sensors, AI cameras, and laser cannons.",
+            video: "interactive",
           },
           {
             icon: "assets/zing/Featured icon (15).png",
             heading: "Tech-Packed Sensors",
             description:
               "Includes an ultrasonic sensor for obstacle detection and a range of other sensors to enhance interaction.",
+            video: "tech",
           },
           {
             icon: "assets/zing/Featured icon (16).png",
             heading: "Versatile Connectivity",
             description:
               "Supports WiFi, Bluetooth 5.0, and USB connections. Program and control Crawl-e using Plode for a comprehensive robotic experience.",
+            video: "versatile",
           },
           {
             icon: "assets/zing/Featured icon (17).png",
             heading: "DIY-Friendly Design",
             description:
               "Designed with replaceable parts and a 3D simulator coming soon, making it easy to customize and repair.",
+            video: "friendly",
           },
         ],
       },
@@ -1220,6 +1261,9 @@ export const mockData: { [key: string]: ProductData } = {
       text1: ["Klaw-b"],
       text2: ["Zing"],
     },
+    ceoName: "Sachin Srivastav",
+    ceoPosition: "Director",
+    companyName: "Dabotics India Pvt Ltd",
     subheading:
       "A versatile robotic arm with a built-in gripper, perfect for hands-on learning and creative projects. Control it manually or program its movements with ease.",
     images: ["assets/klawb/klawb.png", "assets/klawb/klawbhardware1.png"],
@@ -1426,6 +1470,9 @@ export const mockData: { [key: string]: ProductData } = {
       text1: ["Plode:"],
       text2: ["Zing"],
     },
+    ceoName: "Mr Srikanth Sridharan",
+    ceoPosition: "Co-Founder",
+    companyName: "Think Pro Academy",
     subheading:
       "The one-stop-shop to interact with your devices and learn more about coding and robotics. Play with your device or write a creative code of your own.",
     images: ["assets/plode/plodeHomeImg.png", "assets/crawle/crawlehard1.png"],
@@ -1852,6 +1899,9 @@ export const mockData: { [key: string]: ProductData } = {
       text1: ["Plode:"],
       text2: ["Zing"],
     },
+    ceoName: "Mr Srikanth Sridharan",
+    ceoPosition: "Co-Founder",
+    companyName: "Think Pro Academy",
     subheading:
       "The one-stop-shop to interact with your devices and learn more about coding and robotics. Play with your device or write a creative code of your own.",
     images: ["assets/plode/plodeHomeImg.png", "assets/crawle/crawlehard1.png"],

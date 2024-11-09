@@ -1,10 +1,13 @@
+"use client";
 import { highlightWords } from "@/app/utility/highlightWords";
-import React from "react";
+import renderVideo from "@/videoImport";
+import React, { useState } from "react";
 
 interface HardwareFeature {
   icon: string;
   heading: string;
   description: string;
+  video?: any;
 }
 
 interface HardwareSection {
@@ -41,6 +44,7 @@ const HardwareProductFeatures: React.FC<{ hardware: HardwareData }> = ({
   hardware,
 }) => {
   const { section1 } = hardware;
+  const [selectedIndex, setSelectedIndex] = useState(-1);
 
   return (
     <div>
@@ -62,7 +66,8 @@ const HardwareProductFeatures: React.FC<{ hardware: HardwareData }> = ({
                 hardware.section1.features.length / 2 > index && (
                   <div
                     key={index}
-                    className="flex flex-col items-start space-y-1"
+                    className="flex flex-col items-start space-y-1 cursor-pointer "
+                    onClick={() => setSelectedIndex(index)}
                   >
                     <div className="">
                       {/* Icon for the feature */}
@@ -84,12 +89,28 @@ const HardwareProductFeatures: React.FC<{ hardware: HardwareData }> = ({
           </div>
 
           {/* Right Side: Central Image */}
-          <div className="relative flex justify-center">
-            <img
-              src={hardware.section1.centerImage}
-              alt="Product Image"
-              className="max-w-full h-auto"
-            />
+          <div className="relative flex justify-center  ">
+            {selectedIndex == -1 ? (
+              <img
+                src={hardware.section1.centerImage}
+                alt="Product Image"
+                className="max-w-full h-auto"
+              />
+            ) : (
+              <video
+                src={renderVideo(
+                  hardware.section1.features[selectedIndex].video
+                )}
+                className="w-[488px] h-[696px]  rounded-xxl"
+                autoPlay
+                loop
+                muted
+                style={{
+                  width: "488px",
+                  height: "696px",
+                }}
+              />
+            )}
           </div>
 
           <div className="space-y-10 lg:ml-20">
@@ -98,7 +119,8 @@ const HardwareProductFeatures: React.FC<{ hardware: HardwareData }> = ({
                 hardware.section1.features.length / 2 <= index && (
                   <div
                     key={index}
-                    className="flex flex-col items-start space-y-1"
+                    className="flex flex-col items-start space-y-1 cursor-pointer"
+                    onClick={() => setSelectedIndex(index)}
                   >
                     <div className="">
                       {/* Icon for the feature */}

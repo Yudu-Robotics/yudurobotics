@@ -65,7 +65,7 @@ export default function Zing() {
         {renderSvg(data.sectionHeader)}
       </div>
       <div className="py-8 lg:py-16 px-12 lg:px-28 text-black ">
-        <ProductCeoReviewsContainer comment={data.ceoComment} />
+        <ProductCeoReviewsContainer comment={data} />
         <div className="py-8 lg:py-12">
           <Unboxing />
         </div>

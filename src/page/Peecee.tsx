@@ -99,7 +99,7 @@ export default function Peecee() {
           <GlobalAwards />
         </div>
         <div className="py-8 lg:py-16">
-          <ProductCeoReviewsContainer comment={data.ceoComment} />
+          <ProductCeoReviewsContainer comment={data} />
         </div>
         <div className="py-8 lg:py-12">
           <Unboxing />

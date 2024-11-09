@@ -66,7 +66,7 @@ export default function CrawlE() {
       </div>
       <div className="px-12 lg:px-28 text-black py-5 lg:py-10">
         <div className="py-8 lg:py-16">
-          <ProductCeoReviewsContainer comment={data.ceoComment} />
+          <ProductCeoReviewsContainer comment={data} />
         </div>
         <div className="py-8 lg:py-12">
           <Unboxing />

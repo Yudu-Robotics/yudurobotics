@@ -4,7 +4,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import renderSvg from "@/svgImport";
 import { comment } from "postcss";
 
-const ProductCeoReviewsContainer: React.FC<{ comment: string }> = ({
+const ProductCeoReviewsContainer: React.FC<{ comment: any }> = ({
   comment,
 }) => {
   return (
@@ -15,7 +15,7 @@ const ProductCeoReviewsContainer: React.FC<{ comment: string }> = ({
         <div className="flex flex-col items-center space-y-6 sm:px-20 px-5">
           <div className="flex items-center">
             <p className="text-center  items-center font-piepie text-lg md:text-2xl lg:text-3xl tracking-wider ">
-              {comment}
+              {comment.ceoComment}
             </p>
           </div>
         </div>
@@ -26,8 +26,10 @@ const ProductCeoReviewsContainer: React.FC<{ comment: string }> = ({
               <AvatarFallback>CEO</AvatarFallback>
             </Avatar>
           </div>
-          <h4 className="mt-2 text-xl font-semibold">Ravi Mehta</h4>
-          <p className="font-extralight">CEO, Innovatech Solution</p>
+          <h4 className="mt-2 text-xl font-semibold">{comment.ceoName}</h4>
+          <p className="font-extralight">
+            {comment.ceoPosition}, {comment.companyName}
+          </p>
         </div>
       </div>
       <div className="lg:flex justify-end mt-4 hidden">

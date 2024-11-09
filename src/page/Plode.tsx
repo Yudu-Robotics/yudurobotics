@@ -90,7 +90,7 @@ export default function Plode() {
       </div>
       <div className="px-4 sm:px-12 lg:px-28">
         <div className="py-8 lg:py-16 -mx-10">
-          <ProductCeoReviewsContainer comment={data.ceoComment} />
+          <ProductCeoReviewsContainer comment={data} />
         </div>
         <div className="text-sm py-8  text-center font-bold flex flex-col space-y-6 justify-center items-center">
           <p className="text-[#4A4A4F]">
@@ -136,7 +136,7 @@ export default function Plode() {
       </div>
       <div className="px-4 sm:px-12 lg:px-28  text-black py-5 lg:py-10">
         <div className="py-8 lg:py-16">
-          <ProductCeoReviewsContainer comment={data.ceoComment} />
+          <ProductCeoReviewsContainer comment={data} />
         </div>
         <div className="px-4 sm:px-12 lg:px-28 text-black py-5 lg:py-10">
           {<HardwareProductFeatures hardware={data.features_data} />}
@@ -223,7 +223,7 @@ export default function Plode() {
           </div>
         </div>
         <div className="py-8 lg:py-16">
-          <ProductCeoReviewsContainer comment={data.ceoComment} />
+          <ProductCeoReviewsContainer comment={data} />
         </div>
         <div className="py-8 lg:py-16 min-h-[30vh] flex flex-col sm:flex-row">
           <div className="sm:w-1/2 w-full flex justify-center items-center ">
