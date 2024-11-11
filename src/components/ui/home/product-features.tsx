@@ -10,7 +10,7 @@ function ProductFeatures() {
   ];
   return (
     <>
-      <div className="bg-primary rounded-xxl text-primary-foreground px-8  lg:px-16 pt-20 tracking-wide pb-6">
+      <div className="bg-primary rounded-xxl text-primary-foreground px-8  lg:px-16 pt-12 sm:pt-20 tracking-wide pb-6">
         <div className="flex flex-col justify-between space-y-16 lg:flex-row lg:space-y-0">
           <div className="w-[100%] lg:w-[55%]">
             <h6> Newly Launched!</h6>

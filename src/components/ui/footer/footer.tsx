@@ -100,8 +100,8 @@ const Footer = () => {
     <div className="text-primary-foreground flex flex-col justify-around">
       {/* First Section */}
       <div className="flex flex-col space-y-16 lg:flex-row lg:justify-between">
-        <div className="flex flex-col justify-center text-center items-center lg:items-start lg:text-start">
-          <h1 className="font-piepie text-2xl lg:text-6xl">
+        <div className="flex flex-col justify-center text-start items-center lg:items-start lg:text-start">
+          <h1 className="font-piepie text-4xl lg:text-6xl">
             Ready to Innovate Together?
           </h1>
           <h1 className="font-thin py-4">
@@ -123,7 +123,7 @@ const Footer = () => {
       </div>
       {/* Contact us Section */}
       <div className="py-20">
-        <div className="flex flex-col text-center lg:items-start">
+        <div className="flex flex-col  lg:items-start">
           <h1>Contact us</h1>
 
           <h1 className="font-piepie text-3xl lg:text-4xl tracking-wider">
@@ -184,7 +184,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="flex flex-col space-y-4">
+          <div className="hidden sm:flex flex-col space-y-4">
             <h1 className="text-xl">Get the Plode app</h1>
             <a
               href="https://apps.apple.com/us/app/plode/id1580203387"

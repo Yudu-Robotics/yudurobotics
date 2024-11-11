@@ -18,7 +18,7 @@ const SearchAndFilter: React.FC<{
   onAgeGroupChange: (index: number) => void;
 }> = ({ filters, ageGroups, onFilterChange, onAgeGroupChange }) => {
   return (
-    <div className="flex flex-col space-y-6 lg:flex-row lg:justify-between lg:space-y-0">
+    <div className="flex flex-col space-y-6 lg:flex-row lg:justify-between  items-center lg:space-y-0">
       <div className="flex items-center space-x-2 border border-secondary-foreground rounded-3xl px-4 py-3 w-[100%] lg:w-[20%] ">
         <img className="w-6" src={renderImg("searchIcon")} alt="Background" />
         <input type="text" className="" placeholder="Search" />

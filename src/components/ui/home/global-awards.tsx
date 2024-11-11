@@ -9,7 +9,7 @@ function GlobalAwards() {
 
   return (
     <div className="flex flex-col lg:flex-row justify-center items-center space-y-2 lg:space-y-0">
-      <div className="font-piepie text-2xl text-center lg:text-start lg:text-5xl w-full lg:w-[50%]">
+      <div className="font-piepie text-4xl text-center lg:text-start lg:text-5xl w-full lg:w-[50%]">
         Being recognized globally
       </div>
       <div className="flex flex-col lg:flex-row lg:space-x-10 ">

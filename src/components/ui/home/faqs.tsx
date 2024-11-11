@@ -50,10 +50,10 @@ const FAQs = () => {
   return (
     <div className="flex flex-col space-y-4 ">
       <div className="flex flex-col space-y-2 justify-center items-center">
-        <h1 className="font-piepie  lg:text-3xl text-black tracking-wider">
+        <h1 className="font-piepie  text-center sm:text-start text-3xl text-black tracking-wider">
           Got Questions? We’ve Got Answers
         </h1>
-        <p className="text-secondary-foreground">
+        <p className="text-secondary-foreground text-center sm:text-start ">
           Find the information you need with our frequently asked questions.
         </p>
       </div>

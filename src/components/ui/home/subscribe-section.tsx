@@ -1,13 +1,13 @@
 export default function SubscribeSection() {
   return (
-    <div className="bg-primary rounded-xxl text-primary-foreground px-8 py-16 flex flex-col items-center justify-center">
+    <div className="bg-primary rounded-xxl text-primary-foreground px-5 sm:px-8 py-8 sm:py-16 flex flex-col items-center justify-center">
       {/* Main Heading */}
       <h1 className="text-3xl md:text-5xl mb-4 text-center font-piepie tracking-wide">
         Partner with Yudu
       </h1>
 
       {/* Subtitle */}
-      <p className="text-base md:text-lg text-center font-thin w-[60%] opacity-65">
+      <p className="text-base md:text-lg text-center font-thin sm:w-[60%] opacity-65">
         Join us in revolutionizing robotics. Get exclusive updates,
         collaboration opportunities, and insights straight to your inbox. Let’s
         innovate together.
@@ -31,7 +31,7 @@ export default function SubscribeSection() {
         </div>
 
         {/* Privacy Policy */}
-        <p className="text-sm py-2 mt-4 lg:mt-0 opacity-65">
+        <p className="text-sm py-2 mt-4 lg:mt-0 opacity-65 pb-4 sm:pb-0">
           We care about your data in our{" "}
           <a href="#" className="underline">
             privacy policy

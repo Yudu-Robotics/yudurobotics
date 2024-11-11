@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import PrivacyContent from "./PrivacyContent";
 import TermsContent from "./TermsContent";
+import renderImg from "@/imgImport";
 const footerData = [
   {
     title: "Product",
@@ -97,21 +98,21 @@ export default function BottomFooter() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-12">
           {footerData.map((section, index) => (
             <div key={index}>
-              <h4 className="font-thin mb-4 text-xs">{section.title}</h4>
+              <h4 className="font-thin mb-4 text-lg">{section.title}</h4>
               <ul>
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
                     {link.dialog ? (
                       <button
                         onClick={() => handleDialogOpen(link.dialog)}
-                        className="text-primary-foreground transition-colors duration-200 text-sm font-semibold"
+                        className="text-primary-foreground transition-colors duration-200 text-sm lg:text-lg font-semibold"
                       >
                         {link.name}
                       </button>
                     ) : (
                       <a
                         href={link.href}
-                        className="text-primary-foreground transition-colors duration-200 text-sm font-semibold"
+                        className="text-primary-foreground transition-colors duration-200 text-sm lg:text-lg font-semibold"
                       >
                         {link.name}
                       </a>
@@ -152,6 +153,33 @@ export default function BottomFooter() {
           </div>
         </DialogContent>
       </Dialog>
+      <div className=" sm:hidden flex-col space-y-4 mt-4">
+        <h1 className="text-xl">Get the Plode app</h1>
+        <div className="flex gap-5">
+          <a
+            href="https://apps.apple.com/us/app/plode/id1580203387"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              className=""
+              src={renderImg("appStore")}
+              alt="Download on the App Store"
+            />
+          </a>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.bibox.bisoftsuite&hl=en_IN&pli=1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              className=""
+              src={renderImg("googlePlay")}
+              alt="Get it on Google Play"
+            />
+          </a>
+        </div>
+      </div>
     </footer>
   );
 }

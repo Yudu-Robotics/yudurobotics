@@ -36,7 +36,7 @@ export default async function HomePage() {
       <div className="px-4 sm:px-16 md:px-20 lg:px-24 xl:px-28 py-4 bg-primary ">
         <div className="flex flex-col space-y-16 lg:flex-row lg:space-y-0 justify-between py-10">
           <div className="w-full">
-            <a href="#product-features-component" className="mb-6">
+            <a href="#product-features-component" className="mb-6 ">
               <NewFeaturesCard />
             </a>
 
@@ -44,7 +44,7 @@ export default async function HomePage() {
 
             <div className="space-y-4">
               {/* Main Headline */}
-              <div className="font-piepie text-5xl md:text-6xl lg:text-7xl tracking-wider text-primary-foreground">
+              <div className="font-piepie text-4xl md:text-6xl lg:text-7xl tracking-wider text-primary-foreground text-center sm:text-left">
                 {highlightWords(
                   data.heading,
                   data.wordsToHighlight.text1,
@@ -53,7 +53,7 @@ export default async function HomePage() {
               </div>
 
               {/* Subtext */}
-              <div className="text-[#F2D8FE] text-lg md:text-xl lg:text-2xl font-body w-[100%] lg:w-[75%]">
+              <div className="text-[#F2D8FE] text-lg md:text-xl lg:text-2xl font-body w-[100%] lg:w-[75%] text-center sm:text-left">
                 {data.subheading}
               </div>
             </div>
@@ -84,14 +84,11 @@ export default async function HomePage() {
         {renderSvg("headerSection")}
       </div>
       {/* Middle Part */}
-      <div className="px-12 lg:px-28 text-black py-5 lg:py-10 ">
+      <div className="px-4 sm:px-12 lg:px-28 text-black py-5 lg:py-10 ">
         <div className="py-5 lg:py-10">
           <GlobalAwards />
         </div>
-        <div
-          id="product-features-component"
-          className="-mx-5 lg:mx-0 py-5 lg:py-10"
-        >
+        <div id="product-features-component" className=" lg:mx-0 lg:py-10">
           <ProductFeatures />
         </div>
         <div>
@@ -103,7 +100,7 @@ export default async function HomePage() {
         <div className="-mx-8 lg:-mx-28">
           <TestimonialBanner />
         </div>
-        <div className="-mx-8 sm:mx-0">
+        <div className=" sm:mx-0">
           <SubscribeSection />
         </div>
 
@@ -114,11 +111,11 @@ export default async function HomePage() {
           <LatestPosts />
         </div> */}
 
-        <div className="py-5 lg:py-20 -mx-8 sm:mx-0">
+        <div className="py-5 lg:py-20  sm:mx-0">
           <FAQs />
         </div>
 
-        <div className="mb-24">
+        <div className="sm:mb-24">
           <GetInTouch />
         </div>
       </div>

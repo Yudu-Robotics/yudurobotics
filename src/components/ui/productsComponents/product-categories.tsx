@@ -114,17 +114,18 @@ export default function ProductCategories() {
       />
       <div className="flex flex-col space-y-2 lg:flex-row">
         <div className="flex flex-col space-y-2 lg:space-y-6 w-[100%] lg:w-[25%]">
-          <h2 className="text-primary font-semibold text-sm lg:text-sm text-center lg:text-start">
+          <h2 className="text-primary font-semibold text-sm   lg:text-start">
             Product Categories
           </h2>
           <div className="flex flex-col space-y-3 lg:ml-4 items-center ">
             {product_categories.map((category: string, key: number) => (
               <div
                 key={key}
-                className={`flex justify-start w-full p-2  items-center font-bold text-xl lg:text-sm cursor-pointer ${selectedCategory === category
-                  ? "text-primary bg-purple-100 rounded-full "
-                  : ""
-                  }`}
+                className={`flex justify-start w-full sm:p-2  items-center font-semibold sm:font-bold text-sm lg:text-sm cursor-pointer ${
+                  selectedCategory === category
+                    ? "text-primary bg-purple-100 rounded-full "
+                    : ""
+                }`}
                 onClick={() => handleCategorySelection(category)}
               >
                 {category}

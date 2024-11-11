@@ -2,10 +2,12 @@ import React from "react";
 
 export const NewFeaturesCard = () => {
   return (
-    <div className="flex text-primary text-xs font-semibold">
+    <div className="flex text-primary text-xs font-semibold mb-5">
       <div className="flex bg-primary-foreground rounded-3xl py-1 px-3 space-x-2 items-center">
-        <button className="rounded-full border border-primary px-1">New Product</button>
-        <div className="flex items-center">
+        <button className="rounded-full border border-primary px-1 text-nowrap">
+          New Product
+        </button>
+        <div className="flex items-center text-nowrap">
           <p>We’ve just released a new feature</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
