@@ -6,7 +6,7 @@ export default function ProductCatalog() {
   return (
     <>
       <div className="relative ">
-        <div className="w-full  justify-end items-start absolute -top-14 lg:-top-28 lg:right-24 hidden right-0">
+        <div className="w-full  justify-end items-start absolute -top-20 left-0 hidden">
           <img
             src={renderImg("zigzaginhome")}
             className="w-[100px] lg:w-[200px]"

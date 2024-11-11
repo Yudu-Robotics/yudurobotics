@@ -8,10 +8,8 @@ export default function HomeLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="">
-      <ClientLayout>
-        {children}
-      </ClientLayout>
+    <div className="overflow-x-hidden">
+      <ClientLayout>{children}</ClientLayout>
     </div>
   );
 }

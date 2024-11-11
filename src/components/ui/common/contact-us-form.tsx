@@ -107,9 +107,10 @@ export default function ContactForm() {
                 name="entry.1725892135"
                 value={formData["entry.1725892135"]}
                 onChange={handleChange}
-                className="mt-1 block w-full px-4 py-2 border border-secondary-foreground text-sm text-secondary-foreground rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                className="mt-1 block w-full px-4 py-2 text-sm text-secondary-foreground rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="Full name"
                 required
+                style={{ border: "1px solid #D6D6D8" }}
               />
             </div>
             <div className="w-1/2">
@@ -121,9 +122,10 @@ export default function ContactForm() {
                 name="entry.2098983406"
                 value={formData["entry.2098983406"]}
                 onChange={handleChange}
-                className="mt-1 block w-full px-4 py-2 border border-secondary-foreground text-sm rounded-md text-secondary-foreground shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                className="mt-1 block w-full px-4 py-2  text-sm rounded-md text-secondary-foreground shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="you@company.com"
                 required
+                style={{ border: "1px solid #D6D6D8" }}
               />
             </div>
           </div>
@@ -136,9 +138,10 @@ export default function ContactForm() {
               name="entry.1155783579"
               value={formData["entry.1155783579"]}
               onChange={handleChange}
-              className="mt-1 block w-full px-4 py-2 border border-secondary-foreground text-sm rounded-md text-secondary-foreground shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+              className="mt-1 block w-full px-4 py-2  text-sm rounded-md text-secondary-foreground shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="Enter your phone number"
               required
+              style={{ border: "1px solid #D6D6D8" }}
             />
           </div>
           <div>
@@ -149,8 +152,9 @@ export default function ContactForm() {
               name="entry.1655141018"
               value={formData["entry.1655141018"]}
               onChange={handleChange}
-              className="mt-1 block w-full px-4 py-2 border border-secondary-foreground text-sm text-secondary-foreground rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+              className="mt-1 block w-full px-4 py-2  text-sm text-secondary-foreground rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
               required
+              style={{ border: "1px solid #D6D6D8" }}
             >
               <option value="" disabled>
                 Select an option
@@ -168,10 +172,11 @@ export default function ContactForm() {
               name="entry.557944683"
               value={formData["entry.557944683"]}
               onChange={handleChange}
-              className="mt-1 block w-full px-4 py-2 border border-secondary-foreground text-sm text-secondary-foreground rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+              className="mt-1 block w-full px-4 py-2  text-sm text-secondary-foreground rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="Leave us a message..."
               rows={4}
               required
+              style={{ border: "1px solid #D6D6D8" }}
             ></textarea>
           </div>
 
