@@ -18,7 +18,7 @@ import FloatingWhatsApp from "@/components/ui/common/floating-whatsapp";
 
 const ClientLayout = ({ children }: { children: React.ReactNode }) => {
   const NavBarItems = [
-    { name: "Y(Our) Products", link: "/products" },
+    { name: "Our Products", link: "/products" },
     { name: "The Partner Program", link: "/partner" },
     // { name: "Blog", link: "/blog" },
   ];
