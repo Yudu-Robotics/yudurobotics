@@ -21,15 +21,14 @@ interface HowItWork {
 }
 
 const Working: React.FC<{ data: HowItWork }> = ({ data }) => {
-
   return (
     <div className="max-w-full flex flex-col space-y-10 py-10">
       <div className="flex flex-col space-y-2 justify-centerv items-center text-center">
         <h1 className="text-primary text-xs font-semibold ">Hardware</h1>
-        <h2 className="text-4xl lg:text-5xl font-piepie tracking-wide ">
+        <h2 className="text-4xl lg:text-5xl xl:text-7xl font-piepie tracking-wide ">
           {highlightWords(data.heading, ["Works"], "text-primary")}
         </h2>
-        <h2 className="text-sm text-secondary-foreground  w-[100%] lg:w-[40%]">
+        <h2 className="text-sm text-secondary-foreground sm:text-lg xl:text-xl  w-[100%] lg:w-[40%]">
           {data.subheading}
         </h2>
       </div>
