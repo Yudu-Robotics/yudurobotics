@@ -6,6 +6,7 @@ import BottomFooter from "./bottom-footer";
 import renderSvg from "@/svgImport";
 import { usePathname } from "next/navigation";
 import { tree } from "next/dist/build/templates/app-page";
+import FooterIcon from "./fotterIcon";
 
 const Footer = () => {
   const route = [
@@ -17,33 +18,14 @@ const Footer = () => {
     "klaw_b",
     "plode",
   ];
-
-  const contact_options = [
-    {
-      type: "Email",
-      text: "Our friendly team is here to help.",
-      contact_by: "support@yudurobotics.com",
-      icon_image: "mailIcon",
-    },
-    {
-      type: "Live chat",
-      text: "Our friendly team is here to help.",
-      contact_by: "start new chat",
-      icon_image: "liveChatIcon",
-    },
-    {
-      type: "Office",
-      text: "Come say hello at our office HQ.",
-      contact_by:
-        "No.29, Bereterna Agrahara Next to Play Factor Hosur Main Road, Electronic City Bangalore Karnataka, India",
-      icon_image: "mapIcon",
-    },
-    {
-      type: "Phone",
-      text: "Mon-Fri from 8am to 5pm.",
-      contact_by: "+91 9606755032",
-      icon_image: "phoneIcon",
-    },
+  const iconColor = [
+    "#BBA5FE",
+    "#B3A61A",
+    "#B3A61A",
+    "#A5E8FE",
+    "#A5E8FE",
+    "#1AB374",
+    "#BBA5FE",
   ];
 
   const social_share = [
@@ -87,6 +69,33 @@ const Footer = () => {
     5: { bgColor: "#F7812D", textColor: "#FEFBF9" },
     6: { bgColor: "#2CF7A4", textColor: "#0A4029" },
   };
+  const contact_options = [
+    {
+      type: "Email",
+      text: "Our friendly team is here to help.",
+      contact_by: "support@yudurobotics.com",
+      icon_image: <FooterIcon iconType="mail" color={iconColor[index]} />,
+    },
+    {
+      type: "Live chat",
+      text: "Our friendly team is here to help.",
+      contact_by: "start new chat",
+      icon_image: <FooterIcon iconType="livechat" color={iconColor[index]} />,
+    },
+    {
+      type: "Office",
+      text: "Come say hello at our office HQ.",
+      contact_by:
+        "No.29, Bereterna Agrahara Next to Play Factor Hosur Main Road, Electronic City Bangalore Karnataka, India",
+      icon_image: <FooterIcon iconType="map" color={iconColor[index]} />,
+    },
+    {
+      type: "Phone",
+      text: "Mon-Fri from 8am to 5pm.",
+      contact_by: "+91 9606755032",
+      icon_image: <FooterIcon iconType="phone" color={iconColor[index]} />,
+    },
+  ];
 
   if (index in styles) {
     const { bgColor: newBgColor, textColor: newTextColor } = styles[index];
@@ -147,7 +156,7 @@ const Footer = () => {
                       type: string;
                       text: string;
                       contact_by: string;
-                      icon_image: string;
+                      icon_image: any;
                     }
                   | {
                       type: string;
@@ -158,7 +167,7 @@ const Footer = () => {
                 key: number
               ) => (
                 <div key={key} className="flex flex-col space-y-2">
-                  {renderSvg(value.icon_image)}
+                  <div>{value.icon_image}</div>
                   <h1>{value.type}</h1>
                   <p className="font-thin">{value.text}</p>
                   <p className="w-[70%] text-xl">{value.contact_by}</p>
