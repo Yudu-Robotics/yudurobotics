@@ -17,7 +17,7 @@ const CurriculumSteps: React.FC<{
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="flex flex-col md:space-y-4 space-y-1">
           <h1 className="text-xs text-primary">Curriculum</h1>
-          <h2 className="text-lg md:text-5xl font-piepie w-[100%] md:w-[80%]">
+          <h2 className="text-3xl md:text-5xl font-piepie w-[100%] md:w-[80%]">
             {data.heading}
           </h2>
           <h3 className="text-sm text-secondary-foreground">
@@ -31,7 +31,7 @@ const CurriculumSteps: React.FC<{
               <>
                 {data.step.length / 2 > index && (
                   <div key={index} className="flex flex-col space-y-1">
-                    <h1 className="font-bold">{value.title}</h1>
+                    <h1 className="font-bold text-[#303036]">{value.title}</h1>
                     <p className="text-xs text-secondary-foreground">
                       {value.desc}
                     </p>
@@ -48,7 +48,9 @@ const CurriculumSteps: React.FC<{
               <>
                 {data.step.length / 2 <= index && (
                   <div key={index}>
-                    <h1 className="text-lg font-bold">{value.title}</h1>
+                    <h1 className="text-lg font-bold text-[#303036]">
+                      {value.title}
+                    </h1>
                     <p className="text-xs text-secondary-foreground">
                       {value.desc}
                     </p>

@@ -78,8 +78,10 @@ const HardwareProductFeatures: React.FC<{ hardware: HardwareData }> = ({
                       />
                     </div>
                     <div>
-                      <h3 className="font-bold text-lg">{feature.heading}</h3>
-                      <p className="text-secondary-foreground text-sm">
+                      <h3 className="font-bold text-lg xl:text-xl">
+                        {feature.heading}
+                      </h3>
+                      <p className="text-secondary-foreground text-sm xl:text-lg">
                         {feature.description}
                       </p>
                     </div>
@@ -131,8 +133,10 @@ const HardwareProductFeatures: React.FC<{ hardware: HardwareData }> = ({
                       />
                     </div>
                     <div>
-                      <h3 className="font-bold text-lg">{feature.heading}</h3>
-                      <p className="text-secondary-foreground text-sm">
+                      <h3 className="font-bold text-lg xl:text-xl">
+                        {feature.heading}
+                      </h3>
+                      <p className="text-secondary-foreground text-sm xl:text-lg">
                         {feature.description}
                       </p>
                     </div>

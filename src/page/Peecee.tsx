@@ -68,7 +68,7 @@ export default function Peecee() {
               </div>
 
               {/* Subtext */}
-              <div className="text-opacity-35 text-primary-foreground text-xs md:text-sm lg:text-base font-body w-[100%] lg:w-[60%]">
+              <div className="text-opacity-35 text-primary-foreground text-sm md:text-ms lg:text-lg font-body w-[100%] lg:w-[60%]">
                 {data.subheading}
               </div>
             </div>
@@ -94,7 +94,7 @@ export default function Peecee() {
         {/* <img src={renderImg("headerSection")} className="w-full" /> */}
         {renderSvg(data.sectionHeader)}
       </div>
-      <div className="px-12 lg:px-28 text-black py-5 lg:py-10 ">
+      <div className="px-4 sm:px-12 lg:px-28 text-black py-5 lg:py-10 ">
         <div className="py-5 lg:py-10">
           <GlobalAwards />
         </div>
@@ -106,7 +106,9 @@ export default function Peecee() {
         </div>
         <div className="text-sm py-8 lg:py-16 text-center font-bold flex flex-col space-y-6 justify-center items-center">
           <p>
-            Hover over each feature below to{" "}
+            <span className="text-[#4A4A4F]">
+              Hover over each feature below to{" "}
+            </span>
             <span className="text-primary italic">see it in action!</span>
           </p>
           {renderSvg("doubleArrow")}
@@ -121,7 +123,7 @@ export default function Peecee() {
               showArrow={true}
             />
           </div>
-          <div className="flex  justify-center items-center">
+          <div className="flex py-5  justify-center items-center">
             <TeamPlay
               // @ts-ignore
               hardware={data.features_data}
@@ -144,13 +146,13 @@ export default function Peecee() {
         <div className="">
           <PlodeSoftware jumppingdata={data.jumppingButton?.[1] || {}} />
         </div>
-        <div className="lg:-mt-52 ">
+        <div className="lg:-mt-56 ">
           <SoftwareAdaptive />
         </div>
-        <div className=" md:py-20">
+        <div className=" md:py-20 ">
           <VersatileSoftware />
         </div>
-        <div>
+        <div className="">
           <ExtraFeatures
             data={data.features_data?.software_experience[0]}
             title="software"

@@ -19,13 +19,13 @@ function Unboxing() {
   ];
   return (
     <div className="flex flex-col space-y-12 md:space-y-32">
-      <div className="flex flex-col space-y-6 md:space-y-0 md:flex-row md:space-x-32">
+      <div className="flex flex-col space-y-6 md:space-y-0 md:flex-row md:space-x-32 justify-center items-center ">
         <div className="flex flex-col space-y-2 ">
           <h1 className="text-primary text-xs font-semibold ">Hardware</h1>
-          <h2 className="text-4xl lg:text-6xl font-piepie tracking-wide">
+          <h2 className="text-4xl lg:text-6xl xl:text-7xl font-piepie tracking-wide">
             Build to Last and Play
           </h2>
-          <h2 className="text-sm text-secondary-foreground  ">
+          <h2 className="text-sm sm:text-lg text-secondary-foreground  ">
             PeeCee TED is designed to be as tough as it is fun, ready for all
             the adventures you can dream up.
           </h2>
@@ -40,8 +40,8 @@ function Unboxing() {
               <div key={index} className="flex space-x-2">
                 <div>{renderSvg(value.icon)}</div>
                 <div className="flex flex-col space-y-1">
-                  <h1 className="font-bold">{value.heading}</h1>
-                  <h2 className="text-xs text-secondary-foreground md:w-[80%]">
+                  <h1 className="font-semibold sm:text-xl ">{value.heading}</h1>
+                  <h2 className="text-xs sm:text-md xl:text-lg text-secondary-foreground md:w-[80%]">
                     {value.subheading}
                   </h2>
                 </div>

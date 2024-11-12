@@ -22,7 +22,7 @@ const PlodeSoftware: React.FC<PlodeSoftwareProps> = ({ jumppingdata }) => {
         {renderSvg("headerSection")}
       </div>
       <div className="bg-primary w-full -mt-1">
-        <div className="flex flex-col space-y-16 lg:flex-row lg:space-y-0 justify-between py-10 px-10 lg:px-20">
+        <div className="flex flex-col space-y-16 lg:flex-row lg:space-y-0 justify-between py-10 sm:px-10 lg:px-20">
           <div className="w-full">
             <div className="mb-6">
               <NewFeaturesCard />
@@ -30,9 +30,9 @@ const PlodeSoftware: React.FC<PlodeSoftwareProps> = ({ jumppingdata }) => {
 
             {/* Main Text */}
 
-            <div className="space-y-4">
+            <div className="space-y-4 px-3">
               {/* Main Headline */}
-              <div className="font-piepie text-xl md:text-6xl lg:text-7xl text-primary-foreground">
+              <div className="font-piepie text-3xl md:text-6xl lg:text-7xl text-primary-foreground">
                 Plode: Smart and Simple Software
               </div>
 

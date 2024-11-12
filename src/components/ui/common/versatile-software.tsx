@@ -26,12 +26,12 @@ const VersatileSoftware: React.FC<SoftwareAdaptiveProps> = ({ data }) => {
     },
   ];
   return (
-    <div className="max-w-full flex flex-col space-y-10 py-10">
+    <div className="max-w-full flex flex-col space-y-10 py-10  sm:mt-16">
       <div className="flex flex-col space-y-2 justify-centerv items-center text-center">
         <h1 className="text-primary text-xs font-semibold ">
           {data ? "" : "Software"}
         </h1>
-        <h2 className="text-4xl lg:text-5xl font-piepie tracking-wide ">
+        <h2 className="text-4xl lg:text-5xl xl:text-7xl font-piepie tracking-wide ">
           {data
             ? highlightWords(data.title, [data.colorTitle], "text-primary")
             : highlightWords(
@@ -40,7 +40,7 @@ const VersatileSoftware: React.FC<SoftwareAdaptiveProps> = ({ data }) => {
                 "text-primary"
               )}
         </h2>
-        <h2 className="text-sm text-secondary-foreground  w-[100%] lg:w-[40%]">
+        <h2 className="text-sm sm:text-lg xl:text-xl text-secondary-foreground  w-[100%] lg:w-[40%]">
           {data?.desc ||
             "Plode is ready for anything, handling everything from your first coding steps to your wildest ideas."}
         </h2>
@@ -61,8 +61,10 @@ const VersatileSoftware: React.FC<SoftwareAdaptiveProps> = ({ data }) => {
               </div>
             </div>
 
-            <h1 className="text-sm font-bold">{feature.title}</h1>
-            <p className="text-xs text-secondary-foreground w-[100%] lg:w-[85%]">
+            <h1 className="text-sm sm:text-xl font-bold pt-4">
+              {feature.title}
+            </h1>
+            <p className="text-xs sm:text-lg text-secondary-foreground w-[100%] lg:w-[85%]">
               {feature.desc}
             </p>
           </div>

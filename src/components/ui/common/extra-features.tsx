@@ -25,7 +25,7 @@ const ExtraFeatures: React.FC<{
 }> = ({ data, title, showArrow }) => {
   const [selectedIndex, setSelectedIndex] = useState(-1);
   return (
-    <div className="flex flex-col space-y-2 lg:space-y-0">
+    <div className="flex flex-col space-y-2 lg:space-y-0 sm:mt-24">
       {showArrow && (
         <div className="hidden lg:flex lg:flex-row lg:justify-center lg:items-center lg:-mb-32 lg:ml-40">
           {renderSvg("handDrawArrow2")}
@@ -33,10 +33,10 @@ const ExtraFeatures: React.FC<{
       )}
       <div className="flex flex-col space-y-2 ">
         <h1 className="text-primary text-xs font-semibold ">{title}</h1>
-        <h2 className="text-4xl lg:text-5xl font-piepie tracking-wide  w-[100%] lg:w-[50%]">
+        <h2 className="text-4xl lg:text-5xl xl:text-7xl font-piepie tracking-wide  w-[100%] lg:w-[50%]">
           {highlightWords(data?.heading, ["Effortless"], "text-primary")}
         </h2>
-        <h2 className="text-sm text-secondary-foreground  w-[100%] lg:w-[35%]">
+        <h2 className="text-sm text-secondary-foreground xl:text-xl w-[100%] lg:w-[35%]">
           {data?.subheading}
         </h2>
       </div>
@@ -55,8 +55,10 @@ const ExtraFeatures: React.FC<{
                   {renderSvg(feature.icon)}
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg">{feature.heading}</h3>
-                  <p className="text-secondary-foreground text-sm">
+                  <h3 className="font-bold text-lg xl:text-xl">
+                    {feature.heading}
+                  </h3>
+                  <p className="text-secondary-foreground text-sm xl:text-lg">
                     {feature.description}
                   </p>
                 </div>

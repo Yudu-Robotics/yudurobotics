@@ -14,7 +14,7 @@ const ProductCeoReviewsContainer: React.FC<{ comment: any }> = ({
         <h1 className="text-center font-thin">Tech</h1>
         <div className="flex flex-col items-center space-y-6 sm:px-20 px-5">
           <div className="flex items-center">
-            <p className="text-center  items-center font-piepie text-lg md:text-2xl lg:text-3xl tracking-wider ">
+            <p className="text-center items-center font-piepie text-2xl md:text-3xl lg:text-5xl tracking-wider ">
               {comment.ceoComment}
             </p>
           </div>

@@ -3,11 +3,11 @@ import React from "react";
 export const NewFeaturesCard = () => {
   return (
     <div className="flex text-primary text-xs font-semibold mb-5">
-      <div className="flex bg-primary-foreground rounded-3xl py-1 px-3 space-x-2 items-center">
-        <button className="rounded-full border border-primary px-1 text-nowrap">
+      <div className="flex bg-primary-foreground rounded-3xl py-1 px-1 sm:px-3 space-x-2 items-center">
+        <button className="rounded-full border border-primary px-1 text-nowrap text-xs sm:text-sm">
           New Product
         </button>
-        <div className="flex items-center text-nowrap">
+        <div className="flex items-center text-nowrap text-xs sm:text-sm">
           <p>We’ve just released a new feature</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"

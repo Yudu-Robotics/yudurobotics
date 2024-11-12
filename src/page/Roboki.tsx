@@ -29,7 +29,7 @@ export default function Roboki() {
 
             <div className="space-y-4">
               {/* Main Headline */}
-              <div className="font-piepie text-5xl md:text-6xl lg:text-7xl tracking-wider text-primary-foreground lg:w-[80%]">
+              <div className="font-piepie text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-wider text-primary-foreground lg:w-[80%]">
                 {highlightWords(
                   data.heading,
                   data.wordsToHighlight.text1,
@@ -38,7 +38,7 @@ export default function Roboki() {
               </div>
 
               {/* Subtext */}
-              <div className="text-primary-foreground text-xs md:text-sm lg:text-base font-body w-[100%] lg:w-[60%]">
+              <div className="text-primary-foreground text-xs md:text-sm lg:text-base xl:text-xl font-body w-[100%] lg:w-[60%]">
                 {data.subheading}
               </div>
             </div>
@@ -64,7 +64,7 @@ export default function Roboki() {
         {/* <img src={renderImg("headerSection")} className="w-full" /> */}
         {renderSvg(data.sectionHeader)}
       </div>
-      <div className="px-12 lg:px-28 text-black py-5 lg:py-10">
+      <div className="px-4 sm:px-12 lg:px-28 text-black py-5 lg:py-10">
         <div className="py-8 lg:py-16">
           <ProductCeoReviewsContainer comment={data} />
         </div>
@@ -79,7 +79,7 @@ export default function Roboki() {
           {renderSvg("doubleArrow")}
         </div>
         <div>{<HardwareProductFeatures hardware={data.features_data} />}</div>
-        <div>
+        <div className="pb-6">
           <LegoFun
             // @ts-ignore
             legoFun={data.legofun}

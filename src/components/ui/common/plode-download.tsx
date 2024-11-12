@@ -28,12 +28,12 @@ const PlodeDownloade: React.FC<PlodeDownloadeProps> = ({
 
           <div className="space-y-4">
             {/* Main Headline */}
-            <div className="font-piepie text-xl md:text-3xl lg:text-5xl tracking-wider text-primary-foreground lg:w-[70%]">
+            <div className="font-piepie text-xl md:text-3xl lg:text-5xl xl:text-7xl tracking-wider text-primary-foreground lg:w-[70%]">
               {heading}
             </div>
 
             {/* Subtext */}
-            <div className="text-primary-foreground text-xs lg:text-sm font-body w-[100%] lg:w-[60%]">
+            <div className="text-primary-foreground text-sm lg:text-lg xl:text-xl font-body w-[100%] lg:w-[60%]">
               {desc}
             </div>
           </div>

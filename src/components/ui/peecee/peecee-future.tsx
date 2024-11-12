@@ -11,18 +11,18 @@ const PeeceeFuture: React.FC<{ peeceeFuture: PeeceeFuture }> = ({
   peeceeFuture,
 }) => {
   return (
-    <div className="flex flex-col space-y-8 md:flex-row md:space-x-28 md:items-center py-10 justify-center">
-      <div className="w-1/2">
+    <div className="flex flex-col-reverse space-y-8 md:flex-row md:space-x-28 md:items-center py-10 justify-center">
+      <div className="sm:w-1/2">
         <img
           src={peeceeFuture.centerImage}
           alt="Product Image"
           className="max-w-full"
         />
       </div>
-      <div className="w-1/2 flex flex-col md:w-[50%] space-y-2">
+      <div className="sm:w-1/2 flex flex-col md:w-[50%] space-y-2">
         <h1 className="text-primary text-xs font-semibold ">Hardware</h1>
 
-        <h2 className="text-4xl lg:text-5xl font-piepie tracking-wide w-[100%] lg:w-[80%] ">
+        <h2 className="text-4xl lg:text-5xl font-piepie tracking-wide w-[100%] lg:w-[80%] text-center sm:text-start">
           {highlightWords(
             peeceeFuture.heading,
             ["Future-Proof"],
