@@ -30,11 +30,6 @@ export default function ProductCatalog() {
               Discover the exciting products we’ve been developing—each designed
               to push the boundaries of robotics.
             </p>
-            <Link href="/products">
-              <Button className="py-6 px-8 text-xs lg:text-sm rounded-3xl hidden sm:flex">
-                View all products {"->"}
-              </Button>
-            </Link>
           </div>
         </div>
       </div>

@@ -1,18 +1,6 @@
 "use client";
-import { useTheme } from "next-themes";
-import { mockData } from "../../data/mockData"; // Adjust the path
 import "../globals.css";
 import Footer from "@/components/ui/footer/footer";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-} from "@/components/ui/navigation-menu";
 import renderSvg from "@/svgImport";
 import { useState } from "react";
 import { Drawer, IconButton } from "@mui/material";
@@ -31,7 +19,7 @@ export default function ProductLayout({
   currentProduct = currentProduct == "crawl_e" ? "zing" : currentProduct;
 
   const NavBarItems = [
-    { name: "Y(Our) Products", link: "/products" },
+    { name: "Our Products", link: "/products" },
     { name: "The Partner Program", link: "/partner" },
   ];
 

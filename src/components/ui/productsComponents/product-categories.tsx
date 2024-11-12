@@ -49,10 +49,13 @@ export default function ProductCategories() {
     initialProductDetails
   );
   const [selectedProduct, setSelectedProduct] = useState<number>(0);
+  const allowedProductNames = ["TED", "Roboki", "Zing", "Crawl-e", "Klaw-b"];
+  const [isAllowedFlag, setIsAllowedFlag] = useState<boolean>(true);
 
   // Update product details when the category or other filters change
   useEffect(() => {
     if (filteredProducts.length > 0) {
+      filteredProducts.length == 1 ? setIsAllowedFlag(false) : setIsAllowedFlag(true);
       setProductDetails(filteredProducts[0]);
     } else {
       setProductDetails(initialProductDetails);
@@ -63,6 +66,8 @@ export default function ProductCategories() {
   const handleProductClick = (index: number, product: Products) => {
     setProductDetails(product);
     setSelectedProduct(index);
+    let isAllowed = allowedProductNames.includes(product.name);
+    setIsAllowedFlag(isAllowed);
   };
 
   // Handle filter change
@@ -167,12 +172,13 @@ export default function ProductCategories() {
                 <p className="font-light text-lg py-1">
                   {productDetails.description}
                 </p>
-                <Link
+                {isAllowedFlag &&(
+                  <Link
                   href={productDetails.link}
                   className="text-primary mt-4 text-base font-bold hover:scale-125"
                 >
                   Learn More {"->"}
-                </Link>
+                </Link>)}
               </div>
             </div>
           </>

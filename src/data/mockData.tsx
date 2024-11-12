@@ -152,7 +152,7 @@ type BlogData = {
 
 export const products = [
   {
-    name: "Ted",
+    name: "TED",
     description:
       "TED is your all-in-one buddy, packed and ready to jump into action whenever you are.",
     image: "assets/products/ted.svg",
