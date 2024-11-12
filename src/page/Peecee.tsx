@@ -163,9 +163,9 @@ export default function Peecee() {
             desc="Download the Plode app today and start coding fun, engaging projects. Whether you’re new to coding or a seasoned pro, Plode makes learning and creating a breeze!"
           />
         </div>
-        <div>
+        {/* <div>
           <CeoComments />
-        </div>{" "}
+        </div>{" "} */}
         <div className="py-20">
           <FlexibleLearning />
         </div>

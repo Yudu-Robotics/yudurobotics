@@ -43,7 +43,7 @@ function FlexibleLearning({ newProduct = true, title, desc }: propsValue) {
             </div> */}
           </div>
           <div className="w-full">
-            <img src={renderImg("girls")} className="w-full h-[60vh]" />
+            <img src={renderImg("girls")} className="w-full" />
           </div>
         </div>
       </div>

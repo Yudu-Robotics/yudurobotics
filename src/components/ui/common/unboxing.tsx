@@ -50,9 +50,9 @@ function Unboxing() {
           )}
         </div>
       </div>
-      <div>
+      {/* <div>
         <img src={renderImg("videoPlayer")} className="w-full" />
-      </div>
+      </div> */}
     </div>
   );
 }

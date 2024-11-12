@@ -267,9 +267,9 @@ export default function Plode() {
         <div className="py-20 -mx-8 lg:-mx-28">
           <PlodeDifference data={data.plodeDifference} />
         </div>
-        <div className=" text-black">
+        {/* <div className=" text-black">
           <CeoComments title="Plode makes coding accessible and fun for all ages, turning complex programming into an engaging, intuitive experience." />
-        </div>{" "}
+        </div>{" "} */}
         <div className="py-20">
           <Getstart
             title="Get Started Today – Create, Code, and Control"

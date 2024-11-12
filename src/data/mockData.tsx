@@ -338,7 +338,7 @@ export const mockData: { [key: string]: ProductData } = {
           heading: "Effortless Experience",
           subheading:
             "Everything about Plode is designed to make your experience smooth, simple, and super fun.",
-          centerImage: "assets/other/imagePlaceholder2.png",
+          centerImage: "assets/other/monitor-phone.png",
           features: [
             {
               icon: "userFriendly",
@@ -526,7 +526,7 @@ export const mockData: { [key: string]: ProductData } = {
           heading: "Effortless Experience",
           subheading:
             "Everything about Plode is designed to make your experience smooth, simple, and super fun.",
-          centerImage: "assets/other/imagePlaceholder2.png",
+          centerImage: "assets/other/monitor-phone.png",
           features: [
             {
               icon: "userFriendly",
@@ -794,7 +794,7 @@ export const mockData: { [key: string]: ProductData } = {
           heading: "Effortless Experience",
           subheading:
             "Everything about Plode is designed to make your experience smooth, simple, and super fun.",
-          centerImage: "assets/other/imagePlaceholder2.png",
+          centerImage: "assets/other/monitor-phone.png",
           features: [
             {
               icon: "userFriendly",
@@ -960,7 +960,7 @@ export const mockData: { [key: string]: ProductData } = {
           heading: "Effortless Experience",
           subheading:
             "Everything about Plode is designed to make your experience smooth, simple, and super fun.",
-          centerImage: "assets/other/imagePlaceholder2.png",
+          centerImage: "assets/other/monitor-phone.png",
           features: [
             {
               icon: "userFriendly",
@@ -1143,7 +1143,7 @@ export const mockData: { [key: string]: ProductData } = {
           heading: "Effortless Experience",
           subheading:
             "Everything about Plode is designed to make your experience smooth, simple, and super fun.",
-          centerImage: "assets/other/imagePlaceholder2.png",
+          centerImage: "assets/other/monitor-phone.png",
           features: [
             {
               icon: "userFriendly",
@@ -1351,7 +1351,7 @@ export const mockData: { [key: string]: ProductData } = {
           heading: "Effortless Experience",
           subheading:
             "Everything about Plode is designed to make your experience smooth, simple, and super fun.",
-          centerImage: "assets/other/imagePlaceholder2.png",
+          centerImage: "assets/other/monitor-phone.png",
           features: [
             {
               icon: "userFriendly",

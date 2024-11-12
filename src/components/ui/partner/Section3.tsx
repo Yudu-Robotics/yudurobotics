@@ -84,11 +84,11 @@ export default function Section3() {
         </div>
       </div>
 
-      <img
+      {/* <img
         src={renderImg("play")}
         alt="Play button for video content"
         className="w-full sm:px-12 sm:my-10 my-4 h-[30vh] sm:h-auto px-3"
-      />
+      /> */}
     </div>
   );
 }
