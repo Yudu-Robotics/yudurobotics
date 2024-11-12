@@ -28,7 +28,7 @@ function FlexibleLearning({ newProduct = true, title, desc }: propsValue) {
 
             <div className="space-y-4 px-3">
               {/* Main Headline */}
-              <div className="font-piepie text-3xl md:text-6xl lg:text-9xl text-primary-foreground">
+              <div className="font-piepie text-3xl md:text-6xl lg:text-8xl text-primary-foreground">
                 {title || "Flexible Learning Paths"}
               </div>
 

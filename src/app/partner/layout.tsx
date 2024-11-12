@@ -8,7 +8,7 @@ export default function PartnerLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <ClientLayout>{children}</ClientLayout>
     </div>
   );

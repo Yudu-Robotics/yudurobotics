@@ -43,15 +43,19 @@ const SixBlock: React.FC<SixBlockProps> = ({ data }) => {
           <div className="grid gird-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
             {data.tableData.map((item: any, index) => (
               <div key={index}>
-                <div className="  rounded-xxl sm:m-14">
-                  <video
-                    src={renderVideo(item?.video)}
-                    className="  rounded-xxl"
-                    autoPlay
-                    loop
-                    muted
-                    style={{}}
-                  />
+                <div className="rounded-xxl sm:m-14">
+                  {item?.video ? (
+                    <video
+                      src={renderVideo(item?.video)}
+                      className="  rounded-xxl"
+                      autoPlay
+                      loop
+                      muted
+                      style={{}}
+                    />
+                  ) : (
+                    <div className="w-full h-[30vh] rounded-xxl bg-red-600"></div>
+                  )}
                 </div>
                 <div className="sm:-mt-6">
                   <div className="text-xl font-bold text-center">

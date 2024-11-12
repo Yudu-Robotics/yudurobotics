@@ -42,7 +42,7 @@ function Section1() {
       <div className="flex flex-col items-center space-y-6">
         <div className="flex flex-col items-center justify-center">
           <div className="xl:px-12 ">
-            <p className=" text-center items-center font-piepie text-2xl md:text-4xl lg:text-6xl xl:text-8xl tracking-wider text-primary-foreground">
+            <p className=" text-center items-center font-piepie text-6xl md:text-4xl lg:text-6xl xl:text-8xl tracking-wider text-primary-foreground">
               “We’re not{" "}
               <span className="relative inline-block z-0">
                 playing
@@ -82,7 +82,7 @@ function Section1() {
               and change the game!”
             </p>
           </div>
-          <div className="w-full flex items-center justify-center mt-5 ml-64">
+          <div className="w-[80%] sm:w-full flex items-center justify-center mt-5 sm:ml-64">
             <img src={renderImg("line")} />
           </div>
         </div>

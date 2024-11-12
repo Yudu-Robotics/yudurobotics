@@ -1,26 +1,9 @@
 import CeoReviewsContainer from "@/components/ui/ceo-reviews";
-import GlobalAwards from "@/components/ui/home/global-awards";
-import ProductFeatures from "@/components/ui/home/product-features";
-import { NewFeaturesCard } from "@/components/ui/NewFeaturesCard";
-import renderImg from "@/imgImport";
-import JumpingButtons from "../../components/ui/common/jumping-buttons";
-import ProductCatalog from "@/components/ui/productsComponents/product-catalog";
-import SearchAndFilter from "@/components/ui/home/search-filter";
-import ProductCategories from "@/components/ui/productsComponents/product-categories";
-import SubscribeSection from "@/components/ui/home/subscribe-section";
-import TeamGrid from "@/components/ui/home/team-grid";
-import Ourteam from "@/components/ui/home/our-team";
-import LatestPosts from "@/components/ui/home/latest-posts";
 import dynamic from "next/dynamic";
 import { mockData } from "@/data/mockData";
-
-import GetInTouch from "@/components/ui/common/get-in-touch";
 import renderSvg from "@/svgImport";
-import { highlightWords } from "../utility/highlightWords";
-import TestimonialBanner from "@/components/ui/common/testimonial-banner";
 import Section1 from "@/components/ui/partner/Section1";
 import PlodeDownloade from "@/components/ui/common/plode-download";
-import ExtraFeatures from "@/components/ui/common/extra-features";
 import Section2 from "@/components/ui/partner/Section2";
 import Section3 from "@/components/ui/partner/Section3";
 

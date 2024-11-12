@@ -64,7 +64,7 @@ export default function CrawlE() {
         {/* <img src={renderImg("headerSection")} className="w-full" /> */}
         {renderSvg(data.sectionHeader)}
       </div>
-      <div className="px-12 lg:px-28 text-black py-5 lg:py-10">
+      <div className="px-4 sm:px-12 lg:px-28 text-black py-5 lg:py-10">
         <div className="py-8 lg:py-16">
           <ProductCeoReviewsContainer comment={data} />
         </div>

@@ -110,7 +110,7 @@ export default function Plode() {
           <SixBlock data={data?.plugandplay || defaultPlugAndPlayData} />
         </div>
 
-        <div className="px-12 lg:px-28 text-black py-5 lg:py-10 flex ">
+        <div className="px-4 sm:px-12 lg:px-28 text-black py-5 lg:py-10 flex ">
           <div>
             <ExtraFeatures
               // @ts-ignore
@@ -123,7 +123,7 @@ export default function Plode() {
       <div className="flex justify-center">
         <img src={renderImg("uparrow")} className="" />
       </div>
-      <div className="sm:px-12 px-4 lg:px-28 text-black py-5 lg:py-10 flex justify-center">
+      <div className=" text-black py-5 lg:py-10 flex justify-center">
         <p className="sm:w-1/2 text-[#4A4A4F] sm:text-xl text-sm text-center font-semibold italic ">
           <span className="text-[#5423E6]">
             Not every Play option is available for all kits{" "}
@@ -138,7 +138,7 @@ export default function Plode() {
         <div className="py-8 lg:py-16">
           <ProductCeoReviewsContainer comment={data} />
         </div>
-        <div className="px-4 sm:px-12 lg:px-28 text-black py-5 lg:py-10">
+        <div className=" text-black py-5 lg:py-10">
           {<HardwareProductFeatures hardware={data.features_data} />}
           <div className="flex w-full flex-col items-center justify-center mt-11">
             <div className="w-full flex justify-center">
@@ -154,7 +154,7 @@ export default function Plode() {
             </p>
           </div>
         </div>
-        <div className="px-4 sm:px-12 lg:px-28 text-black py-5 lg:py-10">
+        <div className=" text-black py-5 lg:py-10">
           <div>
             <ExtraFeatures
               // @ts-ignore
@@ -163,7 +163,7 @@ export default function Plode() {
             />
           </div>
         </div>
-        <div className="sm:px-12 lg:px-28 text-black py-5 lg:py-10">
+        <div className=" text-black py-5 lg:py-10">
           <FlexibleLearning
             newProduct={false}
             title="Code Mode - Unlock the Future of Learning with Hands-On Programming"
@@ -171,7 +171,7 @@ export default function Plode() {
 "
           />
         </div>
-        <div className="sm:px-12 lg:px-28 text-black py-5 lg:py-10">
+        <div className=" text-black py-5 lg:py-10">
           <VersatileSoftware data={data.versatile[0]} />
         </div>
         <div className="w-full flex justify-center flex-col items-center font-semibold">
@@ -183,7 +183,7 @@ export default function Plode() {
             easily into more complex coding.
           </p>
         </div>
-        <div className="sm:px-12 lg:px-28 text-black py-5 lg:py-10">
+        <div className=" text-black py-5 lg:py-10">
           <div>
             <ExtraFeatures
               // @ts-ignore
@@ -201,7 +201,7 @@ export default function Plode() {
             experimentation.
           </p>
         </div>
-        <div className="sm:px-12 lg:px-28 text-black py-5 lg:py-10">
+        <div className=" text-black py-5 lg:py-10">
           <VersatileSoftware data={data.versatile[1]} />
         </div>
         <div className="w-full flex justify-center flex-col items-center font-semibold">
@@ -213,7 +213,7 @@ export default function Plode() {
             experimentation.
           </p>
         </div>
-        <div className="sm:px-12 lg:px-28 text-black py-5 lg:py-10">
+        <div className=" text-black py-5 lg:py-10">
           <div>
             <ExtraFeatures
               // @ts-ignore
@@ -234,7 +234,7 @@ export default function Plode() {
               <span className="text-[#5423E6]">Script Programming – </span>
               Take Control with Text-Based Code
             </p>
-            <p className="text-[#4A4A4F] w-[70%] mt-6">
+            <p className="text-[#4A4A4F] sm:w-[70%] mt-6">
               Script programming introduces users to real-world coding
               languages. If you’re ready to dive deeper, you can explore C
               programming and Python—both powerful tools for building advanced
@@ -242,10 +242,10 @@ export default function Plode() {
             </p>
           </div>
         </div>
-        <div className="sm:px-12 lg:px-28 text-black py-5 lg:py-10">
+        <div className=" text-black py-5 lg:py-10">
           <VersatileSoftware data={data.versatile[2]} />
         </div>
-        <div className="sm:px-12 lg:px-28 text-black py-5 lg:py-10">
+        <div className=" text-black py-5 lg:py-10">
           <div>
             <ExtraFeatures
               // @ts-ignore
