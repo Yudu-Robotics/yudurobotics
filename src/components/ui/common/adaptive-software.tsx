@@ -23,7 +23,7 @@ const SoftwareAdaptive: React.FC<SoftwareAdaptiveProps> = ({ data }) => {
   return (
     <div className="flex flex-col space-y-10 ">
       <div className="w-full flex justify-between">
-        <div className="w-[50%] flex flex-col space-y-2 pl-3 sm:pl-16">
+        <div className="w-full  flex flex-col space-y-2 pl-3 sm:pl-16">
           <h1 className="text-primary text-xs font-semibold ">
             {data?.title || "Software"}
           </h1>
@@ -44,7 +44,7 @@ const SoftwareAdaptive: React.FC<SoftwareAdaptiveProps> = ({ data }) => {
         <div className=" pl-3 sm:pl-16 ">
           <img src={renderImg("monitorAndPhone")} className="w-full" />
         </div>
-        <div className="sm:w-1/2 flex flex-col space-y-8 justify-center">
+        <div className="xl:w-1/2 flex flex-col space-y-8 justify-center">
           {(data?.features || features)?.map((feature: any, index: any) => (
             <div
               key={index}

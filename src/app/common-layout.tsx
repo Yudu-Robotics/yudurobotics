@@ -1,6 +1,5 @@
-"use client"; // Ensure this is a client component
-
-import { useState } from "react";
+"use client";
+import { useEffect, useState } from "react";
 import { Drawer, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
@@ -15,6 +14,8 @@ import {
   NavigationMenuContent,
 } from "@/components/ui/navigation-menu";
 import FloatingWhatsApp from "@/components/ui/common/floating-whatsapp";
+import ProductMenuList from "@/components/ui/menu/ProductMenuList";
+import { products } from "@/data/mockData";
 
 const ClientLayout = ({ children }: { children: React.ReactNode }) => {
   const NavBarItems = [
@@ -24,43 +25,208 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
   ];
 
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-
+  const [isMenuView, setIsMenuView] = useState(false);
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const toggleDrawer = (open: boolean) => (event: any) => {
-    if (
-      event.type === "keydown" &&
-      (event.key === "Tab" || event.key === "Shift")
-    ) {
-      return;
-    }
-    setIsDrawerOpen(open);
+    // if (
+    //   // event.type === "keydown" &&
+    //   event.key === "Tab" ||
+    //   event.key === "Shift"
+    // ) {
+    //   return;
+    // }
+    // console.log(event.type);
+    // setIsDrawerOpen(true);
+    // setIsMenuView(open);
   };
-
+  const [isOurProductOpen, setIsOurProductOpen] = useState(false);
+  const [openSubOption, setOpenSubOption] = useState<string | null>(null);
   const drawerList = () => (
     <div
       role="presentation"
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
-      className="w-64 h-full p-4 bg-primary text-primary-foreground"
+      className="w-full h-full p-4  text-primary-foreground"
     >
-      <div className="mb-12">
-        <img src={renderImg("logo")} alt="logo" />
+      <div className="mb-12 flex justify-between">
+        <img src={renderImg("logoblack")} alt="logo" />
+        <div
+          className="text-black text-3xl font-bold"
+          onClick={() => setIsDrawerOpen(false)}
+        >
+          X
+        </div>
       </div>
       <div className="flex flex-col space-y-8">
         {NavBarItems.map((item, key) => (
-          <Link
-            key={key}
-            href={item.link}
-            className="text-base font-bold text-primary-foreground transition-colors duration-300 ease-in-out hover:text-destructive"
-          >
-            {item.name}
-          </Link>
+          <div key={key} className="">
+            {item.name === "Our Products" ? (
+              <>
+                {/* Main "Our Products" Link */}
+                <div
+                  onClick={() => setIsOurProductOpen(!isOurProductOpen)}
+                  className="text-base font-bold text-black transition-colors duration-300 ease-in-out hover:text-destructive"
+                >
+                  {item.name} ^
+                </div>
+
+                {isOurProductOpen && (
+                  <div className=" flex flex-col items-start mt-2 ml-2">
+                    <button
+                      onClick={() =>
+                        setOpenSubOption(
+                          openSubOption === "Animatronics"
+                            ? null
+                            : "Animatronics"
+                        )
+                      }
+                      className="text-base font-bold text-gray-700 transition-colors duration-300 ease-in-out hover:text-destructive"
+                    >
+                      Animatronics ^
+                    </button>
+                    {openSubOption === "Animatronics" && (
+                      <div className=" flex flex-col space-y-2 ml-2">
+                        <Link href="/zing" className="text-gray-600">
+                          Zing
+                        </Link>
+                        <Link href="/crawl_e" className="text-gray-600">
+                          Crawl-E
+                        </Link>
+                        <Link href="/klaw_b" className="text-gray-600">
+                          Klaw-B
+                        </Link>
+                      </div>
+                    )}
+
+                    <button
+                      onClick={() =>
+                        setOpenSubOption(
+                          openSubOption === "Micro-controllers"
+                            ? null
+                            : "Micro-controllers"
+                        )
+                      }
+                      className="text-base font-bold text-gray-700 transition-colors duration-300 ease-in-out hover:text-destructive"
+                    >
+                      Micro-controllers ^
+                    </button>
+                    {openSubOption === "Micro-controllers" && (
+                      <div className="flex flex-col space-y-2 ml-2">
+                        <Link href="/Roboki" className="text-gray-600">
+                          Roboki
+                        </Link>
+                        <Link href="/peecee" className="text-gray-600">
+                          TED
+                        </Link>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </>
+            ) : (
+              <Link
+                href={item.link}
+                className="text-base font-bold text-black transition-colors duration-300 ease-in-out hover:text-destructive"
+              >
+                {item.name}
+              </Link>
+            )}
+          </div>
         ))}
       </div>
     </div>
   );
+  const [selectedProduct, setSelectedProduct] = useState(0);
+  const drawerListView = () => (
+    <div className="px-28">
+      <div
+        role="presentation"
+        onClick={toggleDrawer(false)}
+        onKeyDown={toggleDrawer(false)}
+        className=" h-auto  text-primary-foreground flex  justify-between"
+      >
+        <div className="w-full flex justify-between pt-4">
+          <div className="mb-12">
+            <img src={renderImg("logoblack")} alt="logo" />
+          </div>
+          <div className=" ">
+            {NavBarItems.map((item, key) => (
+              <Link
+                key={key}
+                href={item.link}
+                className="text-base font-bold text-black transition-colors duration-300 ease-in-out hover:text-destructive p-3"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="flex space-y-2 p-2 sm:p-4 text-black rounded-lg transition-all duration-200  overflow-x-hidden">
+        <div className="w-2/3 grid grid-cols-3 gap-3">
+          {products.map((product, index) => (
+            <div key={index} className="flex flex-wrap p-2">
+              {/* Product Image */}
+              <div className="w-1/2 flex justify-center items-center ">
+                <div className=" flex justify-center items-center ">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="object-cover w-24"
+                  />
+                </div>
+              </div>
+              <div className="w-1/2  ml-2 sm:ml-0">
+                <h3 className="text-lg font-bold mb-2 lg:text-xl">
+                  {product.name}
+                </h3>
+
+                <p className="text-start text-secondary-foreground text-xs w-full tracking-wide lg:text-sm s">
+                  {product.description.substring(0, 50) + "..."}
+                </p>
+
+                <Link
+                  href={product.link}
+                  className="text-blue-700 text-sm sm:hidden"
+                >
+                  Learn more {"->"}
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="p-5">
+          <div className="p-5 bg-[#F4F1FE] rounded-3xl">
+            <div className="p-5 ">
+              <img
+                src={products[selectedProduct].image}
+                className="w-full h-full"
+              />
+            </div>
+            <div className="ml-5">
+              <div className="font-semibold text-lg">
+                {products[selectedProduct].name}
+              </div>
+              <div>{products[selectedProduct].description}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="flex justify-center p-2">
+        <Link href="/products" className="p-2 text-primary font-semibold">
+          View all products {"->"}
+        </Link>
+      </div>
+    </div>
+  );
+  // useEffect(() => {
+  //   if (hoveredItem === "Our Products") {
+  //     setIsMenuView(true);
+  //   }
+  // }, [hoveredItem]);
 
   return (
-    <div className=" ">
+    <div className=" group">
       <div className="px-8 lg:px-28 py-4 bg-primary ">
         {/* TopBar/NavBar */}
         <div className="flex justify-between items-center ">
@@ -78,7 +244,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
               edge="start"
               color="inherit"
               aria-label="menu"
-              onClick={toggleDrawer(true)}
+              onClick={() => setIsDrawerOpen(true)}
               className="border border-transparent hover:border-hoverButton1 hover:bg-hoverButtonGradient bg-buttonGradient cursor-pointer items-center justify-center rounded-buttons transition-all ease-in-out"
             >
               <MenuIcon />
@@ -88,28 +254,19 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
           {/* Full Navbar for Desktop */}
           <div className="space-x-4 hidden lg:flex lg:justify-center lg:items-center text-primary-foreground">
             {NavBarItems.map((item, key) => (
-              <div key={key}>
-                {
-                  // key === 0 ? (
-                  //   <NavigationMenu>
-                  //     <NavigationMenuList>
-                  //       <NavigationMenuItem>
-                  //         <NavigationMenuTrigger>{item}</NavigationMenuTrigger>
-                  //         <NavigationMenuContent>
-                  //           {/* Add Dropdown Content Here */}
-                  //         </NavigationMenuContent>
-                  //       </NavigationMenuItem>
-                  //     </NavigationMenuList>
-                  //   </NavigationMenu>
-                  // ) :
-
-                  <Link
-                    href={item.link}
-                    className="text-primary-foreground text-center text-sm px-3 hover:text-destructive"
-                  >
-                    {item.name}
-                  </Link>
-                }
+              <div
+                key={key}
+                className="relative group"
+                onMouseEnter={() => {
+                  setHoveredItem(item.name);
+                }}
+              >
+                <Link
+                  href={item.link}
+                  className="text-primary-foreground text-center text-sm px-3 hover:text-destructive"
+                >
+                  {item.name}
+                </Link>
               </div>
             ))}
           </div>
@@ -117,8 +274,11 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
       </div>
 
       {/* Drawer for Mobile */}
-      <Drawer anchor="right" open={isDrawerOpen} onClose={toggleDrawer(false)}>
+      <Drawer anchor="top" open={isDrawerOpen} onClose={toggleDrawer(false)}>
         {drawerList()}
+      </Drawer>
+      <Drawer anchor="top" open={isMenuView} onClose={toggleDrawer(false)}>
+        {drawerListView()}
       </Drawer>
 
       <FloatingWhatsApp />

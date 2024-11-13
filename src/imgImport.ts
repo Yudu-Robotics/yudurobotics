@@ -1,6 +1,7 @@
 //other
 const logo = "assets/Logo.png";
 const favicon = "assets/favicon.png";
+const logoblack = "assets/logoblack.png";
 
 // home
 const headerSection = "assets/other/Section Seperators.svg";
@@ -101,6 +102,8 @@ function renderImg(imgName: string) {
     // home
     case "logo":
       return logo;
+    case "logoblack":
+      return logoblack;
 
     case "favicon":
       return favicon;
