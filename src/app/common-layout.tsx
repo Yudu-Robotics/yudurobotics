@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react";
 import { Drawer, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore"; // Chevron Down
+import ExpandLessIcon from "@mui/icons-material/ExpandLess"; // Chevron Up
 import Link from "next/link";
 import renderImg from "@/imgImport";
 import Footer from "@/components/ui/footer/footer";
@@ -28,17 +30,9 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
   const [isMenuView, setIsMenuView] = useState(false);
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const toggleDrawer = (open: boolean) => (event: any) => {
-    // if (
-    //   // event.type === "keydown" &&
-    //   event.key === "Tab" ||
-    //   event.key === "Shift"
-    // ) {
-    //   return;
-    // }
-    // console.log(event.type);
-    // setIsDrawerOpen(true);
-    // setIsMenuView(open);
+    //setIsDrawerOpen(open);
   };
+
   const [isOurProductOpen, setIsOurProductOpen] = useState(false);
   const [openSubOption, setOpenSubOption] = useState<string | null>(null);
   const drawerList = () => (
@@ -67,7 +61,12 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
                   onClick={() => setIsOurProductOpen(!isOurProductOpen)}
                   className="text-base font-bold text-black transition-colors duration-300 ease-in-out hover:text-destructive"
                 >
-                  {item.name} ^
+                  {item.name}
+                  {isOurProductOpen ? (
+                    <ExpandLessIcon className="ml-2" />
+                  ) : (
+                    <ExpandMoreIcon className="ml-2" />
+                  )}
                 </div>
 
                 {isOurProductOpen && (
@@ -82,7 +81,12 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
                       }
                       className="text-base font-bold text-gray-700 transition-colors duration-300 ease-in-out hover:text-destructive"
                     >
-                      Animatronics ^
+                      Animatronics
+                      {openSubOption === "Animatronics" ? (
+                        <ExpandLessIcon className="ml-2" />
+                      ) : (
+                        <ExpandMoreIcon className="ml-2" />
+                      )}
                     </button>
                     {openSubOption === "Animatronics" && (
                       <div className=" flex flex-col space-y-2 ml-2">
@@ -108,7 +112,12 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
                       }
                       className="text-base font-bold text-gray-700 transition-colors duration-300 ease-in-out hover:text-destructive"
                     >
-                      Micro-controllers ^
+                      Micro-controllers
+                      {openSubOption === "Micro-controllers" ? (
+                        <ExpandLessIcon className="ml-2" />
+                      ) : (
+                        <ExpandMoreIcon className="ml-2" />
+                      )}
                     </button>
                     {openSubOption === "Micro-controllers" && (
                       <div className="flex flex-col space-y-2 ml-2">

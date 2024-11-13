@@ -20,7 +20,7 @@ import { WrongPageComponent } from "@/components/ui/not-found-component";
 
 const NotFoundPage = () => {
   const NavBarItems = [
-    { name: "Y/Our Products", link: "/products" },
+    { name: "Our Products", link: "/products" },
     { name: "The Partner Program", link: "/partner" },
     // "Crazies Behind",
     // "Resources",

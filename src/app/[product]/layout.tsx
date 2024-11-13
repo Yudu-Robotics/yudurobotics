@@ -5,6 +5,8 @@ import renderSvg from "@/svgImport";
 import { useState } from "react";
 import { Drawer, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore"; // Chevron Down
+import ExpandLessIcon from "@mui/icons-material/ExpandLess"; // Chevron Up
 import Link from "next/link";
 import FloatingWhatsApp from "@/components/ui/common/floating-whatsapp";
 import renderImg from "@/imgImport";
@@ -63,7 +65,12 @@ export default function ProductLayout({
                   onClick={() => setIsOurProductOpen(!isOurProductOpen)}
                   className="text-base font-bold text-black transition-colors duration-300 ease-in-out hover:text-destructive"
                 >
-                  {item.name} ^
+                  {item.name}
+                  {isOurProductOpen ? (
+                    <ExpandLessIcon className="ml-2" />
+                  ) : (
+                    <ExpandMoreIcon className="ml-2" />
+                  )}
                 </div>
 
                 {isOurProductOpen && (
@@ -78,7 +85,12 @@ export default function ProductLayout({
                       }
                       className="text-base font-bold text-gray-700 transition-colors duration-300 ease-in-out hover:text-destructive"
                     >
-                      Animatronics ^
+                      Animatronics
+                      {openSubOption === "Animatronics" ? (
+                        <ExpandLessIcon className="ml-2" />
+                      ) : (
+                        <ExpandMoreIcon className="ml-2" />
+                      )}
                     </button>
                     {openSubOption === "Animatronics" && (
                       <div className=" flex flex-col space-y-2 ml-2">
@@ -104,7 +116,12 @@ export default function ProductLayout({
                       }
                       className="text-base font-bold text-gray-700 transition-colors duration-300 ease-in-out hover:text-destructive"
                     >
-                      Micro-controllers ^
+                      Micro-controllers
+                      {openSubOption === "Micro-controllers" ? (
+                        <ExpandLessIcon className="ml-2" />
+                      ) : (
+                        <ExpandMoreIcon className="ml-2" />
+                      )}
                     </button>
                     {openSubOption === "Micro-controllers" && (
                       <div className="flex flex-col space-y-2 ml-2">
