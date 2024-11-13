@@ -130,7 +130,7 @@ export default function CrawlE() {
           <TestimonialBanner />
         </div>
         <div className="py-5 lg:py-20">
-          <FAQs />
+          <FAQs product="crawl_e"/>
         </div>
         <div>
           <GetInTouch />

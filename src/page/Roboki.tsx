@@ -130,7 +130,7 @@ export default function Roboki() {
           <TestimonialBanner />
         </div>
         <div className="py-5 lg:py-20">
-          <FAQs />
+          <FAQs product="roboki"/>
         </div>
         <div>
           <GetInTouch />

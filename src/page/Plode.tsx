@@ -280,7 +280,7 @@ export default function Plode() {
           <TestimonialBanner />
         </div>
         <div className="py-5 lg:py-20">
-          <FAQs />
+          <FAQs product="home"/>
         </div>
         <div>
           <GetInTouch />

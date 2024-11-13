@@ -8,7 +8,7 @@ interface propsValue {
   title?: string;
   desc?: string;
 }
-function FlexibleLearning({ newProduct = true, title, desc }: propsValue) {
+function FlexibleLearning({ newProduct = false, title, desc }: propsValue) {
   return (
     <div>
       <div className="w-full -rotate-180">

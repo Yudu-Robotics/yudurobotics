@@ -1,52 +1,18 @@
 "use client";
 import React, { useState } from "react";
+import { faqData } from "@/data/faq";
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-
-const FAQs = () => {
+const FAQs = ({ product }: { product: string }) => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleFAQ = (index: any) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  const faqData = [
-    {
-      question: "What does Yudu Robotics do?",
-      answer:
-        "We create innovative, playful robotics that inspire creativity and push tech boundaries.",
-    },
-    {
-      question: "Who can use Yudu products?",
-      answer:
-        "Yudu products are suitable for anyone interested in robotics, from beginners to professionals.",
-    },
-    {
-      question: "What platforms are Yudu products compatible with?",
-      answer:
-        "Yudu products are compatible with all major platforms including Windows, macOS, and Linux.",
-    },
-    {
-      question: "How can I purchase Yudu products?",
-      answer:
-        "Yudu products are compatible with all major platforms including Windows, macOS, and Linux.",
-    },
-    {
-      question: "Do you ship internationally?",
-      answer:
-        "Yudu products are compatible with all major platforms including Windows, macOS, and Linux.",
-    },
-    {
-      question: "How do I get started with Yudu products?",
-      answer:
-        "Yudu products are compatible with all major platforms including Windows, macOS, and Linux.",
-    },
-  ];
+  // Filter FAQs by product name
+  const filteredFAQs =
+    faqData.find((item) => item.product === product)?.faqs || [];
+
   return (
     <div className="flex flex-col space-y-4 ">
       <div className="flex flex-col space-y-2 justify-center items-center">
@@ -59,7 +25,7 @@ const FAQs = () => {
       </div>
       {/* <div className="flex flex-col space-y-6 justify-start items-center"> */}
       <div className="max-w-4xl mx-auto px-4 py-0 lg:py-10">
-        {faqData.map((item, index) => (
+        {filteredFAQs.map((item, index) => (
           <div
             key={index}
             className="border-b border-secondary-foreground py-6"

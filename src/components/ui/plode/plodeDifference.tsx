@@ -1,9 +1,7 @@
 import renderSvg from "@/svgImport";
 import React from "react";
-import { NewFeaturesCard } from "../NewFeaturesCard";
-
 import renderImg from "@/imgImport";
-import { features } from "process";
+
 interface propsValue {
   data?: any;
 }

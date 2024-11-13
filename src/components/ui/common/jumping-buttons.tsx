@@ -14,18 +14,30 @@ const JumpingButtons: React.FC<JumpingButtonsProps> = ({
   text2,
   bgColor,
   textColor,
-  link = "#",
+  link = "",
 }) => {
   return (
     <div
-      className={`${
-        ishorizontal == "true"
+      className={`${ishorizontal == "true"
           ? "flex flex-row"
           : "flex flex-row lg:flex-col lg:space-y-10"
-      } justify-center items-center space-x-10 px-12`}
+        } justify-center items-center space-x-10 px-12`}
     >
       <div>
-        <Link href={link}>
+        {link && link !== "#" ? (
+          <Link href={link}>
+            <div
+              className={`rounded-full text-xs lg:text-lg h-32 w-32 lg:h-40 lg:w-40 flex flex-col justify-center items-center transform transition duration-500 hover:-translate-y-4`}
+              style={{
+                backgroundColor: bgColor || "#F00",
+                color: textColor || "#FFF",
+              }}
+            >
+              <span className="block">{text1 || "Lemme"}</span>
+              <span className="block font-bold italic">{text2 || "Explore"}</span>
+            </div>
+          </Link>
+        ) : (
           <div
             className={`rounded-full text-xs lg:text-lg h-32 w-32 lg:h-40 lg:w-40 flex flex-col justify-center items-center transform transition duration-500 hover:-translate-y-4`}
             style={{
@@ -33,10 +45,10 @@ const JumpingButtons: React.FC<JumpingButtonsProps> = ({
               color: textColor || "#FFF",
             }}
           >
-            <span className="block ">{text1 || "Lemme"}</span>
+            <span className="block">{text1 || "Lemme"}</span>
             <span className="block font-bold italic">{text2 || "Explore"}</span>
           </div>
-        </Link>
+        )}
 
         <div
           className="rounded-full border-destructive -mt-24 border h-32 w-32 lg:h-40 lg:w-40 lg:-mt-32"

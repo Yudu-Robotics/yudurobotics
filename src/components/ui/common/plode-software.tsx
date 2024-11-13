@@ -24,9 +24,9 @@ const PlodeSoftware: React.FC<PlodeSoftwareProps> = ({ jumppingdata }) => {
       <div className="bg-primary w-full -mt-1">
         <div className="flex flex-col space-y-16 lg:flex-row lg:space-y-0 justify-between py-10 sm:px-10 lg:px-20">
           <div className="w-full">
-            <div className="mb-6">
+            {/* <div className="mb-6">
               <NewFeaturesCard />
-            </div>
+            </div> */}
 
             {/* Main Text */}
 

@@ -673,7 +673,7 @@ export const mockData: { [key: string]: ProductData } = {
         text2: "More",
         bgColor: "#602CF7",
         textColor: "#FAF9FE",
-        link: "/plode",
+        link: "",
       },
       {
         text1: "Download",
@@ -877,7 +877,7 @@ export const mockData: { [key: string]: ProductData } = {
         text2: "More",
         bgColor: "#602CF7",
         textColor: "#FAF9FE",
-        link: "/plode",
+        link: "",
       },
       {
         text1: "Download",
@@ -891,7 +891,7 @@ export const mockData: { [key: string]: ProductData } = {
         text2: "Learning",
         bgColor: "#602CF7",
         textColor: "#FAF9FE",
-        link: "#",
+        link: "",
       },
     ],
   },
@@ -1054,7 +1054,7 @@ export const mockData: { [key: string]: ProductData } = {
         text2: "More",
         bgColor: "#F72D3E",
         textColor: "#FAF9FE",
-        link: "/plode",
+        link: "",
       },
       {
         text1: "Download",
@@ -1237,7 +1237,7 @@ export const mockData: { [key: string]: ProductData } = {
         text2: "More",
         bgColor: "#F72D3E",
         textColor: "#FAF9FE",
-        link: "/plode",
+        link: "",
       },
       {
         text1: "Download",
@@ -1445,7 +1445,7 @@ export const mockData: { [key: string]: ProductData } = {
         text2: "More",
         bgColor: "#F7812D",
         textColor: "#FAF9FE",
-        link: "/plode",
+        link: "",
       },
       {
         text1: "Download",

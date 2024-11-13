@@ -128,7 +128,7 @@ export default function Zing() {
           <TestimonialBanner />
         </div>
         <div className="py-5 lg:py-20">
-          <FAQs />
+          <FAQs product="zing"/>
         </div>
         <div>
           <GetInTouch />

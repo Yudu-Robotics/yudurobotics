@@ -17,6 +17,8 @@ const Footer = () => {
     "crawl_e",
     "klaw_b",
     "plode",
+    "products",
+    "partner"
   ];
   const iconColor = [
     "#BBA5FE",
@@ -25,6 +27,8 @@ const Footer = () => {
     "#A5E8FE",
     "#A5E8FE",
     "#1AB374",
+    "#BBA5FE",
+    "#BBA5FE",
     "#BBA5FE",
   ];
 
@@ -68,6 +72,8 @@ const Footer = () => {
     4: { bgColor: "#F72D3E", textColor: "#FEF9F9" },
     5: { bgColor: "#F7812D", textColor: "#FEFBF9" },
     6: { bgColor: "#2CF7A4", textColor: "#0A4029" },
+    7: { bgColor: "#2CF7A4", textColor: "#0A4029" },
+    8: { bgColor: "#2CF7A4", textColor: "#0A4029" },
   };
   const contact_options = [
     {

@@ -36,9 +36,9 @@ export default async function HomePage() {
       <div className="px-4 sm:px-16 md:px-20 lg:px-24 xl:px-28 py-4 bg-primary ">
         <div className="flex flex-col space-y-16 lg:flex-row lg:space-y-0 justify-between py-10">
           <div className="w-full">
-            <a href="#product-features-component" className="mb-6 ">
+            {/* <a href="#product-features-component" className="mb-6 ">
               <NewFeaturesCard />
-            </a>
+            </a> */}
 
             {/* Main Text */}
 
@@ -112,7 +112,7 @@ export default async function HomePage() {
         </div> */}
 
         <div className="py-5 lg:py-20  sm:mx-0">
-          <FAQs />
+          <FAQs product="home"/>
         </div>
 
         <div className="sm:mb-24">

@@ -200,7 +200,7 @@ export default function Peecee() {
           <TestimonialBanner />
         </div>
         <div className="py-5 lg:py-20">
-          <FAQs />
+          <FAQs product="peecee"/>
         </div>
         <div className="pb-16 ">
           <GetInTouch />
