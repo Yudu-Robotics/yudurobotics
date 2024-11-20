@@ -52,14 +52,14 @@ export default function Peecee() {
   const data = mockData.peecee;
   return (
     <>
-      <div className="px-8 lg:px-28 py-4 bg-primary">
+      <div className="px-8 sm:px-16 lg:px-20 xl:px-28 py-4 bg-primary">
         <div className="flex flex-col space-y-16 lg:flex-row lg:space-y-0 justify-between py-10">
           <div className="w-full">
             {/* Main Text */}
 
             <div className="space-y-4">
               {/* Main Headline */}
-              <div className="font-piepie text-5xl md:text-6xl lg:text-7xl tracking-wider text-primary-foreground lg:w-[80%]">
+              <div className="font-piepie text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-wider text-primary-foreground lg:w-[60%] xl:w-[60%]">
                 {highlightWords(
                   data.heading,
                   data.wordsToHighlight.text1,
@@ -68,7 +68,7 @@ export default function Peecee() {
               </div>
 
               {/* Subtext */}
-              <div className="text-opacity-35 text-primary-foreground text-sm md:text-ms lg:text-lg font-body w-[100%] lg:w-[60%]">
+              <div className="text-opacity-35 text-primary-foreground sm:text-sm md:text-md lg:text-lg xl:text-xl font-body w-[100%] sm:w-[60%]">
                 {data.subheading}
               </div>
             </div>
@@ -105,7 +105,7 @@ export default function Peecee() {
           <Unboxing />
         </div>
         <div className="text-sm py-8 lg:py-16 text-center font-bold flex flex-col space-y-6 justify-center items-center">
-          <p>
+          <p className="text-lg sm:text-lg md:text-md lg:text-lg xl:text-xl">
             <span className="text-[#4A4A4F]">
               Hover over each feature below to{" "}
             </span>
@@ -119,7 +119,7 @@ export default function Peecee() {
             <ExtraFeatures
               // @ts-ignore
               data={data.features_data.section2}
-              title="hardware"
+              title="Hardware"
               showArrow={true}
             />
           </div>
@@ -146,16 +146,16 @@ export default function Peecee() {
         <div className="">
           <PlodeSoftware jumppingdata={data.jumppingButton?.[1] || {}} />
         </div>
-        <div className="lg:-mt-56 ">
+        <div className="  ">
           <SoftwareAdaptive />
         </div>
-        <div className=" md:py-20 ">
+        <div className=" md:py-20 xl:py-24">
           <VersatileSoftware />
         </div>
         <div className="">
           <ExtraFeatures
             data={data.features_data?.software_experience[0]}
-            title="software"
+            title="Software"
           />
         </div>
         <div className="py-16 lg:py-20">
@@ -177,6 +177,8 @@ export default function Peecee() {
             data={data.features_data.cirriculum.steps?.[0]}
           />
           <CurriculumSteps
+            // @ts-ignore
+            additional="Set the stage for discovery."
             // @ts-ignore
             data={data.features_data.cirriculum.steps?.[1]}
           />
@@ -200,7 +202,7 @@ export default function Peecee() {
           <TestimonialBanner />
         </div>
         <div className="py-5 lg:py-20">
-          <FAQs product="peecee"/>
+          <FAQs product="peecee" />
         </div>
         <div className="pb-16 ">
           <GetInTouch />

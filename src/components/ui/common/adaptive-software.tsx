@@ -24,27 +24,27 @@ const SoftwareAdaptive: React.FC<SoftwareAdaptiveProps> = ({ data }) => {
     <div className="flex flex-col space-y-10 ">
       <div className="w-full flex justify-between">
         <div className="w-full  flex flex-col space-y-2 pl-3 sm:pl-16">
-          <h1 className="text-primary text-xs font-semibold ">
+          <h1 className="text-primary sm:text-sm md:text-md lg:text-lg xl:text-xl font-semibold ">
             {data?.title || "Software"}
           </h1>
-          <h2 className="text-4xl lg:text-6xl font-piepie tracking-wide  w-[100%]">
+          <h2 className="text-4xl lg:text-6xl xl:text-7xl font-piepie tracking-wide  w-[100%]">
             {highlightWords("Playfully Adaptive", ["Adaptive"], "text-primary")}
           </h2>
-          <h2 className="text-sm text-secondary-foreground  w-[100%] ">
+          <h2 className="sm:text-sm md:text-md lg:text-lg xl:text-xl text-secondary-foreground pt-3 w-[70%] ">
             Plode adjusts itself to suit anyone, whether you're just starting
             out or ready to tackle big projects.
           </h2>
         </div>
-        <div className="w-1/2 flex justify-center   pl-3 sm:pl-16">
-          <img src={renderImg(data?.img) || ""} className="" />
-        </div>
+        {/* <div className="sm:w-1/2  flex justify-center   pl-3 sm:pl-16">
+          <img src={renderImg(data?.img) || ""} className="w-full" />
+        </div> */}
       </div>
 
-      <div className=" flex flex-col justify-between  space-y-8 md:flex-row md:space-y-0">
-        <div className=" pl-3 sm:pl-16 ">
+      <div className="w-full  flex flex-col justify-between  space-y-8 md:flex-row md:space-y-0">
+        <div className="sm:w-1/2 p-5 ">
           <img src={renderImg("monitorAndPhone")} className="w-full" />
         </div>
-        <div className="xl:w-1/2 flex flex-col space-y-8 justify-center">
+        <div className="xl:w-1/2  flex flex-col space-y-8 justify-center">
           {(data?.features || features)?.map((feature: any, index: any) => (
             <div
               key={index}
@@ -55,10 +55,10 @@ const SoftwareAdaptive: React.FC<SoftwareAdaptiveProps> = ({ data }) => {
                 {renderSvg(feature?.src || feature?.icon || "robotic")}
               </div>
               <div>
-                <h3 className="font-bold text-lg">
+                <h3 className="font-bold text-xl xl:text-2xl">
                   {feature?.title || feature.heading}
                 </h3>
-                <p className="text-secondary-foreground text-sm">
+                <p className="text-secondary-foreground text-lg sm:text-sm md:text-md lg:text-lg xl:text-xl">
                   {feature?.desc || feature.description}
                 </p>
               </div>

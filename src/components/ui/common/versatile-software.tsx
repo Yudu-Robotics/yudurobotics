@@ -26,7 +26,7 @@ const VersatileSoftware: React.FC<SoftwareAdaptiveProps> = ({ data }) => {
     },
   ];
   return (
-    <div className="max-w-full flex flex-col space-y-10 py-10  sm:mt-16">
+    <div className="max-w-full flex flex-col space-y-10 py-10 xl:py-14  sm:mt-16">
       <div className="flex flex-col space-y-2 justify-centerv items-center text-center">
         <h1 className="text-primary text-xs font-semibold ">
           {data ? "" : "Software"}
@@ -40,19 +40,19 @@ const VersatileSoftware: React.FC<SoftwareAdaptiveProps> = ({ data }) => {
                 "text-primary"
               )}
         </h2>
-        <h2 className="text-sm sm:text-lg xl:text-xl text-secondary-foreground  w-[100%] lg:w-[40%]">
+        <h2 className="text-lg sm:text-sm md:text-md lg:text-lg xl:text-xl text-secondary-foreground pt-2 w-[100%] lg:w-[40%]">
           {data?.desc ||
             "Plode is ready for anything, handling everything from your first coding steps to your wildest ideas."}
         </h2>
         <p className="text-[#5423E6] font-semibold">{data?.subheading}</p>
       </div>
-      <div className="grid grid-col grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-col grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-5">
         {(data?.features || features)?.map((feature: any, index: any) => (
           <div
             key={index}
-            className="flex flex-col justify-center items-center text-center space-y-2 "
+            className="flex flex-col justify-center items-center text-center space-y-2 mt-4"
           >
-            <div className="bg-primary h-full p-5 flex justify-center items-center rounded-xxl">
+            <div className="bg-primary h-full p-5 flex justify-center items-center rounded-xxl ">
               <div className="flex justify-between items-center h-full">
                 <img
                   src={renderImg(images[index])}
@@ -61,10 +61,10 @@ const VersatileSoftware: React.FC<SoftwareAdaptiveProps> = ({ data }) => {
               </div>
             </div>
 
-            <h1 className="text-sm sm:text-xl font-bold pt-4">
+            <h1 className="text-xl sm:text-xl font-bold pt-4">
               {feature.title}
             </h1>
-            <p className="text-xs sm:text-lg text-secondary-foreground w-[100%] lg:w-[85%]">
+            <p className="text-lg sm:text-lg text-secondary-foreground w-[100%] lg:w-[85%]">
               {feature.desc}
             </p>
           </div>

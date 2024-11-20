@@ -25,22 +25,24 @@ const ExtraFeatures: React.FC<{
 }> = ({ data, title, showArrow }) => {
   const [selectedIndex, setSelectedIndex] = useState(-1);
   return (
-    <div className="flex flex-col space-y-2 lg:space-y-0 sm:mt-24">
+    <div className="flex flex-col space-y-2 lg:space-y-0 sm:mt-20">
       {showArrow && (
         <div className="hidden lg:flex lg:flex-row lg:justify-center lg:items-center lg:-mb-32 lg:ml-40">
           {renderSvg("handDrawArrow2")}
         </div>
       )}
       <div className="flex flex-col space-y-2 ">
-        <h1 className="text-primary text-xs font-semibold ">{title}</h1>
+        <h1 className="text-primary sm:text-sm md:text-md lg:text-lg xl:text-xl  font-semibold ">
+          {title}
+        </h1>
         <h2 className="text-4xl lg:text-5xl xl:text-7xl font-piepie tracking-wide  w-[100%] lg:w-[50%]">
           {highlightWords(data?.heading, ["Effortless"], "text-primary")}
         </h2>
-        <h2 className="text-sm text-secondary-foreground xl:text-xl w-[100%] lg:w-[35%]">
+        <h2 className="text-lg text-secondary-foreground xl:text-xl w-[100%] lg:w-[35%]">
           {data?.subheading}
         </h2>
       </div>
-      <div className="">
+      <div className="pt-10 sm:pt-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Side: Feature Icons and Text */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -54,11 +56,11 @@ const ExtraFeatures: React.FC<{
                   {/* Icon for the feature */}
                   {renderSvg(feature.icon)}
                 </div>
-                <div>
-                  <h3 className="font-bold text-lg xl:text-xl">
+                <div className="pt-4 sm:pt-0">
+                  <h3 className="font-bold text-xl xl:text-2xl">
                     {feature.heading}
                   </h3>
-                  <p className="text-secondary-foreground text-sm xl:text-lg">
+                  <p className="pt-2 text-secondary-foreground text-lg sm:text-sm md:text-md lg:text-lg xl:text-xl">
                     {feature.description}
                   </p>
                 </div>

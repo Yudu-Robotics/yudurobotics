@@ -27,15 +27,15 @@ const SixBlock: React.FC<SixBlockProps> = ({ data }) => {
     <>
       <div className="w-full py-24 text-center ">
         <p className="text-yellow-500 font-bold">{data.title}</p>
-        <div className="w-full flex flex-col justify-center items-center sm:gap-5 ">
-          <div className=" font-piepie text-2xl md:text-6xl lg:text-7xl tracking-wider text-primary-foreground text-center">
+        <div className="w-full  flex flex-col justify-center items-center sm:gap-5 ">
+          <div className="font-piepie text-4xl md:text-6xl lg:text-7xl tracking-wider text-primary-foreground text-center sm:w-[50%]">
             {highlightWords(
               data.heading,
               data.wordsToHighlight.text1,
-              "text-destructive"
+              "text-primary"
             )}
           </div>
-          <p className="sm:w-1/3 sm:text-lg text-sm text-center py-5 sm:py-0 ">
+          <p className="sm:w-1/3 xl:w-[60%] text-lg sm:text-lg  text-center py-5 sm:py-0 text-secondary-foreground">
             {data.subheading}
           </p>
         </div>
@@ -57,7 +57,7 @@ const SixBlock: React.FC<SixBlockProps> = ({ data }) => {
                     <div className="w-full h-[30vh] rounded-xxl bg-red-600"></div>
                   )}
                 </div>
-                <div className="sm:-mt-6">
+                <div className="sm:-mt-6 pt-4">
                   <div className="text-xl font-bold text-center">
                     {item.title}
                   </div>

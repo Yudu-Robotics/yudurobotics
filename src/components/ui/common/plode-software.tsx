@@ -32,12 +32,12 @@ const PlodeSoftware: React.FC<PlodeSoftwareProps> = ({ jumppingdata }) => {
 
             <div className="space-y-4 px-3">
               {/* Main Headline */}
-              <div className="font-piepie text-3xl md:text-6xl lg:text-7xl text-primary-foreground">
+              <div className="font-piepie text-4xl md:text-6xl lg:text-7xl text-primary-foreground">
                 Plode: Smart and Simple Software
               </div>
 
               {/* Subtext */}
-              <div className="text-primary-foreground text-sm md:text-base lg:text-lg font-body w-[100%] lg:w-[50%]">
+              <div className="text-primary-foreground text-lg md:text-base lg:text-lg font-body w-[100%] lg:w-[50%]">
                 Roboki’s Plode software is as fun as it is powerful—tailored to
                 inspire creativity, adapt to all levels, and make coding feel
                 like a breeze.

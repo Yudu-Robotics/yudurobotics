@@ -22,21 +22,23 @@ const TeamPlay: React.FC<{ hardware: HardwareData }> = ({ hardware }) => {
   const { section3 } = hardware;
 
   return (
-    <div className="fle flex-col space-y-10 py-10">
-      <div className="flex flex-col space-y-2 justify-centerv items-center text-center">
-        <h1 className="text-primary text-xs font-semibold ">Hardware</h1>
-        <h2 className="text-4xl lg:text-5xl font-piepie tracking-wide ">
+    <div className="w-full  flex flex-col space-y-10 py-10">
+      <div className="w-full  flex flex-col space-y-2 justify-centerv items-center text-center">
+        <h1 className=" w-full text-left  sm:text-center text-primary sm:text-sm md:text-md lg:text-lg xl:text-xl font-semibold ">
+          Hardware
+        </h1>
+        <h2 className="w-full text-left  sm:text-center  text-4xl lg:text-5xl xl:text-6xl font-piepie tracking-wide ">
           {highlightWords(section3.heading, ["Play!"], "text-primary")}
         </h2>
-        <h2 className="text-sm text-secondary-foreground  w-[100%] lg:w-[60%]">
+        <h2 className="w-full text-left  sm:text-center  sm:text-sm md:text-md lg:text-lg xl:text-xl text-secondary-foreground  text-lg lg:w-[80%] pt-2">
           {section3.subheading}
         </h2>
       </div>
-      <div className="">
+      <div className=" w-full">
         <img
           src={hardware.section3.centerImage}
           alt="Product Image"
-          className="max-w-full h-auto"
+          className="w-full  h-auto"
         />
       </div>
     </div>

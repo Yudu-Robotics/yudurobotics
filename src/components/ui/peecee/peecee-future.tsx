@@ -11,18 +11,20 @@ const PeeceeFuture: React.FC<{ peeceeFuture: PeeceeFuture }> = ({
   peeceeFuture,
 }) => {
   return (
-    <div className="flex flex-col-reverse space-y-8 md:flex-row md:space-x-28 md:items-center py-10 justify-center">
-      <div className="sm:w-1/2">
+    <div className="w-full   flex flex-col-reverse space-y-8 md:flex-row md:space-x-28 md:items-center py-10 justify-center">
+      <div className="sm:w-1/2  ">
         <img
           src={peeceeFuture.centerImage}
           alt="Product Image"
-          className="max-w-full"
+          className="w-full"
         />
       </div>
       <div className="sm:w-1/2 flex flex-col md:w-[50%] space-y-2">
-        <h1 className="text-primary text-xs font-semibold ">Hardware</h1>
+        <h1 className="text-primary sm:text-sm md:text-md lg:text-lg xl:text-xl font-semibold ">
+          Hardware
+        </h1>
 
-        <h2 className="text-4xl lg:text-5xl font-piepie tracking-wide w-[100%] lg:w-[80%] text-center sm:text-start">
+        <h2 className="text-4xl lg:text-6xl xl:text-7xl font-piepie tracking-wide">
           {highlightWords(
             peeceeFuture.heading,
             ["Future-Proof"],
@@ -30,7 +32,7 @@ const PeeceeFuture: React.FC<{ peeceeFuture: PeeceeFuture }> = ({
           )}
         </h2>
 
-        <h2 className="text-sm text-secondary-foreground  w-[100%] lg:w-[60%]">
+        <h2 className="text-lg text-secondary-foreground w-[100%] lg:w-[80%] xl:text-xl pt-4">
           {peeceeFuture.subheading}
         </h2>
       </div>

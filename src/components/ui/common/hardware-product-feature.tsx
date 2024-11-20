@@ -49,11 +49,13 @@ const HardwareProductFeatures: React.FC<{ hardware: HardwareData }> = ({
   return (
     <div>
       <div className="flex flex-col justify-center space-y-2 items-center text-center">
-        <h1 className="text-primary text-xs font-semibold">Hardware</h1>
-        <h2 className="text-4xl lg:text-5xl w-[100%] lg:w-[50%] font-piepie tracking-wide">
+        <h1 className="text-primary text-lg font-semibold xl:text-lg text-left sm:text-center w-full ">
+          Hardware
+        </h1>
+        <h2 className="text-4xl lg:text-5xl xl:text-6xl w-[100%] lg:w-[50%] font-piepie tracking-wide  text-left sm:text-center">
           {highlightWords(section1.heading, ["Ready to Go"], "text-primary")}
         </h2>
-        <h2 className="text-sm text-secondary-foreground">
+        <h2 className="text-lg sm:text-sm md:text-md lg:text-lg xl:text-xl text-secondary-foreground pt-3 text-left sm:text-center">
           {section1.subheading}
         </h2>
       </div>
@@ -69,7 +71,7 @@ const HardwareProductFeatures: React.FC<{ hardware: HardwareData }> = ({
                     className="flex flex-col items-start space-y-1 cursor-pointer "
                     onClick={() => setSelectedIndex(index)}
                   >
-                    <div className="">
+                    <div className="py-2">
                       {/* Icon for the feature */}
                       <img
                         src={feature.icon}
@@ -78,10 +80,10 @@ const HardwareProductFeatures: React.FC<{ hardware: HardwareData }> = ({
                       />
                     </div>
                     <div>
-                      <h3 className="font-bold text-lg xl:text-xl">
+                      <h3 className="font-bold text-lg xl:text-2xl">
                         {feature.heading}
                       </h3>
-                      <p className="text-secondary-foreground text-sm xl:text-lg">
+                      <p className="pt-2 text-secondary-foreground sm:text-sm md:text-md lg:text-lg xl:text-xl">
                         {feature.description}
                       </p>
                     </div>
@@ -121,10 +123,10 @@ const HardwareProductFeatures: React.FC<{ hardware: HardwareData }> = ({
                 hardware.section1.features.length / 2 <= index && (
                   <div
                     key={index}
-                    className="flex flex-col items-start space-y-1 cursor-pointer"
+                    className="flex flex-col items-start space-y-1 cursor-pointer "
                     onClick={() => setSelectedIndex(index)}
                   >
-                    <div className="">
+                    <div className="py-2">
                       {/* Icon for the feature */}
                       <img
                         src={feature.icon}
@@ -133,10 +135,10 @@ const HardwareProductFeatures: React.FC<{ hardware: HardwareData }> = ({
                       />
                     </div>
                     <div>
-                      <h3 className="font-bold text-lg xl:text-xl">
+                      <h3 className="font-bold text-lg xl:text-2xl">
                         {feature.heading}
                       </h3>
-                      <p className="text-secondary-foreground text-sm xl:text-lg">
+                      <p className="pt-2 text-secondary-foreground sm:text-sm md:text-md lg:text-lg xl:text-xl">
                         {feature.description}
                       </p>
                     </div>

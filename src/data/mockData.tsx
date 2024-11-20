@@ -857,7 +857,7 @@ export const mockData: { [key: string]: ProductData } = {
     legofun: {
       heading: "Lego Fun",
       subheading:
-        "PeeCee TED is best buddies with Lego Technic kits, so you can build, expand, and create to your heart’s content.",
+        "Roboki is best buddies with Lego Technic kits, so you can build, expand, and create to your heart’s content.",
       centerImage: "assets/other/lego-fun.png",
     },
     components: {

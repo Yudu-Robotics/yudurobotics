@@ -28,12 +28,12 @@ function FlexibleLearning({ newProduct = false, title, desc }: propsValue) {
 
             <div className="space-y-4 px-3">
               {/* Main Headline */}
-              <div className="font-piepie text-3xl md:text-6xl lg:text-8xl text-primary-foreground">
+              <div className="font-piepie text-4xl md:text-6xl lg:text-8xl text-primary-foreground">
                 {title || "Flexible Learning Paths"}
               </div>
 
               {/* Subtext */}
-              <div className="text-xs md:text-lg lg:text-2xl font-body lg:w-[80%] text-[#000000]">
+              <div className="text-lg md:text-lg lg:text-2xl font-body lg:w-[80%] text-[#000000]">
                 {desc ||
                   "PeeCee TED’s curriculum offers flexibility, allowing kits to be used independently or combined. The Adaptive LMS supports a self-paced learning approach, suitable for both individual study and flipped classrooms."}
               </div>
