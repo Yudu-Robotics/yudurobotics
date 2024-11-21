@@ -28,7 +28,7 @@ const VersatileSoftware: React.FC<SoftwareAdaptiveProps> = ({ data }) => {
   return (
     <div className="max-w-full flex flex-col space-y-10 py-10 xl:py-14  sm:mt-16">
       <div className="flex flex-col space-y-2 justify-centerv items-center text-center">
-        <h1 className="text-primary text-xs font-semibold ">
+        <h1 className="text-primary text-lg font-semibold ">
           {data ? "" : "Software"}
         </h1>
         <h2 className="text-4xl lg:text-5xl xl:text-7xl font-piepie tracking-wide ">

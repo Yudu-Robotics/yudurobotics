@@ -21,7 +21,7 @@ const SoftwareAdaptive: React.FC<SoftwareAdaptiveProps> = ({ data }) => {
     },
   ];
   return (
-    <div className="flex flex-col space-y-10 ">
+    <div className="flex flex-col  sm:-translate-y-52 sm:-mb-52">
       <div className="w-full flex justify-between">
         <div className="w-full  flex flex-col space-y-2 pl-3 sm:pl-16">
           <h1 className="text-primary sm:text-sm md:text-md lg:text-lg xl:text-xl font-semibold ">

@@ -21,7 +21,7 @@ function Unboxing() {
     <div className="flex flex-col space-y-12 md:space-y-32">
       <div className="flex flex-col space-y-6 md:space-y-0 md:flex-row md:space-x-32 justify-center  ">
         <div className="sm:w-1/2 flex flex-col space-y-2 ">
-          <h1 className="text-primary text-xs font-semibold xl:text-lg">
+          <h1 className="text-primary text-lg font-semibold xl:text-lg">
             Hardware
           </h1>
           <h2 className="text-4xl lg:text-6xl xl:text-7xl font-piepie tracking-wide xl:w-[80%]">

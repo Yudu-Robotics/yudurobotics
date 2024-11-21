@@ -32,12 +32,8 @@ const ProductCeoReviewsContainer: React.FC<{ comment: any }> = ({
           </p>
         </div>
       </div>
-      <div className="lg:flex justify-end mt-4 hidden">
-        {renderSvg("star1")}
-      </div>
-      <div className="lg:flex justify-end mr-5 mt-1 hidden">
-        {renderSvg("star2")}
-      </div>
+      <div className="flex justify-end mt-4 ">{renderSvg("star1")}</div>
+      <div className="flex justify-end mr-5 mt-1 ">{renderSvg("star2")}</div>
     </div>
   );
 };

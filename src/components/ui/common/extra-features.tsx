@@ -49,7 +49,7 @@ const ExtraFeatures: React.FC<{
             {data?.features.map((feature, index) => (
               <div
                 key={index}
-                className="flex flex-col items-start space-y-1"
+                className="flex flex-col items-start space-y-1  h-full"
                 onClick={() => setSelectedIndex(index)}
               >
                 <div className="">

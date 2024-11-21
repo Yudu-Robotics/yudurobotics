@@ -37,7 +37,7 @@ const PlodeSoftware: React.FC<PlodeSoftwareProps> = ({ jumppingdata }) => {
               </div>
 
               {/* Subtext */}
-              <div className="text-primary-foreground text-lg md:text-base lg:text-lg font-body w-[100%] lg:w-[50%]">
+              <div className="text-primary-foreground ext-lg sm:text-lg md:text-md lg:text-lg xl:text-xl w-[100%] lg:w-[50%]">
                 Roboki’s Plode software is as fun as it is powerful—tailored to
                 inspire creativity, adapt to all levels, and make coding feel
                 like a breeze.

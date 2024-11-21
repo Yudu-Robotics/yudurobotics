@@ -52,14 +52,14 @@ export default function Peecee() {
   const data = mockData.peecee;
   return (
     <>
-      <div className="px-8 sm:px-16 lg:px-20 xl:px-28 py-4 bg-primary">
-        <div className="flex flex-col space-y-16 lg:flex-row lg:space-y-0 justify-between py-10">
+      <div className="px-8 sm:px-16 lg:px-20 xl:px-28 py-0 sm:py-4 bg-primary">
+        <div className="flex flex-col space-y-8 sm:space-y-16 lg:flex-row lg:space-y-0 justify-between py-10">
           <div className="w-full">
             {/* Main Text */}
 
-            <div className="space-y-4">
+            <div className="space-y-4 ">
               {/* Main Headline */}
-              <div className="font-piepie text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-wider text-primary-foreground lg:w-[60%] xl:w-[60%]">
+              <div className="font-piepie text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-wider text-primary-foreground lg:w-[60%] xl:w-[60%] sm:text-start text-center">
                 {highlightWords(
                   data.heading,
                   data.wordsToHighlight.text1,
@@ -68,7 +68,7 @@ export default function Peecee() {
               </div>
 
               {/* Subtext */}
-              <div className="text-opacity-35 text-primary-foreground sm:text-sm md:text-md lg:text-lg xl:text-xl font-body w-[100%] sm:w-[60%]">
+              <div className="text-lg text-opacity-35 text-primary-foreground sm:text-sm md:text-md lg:text-lg xl:text-xl font-body w-[100%] sm:w-[60%] sm:text-start text-center">
                 {data.subheading}
               </div>
             </div>
@@ -86,8 +86,8 @@ export default function Peecee() {
           }
         </div>
 
-        <div className="">
-          <img src={data.images[0]} className="w-full -mt-[8%]" />
+        <div className="translate-y-52">
+          <img src={data.images[0]} className="w-full" alt="Example" />
         </div>
       </div>
       <div className="w-full -mt-1">

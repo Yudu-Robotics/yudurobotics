@@ -9,7 +9,7 @@ interface LegoFun {
 
 const LegoFun: React.FC<{ legoFun: LegoFun }> = ({ legoFun }) => {
   return (
-    <div className="w-full h-full  flex flex-col md:flex-row justify-between items-center p">
+    <div className="w-full h-full  flex flex-col md:flex-row justify-between items-center pb-10 mb-5">
       <div className="  sm:w-1/2 h-full bg-yellow-300-700 flex items-center space-y-2 justify-center text-start">
         <div className="">
           <h1 className="text-primary sm:text-sm md:text-md lg:text-lg xl:text-xl font-semibold ">

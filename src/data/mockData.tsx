@@ -347,18 +347,18 @@ export const mockData: { [key: string]: ProductData } = {
                 "Bright colors, playful UX/UI elements, and an interface that feels like an adventure make coding with Plode pure joy.",
             },
             {
+              icon: "instaLink",
+              heading: "InstaLink Real-Time Magic",
+              description:
+                "Instantly see what your sensors and accessories are up to, tweaking on the fly. InstaLive even makes servo calibration a snap.",
+            },
+            {
               icon: "virtual",
               heading: "Virtual Simulator",
               description:
                 "Test your projects in a virtual playground before bringing them to life, ensuring everything works just right.",
             },
 
-            {
-              icon: "instaLink",
-              heading: "InstaLink Real-Time Magic",
-              description:
-                "Instantly see what your sensors and accessories are up to, tweaking on the fly. InstaLive even makes servo calibration a snap.",
-            },
             {
               icon: "data",
               heading: "Data Capture and Visualization Mode",
@@ -835,16 +835,17 @@ export const mockData: { [key: string]: ProductData } = {
             description: "Track progress and reinforce understanding.",
           },
           {
+            icon: "feedback",
+            heading: "Collaborative Feedback",
+            description: "Peer and teacher insights enrich learning.",
+          },
+          {
             icon: "reflective",
             heading: "Reflective Journaling",
             description:
               "Use activity and design sheets to reflect on learning and growth.",
           },
-          {
-            icon: "feedback",
-            heading: "Collaborative Feedback",
-            description: "Peer and teacher insights enrich learning.",
-          },
+
           {
             icon: "fun",
             heading: "FUN and Purposeful Learning",
