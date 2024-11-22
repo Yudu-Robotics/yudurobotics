@@ -152,7 +152,7 @@ export default function ContactForm() {
               name="entry.1655141018"
               value={formData["entry.1655141018"]}
               onChange={handleChange}
-              className="mt-1 block w-full px-4 py-2  text-sm text-secondary-foreground rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+              className="mt-1 block w-full px-4 py-2 text-sm text-secondary-foreground rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
               required
               style={{ border: "1px solid #D6D6D8" }}
             >

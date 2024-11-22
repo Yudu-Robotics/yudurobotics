@@ -2,6 +2,9 @@
 const logo = "assets/Logo.png";
 const favicon = "assets/favicon.png";
 const logoblack = "assets/logoblack.png";
+const good = "assets/other/good.svg";
+const india = "assets/other/india.svg";
+const reddot = "assets/other/reddot.svg";
 
 // home
 const headerSection = "assets/other/Section Seperators.svg";
@@ -194,6 +197,13 @@ function renderImg(imgName: string) {
       return fivecoding;
     case "threestep":
       return threestep;
+
+    case "good":
+      return good;
+    case "india":
+      return india;
+    case "reddot":
+      return reddot;
 
     // testimonial
     case "bannerImg1":

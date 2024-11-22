@@ -18,7 +18,7 @@ const Footer = () => {
     "klaw_b",
     "plode",
     "products",
-    "partner"
+    "partner",
   ];
   const iconColor = [
     "#BBA5FE",
@@ -92,7 +92,7 @@ const Footer = () => {
       type: "Office",
       text: "Come say hello at our office HQ.",
       contact_by:
-        "No.29, Bereterna Agrahara Next to Play Factor Hosur Main Road, Electronic City Bangalore Karnataka, India",
+        "No.29, Bereterna Agrahara, Next to Play Factory, Hosur Main Road, Electronic City, Bangalore, Karnataka, India",
       icon_image: <FooterIcon iconType="map" color={iconColor[index]} />,
     },
     {
@@ -119,8 +119,8 @@ const Footer = () => {
           <h1 className="font-piepie text-4xl lg:text-6xl">
             Ready to Innovate Together?
           </h1>
-          <h1 className="font-thin py-4">
-            Partner with us and drive the futre of robotics
+          <h1 className="font-tthover py-4 opacity-70">
+            Partner with us and drive the future of robotics.
           </h1>
         </div>
         <div className="flex">
@@ -144,7 +144,7 @@ const Footer = () => {
           <h1 className="font-piepie text-3xl lg:text-4xl tracking-wider">
             Chat to our friendly team
           </h1>
-          <h1 className="font-thin py-4">
+          <h1 className="font-tthover py-4 opacity-70">
             We’d love to hear from you. Please fill out this form or shoot us an
             email.
           </h1>
@@ -174,9 +174,11 @@ const Footer = () => {
               ) => (
                 <div key={key} className="flex flex-col space-y-2">
                   <div>{value.icon_image}</div>
-                  <h1>{value.type}</h1>
-                  <p className="font-thin">{value.text}</p>
-                  <p className="w-[70%] text-xl">{value.contact_by}</p>
+                  <h1 className="font-tthover text-[#1A1804]">{value.type}</h1>
+                  <p className="font-tthover opacity-70">{value.text}</p>
+                  <p className="w-[70%] text-xl font-tthover">
+                    {value.contact_by}
+                  </p>
                 </div>
               )
             )}
@@ -193,14 +195,14 @@ const Footer = () => {
             <div className="flex space-x-3 justify-start items-center">
               {renderSvg("logoYudoRobo")}
             </div>
-            <p className="font-thin w-[70%] text-xl">
+            <p className="font-tthover opacity-70 w-[70%] text-xl">
               Empowering innovation and creativity through cutting-edge
               robotics.
             </p>
           </div>
 
           <div className="hidden sm:flex flex-col space-y-4">
-            <h1 className="text-xl">Get the Plode app</h1>
+            <h1 className="text-xl font-tthover">Get the Plode app</h1>
             <a
               href="https://apps.apple.com/us/app/plode/id1580203387"
               target="_blank"
@@ -229,7 +231,7 @@ const Footer = () => {
         <BottomFooter />
 
         <div className="flex flex-col space-y-4 justify-between lg:flex-row lg:space-y-0 ">
-          <p className="text-xs lg:text-xl font-thin">
+          <p className="text-xs lg:text-xl font-tthover opacity-70">
             © 2024 Yudu Robotics. All rights reserved.
           </p>
           <div className="flex space-x-6">
@@ -239,7 +241,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="h-[40vh] w-full flex justify-center items-center">
+      <div className="h-[60vh]  w-full flex justify-center items-center">
         <img src={renderImg("madeInIndia")} />
       </div>
     </div>

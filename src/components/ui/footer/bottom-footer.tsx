@@ -93,12 +93,14 @@ export default function BottomFooter() {
     setActiveDialog(null);
   };
   return (
-    <footer className="py-6">
+    <footer className="py-6 font-tthover">
       <div className="">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-12">
           {footerData.map((section, index) => (
             <div key={index}>
-              <h4 className="font-thin mb-4 text-lg">{section.title}</h4>
+              <h4 className="font-tthover opacity-70 mb-4 text-lg sm:text-lg md:text-md lg:text-lg xl:text-xl">
+                {section.title}
+              </h4>
               <ul>
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
@@ -112,7 +114,7 @@ export default function BottomFooter() {
                     ) : (
                       <a
                         href={link.href}
-                        className="text-primary-foreground transition-colors duration-200 text-sm lg:text-lg font-semibold"
+                        className="text-primary-foreground transition-colors duration-200 text-sm lg:text-lg"
                       >
                         {link.name}
                       </a>

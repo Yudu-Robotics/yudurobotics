@@ -104,7 +104,7 @@ export default function Peecee() {
         <div className="py-8 lg:py-12">
           <Unboxing />
         </div>
-        <div className="text-sm py-8 lg:py-16 text-center font-bold flex flex-col space-y-6 justify-center items-center">
+        <div className="text-sm py-24 mb-6 text-center font-bold flex flex-col space-y-6 justify-center items-center">
           <p className="text-lg sm:text-lg md:text-md lg:text-lg xl:text-xl">
             <span className="text-[#4A4A4F]">
               Hover over each feature below to{" "}
