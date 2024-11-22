@@ -1,5 +1,14 @@
 // components/ContactForm.tsx
 import { useState } from "react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import PrivacyContent from "../../ui/footer/PrivacyContent";
+import TermsContent from "../../ui/footer/TermsContent";
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -92,9 +101,21 @@ export default function ContactForm() {
     }
   };
 
+  const [activeDialog, setActiveDialog] = useState(null);
+
+  // Function to handle opening of the dialog content
+  const handleDialogOpen = (dialogType: any) => {
+    //e.preventDefault();
+    setActiveDialog(dialogType);
+  };
+
+  const handleDialogClose = () => {
+    setActiveDialog(null);
+  };
+
   return (
-    <div className="flex items-center">
-      <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-lg">
+    <div className="flex items-center lg:w-[35%]">
+      <div className="bg-white rounded-lg shadow-lg p-8 w-[100%]">
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Form Fields */}
           <div className="flex space-x-4">
@@ -152,9 +173,16 @@ export default function ContactForm() {
               name="entry.1655141018"
               value={formData["entry.1655141018"]}
               onChange={handleChange}
-              className="mt-1 block w-full px-4 py-2 text-sm text-secondary-foreground rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+              className="mt-1 block w-full px-4 py-2 text-sm text-secondary-foreground rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary appearance-none"
               required
-              style={{ border: "1px solid #D6D6D8" }}
+              style={{
+                border: "1px solid #D6D6D8",
+                paddingRight: "2.5rem",
+                backgroundImage: "url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" fill=\"%234A4A4F\" viewBox=\"0 0 24 24\"><path d=\"M7 10l5 5 5-5z\"/></svg>')",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "calc(100% - 0.5rem) center",
+                backgroundSize: "1.5rem",
+              }}
             >
               <option value="" disabled>
                 Select an option
@@ -199,9 +227,12 @@ export default function ContactForm() {
                 className="font-medium text-secondary-foreground"
               >
                 You agree to our friendly{" "}
-                <a href="#" className="text-primary underline">
+                <button onClick={(e) => {
+                    e.preventDefault(); // Prevent form submission
+                    handleDialogOpen("privacy");
+                  }} className="font-medium text-secondary-foreground underline">
                   privacy policy
-                </a>
+                </button>
                 .
               </label>
             </div>
@@ -222,6 +253,35 @@ export default function ContactForm() {
           <p className="text-primary mt-4">Form submitted successfully!</p>
         )}
       </div>
+      <Dialog open={!!activeDialog} onOpenChange={handleDialogClose}>
+        <DialogContent
+          className="w-[100%] h-[80vh] overflow-y-auto  text-black mx-auto"
+          style={{
+            overflowY: "auto",
+            WebkitOverflowScrolling: "touch", // Smooth scrolling on iOS
+            scrollbarWidth: "none", // Firefox
+            msOverflowStyle: "none", // Internet Explorer/Edge
+          }}
+        >
+          <DialogHeader>
+            <DialogTitle>
+              {activeDialog === "privacy"
+                ? "Privacy Policy"
+                : "Terms & Conditions"}
+            </DialogTitle>
+            <DialogDescription className="text-black">
+              {activeDialog === "privacy"
+                ? "Last Updated: 31st October 2024"
+                : "Last Updated: 31st October 2024"}
+            </DialogDescription>
+          </DialogHeader>
+
+          <div className="text-black ">
+            {activeDialog === "privacy" && <PrivacyContent />}
+            {activeDialog === "terms" && <TermsContent />}
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
