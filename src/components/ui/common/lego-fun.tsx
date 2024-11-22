@@ -26,7 +26,7 @@ const LegoFun: React.FC<{ legoFun: LegoFun }> = ({ legoFun }) => {
       <div className="sm:w-1/2 ">
         <img
           src={legoFun.centerImage}
-          alt="Product Image"
+          alt="Product"
           className="w-full h-auto"
         />
       </div>

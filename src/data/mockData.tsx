@@ -1,5 +1,3 @@
-import { features, title } from "process";
-
 // mockData.js
 type ProductData = {
   heading: string;
@@ -244,7 +242,7 @@ export const products = [
   {
     name: "Play Dynamex",
     description:
-      "Colorful LEGO blocks inspiring creativity, imagination, and hands-on building fun.",
+      "Colorful plastic blocks inspiring creativity, imagination, and hands-on building fun.",
     image: "assets/zing/ProductImage4.svg",
     category: "Toys",
     type: "Hardware",
@@ -423,7 +421,7 @@ export const mockData: { [key: string]: ProductData } = {
     images: ["assets/peecee/peecee.png", "assets/peecee/peeceehardware1.png"],
     sectionHeader: "headerSection",
     ceoComment:
-      "PeeCee’s innovative design and seamless LEGO integration make it a game-changer for our tech projects.",
+      "PeeCee’s innovative design and seamless plastic building block integration make it a game-changer for our tech projects.",
     ceoName: "Mr Murugappan Vishwanath",
     ceoPosition: "Founder",
     companyName: "iThink",
@@ -645,9 +643,9 @@ export const mockData: { [key: string]: ProductData } = {
       },
     },
     legofun: {
-      heading: "Lego Fun",
+      heading: "Building Fun",
       subheading:
-        "PeeCee TED is best buddies with Lego Technic kits, so you can build, expand, and create to your heart’s content.",
+        "PeeCee TED is best buddies with colourful building block kits, so you can build, expand, and create to your heart’s content.",
       centerImage: "assets/other/lego-fun.png",
     },
     futureProff: {
@@ -856,9 +854,9 @@ export const mockData: { [key: string]: ProductData } = {
       },
     },
     legofun: {
-      heading: "Lego Fun",
+      heading: "Building Fun",
       subheading:
-        "Roboki is best buddies with Lego Technic kits, so you can build, expand, and create to your heart’s content.",
+        "Roboki is best buddies with colourful building block kits, so you can build, expand, and create to your heart’s content.",
       centerImage: "assets/other/lego-fun.png",
     },
     components: {

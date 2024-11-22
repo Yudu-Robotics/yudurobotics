@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Drawer, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"; // Chevron Down
@@ -8,15 +8,7 @@ import Link from "next/link";
 import renderImg from "@/imgImport";
 import Footer from "@/components/ui/footer/footer";
 import renderSvg from "@/svgImport";
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuContent,
-} from "@/components/ui/navigation-menu";
 import FloatingWhatsApp from "@/components/ui/common/floating-whatsapp";
-import ProductMenuList from "@/components/ui/menu/ProductMenuList";
 import { products } from "@/data/mockData";
 
 const ClientLayout = ({ children }: { children: React.ReactNode }) => {
