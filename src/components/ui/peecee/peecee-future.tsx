@@ -11,7 +11,7 @@ const PeeceeFuture: React.FC<{ peeceeFuture: PeeceeFuture }> = ({
   peeceeFuture,
 }) => {
   return (
-    <div className="w-full   flex flex-col-reverse space-y-8 md:flex-row md:space-x-28 md:items-center py-10 justify-center">
+    <div className="w-full    flex flex-col-reverse space-y-8 md:flex-row md:space-x-28 md:items-center py-10 justify-center">
       <div className="sm:w-1/2  ">
         <img
           src={peeceeFuture.centerImage}

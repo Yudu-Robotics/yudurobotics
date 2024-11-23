@@ -71,7 +71,7 @@ const HardwareProductFeatures: React.FC<{ hardware: HardwareData }> = ({
                     className="flex flex-col items-start space-y-1 cursor-pointer "
                     onClick={() => setSelectedIndex(index)}
                   >
-                    <div className="py-2">
+                    <div className="py-2 sm:py-5">
                       {/* Icon for the feature */}
                       <img
                         src={feature.icon}
@@ -83,7 +83,7 @@ const HardwareProductFeatures: React.FC<{ hardware: HardwareData }> = ({
                       <h3 className="font-bold text-lg xl:text-2xl">
                         {feature.heading}
                       </h3>
-                      <p className="pt-2 text-secondary-foreground sm:text-sm md:text-md lg:text-lg xl:text-xl">
+                      <p className="pt-2 sm:pt-3 text-secondary-foreground sm:text-sm md:text-md lg:text-lg xl:text-xl">
                         {feature.description}
                       </p>
                     </div>

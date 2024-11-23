@@ -34,7 +34,7 @@ const TeamPlay: React.FC<{ hardware: HardwareData }> = ({ hardware }) => {
           {section3.subheading}
         </h2>
       </div>
-      <div className=" w-full">
+      <div className=" w-full sm:pt-10">
         <img
           src={hardware.section3.centerImage}
           alt="Product Image"

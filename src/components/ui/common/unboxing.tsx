@@ -41,7 +41,7 @@ function Unboxing() {
             ) => (
               <div key={index} className="flex space-x-2">
                 <div>{renderSvg(value.icon)}</div>
-                <div className="flex flex-col space-y-1 mt-2">
+                <div className="sm:pl-3 flex flex-col space-y-1 mt-2">
                   <h1 className="font-semibold text-xl xl:text-2xl">
                     {value.heading}
                   </h1>

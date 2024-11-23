@@ -86,8 +86,13 @@ export default function Peecee() {
           }
         </div>
 
-        <div className="translate-y-52">
-          <img src={data.images[0]} className="w-full" alt="Example" />
+        <div className="">
+          <img
+            src={data.images[0]}
+            className="w-full"
+            style={{ marginTop: "-9%" }}
+            alt="Example"
+          />
         </div>
       </div>
       <div className="w-full -mt-1">

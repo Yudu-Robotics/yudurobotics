@@ -55,7 +55,7 @@ const SoftwareAdaptive: React.FC<SoftwareAdaptiveProps> = ({ data }) => {
                 {renderSvg(feature?.src || feature?.icon || "robotic")}
               </div>
               <div>
-                <h3 className="font-bold text-xl xl:text-2xl">
+                <h3 className="font-bold text-xl xl:text-2xl sm:py-3">
                   {feature?.title || feature.heading}
                 </h3>
                 <p className="text-secondary-foreground text-lg sm:text-sm md:text-md lg:text-lg xl:text-xl">

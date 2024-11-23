@@ -5,7 +5,7 @@ export default function PrivacyContent() {
   return (
     <div className="font-">
       <p className="font-semibold"></p>
-      <p></p> <br />
+      <br />
       <p className="font-semibold">
         Thank you for visiting{" "}
         <Link href="/home" target="_blank" className="text-blue-600 underline">

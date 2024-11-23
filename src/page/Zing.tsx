@@ -38,26 +38,32 @@ export default function Zing() {
               </div>
 
               {/* Subtext */}
-              <div className="text-primary-foreground text-xs md:text-sm lg:text-base font-body w-[100%] lg:w-[60%]">
+              <div className="text-opacity-35 text-primary-foreground sm:text-sm md:text-md lg:text-lg xl:text-xl font-body w-[100%] sm:w-[60%] text-lg ">
                 {data.subheading}
               </div>
             </div>
           </div>
           {/* Buttons Section */}
           {
-            <JumpingButtons
-              ishorizontal="true"
-              text1={data?.jumppingButton?.[0]?.text1 || ""}
-              text2={data?.jumppingButton?.[0]?.text2 || ""}
-              bgColor={data?.jumppingButton?.[0]?.bgColor || ""}
-              textColor={data?.jumppingButton?.[0]?.textColor || ""}
-              link={data?.jumppingButton?.[0]?.link || ""}
-            />
+            <div className=" flex items-end">
+              <JumpingButtons
+                ishorizontal="true"
+                text1={data?.jumppingButton?.[0]?.text1 || ""}
+                text2={data?.jumppingButton?.[0]?.text2 || ""}
+                bgColor={data?.jumppingButton?.[0]?.bgColor || ""}
+                textColor={data?.jumppingButton?.[0]?.textColor || ""}
+                link={data?.jumppingButton?.[0]?.link || ""}
+              />
+            </div>
           }
         </div>
 
         <div className="">
-          <img src={data.images[0]} className="w-full -mt-[8%]" />
+          <img
+            src={data.images[0]}
+            className="w-full"
+            style={{ marginTop: "-15%" }}
+          />
         </div>
       </div>
       <div className="w-full -mt-1">
@@ -128,7 +134,7 @@ export default function Zing() {
           <TestimonialBanner />
         </div>
         <div className="py-5 lg:py-20">
-          <FAQs product="zing"/>
+          <FAQs product="zing" />
         </div>
         <div>
           <GetInTouch />

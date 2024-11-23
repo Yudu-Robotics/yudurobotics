@@ -38,7 +38,7 @@ export default function CrawlE() {
               </div>
 
               {/* Subtext */}
-              <div className="text-primary-foreground text-xs md:text-sm lg:text-base font-body w-[100%] lg:w-[60%]">
+              <div className="text-opacity-35 text-primary-foreground sm:text-sm md:text-md lg:text-lg xl:text-xl font-body w-[100%] sm:w-[60%] text-lg ">
                 {data.subheading}
               </div>
             </div>
@@ -92,7 +92,7 @@ export default function CrawlE() {
           <SoftwareAdaptive />
         </div>
         <div className=" md:py-20">
-          <VersatileSoftware />
+          <VersatileSoftware color="red-100" />
         </div>
         <div>
           <ExtraFeatures
@@ -130,7 +130,7 @@ export default function CrawlE() {
           <TestimonialBanner />
         </div>
         <div className="py-5 lg:py-20">
-          <FAQs product="crawl_e"/>
+          <FAQs product="crawl_e" />
         </div>
         <div>
           <GetInTouch />

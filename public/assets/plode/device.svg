@@ -1,8 +1,8 @@
 <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_dii_15515_12841)">
 <path d="M2 25C2 11.7452 12.7452 1 26 1C39.2548 1 50 11.7452 50 25C50 38.2548 39.2548 49 26 49C12.7452 49 2 38.2548 2 25Z" fill="#5423E6"/>
-<path d="M3 25C3 12.2975 13.2975 2 26 2C38.7025 2 49 12.2975 49 25C49 37.7025 38.7025 48 26 48C13.2975 48 3 37.7025 3 25Z" stroke="url(#paint0_linear_15515_12841)" stroke-width="2"/>
-<path d="M19.8095 21.4045V18H36V28.2143H23.0474M25.5238 31H30.2857M27.4286 28.2143V31M22.6667 31H16V21.7143H22.6667V31Z" stroke="#FDFDFE" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3 25C3 12.2975 13.2975 2 26 2C38.7025 2 49 12.2975 49 25C49 37.7025 38.7025 48 26 48C13.2975 48 3 37.7025 3 25Z" stroke="url(#paint0_linear_15515_12841)" strokeWidth="2"/>
+<path d="M19.8095 21.4045V18H36V28.2143H23.0474M25.5238 31H30.2857M27.4286 28.2143V31M22.6667 31H16V21.7143H22.6667V31Z" stroke="#FDFDFE" strokeWidth="2" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
 </g>
 <defs>
 <filter id="filter0_dii_15515_12841" x="0" y="0" width="52" height="52" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">

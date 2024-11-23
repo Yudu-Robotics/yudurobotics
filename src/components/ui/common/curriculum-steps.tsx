@@ -42,7 +42,7 @@ const CurriculumSteps: React.FC<{
                     key={index}
                     className="flex flex-col space-y-1 py-3 sm:py-0"
                   >
-                    <h1 className="font-bold text-[#303036] text-xl sm:text-sm md:text-md lg:text-lg xl:text-xl">
+                    <h1 className="font-bold sm:py-2 text-[#303036] text-xl sm:text-sm md:text-md lg:text-lg xl:text-xl">
                       {value.title}
                     </h1>
                     <p className="text-lg sm:text-xs md:text-sm lg:text-md xl:text-lg text-secondary-foreground">
@@ -64,7 +64,7 @@ const CurriculumSteps: React.FC<{
                     key={index}
                     className="flex flex-col space-y-1 py-3 sm:py-0"
                   >
-                    <h1 className="font-bold text-xl text-[#303036] sm:text-sm md:text-md lg:text-lg xl:text-xl">
+                    <h1 className="font-bold sm:py-2 text-xl text-[#303036] sm:text-sm md:text-md lg:text-lg xl:text-xl">
                       {value.title}
                     </h1>
                     <p className="text-lg sm:text-xs md:text-sm lg:text-md xl:text-lg text-secondary-foreground">

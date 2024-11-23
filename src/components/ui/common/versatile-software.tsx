@@ -5,8 +5,12 @@ import React from "react";
 
 interface SoftwareAdaptiveProps {
   data?: any;
+  color?: any;
 }
-const VersatileSoftware: React.FC<SoftwareAdaptiveProps> = ({ data }) => {
+const VersatileSoftware: React.FC<SoftwareAdaptiveProps> = ({
+  data,
+  color,
+}) => {
   const images = ["threestep", "fivecoding", "aimodel"];
   const features = [
     {
@@ -50,9 +54,9 @@ const VersatileSoftware: React.FC<SoftwareAdaptiveProps> = ({ data }) => {
         {(data?.features || features)?.map((feature: any, index: any) => (
           <div
             key={index}
-            className="flex flex-col justify-center items-center text-center space-y-2 mt-4"
+            className="flex  flex-col h-full justify-center items-center text-center space-y-2 mt-4 "
           >
-            <div className="bg-primary h-full p-5 flex justify-center items-center rounded-xxl ">
+            <div className="sm:h-[80%] bg-primary-ver  p-5 flex justify-center items-center rounded-xxl">
               <div className="flex justify-between items-center h-full">
                 <img
                   src={renderImg(images[index])}
@@ -60,13 +64,14 @@ const VersatileSoftware: React.FC<SoftwareAdaptiveProps> = ({ data }) => {
                 />
               </div>
             </div>
-
-            <h1 className="text-xl sm:text-xl font-bold pt-4">
-              {feature.title}
-            </h1>
-            <p className="text-lg sm:text-lg text-secondary-foreground w-[100%] lg:w-[85%]">
-              {feature.desc}
-            </p>
+            <div className="h-[20%] ">
+              <h1 className="text-xl sm:text-xl font-bold pt-4">
+                {feature.title}
+              </h1>
+              <div className="text-lg sm:text-lg text-secondary-foreground w-[100%] flex sm:justify-center">
+                <p className="lg:w-[85%] ">{feature.desc}</p>
+              </div>
+            </div>
           </div>
         ))}
       </div>

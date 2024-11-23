@@ -25,7 +25,7 @@ const ExtraFeatures: React.FC<{
 }> = ({ data, title, showArrow }) => {
   const [selectedIndex, setSelectedIndex] = useState(-1);
   return (
-    <div className="flex flex-col space-y-2 lg:space-y-0 sm:mt-20">
+    <div className="flex flex-col space-y-2 lg:space-y-0 sm:mt-20 sm:pb-14">
       {showArrow && (
         <div className="hidden lg:flex lg:flex-row lg:justify-center lg:items-center lg:-mb-32 lg:ml-40">
           {renderSvg("handDrawArrow2")}
@@ -57,7 +57,7 @@ const ExtraFeatures: React.FC<{
                   {renderSvg(feature.icon)}
                 </div>
                 <div className="pt-4 sm:pt-0">
-                  <h3 className="font-bold text-xl xl:text-2xl">
+                  <h3 className="font-bold text-xl xl:text-2xl sm:py-3">
                     {feature.heading}
                   </h3>
                   <p className="pt-2 text-secondary-foreground text-lg sm:text-sm md:text-md lg:text-lg xl:text-xl">

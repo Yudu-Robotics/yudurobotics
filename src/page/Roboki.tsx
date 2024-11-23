@@ -57,7 +57,11 @@ export default function Roboki() {
             }
           </div>
           <div className=" ">
-            <img src={data.images[0]} className="w-full -pt-[8%]" />
+            <img
+              src={data.images[0]}
+              className="w-full "
+              style={{ marginTop: "-9%" }}
+            />
           </div>
         </div>
         <div className="w-full -mt-1">
@@ -71,7 +75,7 @@ export default function Roboki() {
           <div className="py-8 lg:py-12">
             <Unboxing />
           </div>
-          <div className="text-sm py-8 lg:py-16 text-center font-bold flex flex-col space-y-6 justify-center items-center">
+          <div className="text-sm py-24 text-center font-bold flex flex-col space-y-6 justify-center items-center">
             <p className="text-lg sm:text-lg md:text-md lg:text-lg xl:text-xl">
               <span className="text-[#4A4A4F]">
                 Hover over each feature below to{" "}

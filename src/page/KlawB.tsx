@@ -38,7 +38,7 @@ export default function KlawB() {
               </div>
 
               {/* Subtext */}
-              <div className="w-[50%] text-primary-foreground text-xs md:text-sm lg:text-base font-body ">
+              <div className="text-opacity-35 text-primary-foreground sm:text-sm md:text-md lg:text-lg xl:text-xl font-body w-[100%] sm:w-[60%] text-lg  ">
                 {data.subheading}
               </div>
               {/* Buttons Section */}
@@ -56,11 +56,11 @@ export default function KlawB() {
           </div>
         </div>
 
-        <div className="" style={{ marginTop: "-37rem" }}>
+        <div className=" ">
           <img
             src={data.images[0]}
             className="w-full"
-            style={{ marginTop: "-8%" }}
+            style={{ marginTop: "-35%" }}
           />
         </div>
       </div>
@@ -148,7 +148,7 @@ export default function KlawB() {
           <TestimonialBanner />
         </div>
         <div className="py-5 lg:py-20">
-          <FAQs product="klaw"/>
+          <FAQs product="klaw" />
         </div>
         <div>
           <GetInTouch />

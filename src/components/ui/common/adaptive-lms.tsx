@@ -3,7 +3,7 @@ import React from "react";
 
 const AdaptiveLMS = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 sm:[grid-auto-flow:dense] ">
+    <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 sm:[grid-auto-flow:dense] sm:pt-10">
       <div className="order-2 md:order-none md:p-8 py-10 sm:py-0">
         <img src={renderImg("macbook")} alt="LMS" className="w-full" />
       </div>
