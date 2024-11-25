@@ -1,3 +1,7 @@
+//Mobile images
+
+const crawlem = "assets/crawle/crawlem.png";
+
 //other
 const logo = "assets/Logo.png";
 const favicon = "assets/favicon.png";
@@ -286,6 +290,11 @@ function renderImg(imgName: string) {
       return rightarrow;
     case "playstore":
       return playstore;
+
+    //Mobile images
+
+    case "crawlem":
+      return crawlem;
 
     //Not Found
     case "notFound":

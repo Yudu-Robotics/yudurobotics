@@ -15,6 +15,7 @@ import Unboxing from "@/components/ui/common/unboxing";
 import VersatileSoftware from "@/components/ui/common/versatile-software";
 import FAQs from "@/components/ui/home/faqs";
 import { mockData } from "@/data/mockData";
+import renderImg from "@/imgImport";
 import renderSvg from "@/svgImport";
 import React from "react";
 
@@ -57,7 +58,11 @@ export default function CrawlE() {
         </div>
 
         <div className="">
-          <img src={data.images[0]} className="w-full -mt-[8%]" />
+          <img
+            src={data.images[0]}
+            className="w-full "
+            style={{ marginTop: "-10%" }}
+          />
         </div>
       </div>
       <div className="w-full -mt-1">
