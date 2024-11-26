@@ -7,6 +7,7 @@ import renderSvg from "@/svgImport";
 import { usePathname } from "next/navigation";
 import { tree } from "next/dist/build/templates/app-page";
 import FooterIcon from "./fotterIcon";
+import Link from "next/link";
 
 const Footer = () => {
   const route = [
@@ -33,12 +34,15 @@ const Footer = () => {
   ];
 
   const social_share = [
-    "twitterIcon",
-    "linkedInIcon",
-    "fbIcon",
-    "instaIcon",
-    "ytIcon",
-    "googleIcon",
+    { name: "twitterIcon", link: "https://twitter.com/YuduRobotics/" },
+    {
+      name: "linkedInIcon",
+      link: "https://www.linkedin.com/showcase/yudu-robotics/",
+    },
+    // { name: "fbIcon", link: "" },
+    { name: "instaIcon", link: "https://www.instagram.com/yudurobotics/" },
+    { name: "ytIcon", link: "https://www.youtube.com/@YuduRobotics" },
+    // { name: "googleIcon", link: "" },
   ];
   const pathname = usePathname();
   const [currentUrl, setCurrentUrl] = useState("");
@@ -235,8 +239,12 @@ const Footer = () => {
             © 2024 Yudu Robotics. All rights reserved.
           </p>
           <div className="flex space-x-6">
-            {social_share.map((value: string, key: number) => (
-              <div key={key}>{renderSvg(value)}</div>
+            {social_share.map((item, key) => (
+              <div key={key}>
+                <Link href={item.link} target="_blank">
+                  {renderSvg(item.name)}
+                </Link>
+              </div>
             ))}
           </div>
         </div>

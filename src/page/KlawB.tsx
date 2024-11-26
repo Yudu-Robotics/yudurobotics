@@ -15,6 +15,7 @@ import Unboxing from "@/components/ui/common/unboxing";
 import VersatileSoftware from "@/components/ui/common/versatile-software";
 import FAQs from "@/components/ui/home/faqs";
 import { mockData } from "@/data/mockData";
+import renderImg from "@/imgImport";
 import renderSvg from "@/svgImport";
 import React from "react";
 
@@ -56,12 +57,15 @@ export default function KlawB() {
           </div>
         </div>
 
-        <div className=" ">
+        <div className="hidden sm:flex ">
           <img
             src={data.images[0]}
             className="w-full"
             style={{ marginTop: "-35%" }}
           />
+        </div>
+        <div className="sm:hidden pb-10">
+          <img src={renderImg("klawbm")} className="w-full" />
         </div>
       </div>
       <div className="w-full -mt-1">
@@ -107,7 +111,7 @@ export default function KlawB() {
           <PlodeSoftware jumppingdata={data.jumppingButton?.[1] || {}} />
         </div>
         <div className="lg:-mt-52 ">
-          <SoftwareAdaptive />
+          <SoftwareAdaptive image="playklawb" />
         </div>
         <div className=" md:py-20">
           <VersatileSoftware />

@@ -1,6 +1,16 @@
 //Mobile images
-
 const crawlem = "assets/crawle/crawlem.png";
+const robokim = "assets/roboki/robokim.png";
+const zingm = "assets/zing/zingm.png";
+const peeceem = "assets/peecee/peeceem.png";
+const klawbm = "assets/klawb/klawbm.png";
+
+//Roboki
+const playroboki = "assets/roboki/playroboki.png";
+// klawb
+const playklawb = "assets/klawb/playklawb.png";
+// crawle
+const playcrawle = "assets/crawle/playcrawle.png";
 
 //other
 const logo = "assets/Logo.png";
@@ -27,6 +37,7 @@ const curv = "assets/home/curv.png";
 const humanoid = "assets/zing/Humanoid.png";
 const productBackground = "assets/zing/productBackground.png";
 const productCrawle = "assets/zing/productCrawle.png";
+const playzing = "assets/zing/playzing.png";
 
 // other
 const arrow = "assets/other/arrow.png";
@@ -51,6 +62,7 @@ const peecee = "assets/peecee/peecee.png";
 const avatar = "assets/peecee/Avatar.png";
 const profileImage = "assets/peecee/profileImage.png";
 const handArrow = "assets/peecee/hand-arrow.png";
+const playpeecee = "assets/peecee/playpeecee.png";
 
 // testimonial
 
@@ -156,7 +168,11 @@ function renderImg(imgName: string) {
       return productBackground;
     case "productCrawle":
       return productCrawle;
+    case "playzing":
+      return playzing;
 
+    case "playcrawle":
+      return playcrawle;
     // peecee
     case "peecee":
       return peecee;
@@ -166,6 +182,12 @@ function renderImg(imgName: string) {
       return profileImage;
     case "handArrow":
       return handArrow;
+    case "playpeecee":
+      return playpeecee;
+
+    //Roboki
+    case "playroboki":
+      return playroboki;
 
     // other
     case "arrow":
@@ -291,10 +313,24 @@ function renderImg(imgName: string) {
     case "playstore":
       return playstore;
 
+    // Klawb
+    case "playklawb":
+      return playklawb;
+
     //Mobile images
 
     case "crawlem":
       return crawlem;
+    case "robokim":
+      return robokim;
+    case "zingm":
+      return zingm;
+    case "peeceem":
+      return peeceem;
+    case "crawlem":
+      return crawlem;
+    case "klawbm":
+      return klawbm;
 
     //Not Found
     case "notFound":

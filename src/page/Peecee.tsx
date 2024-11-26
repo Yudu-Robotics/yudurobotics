@@ -21,6 +21,7 @@ import PeeceeFuture from "@/components/ui/peecee/peecee-future";
 import TeamPlay from "@/components/ui/peecee/team-play";
 import SixBlock from "@/components/ui/SixBlock";
 import { mockData } from "@/data/mockData";
+import renderImg from "@/imgImport";
 import renderSvg from "@/svgImport";
 import React from "react";
 
@@ -86,13 +87,16 @@ export default function Peecee() {
           }
         </div>
 
-        <div className="">
+        <div className="hidden sm:flex ">
           <img
             src={data.images[0]}
             className="w-full"
             style={{ marginTop: "-9%" }}
             alt="Example"
           />
+        </div>
+        <div className="sm:hidden pb-10">
+          <img src={renderImg("peeceem")} className="w-full" alt="Example" />
         </div>
       </div>
       <div className="w-full -mt-1">
@@ -152,7 +156,7 @@ export default function Peecee() {
           <PlodeSoftware jumppingdata={data.jumppingButton?.[1] || {}} />
         </div>
         <div className="  ">
-          <SoftwareAdaptive />
+          <SoftwareAdaptive image="playpeecee" />
         </div>
         <div className=" md:py-20 xl:py-24">
           <VersatileSoftware />

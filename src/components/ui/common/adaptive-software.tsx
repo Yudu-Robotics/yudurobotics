@@ -4,8 +4,9 @@ import renderSvg from "@/svgImport";
 import React from "react";
 interface SoftwareAdaptiveProps {
   data?: any;
+  image?: any;
 }
-const SoftwareAdaptive: React.FC<SoftwareAdaptiveProps> = ({ data }) => {
+const SoftwareAdaptive: React.FC<SoftwareAdaptiveProps> = ({ data, image }) => {
   const features = [
     {
       icon: "monitor",
@@ -42,7 +43,11 @@ const SoftwareAdaptive: React.FC<SoftwareAdaptiveProps> = ({ data }) => {
 
       <div className="w-full  flex flex-col justify-between  space-y-8 md:flex-row md:space-y-0">
         <div className="sm:w-1/2 p-5 ">
-          <img src={renderImg("monitorAndPhone")} alt="" className="w-full" />
+          <img
+            src={renderImg(image || "monitorAndPhone")}
+            alt=""
+            className="w-full"
+          />
         </div>
         <div className="xl:w-1/2  flex flex-col space-y-8 justify-center">
           {(data?.features || features)?.map((feature: any, index: any) => (

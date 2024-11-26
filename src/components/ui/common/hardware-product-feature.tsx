@@ -69,7 +69,8 @@ const HardwareProductFeatures: React.FC<{ hardware: HardwareData }> = ({
                   <div
                     key={index}
                     className="flex flex-col items-start space-y-1 cursor-pointer "
-                    onClick={() => setSelectedIndex(index)}
+                    onMouseEnter={() => setSelectedIndex(index)}
+                    onMouseLeave={() => setSelectedIndex(-1)}
                   >
                     <div className="py-2 sm:py-5">
                       {/* Icon for the feature */}
@@ -124,7 +125,8 @@ const HardwareProductFeatures: React.FC<{ hardware: HardwareData }> = ({
                   <div
                     key={index}
                     className="flex flex-col items-start space-y-1 cursor-pointer "
-                    onClick={() => setSelectedIndex(index)}
+                    onMouseEnter={() => setSelectedIndex(index)}
+                    onMouseLeave={() => setSelectedIndex(-1)}
                   >
                     <div className="py-2">
                       {/* Icon for the feature */}

@@ -15,6 +15,7 @@ import Unboxing from "@/components/ui/common/unboxing";
 import VersatileSoftware from "@/components/ui/common/versatile-software";
 import FAQs from "@/components/ui/home/faqs";
 import { mockData } from "@/data/mockData";
+import renderImg from "@/imgImport";
 import renderSvg from "@/svgImport";
 import React from "react";
 
@@ -58,9 +59,16 @@ export default function Zing() {
           }
         </div>
 
-        <div className="">
+        <div className="hidden sm:flex ">
           <img
             src={data.images[0]}
+            className="w-full"
+            style={{ marginTop: "-15%" }}
+          />
+        </div>
+        <div className="sm:hidden pb-10">
+          <img
+            src={renderImg("zingm")}
             className="w-full"
             style={{ marginTop: "-15%" }}
           />
@@ -93,7 +101,7 @@ export default function Zing() {
           <PlodeSoftware jumppingdata={data.jumppingButton?.[1] || {}} />
         </div>
         <div className="lg:-mt-52 ">
-          <SoftwareAdaptive />
+          <SoftwareAdaptive image="playzing" />
         </div>
         <div className=" md:py-20">
           <VersatileSoftware />

@@ -57,12 +57,15 @@ export default function CrawlE() {
           }
         </div>
 
-        <div className="">
+        <div className="hidden sm:flex ">
           <img
             src={data.images[0]}
             className="w-full "
             style={{ marginTop: "-10%" }}
           />
+        </div>
+        <div className="sm:hidden pb-10">
+          <img src={renderImg("crawlem")} className="w-full " />
         </div>
       </div>
       <div className="w-full -mt-1">
@@ -94,7 +97,7 @@ export default function CrawlE() {
           <PlodeSoftware jumppingdata={data.jumppingButton?.[1] || {}} />
         </div>
         <div className="lg:-mt-52 ">
-          <SoftwareAdaptive />
+          <SoftwareAdaptive image="playcrawle" />
         </div>
         <div className=" md:py-20">
           <VersatileSoftware color="red-100" />
