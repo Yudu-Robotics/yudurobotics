@@ -46,7 +46,7 @@ export default function Zing() {
           </div>
           {/* Buttons Section */}
           {
-            <div className=" flex items-end">
+            <div className=" flex items-end  ">
               <JumpingButtons
                 ishorizontal="true"
                 text1={data?.jumppingButton?.[0]?.text1 || ""}
