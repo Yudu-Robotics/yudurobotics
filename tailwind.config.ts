@@ -14,6 +14,8 @@ const config: Config = {
         body: ["TTHovesRegular", "sans-serif"],
         piepie: ["PiePie", "sans-serif"],
         tthover: ["TTHovesRegular", "sans-serif"],
+        "tthover-bold": ["TTHovesBold", "sans-serif"],
+        "tthoves-semiBold": ["TTHovesDemiBold", "sans-serif"],
       },
       colors: {
         customBlue: "#3f00ff",

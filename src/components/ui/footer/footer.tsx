@@ -123,7 +123,7 @@ const Footer = () => {
           <h1 className="font-piepie text-4xl lg:text-6xl">
             Ready to Innovate Together?
           </h1>
-          <h1 className="font-tthover py-4 opacity-70">
+          <h1 className=" py-4 opacity-70 font-tthover">
             Partner with us and drive the future of robotics.
           </h1>
         </div>
@@ -143,7 +143,7 @@ const Footer = () => {
       {/* Contact us Section */}
       <div className="py-20">
         <div className="flex flex-col  lg:items-start">
-          <h1>Contact us</h1>
+          <h1 className="font-tthover">Contact us</h1>
 
           <h1 className="font-piepie text-3xl lg:text-4xl tracking-wider">
             Chat to our friendly team
@@ -178,9 +178,9 @@ const Footer = () => {
               ) => (
                 <div key={key} className="flex flex-col space-y-2">
                   <div>{value.icon_image}</div>
-                  <h1 className="font-tthover text-[#1A1804]">{value.type}</h1>
+                  <h1 className="font-tthover ">{value.type}</h1>
                   <p className="font-tthover opacity-70">{value.text}</p>
-                  <p className="w-[70%] text-xl font-tthover">
+                  <p className="w-[70%] text-lg font-tthover">
                     {value.contact_by}
                   </p>
                 </div>
@@ -206,7 +206,9 @@ const Footer = () => {
           </div>
 
           <div className="hidden sm:flex flex-col space-y-4">
-            <h1 className="text-xl font-tthover">Get the Plode app</h1>
+            <h1 className="text-lg font-tthover opacity-70">
+              Get the Plode app
+            </h1>
             <a
               href="https://apps.apple.com/us/app/plode/id1580203387"
               target="_blank"
@@ -235,13 +237,13 @@ const Footer = () => {
         <BottomFooter />
 
         <div className="flex flex-col space-y-4 justify-between lg:flex-row lg:space-y-0 ">
-          <p className="text-xs lg:text-xl font-tthover opacity-70">
+          <p className="text-xs lg:text-lg font-tthover opacity-70">
             © 2024 Yudu Robotics. All rights reserved.
           </p>
           <div className="flex space-x-6">
             {social_share.map((item, key) => (
               <div key={key}>
-                <Link href={item.link} target="_blank">
+                <Link href={item.link} target="_blank" className="opacity-70">
                   {renderSvg(item.name)}
                 </Link>
               </div>
@@ -249,7 +251,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="h-[60vh]  w-full flex justify-center items-center">
+      <div className="h-[80vh]  w-full flex justify-center items-center">
         <img src={renderImg("madeInIndia")} />
       </div>
     </div>

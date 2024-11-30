@@ -29,7 +29,7 @@ function Content() {
   return (
     <>
       {[...Array(1)].map((_, index) => (
-        <div className="flex space-x-8" key={index}>
+        <div className="flex space-x-8 font-tthover" key={index}>
           {/* Each set of items */}
           <div className="flex flex-col space-y-8 flex-shrink-0">
             <div>
@@ -67,7 +67,7 @@ function Content() {
               <img
                 src={renderImg("bg3")}
                 alt="Background"
-                className="w-full h-full object-cover rounded-lg"
+                className="w-full h-full object-cover "
               />
               <div className="absolute inset-0 text-green-400 flex flex-col justify-center px-20">
                 <h2 className="text-xl lg:text-6xl font-extrabold">500K+</h2>
@@ -107,11 +107,11 @@ function Content() {
               {/* currenlty */}
               <div className="flex flex-col space-y-6">
                 <div className="flex space-x-8">
-                  <div className="relative">
+                  <div className="relative ">
                     <img
                       src={renderImg("bg5")}
                       alt="Background"
-                      className="w-full h-full object-cover rounded-lg"
+                      className=" object-cover  "
                     />
                     <div className="absolute inset-0 text-primary flex flex-col justify-center px-20">
                       <h2 className="text-xl lg:text-6xl font-extrabold">

@@ -42,9 +42,9 @@ export default async function HomePage() {
 
             {/* Main Text */}
 
-            <div className="space-y-4">
+            <div className="space-y-4 border">
               {/* Main Headline */}
-              <div className="font-piepie text-4xl md:text-6xl lg:text-7xl tracking-wider text-primary-foreground text-center sm:text-left">
+              <div className="font-piepie text-4xl md:text-6xl lg:text-7xl  text-primary-foreground text-center sm:text-left sm:w-[95%] leading-8 space-x-2">
                 {highlightWords(
                   data.heading,
                   data.wordsToHighlight.text1,
@@ -53,7 +53,7 @@ export default async function HomePage() {
               </div>
 
               {/* Subtext */}
-              <div className="text-[#F2D8FE] text-lg md:text-xl lg:text-2xl font-body w-[100%] lg:w-[50%] text-center sm:text-left">
+              <div className="text-[#F2D8FE] text-lg md:text-lg lg:text-xl font-body w-[100%] lg:w-[50%] text-center sm:text-left">
                 {data.subheading}
               </div>
             </div>
@@ -112,10 +112,10 @@ export default async function HomePage() {
         </div> */}
 
         <div className="py-5 lg:py-20  sm:mx-0">
-          <FAQs product="home"/>
+          <FAQs product="home" />
         </div>
 
-        <div className="sm:mb-24">
+        <div className="sm:mb-24 ">
           <GetInTouch />
         </div>
       </div>

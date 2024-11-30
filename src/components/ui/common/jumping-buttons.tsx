@@ -22,7 +22,7 @@ const JumpingButtons: React.FC<JumpingButtonsProps> = ({
         ishorizontal == "true"
           ? "flex flex-row"
           : "flex flex-row lg:flex-col lg:space-y-10"
-      } justify-center items-center space-x-10 px-12`}
+      } justify-center items-center space-x-10 px-12 font-tthover`}
     >
       <div>
         {link && link !== "#" ? (
@@ -35,7 +35,7 @@ const JumpingButtons: React.FC<JumpingButtonsProps> = ({
               }}
             >
               <span className="block">{text1 || "Lemme"}</span>
-              <span className="block font-bold italic">
+              <span className="block font-bold italic font-tthoves-semiBold">
                 {text2 || "Explore"}
               </span>
             </div>

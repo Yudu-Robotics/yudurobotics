@@ -45,7 +45,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
       </div>
       <div className="flex flex-col space-y-8">
         {NavBarItems.map((item, key) => (
-          <div key={key} className="">
+          <div key={key} className="font-tthover">
             {item.name === "Our Products" ? (
               <>
                 {/* Main "Our Products" Link */}
@@ -150,12 +150,12 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
           <div className="mb-12">
             <img src={renderImg("logoblack")} alt="logo" />
           </div>
-          <div className=" ">
+          <div className="font-tthover ">
             {NavBarItems.map((item, key) => (
               <Link
                 key={key}
                 href={item.link}
-                className="text-base font-bold text-black transition-colors duration-300 ease-in-out hover:text-destructive p-3"
+                className="text-base font-bold text-black transition-colors duration-300 ease-in-out hover:text-destructive p-3 font-tthover"
               >
                 {item.name}
               </Link>
@@ -257,7 +257,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
             {NavBarItems.map((item, key) => (
               <div
                 key={key}
-                className="relative group"
+                className="relative group font-tthover"
                 onMouseEnter={() => {
                   setHoveredItem(item.name);
                 }}

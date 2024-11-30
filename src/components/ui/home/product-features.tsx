@@ -13,33 +13,36 @@ function ProductFeatures() {
       <div className="bg-primary rounded-xxl text-primary-foreground px-8  lg:px-16 pt-12 sm:pt-20 tracking-wide pb-6">
         <div className="flex flex-col justify-between space-y-16 lg:flex-row lg:space-y-0">
           <div className="w-[100%] lg:w-[55%]">
-            <h6> Newly Launched!</h6>
-            <h1 className="font-piepie text-3xl lg:text-5xl tracking-wide ">
+            <h6 className="font-tthover"> Newly Launched!</h6>
+            <h1 className="font-piepie text-3xl lg:text-6xl tracking-wide ">
               Meet <span className="text-destructive">Zing</span>: The Fun and
               Lively Humanoid Robot
             </h1>
-            <p className="py-2 lg:py-6 text-lg font-body font-thin text-[#E2D8FE]">
+            <p className="py-2 lg:py-6 text-xl font-tthoves font-thin text-[#E2D8FE]">
               A 38 cm marvel with 17 degrees of freedom, crafted for endless
               exploration and creativity.
             </p>
             <ul className="space-y-4 opacity-50">
               {features.map((feature) => (
-                <li key={feature.id} className="flex space-x-2 font-extralight">
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M5 13l4 4L19 7"
-                    ></path>
-                  </svg>
-                  <span>{feature.text}</span>
+                <li key={feature.id} className="flex space-x-2 ">
+                  <div className="border  flex justify-center items-center">
+                    <svg
+                      width="14"
+                      height="10"
+                      viewBox="0 0 14 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.75 5L5.25 8.5L12.25 1.5"
+                        stroke="#FFFFFF"
+                        stroke-width="2.33333"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <span className="text-xl font-tthover">{feature.text}</span>
                 </li>
               ))}
             </ul>

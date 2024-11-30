@@ -55,7 +55,9 @@ export default function ProductCategories() {
   // Update product details when the category or other filters change
   useEffect(() => {
     if (filteredProducts.length > 0) {
-      filteredProducts.length == 1 ? setIsAllowedFlag(false) : setIsAllowedFlag(true);
+      filteredProducts.length == 1
+        ? setIsAllowedFlag(false)
+        : setIsAllowedFlag(true);
       setProductDetails(filteredProducts[0]);
     } else {
       setProductDetails(initialProductDetails);
@@ -111,15 +113,15 @@ export default function ProductCategories() {
 
   return (
     <div className="flex flex-col space-y-10 lg:space-y-20 py-7 lg:py-14">
-      <SearchAndFilter
+      {/* <SearchAndFilter
         filters={filters}
         ageGroups={ageGroups}
         onFilterChange={handleFilterChange}
         onAgeGroupChange={handleAgeGroupChange}
-      />
+      /> */}
       <div className="flex flex-col space-y-2 lg:flex-row">
-        <div className="flex flex-col space-y-2 lg:space-y-6 w-[100%] lg:w-[25%]">
-          <h2 className="text-primary font-semibold text-sm   lg:text-start">
+        <div className="flex flex-col space-y-2 lg:space-y-6 w-[100%] lg:w-[25%] font-tthoves-semiBold">
+          <h2 className="text-primary  text-sm lg:text-start">
             Product Categories
           </h2>
           <div className="flex flex-col space-y-3 lg:ml-4 items-center ">
@@ -172,13 +174,33 @@ export default function ProductCategories() {
                 <p className="font-light text-lg py-1">
                   {productDetails.description}
                 </p>
-                {isAllowedFlag &&(
+                {isAllowedFlag && (
                   <Link
-                  href={productDetails.link}
-                  className="text-primary mt-4 text-base font-bold hover:scale-125"
-                >
-                  Learn More {"->"}
-                </Link>)}
+                    href={productDetails.link}
+                    className="text-primary mt-4 text-base font-bold hover:scale-125 "
+                  >
+                    <div className="flex space-x-2 items-center s">
+                      <div>Learn More</div>
+                      <div>
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1.16699 7.00008H12.8337M12.8337 7.00008L7.00033 1.16675M12.8337 7.00008L7.00033 12.8334"
+                            stroke="#4A1FCC"
+                            stroke-width="1.66667"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </Link>
+                )}
               </div>
             </div>
           </>

@@ -17,7 +17,7 @@ const CeoReviewsContainer: React.FC<CeoProps> = ({ data }) => {
         </div>
 
         <div className="flex items-center">
-          <p className="text-center  items-center font-piepie text-2xl md:text-4xl lg:text-6xl tracking-wider text-primary-foreground">
+          <p className="text-center  items-center font-piepie text-2xl md:text-4xl lg:text-5xl tracking-wider text-primary-foreground">
             {data?.desc ||
               "Yudu Robotics has been an incredible partner, blending creativity with cutting-edge tech to drive innovation like never before."}
           </p>

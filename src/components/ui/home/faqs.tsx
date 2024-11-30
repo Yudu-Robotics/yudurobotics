@@ -14,12 +14,12 @@ const FAQs = ({ product }: { product: string }) => {
     faqData.find((item) => item.product === product)?.faqs || [];
 
   return (
-    <div className="flex flex-col space-y-4 ">
+    <div className="flex flex-col space-y-4 pt-16 ">
       <div className="flex flex-col space-y-2 justify-center items-center">
-        <h1 className="w-full font-piepie text-center  text-3xl sm:text-5xl text-black sm:racking-wider">
+        <h1 className="w-full font-piepie text-center  text-3xl sm:text-4xl text-black sm:racking-wider">
           Got Questions? We’ve Got Answers
         </h1>
-        <p className="text-secondary-foreground text-center text-lg sm:text-start sm:text-sm md:text-md lg:text-lg xl:text-xl pt-4">
+        <p className="text-secondary-foreground text-center text-lg sm:text-start sm:text-sm md:text-md lg:text-lg xl:text-xl pt-4 font-tthover">
           Find the information you need with our frequently asked questions.
         </p>
       </div>
@@ -34,7 +34,7 @@ const FAQs = ({ product }: { product: string }) => {
               onClick={() => toggleFAQ(index)}
               className="flex justify-between items-center w-full focus:outline-none"
             >
-              <h3 className="text-xl text-start lg:text-lg text-black">
+              <h3 className="text-xl text-start lg:text-lg text-[#0A041A] font-tthoves-semiBold">
                 {item.question}
               </h3>
               <img
