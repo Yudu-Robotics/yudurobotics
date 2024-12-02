@@ -8,13 +8,13 @@ const AdaptiveLMS = () => {
         <img src={renderImg("macbook")} alt="LMS" className="w-full" />
       </div>
       <div className="order-1 md:order-none flex flex-col items-start md:px-12">
-        <h1 className="text-lg sm:text-sm md:text-md lg:text-lg xl:text-xl text-primary">
+        <h1 className="font-tthoves-semiBold text-lg sm:text-sm md:text-md lg:text-lg xl:text-xl text-primary">
           Curriculum
         </h1>
         <h2 className="text-4xl lg:text-5xl xl:text-7xl font-piepie">
           Adaptive LMS
         </h2>
-        <p className="text-lg sm:text-sm md:text-md lg:text-lg xl:text-xl text-secondary-foreground mt-3">
+        <p className="font-tthover text-lg sm:text-sm md:text-md lg:text-lg xl:text-xl text-secondary-foreground mt-3">
           Manages all learning resources, including videos, activity sheets,
           materials, and assessments. This streamlined approach supports dynamic
           and flexible learning experiences, benefiting students, teachers, and

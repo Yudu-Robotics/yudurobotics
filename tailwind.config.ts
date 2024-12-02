@@ -16,6 +16,7 @@ const config: Config = {
         tthover: ["TTHovesRegular", "sans-serif"],
         "tthover-bold": ["TTHovesBold", "sans-serif"],
         "tthoves-semiBold": ["TTHovesDemiBold", "sans-serif"],
+        "tthover-medium": ["TTHovesMedium", "sans-serif"]
       },
       colors: {
         customBlue: "#3f00ff",

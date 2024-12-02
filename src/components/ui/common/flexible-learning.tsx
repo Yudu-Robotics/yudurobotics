@@ -28,7 +28,7 @@ function FlexibleLearning({ newProduct = false, title, desc }: propsValue) {
 
             <div className="space-y-4 px-3 ">
               {/* Main Headline */}
-              <div className="font-piepie text-4xl md:text-6xl lg:text-8xl text-primary-foreground">
+              <div className="font-piepie text-4xl md:text-5xl lg:text-7xl text-primary-foreground">
                 {title || "Flexible Learning Paths"}
               </div>
 
@@ -42,7 +42,7 @@ function FlexibleLearning({ newProduct = false, title, desc }: propsValue) {
               <JumpingButtons ishorizontal="true" />
             </div> */}
           </div>
-          <div className="w-full px-3  flex justify-center items-center">
+          <div className="w-full  flex justify-center items-center ">
             <img src="assets/peecee/gril.png" className="" />
           </div>
         </div>

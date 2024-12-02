@@ -39,12 +39,12 @@ const VersatileSoftware: React.FC<SoftwareAdaptiveProps> = ({
           {data
             ? highlightWords(data.title, [data.colorTitle], "text-primary")
             : highlightWords(
-                "Versatile for All",
-                ["Versatile"],
-                "text-primary"
-              )}
+              "Versatile for All",
+              ["Versatile"],
+              "text-primary"
+            )}
         </h2>
-        <h2 className="text-lg sm:text-sm md:text-md lg:text-lg xl:text-xl text-secondary-foreground pt-2 w-[100%] lg:w-[40%]">
+        <h2 className="text-lg font-tthover sm:text-sm md:text-md lg:text-lg xl:text-xl text-secondary-foreground pt-2 w-[100%] lg:w-[40%]">
           {data?.desc ||
             "Plode is ready for anything, handling everything from your first coding steps to your wildest ideas."}
         </h2>
@@ -65,11 +65,11 @@ const VersatileSoftware: React.FC<SoftwareAdaptiveProps> = ({
               </div>
             </div>
             <div className="h-[20%] ">
-              <h1 className="text-xl sm:text-xl font-bold pt-4">
+              <h1 className="text-xl sm:text-xl font-bold pt-4 font-tthoves-semiBold">
                 {feature.title}
               </h1>
               <div className="text-lg sm:text-lg text-secondary-foreground w-[100%] flex sm:justify-center">
-                <p className="lg:w-[85%] ">{feature.desc}</p>
+                <p className="lg:w-[85%] font-tthover">{feature.desc}</p>
               </div>
             </div>
           </div>

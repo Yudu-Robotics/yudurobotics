@@ -60,7 +60,7 @@ export default function Peecee() {
 
             <div className="space-y-4 ">
               {/* Main Headline */}
-              <div className="font-piepie text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-wider text-primary-foreground lg:w-[60%] xl:w-[60%] sm:text-start text-center">
+              <div className="font-piepie text-5xl md:text-6xl lg:text-7xl xl:text-8xl  text-primary-foreground lg:w-[60%] xl:w-[60%] sm:text-start text-center">
                 {highlightWords(
                   data.heading,
                   data.wordsToHighlight.text1,
@@ -114,7 +114,7 @@ export default function Peecee() {
           <Unboxing />
         </div>
         <div className="text-sm py-24 mb-6 text-center font-bold flex flex-col space-y-6 justify-center items-center">
-          <p className="text-lg sm:text-lg md:text-md lg:text-lg xl:text-xl">
+          <p className="text-lg sm:text-lg md:text-md lg:text-lg xl:text-xl font-tthoves-semiBold">
             <span className="text-[#4A4A4F]">
               Hover over each feature below to{" "}
             </span>
@@ -153,7 +153,7 @@ export default function Peecee() {
           />
         </div>
         <div className="">
-          <PlodeSoftware jumppingdata={data.jumppingButton?.[1] || {}} />
+          <PlodeSoftware jumppingdata={data.jumppingButton?.[1] || {}} subheading="PeeCee TED’s Plode software is as fun as it is powerful—tailored to inspire creativity, adapt to all levels, and make coding feel like a breeze." />
         </div>
         <div className="  ">
           <SoftwareAdaptive image="playpeecee" />
@@ -201,11 +201,11 @@ export default function Peecee() {
           />
         </div>
         <div className="py-16 lg:py-20">
-          <PlodeDownloade
+          {/* <PlodeDownloade
             jumppingdata={data.jumppingButton?.[3] || {}}
             heading="Transform Your Learning with Our Curriculum"
             desc="Explore our comprehensive curriculum designed to make coding and robotics accessible and exciting. Get started with structured lessons and hands-on projects today!"
-          />
+          /> */}
         </div>
         <div className="-mx-8 lg:-mx-28">
           <TestimonialBanner />

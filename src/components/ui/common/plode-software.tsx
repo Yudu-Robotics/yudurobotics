@@ -13,8 +13,9 @@ interface JumppingData {
 
 interface PlodeSoftwareProps {
   jumppingdata?: JumppingData; // Use the defined structure
+  subheading?: string;
 }
-const PlodeSoftware: React.FC<PlodeSoftwareProps> = ({ jumppingdata }) => {
+const PlodeSoftware: React.FC<PlodeSoftwareProps> = ({ jumppingdata, subheading }) => {
   return (
     <>
       <div className="sm:translate-y-9 ">
@@ -38,10 +39,9 @@ const PlodeSoftware: React.FC<PlodeSoftwareProps> = ({ jumppingdata }) => {
                 </div>
 
                 {/* Subtext */}
-                <div className="text-primary-foreground ext-lg sm:text-lg md:text-md lg:text-lg xl:text-xl w-[100%] lg:w-[50%]">
-                  Roboki’s Plode software is as fun as it is powerful—tailored
-                  to inspire creativity, adapt to all levels, and make coding
-                  feel like a breeze.
+                <div className="font-tthover text-primary-foreground ext-lg sm:text-lg md:text-md lg:text-lg xl:text-xl w-[100%] lg:w-[50%]">
+                  {subheading || "Roboki’s Plode software is as fun as it is powerful—tailored to inspire creativity, adapt to all levels, and make coding feel like a breeze."}
+
                 </div>
               </div>
             </div>
@@ -49,7 +49,7 @@ const PlodeSoftware: React.FC<PlodeSoftwareProps> = ({ jumppingdata }) => {
             {/* Buttons Section */}
 
             <JumpingButtons
-              ishorizontal="true"
+              ishorizontal="false"
               text1={jumppingdata?.text1 || ""}
               text2={jumppingdata?.text2 || ""}
               bgColor={jumppingdata?.bgColor || ""}
