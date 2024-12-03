@@ -37,11 +37,13 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
     {/* Product Description */}
     <div className="w-1/2 sm:w-full ml-3 sm:ml-0">
-      <h3 className="text-lg font-bold mb-2 lg:text-xl">{product.name}</h3>
-      <p className="text-start text-secondary-foreground text-xs tracking-wide lg:text-sm hidden sm:flex ">
+      <h3 className="text-lg font-tthoves-semiBold mb-2 lg:text-xl">
+        {product.name}
+      </h3>
+      <p className="text-start font-tthover text-secondary-foreground text-xs tracking-wide lg:text-sm hidden sm:flex ">
         {product.description}
       </p>
-      <p className="text-start text-secondary-foreground text-xs w-full tracking-wide lg:text-sm  sm:hidden">
+      <p className="text-start text-secondary-foreground text-sm w-full tracking-wide lg:text-sm  sm:hidden">
         {product.description.substring(0, 50) + "..."}
       </p>
 

@@ -121,14 +121,14 @@ export default function ProductCategories() {
       /> */}
       <div className="flex flex-col space-y-2 lg:flex-row">
         <div className="flex flex-col space-y-2 lg:space-y-6 w-[100%] lg:w-[25%] font-tthoves-semiBold">
-          <h2 className="text-primary  text-sm lg:text-start">
+          <h2 className="text-primary font-tthoves-semiBold text-md lg:text-start">
             Product Categories
           </h2>
           <div className="flex flex-col space-y-3 lg:ml-4 items-center ">
             {product_categories.map((category: string, key: number) => (
               <div
                 key={key}
-                className={`flex justify-start w-full sm:p-2  items-center font-semibold sm:font-bold text-sm lg:text-sm cursor-pointer ${
+                className={`flex justify-start w-full sm:p-2  items-center font-tthoves-semiBold sm:font-bold text-sm lg:text-md cursor-pointer ${
                   selectedCategory === category
                     ? "text-primary bg-purple-100 rounded-full "
                     : ""
@@ -170,8 +170,10 @@ export default function ProductCategories() {
                 <img src={productDetails.image} className="w-[100%]" />
               </div>
               <div>
-                <h1 className="font-bold text-xl">{productDetails.name}</h1>
-                <p className="font-light text-lg py-1">
+                <h1 className="font-tthoves-semiBold text-xl">
+                  {productDetails.name}
+                </h1>
+                <p className="font-tthover text-lg py-1">
                   {productDetails.description}
                 </p>
                 {isAllowedFlag && (

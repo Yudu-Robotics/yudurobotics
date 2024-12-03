@@ -22,7 +22,7 @@ function ProductFeatures() {
               A 38 cm marvel with 17 degrees of freedom, crafted for endless
               exploration and creativity.
             </p>
-            <ul className="space-y-4 opacity-50">
+            <ul className="space-y-4 ">
               {features.map((feature) => (
                 <li key={feature.id} className="flex space-x-2 ">
                   <div className="border  flex justify-center items-center">
@@ -42,7 +42,9 @@ function ProductFeatures() {
                       />
                     </svg>
                   </div>
-                  <span className="text-xl font-tthover">{feature.text}</span>
+                  <span className="text-xl font-tthover opacity-50">
+                    {feature.text}
+                  </span>
                 </li>
               ))}
             </ul>

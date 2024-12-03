@@ -118,38 +118,38 @@ export default function ContactForm() {
       <div className="bg-white rounded-lg shadow-lg p-8 w-[100%]">
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Form Fields */}
-          <div className="flex space-x-4">
-            <div className="w-1/2">
-              <label className="block text-xs font-medium text-secondary-foreground">
-                Full Name <span className="text-primary">*</span>
-              </label>
-              <input
-                type="text"
-                name="entry.1725892135"
-                value={formData["entry.1725892135"]}
-                onChange={handleChange}
-                className="mt-1 block w-full px-4 py-2 text-sm text-secondary-foreground rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
-                placeholder="Full name"
-                required
-                style={{ border: "1px solid #D6D6D8" }}
-              />
-            </div>
-            <div className="w-1/2">
-              <label className="block text-xs font-medium text-secondary-foreground">
-                Email <span className="text-primary">*</span>
-              </label>
-              <input
-                type="email"
-                name="entry.2098983406"
-                value={formData["entry.2098983406"]}
-                onChange={handleChange}
-                className="mt-1 block w-full px-4 py-2  text-sm rounded-md text-secondary-foreground shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
-                placeholder="you@company.com"
-                required
-                style={{ border: "1px solid #D6D6D8" }}
-              />
-            </div>
+
+          <div className="w-full">
+            <label className="block text-xs font-medium text-secondary-foreground">
+              Full Name <span className="text-primary">*</span>
+            </label>
+            <input
+              type="text"
+              name="entry.1725892135"
+              value={formData["entry.1725892135"]}
+              onChange={handleChange}
+              className="mt-1 block w-full px-4 py-2 text-sm text-secondary-foreground rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+              placeholder="Full name"
+              required
+              style={{ border: "1px solid #D6D6D8" }}
+            />
           </div>
+          <div className="w-full">
+            <label className="block text-xs font-medium text-secondary-foreground">
+              Email <span className="text-primary">*</span>
+            </label>
+            <input
+              type="email"
+              name="entry.2098983406"
+              value={formData["entry.2098983406"]}
+              onChange={handleChange}
+              className="mt-1 block w-full px-4 py-2  text-sm rounded-md text-secondary-foreground shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+              placeholder="you@company.com"
+              required
+              style={{ border: "1px solid #D6D6D8" }}
+            />
+          </div>
+
           <div>
             <label className="block text-xs font-medium text-secondary-foreground">
               Phone <span className="text-primary">*</span>
@@ -178,7 +178,8 @@ export default function ContactForm() {
               style={{
                 border: "1px solid #D6D6D8",
                 paddingRight: "2.5rem",
-                backgroundImage: "url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" fill=\"%234A4A4F\" viewBox=\"0 0 24 24\"><path d=\"M7 10l5 5 5-5z\"/></svg>')",
+                backgroundImage:
+                  'url(\'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="%234A4A4F" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>\')',
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "calc(100% - 0.5rem) center",
                 backgroundSize: "1.5rem",
@@ -227,10 +228,13 @@ export default function ContactForm() {
                 className="font-medium text-secondary-foreground"
               >
                 You agree to our friendly{" "}
-                <button onClick={(e) => {
+                <button
+                  onClick={(e) => {
                     e.preventDefault(); // Prevent form submission
                     handleDialogOpen("privacy");
-                  }} className="font-medium text-secondary-foreground underline">
+                  }}
+                  className="font-medium text-secondary-foreground underline"
+                >
                   privacy policy
                 </button>
                 .

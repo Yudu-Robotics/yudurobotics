@@ -11,7 +11,7 @@ const ProductCeoReviewsContainer: React.FC<{ comment: any }> = ({
     <div className="w-full ">
       <div>{renderSvg("star1")}</div>
       <div className="bg-primary py-12 rounded-xlg sm:rounded-xxl text-primary-foreground">
-        <h1 className="text-center  text-[#403B0A]">Tech</h1>
+        <h1 className="text-center  ">Tech</h1>
         <div className="flex flex-col items-center space-y-6 sm:px-20 px-5">
           <div className="flex items-center">
             <p className="text-center items-center font-piepie text-3xl md:text-3xl lg:text-5xl ">

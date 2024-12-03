@@ -32,7 +32,7 @@ const ExtraFeatures: React.FC<{
         </div>
       )}
       <div className="flex flex-col space-y-2 ">
-        <h1 className="text-primary text-lg font-semibold xl:text-lg text-left  w-full font-tthoves-semiBold text-[#CCBD1F] ">
+        <h1 className="text-primary text-lg  xl:text-lg text-left  w-full font-tthoves-semiBold text-[#CCBD1F] ">
           {title}
         </h1>
         <h2 className="text-4xl lg:text-5xl xl:text-7xl font-piepie tracking-wide  w-[100%] lg:w-[50%]">

@@ -23,7 +23,6 @@ export default function Roboki() {
   const data = mockData.roboki;
   return (
     <>
-
       <div className="flex flex-col px-8 lg:px-28 sm:py-4 bg-primary ">
         <div className="flex flex-col space-y-16 lg:flex-row lg:space-y-0 justify-between py-10">
           <div className="w-full">
@@ -40,7 +39,7 @@ export default function Roboki() {
               </div>
 
               {/* Subtext */}
-              <div className="font-tthover-medium text-opacity-35 text-primary-foreground sm:text-sm md:text-md lg:text-lg xl:text-xl  w-[100%] sm:w-[60%] text-lg sm:text-start text-center">
+              <div className="font-tthover text-opacity-35 text-primary-foreground sm:text-sm md:text-md lg:text-lg xl:text-xl  w-[100%] sm:w-[60%] text-lg sm:text-start text-center">
                 {data.subheading}
               </div>
             </div>
@@ -81,7 +80,7 @@ export default function Roboki() {
         </div>
         <div className="text-sm py-24 text-center font-bold flex flex-col space-y-6 justify-center items-center">
           <p className="text-lg sm:text-lg md:text-md lg:text-lg xl:text-xl font-tthoves-semiBold">
-            <span className="text-[#4A4A4F] ">
+            <span className="text-[#4A4A4F] opacity-70">
               Hover over each feature below to{" "}
             </span>
             <span className="text-primary italic">see it in action!</span>

@@ -24,7 +24,9 @@ const Working: React.FC<{ data: HowItWork }> = ({ data }) => {
   return (
     <div className="max-w-full flex flex-col space-y-10 py-10">
       <div className="flex flex-col space-y-2 justify-centerv items-center text-center">
-        <h1 className="text-primary text-xs font-tthoves-semiBold ">Hardware</h1>
+        <h1 className="text-primary text-lg font-tthoves-semiBold ">
+          Hardware
+        </h1>
         <h2 className="text-4xl lg:text-5xl xl:text-7xl font-piepie  ">
           {highlightWords(data.heading, ["Works"], "text-primary")}
         </h2>
@@ -38,7 +40,9 @@ const Working: React.FC<{ data: HowItWork }> = ({ data }) => {
             <img src={data.section1.image} alt="Product Image" className="" />
           </div>
           <div className="flex flex-col justify-center space-y-1 items-center text-center">
-            <h1 className="text-lg font-tthoves-semiBold">{data.section1.heading}</h1>
+            <h1 className="text-lg font-tthoves-semiBold">
+              {data.section1.heading}
+            </h1>
             <h2 className="font-tthover text-secondary-foreground text-sm w-[100%] lg:w-[60%]">
               {data.section1.description}
             </h2>

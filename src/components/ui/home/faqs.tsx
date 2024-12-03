@@ -34,7 +34,7 @@ const FAQs = ({ product }: { product: string }) => {
               onClick={() => toggleFAQ(index)}
               className="flex justify-between items-center w-full focus:outline-none"
             >
-              <h3 className="text-xl text-start lg:text-lg text-[#0A041A] font-tthoves-semiBold">
+              <h3 className="text-xl text-start lg:text-lg text-[#0A041A] font-tthover-medium">
                 {item.question}
               </h3>
               <img
@@ -48,7 +48,7 @@ const FAQs = ({ product }: { product: string }) => {
               />
             </button>
             <div
-              className={`mt-2 text-secondary-foreground transition-max-height duration-500 ease-in-out overflow-hidden text-md lg:text-base ${
+              className={`font-tthover mt-2 text-secondary-foreground transition-max-height duration-500 ease-in-out overflow-hidden text-md  ${
                 openIndex === index ? "max-h-40" : "max-h-0"
               }`}
             >

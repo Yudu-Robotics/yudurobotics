@@ -69,7 +69,7 @@ export default function Peecee() {
               </div>
 
               {/* Subtext */}
-              <div className="text-lg text-opacity-35 text-primary-foreground sm:text-sm md:text-md lg:text-lg xl:text-xl font-body w-[100%] sm:w-[60%] sm:text-start text-center">
+              <div className="text-lg text-opacity-35 text-primary-foreground sm:text-sm md:text-md lg:text-lg xl:text-xl font-tthover w-[100%] sm:w-[60%] sm:text-start text-center">
                 {data.subheading}
               </div>
             </div>
@@ -115,7 +115,7 @@ export default function Peecee() {
         </div>
         <div className="text-sm py-24 mb-6 text-center font-bold flex flex-col space-y-6 justify-center items-center">
           <p className="text-lg sm:text-lg md:text-md lg:text-lg xl:text-xl font-tthoves-semiBold">
-            <span className="text-[#4A4A4F]">
+            <span className="text-[#4A4A4F] opacity-70">
               Hover over each feature below to{" "}
             </span>
             <span className="text-primary italic">see it in action!</span>
@@ -153,7 +153,10 @@ export default function Peecee() {
           />
         </div>
         <div className="">
-          <PlodeSoftware jumppingdata={data.jumppingButton?.[1] || {}} subheading="PeeCee TED’s Plode software is as fun as it is powerful—tailored to inspire creativity, adapt to all levels, and make coding feel like a breeze." />
+          <PlodeSoftware
+            jumppingdata={data.jumppingButton?.[1] || {}}
+            subheading="PeeCee TED’s Plode software is as fun as it is powerful—tailored to inspire creativity, adapt to all levels, and make coding feel like a breeze."
+          />
         </div>
         <div className="  ">
           <SoftwareAdaptive image="playpeecee" />

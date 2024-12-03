@@ -746,7 +746,7 @@ export const mockData: { [key: string]: ProductData } = {
       section1: {
         heading: "Ready to Go, Right Out of the Box",
         subheading:
-          "PeeCee TED is your all-in-one buddy, packed and ready to jump into action whenever you are.",
+          "Roboki is your go-to companion, always ready to learn, play, and create with you. Whether it's coding or hands-on projects, Roboki is packed with powerful features and endless possibilities.",
         centerImage: "assets/roboki/robokihardware1.png",
         features: [
           {
@@ -856,7 +856,7 @@ export const mockData: { [key: string]: ProductData } = {
     legofun: {
       heading: "Building Fun",
       subheading:
-        "Roboki is best buddies with colourful building block kits, so you can build, expand, and create to your heart’s content.",
+        "Combine Roboki with colorful building block kits to create fun, interactive projects. Build, code, and bring your ideas to life with endless possibilities.",
       centerImage: "assets/other/lego-fun.png",
     },
     components: {
@@ -913,7 +913,7 @@ export const mockData: { [key: string]: ProductData } = {
       section1: {
         heading: "Ready to Go, Right Out of the Box",
         subheading:
-          "PeeCee TED is your all-in-one buddy, packed and ready to jump into action whenever you are.",
+          "Zing is your ultimate robotic companion, ready to engage and entertain whenever you are. With advanced features and lifelike movement, Zing brings your ideas to life with ease.",
         centerImage: "assets/zing/zinghardware1.png",
         features: [
           {
@@ -1090,7 +1090,7 @@ export const mockData: { [key: string]: ProductData } = {
       section1: {
         heading: "Ready to Go, Right Out of the Box",
         subheading:
-          "PeeCee TED is your all-in-one buddy, packed and ready to jump into action whenever you are.",
+          "Crawl-E is your versatile hexapod explorer, designed to tackle diverse terrains with ease. Its six-legged movement ensures stability and adaptability, making every adventure exciting and dynamic.",
         centerImage: "assets/crawle/crawlehardware1.png",
         features: [
           {
@@ -1273,7 +1273,7 @@ export const mockData: { [key: string]: ProductData } = {
       section1: {
         heading: "Ready to Go, Right Out of the Box",
         subheading:
-          "PeeCee TED is your all-in-one buddy, packed and ready to jump into action whenever you are.",
+          "Klaw-B is your precision robotic arm, engineered for accuracy and flexibility. With its advanced mechanics, Klaw-B handles intricate tasks effortlessly, making it ideal for both complex projects and hands-on experiments.",
         centerImage: "assets/klawb/klawbhardware1.png",
         features: [
           {

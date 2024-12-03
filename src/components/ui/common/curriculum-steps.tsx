@@ -23,12 +23,12 @@ const CurriculumSteps: React.FC<{
           <h2 className="text-3xl md:text-5xl font-piepie w-[100%] md:w-[80%]">
             {data.heading}
           </h2>
-          <h3 className="text-sm text-secondary-foreground font-tthover">
+          <h3 className="text-xl text-secondary-foreground font-tthover">
             {data.subheading}
           </h3>
         </div>
 
-        <div className="flex flex-col md:justify-evenly space-y-4 md:space-y-4">
+        <div className="font-tthover flex flex-col md:justify-evenly space-y-4 md:space-y-4">
           {additional && (
             <h3 className="text-sm text-secondary-foreground py-5">
               {additional}

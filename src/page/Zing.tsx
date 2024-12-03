@@ -39,7 +39,7 @@ export default function Zing() {
               </div>
 
               {/* Subtext */}
-              <div className="font-tthover-medium text-opacity-35 text-primary-foreground sm:text-sm md:text-md lg:text-lg xl:text-xl  w-[100%] sm:w-[60%] text-lg ">
+              <div className="font-tthover text-opacity-35 text-primary-foreground sm:text-sm md:text-md lg:text-lg xl:text-xl  w-[100%] sm:w-[60%] text-lg ">
                 {data.subheading}
               </div>
             </div>
@@ -83,8 +83,8 @@ export default function Zing() {
         <div className="py-8 lg:py-12">
           <Unboxing />
         </div>
-        <div className="text-sm py-8 lg:py-16 text-center  flex flex-col space-y-6 justify-center items-center">
-          <p className="font-tthoves-semiBold">
+        <div className="text-xl py-8 lg:py-16 text-center  flex flex-col space-y-6 justify-center items-center">
+          <p className="font-tthoves-semiBold opacity-70">
             Hover over each feature below to{" "}
             <span className="text-primary italic">see it in action!</span>
           </p>
@@ -98,7 +98,10 @@ export default function Zing() {
           />{" "}
         </div>
         <div className="">
-          <PlodeSoftware jumppingdata={data.jumppingButton?.[1] || {}} subheading="Zing’s Plode software is as fun as it is powerful—tailored to inspire creativity, adapt to all levels, and make coding feel like a breeze." />
+          <PlodeSoftware
+            jumppingdata={data.jumppingButton?.[1] || {}}
+            subheading="Zing’s Plode software is as fun as it is powerful—tailored to inspire creativity, adapt to all levels, and make coding feel like a breeze."
+          />
         </div>
         <div className="lg:-mt-52 ">
           <SoftwareAdaptive image="playzing" />
