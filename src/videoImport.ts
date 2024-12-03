@@ -22,6 +22,9 @@ const ird = "assets/video/peecee/ird.mp4";
 const Joystickandswitches = "assets/video/peecee/Joystickandswitches.mp4";
 const LaserLedDisplay = "assets/video/peecee/LaserLedDisplay.mp4";
 const plugandplay = "assets/video/peecee/plugandplay.mp4";
+const steppeecee = "assets/video/peecee/3steppeecee.mp4";
+const codingpeecee = "assets/video/peecee/5codingpeecee.mp4";
+const aimodelpeecee = "assets/video/peecee/aimodelpeecee.mp4";
 
 function renderVideo(video: string) {
   switch (video) {
@@ -69,6 +72,13 @@ function renderVideo(video: string) {
       return LaserLedDisplay;
     case "plugandplay":
       return plugandplay;
+
+    case "steppeecee":
+      return steppeecee;
+    case "codingpeecee":
+      return codingpeecee;
+    case "aimodelpeecee":
+      return aimodelpeecee;
     default:
       return "nothing";
   }

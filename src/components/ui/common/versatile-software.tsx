@@ -1,17 +1,23 @@
 import { highlightWords } from "@/app/utility/highlightWords";
 import renderImg from "@/imgImport";
+import renderVideo from "@/videoImport";
 import { title } from "process";
 import React from "react";
 
 interface SoftwareAdaptiveProps {
   data?: any;
   color?: any;
+  name?: any;
 }
 const VersatileSoftware: React.FC<SoftwareAdaptiveProps> = ({
   data,
   color,
+  name,
 }) => {
   const images = ["threestep", "fivecoding", "aimodel"];
+  if (name === "peecee") {
+    var videoNmae = ["steppeecee", "codingpeecee", "aimodelpeecee"];
+  }
   const features = [
     {
       image: "assets/other/threestep.png",
@@ -50,7 +56,7 @@ const VersatileSoftware: React.FC<SoftwareAdaptiveProps> = ({
         </h2>
         <p className="text-[#5423E6] font-semibold">{data?.subheading}</p>
       </div>
-      <div className="grid grid-col grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-5">
+      <div className="grid grid-col sm:space-x-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-5">
         {(data?.features || features)?.map((feature: any, index: any) => (
           <div
             key={index}
@@ -58,10 +64,18 @@ const VersatileSoftware: React.FC<SoftwareAdaptiveProps> = ({
           >
             <div className="sm:h-[80%] bg-primary-ver  p-5 flex justify-center items-center rounded-xxl">
               <div className="flex justify-between items-center h-full">
-                <img
-                  src={renderImg(images[index])}
-                  className="object-contain  rounded-2xl"
-                />
+                {videoNmae ? (
+                  <video
+                    src={renderVideo(videoNmae[index])}
+                    className="rounded-xxl"
+                    autoPlay
+                    loop
+                    muted
+                    style={{}}
+                  />
+                ) : (
+                  <img src={renderImg(images[index])} />
+                )}
               </div>
             </div>
             <div className="h-[20%] ">

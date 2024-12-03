@@ -162,7 +162,7 @@ export default function Peecee() {
           <SoftwareAdaptive image="playpeecee" />
         </div>
         <div className=" md:py-20 xl:py-24">
-          <VersatileSoftware />
+          <VersatileSoftware name="peecee" />
         </div>
         <div className="">
           <ExtraFeatures
