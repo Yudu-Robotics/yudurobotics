@@ -30,7 +30,7 @@ export default function Roboki() {
 
             <div className="space-y-4 w-full ">
               {/* Main Headline */}
-              <div className="font-piepie text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-wider text-primary-foreground w-[100%] lg:w-[80%] sm:text-start text-center ">
+              <div className="font-piepie text-5xl md:text-6xl lg:text-7xl xl:text-8xl  text-primary-foreground w-[100%] lg:w-[80%] sm:text-start text-center ">
                 {highlightWords(
                   data.heading,
                   data.wordsToHighlight.text1,

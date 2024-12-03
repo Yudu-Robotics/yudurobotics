@@ -46,7 +46,26 @@ const Working: React.FC<{ data: HowItWork }> = ({ data }) => {
             <h2 className="font-tthover text-secondary-foreground text-sm w-[100%] lg:w-[60%]">
               {data.section1.description}
             </h2>
-            <a className="text-sm text-primary">Learn more {"->"}</a>
+            <a className="text-sm text-primary flex justify-center items-center space-x-2">
+              <p>Learn more </p>
+              <div>
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.16663 6.99984H12.8333M12.8333 6.99984L6.99996 1.1665M12.8333 6.99984L6.99996 12.8332"
+                    stroke="#1FCC84"
+                    stroke-width="1.66667"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </a>
           </div>
         </div>
         <div className="flex flex-col justify-center items-center space-y-4">
@@ -58,7 +77,26 @@ const Working: React.FC<{ data: HowItWork }> = ({ data }) => {
             <h2 className="text-secondary-foreground text-sm w-[100%] lg:w-[60%]">
               {data.section2.description}
             </h2>
-            <a className="text-sm text-primary">Learn more {"->"}</a>
+            <a className="text-sm text-primary flex justify-center items-center space-x-2">
+              <p>Learn more </p>
+              <div className="">
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.16663 6.99984H12.8333M12.8333 6.99984L6.99996 1.1665M12.8333 6.99984L6.99996 12.8332"
+                    stroke="#1FCC84"
+                    stroke-width="1.66667"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </a>
           </div>
         </div>
       </div>

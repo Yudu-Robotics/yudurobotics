@@ -30,7 +30,7 @@ export default function KlawB() {
 
             <div className="space-y-4 h-full">
               {/* Main Headline */}
-              <div className="w-2/3 font-piepie text-5xl md:text-6xl lg:text-7xl tracking-wider text-primary-foreground ">
+              <div className="w-2/3 font-piepie text-5xl md:text-6xl lg:text-7xl  text-primary-foreground ">
                 {highlightWords(
                   data.heading,
                   data.wordsToHighlight.text1,
