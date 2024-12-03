@@ -17,6 +17,10 @@ const VersatileSoftware: React.FC<SoftwareAdaptiveProps> = ({
   const images = ["threestep", "fivecoding", "aimodel"];
   if (name === "peecee") {
     var videoNmae = ["steppeecee", "codingpeecee", "aimodelpeecee"];
+  } else if (name == "zing") {
+    var videoNmae = ["stepzing", "codingzing", "aimodelzing"];
+  } else if (name == "klaw") {
+    var videoNmae = ["stepklaw", "codingklaw", "aimodelklaw"];
   }
   const features = [
     {

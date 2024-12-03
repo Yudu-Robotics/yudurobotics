@@ -107,7 +107,7 @@ export default function Zing() {
           <SoftwareAdaptive image="playzing" />
         </div>
         <div className=" md:py-20">
-          <VersatileSoftware />
+          <VersatileSoftware name="zing" />
         </div>
         <div>
           <ExtraFeatures

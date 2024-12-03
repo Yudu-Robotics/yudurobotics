@@ -26,6 +26,16 @@ const steppeecee = "assets/video/peecee/3steppeecee.mp4";
 const codingpeecee = "assets/video/peecee/5codingpeecee.mp4";
 const aimodelpeecee = "assets/video/peecee/aimodelpeecee.mp4";
 
+//Zing
+const stepzing = "assets/video/zing/stepzing.mp4";
+const codingzing = "assets/video/zing/5codingzing.mp4";
+const aimodelzing = "assets/video/zing/aimodelzing.mp4";
+
+//klaw
+const stepklaw = "assets/video/klaw/stepklaw.mp4";
+const codingklaw = "assets/video/klaw/codingklaw.mp4";
+const aimodelklaw = "assets/video/klaw/aimodelklaw.mp4";
+
 function renderVideo(video: string) {
   switch (video) {
     case "spider":
@@ -79,6 +89,23 @@ function renderVideo(video: string) {
       return codingpeecee;
     case "aimodelpeecee":
       return aimodelpeecee;
+
+    //Zing
+    case "stepzing":
+      return stepzing;
+    case "codingzing":
+      return codingzing;
+    case "aimodelzing":
+      return aimodelzing;
+
+    //klaw
+    case "stepklaw":
+      return stepklaw;
+    case "codingklaw":
+      return codingklaw;
+    case "aimodelklaw":
+      return aimodelklaw;
+
     default:
       return "nothing";
   }

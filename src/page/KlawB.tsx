@@ -121,7 +121,7 @@ export default function KlawB() {
           <SoftwareAdaptive image="playklawb" />
         </div>
         <div className=" md:py-20">
-          <VersatileSoftware />
+          <VersatileSoftware name="klaw" />
         </div>
         <div>
           <ExtraFeatures
