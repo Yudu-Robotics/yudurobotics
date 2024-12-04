@@ -49,7 +49,7 @@ export default function ProductLayout({
       <div className="mb-12 flex justify-between">
         <img src={renderImg("logoblack")} alt="logo" />
         <div
-          className="text-black text-3xl font-bold"
+          className="text-black text-3xl font-tthoves-semiBold"
           onClick={() => setIsDrawerOpen(false)}
         >
           X
@@ -63,7 +63,7 @@ export default function ProductLayout({
                 {/* Main "Our Products" Link */}
                 <div
                   onClick={() => setIsOurProductOpen(!isOurProductOpen)}
-                  className="text-base font-bold text-black transition-colors duration-300 ease-in-out hover:text-destructive"
+                  className="text-base font-tthoves-semiBold text-black transition-colors duration-300 ease-in-out hover:text-destructive"
                 >
                   {item.name}
                   {isOurProductOpen ? (
@@ -83,7 +83,7 @@ export default function ProductLayout({
                             : "Animatronics"
                         )
                       }
-                      className="text-base font-bold text-gray-700 transition-colors duration-300 ease-in-out hover:text-destructive"
+                      className="text-base font-tthoves-semiBold text-gray-700 transition-colors duration-300 ease-in-out hover:text-destructive"
                     >
                       Animatronics
                       {openSubOption === "Animatronics" ? (
@@ -114,7 +114,7 @@ export default function ProductLayout({
                             : "Micro-controllers"
                         )
                       }
-                      className="text-base font-bold text-gray-700 transition-colors duration-300 ease-in-out hover:text-destructive"
+                      className="text-base font-tthoves-semiBold text-gray-700 transition-colors duration-300 ease-in-out hover:text-destructive"
                     >
                       Micro-controllers
                       {openSubOption === "Micro-controllers" ? (
@@ -139,7 +139,7 @@ export default function ProductLayout({
             ) : (
               <Link
                 href={item.link}
-                className="text-base font-bold text-black transition-colors duration-300 ease-in-out hover:text-destructive"
+                className="text-base font-tthoves-semiBold text-black transition-colors duration-300 ease-in-out hover:text-destructive"
               >
                 {item.name}
               </Link>

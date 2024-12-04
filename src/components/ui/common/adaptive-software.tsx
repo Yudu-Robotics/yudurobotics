@@ -25,7 +25,7 @@ const SoftwareAdaptive: React.FC<SoftwareAdaptiveProps> = ({ data, image }) => {
     <div className="flex flex-col  sm:-translate-y-52 sm:-mb-52">
       <div className="w-full flex justify-between">
         <div className="w-full  flex flex-col space-y-2 pl-3 sm:pl-16">
-          <h1 className="text-primary sm:text-sm md:text-md lg:text-lg xl:text-xl font-semibold ">
+          <h1 className="text-primary sm:text-sm md:text-md lg:text-lg xl:text-xl font-tthover-medium ">
             {data?.title || "Software"}
           </h1>
           <h2 className="text-4xl lg:text-6xl xl:text-7xl font-piepie tracking-wide  w-[100%]">

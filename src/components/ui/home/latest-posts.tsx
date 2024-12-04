@@ -37,11 +37,11 @@ const LatestPosts = () => {
     <div className="flex flex-col items-center">
       {/* heading */}
       <div className="py-6 lg:py-12 flex flex-col space-y-1 justify-center items-center">
-        <h1 className="text-xs font-semibold lg:text-sm text-primary">
+        <h1 className="text-xs font-tthover-medium lg:text-sm text-primary">
           {" "}
           Latest Posts
         </h1>
-        <h2 className="text-lg lg:text-3xl font-piepie tracking-wider">
+        <h2 className="text-lg lg:text-3xl font-piepie ">
           Dive into Our Insights
         </h2>
         <h3 className="text-secondary-foreground text-center text-sm lg:text-lg">
@@ -63,11 +63,11 @@ const LatestPosts = () => {
           ) => (
             <div key={key}>
               <img src={value.image} className="w-full " />
-              <h1 className="text-primary font-semibold text-xs lg:text-sm mt-4">
+              <h1 className="text-primary font-tthover-medium text-xs lg:text-sm mt-4">
                 {value.author_name} {" . "} {value.date}
               </h1>
               <div className="flex justify-between py-2">
-                <h1 className="font-piepie text-base lg:text-lg w-[90%] lg:w-[70%] tracking-wider">
+                <h1 className="font-piepie text-base lg:text-lg w-[90%] lg:w-[70%] ">
                   {value.title}
                 </h1>
                 <img

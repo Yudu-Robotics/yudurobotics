@@ -49,7 +49,7 @@ const HardwareProductFeatures: React.FC<{ hardware: HardwareData }> = ({
   return (
     <div>
       <div className="flex flex-col justify-center space-y-2 items-center text-center">
-        <h1 className="text-primary text-lg font-semibold xl:text-lg text-left sm:text-center w-full font-tthoves-semiBold text-[#CCBD1F]">
+        <h1 className="text-primary text-lg  xl:text-lg text-left sm:text-center w-full font-tthoves-semiBold text-[#CCBD1F]">
           Hardware
         </h1>
         <h2 className="text-4xl lg:text-5xl xl:text-6xl w-[100%] lg:w-[50%] font-piepie tracking-wide  text-left sm:text-center">
@@ -81,7 +81,7 @@ const HardwareProductFeatures: React.FC<{ hardware: HardwareData }> = ({
                       />
                     </div>
                     <div>
-                      <h3 className="font-bold text-lg xl:text-2xl font-tthoves-semiBold">
+                      <h3 className=" text-lg xl:text-2xl font-tthoves-semiBold">
                         {feature.heading}
                       </h3>
                       <p className="pt-2 sm:pt-3 text-secondary-foreground sm:text-sm md:text-md lg:text-lg xl:text-xl font-tthover">
@@ -137,7 +137,7 @@ const HardwareProductFeatures: React.FC<{ hardware: HardwareData }> = ({
                       />
                     </div>
                     <div>
-                      <h3 className="font-bold text-lg xl:text-2xl">
+                      <h3 className=" text-lg xl:text-2xl font-tthoves-semiBold">
                         {feature.heading}
                       </h3>
                       <p className="pt-2 text-secondary-foreground sm:text-sm md:text-md lg:text-lg xl:text-xl">

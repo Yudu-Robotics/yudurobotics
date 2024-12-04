@@ -17,7 +17,7 @@ const CeoReviewsContainer: React.FC<CeoProps> = ({ data }) => {
         </div>
 
         <div className="flex items-center">
-          <p className="text-center  items-center font-piepie text-2xl md:text-4xl lg:text-5xl tracking-wider text-primary-foreground">
+          <p className="text-center  items-center font-piepie text-2xl md:text-4xl lg:text-5xl  text-primary-foreground">
             {data?.desc ||
               "Yudu Robotics has been an incredible partner, blending creativity with cutting-edge tech to drive innovation like never before."}
           </p>
@@ -29,10 +29,10 @@ const CeoReviewsContainer: React.FC<CeoProps> = ({ data }) => {
           <AvatarFallback>CEO</AvatarFallback>
         </Avatar>
 
-        <h4 className="mt-2 text-xl font-semibold">
+        <h4 className="mt-2 text-xl font-tthoves-semiBold">
           {data?.name || "Mr Filepe Gracia"}
         </h4>
-        <p className="font-extralight">
+        <p className="font-tthover">
           {data?.designation && data?.company
             ? `${data?.designation} , ${data?.company}`
             : "Marketing Head , Inroprin - Peru"}

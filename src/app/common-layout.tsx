@@ -37,7 +37,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
       <div className="mb-12 flex justify-between">
         <img src={renderImg("logoblack")} alt="logo" />
         <div
-          className="text-black text-3xl font-bold"
+          className="text-black text-3xl font-tthoves-semiBold"
           onClick={() => setIsDrawerOpen(false)}
         >
           X
@@ -51,7 +51,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
                 {/* Main "Our Products" Link */}
                 <div
                   onClick={() => setIsOurProductOpen(!isOurProductOpen)}
-                  className="text-base font-bold text-black transition-colors duration-300 ease-in-out hover:text-destructive"
+                  className="text-base font-tthoves-semiBold text-black transition-colors duration-300 ease-in-out hover:text-destructive"
                 >
                   {item.name}
                   {isOurProductOpen ? (
@@ -71,7 +71,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
                             : "Animatronics"
                         )
                       }
-                      className="text-base font-bold text-gray-700 transition-colors duration-300 ease-in-out hover:text-destructive"
+                      className="text-base font-tthoves-semiBold text-gray-700 transition-colors duration-300 ease-in-out hover:text-destructive"
                     >
                       Animatronics
                       {openSubOption === "Animatronics" ? (
@@ -102,7 +102,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
                             : "Micro-controllers"
                         )
                       }
-                      className="text-base font-bold text-gray-700 transition-colors duration-300 ease-in-out hover:text-destructive"
+                      className="text-base font-tthoves-semiBold text-gray-700 transition-colors duration-300 ease-in-out hover:text-destructive"
                     >
                       Micro-controllers
                       {openSubOption === "Micro-controllers" ? (
@@ -127,7 +127,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
             ) : (
               <Link
                 href={item.link}
-                className="text-base font-bold text-black transition-colors duration-300 ease-in-out hover:text-destructive"
+                className="text-base font-tthoves-semiBold text-black transition-colors duration-300 ease-in-out hover:text-destructive"
               >
                 {item.name}
               </Link>
@@ -155,7 +155,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
               <Link
                 key={key}
                 href={item.link}
-                className="text-base font-bold text-black transition-colors duration-300 ease-in-out hover:text-destructive p-3 font-tthover"
+                className="text-base font-tthoves-semiBold text-black transition-colors duration-300 ease-in-out hover:text-destructive p-3 "
               >
                 {item.name}
               </Link>
@@ -178,7 +178,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
                 </div>
               </div>
               <div className="w-1/2  ml-2 sm:ml-0">
-                <h3 className="text-lg font-bold mb-2 lg:text-xl">
+                <h3 className="text-lg font-tthoves-semiBold mb-2 lg:text-xl">
                   {product.name}
                 </h3>
 
@@ -205,7 +205,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
               />
             </div>
             <div className="ml-5">
-              <div className="font-semibold text-lg">
+              <div className="font-tthover-medium text-lg">
                 {products[selectedProduct].name}
               </div>
               <div>{products[selectedProduct].description}</div>
@@ -214,7 +214,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
         </div>
       </div>
       <div className="flex justify-center p-2">
-        <Link href="/products" className="p-2 text-primary font-semibold">
+        <Link href="/products" className="p-2 text-primary font-tthover-medium">
           View all products {"->"}
         </Link>
       </div>

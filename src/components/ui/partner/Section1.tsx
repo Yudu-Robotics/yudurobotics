@@ -42,7 +42,7 @@ function Section1() {
       <div className="flex flex-col items-center space-y-6">
         <div className="flex flex-col items-center justify-center">
           <div className="xl:px-12 ">
-            <p className=" text-center items-center font-piepie text-6xl md:text-4xl lg:text-6xl xl:text-8xl tracking-wider text-primary-foreground">
+            <p className=" text-center items-center font-piepie text-6xl md:text-4xl lg:text-6xl xl:text-8xl  text-primary-foreground">
               “We’re not{" "}
               <span className="relative inline-block z-0">
                 playing
@@ -113,7 +113,7 @@ function Section1() {
               key={item.id}
               className="flex justify-between sm:my-8 my-3 sm:flex-row flex-col px-5"
             >
-              <div className="font-piepie text-5xl md:text-6xl lg:text-7xl tracking-wider text-primary-foreground">
+              <div className="font-piepie text-5xl md:text-6xl lg:text-7xl  text-primary-foreground">
                 {highlightWords(item.title1, [""], "")}
                 <br />
                 {highlightWords(item.title2, [item.title2], item.bg)}

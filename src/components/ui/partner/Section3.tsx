@@ -38,10 +38,10 @@ export default function Section3() {
   return (
     <div>
       <div className="text-black flex justify-center flex-col items-center">
-        <div className="font-piepie text-5xl md:text-6xl lg:text-7xl tracking-wider text-primary-foreground text-[#000000] px-3 sm:px-0">
+        <div className="font-piepie text-5xl md:text-6xl lg:text-7xl  text-primary-foreground text-[#000000] px-3 sm:px-0">
           {highlightWords(heading1, [heading1], "text-black")}
         </div>
-        <div className="font-piepie text-5xl md:text-6xl lg:text-7xl tracking-wider text-primary-foreground text-[#000000] px-3 sm:px-0">
+        <div className="font-piepie text-5xl md:text-6xl lg:text-7xl  text-primary-foreground text-[#000000] px-3 sm:px-0">
           {highlightWords(heading2, [heading2], "text-[#5423E6]")}
         </div>
         <p className="sm:px-10 px-3 text-sm mt-5">{subheading}</p>

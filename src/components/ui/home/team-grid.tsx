@@ -53,7 +53,7 @@ export default function TeamGrid() {
             <div className="">
               <img src={member.imgSrc} alt={member.name} className="w-full " />
             </div>
-            <h3 className="text-xl font-semibold mt-4">{member.name}</h3>
+            <h3 className="text-xl font-tthover-medium mt-4">{member.name}</h3>
             <p className="text-primary">{member.title}</p>
           </div>
         ))}

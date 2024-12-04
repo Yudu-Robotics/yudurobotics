@@ -18,8 +18,8 @@ function ProductFeatures() {
               Meet <span className="text-destructive">Zing</span>: The Fun and
               Lively Humanoid Robot
             </h1>
-            <p className="py-2 lg:py-6 text-xl font-tthoves font-thin text-[#E2D8FE]">
-              A 38 cm marvel with 17 degrees of freedom, crafted for endless
+            <p className="py-2 lg:py-6 text-xl  font-tthover text-[#E2D8FE]">
+              A 30 cm marvel with 17 degrees of freedom, crafted for endless
               exploration and creativity.
             </p>
             <ul className="space-y-4 ">

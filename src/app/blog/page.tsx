@@ -15,7 +15,7 @@ export default async function BlogPage() {
   return (
     <div className="px-8 lg:px-28 py-10 lg:py-10 text-black ">
       <div className="flex flex-col space-y-3 py-10">
-        <h1 className="text-sm text-primary font-semibold">Our blog</h1>
+        <h1 className="text-sm text-primary font-tthover-medium">Our blog</h1>
         <h2 className="text-lg lg:text-4xl font-piepie">
           Resources and insights
         </h2>
@@ -43,7 +43,7 @@ export default async function BlogPage() {
                 key={index}
                 className={`${
                   index == 0 ? "text-black" : "text-secondary-foreground"
-                } font-semibold text-sm`}
+                } font-tthover-medium text-sm`}
               >
                 {category}
               </h2>
@@ -68,7 +68,7 @@ export default async function BlogPage() {
                 </div>
               </div>
               <div className="flex flex-col space-y-3">
-                <h1 className="font-piepie text-base lg:text-3xl w-[90%] lg:w-[70%] tracking-wider">
+                <h1 className="font-piepie text-base lg:text-3xl w-[90%] lg:w-[70%] ">
                   {data[0].title}
                 </h1>
                 <p className="text-secondary-foreground">
@@ -79,7 +79,9 @@ export default async function BlogPage() {
               <div className="flex space-x-4 text-sm">
                 <img src={data[0].writter.avatar} />
                 <div className="flex flex-col justify-center">
-                  <h1 className="font-semibold ">{data[0].writter.name}</h1>
+                  <h1 className="font-tthover-medium ">
+                    {data[0].writter.name}
+                  </h1>
                   <p className="text-secondary-foreground">
                     {new Date(data[0].writter.date).toLocaleDateString(
                       "en-GB",
@@ -127,7 +129,7 @@ export default async function BlogPage() {
                       </div>
                     </div>
                     <div className="flex justify-between">
-                      <h1 className="font-piepie text-base lg:text-lg w-[90%] lg:w-[70%] tracking-wider">
+                      <h1 className="font-piepie text-base lg:text-lg w-[90%] lg:w-[70%] ">
                         {value.title}
                       </h1>
                       <img
@@ -142,7 +144,9 @@ export default async function BlogPage() {
                     <div className="flex space-x-4 text-sm">
                       <img src={value.writter.avatar} />
                       <div className="flex flex-col justify-center">
-                        <h1 className="font-semibold ">{value.writter.name}</h1>
+                        <h1 className="font-tthover-medium ">
+                          {value.writter.name}
+                        </h1>
                         <p className="text-secondary-foreground">
                           {new Date(value.writter.date).toLocaleDateString(
                             "en-GB",

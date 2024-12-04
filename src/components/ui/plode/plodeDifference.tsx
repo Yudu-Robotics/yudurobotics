@@ -30,7 +30,9 @@ function plodeDifference({ data }: propsValue) {
               <div key={index}>
                 <div>
                   <img src={renderImg(feature.src)} />
-                  <p className="text-white font-semibold">{feature.title}</p>
+                  <p className="text-white font-tthover-medium">
+                    {feature.title}
+                  </p>
                   <p className="text-[#BBA5FE] w-3/4">{feature.desc}</p>
                 </div>
               </div>

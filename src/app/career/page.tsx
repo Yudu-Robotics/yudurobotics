@@ -6,7 +6,7 @@ export default function CareerPage() {
     <div className="px-8 lg:px-28 py-10 lg:py-10 text-black">
       <div className="flex flex-col justify-start items-center text-center space-y-2 py-16">
         <h1 className="text-sm text-primary">Open positions</h1>
-        <h2 className="text-3xl font-semibold font-piepie">
+        <h2 className="text-3xl font-tthover-medium font-piepie">
           We're looking for talented people
         </h2>
         <h3 className="text-gray-500">
@@ -24,13 +24,13 @@ export default function CareerPage() {
             >
               <div className="flex space-x-4 items-center">
                 <div>
-                  <h3 className="text-xl font-semibold">{job.title}</h3>
+                  <h3 className="text-xl font-tthover-medium">{job.title}</h3>
                 </div>
                 <div className="flex items-center space-x-2">
                   <span
                     className={`items-center px-3 py-0.5 rounded-full border text-red-600 border-red-400 bg-red-100 text-xs font-medium`}
                   >
-                   {job.department}
+                    {job.department}
                   </span>
                 </div>
               </div>

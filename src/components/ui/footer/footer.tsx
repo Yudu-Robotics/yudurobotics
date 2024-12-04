@@ -145,7 +145,7 @@ const Footer = () => {
         <div className="flex flex-col  lg:items-start">
           <h1 className="font-tthover">Contact us</h1>
 
-          <h1 className="font-piepie text-3xl lg:text-4xl tracking-wider">
+          <h1 className="font-piepie text-3xl lg:text-4xl ">
             Chat to our friendly team
           </h1>
           <h1 className="font-tthover py-4 opacity-70">

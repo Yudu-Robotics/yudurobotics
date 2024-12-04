@@ -208,7 +208,7 @@ export default function ProductCategories() {
           </>
         )}
         {limitedProducts.length === 0 && (
-          <div className="flex justify-end items-end font-thin py-20">
+          <div className="flex justify-end items-end font-tthover py-20">
             New Products Coming Soon...
           </div>
         )}

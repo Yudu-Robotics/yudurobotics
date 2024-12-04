@@ -53,7 +53,7 @@ export default async function HomePage() {
               </div>
 
               {/* Subtext */}
-              <div className="text-[#F2D8FE] text-lg md:text-lg lg:text-xl font-body w-[100%] lg:w-[50%] text-center sm:text-left">
+              <div className="text-[#F2D8FE] text-lg md:text-lg lg:text-xl font-tthover w-[100%] lg:w-[50%] text-center sm:text-left">
                 {data.subheading}
               </div>
             </div>

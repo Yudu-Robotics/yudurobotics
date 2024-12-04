@@ -52,7 +52,7 @@ export default function Plode() {
 
             <div className="space-y-4 flex flex-col items-start ">
               {/* Main Headline */}
-              <div className="font-piepie text-5xl md:text-6xl lg:text-7xl tracking-wider text-primary-foreground lg:w-[80%]">
+              <div className="font-piepie text-5xl md:text-6xl lg:text-7xl  text-primary-foreground lg:w-[80%]">
                 {highlightWords(
                   data.heading,
                   data.wordsToHighlight.text1,
@@ -124,7 +124,7 @@ export default function Plode() {
         <img src={renderImg("uparrow")} className="" />
       </div>
       <div className=" text-black py-5 lg:py-10 flex justify-center">
-        <p className="sm:w-1/2 text-[#4A4A4F] sm:text-xl text-sm text-center font-semibold italic ">
+        <p className="sm:w-1/2 text-[#4A4A4F] sm:text-xl text-sm text-center font-tthover-medium italic ">
           <span className="text-[#5423E6]">
             Not every Play option is available for all kits{" "}
           </span>
@@ -144,7 +144,7 @@ export default function Plode() {
             <div className="w-full flex justify-center">
               <img src={renderImg("uparrow")} className="" />
             </div>
-            <p className="sm:w-1/2 text-center font-semibold">
+            <p className="sm:w-1/2 text-center font-tthover-medium">
               This adaptive mode ensures every kit delivers a unique data
               experience, empowering users to experiment, track performance, and
               visualise results{" "}
@@ -174,7 +174,7 @@ export default function Plode() {
         <div className=" text-black py-5 lg:py-10">
           <VersatileSoftware data={data.versatile[0]} />
         </div>
-        <div className="w-full flex justify-center flex-col items-center font-semibold">
+        <div className="w-full flex justify-center flex-col items-center font-tthover-medium">
           <img src={renderImg("uparrow")} />
           <p className="text-[#5423E6]">Why Visual Programming?</p>
           <p className="sm:w-1/3 text-center text-sm sm:text-lg ">
@@ -192,7 +192,7 @@ export default function Plode() {
             />
           </div>
         </div>
-        <div className="w-full flex justify-center flex-col items-center font-semibold">
+        <div className="w-full flex justify-center flex-col items-center font-tthover-medium">
           <img src={renderImg("uparrow")} />
           <p className="text-[#5423E6]">Build to Solve, Learn to Innovate</p>
           <p className="sm:w-1/3 text-sm sm:text-lg text-center">
@@ -204,7 +204,7 @@ export default function Plode() {
         <div className=" text-black py-5 lg:py-10">
           <VersatileSoftware data={data.versatile[1]} />
         </div>
-        <div className="w-full flex justify-center flex-col items-center font-semibold">
+        <div className="w-full flex justify-center flex-col items-center font-tthover-medium">
           <img src={renderImg("uparrow")} />
           <p className="text-[#5423E6]">Build to Solve, Learn to Innovate</p>
           <p className="sm:w-1/3 text-sm sm:text-lg text-center">
@@ -230,7 +230,7 @@ export default function Plode() {
             <div className="sm:w-2/3 h-full w-full  bg-red-600 rounded-xxl"></div>
           </div>
           <div className="sm:w-1/2 p-5">
-            <p className="text-black font-piepie text-3xl md:text-6xl lg:text-6xl tracking-wider  sm:w-[70%]">
+            <p className="text-black font-piepie text-3xl md:text-6xl lg:text-6xl   sm:w-[70%]">
               <span className="text-[#5423E6]">Script Programming – </span>
               Take Control with Text-Based Code
             </p>
@@ -255,7 +255,7 @@ export default function Plode() {
             />
           </div>
         </div>
-        <div className="w-full flex justify-center flex-col items-center font-semibold">
+        <div className="w-full flex justify-center flex-col items-center font-tthover-medium">
           <img src={renderImg("uparrow")} />
           <p className="text-[#5423E6]">Why Python?</p>
           <p className="sm:w-1/3 text-sm sm:text-lg text-center">
@@ -280,7 +280,7 @@ export default function Plode() {
           <TestimonialBanner />
         </div>
         <div className="py-5 lg:py-20">
-          <FAQs product="home"/>
+          <FAQs product="home" />
         </div>
         <div>
           <GetInTouch />

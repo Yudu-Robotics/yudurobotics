@@ -32,7 +32,7 @@ export default function Section2() {
   return (
     <div className="w-full flex sm:flex-row flex-col text-black">
       <div className="sm:w-1/3">
-        <div className="font-piepie text-5xl md:text-6xl lg:text-7xl tracking-wider  ">
+        <div className="font-piepie text-5xl md:text-6xl lg:text-7xl   ">
           {highlightWords(heading, [heading], "text-[#0A041A]")}
         </div>
         <div className="w-2/3 mt-5">{subhading}</div>
