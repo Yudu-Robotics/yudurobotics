@@ -61,7 +61,7 @@ const SixBlock: React.FC<SixBlockProps> = ({ data }) => {
                   <div className="text-xl font-bold text-center font-tthoves-semiBold">
                     {item.title}
                   </div>
-                  <div className="text-center sm:px-12 pt-3 font-tthover">
+                  <div className="text-center text-lg sm:px-12 pt-3 font-tthover">
                     {item.desc}
                   </div>
                 </div>

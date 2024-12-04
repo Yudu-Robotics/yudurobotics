@@ -34,8 +34,10 @@ const JumpingButtons: React.FC<JumpingButtonsProps> = ({
                 color: textColor || "#FFF",
               }}
             >
-              <span className="block">{text1 || "Lemme"}</span>
-              <span className="block font-bold italic font-tthoves-semiBold">
+              <span className="block font-tthoves-semiBold">
+                {text1 || "Lemme"}
+              </span>
+              <span className="block italic font-tthover-bold">
                 {text2 || "Explore"}
               </span>
             </div>
@@ -48,8 +50,12 @@ const JumpingButtons: React.FC<JumpingButtonsProps> = ({
               color: textColor || "#FFF",
             }}
           >
-            <span className="block">{text1 || "Lemme"}</span>
-            <span className="block font-bold italic">{text2 || "Explore"}</span>
+            <span className="block font-tthoves-semiBold">
+              {text1 || "Lemme"}
+            </span>
+            <span className="block italic font-tthover-bold  ">
+              {text2 || "Explore"}
+            </span>
           </div>
         )}
 

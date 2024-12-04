@@ -81,7 +81,7 @@ const HardwareProductFeatures: React.FC<{ hardware: HardwareData }> = ({
                       />
                     </div>
                     <div>
-                      <h3 className=" text-lg xl:text-2xl font-tthoves-semiBold">
+                      <h3 className=" text-lg xl:text-2xl font-tthoves-semiBold text-[#1A1804]">
                         {feature.heading}
                       </h3>
                       <p className="pt-2 sm:pt-3 text-secondary-foreground sm:text-sm md:text-md lg:text-lg xl:text-xl font-tthover">
@@ -137,7 +137,7 @@ const HardwareProductFeatures: React.FC<{ hardware: HardwareData }> = ({
                       />
                     </div>
                     <div>
-                      <h3 className=" text-lg xl:text-2xl font-tthoves-semiBold">
+                      <h3 className=" text-lg xl:text-2xl font-tthoves-semiBold text-[#1A1804]">
                         {feature.heading}
                       </h3>
                       <p className="pt-2 text-secondary-foreground sm:text-sm md:text-md lg:text-lg xl:text-xl">

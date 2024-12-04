@@ -20,7 +20,7 @@ const PeeceeFuture: React.FC<{ peeceeFuture: PeeceeFuture }> = ({
         />
       </div>
       <div className="sm:w-1/2 flex flex-col md:w-[50%] space-y-2">
-        <h1 className="font-tthoves-semiBold text-primary sm:text-sm md:text-md lg:text-lg xl:text-xl font-tthover-medium ">
+        <h1 className=" text-primary sm:text-sm md:text-md lg:text-lg xl:text-xl font-tthover-medium ">
           Hardware
         </h1>
 

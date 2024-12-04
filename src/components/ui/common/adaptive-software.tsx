@@ -46,7 +46,7 @@ const SoftwareAdaptive: React.FC<SoftwareAdaptiveProps> = ({ data, image }) => {
           <img
             src={renderImg(image || "monitorAndPhone")}
             alt=""
-            className="w-full"
+            className="w-full sm:p-6"
           />
         </div>
         <div className="xl:w-1/2  flex flex-col space-y-8 justify-center">
