@@ -6,6 +6,9 @@ const friendly = "assets/video/crawle/friendly.mp4";
 const iteractive = "assets/video/crawle/iteractive.mp4";
 const tech = "assets/video/crawle/tech.mp4";
 const versatile = "assets/video/crawle/versatile.mp4";
+const stepcrawle = "assets/video/crawle/stepcrawle.mp4";
+const codingcrawle = "assets/video/crawle/codingcrawle.mp4";
+const aimodelcrawle = "assets/video/crawle/aimodelcrawle.mp4";
 
 //Peecee
 const brainy = "assets/video/peecee/brainy.mp4";
@@ -26,10 +29,25 @@ const steppeecee = "assets/video/peecee/3steppeecee.mp4";
 const codingpeecee = "assets/video/peecee/5codingpeecee.mp4";
 const aimodelpeecee = "assets/video/peecee/aimodelpeecee.mp4";
 
+// Roboki
+const iteractivero = "assets/video/roboki/interactive.mp4";
+const long = "assets/video/roboki/long.mp4";
+const playful = "assets/video/roboki/playful.mp4";
+const powerful = "assets/video/roboki/powerful.mp4";
+const wireless = "assets/video/roboki/wireless.mp4";
+const steprobo = "assets/video/roboki/steprobo.mp4";
+const codingrobo = "assets/video/roboki/codingrobo.mp4";
+const airobo = "assets/video/roboki/airobo.mp4";
+
 //Zing
 const stepzing = "assets/video/zing/stepzing.mp4";
 const codingzing = "assets/video/zing/5codingzing.mp4";
 const aimodelzing = "assets/video/zing/aimodelzing.mp4";
+const Interactivezing = "assets/video/zing/Interactivezing.mp4";
+const sensorzing = "assets/video/zing/sensorzing.mp4";
+const powerzing = "assets/video/zing/powerzing.mp4";
+const smartzing = "assets/video/zing/smartzing.mp4";
+const versatilezing = "assets/video/zing/versatilezing.mp4";
 
 //klaw
 const stepklaw = "assets/video/klaw/stepklaw.mp4";
@@ -90,6 +108,14 @@ function renderVideo(video: string) {
     case "aimodelpeecee":
       return aimodelpeecee;
 
+    //Crawle
+    case "stepcrawle":
+      return stepcrawle;
+    case "codingcrawle":
+      return codingcrawle;
+    case "aimodelcrawle":
+      return aimodelcrawle;
+
     //Zing
     case "stepzing":
       return stepzing;
@@ -97,6 +123,16 @@ function renderVideo(video: string) {
       return codingzing;
     case "aimodelzing":
       return aimodelzing;
+    case "Interactivezing":
+      return Interactivezing;
+    case "sensorzing":
+      return sensorzing;
+    case "powerzing":
+      return powerzing;
+    case "smartzing":
+      return smartzing;
+    case "versatilezing":
+      return versatilezing;
 
     //klaw
     case "stepklaw":
@@ -105,6 +141,24 @@ function renderVideo(video: string) {
       return codingklaw;
     case "aimodelklaw":
       return aimodelklaw;
+
+    // Roboki
+    case "iteractivero":
+      return iteractivero;
+    case "long":
+      return long;
+    case "playful":
+      return playful;
+    case "powerful":
+      return powerful;
+    case "wireless":
+      return wireless;
+    case "steprobo":
+      return steprobo;
+    case "codingrobo":
+      return codingrobo;
+    case "airobo":
+      return airobo;
 
     default:
       return "nothing";

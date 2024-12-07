@@ -44,7 +44,7 @@ const JumpingButtons: React.FC<JumpingButtonsProps> = ({
           </Link>
         ) : (
           <div
-            className={`rounded-full text-xs lg:text-lg h-32 w-32 lg:h-40 lg:w-40 flex flex-col justify-center items-center transform transition duration-500 hover:-translate-y-4`}
+            className={`rounded-full text-xs lg:text-lg h-32 w-32 lg:h-40 lg:w-40 flex flex-col justify-center items-center transform transition duration-500 hover:translate-y-4`}
             style={{
               backgroundColor: bgColor || "#F00",
               color: textColor || "#FFF",

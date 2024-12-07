@@ -101,7 +101,7 @@ export default function Roboki() {
           <SoftwareAdaptive image="playroboki" />
         </div>
         <div className=" md:py-20">
-          <VersatileSoftware />
+          <VersatileSoftware name="roboki" />
         </div>
         <div>
           <ExtraFeatures
@@ -129,11 +129,11 @@ export default function Roboki() {
           />
         </div>
         <div className="py-16 lg:py-20">
-          <PlodeDownloade
+          {/* <PlodeDownloade
             jumppingdata={data.jumppingButton?.[3] || {}}
             heading="Transform Your Learning with Our Curriculum"
             desc="Explore our comprehensive curriculum designed to make coding and robotics accessible and exciting. Get started with structured lessons and hands-on projects today!"
-          />
+          /> */}
         </div>
         <div className="-mx-8 lg:-mx-28">
           <TestimonialBanner />

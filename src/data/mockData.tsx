@@ -754,30 +754,35 @@ export const mockData: { [key: string]: ProductData } = {
             heading: "Powerful and Versatile",
             description:
               "Equipped with a RISC-V 32 Bit processor for fast performance, Roboki is the perfect platform to kickstart your robotics journey.",
+            video: "powerful",
           },
           {
             icon: "assets/roboki/Featured icon (7).png",
             heading: "Long-Lasting Fun",
             description:
               "Enjoy hours of exploration with the rechargeable 1200mAh Li-Ion battery.",
+            video: "long",
           },
           {
             icon: "assets/roboki/Featured icon (8).png",
             heading: "Playful, Upgradable Design",
             description:
               "From coding to mechanics, Roboki evolves with you. Upgrade it with additional sensors, robotic arms, or even AI cameras to push the boundaries of what's possible. Perfect for non-stop learning and action.",
+            video: "playful",
           },
           {
             icon: "assets/roboki/Featured icon (9).png",
             heading: "Wireless & Easy-to-Control",
             description:
               "Connect via Bluetooth 5.0, Zigbee, or USB Type C, and control your robot effortlessly.",
+            video: "wireless",
           },
           {
             icon: "assets/roboki/Featured icon (10).png",
             heading: "Interactive & Fun Learning",
             description:
               "With plug-and-play sensors, big sturdy wheels, and a durable plastic chassis, Roboki is built for both creativity and hands-on fun. Its 15 starter projects will keep you busy for hours!",
+            video: "iteractivero",
           },
           {
             icon: "assets/roboki/Featured icon (11).png",
@@ -921,30 +926,35 @@ export const mockData: { [key: string]: ProductData } = {
             heading: "Power-Packed and Portable",
             description:
               "Zing's 12V Li-Ion battery delivers up to 2 hours of action-packed fun. Lightweight and durable, it's designed for adventure and learning.",
+            video: "powerzing",
           },
           {
             icon: "assets/zing/Featured icon (13).png",
             heading: "Smart Movements",
             description:
               "With 17 degrees of freedom, Zing can walk, squat, turn its head, and more. Explore its expressive capabilities and integrated ultrasonic sensor.",
+            video: "smartzing",
           },
           {
             icon: "assets/zing/Featured icon (14).png",
             heading: "Interactive Fun",
             description:
               "Features a high-quality 3W speaker for audio feedback and options for plug-and-play sensors, AI cameras, and laser cannons.",
+            video: "Interactivezing",
           },
           {
             icon: "assets/zing/Featured icon (15).png",
             heading: "Interactive Sensors",
             description:
               "Equipped with accelerometer, gyroscope, and ultrasonic sensors to make every interaction engaging.",
+            video: "sensorzing",
           },
           {
             icon: "assets/zing/Featured icon (16).png",
             heading: "Versatile Connectivity",
             description:
               "Enjoy WiFi, Bluetooth 5.0, and USB support. Program and control Zing using Plode for a full-featured experience.",
+            video: "versatilezing",
           },
           {
             icon: "assets/zing/Featured icon (17).png",

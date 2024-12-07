@@ -49,8 +49,13 @@ const ExtraFeatures: React.FC<{
             {data?.features.map((feature, index) => (
               <div
                 key={index}
-                className="flex flex-col items-start space-y-1  h-full"
-                onClick={() => setSelectedIndex(index)}
+                className={`flex flex-col items-start space-y-1  h-full ${
+                  !data?.features[selectedIndex]?.video
+                    ? "cursor-default"
+                    : "cursor-pointer"
+                }`}
+                onMouseEnter={() => setSelectedIndex(index)}
+                onMouseLeave={() => setSelectedIndex(-1)}
               >
                 <div className="">
                   {/* Icon for the feature */}
@@ -70,7 +75,7 @@ const ExtraFeatures: React.FC<{
 
           {/* Right Side: Central Image */}
           <div className="relative flex justify-center items-center ">
-            {selectedIndex == -1 ? (
+            {selectedIndex == -1 || !data?.features[selectedIndex]?.video ? (
               <img
                 src={data.centerImage}
                 alt="Product Image"

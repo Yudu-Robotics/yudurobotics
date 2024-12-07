@@ -107,7 +107,7 @@ export default function CrawlE() {
           <SoftwareAdaptive image="playcrawle" />
         </div>
         <div className=" md:py-20">
-          <VersatileSoftware color="red-100" />
+          <VersatileSoftware color="red-100" name="crawle" />
         </div>
         <div>
           <ExtraFeatures
@@ -134,13 +134,13 @@ export default function CrawlE() {
             title="Curriculum"
           />
         </div>
-        <div className="py-16 lg:py-20">
+        {/* <div className="py-16 lg:py-20">
           <PlodeDownloade
             jumppingdata={data.jumppingButton?.[3] || {}}
             heading="Transform Your Learning with Our Curriculum"
             desc="Explore our comprehensive curriculum designed to make coding and robotics accessible and exciting. Get started with structured lessons and hands-on projects today!"
           />
-        </div>
+        </div> */}
         <div className="-mx-8 lg:-mx-28">
           <TestimonialBanner />
         </div>

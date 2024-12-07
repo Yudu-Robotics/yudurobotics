@@ -95,7 +95,8 @@ const HardwareProductFeatures: React.FC<{ hardware: HardwareData }> = ({
 
           {/* Right Side: Central Image */}
           <div className="relative flex justify-center  ">
-            {selectedIndex == -1 ? (
+            {selectedIndex == -1 ||
+            !hardware?.section1?.features[selectedIndex]?.video ? (
               <img
                 src={hardware.section1.centerImage}
                 alt="Product Image"
