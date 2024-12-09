@@ -678,7 +678,7 @@ export const mockData: { [key: string]: ProductData } = {
         text2: "Plode App",
         bgColor: "#602CF7",
         textColor: "#FAF9FE",
-        link: "https://play.google.com/store/apps/details?id=com.bibox.bisoftsuite&hl=en_IN&pli=1",
+        link: "https://edu.plode.org",
       },
       {
         text1: "Start",
@@ -888,7 +888,7 @@ export const mockData: { [key: string]: ProductData } = {
         text2: "Plode App",
         bgColor: "#602CF7",
         textColor: "#FAF9FE",
-        link: "https://play.google.com/store/apps/details?id=com.bibox.bisoftsuite&hl=en_IN&pli=1",
+        link: "https://edu.plode.org",
       },
       {
         text1: "Start",
@@ -1070,7 +1070,7 @@ export const mockData: { [key: string]: ProductData } = {
         text2: "Plode App",
         bgColor: "#F72D3E",
         textColor: "#FAF9FE",
-        link: "https://play.google.com/store/apps/details?id=com.bibox.bisoftsuite&hl=en_IN&pli=1",
+        link: "https://edu.plode.org",
       },
       {
         text1: "Start",
@@ -1253,7 +1253,7 @@ export const mockData: { [key: string]: ProductData } = {
         text2: "Plode App",
         bgColor: "#F72D3E",
         textColor: "#FAF9FE",
-        link: "https://play.google.com/store/apps/details?id=com.bibox.bisoftsuite&hl=en_IN&pli=1",
+        link: "https://edu.plode.org",
       },
       {
         text1: "Start",
@@ -1461,7 +1461,7 @@ export const mockData: { [key: string]: ProductData } = {
         text2: "Plode App",
         bgColor: "#F7812D",
         textColor: "#FAF9FE",
-        link: "https://play.google.com/store/apps/details?id=com.bibox.bisoftsuite&hl=en_IN&pli=1",
+        link: "https://edu.plode.org",
       },
       {
         text1: "Start",
