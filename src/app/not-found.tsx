@@ -58,7 +58,7 @@ const NotFoundPage = () => {
                 ) : ( */}
                 <a
                   href={item.link}
-                  className="text-primary-foreground text-center text-sm px-3 hover:text-destructive bg-primary"
+                  className="text-primary-foreground font-tthoves-semiBold text-center text-sm px-3 hover:text-destructive bg-primary"
                 >
                   {item.name}
                 </a>

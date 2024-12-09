@@ -39,7 +39,7 @@ export default function KlawB() {
               </div>
 
               {/* Subtext */}
-              <div className="font-tthover text-opacity-35 text-primary-foreground sm:text-sm md:text-md lg:text-lg xl:text-xl  w-[100%] sm:w-[60%] text-lg  ">
+              <div className="font-tthoves text-opacity-35 text-primary-foreground sm:text-sm md:text-md lg:text-lg xl:text-xl  w-[100%] sm:w-[60%] text-lg  ">
                 {data.subheading}
               </div>
               {/* Buttons Section */}
@@ -77,7 +77,7 @@ export default function KlawB() {
           <ProductCeoReviewsContainer comment={data} />
         </div>
         <div className="py-8 lg:py-12">
-          <Unboxing />
+          <Unboxing product="Klaw-b"/>
         </div>
         <div className="text-sm py-24 mb-6 text-center font-bold flex flex-col space-y-6 justify-center items-center">
           <div className="text-lg sm:text-lg md:text-md lg:text-lg xl:text-xl font-tthoves-semiBold">
@@ -140,7 +140,7 @@ export default function KlawB() {
           <CeoComments />
         </div>{" "} */}
         <div className="py-20">
-          <FlexibleLearning />
+          <FlexibleLearning product="Klaw-b"/>
         </div>
         <div className="py-16 md:py-20">
           <ExtraFeatures

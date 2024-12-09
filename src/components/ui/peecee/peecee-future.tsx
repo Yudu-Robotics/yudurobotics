@@ -20,7 +20,7 @@ const PeeceeFuture: React.FC<{ peeceeFuture: PeeceeFuture }> = ({
         />
       </div>
       <div className="sm:w-1/2 flex flex-col md:w-[50%] space-y-2">
-        <h1 className=" text-primary sm:text-sm md:text-md lg:text-lg xl:text-xl font-tthover-medium ">
+        <h1 className=" text-primary sm:text-sm md:text-md lg:text-lg xl:text-xl font-tthoves-medium ">
           Hardware
         </h1>
 
@@ -32,7 +32,7 @@ const PeeceeFuture: React.FC<{ peeceeFuture: PeeceeFuture }> = ({
           )}
         </h2>
 
-        <h2 className="font-tthover text-lg text-secondary-foreground w-[100%] lg:w-[80%] xl:text-xl pt-4">
+        <h2 className="font-tthoves text-lg text-secondary-foreground w-[100%] lg:w-[80%] xl:text-xl pt-4">
           {peeceeFuture.subheading}
         </h2>
       </div>

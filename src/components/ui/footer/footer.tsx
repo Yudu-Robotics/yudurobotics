@@ -123,7 +123,7 @@ const Footer = () => {
           <h1 className="font-piepie text-4xl lg:text-6xl">
             Ready to Innovate Together?
           </h1>
-          <h1 className=" py-4 opacity-70 font-tthover">
+          <h1 className=" py-4 opacity-70 font-tthoves">
             Partner with us and drive the future of robotics.
           </h1>
         </div>
@@ -143,12 +143,12 @@ const Footer = () => {
       {/* Contact us Section */}
       <div className="py-20">
         <div className="flex flex-col  lg:items-start">
-          <h1 className="font-tthover">Contact us</h1>
+          <h1 className="font-tthoves">Contact us</h1>
 
           <h1 className="font-piepie text-3xl lg:text-4xl ">
             Chat to our friendly team
           </h1>
-          <h1 className="font-tthover py-4 opacity-70">
+          <h1 className="font-tthoves py-4 opacity-70">
             We’d love to hear from you. Please fill out this form or shoot us an
             email.
           </h1>
@@ -178,9 +178,9 @@ const Footer = () => {
               ) => (
                 <div key={key} className="flex flex-col space-y-2">
                   <div>{value.icon_image}</div>
-                  <h1 className="font-tthover ">{value.type}</h1>
-                  <p className="font-tthover opacity-70">{value.text}</p>
-                  <p className="w-[70%] text-lg font-tthover">
+                  <h1 className="font-tthoves ">{value.type}</h1>
+                  <p className="font-tthoves opacity-70">{value.text}</p>
+                  <p className="w-[70%] text-lg font-tthoves">
                     {value.contact_by}
                   </p>
                 </div>
@@ -199,14 +199,14 @@ const Footer = () => {
             <div className="flex space-x-3 justify-start items-center">
               {renderSvg("logoYudoRobo")}
             </div>
-            <p className="font-tthover opacity-70 w-[70%] text-xl">
+            <p className="font-tthoves opacity-70 w-[70%] text-xl">
               Empowering innovation and creativity through cutting-edge
               robotics.
             </p>
           </div>
 
           <div className="hidden sm:flex flex-col space-y-4">
-            <h1 className="text-lg font-tthover opacity-70">
+            <h1 className="text-lg font-tthoves opacity-70">
               Get the Plode app
             </h1>
             <a
@@ -237,7 +237,7 @@ const Footer = () => {
         <BottomFooter />
 
         <div className="flex flex-col space-y-4 justify-between lg:flex-row lg:space-y-0 ">
-          <p className="text-xs lg:text-lg font-tthover opacity-70">
+          <p className="text-xs lg:text-lg font-tthoves opacity-70">
             © 2024 Yudu Robotics. All rights reserved.
           </p>
           <div className="flex space-x-6">

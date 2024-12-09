@@ -13,12 +13,12 @@ function ProductFeatures() {
       <div className="bg-primary rounded-xxl text-primary-foreground px-8  lg:px-16 pt-12 sm:pt-20 tracking-wide pb-6">
         <div className="flex flex-col justify-between space-y-16 lg:flex-row lg:space-y-0">
           <div className="w-[100%] lg:w-[55%]">
-            <h6 className="font-tthover"> Newly Launched!</h6>
+            <h6 className="font-tthoves"> Newly Launched!</h6>
             <h1 className="font-piepie text-3xl lg:text-6xl tracking-wide ">
               Meet <span className="text-destructive">Zing</span>: The Fun and
               Lively Humanoid Robot
             </h1>
-            <p className="py-2 lg:py-6 text-xl  font-tthover text-[#E2D8FE]">
+            <p className="py-2 lg:py-6 text-xl  font-tthoves text-[#E2D8FE]">
               A 30 cm marvel with 17 degrees of freedom, crafted for endless
               exploration and creativity.
             </p>
@@ -42,7 +42,7 @@ function ProductFeatures() {
                       />
                     </svg>
                   </div>
-                  <span className="text-xl font-tthover opacity-50">
+                  <span className="text-xl font-tthoves opacity-50">
                     {feature.text}
                   </span>
                 </li>

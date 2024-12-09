@@ -69,7 +69,7 @@ export default function Peecee() {
               </div>
 
               {/* Subtext */}
-              <div className="text-lg text-opacity-35 text-primary-foreground sm:text-sm md:text-md lg:text-lg xl:text-xl font-tthover w-[100%] sm:w-[60%] sm:text-start text-center">
+              <div className="text-lg text-opacity-35 text-primary-foreground sm:text-sm md:text-md lg:text-lg xl:text-xl font-tthoves w-[100%] sm:w-[60%] sm:text-start text-center">
                 {data.subheading}
               </div>
             </div>
@@ -111,7 +111,7 @@ export default function Peecee() {
           <ProductCeoReviewsContainer comment={data} />
         </div>
         <div className="py-8 lg:py-12">
-          <Unboxing />
+          <Unboxing product="PeeCee TED"/>
         </div>
         <div className="text-sm py-24 mb-6 text-center font-bold flex flex-col space-y-6 justify-center items-center">
           <p className="text-lg sm:text-lg md:text-md lg:text-lg xl:text-xl font-tthoves-semiBold">
@@ -181,7 +181,7 @@ export default function Peecee() {
           <CeoComments />
         </div>{" "} */}
         <div className="py-20">
-          <FlexibleLearning />
+          <FlexibleLearning product="PeeCee TED"/>
         </div>
         <div className="flex flex-col md:space-y-36 space-y-20">
           <CurriculumSteps

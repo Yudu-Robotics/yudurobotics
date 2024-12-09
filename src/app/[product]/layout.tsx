@@ -184,7 +184,7 @@ export default function ProductLayout({
                     {
                       <Link
                         href={item.link}
-                        className="text-primary-foreground text-center text-sm px-3 hover:text-destructive"
+                        className="text-primary-foreground text-center text-md px-3 hover:text-destructive font-tthoves-semiBold"
                       >
                         {item.name}
                       </Link>

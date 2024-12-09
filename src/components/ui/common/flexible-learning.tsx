@@ -7,8 +7,9 @@ interface propsValue {
   newProduct?: boolean;
   title?: string;
   desc?: string;
+  product?: string;
 }
-function FlexibleLearning({ newProduct = false, title, desc }: propsValue) {
+function FlexibleLearning({ newProduct = false, title, desc, product }: propsValue) {
   return (
     <div>
       <div className="w-full -rotate-180">
@@ -33,9 +34,9 @@ function FlexibleLearning({ newProduct = false, title, desc }: propsValue) {
               </div>
 
               {/* Subtext */}
-              <div className="pt-5 font-tthover text-lg md:text-lg lg:text-2xl opacity-80 lg:w-[80%] text-primary-foreground ">
+              <div className="pt-5 font-tthoves text-lg md:text-lg lg:text-2xl opacity-80 lg:w-[80%] text-primary-foreground ">
                 {desc ||
-                  "PeeCee TED’s curriculum offers flexibility, allowing kits to be used independently or combined. The Adaptive LMS supports a self-paced learning approach, suitable for both individual study and flipped classrooms."}
+                  `${product}’s curriculum offers flexibility, allowing kits to be used independently or combined. The Adaptive LMS supports a self-paced learning approach, suitable for both individual study and flipped classrooms.`}
               </div>
             </div>
             {/* <div className="pt-8 md:pt-0">

@@ -4,7 +4,7 @@ export default function TermsContent() {
   return (
     <div>
       <br />
-      <p className="font-tthover-medium">
+      <p className="font-tthoves-medium">
         PLEASE READ THESE TERMS & CONDITIONS CAREFULLY. BY USING
         www.yudurobotics.com, YOU AGREE TO BE BOUND BY THESE TERMS.{" "}
       </p>
@@ -12,17 +12,17 @@ export default function TermsContent() {
       <p>
         Welcome to www.yudurobotics.com (“this website”). Yudu Robotics is a
         branch of{" "}
-        <span className="font-tthover-medium">Evobi Automations Pvt. Ltd.</span>{" "}
+        <span className="font-tthoves-medium">Evobi Automations Pvt. Ltd.</span>{" "}
         By accessing or using this website, you acknowledge and agree to the
         terms outlined below. For clarity,{" "}
-        <span className="font-tthover-medium">
+        <span className="font-tthoves-medium">
           "Yudu Robotics," "Evobi Automations Pvt. Ltd.," "we," "us," and "our"
           refer to Evobi Automations Pvt. Ltd.
         </span>{" "}
       </p>
       <br />
       <p>
-        <p className="font-tthover-medium my-3">
+        <p className="font-tthoves-medium my-3">
           1. Purpose and Scope of Services
         </p>
         Yudu Robotics provides information on our educational products and
@@ -32,7 +32,7 @@ export default function TermsContent() {
       </p>{" "}
       <br />
       <p>
-        <p className="font-tthover-medium my-3">
+        <p className="font-tthoves-medium my-3">
           2. Intellectual Property Rights
         </p>
         All content, materials, and intellectual property on this website,
@@ -42,7 +42,7 @@ export default function TermsContent() {
       </p>{" "}
       <br />
       <p>
-        <p className="font-tthover-medium my-3">3. Prohibited Activities</p>You
+        <p className="font-tthoves-medium my-3">3. Prohibited Activities</p>You
         agree not to engage in any of the following activities while using our
         website:
         <div className="ml-4">
@@ -68,7 +68,7 @@ export default function TermsContent() {
       </p>{" "}
       <br />
       <p>
-        <p className="font-tthover-medium my-3">4. Limitation of Liability</p>
+        <p className="font-tthoves-medium my-3">4. Limitation of Liability</p>
         This website is provided on an “as-is” basis for informational purposes
         only. Yudu Robotics disclaims all warranties related to the accuracy,
         reliability, or completeness of the content. We are not liable for any
@@ -77,7 +77,7 @@ export default function TermsContent() {
       </p>{" "}
       <br />
       <p>
-        <p className="font-tthover-medium my-3">5. User-Generated Content</p>If
+        <p className="font-tthoves-medium my-3">5. User-Generated Content</p>If
         you choose to provide feedback, suggestions, or other user-generated
         content, you grant Yudu Robotics a non-exclusive, royalty-free license
         to use, reproduce, or display this content. You agree not to submit
@@ -86,14 +86,14 @@ export default function TermsContent() {
       </p>{" "}
       <br />
       <p>
-        <p className="font-tthover-medium my-3">6. Changes to Terms</p>Yudu
+        <p className="font-tthoves-medium my-3">6. Changes to Terms</p>Yudu
         Robotics may update these Terms periodically to reflect changes in
         services or practices. Continued use of our website constitutes
         acceptance of these changes.
       </p>{" "}
       <br />
       <p>
-        <p className="font-tthover-medium my-3">
+        <p className="font-tthoves-medium my-3">
           7. External Links and Third-Party
         </p>
         Content This website may contain links to external sites for user
@@ -103,22 +103,22 @@ export default function TermsContent() {
       </p>{" "}
       <br />
       <p>
-        <p className="font-tthover-medium my-3">8. Governing Law These</p>Terms
+        <p className="font-tthoves-medium my-3">8. Governing Law These</p>Terms
         are governed by the laws of India. Any disputes related to these Terms,
         or your use of the website shall be resolved exclusively in the courts
         of Bangalore, Karnataka, India.
       </p>{" "}
       <br />
       <p>
-        <p className="font-tthover-medium my-3">9. Contact Information​</p>If
+        <p className="font-tthoves-medium my-3">9. Contact Information​</p>If
         you have any questions or concerns, please reach out to our support team
         at
-        <span className="font-tthover-medium my-3">
+        <span className="font-tthoves-medium my-3">
           {" "}
           support@yudurobotics.com
         </span>{" "}
         or via postal mail at:{" "}
-        <span className="font-tthover-medium my-3">
+        <span className="font-tthoves-medium my-3">
           Evobi Automations Pvt. Ltd. ​
         </span>
       </p>

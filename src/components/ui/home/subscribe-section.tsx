@@ -76,13 +76,13 @@ export default function SubscribeSection() {
       </h1>
 
       {/* Subtitle */}
-      <p className="text-base md:text-lg text-center font-tthover sm:w-[60%] opacity-65">
+      <p className="text-base md:text-lg text-center font-tthoves sm:w-[60%] opacity-65">
         Join us in revolutionizing robotics. Get exclusive updates,
         collaboration opportunities, and insights straight to your inbox. Let’s
         innovate together.
       </p>
 
-      <p className="text-base text-center py-8 font-tthover lg:text-lg opacity-65">
+      <p className="text-base text-center py-8 font-tthoves lg:text-lg opacity-65">
         Stay connected. Stay innovative.
       </p>
 

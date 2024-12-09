@@ -26,7 +26,7 @@ const ProductCeoReviewsContainer: React.FC<{ comment: any }> = ({
               <AvatarFallback>CEO</AvatarFallback>
             </Avatar>
           </div>
-          <h4 className="mt-2 text-xl font-tthover-medium">
+          <h4 className="mt-2 text-xl font-tthoves-medium">
             {comment.ceoName}
           </h4>
           <p className="font-extralight">

@@ -55,7 +55,7 @@ export function WrongPageComponent() {
                 <img src={value.icon} />
               </div>
               <div className="flex flex-col space-y-1 ">
-                <h1 className="font-tthover-medium">{value.title}</h1>
+                <h1 className="font-tthoves-medium">{value.title}</h1>
                 <h2 className="text-secondary-foreground">{value.desc}</h2>
               </div>
               <a href={value.redirectPath} className="text-primary">
@@ -99,7 +99,7 @@ export function WrongPageComponent() {
               placeholder="Search our site"
             />
           </div>
-          <button className="bg-[#602CF7] text-[#FAF9FE] rounded-sm font-tthover-medium px-6 py-2 hover:bg-indigo-400 focus:bg-indigo-600 focus:outline-none">
+          <button className="bg-[#602CF7] text-[#FAF9FE] rounded-sm font-tthoves-medium px-6 py-2 hover:bg-indigo-400 focus:bg-indigo-600 focus:outline-none">
             Search
           </button>
         </div>

@@ -173,7 +173,7 @@ export default function ProductCategories() {
                 <h1 className="font-tthoves-semiBold text-xl">
                   {productDetails.name}
                 </h1>
-                <p className="font-tthover text-lg py-1">
+                <p className="font-tthoves text-lg py-1">
                   {productDetails.description}
                 </p>
                 {isAllowedFlag && (
@@ -208,7 +208,7 @@ export default function ProductCategories() {
           </>
         )}
         {limitedProducts.length === 0 && (
-          <div className="flex justify-end items-end font-tthover py-20">
+          <div className="flex justify-end items-end font-tthoves py-20">
             New Products Coming Soon...
           </div>
         )}

@@ -4,9 +4,9 @@ import React from "react";
 export default function PrivacyContent() {
   return (
     <div className="font-">
-      <p className="font-tthover-medium"></p>
+      <p className="font-tthoves-medium"></p>
       <br />
-      <p className="font-tthover-medium">
+      <p className="font-tthoves-medium">
         Thank you for visiting{" "}
         <Link href="/home" target="_blank" className="text-blue-600 underline">
           www.yudurobotics.com{" "}
@@ -18,7 +18,7 @@ export default function PrivacyContent() {
         protecting your privacy. This Privacy Policy explains our data
         collection practices and your rights regarding your information. For
         purposes of this policy, “Yudu Robotics,” “we,” “us,” and “our” refer to
-        <span className="font-tthover-medium">
+        <span className="font-tthoves-medium">
           {" "}
           Evobi Automations Pvt. Ltd.
         </span>
@@ -28,7 +28,7 @@ export default function PrivacyContent() {
         If you do not agree, please refrain from using our website.
       </p>{" "}
       <p>
-        <p className="my-3 font-tthover-medium">1. Information We Collect</p>{" "}
+        <p className="my-3 font-tthoves-medium">1. Information We Collect</p>{" "}
         <p className="mb-3">
           Since Yudu Robotics is a marketing website without user account
           creation or purchasing options, our data collection is minimal and
@@ -36,7 +36,7 @@ export default function PrivacyContent() {
         </p>
       </p>
       <p>
-        <p className="my-2 font-tthover-medium">
+        <p className="my-2 font-tthoves-medium">
           {" "}
           1.1 Automatically Collected Data
         </p>{" "}
@@ -45,7 +45,7 @@ export default function PrivacyContent() {
           <div className="flex ">
             <div className="px-1">∙</div>
             <div>
-              <span className="font-tthover-medium">System Data:</span>{" "}
+              <span className="font-tthoves-medium">System Data:</span>{" "}
               Information such as IP address, browser type, device type, and
               operating system.
             </div>
@@ -53,7 +53,7 @@ export default function PrivacyContent() {
           <div className="flex ">
             <div className="px-1">∙</div>
             <div>
-              <span className="font-tthover-medium">Usage Data:</span> Details
+              <span className="font-tthoves-medium">Usage Data:</span> Details
               on website interaction, including pages visited, time spent, and
               click actions.
             </div>
@@ -61,7 +61,7 @@ export default function PrivacyContent() {
           <div className="flex ">
             <div className="px-1">∙</div>
             <div>
-              <span className="font-tthover-medium">Approximate Location:</span>{" "}
+              <span className="font-tthoves-medium">Approximate Location:</span>{" "}
               General geographic information based on your IP address.
             </div>
           </div>
@@ -69,7 +69,7 @@ export default function PrivacyContent() {
         This data is used for website performance and improvement purposes.
       </p>
       <p>
-        <p className="my-3 font-tthover-medium">
+        <p className="my-3 font-tthoves-medium">
           2. Use of Cookies and Data Collection Tools
         </p>
         We use cookies and similar tools to track your interactions on our
@@ -78,7 +78,7 @@ export default function PrivacyContent() {
           <div className="flex ">
             <div className="px-1">∙</div>
             <div>
-              <span className="font-tthover-medium">
+              <span className="font-tthoves-medium">
                 Strictly Necessary Cookies:
               </span>{" "}
               Enable basic website functionality.
@@ -87,7 +87,7 @@ export default function PrivacyContent() {
           <div className="flex ">
             <div className="px-1">∙</div>
             <div>
-              <span className="font-tthover-medium">Performance Cookies:</span>{" "}
+              <span className="font-tthoves-medium">Performance Cookies:</span>{" "}
               Help us understand how users interact with the site to improve
               performance.
             </div>
@@ -96,7 +96,7 @@ export default function PrivacyContent() {
         You can manage your cookie preferences through your browser settings.
       </p>{" "}
       <p>
-        <p className="my-3 font-tthover-medium">3. How We Use Your Data</p>We
+        <p className="my-3 font-tthoves-medium">3. How We Use Your Data</p>We
         use the data collected to:
         <div className="ml-4">
           <div className="flex ">
@@ -115,7 +115,7 @@ export default function PrivacyContent() {
         We do not use this data to personally identify users.
       </p>{" "}
       <p>
-        <p className="font-tthover-medium my-3">
+        <p className="font-tthoves-medium my-3">
           4. Information Sharing and Disclosure
         </p>{" "}
         Yudu Robotics does not sell or rent your data. Limited information, such
@@ -124,7 +124,7 @@ export default function PrivacyContent() {
         required to use the data solely for the services they provide to us.
       </p>{" "}
       <p>
-        <p className="font-tthover-medium my-3">5. Data Security</p> We
+        <p className="font-tthoves-medium my-3">5. Data Security</p> We
         prioritize protecting your information and have implemented standard
         security measures to prevent unauthorized access. However, we cannot
         guarantee absolute security due to the nature of the internet. We advise
@@ -132,20 +132,20 @@ export default function PrivacyContent() {
         browsing.
       </p>{" "}
       <p>
-        <p className="font-tthover-medium my-3">6. External Links</p>Our website
+        <p className="font-tthoves-medium my-3">6. External Links</p>Our website
         may contain links to third-party websites. We are not responsible for
         the privacy practices or content of these external sites. We encourage
         you to review the privacy policies of any websites you visit through
         links on our site.
       </p>{" "}
       <p>
-        <p className="font-tthover-medium my-3">7. Children’s Privacy</p> Our
+        <p className="font-tthoves-medium my-3">7. Children’s Privacy</p> Our
         website is intended for a general audience and does not knowingly
         collect information from children under the age of 13. Parents are
         encouraged to monitor their children’s online activity.
       </p>{" "}
       <p>
-        <p className="font-tthover-medium my-3">
+        <p className="font-tthoves-medium my-3">
           8. Updates to This Privacy Policy
         </p>
         We may update this Privacy Policy periodically to reflect changes in our
@@ -154,10 +154,10 @@ export default function PrivacyContent() {
         of the date posted.
       </p>{" "}
       <p>
-        <p className="font-tthover-medium my-3">9. Contact Information</p>For
+        <p className="font-tthoves-medium my-3">9. Contact Information</p>For
         questions about this Privacy Policy, please contact us at:​
-        <p className="font-tthover-medium">support@yudurobotics.com​</p>
-        <p className="font-tthover-medium">Evobi Automations Pvt. Ltd.,</p>​ No
+        <p className="font-tthoves-medium">support@yudurobotics.com​</p>
+        <p className="font-tthoves-medium">Evobi Automations Pvt. Ltd.,</p>​ No
         29, Beratena Agrahara, Next to Play Factory, Hosur Road, Bengaluru,
         Karnataka-560100{" "}
       </p>

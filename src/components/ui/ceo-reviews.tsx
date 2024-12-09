@@ -32,7 +32,7 @@ const CeoReviewsContainer: React.FC<CeoProps> = ({ data }) => {
         <h4 className="mt-2 text-xl font-tthoves-semiBold">
           {data?.name || "Mr Filepe Gracia"}
         </h4>
-        <p className="font-tthover">
+        <p className="font-tthoves">
           {data?.designation && data?.company
             ? `${data?.designation} , ${data?.company}`
             : "Marketing Head , Inroprin - Peru"}

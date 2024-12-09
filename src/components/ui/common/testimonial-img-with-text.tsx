@@ -16,7 +16,7 @@ const ImageWithText: React.FC<ImageWithTextProps> = ({
   text3,
 }) => {
   return (
-    <div className="relative font-tthover">
+    <div className="relative font-tthoves">
       <img
         src={renderImg(imgSrc)}
         alt="Background"

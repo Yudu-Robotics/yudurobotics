@@ -39,7 +39,7 @@ export default function Roboki() {
               </div>
 
               {/* Subtext */}
-              <div className="font-tthover text-opacity-35 text-primary-foreground sm:text-sm md:text-md lg:text-lg xl:text-xl  w-[100%] sm:w-[60%] text-lg sm:text-start text-center">
+              <div className="font-tthoves text-opacity-35 text-primary-foreground sm:text-sm md:text-md lg:text-lg xl:text-xl  w-[100%] sm:w-[60%] text-lg sm:text-start text-center">
                 {data.subheading}
               </div>
             </div>
@@ -76,7 +76,7 @@ export default function Roboki() {
           <ProductCeoReviewsContainer comment={data} />
         </div>
         <div className="py-8 lg:py-12">
-          <Unboxing />
+          <Unboxing product="Roboki"/>
         </div>
         <div className="text-sm py-24 text-center font-bold flex flex-col space-y-6 justify-center items-center">
           <p className="text-lg sm:text-lg md:text-md lg:text-lg xl:text-xl font-tthoves-semiBold">
@@ -120,7 +120,7 @@ export default function Roboki() {
           <CeoComments />
         </div>{" "} */}
         <div className="py-20">
-          <FlexibleLearning />
+          <FlexibleLearning product="Roboki"/>
         </div>
         <div className="py-16 md:py-20">
           <ExtraFeatures

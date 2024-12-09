@@ -40,14 +40,14 @@ const ProductCard: React.FC<ProductCardProps> = ({
       <h3 className="text-lg font-tthoves-semiBold mb-2 lg:text-xl">
         {product.name}
       </h3>
-      <p className="text-start font-tthover text-secondary-foreground text-xs tracking-wide lg:text-sm hidden sm:flex ">
+      <p className="text-start font-tthoves text-secondary-foreground text-xs tracking-wide lg:text-sm hidden sm:flex ">
         {product.description}
       </p>
-      <p className="text-start text-secondary-foreground text-sm w-full tracking-wide lg:text-sm  sm:hidden">
+      <p className="text-start text-secondary-foreground text-sm w-full tracking-wide lg:text-sm  sm:hidden font-tthoves">
         {product.description.substring(0, 50) + "..."}
       </p>
 
-      <Link href={product.link} className="text-blue-700 text-sm sm:hidden">
+      <Link href={product.link} className="text-blue-700 text-sm sm:hidden font-tthoves-semiBold">
         Learn more {"->"}
       </Link>
     </div>

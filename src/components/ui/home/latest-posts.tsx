@@ -37,7 +37,7 @@ const LatestPosts = () => {
     <div className="flex flex-col items-center">
       {/* heading */}
       <div className="py-6 lg:py-12 flex flex-col space-y-1 justify-center items-center">
-        <h1 className="text-xs font-tthover-medium lg:text-sm text-primary">
+        <h1 className="text-xs font-tthoves-medium lg:text-sm text-primary">
           {" "}
           Latest Posts
         </h1>
@@ -63,7 +63,7 @@ const LatestPosts = () => {
           ) => (
             <div key={key}>
               <img src={value.image} className="w-full " />
-              <h1 className="text-primary font-tthover-medium text-xs lg:text-sm mt-4">
+              <h1 className="text-primary font-tthoves-medium text-xs lg:text-sm mt-4">
                 {value.author_name} {" . "} {value.date}
               </h1>
               <div className="flex justify-between py-2">

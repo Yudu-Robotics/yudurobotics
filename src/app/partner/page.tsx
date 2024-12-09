@@ -18,7 +18,7 @@ export default async function HomePage() {
       <div className="sm:px-8 lg:px-28 py-4 bg-primary">
         <div className="flex flex-col space-y-16 lg:flex-row lg:space-y-0 justify-between py-10">
           <div className="h-[77vh] w-screen flex flex-col justify-center items-center">
-            <div className="sm:w-[30vw] w-[80vw] font-tthover-medium text-xl text-center">
+            <div className="sm:w-[30vw] w-[80vw] font-tthoves-medium text-xl text-center">
               “We’re here to build a world where robotics sparks creativity and
               inspires young minds.”
             </div>

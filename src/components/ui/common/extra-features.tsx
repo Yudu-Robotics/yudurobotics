@@ -38,7 +38,7 @@ const ExtraFeatures: React.FC<{
         <h2 className="text-4xl lg:text-5xl xl:text-7xl font-piepie tracking-wide  w-[100%] lg:w-[50%]">
           {highlightWords(data?.heading, ["Effortless"], "text-primary")}
         </h2>
-        <h2 className="text-lg text-secondary-foreground xl:text-xl w-[100%] lg:w-[35%] font-tthover">
+        <h2 className="text-lg text-secondary-foreground xl:text-xl w-[100%] lg:w-[35%] font-tthoves">
           {data?.subheading}
         </h2>
       </div>
@@ -65,7 +65,7 @@ const ExtraFeatures: React.FC<{
                   <h3 className="font-tthoves-semiBold text-xl xl:text-2xl sm:py-3">
                     {feature.heading}
                   </h3>
-                  <p className="pt-2 font-tthover text-secondary-foreground text-lg sm:text-sm md:text-md lg:text-lg xl:text-xl">
+                  <p className="pt-2 font-tthoves text-secondary-foreground text-lg sm:text-sm md:text-md lg:text-lg xl:text-xl">
                     {feature.description}
                   </p>
                 </div>

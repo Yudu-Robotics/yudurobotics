@@ -45,7 +45,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
       </div>
       <div className="flex flex-col space-y-8">
         {NavBarItems.map((item, key) => (
-          <div key={key} className="font-tthover">
+          <div key={key} className="font-tthoves-semiBold">
             {item.name === "Our Products" ? (
               <>
                 {/* Main "Our Products" Link */}
@@ -150,7 +150,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
           <div className="mb-12">
             <img src={renderImg("logoblack")} alt="logo" />
           </div>
-          <div className="font-tthover ">
+          <div className="font-tthoves ">
             {NavBarItems.map((item, key) => (
               <Link
                 key={key}
@@ -205,7 +205,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
               />
             </div>
             <div className="ml-5">
-              <div className="font-tthover-medium text-lg">
+              <div className="font-tthoves-medium text-lg">
                 {products[selectedProduct].name}
               </div>
               <div>{products[selectedProduct].description}</div>
@@ -214,7 +214,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
         </div>
       </div>
       <div className="flex justify-center p-2">
-        <Link href="/products" className="p-2 text-primary font-tthover-medium">
+        <Link href="/products" className="p-2 text-primary font-tthoves-medium">
           View all products {"->"}
         </Link>
       </div>
@@ -257,14 +257,14 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
             {NavBarItems.map((item, key) => (
               <div
                 key={key}
-                className="relative group font-tthover"
+                className="relative group font-tthoves-semiBold"
                 onMouseEnter={() => {
                   setHoveredItem(item.name);
                 }}
               >
                 <Link
                   href={item.link}
-                  className="text-primary-foreground text-center text-sm px-3 hover:text-destructive"
+                  className="text-primary-foreground text-center text-md px-3 hover:text-destructive"
                 >
                   {item.name}
                 </Link>

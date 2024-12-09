@@ -25,13 +25,13 @@ const SoftwareAdaptive: React.FC<SoftwareAdaptiveProps> = ({ data, image }) => {
     <div className="flex flex-col  sm:-translate-y-52 sm:-mb-52">
       <div className="w-full flex justify-between">
         <div className="w-full  flex flex-col space-y-2 pl-3 sm:pl-16">
-          <h1 className="text-primary sm:text-sm md:text-md lg:text-lg xl:text-xl font-tthover-medium ">
+          <h1 className="text-primary sm:text-sm md:text-md lg:text-lg xl:text-xl font-tthoves-medium ">
             {data?.title || "Software"}
           </h1>
           <h2 className="text-4xl lg:text-6xl xl:text-7xl font-piepie tracking-wide  w-[100%]">
             {highlightWords("Playfully Adaptive", ["Adaptive"], "text-primary")}
           </h2>
-          <h2 className="font-tthover sm:text-sm md:text-md lg:text-lg xl:text-xl text-secondary-foreground pt-3 w-[70%] ">
+          <h2 className="font-tthoves sm:text-sm md:text-md lg:text-lg xl:text-xl text-secondary-foreground pt-3 w-[70%] ">
             Plode adjusts itself to suit anyone, whether you're just starting
             out or ready to tackle big projects.
           </h2>
@@ -63,7 +63,7 @@ const SoftwareAdaptive: React.FC<SoftwareAdaptiveProps> = ({ data, image }) => {
                 <h3 className=" text-xl xl:text-2xl sm:py-3 font-tthoves-semiBold">
                   {feature?.title || feature.heading}
                 </h3>
-                <p className="font-tthover text-secondary-foreground text-lg sm:text-sm md:text-md lg:text-lg xl:text-xl">
+                <p className="font-tthoves text-secondary-foreground text-lg sm:text-sm md:text-md lg:text-lg xl:text-xl">
                   {feature?.desc || feature.description}
                 </p>
               </div>

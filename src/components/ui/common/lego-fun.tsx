@@ -12,13 +12,13 @@ const LegoFun: React.FC<{ legoFun: LegoFun }> = ({ legoFun }) => {
     <div className="w-full h-full  flex flex-col md:flex-row justify-between items-center pb-10 mb-5">
       <div className="  sm:w-1/2 h-full bg-yellow-300-700 flex items-center space-y-2 justify-center text-start">
         <div className="">
-          <h1 className="font-tthoves-semiBold text-primary sm:text-sm md:text-md lg:text-lg xl:text-xl font-tthover-medium ">
+          <h1 className="font-tthoves-semiBold text-primary sm:text-sm md:text-md lg:text-lg xl:text-xl font-tthoves-medium ">
             Hardware
           </h1>
           <h2 className="text-4xl lg:text-6xl xl:text-7xl font-piepie tracking-wide ">
             {highlightWords(legoFun.heading, [""], "text-primary")}
           </h2>
-          <h2 className="text-lg text-secondary-foreground font-tthover w-[100%] lg:w-[80%] xl:text-xl mt-4">
+          <h2 className="text-lg text-secondary-foreground font-tthoves w-[100%] lg:w-[80%] xl:text-xl mt-4">
             {legoFun.subheading}
           </h2>
         </div>

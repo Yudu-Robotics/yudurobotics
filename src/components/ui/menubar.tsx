@@ -182,7 +182,7 @@ const MenubarLabel = React.forwardRef<
   <MenubarPrimitive.Label
     ref={ref}
     className={cn(
-      "px-2 py-1.5 text-sm font-tthover-medium",
+      "px-2 py-1.5 text-sm font-tthoves-medium",
       inset && "pl-8",
       className
     )}

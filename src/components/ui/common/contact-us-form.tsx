@@ -120,7 +120,7 @@ export default function ContactForm() {
           {/* Form Fields */}
 
           <div className="w-full">
-            <label className="block font-sm font-tthover-medium text-secondary-foreground">
+            <label className="block font-sm font-tthoves-medium text-secondary-foreground">
               Full Name <span className="text-primary">*</span>
             </label>
             <input
@@ -135,7 +135,7 @@ export default function ContactForm() {
             />
           </div>
           <div className="w-full">
-            <label className="block font-sm font-tthover-medium text-secondary-foreground">
+            <label className="block font-sm font-tthoves-medium text-secondary-foreground">
               Email <span className="text-primary">*</span>
             </label>
             <input
@@ -151,7 +151,7 @@ export default function ContactForm() {
           </div>
 
           <div>
-            <label className="block font-sm font-tthover-medium text-secondary-foreground">
+            <label className="block font-sm font-tthoves-medium text-secondary-foreground">
               Phone <span className="text-primary">*</span>
             </label>
             <input
@@ -166,7 +166,7 @@ export default function ContactForm() {
             />
           </div>
           <div>
-            <label className="block font-sm font-tthover-medium text-secondary-foreground">
+            <label className="block font-sm font-tthoves-medium text-secondary-foreground">
               Enquiry Type <span className="text-primary">*</span>
             </label>
             <select
@@ -194,7 +194,7 @@ export default function ContactForm() {
             </select>
           </div>
           <div>
-            <label className="block font-sm font-tthover-medium text-secondary-foreground">
+            <label className="block font-sm font-tthoves-medium text-secondary-foreground">
               Message <span className="text-primary">*</span>
             </label>
             <textarea
@@ -225,7 +225,7 @@ export default function ContactForm() {
             <div className="ml-2 text-sm">
               <label
                 htmlFor="privacyPolicy"
-                className="font-tthover text-secondary-foreground"
+                className="font-tthoves text-secondary-foreground"
               >
                 You agree to our friendly{" "}
                 <button
@@ -233,7 +233,7 @@ export default function ContactForm() {
                     e.preventDefault(); // Prevent form submission
                     handleDialogOpen("privacy");
                   }}
-                  className="font-tthover text-secondary-foreground underline"
+                  className="font-tthoves text-secondary-foreground underline"
                 >
                   privacy policy
                 </button>
@@ -246,7 +246,7 @@ export default function ContactForm() {
           <div>
             <button
               type="submit"
-              className="w-full py-3 px-6 bg-primary cursor-pointer text-primary-foreground rounded-full shadow-lg font-tthover-medium text-lg hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+              className="w-full py-3 px-6 bg-primary cursor-pointer text-primary-foreground rounded-full shadow-lg font-tthoves-medium text-lg hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
               disabled={isSubmitting}
             >
               {isSubmitting ? "Submitting..." : "Send message"}

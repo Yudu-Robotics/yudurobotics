@@ -19,7 +19,7 @@ const FAQs = ({ product }: { product: string }) => {
         <h1 className="w-full font-piepie text-center  text-3xl sm:text-4xl text-black sm:racking-wider">
           Got Questions? We’ve Got Answers
         </h1>
-        <p className="text-secondary-foreground text-center text-lg sm:text-start sm:text-sm md:text-md lg:text-lg xl:text-xl pt-4 font-tthover">
+        <p className="text-secondary-foreground text-center text-lg sm:text-start sm:text-sm md:text-md lg:text-lg xl:text-xl pt-4 font-tthoves">
           Find the information you need with our frequently asked questions.
         </p>
       </div>
@@ -34,7 +34,7 @@ const FAQs = ({ product }: { product: string }) => {
               onClick={() => toggleFAQ(index)}
               className="flex justify-between items-center w-full focus:outline-none"
             >
-              <h3 className="text-xl text-start lg:text-lg text-[#0A041A] font-tthover-medium">
+              <h3 className="text-xl text-start lg:text-lg text-[#0A041A] font-tthoves-medium">
                 {item.question}
               </h3>
               <img
@@ -48,7 +48,7 @@ const FAQs = ({ product }: { product: string }) => {
               />
             </button>
             <div
-              className={`font-tthover mt-2 text-secondary-foreground transition-max-height duration-500 ease-in-out overflow-hidden text-md  ${
+              className={`font-tthoves mt-2 text-secondary-foreground transition-max-height duration-500 ease-in-out overflow-hidden text-md  ${
                 openIndex === index ? "max-h-40" : "max-h-0"
               }`}
             >

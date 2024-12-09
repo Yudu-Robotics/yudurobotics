@@ -24,7 +24,7 @@ export default function ProductCatalog() {
           </div>
 
           <div className=" flex flex-col sm:space-y-6 lg:space-y-0 lg:flex-row justify-between">
-            <p className="text-secondary-foreground text-base  lg:text-start lg:text-xl w-[100%] lg:w-[50%] font-tthover">
+            <p className="text-secondary-foreground text-base  lg:text-start lg:text-xl w-[100%] lg:w-[50%] font-tthoves">
               Discover the exciting products we’ve been developing—each designed
               to push the boundaries of robotics.
             </p>

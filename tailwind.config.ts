@@ -13,10 +13,10 @@ const config: Config = {
         heading: "Poppins",
         body: ["TTHovesRegular", "sans-serif"],
         piepie: ["PiePie", "sans-serif"],
-        tthover: ["TTHovesRegular", "sans-serif"],
-        "tthover-bold": ["TTHovesBold", "sans-serif"],
+        tthoves: ["TTHovesRegular", "sans-serif"],
+        "tthoves-bold": ["TTHovesBold", "sans-serif"],
         "tthoves-semiBold": ["TTHovesDemiBold", "sans-serif"],
-        "tthover-medium": ["TTHovesMedium", "sans-serif"]
+        "tthoves-medium": ["TTHovesMedium", "sans-serif"]
       },
       colors: {
         customBlue: "#3f00ff",

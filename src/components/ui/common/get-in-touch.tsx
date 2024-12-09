@@ -10,7 +10,7 @@ const GetInTouch = () => {
         <h1 className="text-base font-tthoves-semiBold sm:text-sm md:text-md lg:text-lg xl:text-xl ">
           Still have questions?
         </h1>
-        <p className="text-secondary-foreground font-tthover sm:text-sm md:text-md lg:text-lg xl:text-xl ">
+        <p className="text-secondary-foreground font-tthoves sm:text-sm md:text-md lg:text-lg xl:text-xl ">
           Can't find the answer you're looking for? Please chat to our friendly
           team
         </p>

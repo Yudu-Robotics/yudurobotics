@@ -35,7 +35,7 @@ const SixBlock: React.FC<SixBlockProps> = ({ data }) => {
               "text-primary"
             )}
           </div>
-          <p className="font-tthover sm:w-1/3 xl:w-[60%] text-lg sm:text-lg  text-center py-5 sm:py-0 text-secondary-foreground">
+          <p className="font-tthoves sm:w-1/3 xl:w-[60%] text-lg sm:text-lg  text-center py-5 sm:py-0 text-secondary-foreground">
             {data.subheading}
           </p>
         </div>
@@ -61,7 +61,7 @@ const SixBlock: React.FC<SixBlockProps> = ({ data }) => {
                   <div className="text-xl font-bold text-center font-tthoves-semiBold">
                     {item.title}
                   </div>
-                  <div className="text-center text-lg sm:px-12 pt-3 font-tthover">
+                  <div className="text-center text-lg sm:px-12 pt-3 font-tthoves">
                     {item.desc}
                   </div>
                 </div>

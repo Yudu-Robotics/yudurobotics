@@ -14,7 +14,7 @@ const AdaptiveLMS = () => {
         <h2 className="text-4xl lg:text-5xl xl:text-7xl font-piepie">
           Adaptive LMS
         </h2>
-        <p className="font-tthover text-lg sm:text-sm md:text-md lg:text-lg xl:text-xl text-secondary-foreground mt-3">
+        <p className="font-tthoves text-lg sm:text-sm md:text-md lg:text-lg xl:text-xl text-secondary-foreground mt-3">
           Manages all learning resources, including videos, activity sheets,
           materials, and assessments. This streamlined approach supports dynamic
           and flexible learning experiences, benefiting students, teachers, and

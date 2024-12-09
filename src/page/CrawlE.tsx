@@ -77,7 +77,7 @@ export default function CrawlE() {
           <ProductCeoReviewsContainer comment={data} />
         </div>
         <div className="py-8 lg:py-12">
-          <Unboxing />
+          <Unboxing product="Crawl-e"/>
         </div>
         <div className="text-sm py-24 mb-6 text-center font-bold flex flex-col space-y-6 justify-center items-center">
           <div className="text-lg sm:text-lg md:text-md lg:text-lg xl:text-xl font-tthoves-semiBold">
@@ -126,7 +126,7 @@ export default function CrawlE() {
           <CeoComments />
         </div>{" "} */}
         <div className="py-20">
-          <FlexibleLearning />
+          <FlexibleLearning product="Crawl-e"/>
         </div>
         <div className="py-16 md:py-20">
           <ExtraFeatures

@@ -2,7 +2,7 @@ import React from "react";
 
 export const NewFeaturesCard = () => {
   return (
-    <div className="flex text-primary text-xs font-tthover-medium mb-5">
+    <div className="flex text-primary text-xs font-tthoves-medium mb-5">
       <div className="flex bg-primary-foreground rounded-3xl py-1 px-1 sm:px-3 space-x-2 items-center">
         <button className="rounded-full border border-primary px-1 text-nowrap text-xs sm:text-sm">
           New Product

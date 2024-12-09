@@ -33,7 +33,7 @@ const PlodeDownloade: React.FC<PlodeDownloadeProps> = ({
             </div>
 
             {/* Subtext */}
-            <div className="font-tthover text-primary-foreground text-lg lg:text-lg xl:text-xl  w-[100%] lg:w-[60%] opacity-70">
+            <div className="font-tthoves text-primary-foreground text-lg lg:text-lg xl:text-xl  w-[100%] lg:w-[60%] opacity-70">
               {desc}
             </div>
           </div>

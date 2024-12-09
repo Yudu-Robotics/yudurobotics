@@ -23,12 +23,12 @@ const CurriculumSteps: React.FC<{
           <h2 className="text-3xl md:text-5xl font-piepie w-[100%] md:w-[80%]">
             {data.heading}
           </h2>
-          <h3 className="text-xl text-secondary-foreground font-tthover">
+          <h3 className="text-xl text-secondary-foreground font-tthoves">
             {data.subheading}
           </h3>
         </div>
 
-        <div className="font-tthover flex flex-col md:justify-evenly space-y-4 md:space-y-4">
+        <div className="font-tthoves flex flex-col md:justify-evenly space-y-4 md:space-y-4">
           {additional && (
             <h3 className="text-sm text-secondary-foreground py-5">
               {additional}
@@ -42,10 +42,10 @@ const CurriculumSteps: React.FC<{
                     key={index}
                     className="flex flex-col space-y-1 py-3 sm:py-0"
                   >
-                    <h1 className="font-tthoves-semiBold  sm:py-2 text-[#303036] text-xl sm:text-sm md:text-md lg:text-lg xl:text-xl">
+                    <h1 className="font-tthoves-semiBold  sm:py-2 text-[#303036] text-xl sm:text-lg md:text-xl lg:text-3xl xl:text-5xl">
                       {value.title}
                     </h1>
-                    <p className="font-tthover text-lg sm:text-xs md:text-sm lg:text-md xl:text-lg text-secondary-foreground">
+                    <p className="font-tthoves text-lg sm:text-md md:text-lg lg:text-xl xl:text-3xl text-secondary-foreground">
                       {value.desc}
                     </p>
                   </div>
@@ -64,10 +64,10 @@ const CurriculumSteps: React.FC<{
                     key={index}
                     className="flex flex-col space-y-1 py-3 sm:py-0"
                   >
-                    <h1 className="font-tthoves-semiBold  sm:py-2 text-xl text-[#303036] sm:text-sm md:text-md lg:text-lg xl:text-xl">
+                    <h1 className="font-tthoves-semiBold  sm:py-2 text-xl text-[#303036] sm:text-lg md:text-xl lg:text-3xl xl:text-5xl">
                       {value.title}
                     </h1>
-                    <p className="font-tthover text-lg sm:text-xs md:text-sm lg:text-md xl:text-lg text-secondary-foreground">
+                    <p className="font-tthoves text-lg sm:text-md md:text-lg lg:text-xl xl:text-3xl text-secondary-foreground">
                       {value.desc}
                     </p>
                   </div>

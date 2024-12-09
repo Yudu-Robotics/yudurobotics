@@ -30,7 +30,7 @@ const Working: React.FC<{ data: HowItWork }> = ({ data }) => {
         <h2 className="text-4xl lg:text-5xl xl:text-7xl font-piepie  ">
           {highlightWords(data.heading, ["Works"], "text-primary")}
         </h2>
-        <h2 className="font-tthover text-sm text-secondary-foreground sm:text-lg xl:text-xl  w-[100%] lg:w-[40%]">
+        <h2 className="font-tthoves text-sm text-secondary-foreground sm:text-lg xl:text-xl  w-[100%] lg:w-[40%]">
           {data.subheading}
         </h2>
       </div>
@@ -43,7 +43,7 @@ const Working: React.FC<{ data: HowItWork }> = ({ data }) => {
             <h1 className="text-lg font-tthoves-semiBold">
               {data.section1.heading}
             </h1>
-            <h2 className="font-tthover text-secondary-foreground text-sm w-[100%] lg:w-[60%]">
+            <h2 className="font-tthoves text-secondary-foreground text-sm w-[100%] lg:w-[60%]">
               {data.section1.description}
             </h2>
             <a className="text-sm text-primary flex justify-center items-center space-x-2">

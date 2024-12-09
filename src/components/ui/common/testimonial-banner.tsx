@@ -29,7 +29,7 @@ function Content() {
   return (
     <>
       {[...Array(1)].map((_, index) => (
-        <div className="flex space-x-8 font-tthover-medium" key={index}>
+        <div className="flex space-x-8 font-tthoves-medium" key={index}>
           {/* Each set of items */}
           <div className="flex flex-col space-y-8 flex-shrink-0">
             <div>
