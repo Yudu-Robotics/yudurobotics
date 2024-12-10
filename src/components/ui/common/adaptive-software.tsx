@@ -22,13 +22,13 @@ const SoftwareAdaptive: React.FC<SoftwareAdaptiveProps> = ({ data, image }) => {
     },
   ];
   return (
-    <div className="flex flex-col  sm:-translate-y-52 sm:-mb-52">
+    <div className="flex flex-col sm:-translate-y-52 sm:-mb-52 md:-translate-y-20 md:-mb-20 lg:-translate-y-16 lg:-mb-16 xl:-translate-y-48 xl:-mb-48 2xl:-translate-y-8 2xl:-mb-8">
       <div className="w-full flex justify-between">
         <div className="w-full  flex flex-col space-y-2 pl-3 sm:pl-16">
-          <h1 className="text-primary sm:text-sm md:text-md lg:text-lg xl:text-xl font-tthoves-medium ">
+          <h1 className="text-primary sm:text-sm md:text-sm lg:text-md xl:text-md font-tthoves-medium ">
             {data?.title || "Software"}
           </h1>
-          <h2 className="text-4xl lg:text-6xl xl:text-7xl font-piepie tracking-wide  w-[100%]">
+          <h2 className="text-4xl lg:text-5xl xl:text-6xl font-piepie tracking-wide  w-[100%]">
             {highlightWords("Playfully Adaptive", ["Adaptive"], "text-primary")}
           </h2>
           <h2 className="font-tthoves sm:text-sm md:text-md lg:text-lg xl:text-xl text-secondary-foreground pt-3 w-[70%] ">
@@ -41,19 +41,19 @@ const SoftwareAdaptive: React.FC<SoftwareAdaptiveProps> = ({ data, image }) => {
         </div> */}
       </div>
 
-      <div className="w-full  flex flex-col justify-between  space-y-8 md:flex-row md:space-y-0">
-        <div className="sm:w-1/2 p-5 ">
+      <div className="w-full flex flex-col justify-between gap-8 md:flex-row md:gap-4 lg:gap-6 xl:gap-8 2xl:gap-10">
+        <div className="w-full sm:w-1/2 sm:p-6 md:p-8 lg:p-10 xl:p-12">
           <img
             src={renderImg(image || "monitorAndPhone")}
             alt=""
-            className="w-full sm:p-6"
+            className="w-full"
           />
         </div>
-        <div className="xl:w-1/2  flex flex-col space-y-8 justify-center">
+        <div className="w-full lg:w-3/4 xl:w-1/2 flex flex-col gap-4 lg:gap-6 xl:gap-8 justify-center">
           {(data?.features || features)?.map((feature: any, index: any) => (
             <div
               key={index}
-              className="flex flex-col items-start space-y-2 md:px-36"
+              className="flex flex-col items-start gap-2 sm:gap-3 lg:gap-4 px-4 sm:px-8 md:px-16 lg:px-20 xl:px-24"
             >
               <div className="">
                 {/* Icon for the feature */}

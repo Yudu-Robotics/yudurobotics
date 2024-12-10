@@ -65,7 +65,7 @@ const PlodeSoftware: React.FC<PlodeSoftwareProps> = ({
           {/* <img src={renderImg("headerSection")} className="w-full" /> */}
           {renderSvg("sideHeaderSection")}
         </div>
-        <div className="flex justify-end  sm:-translate-x-20  -mt-16 lg:-mt-48 relative z-10">
+        <div className="flex justify-end sm:-translate-x-20 md:-translate-x-8 md:-translate-y-12 md:-mt-20 lg:-translate-x-8 lg:-translate-y-12 lg:-mt-24 xl:-translate-x-8 xl:-translate-y-32 xl:-mt-12 2xl:-translate-x-4 2xl:-mt-8 relative z-10">
           <img src={renderImg("iphone")} className="" />
         </div>
       </div>

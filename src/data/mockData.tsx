@@ -197,7 +197,7 @@ export const products = [
     category: "",
     type: "Software",
     ageGroup: "Age 12+",
-    link: "/plode",
+    link: "",
   },
   {
     name: "Play Trons",
@@ -671,7 +671,7 @@ export const mockData: { [key: string]: ProductData } = {
         text2: "More",
         bgColor: "#602CF7",
         textColor: "#FAF9FE",
-        link: "",
+        link: "https://edu.plode.org",
       },
       {
         text1: "Download",
@@ -881,7 +881,7 @@ export const mockData: { [key: string]: ProductData } = {
         text2: "More",
         bgColor: "#602CF7",
         textColor: "#FAF9FE",
-        link: "",
+        link: "https://edu.plode.org",
       },
       {
         text1: "Download",
@@ -1063,7 +1063,7 @@ export const mockData: { [key: string]: ProductData } = {
         text2: "More",
         bgColor: "#F72D3E",
         textColor: "#FAF9FE",
-        link: "",
+        link: "https://edu.plode.org",
       },
       {
         text1: "Download",
@@ -1246,7 +1246,7 @@ export const mockData: { [key: string]: ProductData } = {
         text2: "More",
         bgColor: "#F72D3E",
         textColor: "#FAF9FE",
-        link: "",
+        link: "https://edu.plode.org",
       },
       {
         text1: "Download",
@@ -1454,7 +1454,7 @@ export const mockData: { [key: string]: ProductData } = {
         text2: "More",
         bgColor: "#F7812D",
         textColor: "#FAF9FE",
-        link: "",
+        link: "https://edu.plode.org",
       },
       {
         text1: "Download",

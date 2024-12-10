@@ -70,7 +70,7 @@ const VersatileSoftware: React.FC<SoftwareAdaptiveProps> = ({
             key={index}
             className="flex  flex-col h-full justify-center items-center text-center space-y-2 mt-4 "
           >
-            <div className="sm:h-[80%] bg-primary-ver  p-5 flex justify-center items-center rounded-xxl">
+            <div className="sm:h-[80%] p-5 flex justify-center items-center rounded-xxl">
               <div className="flex justify-between items-center h-full">
                 {videoNmae ? (
                   <video
