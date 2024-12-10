@@ -42,10 +42,10 @@ const CurriculumSteps: React.FC<{
                     key={index}
                     className="flex flex-col space-y-1 py-3 sm:py-0"
                   >
-                    <h1 className="font-tthoves-semiBold  sm:py-2 text-[#303036] text-xl sm:text-lg md:text-xl lg:text-3xl xl:text-5xl">
+                    <h1 className="font-tthoves-semiBold  sm:py-2 text-[#303036] text-xl sm:text-md md:text-lg lg:text-xl xl:text-3xl">
                       {value.title}
                     </h1>
-                    <p className="font-tthoves text-lg sm:text-md md:text-lg lg:text-xl xl:text-3xl text-secondary-foreground">
+                    <p className="font-tthoves text-lg sm:text-sm md:text-md lg:text-lg xl:text-xl text-secondary-foreground">
                       {value.desc}
                     </p>
                   </div>
@@ -64,10 +64,10 @@ const CurriculumSteps: React.FC<{
                     key={index}
                     className="flex flex-col space-y-1 py-3 sm:py-0"
                   >
-                    <h1 className="font-tthoves-semiBold  sm:py-2 text-xl text-[#303036] sm:text-lg md:text-xl lg:text-3xl xl:text-5xl">
+                    <h1 className="font-tthoves-semiBold  sm:py-2 text-[#303036] text-xl sm:text-md md:text-lg lg:text-xl xl:text-3xl">
                       {value.title}
                     </h1>
-                    <p className="font-tthoves text-lg sm:text-md md:text-lg lg:text-xl xl:text-3xl text-secondary-foreground">
+                    <p className="font-tthoves text-lg sm:text-sm md:text-md lg:text-lg xl:text-xl text-secondary-foreground">
                       {value.desc}
                     </p>
                   </div>
