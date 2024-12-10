@@ -28,7 +28,10 @@ export default function ProductCatalog() {
               Discover the exciting products we’ve been developing—each designed
               to push the boundaries of robotics.
             </p>
-            <div className="bg-[#602CF7] flex space-x-3 items-center px-6 rounded-full">
+            <Link
+              href="/products"
+              className="bg-[#602CF7] flex space-x-3 items-center px-6 rounded-full"
+            >
               <div className="font-tthoves-semiBold text-[#FAF9FE] font-md">
                 View all products
               </div>
@@ -49,7 +52,7 @@ export default function ProductCatalog() {
                   />
                 </svg>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
