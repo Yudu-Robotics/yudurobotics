@@ -1,6 +1,5 @@
 import renderImg from "@/imgImport";
 import React from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import CeoReviewsContainer from "../ceo-reviews";
 import { highlightWords } from "@/app/utility/highlightWords";
 const data = [
@@ -72,13 +71,7 @@ function Section1() {
               </span>{" "}
               <br />
               <span className="relative inline-block z-0">
-                minds
-                <img
-                  src={renderImg("imgonm")}
-                  alt="Image"
-                  className="absolute -top-2 left-2 -z-10"
-                />
-              </span>{" "}
+                minds<img src={renderImg("imgonm")} alt="" className="absolute -top-2 left-2 -z-10" /></span>{" "}
               and change the game!”
             </p>
           </div>
@@ -91,10 +84,15 @@ function Section1() {
       <div className="w-full flex justify-center">
         <div className="text-center xl:mt-6 w-3/4">
           Let’s get real.
+
           <br />
-          Yeah, we could dress this page up with sweetened marketing jargon and
-          fancy sentences. But honestly, we’re here to have a real conversation
-          with you. No fluff, just facts—delivered with a bit of fun.
+          <div className="relative">
+            <span>
+              Yeah, we could dress this page up with sweetened marketing jargon and
+              fancy sentences. But honestly, we're here to have a real conversation
+              with you. No fluff, just facts—delivered with a bit of fun.
+            </span>
+          </div>
           <br />
           <br />
           So here’s what we’re <span className="font-bold">NOT</span> about
@@ -107,18 +105,20 @@ function Section1() {
         <img src={renderImg("arrow1")} alt="arrow image" />
       </div>
       <div className="bg-red h-full w-full">
-        <div className="w-full flex flex-col justify-between">
+        <div className="w-full flex flex-col justify-between lg:-translate-y-16">
           {data.map((item: any) => (
             <div
               key={item.id}
-              className="flex justify-between sm:my-8 my-3 sm:flex-row flex-col px-5"
+              className="flex justify-between space-y-4xl sm:my-8 my-3 sm:flex-row flex-col px-5"
             >
-              <div className="font-piepie text-5xl md:text-6xl lg:text-7xl  text-primary-foreground">
+              {/* Left section - 70% width on desktop, full width on mobile */}
+              <div className="font-piepie sm:text-[60px] sm:w-[70%] text-primary-foreground">
                 {highlightWords(item.title1, [""], "")}
                 <br />
                 {highlightWords(item.title2, [item.title2], item.bg)}
               </div>
-              <div className="sm:w-1/5 text-xs flex items-end h-auto ">
+              {/* Right section - 30% width on desktop, full width on mobile */}
+              <div className="w-full sm:w-[30%] text-lg sm:text-base flex items-end h-auto">
                 {item.desc}
               </div>
             </div>

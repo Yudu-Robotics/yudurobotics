@@ -12,7 +12,7 @@ const FAQs = dynamic(() => import("@/components/ui/home/faqs"), {
 });
 
 export default async function HomePage() {
-  const data = mockData.home;
+  const data = mockData.partner;
   return (
     <>
       <div className="sm:px-8 lg:px-28 py-4 bg-primary">

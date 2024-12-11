@@ -1,10 +1,8 @@
-import { Button } from "@/components/ui/common/view-products-buttons";
 import renderImg from "@/imgImport";
 import Link from "next/link";
 
 export default function ProductCatalog() {
   return (
-    <>
       <div className=" ">
         <div className="flex flex-col space-y-4 pt-14">
           <h2 className="font-tthoves-semiBold text-primary text-base md:text-xl text-start ">
@@ -56,6 +54,5 @@ export default function ProductCatalog() {
           </div>
         </div>
       </div>
-    </>
   );
 }

@@ -28,7 +28,7 @@ const PlodeDownloade: React.FC<PlodeDownloadeProps> = ({
 
           <div className="space-y-4">
             {/* Main Headline */}
-            <div className="font-piepie text-4xl md:text-3xl lg:text-5xl xl:text-7xl  text-primary-foreground lg:w-[70%]">
+            <div className="font-piepie text-4xl md:text-3xl lg:text-4xl xl:text-6xl  text-primary-foreground lg:w-[70%]">
               {heading}
             </div>
 

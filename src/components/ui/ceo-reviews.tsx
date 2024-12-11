@@ -44,7 +44,7 @@ const CeoReviewsContainer: React.FC<CeoProps> = ({ data }) => {
           <img alt="" src={renderImg("star1")} className=" w-10 " />
         </div>
       </div>
-      <div className="hidden md:block absolute md:-translate-y-60 xl:-translate-y-40 -left-28">
+      <div className="hidden sm:block absolute md:-translate-y-60 xl:-translate-y-40 -left-40">
         <img alt="" src={renderImg("curv")} className="" />
       </div>
     </div>

@@ -2162,10 +2162,10 @@ export const mockData: { [key: string]: ProductData } = {
     },
     jumppingButton: [
       {
-        text1: "Lemme",
-        text2: "Explore",
+        text1: "I'm ready to",
+        text2: "Join Forces",
         bgColor: "#2CF7A4",
-        textColor: "#FAF9FE",
+        textColor: "#0A4029",
         link: "#footer-contact-form-container",
       },
       {
