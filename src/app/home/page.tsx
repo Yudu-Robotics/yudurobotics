@@ -71,9 +71,9 @@ export default async function HomePage() {
           />
         </div>
         <div className="py-10">
-          <a href="">
+          {/* <a href=""> */}
             <img src={renderImg("homeImage")} className="w-full" />
-          </a>
+          {/* </a> */}
         </div>
         <div className="py-8 lg:py-16">
           <CeoReviewsContainer data={partnerDetails[0]} />

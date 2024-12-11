@@ -120,7 +120,7 @@ export default function ProductCategories() {
         onAgeGroupChange={handleAgeGroupChange}
       /> */}
       <div className="flex flex-col space-y-2 lg:flex-row">
-        <div className="flex flex-col space-y-2 lg:space-y-6 w-[100%] lg:w-[25%] font-tthoves-semiBold">
+        <div className="flex flex-col space-y-2 lg:space-y-6 w-[100%] lg:w-[30%] font-tthoves-semiBold">
           <h2 className="text-primary font-tthoves-semiBold text-md lg:text-start">
             Product Categories
           </h2>
@@ -157,13 +157,13 @@ export default function ProductCategories() {
                   />
                 )}
               </div>
-              <div className="hidden sm:flex justify-center my-8">
+              {/* <div className="hidden sm:flex justify-center my-8">
                 <Link href="/products">
                   <button className="px-4 py-2 bg-primary font-bold text-white rounded-lg border-2 hover:border-destructive transition-all duration-200">
                     All Products
                   </button>
                 </Link>
-              </div>
+              </div> */}
             </div>
             <div className="hidden h-full sm:flex flex-col space-y-3 bg-card-foreground rounded-xlg lg:w-[90%] p-8">
               <div>
