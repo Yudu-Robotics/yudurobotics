@@ -84,7 +84,7 @@ export default async function HomePage() {
         {renderSvg("headerSection")}
       </div>
       {/* Middle Part */}
-      <div className="px-4 sm:px-12 lg:px-28 text-black py-5 lg:py-10 ">
+      <div className="px-4 sm:px-12 lg:px-16 text-black py-5 lg:py-10 xl:px-28 ">
         <div className="py-5 lg:py-10">
           <GlobalAwards />
         </div>

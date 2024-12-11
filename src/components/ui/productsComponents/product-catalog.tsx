@@ -7,7 +7,7 @@ export default function ProductCatalog() {
     <>
       <div className=" ">
         <div className="flex flex-col space-y-4 pt-14">
-          <h2 className="font-tthoves-semiBold text-primary  text-xl lg:text-md text-center lg:text-start ">
+          <h2 className="font-tthoves-semiBold text-primary text-base md:text-xl text-start ">
             Product Catalog
           </h2>
           <div className="flex justify-between ">
@@ -23,35 +23,35 @@ export default function ProductCatalog() {
             </div>
           </div>
 
-          <div className=" flex flex-col sm:space-y-6 lg:space-y-0 lg:flex-row justify-between">
-            <p className="text-secondary-foreground text-base  lg:text-start lg:text-xl w-[100%] lg:w-[50%] font-tthoves">
-              Discover the exciting products we’ve been developing—each designed
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+            <p className="text-secondary-foreground text-base lg:text-xl w-full md:w-[50%] font-tthoves mb-4 md:mb-0">
+              Discover the exciting products we've been developing—each designed
               to push the boundaries of robotics.
             </p>
+            
+            {/* Desktop/Tablet button */}
             <Link
               href="/products"
-              className="bg-[#602CF7] flex space-x-3 items-center px-6 rounded-full"
+              className="hidden md:inline-flex bg-[#602CF7] items-center space-x-3 px-6 py-2 rounded-full"
             >
-              <div className="font-tthoves-semiBold text-[#FAF9FE] font-md">
+              <span className="font-tthoves-semiBold text-[#FAF9FE] font-md">
                 View all products
-              </div>
-              <div>
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1.16699 7.00008H12.8337M12.8337 7.00008L7.00033 1.16675M12.8337 7.00008L7.00033 12.8334"
-                    stroke="#FAF9FE"
-                    stroke-width="1.66667"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
+              </span>
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.16699 7.00008H12.8337M12.8337 7.00008L7.00033 1.16675M12.8337 7.00008L7.00033 12.8334"
+                  stroke="#FAF9FE"
+                  strokeWidth="1.66667"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
             </Link>
           </div>
         </div>

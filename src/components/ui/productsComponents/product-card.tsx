@@ -47,7 +47,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         {product.description.substring(0, 50) + "..."}
       </p>
 
-      <Link href={product.link} className="text-blue-700 text-sm sm:hidden font-tthoves-semiBold">
+      <Link href={product.link} className="text-[#4A1FCC] text-sm sm:hidden font-tthoves-semiBold">
         Learn more {"->"}
       </Link>
     </div>

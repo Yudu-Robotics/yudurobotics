@@ -120,11 +120,11 @@ export default function ProductCategories() {
         onAgeGroupChange={handleAgeGroupChange}
       /> */}
       <div className="flex flex-col space-y-2 lg:flex-row">
-        <div className="flex flex-col space-y-2 lg:space-y-6 w-[100%] lg:w-[30%] font-tthoves-semiBold">
+        <div className="flex flex-col space-y-2 lg:space-y-6 w-[100%] md:w-[35%] lg:w-[40%] font-tthoves-semiBold">
           <h2 className="text-primary font-tthoves-semiBold text-md lg:text-start">
             Product Categories
           </h2>
-          <div className="flex flex-col space-y-3 lg:ml-4 items-center ">
+          <div className="flex flex-col space-y-3 lg:ml-0 xl:ml-4 items-center ">
             {product_categories.map((category: string, key: number) => (
               <div
                 key={key}
@@ -212,6 +212,31 @@ export default function ProductCategories() {
             New Products Coming Soon...
           </div>
         )}
+        {<Link
+              href="/products"
+              className="flex items-center justify-center space-x-3 block md:hidden pt-6"
+            >
+              <div className="font-tthoves-semiBold text-[#4A1FCC] font-md">
+                View all products
+              </div>
+              <div>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.16699 7.00008H12.8337M12.8337 7.00008L7.00033 1.16675M12.8337 7.00008L7.00033 12.8334"
+                    stroke="#4A1FCC"
+                    stroke-width="1.66667"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </Link>}
       </div>
     </div>
   );

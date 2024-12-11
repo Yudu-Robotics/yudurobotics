@@ -18,7 +18,7 @@ const ProductGrid: React.FC<{
   selectedProduct: number;
 }> = ({ products, handleProductClick, selectedProduct }) => {
   return (
-    <div className="container w-[100%] lg:ml-10 lg:px-24">
+    <div className="container w-[100%] lg:ml-4 lg:px-4">
       <div className="hidden sm:grid grid-cols-1 md:grid-cols-2 gap-8">
         {products.map((product, index) => (
           <ProductCard

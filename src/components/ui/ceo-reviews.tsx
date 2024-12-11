@@ -8,11 +8,11 @@ const CeoReviewsContainer: React.FC<CeoProps> = ({ data }) => {
   return (
     <div className="w-full relative">
       <div>
-        <img src={renderImg("star1")} className="" />
+        <img alt="" src={renderImg("star1")} className="" />
       </div>
       <div className="flex flex-col items-center space-y-6">
         <div className="flex items-center">
-          <img src={renderImg("blurStar")} className="" />
+          <img alt="" src={renderImg("blurStar")} className="" />
           <div className="text-3xl font-serif">PictelAI</div>
         </div>
 
@@ -39,13 +39,13 @@ const CeoReviewsContainer: React.FC<CeoProps> = ({ data }) => {
         </p>
       </div>
       <div className="lg:flex justify-end lg:-mt-16 lg:px-10 hidden relative ">
-        <img src={renderImg("star2")} className="" />
+        <img alt="" src={renderImg("star2")} className="" />
         <div className=" absolute right-0  -top-9 ">
-          <img src={renderImg("star1")} className=" w-10 " />
+          <img alt="" src={renderImg("star1")} className=" w-10 " />
         </div>
       </div>
-      <div className="hidden 2xl:block absolute xl:-translate-y-40 -left-28">
-        <img src={renderImg("curv")} className="" />
+      <div className="hidden md:block absolute md:-translate-y-60 xl:-translate-y-40 -left-28">
+        <img alt="" src={renderImg("curv")} className="" />
       </div>
     </div>
   );
