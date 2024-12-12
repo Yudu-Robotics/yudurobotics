@@ -9,15 +9,16 @@ export default function ProductCatalog() {
             Product Catalog
           </h2>
           <div className="flex justify-between ">
-            <div className="w-[100%] lg:w-[40%] lg:text-start font-piepie text-3xl lg:text-6xl tracking-wide">
+            <div className="w-full  lg:w-[40%] lg:text-start font-piepie text-3xl lg:text-6xl tracking-wide">
               <span className="">See what</span>{" "}
               <span className=" text-primary">we</span>{" "}
               <span className="">have</span>{" "}
               <span className="text-primary">been</span>{" "}
               <span className="text-primary">cooking</span>
             </div>
-            <div className=" -translate-y-40 -translate-x-36 -mb-40">
-              <img src={renderImg("zigzaginhome")} className="" />
+            {/* update in zigzag */}
+            <div className=" -translate-x-30 -translate-y-40">
+              <img src={renderImg("zigzaginhome")} className="width:61.68px" />
             </div>
           </div>
 

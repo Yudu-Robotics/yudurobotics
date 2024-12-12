@@ -121,9 +121,9 @@ export default function ProductCategories() {
       /> */}
       <div className="flex flex-col space-y-2 lg:flex-row">
         <div className="flex flex-col space-y-2 lg:space-y-6 w-[100%] md:w-[35%] lg:w-[40%] font-tthoves-semiBold">
-          <h2 className="text-primary font-tthoves-semiBold text-md lg:text-start">
+          <h6 className="text-primary font-tthoves-semiBold text-xs lg:text-start">
             Product Categories
-          </h2>
+          </h6>
           <div className="flex flex-col space-y-3 lg:ml-0 xl:ml-4 items-center ">
             {product_categories.map((category: string, key: number) => (
               <div
