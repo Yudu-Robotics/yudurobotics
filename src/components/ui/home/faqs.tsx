@@ -28,7 +28,7 @@ const FAQs = ({ product }: { product: string }) => {
         {filteredFAQs.map((item, index) => (
           <div
             key={index}
-            className="border-b border-secondary-foreground py-6"
+            className="border-b border-[#E3E3E4] py-6"
           >
             <button
               onClick={() => toggleFAQ(index)}

@@ -147,7 +147,7 @@ export default function ProductCategories() {
         </div>
         {limitedProducts.length > 0 && (
           <>
-            <div className="flex flex-col">
+            <div className="flex flex-col ">
               <div className="container">
                 {limitedProducts.length > 0 && (
                   <ProductGrid
