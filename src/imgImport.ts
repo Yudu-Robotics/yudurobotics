@@ -112,6 +112,7 @@ const playstore = "assets/plode/playstore.png";
 
 //Not Found
 const notFound = "assets/notFound.png";
+const playtrons = "assets/playtrons.png";
 
 //footer
 const madeInIndia = "assets/madeInIndia.svg";

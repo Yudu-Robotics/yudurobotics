@@ -77,6 +77,8 @@ const logoYudoRobo = (
   </svg>
 );
 
+
+
 const userFriendly = (
   <svg
     width="52"
@@ -3023,6 +3025,7 @@ function renderSvg(svgName: string) {
 
     case "bottomSectionForNotFound":
       return bottomSectionForNotFound;
+
   }
 }
 

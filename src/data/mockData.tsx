@@ -153,60 +153,60 @@ export const products = [
     name: "TED",
     description:
       "TED is your all-in-one buddy, packed and ready to jump into action whenever you are.",
-    image: "assets/products/ted.svg",
+    image: "assets/roboki/Ted8.svg",
     category: "Micro-controller",
     type: "Hardware",
-    ageGroup: "Age 12+",
+    ageGroup: "Age 8+",
     link: "/peecee",
   },
   {
     name: "AI-1",
     description:
       "An intelligent camera powered by AI for dynamic object detection, tracking, and insights.",
-    image: "assets/products/ai.svg",
+    image: "assets/roboki/AI-I-8.svg",
     category: "Micro-controller",
     type: "Hardware",
-    ageGroup: "Age 12+",
+    ageGroup: "Age 8+",
     link: "",
   },
   {
     name: "Roboki",
     description:
       "A durable and upgradable kit packed with everything you need to build, learn and explore robotics.",
-    image: "assets/products/roboki.svg",
+    image: "assets/roboki/roboki8.svg",
     category: "Micro-controller",
     type: "Hardware",
-    ageGroup: "Age 12+",
+    ageGroup: "Age 8+",
     link: "/roboki",
   },
   {
     name: "Toki",
     description:
       "Affordable alternative to Arduino, offering superior customization options and advanced capabilities to unleash your creativity.",
-    image: "assets/products/toki.svg",
+    image: "assets/roboki/Toki8.svg",
     category: "Micro-controller",
     type: "Hardware",
-    ageGroup: "Age 12+",
+    ageGroup: "Age 8+",
     link: "",
   },
   {
     name: "Plode",
     description:
       "The one-stop-shop to interact with your devices and learn more about robotics and logic.",
-    image: "assets/products/plode.svg",
+    image: "assets/roboki/Plode0.svg",
     category: "",
     type: "Software",
-    ageGroup: "Age 12+",
+    ageGroup: "Age 5-8, Age 9-12, Age 12+",
     link: "",
   },
   {
     name: "Play Trons",
     description:
       "Big Ideas for Little Hands ! This beginner-friendly kit introduces kids to electronics with plug-and-play modules for endless creative projects.",
-    image: "assets/zing/ProductImage1.svg",
+    image: "assets/roboki/Playtrons6.svg",
     category: "Toys",
     type: "Hardware",
-    ageGroup: "Age 9-12",
+    ageGroup: "Age 6+",
     link: "",
   },
   {
@@ -223,17 +223,17 @@ export const products = [
     name: "Tinker Bunker",
     description:
       "Experience hands-on learning with engaging courses and projects that inspire creativity and innovation.",
-    image: "assets/products/tinker-bunker.svg",
+    image: "assets/roboki/TinkerBunker0.svg",
     category: "",
     type: "Curriculum",
-    ageGroup: "Age 12+",
+    ageGroup: "Age 5-8, Age 9-12, Age 12+",
     link: "",
   },
   {
     name: "Firepen 3D",
     description:
       "High-precision 3D printer for creative, customizable, and rapid prototyping solutions.",
-    image: "assets/zing/ProductImage3.svg",
+    image: "assets/zing/Firepen3d.svg",
     category: "",
     type: "Hardware",
     ageGroup: "Age 12+",
@@ -243,10 +243,10 @@ export const products = [
     name: "Play Dynamex",
     description:
       "Colorful plastic blocks inspiring creativity, imagination, and hands-on building fun.",
-    image: "assets/zing/ProductImage4.svg",
+    image: "assets/products/Playdynamics1.svg",
     category: "Toys",
     type: "Hardware",
-    ageGroup: "Age 5-8",
+    ageGroup: "Age 8+",
     link: "",
   },
   {
@@ -263,12 +263,22 @@ export const products = [
     name: "Klaw-b",
     description:
       "A versatile robotic arm with a built-in gripper, perfect for hands-on learning and creative projects.",
-    image: "assets/zing/klaw-b.svg",
+    image: "assets/roboki/Klaw-b10.svg",
     category: "Animatronics",
     type: "Hardware",
-    ageGroup: "Age 12+",
+    ageGroup: "Age 10+",
     link: "/klaw_b",
   },
+  // {
+  //   name: "Playtrons-b",
+  //   description:
+  //     "A versatile robotic arm with a built-in gripper, perfect for hands-on learning and creative projects.",
+  //   image: "assets/zing/ProductImage1.svg",
+  //   category: "Animatronics",
+  //   type: "Hardware",
+  //   ageGroup: "Age 12+",
+  //   link: "/klaw_b",
+  // },
 ];
 
 export const mockData: { [key: string]: ProductData } = {
@@ -909,7 +919,7 @@ export const mockData: { [key: string]: ProductData } = {
     ceoPosition: "Co-Founder",
     companyName: "Think Pro Academy",
     subheading:
-      "A 38 cm marvel with 17 degrees of freedom, crafted for endless exploration and creativity.",
+      "A 30 cm marvel with 17 degrees of freedom, crafted for endless exploration and creativity.",
     images: ["assets/zing/zing.png", "assets/zing/zinghardware1.png"],
     sectionHeader: "sideHeaderSection",
     ceoComment:
@@ -1472,6 +1482,7 @@ export const mockData: { [key: string]: ProductData } = {
       },
     ],
   },
+  
 
   plode: {
     heading: "Plode: The Playful Coding Platform",

@@ -42,11 +42,11 @@ const SoftwareAdaptive: React.FC<SoftwareAdaptiveProps> = ({ data, image }) => {
       </div>
 
       <div className="w-full flex flex-col justify-between gap-8 md:flex-row md:gap-4 lg:gap-6 xl:gap-8 2xl:gap-10">
-        <div className="w-full sm:w-1/2 sm:p-6 md:p-8 lg:p-10 xl:p-12">
+        <div className="w-full sm:w-1/2 p-4 md:p-8 lg:p-10 xl:p-12">
           <img
             src={renderImg(image || "monitorAndPhone")}
             alt=""
-            className="w-full"
+            className="w-full h-auto"
           />
         </div>
         <div className="w-full lg:w-3/4 xl:w-1/2 flex flex-col gap-4 lg:gap-6 xl:gap-8 justify-center">

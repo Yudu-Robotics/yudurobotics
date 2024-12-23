@@ -24,22 +24,20 @@ const AllProductsComponent = () => {
 
   const initialAgeGroups = [
     { name: "Age 5-8", active: false },
-    { name: "9-12", active: false },
-    { name: "12+", active: false },
+    { name: "Age 9-12", active: false },
+    { name: "Age 12+", active: false },
   ];
-
-  const productCategories = ["Product Category", "Micro-controller", "Animatronics", "Toys"];
 
   const [filters, setFilters] = useState(initialFilters);
   const [ageGroups, setAgeGroups] = useState(initialAgeGroups);
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState<string>("Product Category");
+  const [selectedCategory, setSelectedCategory] = useState<string>("");
 
   // Handle filter change
   const handleFilterChange = (index: number) => {
     const updatedFilters = filters.map((filter, i) => ({
       ...filter,
-      active: i === index ? !filter.active : false,
+      active: i === index ? !filter.active : filter.active,
     }));
     setFilters(updatedFilters);
   };
@@ -48,7 +46,7 @@ const AllProductsComponent = () => {
   const handleAgeGroupChange = (index: number) => {
     const updatedAgeGroups = ageGroups.map((age, i) => ({
       ...age,
-      active: i === index ? !age.active : false,
+      active: i === index ? !age.active : age.active,
     }));
     setAgeGroups(updatedAgeGroups);
   };
@@ -58,98 +56,139 @@ const AllProductsComponent = () => {
     setSearchTerm(e.target.value.toLowerCase());
   };
 
-  // Handle category selection
+  // Handle category change
   const handleCategoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedCategory(e.target.value);
   };
 
-  // Get the active filter (type)
+  // Get active filter (type) and age group
   const activeFilter = filters.find((filter) => filter.active)?.name;
-
-  // Get the active age group
   const activeAgeGroup = ageGroups.find((ageGroup) => ageGroup.active)?.name;
 
-  // Filter products based on the selected type, age group, and search term
+  // Filter products based on type, age group, category, and search term
   const filteredProducts = products.filter(
     (product) =>
       (!activeFilter || product.type === activeFilter) &&
       (!activeAgeGroup || product.ageGroup === activeAgeGroup) &&
-      (!searchTerm || product.name.toLowerCase().includes(searchTerm)) &&
-      (selectedCategory === "Product Category" || product.category === selectedCategory)
+      (!selectedCategory || product.category === selectedCategory) &&
+      (!searchTerm || product.name.toLowerCase().includes(searchTerm))
+  );
+
+  // Separate products by type for displaying categories
+  const hardwareProducts = filteredProducts.filter(
+    (product) => product.type === "Hardware"
+  );
+  const softwareProducts = filteredProducts.filter(
+    (product) => product.type === "Software"
+  );
+  const curriculumProducts = filteredProducts.filter(
+    (product) => product.type === "Curriculum"
   );
 
   return (
     <div className="container mx-auto p-4">
       {/* Search and Filter Bar */}
-      <div className="flex flex-wrap items-center gap-4 mb-8 border-b pb-4">
-        {/* Filters Grouped Inside Oval */}
-        <div className="flex items-center px-2 py-1 rounded-full border border-gray-300 gap-1">
-          {initialFilters.map((filter, index) => (
+      <div className="flex flex-wrap items-center gap-4 mb-8 pb-4">
+        {/* Filters */}
+        <div className="flex items-center border border-gray-300 rounded-full px-2 py-1">
+          {filters.map((filter, index) => (
             <React.Fragment key={index}>
               <button
-                className={`px-2 py-1 ${filters[index].active ? "text-purple-500 font-bold" : "text-gray-700"} bg-transparent focus:outline-none`}
+                className={`px-2 py-1 text-gray-700 ${
+                  filter.active ? "font-bold text-purple-600" : "font-normal"
+                }`}
                 onClick={() => handleFilterChange(index)}
               >
                 {filter.name}
               </button>
-              {index < initialFilters.length - 1 && <span className="text-gray-400  ">|</span>} {/* Separator */}
+              {index < filters.length - 1 && (
+                <span className="border-l border-gray-300 h-10 mx-3" />
+              )}
             </React.Fragment>
           ))}
         </div>
 
-        {/* Age Groups Grouped Inside Oval */}
-        <div className="flex items-center px-2 py-1 rounded-full border border-gray-300 gap-1">
-          {initialAgeGroups.map((ageGroup, index) => (
+        {/* Age Groups */}
+        <div className="flex items-center border border-gray-300 rounded-full px-2 py-1">
+          {ageGroups.map((ageGroup, index) => (
             <React.Fragment key={index}>
               <button
-                className={`px-2 py-1 ${ageGroups[index].active ? "text-purple-500 font-bold" : "text-gray-700"} bg-transparent focus:outline-none`}
+                className={`px-2 py-1 text-gray-700 ${
+                  ageGroup.active ? "font-bold text-purple-600" : "font-small"
+                }`}
                 onClick={() => handleAgeGroupChange(index)}
               >
                 {ageGroup.name}
               </button>
-              {index < initialAgeGroups.length - 1 && <span className="text-gray-400">|</span>} {/* Separator */}
+              {index < ageGroups.length - 1 && (
+                <span className="border-l border-gray-300 h-10 mx-2" />
+              )}
             </React.Fragment>
           ))}
         </div>
 
         {/* Product Category Dropdown */}
         <select
-          className="px-4 py-2  text-gray-700 flex items-center rounded-full border border-gray-300 gap-4"
+          className="bg-white text-gray-700 border border-gray-300 rounded-full px-4 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
           value={selectedCategory}
           onChange={handleCategoryChange}
         >
-          {productCategories.map((category, index) => (
-            <option key={index} value={category}>
-              {category}
-            </option>
-          ))}
+          <option value="">Product Category</option>
+          <option value="Category 1">Category 1</option>
+          <option value="Category 2">Category 2</option>
+          <option value="Category 3">Category 3</option>
         </select>
 
         {/* Search Bar */}
         <input
           type="text"
-          className="flex-grow px-4 py-2  text-gray-700 placeholder-gray-400 focus:outline-none  items-center  rounded-full border border-gray-300 gap-1"
+          className="flex-grow px-2 py-1 border border-gray-300 rounded-full"
           placeholder="Search"
           value={searchTerm}
           onChange={handleSearchChange}
         />
       </div>
 
-      {/* Product Display */}
-      <div>
-        <CustomHeading title="Filtered Products" />
+      {/* Hardware Products */}
+      <div className="mb-8">
+        <CustomHeading title="Hardware" />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {filteredProducts.length > 0 ? (
-            filteredProducts.map((product, index) => (
-              <Link href={product.link || "#"} key={index}>
-                <ProductCard product={product} />
-              </Link>
-            ))
-          ) : (
-            <div className="text-center text-gray-500">No products found</div>
-          )}
+          {hardwareProducts.map((product) => (
+            <Link href={product.link || "#"} key={product.name}>
+              <ProductCard product={product} />
+            </Link>
+          ))}
         </div>
       </div>
+
+      {/* Software Products */}
+      <div className="mb-8">
+        <CustomHeading title="Software" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {softwareProducts.map((product) => (
+            <Link href={product.link || "#"} key={product.name}>
+              <ProductCard product={product} />
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* Curriculum Products */}
+      <div className="mb-8">
+        <CustomHeading title="Curriculum" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {curriculumProducts.map((product) => (
+            <Link href={product.link || "#"} key={product.name}>
+              <ProductCard product={product} />
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* No Products Found */}
+      {filteredProducts.length === 0 && (
+        <div className="text-center text-gray-500">No products found</div>
+      )}
     </div>
   );
 };
