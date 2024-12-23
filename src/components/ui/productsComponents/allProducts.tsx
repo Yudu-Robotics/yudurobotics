@@ -134,10 +134,10 @@ const AllProductsComponent = () => {
           onChange={handleCategoryChange}
         >
           <option value="">Product Category</option>
-          <option value="Micro-controller ">Micro-controller </option>                    //Micro-controller Electronics Animatronics
-          <option value="Electronics ">Electronics </option>                 //Curriculum  Toys
+          <option value="Micro-controller">Micro-controller</option>
+          <option value="Electronics">Electronics</option>
           <option value="Animatronics">Animatronics</option>
-          <option value="Curriculum ">Curriculum </option>
+          <option value="Curriculum">Curriculum</option>
           <option value="Toys">Toys</option>
         </select>
 
