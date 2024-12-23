@@ -88,13 +88,13 @@ const AllProductsComponent = () => {
   return (
     <div className="container mx-auto p-4">
       {/* Search and Filter Bar */}
-      <div className="flex flex-wrap items-center gap-4 mb-8 pb-4">
+      <div className="flex flex-wrap items-center gap-8 mb-8 pb-6">
         {/* Filters */}
-        <div className="flex items-center border border-gray-300 rounded-full px-2 py-1">
+        <div className="flex items-center border border-gray-300 rounded-full px-1 py-0.5 ml-4 mr-4">
           {filters.map((filter, index) => (
             <React.Fragment key={index}>
               <button
-                className={`px-2 py-1 text-gray-700 ${
+                className={`text-sm px-1.5 py-1 text-gray-700 ${
                   filter.active ? "font-bold text-purple-600" : "font-normal"
                 }`}
                 onClick={() => handleFilterChange(index)}
@@ -102,18 +102,18 @@ const AllProductsComponent = () => {
                 {filter.name}
               </button>
               {index < filters.length - 1 && (
-                <span className="border-l border-gray-300 h-10 mx-3" />
+                <span className="border-l border-gray-500 h-10 mx-3" />
               )}
             </React.Fragment>
           ))}
         </div>
 
         {/* Age Groups */}
-        <div className="flex items-center border border-gray-300 rounded-full px-2 py-1">
+        <div className="flex items-center border border-gray-300 rounded-full px-1 py-0.5 ml-4 mr-4">
           {ageGroups.map((ageGroup, index) => (
             <React.Fragment key={index}>
               <button
-                className={`px-2 py-1 text-gray-700 ${
+                className={`text-sm px-1.5 py-1 text-gray-700 ${
                   ageGroup.active ? "font-bold text-purple-600" : "font-small"
                 }`}
                 onClick={() => handleAgeGroupChange(index)}
@@ -121,7 +121,7 @@ const AllProductsComponent = () => {
                 {ageGroup.name}
               </button>
               {index < ageGroups.length - 1 && (
-                <span className="border-l border-gray-300 h-10 mx-2" />
+                <span className="border-l border-gray-500 h-10 mx-3" />
               )}
             </React.Fragment>
           ))}
@@ -129,20 +129,22 @@ const AllProductsComponent = () => {
 
         {/* Product Category Dropdown */}
         <select
-          className="bg-white text-gray-700 border border-gray-300 rounded-full px-4 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
+          className="bg-white text-gray-700 border border-gray-300 rounded-full px-3.5 py-2 shadow-sm focus:outline-none focus:ring-1 focus:ring-purple-200 ml-5 mr-8 w-64"
           value={selectedCategory}
           onChange={handleCategoryChange}
         >
           <option value="">Product Category</option>
-          <option value="Category 1">Category 1</option>
-          <option value="Category 2">Category 2</option>
-          <option value="Category 3">Category 3</option>
+          <option value="Micro-controller ">Micro-controller </option>                    //Micro-controller Electronics Animatronics
+          <option value="Electronics ">Electronics </option>                 //Curriculum  Toys
+          <option value="Animatronics">Animatronics</option>
+          <option value="Curriculum ">Curriculum </option>
+          <option value="Toys">Toys</option>
         </select>
 
         {/* Search Bar */}
         <input
           type="text"
-          className="flex-grow px-2 py-1 border border-gray-300 rounded-full"
+          className="w-64 px-4 py-1.5 border border-gray-300 rounded-full ml-8 text-black"
           placeholder="Search"
           value={searchTerm}
           onChange={handleSearchChange}

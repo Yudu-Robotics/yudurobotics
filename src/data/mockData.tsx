@@ -156,7 +156,7 @@ export const products = [
     image: "assets/roboki/Ted8.svg",
     category: "Micro-controller",
     type: "Hardware",
-    ageGroup: "Age 8+",
+    ageGroup: "Age 9-12",
     link: "/peecee",
   },
   {
@@ -166,7 +166,7 @@ export const products = [
     image: "assets/roboki/AI-I-8.svg",
     category: "Micro-controller",
     type: "Hardware",
-    ageGroup: "Age 8+",
+    ageGroup: "Age 9-12",
     link: "",
   },
   {
@@ -176,7 +176,7 @@ export const products = [
     image: "assets/roboki/roboki8.svg",
     category: "Micro-controller",
     type: "Hardware",
-    ageGroup: "Age 8+",
+    ageGroup: "Age 9-12",
     link: "/roboki",
   },
   {
@@ -186,7 +186,7 @@ export const products = [
     image: "assets/roboki/Toki8.svg",
     category: "Micro-controller",
     type: "Hardware",
-    ageGroup: "Age 8+",
+    ageGroup: "Age 9-12",
     link: "",
   },
   {
@@ -194,9 +194,9 @@ export const products = [
     description:
       "The one-stop-shop to interact with your devices and learn more about robotics and logic.",
     image: "assets/roboki/Plode0.svg",
-    category: "",
+    category: "Micro-controller",
     type: "Software",
-    ageGroup: "Age 5-8, Age 9-12, Age 12+",
+    ageGroup: "Age 12+",
     link: "",
   },
   {
@@ -204,9 +204,9 @@ export const products = [
     description:
       "Big Ideas for Little Hands ! This beginner-friendly kit introduces kids to electronics with plug-and-play modules for endless creative projects.",
     image: "assets/roboki/Playtrons6.svg",
-    category: "Toys",
+    category: "Electronics",                                                                              
     type: "Hardware",
-    ageGroup: "Age 6+",
+    ageGroup: "Age 5-8",
     link: "",
   },
   {
@@ -219,14 +219,15 @@ export const products = [
     ageGroup: "Age 12+",
     link: "/zing",
   },
+  
   {
     name: "Tinker Bunker",
     description:
       "Experience hands-on learning with engaging courses and projects that inspire creativity and innovation.",
     image: "assets/roboki/TinkerBunker0.svg",
-    category: "",
+    category: "Curriculum",
     type: "Curriculum",
-    ageGroup: "Age 5-8, Age 9-12, Age 12+",
+    ageGroup: "Age 12+",
     link: "",
   },
   {
@@ -234,7 +235,7 @@ export const products = [
     description:
       "High-precision 3D printer for creative, customizable, and rapid prototyping solutions.",
     image: "assets/zing/Firepen3d.svg",
-    category: "",
+    category: "Micro-controller",
     type: "Hardware",
     ageGroup: "Age 12+",
     link: "",
@@ -246,7 +247,7 @@ export const products = [
     image: "assets/products/Playdynamics1.svg",
     category: "Toys",
     type: "Hardware",
-    ageGroup: "Age 8+",
+    ageGroup: "Age 9-12",
     link: "",
   },
   {
@@ -259,6 +260,16 @@ export const products = [
     ageGroup: "Age 12+",
     link: "/crawl_e",
   },
+  // {
+  //   name: "Klaw-b",
+  //   description:
+  //     "A versatile robotic arm with a built-in gripper, perfect for hands-on learning and creative projects.",
+  //   image: "assets/roboki/Klaw-b10.svg",
+  //   category: "Animatronics",
+  //   type: "Hardware",
+  //   ageGroup: "Age 9-12",
+  //   link: "/klaw_b",
+  // },
   {
     name: "Klaw-b",
     description:
@@ -266,7 +277,7 @@ export const products = [
     image: "assets/roboki/Klaw-b10.svg",
     category: "Animatronics",
     type: "Hardware",
-    ageGroup: "Age 10+",
+    ageGroup: "Age 12+",
     link: "/klaw_b",
   },
   // {

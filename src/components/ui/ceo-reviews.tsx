@@ -12,8 +12,8 @@ const CeoReviewsContainer: React.FC<CeoProps> = ({ data }) => {
       </div>
       <div className="flex flex-col items-center space-y-6">
         <div className="flex items-center">
-          <img alt="" src={renderImg("blurStar")} className="" />
-          <div className="text-3xl font-serif">PictelAI</div>
+          
+          
         </div>
 
         <div className="flex items-center">
