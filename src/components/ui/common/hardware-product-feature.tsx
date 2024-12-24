@@ -48,7 +48,7 @@ const HardwareProductFeatures: React.FC<{ hardware: HardwareData }> = ({
 
   return (
     <div>
-      <div className="flex flex-col justify-center space-y-2 items-center text-center">
+      <div className="flex flex-col justify-center space-y-2 items-center text-center mt-40">
         <h1 className="text-primary text-lg  xl:text-lg text-left sm:text-center w-full font-tthoves-semiBold text-[#CCBD1F]">
           Hardware
         </h1>

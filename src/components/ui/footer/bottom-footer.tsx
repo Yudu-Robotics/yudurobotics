@@ -35,17 +35,17 @@ const footerData = [
       { name: "", href: "#" },
     ],
   },
-  {
-    title: "Company",
-    links: [
-      { name: "About us", href: "#" },
-      { name: "Careers", href: "#" },
-      // { name: "Press", href: "#" },
-      // { name: "News", href: "#" },
-      // { name: "Media kit", href: "#" },
-      { name: "Contact", href: "#" },
-    ],
-  },
+  // {
+  //   title: "Company",
+  //   links: [
+  //     { name: "About us", href: "#" },
+  //     { name: "Careers", href: "#" },
+  //     // { name: "Press", href: "#" },
+  //     // { name: "News", href: "#" },
+  //     // { name: "Media kit", href: "#" },
+  //     { name: "Contact", href: "#" },
+  //   ],
+  // },
   // {
   //   title: "Resources",
   //   links: [
@@ -71,9 +71,9 @@ const footerData = [
   {
     title: "Social",
     links: [
-      { name: "Twitter", href: "#" },
-      { name: "LinkedIn", href: "#" },
-      { name: "Facebook", href: "#" },
+      { name: "Twitter", href: "https://twitter.com/YuduRobotics/" },
+      { name: "LinkedIn", href: "https://www.linkedin.com/showcase/yudu-robotics/" },
+      { name: "youtube", href: "https://www.youtube.com/@YuduRobotics" },
       // { name: "GitHub", href: "#" },
       // { name: "AngelList", href: "#" },
       // { name: "Dribbble", href: "#" },
@@ -95,7 +95,7 @@ export default function BottomFooter() {
   return (
     <footer className="py-6 font-tthoves">
       <div className="">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 itme-center">
           {footerData.map((section, index) => (
             <div key={index}>
               <h4 className="font-tthoves-medium opacity-70 mb-4 text-lg sm:text-lg md:text-md lg:text-lg xl:text-xl">
@@ -111,14 +111,16 @@ export default function BottomFooter() {
                       >
                         {link.name}
                       </button>
-                    ) : (
+                     ) :
+                      (
                       <a
                         href={link.href}
                         className="text-primary-foreground transition-colors duration-200 text-sm lg:text-lg font-tthoves-medium"
                       >
                         {link.name}
                       </a>
-                    )}
+                    )
+                    }
                   </li>
                 ))}
               </ul>

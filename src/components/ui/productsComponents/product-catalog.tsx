@@ -18,7 +18,7 @@ export default function ProductCatalog() {
             </div>
             {/* update in zigzag */}
             <div className=" -translate-x-30 -translate-y-40">
-              <img src={renderImg("zigzaginhome")} className="width:61.68px" />
+              <img src={renderImg("zigzaginhome")} className="width:6168px." />
             </div>
           </div>
 

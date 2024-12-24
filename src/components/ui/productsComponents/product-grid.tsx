@@ -18,8 +18,8 @@ const ProductGrid: React.FC<{
   selectedProduct: number;
 }> = ({ products, handleProductClick, selectedProduct }) => {
   return (
-    <div className="container w-[100%] lg:ml-4 lg:px-4">
-      <div className="hidden sm:grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="flex flex-col space-y-8">
+      <div className="hidden sm:grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 xl:gap-10 mr-8 md:mr-12 lg:mr-16">
         {products.map((product, index) => (
           <ProductCard
             key={index}
@@ -29,7 +29,7 @@ const ProductGrid: React.FC<{
           />
         ))}
       </div>
-      <div className="sm:hidden grid grid-cols-1 md:grid-cols-2 gap-8 ">
+      <div className="sm:hidden grid grid-cols-1 gap-[var(--spacing-xl)] ml-8 md:ml-12 lg:ml-16">
         {products.map((product, index) => (
           <ProductCard
             key={index}

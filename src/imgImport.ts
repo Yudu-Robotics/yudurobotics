@@ -9,6 +9,7 @@ const klawbm = "assets/klawb/klawbm.png";
 const playroboki = "assets/roboki/playroboki.png";
 // klawb
 const playklawb = "assets/klawb/playklawb.png";
+const arrowdown = "assets/klawb/Hand-drawn.svg";
 // crawle
 const playcrawle = "assets/crawle/playcrawle.png";
 
@@ -127,6 +128,9 @@ function renderImg(imgName: string) {
 
     case "favicon":
       return favicon;
+
+    // case "arrowdown":
+    //   return arrowdown;
 
     case "headerSection":
       return headerSection;
@@ -317,6 +321,9 @@ function renderImg(imgName: string) {
     // Klawb
     case "playklawb":
       return playklawb;
+
+    case "arrowdown":
+      return arrowdown;  
 
     //Mobile images
 

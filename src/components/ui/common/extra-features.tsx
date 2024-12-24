@@ -94,6 +94,13 @@ const ExtraFeatures: React.FC<{
                 }}
               />
             )}
+            {/* Arrow Image Below the Central Right Image */}
+            
+            <img src={renderImg("arrowdown")} 
+            alt="Arrow Image" 
+            className="absolute bottom-[-150px] right-[10px] w-25 h-35 rotate-[45deg] translate-x-0 translate-y-0 filter brightness-20 md:right-[50px] lg:translate-x-[-40px]" />
+
+            
           </div>
         </div>
       </div>
