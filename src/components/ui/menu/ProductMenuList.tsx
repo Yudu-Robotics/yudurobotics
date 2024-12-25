@@ -26,7 +26,7 @@ const ProductMenuList: React.FC<ProductMenuListProps> = ({
         >
           Klaw-b
         </Link>
-        <div className="text-nowrap font-tthoves-medium">Micro-controller</div>
+        <div className="text-nowrap font-tthoves-medium">Codable Kits</div>
         <Link href="/some-link" className="block px-4 py-2 hover:bg-gray-200">
           Roboki
         </Link>

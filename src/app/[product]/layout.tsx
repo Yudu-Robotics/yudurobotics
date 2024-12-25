@@ -109,21 +109,21 @@ export default function ProductLayout({
                     <button
                       onClick={() =>
                         setOpenSubOption(
-                          openSubOption === "Micro-controllers"
+                          openSubOption === "Codable Kits"
                             ? null
-                            : "Micro-controllers"
+                            : "Codable Kits"
                         )
                       }
                       className="text-base font-tthoves-semiBold text-gray-700 transition-colors duration-300 ease-in-out hover:text-destructive"
                     >
-                      Micro-controllers
-                      {openSubOption === "Micro-controllers" ? (
+                      Codable Kits
+                      {openSubOption === "Codable Kits" ? (
                         <ExpandLessIcon className="ml-2" />
                       ) : (
                         <ExpandMoreIcon className="ml-2" />
                       )}
                     </button>
-                    {openSubOption === "Micro-controllers" && (
+                    {openSubOption === "Codable Kits" && (
                       <div className="flex flex-col space-y-2 ml-2">
                         <Link href="/roboki" className="text-gray-600">
                           Roboki

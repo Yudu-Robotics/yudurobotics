@@ -18,7 +18,7 @@ interface Products {
 }
 
 export default function ProductCategories() {
-  const product_categories = ["Micro-controller", "Animatronics", "Toys"];
+  const product_categories = ["Codable Kits", "Animatronics", "Mechanical"];
 
   const initialFilters = [
     { name: "Hardware", active: false },
@@ -44,7 +44,7 @@ export default function ProductCategories() {
 
   const [filters, setFilters] = useState(initialFilters);
   const [ageGroups, setAgeGroups] = useState(initialAgeGroups);
-  const [selectedCategory, setSelectedCategory] = useState<string | null>("Micro-controller");
+  const [selectedCategory, setSelectedCategory] = useState<string | null>("Codable Kits");
   const [productDetails, setProductDetails] = useState<Products>(
     initialProductDetails
   );
@@ -137,7 +137,7 @@ export default function ProductCategories() {
                 onClick={() => handleCategorySelection(category)}
               >
                 {category}
-                {category === "Toys" && (
+                {category === "Mechanical" && (
                   <div className="flex justify-center px-1 items-center text-[#067647] ">
                     <ProductTag title="New" color="green-500" />
                   </div>

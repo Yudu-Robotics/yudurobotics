@@ -154,7 +154,7 @@ export const products = [
     description:
       "TED is your all-in-one buddy, packed and ready to jump into action whenever you are.",
     image: "assets/roboki/Ted8.svg",
-    category: "Micro-controller",
+    category: "Codable Kits",
     type: "Hardware",
     ageGroup: "9-12",
     link: "/peecee",
@@ -164,7 +164,7 @@ export const products = [
     description:
       "An intelligent camera powered by AI for dynamic object detection, tracking, and insights.",
     image: "assets/roboki/AI-I-8.svg",
-    category: "Micro-controller",
+    category: "Codable Kits",
     type: "Hardware",
     ageGroup: "9-12",
     link: "",
@@ -174,7 +174,7 @@ export const products = [
     description:
       "A durable and upgradable kit packed with everything you need to build, learn and explore robotics.",
     image: "assets/roboki/roboki8.svg",
-    category: "Micro-controller",
+    category: "Codable Kits",
     type: "Hardware",
     ageGroup: "9-12",
     link: "/roboki",
@@ -184,7 +184,7 @@ export const products = [
     description:
       "Affordable alternative to Arduino, offering superior customization options and advanced capabilities to unleash your creativity.",
     image: "assets/roboki/Toki8.svg",
-    category: "Micro-controller",
+    category: "Codable Kits",
     type: "Hardware",
     ageGroup: "9-12",
     link: "",
@@ -194,7 +194,7 @@ export const products = [
     description:
       "The one-stop-shop to interact with your devices and learn more about robotics and logic.",
     image: "assets/roboki/Plode0.svg",
-    category: "Micro-controller",
+    category: "Codable Kits",
     type: "Software",
     ageGroup: "12+",
     link: "",
@@ -235,7 +235,7 @@ export const products = [
   //   description:
   //     "High-precision 3D printer for creative, customizable, and rapid prototyping solutions.",
   //   image: "assets/zing/Firepen3d.svg",
-  //   category: "Micro-controller",
+  //   category: "Codable Kits",
   //   type: "Hardware",
   //   ageGroup: "12+",
   //   link: "",
@@ -245,7 +245,7 @@ export const products = [
     description:
       "Colorful plastic blocks inspiring creativity, imagination, and hands-on building fun.",
     image: "assets/products/Playdynamics1.svg",
-    category: "Toys",
+    category: "Mechanical",
     type: "Hardware",
     ageGroup: "9-12",
     link: "",
