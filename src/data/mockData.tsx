@@ -156,7 +156,7 @@ export const products = [
     image: "assets/roboki/Ted8.svg",
     category: "Micro-controller",
     type: "Hardware",
-    ageGroup: "Age 9-12",
+    ageGroup: "9-12",
     link: "/peecee",
   },
   {
@@ -166,7 +166,7 @@ export const products = [
     image: "assets/roboki/AI-I-8.svg",
     category: "Micro-controller",
     type: "Hardware",
-    ageGroup: "Age 9-12",
+    ageGroup: "9-12",
     link: "",
   },
   {
@@ -176,7 +176,7 @@ export const products = [
     image: "assets/roboki/roboki8.svg",
     category: "Micro-controller",
     type: "Hardware",
-    ageGroup: "Age 9-12",
+    ageGroup: "9-12",
     link: "/roboki",
   },
   {
@@ -186,7 +186,7 @@ export const products = [
     image: "assets/roboki/Toki8.svg",
     category: "Micro-controller",
     type: "Hardware",
-    ageGroup: "Age 9-12",
+    ageGroup: "9-12",
     link: "",
   },
   {
@@ -196,7 +196,7 @@ export const products = [
     image: "assets/roboki/Plode0.svg",
     category: "Micro-controller",
     type: "Software",
-    ageGroup: "Age 12+",
+    ageGroup: "12+",
     link: "",
   },
   {
@@ -216,7 +216,7 @@ export const products = [
     image: "assets/zing/zing.svg",
     category: "Animatronics",
     type: "Hardware",
-    ageGroup: "Age 12+",
+    ageGroup: "12+",
     link: "/zing",
   },
   
@@ -227,7 +227,7 @@ export const products = [
     image: "assets/roboki/TinkerBunker0.svg",
     category: "Curriculum",
     type: "Curriculum",
-    ageGroup: "Age 12+",
+    ageGroup: "12+",
     link: "",
   },
   {
@@ -237,7 +237,7 @@ export const products = [
     image: "assets/zing/Firepen3d.svg",
     category: "Micro-controller",
     type: "Hardware",
-    ageGroup: "Age 12+",
+    ageGroup: "12+",
     link: "",
   },
   {
@@ -247,7 +247,7 @@ export const products = [
     image: "assets/products/Playdynamics1.svg",
     category: "Toys",
     type: "Hardware",
-    ageGroup: "Age 9-12",
+    ageGroup: "9-12",
     link: "",
   },
   {
@@ -257,7 +257,7 @@ export const products = [
     image: "assets/zing/cral-e.svg",
     category: "Animatronics",
     type: "Hardware",
-    ageGroup: "Age 12+",
+    ageGroup: "12+",
     link: "/crawl_e",
   },
   // {
@@ -277,7 +277,7 @@ export const products = [
     image: "assets/roboki/Klaw-b10.svg",
     category: "Animatronics",
     type: "Hardware",
-    ageGroup: "Age 12+",
+    ageGroup: "12+",
     link: "/klaw_b",
   },
   // {
@@ -1360,7 +1360,7 @@ export const mockData: { [key: string]: ProductData } = {
             icon: "dimension",
             heading: "Dimensions",
             description:
-              "Compact and efficient,Klaw-b measures [insert dimensions here] and offers a range of motion that suits various applications.",
+              "Compact and efficient,Klaw-b measures [Length: 24cm Width: 13cm Height: 34cm] and offers a range of motion that suits various applications.",
           },
           {
             icon: "flexibleControl",

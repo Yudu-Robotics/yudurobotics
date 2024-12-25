@@ -88,75 +88,73 @@ const AllProductsComponent = () => {
   return (
     <div className="container mx-auto p-4">
       {/* Search and Filter Bar */}
-      <div className="flex flex-wrap items-center gap-8 mb-8 pb-6">
-        {/* Filters */}
-        <div className="flex items-center gap-0 border border-gray-300 rounded-full px-1 py-0.5 ml-4 mr-4 w-[294px] h-[40px] opacity-100">
-          {filters.map((filter, index) => (
-            <React.Fragment key={index}>
-              <button
-                className={`text-sm px-1.5 py-1 text-gray-700 ${
-                  filter.active ? "font-bold text-purple-600" : "font-normal"
-                }`}
-                onClick={() => handleFilterChange(index)}
-              >
-                {filter.name}
-              </button>
-              {index < filters.length - 1 && (
-                <span className="border-l border-gray-500 h-10 mx-3" />
-              )}
-            </React.Fragment>
-          ))}
+      <div className="flex flex-col sm:flex-row md:flex-wrap lg:flex-wrap xl:flex items-center justify-between gap-4 mb-8 pb-6">
+        <div className="w-full sm:w-[48%] md:w-[48%] lg:w-[48%] xl:w-[19%]">
+          {/* Filters */}
+          <div className="flex items-center gap-0 border-t border-l rounded-[1rem] w-full h-[40px] opacity-100 border border-gray-300">
+            {filters.map((filter, index) => (
+              <React.Fragment key={index}>
+                <button
+                  className={`text-sm px-1.5 py-1 text-gray-700 ${filter.active ? "font-bold text-purple-600" : "font-normal"
+                    }`}
+                  onClick={() => handleFilterChange(index)}
+                >
+                  {filter.name}
+                </button>
+                {index < filters.length - 1 && (
+                  <span className="border-l border-gray-500 h-10 mx-3" />
+                )}
+              </React.Fragment>
+            ))}
+          </div>
         </div>
 
-        {/* Age Groups */}
-        <div className="flex items-center gap-0 border border-gray-300 rounded-full px-1.5 py-0.5 ml-4 mr-4 w-[197px] h-[40px] opacity-100">
-          {ageGroups.map((ageGroup, index) => (
-            <React.Fragment key={index}>
-              <button
-                className={`text-sm px-1.5 py-1 text-gray-700 whitespace-nowrap ${
-                  ageGroup.active ? "font-bold text-purple-600" : "font-small"
-                }`}
-                onClick={() => handleAgeGroupChange(index)}
-              >
-                {ageGroup.name}
-              </button>
-              {index < ageGroups.length - 1 && (
-                <span className="border-l border-gray-500 h-10 mx-3" />
-              )}
-            </React.Fragment>
-          ))}
+        <div className="w-full sm:w-[48%] md:w-[48%] lg:w-[48%] xl:w-[19%]">
+          {/* Age Groups */}
+          <div className="flex items-center gap-0 border-t border-l rounded-[1rem] w-full h-[40px] opacity-100 border border-gray-300">
+            {ageGroups.map((ageGroup, index) => (
+              <React.Fragment key={index}>
+                <button
+                  className={`text-sm px-1.5 py-1 text-gray-700 whitespace-nowrap ${ageGroup.active ? "font-bold text-purple-600" : "font-small"
+                    }`}
+                  onClick={() => handleAgeGroupChange(index)}
+                >
+                  {ageGroup.name}
+                </button>
+                {index < ageGroups.length - 1 && (
+                  <span className="border-l border-gray-500 h-10 mx-3" />
+                )}
+              </React.Fragment>
+            ))}
+          </div>
         </div>
 
-        {/* Product Category Dropdown */}
-        <select
-          className="bg-white text-gray-700 border border-gray-300 rounded-full px-3.5 py-2 shadow-sm focus:outline-none ml-5 mr-8 w-[314.5px] h-[40px] "
-          value={selectedCategory}
-          onChange={handleCategoryChange}
-        >
-          <option value="">Product Category</option>
-          <option value="Micro-controller">Codable</option>
-          <option value="Electronics">Electronics</option>
-          <option value="Animatronics">Animatronics</option>
-          <option value="Curriculum">Curriculum</option>
-          <option value="Toys">Robotics</option>
-        </select>
+        <div className="w-full sm:w-[48%] md:w-[48%] lg:w-[48%] xl:w-[19%]">
+          {/* Product Category Dropdown */}
+          <select
+            className="bg-white text-gray-700 border-t border-l rounded-[1rem] shadow-sm focus:outline-none w-full h-[40px] border border-gray-300"
+            value={selectedCategory}
+            onChange={handleCategoryChange}
+          >
+            <option value="">Product Category</option>
+            <option value="Micro-controller">Codable</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Animatronics">Animatronics</option>
+            <option value="Curriculum">Curriculum</option>
+            <option value="Toys">Robotics</option>
+          </select>
+        </div>
 
-        {/* Search Bar */}
-        {/* <input
-          type="text"
-          className="w-64 px-4 py-1.5 border border-gray-300 rounded-full ml-8 text-black"
-          placeholder="Search"
-          value={searchTerm}
-          onChange={handleSearchChange}
-        /> */}
-        <input
-          type="text"
-          className="w-[314.5px] h-[40px] px-4 py-[10px] gap-[var(--spacing-md)] border border-gray-300 rounded-[9999px] text-black ml-40 focus:outline-none focus:ring-0"
-          placeholder="Search"
-          value={searchTerm}
-          onChange={handleSearchChange}
+        <div className="w-full sm:w-[48%] md:w-[48%] lg:w-[48%] xl:w-[19%]">
+          {/* Search Bar */}
+          <input
+            type="text"
+            className="w-full h-[40px] border-t border-l sm:w-full rounded-[1rem] text-black focus:outline-none focus:ring-0 border border-gray-300"
+            placeholder="Search"
+            value={searchTerm}
+            onChange={handleSearchChange}
           />
-
+        </div>
       </div>
 
       {/* Hardware Products */}

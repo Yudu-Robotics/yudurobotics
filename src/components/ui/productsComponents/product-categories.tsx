@@ -130,8 +130,9 @@ export default function ProductCategories() {
                 key={key}
                 className={`flex justify-start w-full sm:p-2  items-center font-tthoves-semiBold sm:font-bold text-sm lg:text-md cursor-pointer ${
                   selectedCategory === category
-                    ? "text-primary bg-purple-100 rounded-full "
-                    : ""
+                    ? "text-violet-500 bg-purple-100 rounded-full"
+                    : "text-black hover:text-violet-500"
+                   
                 }`}
                 onClick={() => handleCategorySelection(category)}
               >
