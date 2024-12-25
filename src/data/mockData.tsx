@@ -230,16 +230,16 @@ export const products = [
     ageGroup: "12+",
     link: "",
   },
-  {
-    name: "Firepen 3D",
-    description:
-      "High-precision 3D printer for creative, customizable, and rapid prototyping solutions.",
-    image: "assets/zing/Firepen3d.svg",
-    category: "Micro-controller",
-    type: "Hardware",
-    ageGroup: "12+",
-    link: "",
-  },
+  // {
+  //   name: "Firepen 3D",
+  //   description:
+  //     "High-precision 3D printer for creative, customizable, and rapid prototyping solutions.",
+  //   image: "assets/zing/Firepen3d.svg",
+  //   category: "Micro-controller",
+  //   type: "Hardware",
+  //   ageGroup: "12+",
+  //   link: "",
+  // },
   {
     name: "Play Dynamex",
     description:

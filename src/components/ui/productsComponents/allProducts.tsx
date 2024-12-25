@@ -4,6 +4,7 @@ import ProductCard from "./product-card";
 import { products } from "@/data/mockData";
 import CustomHeading from "../common/custom-heading-props";
 import Link from "next/link";
+import renderImg from "@/imgImport";
 
 interface Products {
   name: string;
@@ -71,7 +72,7 @@ const AllProductsComponent = () => {
       (!activeFilter || product.type === activeFilter) &&
       (!activeAgeGroup || product.ageGroup === activeAgeGroup) &&
       (!selectedCategory || product.category === selectedCategory) &&
-      (!searchTerm || product.name.toLowerCase().includes(searchTerm))
+      (!searchTerm || product.name.toLowerCase().startsWith(searchTerm))
   );
 
   // Separate products by type for displaying categories
@@ -87,52 +88,44 @@ const AllProductsComponent = () => {
 
   return (
     <div className="container mx-auto p-4">
-      {/* Search and Filter Bar */}
-      <div className="flex flex-col sm:flex-row md:flex-wrap lg:flex-wrap xl:flex items-center justify-between gap-4 mb-8 pb-6">
-        <div className="w-full sm:w-[48%] md:w-[48%] lg:w-[48%] xl:w-[19%]">
-          {/* Filters */}
-          <div className="flex items-center gap-0 border-t border-l rounded-[1rem] w-full h-[40px] opacity-100 border border-gray-300">
-            {filters.map((filter, index) => (
-              <React.Fragment key={index}>
-                <button
-                  className={`text-sm px-1.5 py-1 text-gray-700 ${filter.active ? "font-bold text-purple-600" : "font-normal"
-                    }`}
-                  onClick={() => handleFilterChange(index)}
-                >
-                  {filter.name}
-                </button>
-                {index < filters.length - 1 && (
-                  <span className="border-l border-gray-500 h-10 mx-3" />
-                )}
-              </React.Fragment>
-            ))}
-          </div>
+      {/* Filters and Search */}
+      <div className="flex flex-wrap items-center justify-between gap-4 p-4 rounded-lg">
+        {/* Filters */}
+        <div className="flex border border-gray-300 rounded-lg overflow-hidden w-full sm:w-[48%] xl:w-[28%] bg-white h-[40px]">
+          {filters.map((filter, index) => (
+            <button
+              key={index}
+              className={`flex-1 text-center text-sm px-4 py-2 border-r last:border-r-0 whitespace-nowrap transition-colors h-full ${filter.active
+                  ? "font-bold text-purple-600 bg-purple-100"
+                  : "font-medium text-gray-700 hover:bg-gray-100"
+                }`}
+              onClick={() => handleFilterChange(index)}
+            >
+              {filter.name}
+            </button>
+          ))}
         </div>
 
-        <div className="w-full sm:w-[48%] md:w-[48%] lg:w-[48%] xl:w-[19%]">
-          {/* Age Groups */}
-          <div className="flex items-center gap-0 border-t border-l rounded-[1rem] w-full h-[40px] opacity-100 border border-gray-300">
-            {ageGroups.map((ageGroup, index) => (
-              <React.Fragment key={index}>
-                <button
-                  className={`text-sm px-1.5 py-1 text-gray-700 whitespace-nowrap ${ageGroup.active ? "font-bold text-purple-600" : "font-small"
-                    }`}
-                  onClick={() => handleAgeGroupChange(index)}
-                >
-                  {ageGroup.name}
-                </button>
-                {index < ageGroups.length - 1 && (
-                  <span className="border-l border-gray-500 h-10 mx-3" />
-                )}
-              </React.Fragment>
-            ))}
-          </div>
+        {/* Age Groups */}
+        <div className="flex border border-gray-300 rounded-lg overflow-hidden w-full sm:w-[48%] xl:w-[19%] bg-white h-[40px]">
+          {ageGroups.map((ageGroup, index) => (
+            <button
+              key={index}
+              className={`flex-1 text-center text-sm px-4 py-2 border-r last:border-r-0 whitespace-nowrap transition-colors h-full ${ageGroup.active
+                  ? "font-bold text-purple-600 bg-purple-100"
+                  : "font-medium text-gray-700 hover:bg-gray-100"
+                }`}
+              onClick={() => handleAgeGroupChange(index)}
+            >
+              {ageGroup.name}
+            </button>
+          ))}
         </div>
 
-        <div className="w-full sm:w-[48%] md:w-[48%] lg:w-[48%] xl:w-[19%]">
-          {/* Product Category Dropdown */}
+        {/* Product Category Dropdown */}
+        <div className="relative w-full sm:w-[48%] xl:w-[23%]">
           <select
-            className="bg-white text-gray-700 border-t border-l rounded-[1rem] shadow-sm focus:outline-none w-full h-[40px] border border-gray-300"
+            className="w-full h-[40px] px-4 py-2 rounded-lg border border-gray-300 text-gray-700 focus:ring-2 focus:ring-purple-600 bg-white"
             value={selectedCategory}
             onChange={handleCategoryChange}
           >
@@ -141,19 +134,20 @@ const AllProductsComponent = () => {
             <option value="Electronics">Electronics</option>
             <option value="Animatronics">Animatronics</option>
             <option value="Curriculum">Curriculum</option>
-            <option value="Toys">Robotics</option>
+            <option value="Mechanical">Robotics</option>
           </select>
         </div>
 
-        <div className="w-full sm:w-[48%] md:w-[48%] lg:w-[48%] xl:w-[19%]">
-          {/* Search Bar */}
+        {/* Search Input */}
+        <div className="relative w-full sm:w-[48%] xl:w-[23%]">
           <input
             type="text"
-            className="w-full h-[40px] border-t border-l sm:w-full rounded-[1rem] text-black focus:outline-none focus:ring-0 border border-gray-300"
+            className="w-full h-[40px] pl-10 pr-4 py-2 rounded-lg border border-gray-300 text-gray-700 focus:ring-2 focus:ring-purple-600 focus:outline-none bg-white"
             placeholder="Search"
             value={searchTerm}
             onChange={handleSearchChange}
           />
+          <img src={renderImg("search")} alt="search" className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
         </div>
       </div>
 
@@ -162,9 +156,15 @@ const AllProductsComponent = () => {
         <CustomHeading title="Hardware" />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {hardwareProducts.map((product) => (
-            <Link href={product.link || "#"} key={product.name}>
-              <ProductCard product={product} />
-            </Link>
+            product.link && product.link !== "#" ? (
+              <Link href={product.link} key={product.name}>
+                <ProductCard product={product} />
+              </Link>
+            ) : (
+              <div key={product.name} className="cursor-pointer">
+                <ProductCard product={product} />
+              </div>
+            )
           ))}
         </div>
       </div>
@@ -174,9 +174,15 @@ const AllProductsComponent = () => {
         <CustomHeading title="Software" />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {softwareProducts.map((product) => (
-            <Link href={product.link || "#"} key={product.name}>
-              <ProductCard product={product} />
-            </Link>
+            product.link && product.link !== "#" ? (
+              <Link href={product.link} key={product.name}>
+                <ProductCard product={product} />
+              </Link>
+            ) : (
+              <div key={product.name} className="cursor-pointer">
+                <ProductCard product={product} />
+              </div>
+            )
           ))}
         </div>
       </div>
@@ -186,9 +192,15 @@ const AllProductsComponent = () => {
         <CustomHeading title="Curriculum" />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {curriculumProducts.map((product) => (
-            <Link href={product.link || "#"} key={product.name}>
-              <ProductCard product={product} />
-            </Link>
+            product.link && product.link !== "#" ? (
+              <Link href={product.link} key={product.name}>
+                <ProductCard product={product} />
+              </Link>
+            ) : (
+              <div key={product.name} className="cursor-pointer">
+                <ProductCard product={product} />
+              </div>
+            )
           ))}
         </div>
       </div>

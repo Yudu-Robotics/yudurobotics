@@ -17,7 +17,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   handleClick = () => {}, // Default is an empty function
 }) => (
   <div
-    onClick={handleClick}
+    {...(product.link && product.link !== "" && product.link !== "#" && { onClick: handleClick })}
     className={`flex sm:flex-col space-y-2 p-2 sm:p-4 text-black rounded-lg transition-all duration-200 hover:bg-card-foreground hover:scale-90 
         ${isSelected ? "bg-card-foreground scale-90" : ""}
       `}
@@ -47,9 +47,14 @@ const ProductCard: React.FC<ProductCardProps> = ({
         {product.description.substring(0, 50) + "..."}
       </p>
 
-      <Link href={product.link} className="text-[#4A1FCC] text-sm sm:hidden font-tthoves-semiBold">
-        Learn more {"->"}
-      </Link>
+      {product.link && (product.link !== "") && (
+        <Link
+          href={product.link}
+          className="text-[#4A1FCC] text-sm sm:hidden font-tthoves-semiBold"
+        >
+          Learn more {"->"}
+        </Link>
+      )}
     </div>
   </div>
 );

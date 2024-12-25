@@ -57,6 +57,7 @@ const testimonial = "assets/other/testimonial.png";
 const aimodel = "assets/other/aimodel.png";
 const fivecoding = "assets/other/fivecoding.png";
 const threestep = "assets/other/threestep.png";
+const search = "assets/icons/search-lg.png";
 
 // peecee
 const peecee = "assets/peecee/peecee.png";
@@ -235,6 +236,8 @@ function renderImg(imgName: string) {
       return india;
     case "reddot":
       return reddot;
+    case "search":
+      return search;
 
     // testimonial
     case "bannerImg1":

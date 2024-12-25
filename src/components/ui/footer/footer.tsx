@@ -115,6 +115,10 @@ const Footer = () => {
     text2 = "Join Forces";
   }
 
+  const handleClick = () => {
+    window.open(`https://wa.me/919606755032`, "_blank");
+  };
+
   return (
     <div className="text-primary-foreground flex flex-col justify-around">
       {/* First Section */}
@@ -163,24 +167,29 @@ const Footer = () => {
               (
                 value:
                   | {
-                      type: string;
-                      text: string;
-                      contact_by: string;
-                      icon_image: any;
-                    }
+                    type: string;
+                    text: string;
+                    contact_by: string;
+                    icon_image: any;
+                  }
                   | {
-                      type: string;
-                      text: string;
-                      contact_by: string;
-                      icon_image: string;
-                    },
+                    type: string;
+                    text: string;
+                    contact_by: string;
+                    icon_image: string;
+                  },
                 key: number
               ) => (
-                <div key={key} className="flex flex-col space-y-2">
+                <div key={key} className={`flex flex-col space-y-2 ${value.type === "Live chat" ? "cursor-pointer" : "cursor-default"
+                  }`} onClick={() => {
+                    if (value.type === "Live chat") {
+                      handleClick(); // Trigger the Live Chat click event
+                    }
+                  }}>
                   <div>{value.icon_image}</div>
                   <h1 className="font-tthoves ">{value.type}</h1>
                   <p className="font-tthoves opacity-70">{value.text}</p>
-                  <p className="w-[70%] text-lg font-tthoves">
+                  <p className="w-[70%] xl:text-lg md:text-md font-tthoves">
                     {value.contact_by}
                   </p>
                 </div>
@@ -252,7 +261,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="h-[80vh]  w-full flex justify-center items-center">
-        <img src={renderImg("madeInIndia")} />
+        <img src={renderImg("madeInIndia")} alt="" />
       </div>
     </div>
   );

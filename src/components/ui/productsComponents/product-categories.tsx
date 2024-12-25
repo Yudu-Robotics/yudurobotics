@@ -44,7 +44,7 @@ export default function ProductCategories() {
 
   const [filters, setFilters] = useState(initialFilters);
   const [ageGroups, setAgeGroups] = useState(initialAgeGroups);
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>("Micro-controller");
   const [productDetails, setProductDetails] = useState<Products>(
     initialProductDetails
   );

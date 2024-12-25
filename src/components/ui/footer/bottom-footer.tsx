@@ -73,7 +73,7 @@ const footerData = [
     links: [
       { name: "Twitter", href: "https://twitter.com/YuduRobotics/" },
       { name: "LinkedIn", href: "https://www.linkedin.com/showcase/yudu-robotics/" },
-      { name: "youtube", href: "https://www.youtube.com/@YuduRobotics" },
+      { name: "YouTube", href: "https://www.youtube.com/@YuduRobotics" },
       // { name: "GitHub", href: "#" },
       // { name: "AngelList", href: "#" },
       // { name: "Dribbble", href: "#" },
