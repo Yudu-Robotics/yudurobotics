@@ -154,17 +154,18 @@ export const products = [
     description:
       "TED is your all-in-one buddy, packed and ready to jump into action whenever you are.",
     image: "assets/roboki/Ted8.svg",
-    category: "Codable Kits",
+    category: "Micro-controller",
     type: "Hardware",
     ageGroup: "9-12",
     link: "/peecee",
+    features: ["Built in 9 Sensors and 4 Outputs", "Technic Building Block Compatible", "A.I and IoT Enabled"]
   },
   {
     name: "AI-1",
     description:
       "An intelligent camera powered by AI for dynamic object detection, tracking, and insights.",
     image: "assets/roboki/AI-I-8.svg",
-    category: "Codable Kits",
+    category: "Micro-controller",
     type: "Hardware",
     ageGroup: "9-12",
     link: "",
@@ -174,27 +175,29 @@ export const products = [
     description:
       "A durable and upgradable kit packed with everything you need to build, learn and explore robotics.",
     image: "assets/roboki/roboki8.svg",
-    category: "Codable Kits",
+    category: "Micro-controller",
     type: "Hardware",
     ageGroup: "9-12",
     link: "/roboki",
+    features: ["Wireless Code and Control", "Smart Plug Sensors", "Solid Plastic Chasis Blocks"]
   },
   {
     name: "Toki",
     description:
       "Affordable alternative to Arduino, offering superior customization options and advanced capabilities to unleash your creativity.",
     image: "assets/roboki/Toki8.svg",
-    category: "Codable Kits",
+    category: "Micro-controller",
     type: "Hardware",
     ageGroup: "9-12",
     link: "",
+    features: ["Wireless Code and Control", "23 GPIO ports for easy expansion (14 directly usable)", "Dual motor drivers supporting up to 2A current each"]
   },
   {
     name: "Plode",
     description:
       "The one-stop-shop to interact with your devices and learn more about robotics and logic.",
     image: "assets/roboki/Plode0.svg",
-    category: "Codable Kits",
+    category: "Micro-controller",
     type: "Software",
     ageGroup: "12+",
     link: "",
@@ -208,6 +211,7 @@ export const products = [
     type: "Hardware",
     ageGroup: "Age 5-8",
     link: "",
+    features: ["9 Input and 7 Output Modules", "Simulation for Ease of Construction", "Open-ended and Flexible"]
   },
   {
     name: "Zing",
@@ -218,6 +222,7 @@ export const products = [
     type: "Hardware",
     ageGroup: "12+",
     link: "/zing",
+    features: ["17 Degrees of Freedom", "Bluetooth and Wi-Fi Enabled", "4m Ultrasonic Sensor & 3W Speaker Support"]
   },
   
   {
@@ -230,25 +235,27 @@ export const products = [
     ageGroup: "12+",
     link: "",
   },
-  // {
-  //   name: "Firepen 3D",
-  //   description:
-  //     "High-precision 3D printer for creative, customizable, and rapid prototyping solutions.",
-  //   image: "assets/zing/Firepen3d.svg",
-  //   category: "Codable Kits",
-  //   type: "Hardware",
-  //   ageGroup: "12+",
-  //   link: "",
-  // },
+  {
+    name: "Firepen 3D",
+    description:
+      "High-precision 3D printer for creative, customizable, and rapid prototyping solutions.",
+    image: "assets/zing/Firepen3d.svg",
+    category: "Micro-controller",
+    type: "Hardware",
+    ageGroup: "12+",
+    link: "",
+    features: ["Spool Break Detection", "Removable Magnetic Bed", "Display Screen: Color with Touch Screen", "Maximum Printing size: 200mm x 200mm x 190mm"]
+  },
   {
     name: "Play Dynamex",
     description:
       "Colorful plastic blocks inspiring creativity, imagination, and hands-on building fun.",
     image: "assets/products/Playdynamics1.svg",
-    category: "Mechanical",
+    category: "Toys",
     type: "Hardware",
     ageGroup: "9-12",
     link: "",
+    features: ["110+ Unique High-quality Blocks", "Simulation for Ease of Construction", "PeeCee Computational Kit -2 Compatible"]
   },
   {
     name: "Crawl-e",
@@ -259,6 +266,7 @@ export const products = [
     type: "Hardware",
     ageGroup: "12+",
     link: "/crawl_e",
+    features: ["18 Degrees of Freedom", "Bluetooth and Wi-Fi Enabled", "A.I and IoT Enabled"]
   },
   // {
   //   name: "Klaw-b",
@@ -279,6 +287,7 @@ export const products = [
     type: "Hardware",
     ageGroup: "12+",
     link: "/klaw_b",
+    features: ["5 Degrees of Freedom", "Bluetooth and Wi-Fi Enabled", "Durable Aluminium Chassis"]
   },
   // {
   //   name: "Playtrons-b",

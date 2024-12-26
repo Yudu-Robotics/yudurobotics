@@ -15,10 +15,11 @@ interface Products {
   type: string;
   ageGroup: string;
   link: string;
+  features?: string[];
 }
 
 export default function ProductCategories() {
-  const product_categories = ["Codable Kits", "Animatronics", "Mechanical"];
+  const product_categories = ["Micro-controller", "Animatronics", "Toys"];
 
   const initialFilters = [
     { name: "Hardware", active: false },
@@ -40,14 +41,13 @@ export default function ProductCategories() {
     type: "",
     ageGroup: "",
     link: "",
+    features: [], // Add this line
   };
 
   const [filters, setFilters] = useState(initialFilters);
   const [ageGroups, setAgeGroups] = useState(initialAgeGroups);
-  const [selectedCategory, setSelectedCategory] = useState<string | null>("Codable Kits");
-  const [productDetails, setProductDetails] = useState<Products>(
-    initialProductDetails
-  );
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(product_categories[0]); // Set the default to the first category
+  const [productDetails, setProductDetails] = useState<Products>(initialProductDetails);
   const [selectedProduct, setSelectedProduct] = useState<number>(0);
   const allowedProductNames = ["TED", "Roboki", "Zing", "Crawl-e", "Klaw-b"];
   const [isAllowedFlag, setIsAllowedFlag] = useState<boolean>(true);
@@ -55,9 +55,7 @@ export default function ProductCategories() {
   // Update product details when the category or other filters change
   useEffect(() => {
     if (filteredProducts.length > 0) {
-      filteredProducts.length == 1
-        ? setIsAllowedFlag(false)
-        : setIsAllowedFlag(true);
+      filteredProducts.length == 1 ? setIsAllowedFlag(false) : setIsAllowedFlag(true);
       setProductDetails(filteredProducts[0]);
     } else {
       setProductDetails(initialProductDetails);
@@ -128,20 +126,18 @@ export default function ProductCategories() {
             {product_categories.map((category: string, key: number) => (
               <div
                 key={key}
-                className={`flex justify-start w-full sm:p-2  items-center font-tthoves-semiBold sm:font-bold text-sm lg:text-md cursor-pointer ${
-                  selectedCategory === category
-                    ? "text-violet-500 bg-purple-100 rounded-full"
-                    : "text-black hover:text-violet-500"
-                   
-                }`}
+                className={`flex justify-start w-full sm:p-2  items-center font-tthoves-semiBold sm:font-bold text-sm lg:text-md cursor-pointer ${selectedCategory === category || (selectedCategory === null && key === 0)
+                  ? "text-primary bg-purple-100 rounded-full"
+                  : "hover:text-primary hover:bg-purple-50"
+                  }`}
                 onClick={() => handleCategorySelection(category)}
               >
                 {category}
-                {category === "Mechanical" && (
+                {/* {category === "Toys" && (
                   <div className="flex justify-center px-1 items-center text-[#067647] ">
                     <ProductTag title="New" color="green-500" />
                   </div>
-                )}
+                )} */}
               </div>
             ))}
           </div>
@@ -166,7 +162,7 @@ export default function ProductCategories() {
                 </Link>
               </div> */}
             </div>
-            <div className="hidden h-full sm:flex flex-col space-y-3 bg-card-foreground rounded-xlg lg:w-[90%] p-8">
+            <div className="hidden sm:flex flex-col space-y-3 bg-card-foreground rounded-xlg lg:w-[90%] p-8">
               <div>
                 <img src={productDetails.image} className="w-[100%]" />
               </div>
@@ -177,12 +173,31 @@ export default function ProductCategories() {
                 <p className="font-tthoves text-lg py-1">
                   {productDetails.description}
                 </p>
+
+                {Array.isArray(productDetails.features) && productDetails.features.length > 0 && (
+                  <ul className="mt-4">
+                    {productDetails.features.map((feature, index) => (
+                      <li key={index} className="flex items-center space-x-2 py-1">
+                        {/* Use the Check icon from the public folder */}
+                        <span>
+                          <img
+                            src="/assets/home/Check icon.svg"
+                            alt="Check icon"
+                            className="h-4 w-4"
+                          />
+                        </span>
+                        <span className="font-tthoves text-md">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
                 {isAllowedFlag && (
                   <Link
                     href={productDetails.link}
-                    className="text-primary mt-4 text-base font-bold hover:scale-125 "
+                    className="text-primary mt-4 text-base font-bold hover:scale-125"
                   >
-                    <div className="flex space-x-2 items-center s">
+                    <div className="flex space-x-2 mt-4 items-center">
                       <div>Learn More</div>
                       <div>
                         <svg
@@ -195,9 +210,9 @@ export default function ProductCategories() {
                           <path
                             d="M1.16699 7.00008H12.8337M12.8337 7.00008L7.00033 1.16675M12.8337 7.00008L7.00033 12.8334"
                             stroke="#4A1FCC"
-                            stroke-width="1.66667"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeWidth="1.66667"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                           />
                         </svg>
                       </div>
@@ -206,6 +221,7 @@ export default function ProductCategories() {
                 )}
               </div>
             </div>
+
           </>
         )}
         {limitedProducts.length === 0 && (
@@ -213,31 +229,31 @@ export default function ProductCategories() {
             New Products Coming Soon...
           </div>
         )}
-        {<Link
-              href="/products"
-              className="flex items-center justify-center space-x-3 block md:hidden pt-6"
+        <Link
+          href="/products"
+          className="flex items-center justify-center space-x-3 block md:hidden pt-6"
+        >
+          <div className="font-tthoves-semiBold text-[#4A1FCC] font-md">
+            View all products
+          </div>
+          <div>
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <div className="font-tthoves-semiBold text-[#4A1FCC] font-md">
-                View all products
-              </div>
-              <div>
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1.16699 7.00008H12.8337M12.8337 7.00008L7.00033 1.16675M12.8337 7.00008L7.00033 12.8334"
-                    stroke="#4A1FCC"
-                    stroke-width="1.66667"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-            </Link>}
+              <path
+                d="M1.16699 7.00008H12.8337M12.8337 7.00008L7.00033 1.16675M12.8337 7.00008L7.00033 12.8334"
+                stroke="#4A1FCC"
+                stroke-width="1.66667"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </Link>
       </div>
     </div>
   );

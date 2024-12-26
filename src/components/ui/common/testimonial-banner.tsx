@@ -6,14 +6,14 @@ import renderSvg from "@/svgImport";
 
 export default function TestimonialBanner() {
   return (
-    <div className="flex flex-col space-y-16 py-20">
+    <div className="flex flex-col space-y-16">
       <div className="flex justify-between px-10 lg:px-40">
         <div>{renderSvg("star1")}</div>
         <div>{renderSvg("star1")}</div>
       </div>
 
       <div className="flex overflow-hidden relative ">
-        <div className="sm:h-[100vh]  flex animate-mobile-scroll sm:animate-loop-scroll">
+        <div className="sm:h-[100vh] md:h-[70vh] flex animate-mobile-scroll sm:animate-loop-scroll">
           <Content />
         </div>
       </div>

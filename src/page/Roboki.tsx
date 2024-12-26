@@ -128,13 +128,13 @@ export default function Roboki() {
             title="Curriculum"
           />
         </div>
-        <div className="py-16 lg:py-20">
-          {/* <PlodeDownloade
+        {/* <div className="py-16 lg:py-20">
+          <PlodeDownloade
             jumppingdata={data.jumppingButton?.[3] || {}}
             heading="Transform Your Learning with Our Curriculum"
             desc="Explore our comprehensive curriculum designed to make coding and robotics accessible and exciting. Get started with structured lessons and hands-on projects today!"
-          /> */}
-        </div>
+          />
+        </div> */}
         <div className="-mx-8 lg:-mx-28">
           <TestimonialBanner />
         </div>

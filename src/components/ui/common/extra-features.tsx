@@ -25,7 +25,7 @@ const ExtraFeatures: React.FC<{
 }> = ({ data, title, showArrow }) => {
   const [selectedIndex, setSelectedIndex] = useState(-1);
   return (
-    <div className="flex flex-col gap-2 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-10 sm:mt-16 md:mt-20 lg:mt-24 sm:pb-10 md:pb-12 lg:pb-14 xl:pb-16">
+    <div className="flex flex-col gap-2 sm:gap-4 md:gap-6 lg:gap-8 xl:pt-16 xl:gap-10 sm:pb-10 md:pb-12 lg:pb-14 xl:pb-16">
       {showArrow && (
         <div className="hidden lg:flex lg:flex-row lg:justify-center lg:items-center lg:-mb-32 lg:ml-40">
           {renderSvg("handDrawArrow2")}
@@ -42,10 +42,10 @@ const ExtraFeatures: React.FC<{
           {data?.subheading}
         </h2>
       </div>
-      <div className="pt-10 sm:pt-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="pt-10 sm:pt-20 lg:pt-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Side: Feature Icons and Text */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {data?.features.map((feature, index) => (
               <div
                 key={index}
@@ -61,7 +61,7 @@ const ExtraFeatures: React.FC<{
                   {/* Icon for the feature */}
                   {renderSvg(feature.icon)}
                 </div>
-                <div className="pt-4 sm:pt-0">
+                <div className="pt-4 sm:pt-0 flex flex-col gap-1">
                   <h3 className="font-tthoves-semiBold text-xl xl:text-2xl sm:py-3">
                     {feature.heading}
                   </h3>
@@ -98,7 +98,7 @@ const ExtraFeatures: React.FC<{
             
             <img src={renderImg("arrowdown")} 
             alt="Arrow Image" 
-            className="absolute bottom-[-150px] right-[10px] w-25 h-35 rotate-[45deg] translate-x-0 translate-y-0 filter brightness-20 md:right-[50px] lg:translate-x-[-40px]" />
+            className="absolute bottom-[-150px] right-[10px] w-25 h-35 rotate-[45deg] translate-x-0 translate-y-0 filter brightness-20 md:right-[50px] lg:translate-x-[-40px] xs:translate-x-[40px] xs:translate-y-[-30px]" />
 
             
           </div>

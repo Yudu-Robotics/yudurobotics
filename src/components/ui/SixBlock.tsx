@@ -28,7 +28,7 @@ const SixBlock: React.FC<SixBlockProps> = ({ data }) => {
       <div className="w-full py-24 text-center ">
         <p className="text-yellow-500 font-bold">{data.title}</p>
         <div className="w-full  flex flex-col justify-center items-center sm:gap-5 ">
-          <div className="font-piepie text-4xl md:text-6xl lg:text-7xl  text-primary-foreground text-center sm:w-[50%]">
+          <div className="font-piepie text-4xl md:text-6xl lg:text-7xl text-primary-foreground text-center xs:w-[90%]">
             {highlightWords(
               data.heading,
               data.wordsToHighlight.text1,
@@ -40,10 +40,10 @@ const SixBlock: React.FC<SixBlockProps> = ({ data }) => {
           </p>
         </div>
         <div className="w-full">
-          <div className="grid gird-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
+          <div className="grid gird-cols-1 xs:grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
             {data.tableData.map((item: any, index) => (
               <div key={index}>
-                <div className="rounded-xxl sm:m-14">
+                <div className="rounded-xxl sm:m-14 md:m-6">
                   {item?.video ? (
                     <video
                       src={renderVideo(item?.video)}
@@ -57,7 +57,7 @@ const SixBlock: React.FC<SixBlockProps> = ({ data }) => {
                     <div className="w-full h-[30vh] rounded-xxl bg-red-600"></div>
                   )}
                 </div>
-                <div className="sm:-mt-6 pt-4">
+                <div className="sm:-mt-2 sm:pt-4 md:pt-2">
                   <div className="text-xl font-bold text-center font-tthoves-semiBold">
                     {item.title}
                   </div>

@@ -48,7 +48,7 @@ const HardwareProductFeatures: React.FC<{ hardware: HardwareData }> = ({
 
   return (
     <div>
-      <div className="flex flex-col justify-center space-y-2 items-center text-center mt-40">
+      <div className="flex flex-col justify-center space-y-2 items-center text-center mt-16">
         <h1 className="text-primary text-lg  xl:text-lg text-left sm:text-center w-full font-tthoves-semiBold text-[#CCBD1F]">
           Hardware
         </h1>
@@ -59,7 +59,7 @@ const HardwareProductFeatures: React.FC<{ hardware: HardwareData }> = ({
           {section1.subheading}
         </h2>
       </div>
-      <div className=" py-12 lg:py-20">
+      <div className=" py-12 lg:py-4">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
           {/* Left Side: Feature Icons and Text */}
           <div className="space-y-10 lg:mr-20">
@@ -94,7 +94,7 @@ const HardwareProductFeatures: React.FC<{ hardware: HardwareData }> = ({
           </div>
 
           {/* Right Side: Central Image */}
-          <div className="relative flex justify-center  ">
+          <div className="relative flex justify-center">
             {selectedIndex == -1 ||
             !hardware?.section1?.features[selectedIndex]?.video ? (
               <img

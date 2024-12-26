@@ -43,7 +43,7 @@ function FlexibleLearning({ newProduct = false, title, desc, product }: propsVal
               <JumpingButtons ishorizontal="true" />
             </div> */}
           </div>
-          <div className="w-full  flex justify-center items-center ">
+          <div className="w-full  flex justify-center items-center p-8 ">
             <img src="assets/peecee/gril.png" className="" />
           </div>
         </div>

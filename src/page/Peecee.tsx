@@ -103,7 +103,7 @@ export default function Peecee() {
         {/* <img src={renderImg("headerSection")} className="w-full" /> */}
         {renderSvg(data.sectionHeader)}
       </div>
-      <div className="px-4 sm:px-12 lg:px-28 text-black py-5 lg:py-10 ">
+      <div className="px-8 lg:px-28 text-black py-5 lg:py-10 ">
         <div className="py-5 lg:py-10">
           <GlobalAwards />
         </div>
@@ -113,7 +113,7 @@ export default function Peecee() {
         <div className="py-8 lg:py-12">
           <Unboxing product="PeeCee TED"/>
         </div>
-        <div className="text-sm py-24 mb-6 text-center font-bold flex flex-col space-y-6 justify-center items-center">
+        <div className="text-sm py-4 mb-0 text-center font-bold flex flex-col space-y-6 justify-center items-center">
           <p className="text-lg sm:text-lg md:text-md lg:text-lg xl:text-xl font-tthoves-semiBold">
             <span className="text-[#4A4A4F] opacity-70">
               Hover over each feature below to{" "}
@@ -132,7 +132,7 @@ export default function Peecee() {
               showArrow={true}
             />
           </div>
-          <div className="flex py-5  justify-center items-center">
+          <div className="flex py-10 justify-center items-center">
             <TeamPlay
               // @ts-ignore
               hardware={data.features_data}
@@ -164,7 +164,7 @@ export default function Peecee() {
         <div className=" md:py-20 xl:py-24">
           <VersatileSoftware name="peecee" />
         </div>
-        <div className="">
+        <div className="py-8">
           <ExtraFeatures
             data={data.features_data?.software_experience[0]}
             title="Software"
@@ -190,7 +190,7 @@ export default function Peecee() {
           />
           <CurriculumSteps
             // @ts-ignore
-            additional="Set the stage for discovery."
+            //additional="Set the stage for discovery."
             // @ts-ignore
             data={data.features_data.cirriculum.steps?.[1]}
           />
@@ -203,13 +203,13 @@ export default function Peecee() {
             title="Curriculum"
           />
         </div>
-        <div className="py-16 lg:py-20">
-          {/* <PlodeDownloade
+        {/* <div className="py-16 lg:py-20">
+          <PlodeDownloade
             jumppingdata={data.jumppingButton?.[3] || {}}
             heading="Transform Your Learning with Our Curriculum"
             desc="Explore our comprehensive curriculum designed to make coding and robotics accessible and exciting. Get started with structured lessons and hands-on projects today!"
-          /> */}
-        </div>
+          />
+        </div> */}
         <div className="-mx-8 lg:-mx-28">
           <TestimonialBanner />
         </div>

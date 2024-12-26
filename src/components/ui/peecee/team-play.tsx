@@ -22,7 +22,7 @@ const TeamPlay: React.FC<{ hardware: HardwareData }> = ({ hardware }) => {
   const { section3 } = hardware;
 
   return (
-    <div className="w-full  flex flex-col space-y-10 py-10">
+    <div className="w-full flex flex-col space-y-10">
       <div className="w-full  flex flex-col space-y-2 justify-centerv items-center text-center">
         <h1 className="font-tthoves-semiBold w-full text-left  sm:text-center text-primary sm:text-sm md:text-md lg:text-lg xl:text-xl font-tthoves-medium ">
           Hardware
