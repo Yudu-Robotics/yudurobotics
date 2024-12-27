@@ -29,7 +29,7 @@ const ProductGrid: React.FC<{
           />
         ))}
       </div>
-      <div className="sm:hidden grid grid-cols-1 gap-[var(--spacing-xl)] ml-8 md:ml-12 lg:ml-16">
+      <div className="sm:hidden grid grid-cols-1 gap-[var(--spacing-xl)] px-4 md:ml-12 lg:ml-16">
         {products.map((product, index) => (
           <ProductCard
             key={index}

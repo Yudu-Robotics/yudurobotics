@@ -13,7 +13,7 @@ export default function TestimonialBanner() {
       </div>
 
       <div className="flex overflow-hidden relative ">
-        <div className="sm:h-[100vh] md:h-[70vh] flex animate-mobile-scroll sm:animate-loop-scroll">
+        <div className="sm:h-[100vh] md:h-[100vh] lg:h-[100vh] xl:h-[100vh] 2xl:h-[80vh] flex animate-mobile-scroll sm:animate-loop-scroll">
           <Content />
         </div>
       </div>

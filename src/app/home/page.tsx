@@ -1,11 +1,9 @@
 import CeoReviewsContainer from "@/components/ui/ceo-reviews";
 import GlobalAwards from "@/components/ui/home/global-awards";
 import ProductFeatures from "@/components/ui/home/product-features";
-import { NewFeaturesCard } from "@/components/ui/NewFeaturesCard";
 import renderImg from "@/imgImport";
 import JumpingButtons from "../../components/ui/common/jumping-buttons";
 import ProductCatalog from "@/components/ui/productsComponents/product-catalog";
-import SearchAndFilter from "@/components/ui/home/search-filter";
 import ProductCategories from "@/components/ui/productsComponents/product-categories";
 import SubscribeSection from "@/components/ui/home/subscribe-section";
 import dynamic from "next/dynamic";
