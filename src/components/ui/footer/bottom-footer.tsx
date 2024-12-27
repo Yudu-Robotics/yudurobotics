@@ -1,13 +1,11 @@
 // components/Footer.js
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
 } from "@/components/ui/dialog";
 import PrivacyContent from "./PrivacyContent";
 import TermsContent from "./TermsContent";
@@ -17,12 +15,12 @@ const footerData = [
   {
     title: "Product",
     links: [
-      { name: "Overview", href: "/products" },
-      { name: "TED", href: "/peecee" },
-      { name: "Zing", href: "/zing" },
-      { name: "Crawl-e", href: "/crawl_e" },
-      { name: "Roboki", href: "/roboki" },
-      { name: "Klaw-b", href: "/klaw_b" },
+      { name: "Overview", href: "/products", dialog: "" },
+      { name: "TED", href: "/peecee", dialog: "" },
+      { name: "Zing", href: "/zing", dialog: "" },
+      { name: "Crawl-e", href: "/crawl_e", dialog: "" },
+      { name: "Roboki", href: "/roboki", dialog: "" },
+      { name: "Klaw-b", href: "/klaw_b", dialog: "" },
     ],
   },
   {
@@ -30,10 +28,11 @@ const footerData = [
     links: [
       { name: "Terms", href: "#", dialog: "terms" },
       { name: "Privacy", href: "#", dialog: "privacy" },
+      { name: "Warranty", href: "#", dialog: "warranty" },
       // { name: "Cookies", href: "#" },
       // { name: "Licenses", href: "#" },
       // { name: "Settings", href: "#" },
-      { name: "Warranty", href: "#", dialog: "warranty" },
+      
     ],
   },
   // {
@@ -72,9 +71,9 @@ const footerData = [
   {
     title: "Social",
     links: [
-      { name: "Twitter", href: "https://twitter.com/YuduRobotics/" },
-      { name: "LinkedIn", href: "https://www.linkedin.com/showcase/yudu-robotics/" },
-      { name: "YouTube", href: "https://www.youtube.com/@YuduRobotics" },
+      { name: "Twitter", href: "https://twitter.com/YuduRobotics/", dialog: "" },
+      { name: "LinkedIn", href: "https://www.linkedin.com/showcase/yudu-robotics/", dialog: "" },
+      { name: "YouTube", href: "https://www.youtube.com/@YuduRobotics", dialog: "" },
       // { name: "GitHub", href: "#" },
       // { name: "AngelList", href: "#" },
       // { name: "Dribbble", href: "#" },
