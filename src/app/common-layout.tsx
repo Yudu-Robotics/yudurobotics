@@ -11,69 +11,69 @@ import Footer from "@/components/ui/footer/footer";
 import renderSvg from "@/svgImport";
 import FloatingWhatsApp from "@/components/ui/common/floating-whatsapp";
 
-const productsData = [
-  {
-    category: "Microcontrollers",
-    products: [
-      {
-        name: "TED",
-        description:
-          "TED is your all-in-one buddy, packed and ready to jump into action whenever you are.",
-        image: "ted8",
-        link: "/peecee",
-      },
-      {
-        name: "AI-1",
-        description:
-          "An intelligent camera powered by AI for dynamic object detection, tracking, and insights.",
-        image: "AIIII",
-        link: "",
-      },
-      {
-        name: "Roboki",
-        description:
-          "A durable and upgradable kit packed with everything you need to build, learn and explore robotics.",
-        image: "Roboki1",
-        link: "/roboki",
-      },
-    ],
-  },
-  {
-    category: "Animatronics",
-    products: [
-      {
-        name: "Zing",
-        description:
-          "A lifelike humanoid robot, perfect for interactive learning.",
-        image: "Zing1",
-        link: "/animatronics/zing",
-      },
-      {
-        name: "Crawl-e",
-        description: "A versatile hexapod explorer designed for learning.",
-        image: "Crawle1",
-        link: "/animatronics/crawl-e",
-      },
-    ],
-  },
-  {
-    category: "Toys",
-    products: [
-      {
-        name: "Play Dynamex",
-        description:
-          "Colorful plastic blocks inspiring creativity and hands-on building.",
-        image: "toy",
-        link: "/toys/play-dynamex",
-      },
-    ],
-  },
-];
-
 const ClientLayout = ({ children }: { children: React.ReactNode }) => {
   const NavBarItems = [
     { name: "Our Products", link: "/products" },
     { name: "The Partner Program", link: "/partner" },
+  ];
+
+  const productsData = [
+    {
+      category: "Microcontrollers",
+      products: [
+        {
+          name: "TED",
+          description:
+            "TED is your all-in-one buddy, packed and ready to jump into action whenever you are.",
+          image: "ted8",
+          link: "/peecee",
+        },
+        {
+          name: "AI-1",
+          description:
+            "An intelligent camera powered by AI for dynamic object detection, tracking, and insights.",
+          image: "AIIII",
+          link: "",
+        },
+        {
+          name: "Roboki",
+          description:
+            "A durable and upgradable kit packed with everything you need to build, learn and explore robotics.",
+          image: "Roboki1",
+          link: "/roboki",
+        },
+      ],
+    },
+    {
+      category: "Animatronics",
+      products: [
+        {
+          name: "Zing",
+          description:
+            "A lifelike humanoid robot, perfect for interactive learning.",
+          image: "Zing1",
+          link: "/animatronics/zing",
+        },
+        {
+          name: "Crawl-e",
+          description: "A versatile hexapod explorer designed for learning.",
+          image: "Crawle1",
+          link: "/animatronics/crawl-e",
+        },
+      ],
+    },
+    {
+      category: "Toys",
+      products: [
+        {
+          name: "Play Dynamex",
+          description:
+            "Colorful plastic blocks inspiring creativity and hands-on building.",
+          image: "toy",
+          link: "/toys/play-dynamex",
+        },
+      ],
+    },
   ];
 
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
