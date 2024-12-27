@@ -192,6 +192,22 @@ export const products = [
     link: "",
     features: ["Wireless Code and Control", "23 GPIO ports for easy expansion (14 directly usable)", "Dual motor drivers supporting up to 2A current each"]
   },
+  // {
+  //   name: "Toki",
+  //   description:
+  //     "Affordable alternative to Arduino, offering superior customization options and advanced capabilities to unleash your creativity.",
+  //   image: "assets/roboki/Toki8.svg",
+  //   category: "Micro-controller",
+  //   type: "Hardware",
+  //   ageGroup: "9-12",
+  //   link: "",
+  //   features: [
+  //     "Wireless Code and Control",
+  //     "23 GPIO ports for easy expansion (14 directly usable)",
+  //     "Dual motor drivers supporting up to 2A current each"
+  //   ],
+  // },
+  
   {
     name: "Plode",
     description:

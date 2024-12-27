@@ -214,7 +214,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="hidden sm:flex flex-col space-y-4">
+          <div className="hidden sm:flex flex-col  space-y-4 ">
             <h1 className="text-lg font-tthoves opacity-70">
               Get the Plode app
             </h1>
@@ -245,7 +245,7 @@ const Footer = () => {
 
         <BottomFooter />
 
-        <div className="flex flex-col space-y-4 justify-between lg:flex-row lg:space-y-0 ">
+        <div className="flex flex-col space-y-4 px-8 justify-between lg:flex-row lg:space-y-0 ">
           <p className="text-xs lg:text-lg font-tthoves opacity-70">
             © 2024 Yudu Robotics. All rights reserved.
           </p>

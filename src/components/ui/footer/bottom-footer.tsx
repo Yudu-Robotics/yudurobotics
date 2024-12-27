@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import PrivacyContent from "./PrivacyContent";
 import TermsContent from "./TermsContent";
+import WarrantyContent from "./WarrantyContent";
 import renderImg from "@/imgImport";
 const footerData = [
   {
@@ -32,7 +33,7 @@ const footerData = [
       // { name: "Cookies", href: "#" },
       // { name: "Licenses", href: "#" },
       // { name: "Settings", href: "#" },
-      { name: "", href: "#" },
+      { name: "Warranty", href: "#", dialog: "warranty" },
     ],
   },
   // {
@@ -111,15 +112,15 @@ export default function BottomFooter() {
                       >
                         {link.name}
                       </button>
-                     ) :
+                    ) :
                       (
-                      <a
-                        href={link.href}
-                        className="text-primary-foreground transition-colors duration-200 text-sm lg:text-lg font-tthoves-medium"
-                      >
-                        {link.name}
-                      </a>
-                    )
+                        <a
+                          href={link.href}
+                          className="text-primary-foreground transition-colors duration-200 text-sm lg:text-lg font-tthoves-medium"
+                        >
+                          {link.name}
+                        </a>
+                      )
                     }
                   </li>
                 ))}
@@ -142,7 +143,7 @@ export default function BottomFooter() {
             <DialogTitle>
               {activeDialog === "privacy"
                 ? "Privacy Policy"
-                : "Terms & Conditions"}
+                : activeDialog === "terms" ? "Terms of Service" : "Warranty"}
             </DialogTitle>
             <DialogDescription className="text-black">
               {activeDialog === "privacy"
@@ -154,6 +155,7 @@ export default function BottomFooter() {
           <div className="text-black ">
             {activeDialog === "privacy" && <PrivacyContent />}
             {activeDialog === "terms" && <TermsContent />}
+            {activeDialog === "warranty" && <WarrantyContent />}
           </div>
         </DialogContent>
       </Dialog>

@@ -162,7 +162,7 @@ export default function ProductCategories() {
                 </Link>
               </div> */}
             </div>
-            <div className="hidden sm:flex flex-col space-y-3 bg-card-foreground rounded-xlg lg:w-[90%] p-8">
+            <div className="hidden sm:flex flex-col space-y-4 bg-card-foreground rounded-xlg lg:w-[90%] p-8 ">
               <div>
                 <img src={productDetails.image} className="w-[100%]" />
               </div>
@@ -180,11 +180,21 @@ export default function ProductCategories() {
                       <li key={index} className="flex items-center space-x-2 py-1">
                         {/* Use the Check icon from the public folder */}
                         <span>
-                          <img
-                            src="/assets/home/Check icon.svg"
-                            alt="Check icon"
-                            className="h-4 w-4"
-                          />
+                          <svg
+                            width="14"
+                            height="10"
+                            viewBox="0 0 14 10"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1.75 5L5.25 8.5L12.25 1.5"
+                              stroke="#4A1FCC"
+                              stroke-width="2.33333"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
                         </span>
                         <span className="font-tthoves text-md">{feature}</span>
                       </li>

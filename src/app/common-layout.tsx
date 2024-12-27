@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 import { Drawer, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -9,49 +10,102 @@ import renderImg from "@/imgImport";
 import Footer from "@/components/ui/footer/footer";
 import renderSvg from "@/svgImport";
 import FloatingWhatsApp from "@/components/ui/common/floating-whatsapp";
-import { products } from "@/data/mockData";
+
+const productsData = [
+  {
+    category: "Microcontrollers",
+    products: [
+      {
+        name: "TED",
+        description:
+          "TED is your all-in-one buddy, packed and ready to jump into action whenever you are.",
+        image: "ted8",
+        link: "/peecee",
+      },
+      {
+        name: "AI-1",
+        description:
+          "An intelligent camera powered by AI for dynamic object detection, tracking, and insights.",
+        image: "AIIII",
+        link: "",
+      },
+      {
+        name: "Roboki",
+        description:
+          "A durable and upgradable kit packed with everything you need to build, learn and explore robotics.",
+        image: "Roboki1",
+        link: "/roboki",
+      },
+    ],
+  },
+  {
+    category: "Animatronics",
+    products: [
+      {
+        name: "Zing",
+        description:
+          "A lifelike humanoid robot, perfect for interactive learning.",
+        image: "Zing1",
+        link: "/animatronics/zing",
+      },
+      {
+        name: "Crawl-e",
+        description: "A versatile hexapod explorer designed for learning.",
+        image: "Crawle1",
+        link: "/animatronics/crawl-e",
+      },
+    ],
+  },
+  {
+    category: "Toys",
+    products: [
+      {
+        name: "Play Dynamex",
+        description:
+          "Colorful plastic blocks inspiring creativity and hands-on building.",
+        image: "toy",
+        link: "/toys/play-dynamex",
+      },
+    ],
+  },
+];
 
 const ClientLayout = ({ children }: { children: React.ReactNode }) => {
   const NavBarItems = [
     { name: "Our Products", link: "/products" },
     { name: "The Partner Program", link: "/partner" },
-    // { name: "Blog", link: "/blog" },
   ];
 
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [isMenuView, setIsMenuView] = useState(false);
-  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
-  const toggleDrawer = (open: boolean) => (event: any) => {
-    //setIsDrawerOpen(open);
-  };
-
   const [isOurProductOpen, setIsOurProductOpen] = useState(false);
   const [openSubOption, setOpenSubOption] = useState<string | null>(null);
+
+  const toggleDrawer = (open: boolean) => (event: any) => {
+    setIsDrawerOpen(open);
+  };
+  
+
   const drawerList = () => (
-    <div
-      role="presentation"
-      onClick={toggleDrawer(false)}
-      onKeyDown={toggleDrawer(false)}
-      className="w-full h-full p-4  text-primary-foreground"
-    >
-      <div className="mb-12 flex justify-between">
+    <div className="w-full h-full p-4 text-primary-foreground">
+      {/* Header */}
+      <div className="mb-6 flex justify-between items-center">
         <img src={renderImg("logoblack")} alt="logo" />
         <div
-          className="text-black text-3xl font-tthoves-semiBold"
+          className="text-black text-xl font-tthoves-semiBold cursor-pointer"
           onClick={() => setIsDrawerOpen(false)}
         >
           X
         </div>
       </div>
-      <div className="flex flex-col space-y-8">
+
+      <div className="flex flex-col space-y-4 border-b  border-gray-300 pb-6">
         {NavBarItems.map((item, key) => (
-          <div key={key} className="font-tthoves-semiBold">
+          <div key={key} className="font-tthoves-semiBold text-primary ">
             {item.name === "Our Products" ? (
               <>
-                {/* Main "Our Products" Link */}
                 <div
                   onClick={() => setIsOurProductOpen(!isOurProductOpen)}
-                  className="text-base font-tthoves-semiBold text-black transition-colors duration-300 ease-in-out hover:text-destructive"
+                  className="text-base font-tthoves-semiBold text-black transition-colors duration-300 ease-in-out hover:text-destructive cursor-pointer flex justify-between items-center"
                 >
                   {item.name}
                   {isOurProductOpen ? (
@@ -60,186 +114,129 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
                     <ExpandMoreIcon className="ml-2" />
                   )}
                 </div>
-
                 {isOurProductOpen && (
-                  <div className=" flex flex-col items-start mt-2 ml-2">
-                    <button
-                      onClick={() =>
-                        setOpenSubOption(
-                          openSubOption === "Animatronics"
-                            ? null
-                            : "Animatronics"
-                        )
-                      }
-                      className="text-base font-tthoves-semiBold text-gray-700 transition-colors duration-300 ease-in-out hover:text-destructive"
-                    >
-                      Animatronics
-                      {openSubOption === "Animatronics" ? (
-                        <ExpandLessIcon className="ml-2" />
-                      ) : (
-                        <ExpandMoreIcon className="ml-2" />
-                      )}
-                    </button>
-                    {openSubOption === "Animatronics" && (
-                      <div className=" flex flex-col space-y-2 ml-2">
-                        <Link href="/zing" className="text-gray-600">
-                          Zing
-                        </Link>
-                        <Link href="/crawl_e" className="text-gray-600">
-                          Crawl-E
-                        </Link>
-                        <Link href="/klaw_b" className="text-gray-600">
-                          Klaw-B
-                        </Link>
+                  <div className="flex flex-col items-start mt-2 ml-2">
+                    {productsData.map((category, index) => (
+                      <div key={index} className="mb-4">
+                        <button
+                          onClick={() =>
+                            setOpenSubOption(
+                              openSubOption === category.category
+                                ? "null text-primary bg-purple-100 rounded-full"
+                                : category.category
+                            )
+                          }
+                          className="text-base font-tthoves-semiBold text-gray-700 transition-colors duration-300 ease-in-out hover:text-destructive"
+                        >
+                          {category.category}
+                          {openSubOption === category.category ?
+                           (
+                            <ExpandLessIcon className="ml-2" />
+                          ) : (
+                            <ExpandMoreIcon className="ml-2" />
+                          )}
+                        </button>
+                        {openSubOption === category.category && (
+                          <div className="flex flex-col space-y-4 mt-2">
+                            {category.products.map((product, productIndex) => (
+                              <div
+                                key={productIndex}
+                                className="flex items-start space-x-4 mb-4"
+                              >
+                                
+                                {/* Image */}
+                                <div className="flex flex-cols">
+                                {/* {console.log('KKKKKKKKKK',product.image)} */}
+                                  <img
+                                    src={renderImg(product.image)}
+                                    alt={product.name}
+                                    className="w-full h-full object-cover"
+                                  />
+                                </div>
+                                {/* Details */}
+                                <div>
+                                  <h3 className="text-md font-tthoves-semiBold text-black">
+                                    {product.name}
+                                  </h3>
+                                  <p className="text-sm text-gray-700">
+                                    {product.description}
+                                  </p>
+                                  <Link
+                                    href={product.link || "#"}
+                                    className="text-blue-600 text-sm mt-1 block"
+                                  >
+                                    Learn More &rarr;
+                                  </Link>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        )}
                       </div>
-                    )}
-
-                    <button
-                      onClick={() =>
-                        setOpenSubOption(
-                          openSubOption === "Codable Kits"
-                            ? null
-                            : "Codable Kits"
-                        )
-                      }
-                      className="text-base font-tthoves-semiBold text-gray-700 transition-colors duration-300 ease-in-out hover:text-destructive"
-                    >
-                      Codable Kits
-                      {openSubOption === "Codable Kits" ? (
-                        <ExpandLessIcon className="ml-2" />
-                      ) : (
-                        <ExpandMoreIcon className="ml-2" />
-                      )}
-                    </button>
-                    {openSubOption === "Codable Kits" && (
-                      <div className="flex flex-col space-y-2 ml-2">
-                        <Link href="/Roboki" className="text-gray-600">
-                          Roboki
-                        </Link>
-                        <Link href="/peecee" className="text-gray-600">
-                          TED
-                        </Link>
-                      </div>
-                    )}
+                    ))}
+                    <div className="mt-4">
+                      <Link
+                        href="/products"
+                        className="text-blue-600 text-sm font-medium block"
+                      >
+                        View all products →
+                      </Link>
+                    </div>
                   </div>
                 )}
               </>
             ) : (
-              <Link
-                href={item.link}
-                className="text-base font-tthoves-semiBold text-black transition-colors duration-300 ease-in-out hover:text-destructive"
-              >
-                {item.name}
-              </Link>
+              <div className="flex flex-col space-y-  gap-1  border-t border-gray-400 pt-6">
+                <Link
+                  href={item.link}
+                  className="text-base font-tthoves-semiBold text-black transition-colors duration-300 ease-in-out hover:text-destructive"
+                >
+                  {item.name}
+                </Link>
+              </div>
             )}
           </div>
         ))}
-      </div>
-    </div>
-  );
-  const [selectedProduct, setSelectedProduct] = useState(0);
-  const drawerListView = () => (
-    <div className="px-28">
-      <div
-        role="presentation"
-        onClick={toggleDrawer(false)}
-        onKeyDown={toggleDrawer(false)}
-        className=" h-auto  text-primary-foreground flex  justify-between"
-      >
-        <div className="w-full flex justify-between pt-4">
-          <div className="mb-12">
-            <img src={renderImg("logoblack")} alt="logo" />
-          </div>
-          <div className="font-tthoves ">
-            {NavBarItems.map((item, key) => (
-              <Link
-                key={key}
-                href={item.link}
-                className="text-base font-tthoves-semiBold text-black transition-colors duration-300 ease-in-out hover:text-destructive p-3 "
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
-      <div className="flex space-y-2 p-2 sm:p-4 text-black rounded-lg transition-all duration-200  overflow-x-hidden">
-        <div className="w-2/3 grid grid-cols-3 gap-3">
-          {products.map((product, index) => (
-            <div key={index} className="flex flex-wrap p-2">
-              {/* Product Image */}
-              <div className="w-1/2 flex justify-center items-center ">
-                <div className=" flex justify-center items-center ">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="object-cover w-24"
-                  />
-                </div>
-              </div>
-              <div className="w-1/2  ml-2 sm:ml-0">
-                <h3 className="text-lg font-tthoves-semiBold mb-2 lg:text-xl">
-                  {product.name}
-                </h3>
 
-                <p className="text-start text-secondary-foreground text-xs w-full tracking-wide lg:text-sm s">
-                  {product.description.substring(0, 50) + "..."}
-                </p>
-
-                <Link
-                  href={product.link}
-                  className="text-blue-700 text-sm sm:hidden"
-                >
-                  Learn more {"->"}
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="p-5">
-          <div className="p-5 bg-[#F4F1FE] rounded-3xl">
-            <div className="p-5 ">
-              <img
-                src={products[selectedProduct].image}
-                className="w-full h-full"
-              />
-            </div>
-            <div className="ml-5">
-              <div className="font-tthoves-medium text-lg">
-                {products[selectedProduct].name}
-              </div>
-              <div>{products[selectedProduct].description}</div>
-            </div>
-          </div>
-        </div>
       </div>
-      <div className="flex justify-center p-2">
-        <Link href="/products" className="p-2 text-primary font-tthoves-medium">
-          View all products {"->"}
+      {/* Footer Links */}
+      <div className="flex flex-col grid grid-cols-2 gap-0 space-y-2 border-t border-gray-300 pt-6">
+        <Link
+          href="/about"
+          className="text-sm text-gray-400 font-tthoves-semiBold hover:text-destructive"
+        >
+          About us
         </Link>
+        <Link
+          href="/contact"
+          className="text-sm text-gray-400 font-tthoves-semiBold hover:text-destructive"
+        >
+          Conatct us
+        </Link>
+        <Link
+          href="/contact"
+          className="text-sm text-gray-400 font-tthoves-semiBold hover:text-destructive"
+        >
+          Social
+        </Link>
+
+
+        {/* Add more footer links as needed */}
       </div>
+
     </div>
   );
-  // useEffect(() => {
-  //   if (hoveredItem === "Our Products") {
-  //     setIsMenuView(true);
-  //   }
-  // }, [hoveredItem]);
 
   return (
-    <div className=" group">
-      <div className="px-8 lg:px-28 py-4 bg-primary ">
-        {/* TopBar/NavBar */}
-        <div className="flex justify-between items-center ">
-          {/* Logo */}
+    <div className="group">
+      <div className="px-8 lg:px-28 py-4 bg-primary">
+        <div className="flex justify-between items-center">
           <Link
             href="/home"
             className="flex space-x-3 items-center w-[50%] lg:w-[20%]"
           >
             {renderSvg("logoYudoRobo")}
           </Link>
-
-          {/* Hamburger Menu for Mobile */}
           <div className="lg:hidden">
             <IconButton
               edge="start"
@@ -251,16 +248,11 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
               <MenuIcon />
             </IconButton>
           </div>
-
-          {/* Full Navbar for Desktop */}
           <div className="space-x-4 hidden lg:flex lg:justify-center lg:items-center text-primary-foreground">
             {NavBarItems.map((item, key) => (
               <div
                 key={key}
                 className="relative group font-tthoves-semiBold"
-                onMouseEnter={() => {
-                  setHoveredItem(item.name);
-                }}
               >
                 <Link
                   href={item.link}
@@ -273,23 +265,13 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
           </div>
         </div>
       </div>
-
-      {/* Drawer for Mobile */}
       <Drawer anchor="top" open={isDrawerOpen} onClose={toggleDrawer(false)}>
         {drawerList()}
       </Drawer>
-      <Drawer anchor="top" open={isMenuView} onClose={toggleDrawer(false)}>
-        {drawerListView()}
-      </Drawer>
-
       <FloatingWhatsApp />
-
-      {/* Main Content */}
       <main>{children}</main>
-
-      {/* Footer */}
       <div className="w-full -mb-1">{renderSvg("bottomSection")}</div>
-      <div className="px-8 lg:px-28 py-4 bg-primary ">
+      <div className="px-8 lg:px-28 py-4 bg-primary">
         <Footer />
       </div>
     </div>

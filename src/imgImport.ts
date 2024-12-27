@@ -20,6 +20,7 @@ const logoblack = "assets/logoblack.png";
 const good = "assets/other/good.svg";
 const india = "assets/other/india.svg";
 const reddot = "assets/other/reddot.svg";
+const check = "assets/home/Check icon.svg"
 
 // home
 const headerSection = "assets/other/Section Seperators.svg";
@@ -118,6 +119,14 @@ const playtrons = "assets/playtrons.png";
 
 //footer
 const madeInIndia = "assets/madeInIndia.svg";
+ 
+//mobile menu
+const ted8="assets/roboki/Ted8.svg"
+const toy = "/assets/other/playdynamex1.svg"
+const Crawle1 = "/assets/other/Crawle1.svg"
+const Zing1 ="/assets/other/Zing1.svg"
+const Roboki1="assets/roboki/roboki8.svg"
+const AIIII = "assets/roboki/AI-I-8.svg"
 
 function renderImg(imgName: string) {
   switch (imgName) {
@@ -210,6 +219,8 @@ function renderImg(imgName: string) {
       return macbook;
     case "handDrawArrow2":
       return handDrawArrow2;
+    case "check":
+      return check;
 
     case "arrowUpRight":
       return arrowUpRight;
@@ -350,6 +361,26 @@ function renderImg(imgName: string) {
     //footer
     case "madeInIndia":
       return madeInIndia;
+
+      case "ted8":
+        return ted8;
+
+        case "toy":
+          return toy;
+
+          case "Crawle1":
+          return Crawle1;
+
+          case "Zing1":
+          return Zing1;
+
+          case "Roboki1":
+          return Roboki1;
+
+          case "AIIII":
+          return AIIII;
+
+
   }
 }
 
