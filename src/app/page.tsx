@@ -1,5 +1,6 @@
-import HomePage from './home/page';
+import { redirect } from "next/navigation";
 
 export default async function Home() {
-  return <HomePage />;
+  redirect("/home");
+  return (<main></main>);
 }
