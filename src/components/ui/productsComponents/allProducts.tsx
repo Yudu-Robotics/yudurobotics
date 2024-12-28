@@ -91,7 +91,7 @@ const AllProductsComponent = () => {
       {/* Filters and Search */}
       <div className="flex flex-wrap items-center justify-between gap-4 p-4 rounded-lg">
         {/* Filters */}
-        <div className="flex border border-gray-300 rounded-lg overflow-hidden w-full sm:w-[48%] xl:w-[28%] bg-white h-[40px]">
+        <div className="flex border border-gray-300 rounded-lg overflow-hidden w-full  xl:w-[28%] bg-white h-[40px]">
           {filters.map((filter, index) => (
             <button
               key={index}
@@ -107,7 +107,7 @@ const AllProductsComponent = () => {
         </div>
 
         {/* Age Groups */}
-        <div className="flex border border-gray-300 rounded-lg overflow-hidden w-full sm:w-[48%] xl:w-[19%] bg-white h-[40px]">
+        <div className="flex border border-gray-300 rounded-lg overflow-hidden w-full  xl:w-[19%] bg-white h-[40px]">
           {ageGroups.map((ageGroup, index) => (
             <button
               key={index}
@@ -123,7 +123,7 @@ const AllProductsComponent = () => {
         </div>
 
         {/* Product Category Dropdown */}
-        <div className="relative w-full sm:w-[48%] xl:w-[23%]">
+        <div className="relative w-full  xl:w-[23%]">
           <select
             className="w-full h-[40px] px-4 py-2 rounded-lg border border-gray-300 text-gray-700 focus:ring-2 focus:ring-purple-600 bg-white"
             value={selectedCategory}
@@ -139,7 +139,7 @@ const AllProductsComponent = () => {
         </div>
 
         {/* Search Input */}
-        <div className="relative w-full sm:w-[48%] xl:w-[23%]">
+        <div className="relative w-full  xl:w-[23%]">
           <input
             type="text"
             className="w-full h-[40px] pl-10 pr-4 py-2 rounded-lg border border-gray-300 text-gray-700 focus:ring-2 focus:ring-purple-600 focus:outline-none bg-white"
@@ -154,7 +154,7 @@ const AllProductsComponent = () => {
       {/* Hardware Products */}
       <div className="mb-8">
         <CustomHeading title="Hardware" />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {hardwareProducts.map((product) => (
             product.link && product.link !== "#" ? (
               <Link href={product.link} key={product.name}>
@@ -172,7 +172,7 @@ const AllProductsComponent = () => {
       {/* Software Products */}
       <div className="mb-8">
         <CustomHeading title="Software" />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {softwareProducts.map((product) => (
             product.link && product.link !== "#" ? (
               <Link href={product.link} key={product.name}>
@@ -190,7 +190,7 @@ const AllProductsComponent = () => {
       {/* Curriculum Products */}
       <div className="mb-8">
         <CustomHeading title="Curriculum" />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {curriculumProducts.map((product) => (
             product.link && product.link !== "#" ? (
               <Link href={product.link} key={product.name}>

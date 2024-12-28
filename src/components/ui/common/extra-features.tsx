@@ -98,7 +98,7 @@ const ExtraFeatures: React.FC<{
             
             <img src={renderImg("arrowdown")} 
             alt="Arrow Image" 
-            className="absolute bottom-[-150px] right-[10px] w-25 h-35 rotate-[45deg] translate-x-0 translate-y-0 filter brightness-20 md:right-[50px] lg:translate-x-[-40px] xs:translate-x-[40px] xs:translate-y-[-30px]" />
+            className="absolute bottom-[-150px] right-[10px] w-25 h-35 rotate-[45deg] translate-x-0 translate-y-0 filter brightness-20 md:right-[50px] lg:translate-x-[-40px] md:translate-y-[-30px] xs:translate-x-[40px] xs:translate-y-[-35px] sm:translate-y-[-40px] lg:translate-x-[50px] lg:translate-y-[-10px] " />
 
             
           </div>

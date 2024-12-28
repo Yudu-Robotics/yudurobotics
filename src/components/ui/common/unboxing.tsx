@@ -24,7 +24,7 @@ function Unboxing({product}: propsValue) {
   return (
     <div className="flex flex-col space-y-12 md:space-y-32">
       <div className="flex flex-col space-y-6 md:space-y-0 md:flex-row md:space-x-32 justify-center  ">
-        <div className="sm:w-1/2 flex flex-col space-y-2 ">
+        <div className="w-full md:w-3/4 flex flex-col space-y-2 ">
           <h1 className="text-primary text-lg font-tthoves-medium xl:text-lg">
             Hardware
           </h1>
@@ -37,7 +37,7 @@ function Unboxing({product}: propsValue) {
           </h2>
         </div>
 
-        <div className="sm:w-1/2 flex flex-col space-y-8 justify-center sm:pt-0 pt-4">
+        <div className="w-full md:w-3/4 flex flex-col space-y-8 justify-center sm:pt-0 pt-4">
           {features.map(
             (
               value: { icon: string; heading: string; subheading: string },

@@ -2926,6 +2926,7 @@ const floatingWhatsApp = (
         <stop stopColor="#5BD066" />
         <stop offset="1" stopColor="#27B43E" />
       </linearGradient>
+      const Toki0 = "assets/roboki/Toki8.svg"
     </defs>
   </svg>
 );

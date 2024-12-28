@@ -107,7 +107,7 @@ export default function BottomFooter() {
                     {link.dialog ? (
                       <button
                         onClick={() => handleDialogOpen(link.dialog)}
-                        className="text-primary-foreground transition-colors duration-200 text-sm lg:text-lg font-tthoves-medium"
+                        className="text-primary-foreground  transition-colors duration-200 text-sm lg:text-lg font-tthoves-medium"
                       >
                         {link.name}
                       </button>

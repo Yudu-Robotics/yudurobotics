@@ -44,7 +44,7 @@ const VersatileSoftware: React.FC<SoftwareAdaptiveProps> = ({
     },
   ];
   return (
-    <div className="max-w-full flex flex-col space-y-10 py-10 xl:py-14  sm:mt-16">
+    <div className="max-w-full  flex flex-col space-y-10 py-10 xl:py-14  sm:mt-40 md:mt-12 xl:mt-1">
       <div className="flex flex-col space-y-2 justify-centerv items-center text-center">
         <h1 className="text-primary text-lg font-tthoves-medium ">
           {data ? "" : "Software"}
@@ -64,7 +64,7 @@ const VersatileSoftware: React.FC<SoftwareAdaptiveProps> = ({
         </h2>
         <p className="text-[#5423E6] font-tthoves-medium">{data?.subheading}</p>
       </div>
-      <div className="grid grid-col sm:space-x-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-5">
+      <div className="4">
         {(data?.features || features)?.map((feature: any, index: any) => (
           <div
             key={index}

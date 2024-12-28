@@ -68,7 +68,7 @@ function ProductFeatures() {
 
           {/* Humanoid image - placed on top */}
           <img
-            className="absolute -inset-11 md:-inset-16 w-full h-full object-contain"
+            className="absolute -inset-[1.825rem] xs:-inset-9 sm:-inset-[2.125rem] md:-inset-16 w-full h-full object-contain"
             src={renderImg("humanoid")}
             alt="Humanoid"
           />

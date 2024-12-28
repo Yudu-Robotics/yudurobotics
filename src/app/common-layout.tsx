@@ -42,6 +42,13 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
           image: "Roboki1",
           link: "/roboki",
         },
+        {
+          name: "Toki",
+          description:
+            "Affordable alternative to Arduino, offering superior customization options and advanced capabilities to unleash your creativity.",
+          image: "Toki0 ",
+          link: "",
+        },
       ],
     },
     {
@@ -75,26 +82,39 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
       ],
     },
   ];
-
+  const social_share = [
+    { icon: "assets/home/Twitter.svg", link: "https://twitter.com/YuduRobotics/" },
+    { icon: "assets/home/Linkedin.svg", link: "https://www.linkedin.com/showcase/yudu-robotics/" },
+    { icon: "assets/home/Instagram.svg", link: "https://www.instagram.com/yudurobotics/" },
+    { icon: "assets/home/Youtube.svg", link: "https://www.youtube.com/@YuduRobotics" },
+  ];
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isOurProductOpen, setIsOurProductOpen] = useState(false);
   const [openSubOption, setOpenSubOption] = useState<string | null>(null);
+  const [isSocialOpen, setIsSocialOpen] = useState(true);
 
-  const toggleDrawer = (open: boolean) => (event: any) => {
+  // const toggleDrawer = (open: boolean) => (event: any) => {
+  //   setIsDrawerOpen(open);
+  // };
+  const toggleDrawer = (open: boolean) => (event: React.MouseEvent | React.KeyboardEvent) => {
+    if (event.type === "keydown" && ((event as React.KeyboardEvent).key === "Tab" || (event as React.KeyboardEvent).key === "Shift")) {
+      return;
+    }
     setIsDrawerOpen(open);
   };
-  
+
+
 
   const drawerList = () => (
-    <div className="w-full h-full p-4 text-primary-foreground">
+    <div className="w-full pt-4 px-4 text-primary-foreground">
       {/* Header */}
       <div className="mb-6 flex justify-between items-center">
         <img src={renderImg("logoblack")} alt="logo" />
         <div
-          className="text-black text-xl font-tthoves-semiBold cursor-pointer"
+          className="cursor-pointer"
           onClick={() => setIsDrawerOpen(false)}
         >
-          X
+          <img src="assets/home/x-close.svg" alt="Close" className="w-6 h-6" />
         </div>
       </div>
 
@@ -105,7 +125,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
               <>
                 <div
                   onClick={() => setIsOurProductOpen(!isOurProductOpen)}
-                  className="text-base font-tthoves-semiBold text-black transition-colors duration-300 ease-in-out hover:text-destructive cursor-pointer flex justify-between items-center"
+                  className="text-base font-tthoves-semiBold text-black transition-colors duration-300 ease-in-out hover:text-purple-600 cursor-pointer flex justify-between items-center"
                 >
                   {item.name}
                   {isOurProductOpen ? (
@@ -126,15 +146,15 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
                                 : category.category
                             )
                           }
-                          className="text-base font-tthoves-semiBold text-gray-700 transition-colors duration-300 ease-in-out hover:text-destructive"
+                          className="text-base font-tthoves-semiBold text-gray-700 transition-colors duration-300 ease-in-out hover:text-purple-600"
                         >
                           {category.category}
                           {openSubOption === category.category ?
-                           (
-                            <ExpandLessIcon className="ml-2" />
-                          ) : (
-                            <ExpandMoreIcon className="ml-2" />
-                          )}
+                            (
+                              <ExpandLessIcon className="ml-2" />
+                            ) : (
+                              <ExpandMoreIcon className="ml-2" />
+                            )}
                         </button>
                         {openSubOption === category.category && (
                           <div className="flex flex-col space-y-4 mt-2">
@@ -143,10 +163,10 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
                                 key={productIndex}
                                 className="flex items-start space-x-4 mb-4"
                               >
-                                
+
                                 {/* Image */}
                                 <div className="flex flex-cols">
-                                {/* {console.log('KKKKKKKKKK',product.image)} */}
+                                  {/* {console.log('KKKKKKKKKK',product.image)} */}
                                   <img
                                     src={renderImg(product.image)}
                                     alt={product.name}
@@ -174,7 +194,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
                         )}
                       </div>
                     ))}
-                    <div className="mt-4">
+                    <div className="mt-4" onClick={() => setIsDrawerOpen(false)}>
                       <Link
                         href="/products"
                         className="text-blue-600 text-sm font-medium block"
@@ -189,7 +209,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
               <div className="flex flex-col space-y-  gap-1  border-t border-gray-400 pt-6">
                 <Link
                   href={item.link}
-                  className="text-base font-tthoves-semiBold text-black transition-colors duration-300 ease-in-out hover:text-destructive"
+                  className="text-base font-tthoves-semiBold text-black transition-colors duration-300 ease-in-out hover:text-purple-600"
                 >
                   {item.name}
                 </Link>
@@ -200,25 +220,57 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
 
       </div>
       {/* Footer Links */}
-      <div className="flex flex-col grid grid-cols-2 gap-0 space-y-2 border-t border-gray-300 pt-6">
-        <Link
+      <div
+        // onClick={() => setIsDrawerOpen(false)}
+        className="flex flex-col grid grid-cols-1 gap-0 h-full space-y-2 border-t border-gray-300 pt-6">
+        {/* <Link
           href="/about"
           className="text-sm text-gray-400 font-tthoves-semiBold hover:text-destructive"
         >
           About us
-        </Link>
-        <Link
-          href="/contact"
+        </Link> */}
+        {/* <Link
+          href="#Contact"
           className="text-sm text-gray-400 font-tthoves-semiBold hover:text-destructive"
         >
-          Conatct us
-        </Link>
-        <Link
-          href="/contact"
-          className="text-sm text-gray-400 font-tthoves-semiBold hover:text-destructive"
-        >
-          Social
-        </Link>
+          Contact us
+        </Link> */}
+        <div
+          onClick={() => setIsDrawerOpen(false)}>
+          <Link
+            href="#Contact"
+            className="text-sm text-gray-400 font-tthoves-semiBold hover:text-purple-600"
+          >
+            Contact us
+          </Link>
+        </div>
+        <div className="relative">
+          {isSocialOpen && (
+            <div className="w-full rounded-md">
+              <div className="flex justify-center gap-x-8 w-full">
+                {social_share.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 text-sm text-gray-700 hover:bg-gray-100"
+                    style={{ display: 'flex', alignItems: 'center' }}
+                  >
+                    <img
+                      src={social.icon}
+                      alt="social icon"
+                      className="w-full h-6 mb-10" // Adjust icon size
+                    />
+                    <span className="sr-only">{social.link}</span> {/* Screen reader text */}
+                  </a>
+                ))}
+              </div>
+
+
+            </div>
+          )}
+        </div>
 
 
         {/* Add more footer links as needed */}
@@ -229,39 +281,41 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div className="group">
-      <div className="px-8 lg:px-28 py-4 bg-primary">
-        <div className="flex justify-between items-center">
-          <Link
-            href="/home"
-            className="flex space-x-3 items-center w-[50%] lg:w-[20%]"
-          >
-            {renderSvg("logoYudoRobo")}
-          </Link>
-          <div className="lg:hidden">
-            <IconButton
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              onClick={() => setIsDrawerOpen(true)}
-              className="border border-transparent hover:border-hoverButton1 hover:bg-hoverButtonGradient bg-buttonGradient cursor-pointer items-center justify-center rounded-buttons transition-all ease-in-out"
+      <div className="fixed w-full top-0 left-0 h-[75px] z-50">
+        <div className="px-8 lg:px-28 py-4 bg-primary">
+          <div className="flex justify-between items-center">
+            <Link
+              href="/home"
+              className="flex space-x-3 items-center w-[50%] lg:w-[20%]"
             >
-              <MenuIcon />
-            </IconButton>
-          </div>
-          <div className="space-x-4 hidden lg:flex lg:justify-center lg:items-center text-primary-foreground">
-            {NavBarItems.map((item, key) => (
-              <div
-                key={key}
-                className="relative group font-tthoves-semiBold"
+              {renderSvg("logoYudoRobo")}
+            </Link>
+            <div className="lg:hidden">
+              <IconButton
+                edge="start"
+                color="inherit"
+                aria-label="menu"
+                onClick={() => setIsDrawerOpen(true)}
+                className="border border-transparent hover:border-hoverButton1 hover:bg-hoverButtonGradient bg-buttonGradient cursor-pointer items-center justify-center rounded-buttons transition-all ease-in-out"
               >
-                <Link
-                  href={item.link}
-                  className="text-primary-foreground text-center text-md px-3 hover:text-destructive"
+                <MenuIcon />
+              </IconButton>
+            </div>
+            <div className="space-x-4 hidden lg:flex lg:justify-center lg:items-center text-primary-foreground">
+              {NavBarItems.map((item, key) => (
+                <div
+                  key={key}
+                  className="relative group font-tthoves-semiBold"
                 >
-                  {item.name}
-                </Link>
-              </div>
-            ))}
+                  <Link
+                    href={item.link}
+                    className="text-primary-foreground text-center text-md px-3 hover:text-purple-600"
+                  >
+                    {item.name}
+                  </Link>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

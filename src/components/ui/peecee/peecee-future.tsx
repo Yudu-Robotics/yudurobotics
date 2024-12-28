@@ -11,15 +11,15 @@ const PeeceeFuture: React.FC<{ peeceeFuture: PeeceeFuture }> = ({
   peeceeFuture,
 }) => {
   return (
-    <div className="w-full    flex flex-col-reverse space-y-8 md:flex-row md:space-x-28 md:items-center py-10 justify-center">
-      <div className="sm:w-1/2  ">
+    <div className="w-full    flex flex-col-reverse space-y-8 md:flex-row md:space-x-28 md:items-center xs:py-4 md:py-10 justify-center xs:mb-4 sm:mb-2">
+      <div className="md:w-1/2  ">
         <img
           src={peeceeFuture.centerImage}
           alt="Product Image"
           className="w-full"
         />
       </div>
-      <div className="sm:w-1/2 flex flex-col md:w-[50%] space-y-2">
+      <div className="md:w-1/2 flex flex-col md:w-[50%] space-y-2">
         <h1 className=" text-primary sm:text-sm md:text-md lg:text-lg xl:text-xl font-tthoves-medium ">
           Hardware
         </h1>

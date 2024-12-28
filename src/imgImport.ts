@@ -127,6 +127,7 @@ const Crawle1 = "/assets/other/Crawle1.svg"
 const Zing1 ="/assets/other/Zing1.svg"
 const Roboki1="assets/roboki/roboki8.svg"
 const AIIII = "assets/roboki/AI-I-8.svg"
+const Toki0 = "assets/roboki/Toki8.svg"
 
 function renderImg(imgName: string) {
   switch (imgName) {
@@ -379,6 +380,8 @@ function renderImg(imgName: string) {
 
           case "AIIII":
           return AIIII;
+          case "Toki0 ":
+            return Toki0;
 
 
   }

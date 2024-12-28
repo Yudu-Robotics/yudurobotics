@@ -114,7 +114,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="flex items-center lg:w-[35%]">
+    <div className=" flex items-center lg:w-[35%]" id="Contact">
       <div className="bg-white rounded-lg shadow-lg p-8 w-[100%]">
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Form Fields */}

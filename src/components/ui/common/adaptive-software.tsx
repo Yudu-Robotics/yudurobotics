@@ -22,13 +22,13 @@ const SoftwareAdaptive: React.FC<SoftwareAdaptiveProps> = ({ data, image }) => {
     },
   ];
   return (
-    <div className="flex flex-col sm:-translate-y-52 sm:-mb-52 md:-translate-y-20 md:-mb-20 lg:-translate-y-16 lg:-mb-16 xl:-translate-y-48 xl:-mb-48 2xl:-translate-y-8 2xl:-mb-8">
+    <div className="flex flex-col sm:-translate-y-2 sm:-mb-52 md:-translate-y-20 md:-mb-20 lg:-translate-y-16 lg:-mb-16 xl:-translate-y-48 xl:-mb-48 2xl:-translate-y-8 2xl:-mb-8">
       <div className="w-full flex justify-between">
         <div className="w-full  flex flex-col space-y-2 pl-3 sm:pl-16">
           <h1 className="text-primary sm:text-sm md:text-sm lg:text-md xl:text-md font-tthoves-medium ">
             {data?.title || "Software"}
           </h1>
-          <h2 className="text-4xl lg:text-5xl xl:text-6xl font-piepie tracking-wide  w-[100%]">
+          <h2 className="text-4xl lg:text-5xl xl:text-6xl font-piepie tracking-wide  w-[100%] sm:pt-5 md:pt-2">
             {highlightWords("Playfully Adaptive", ["Adaptive"], "text-primary")}
           </h2>
           <h2 className="font-tthoves sm:text-sm md:text-md lg:text-lg xl:text-xl text-secondary-foreground pt-3 w-[70%] ">
@@ -42,7 +42,7 @@ const SoftwareAdaptive: React.FC<SoftwareAdaptiveProps> = ({ data, image }) => {
       </div>
 
       <div className="w-full flex flex-col justify-between gap-8 md:flex-row md:gap-4 lg:gap-6 xl:gap-8 2xl:gap-10">
-        <div className="w-full sm:w-1/2 p-4 md:p-8 lg:p-10 xl:p-12">
+        <div className="w-full md:w-1/2 p-4 md:p-8 lg:p-10 xl:p-12">
           <img
             src={renderImg(image || "monitorAndPhone")}
             alt=""
