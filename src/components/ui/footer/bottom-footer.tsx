@@ -95,10 +95,10 @@ export default function BottomFooter() {
   return (
     <footer className="py-6 font-tthoves">
       <div className="">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 itme-center">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 item-center">
           {footerData.map((section, index) => (
             <div key={index}>
-              <h4 className="font-tthoves-medium opacity-70 mb-4 text-lg sm:text-lg md:text-md lg:text-lg xl:text-xl">
+              <h4 className="font-tthoves-medium opacity-70 mb-4 text-lg sm:text-lg md:text-base lg:text-lg xl:text-xl">
                 {section.title}
               </h4>
               <ul>

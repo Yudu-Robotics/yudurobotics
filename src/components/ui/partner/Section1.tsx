@@ -48,7 +48,7 @@ function Section1() {
                 <img
                   src={renderImg("imgonp")}
                   alt="Image"
-                  className="absolute -top-4 -z-10"
+                  className="absolute md:-top-12 lg:-top-4 -z-10"
                 />
               </span>{" "}
               small. We’re{" "}
@@ -57,7 +57,7 @@ function Section1() {
                 <img
                   src={renderImg("imgong")}
                   alt="Image"
-                  className="absolute top-2 right-2 -z-10"
+                  className="absolute md:-bottom-20 md:-right-24 lg:top-2 lg:right-2 -z-10"
                 />
               </span>{" "}
               robots to{" "}
@@ -71,7 +71,7 @@ function Section1() {
               </span>{" "}
               <br />
               <span className="relative inline-block z-0">
-                minds<img src={renderImg("imgonm")} alt="" className="absolute -top-2 left-2 -z-10" /></span>{" "}
+                minds<img src={renderImg("imgonm")} alt="" className="absolute lg:-top-6 lg:left-2 md:bottom-4 md:left-2 -z-10" /></span>{" "}
               and change the game!”
             </p>
           </div>
@@ -109,16 +109,17 @@ function Section1() {
           {data.map((item: any) => (
             <div
               key={item.id}
-              className="flex justify-between space-y-4xl sm:my-8 my-3 sm:flex-row flex-col px-5"
+              className="flex justify-between sm:my-8 my-3 sm:flex-row flex-col px-5"
             >
               {/* Left section - 70% width on desktop, full width on mobile */}
-              <div className="font-piepie sm:text-[60px] sm:w-[70%] text-primary-foreground">
-                {highlightWords(item.title1, [""], "")}
-                <br />
-                {highlightWords(item.title2, [item.title2], item.bg)}
+              <div className="font-piepie sm:text-[60px] sm:w-[90%]" style={{ lineHeight: "1" }}>
+                <span className="block">{item.title1}</span>
+                <span className={`font-piepie sm:text-[60px] sm:w-[70%] ${item.bg} block`}>
+                  {item.title2}
+                </span>
               </div>
               {/* Right section - 30% width on desktop, full width on mobile */}
-              <div className="w-full sm:w-[30%] text-lg sm:text-base flex items-end h-auto">
+              <div className="w-full sm:w-[30%] text-lg sm:text-base flex items-center h-auto">
                 {item.desc}
               </div>
             </div>

@@ -19,7 +19,7 @@ interface Products {
 }
 
 export default function ProductCategories() {
-  const product_categories = ["Micro-controller", "Animatronics", "Toys"];
+  const product_categories = ["Codable", "Animatronics", "Mechanical"];
 
   const initialFilters = [
     { name: "Hardware", active: false },
@@ -49,13 +49,13 @@ export default function ProductCategories() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(product_categories[0]); // Set the default to the first category
   const [productDetails, setProductDetails] = useState<Products>(initialProductDetails);
   const [selectedProduct, setSelectedProduct] = useState<number>(0);
-  //const allowedProductNames = ["TED", "Roboki", "Zing", "Crawl-e", "Klaw-b", "Toki"];
-  //const [isAllowedFlag, setIsAllowedFlag] = useState<boolean>(true);
+  const allowedProductNames = ["TED", "Roboki", "Zing", "Crawl-e", "Klaw-b"];
+  const [isAllowedFlag, setIsAllowedFlag] = useState<boolean>(true);
 
   // Update product details when the category or other filters change
   useEffect(() => {
     if (filteredProducts.length > 0) {
-      //filteredProducts.length == 1 ? setIsAllowedFlag(false) : setIsAllowedFlag(true);
+      filteredProducts.length == 1 ? setIsAllowedFlag(false) : setIsAllowedFlag(true);
       setProductDetails(filteredProducts[0]);
     } else {
       setProductDetails(initialProductDetails);
@@ -68,8 +68,8 @@ export default function ProductCategories() {
     console.log("Product = ", product);
     setProductDetails(product);
     setSelectedProduct(index);
-    //let isAllowed = allowedProductNames.includes(product.name);
-    //setIsAllowedFlag(isAllowed);
+    let isAllowed = allowedProductNames.includes(product.name);
+    setIsAllowedFlag(isAllowed);
   };
 
   // Handle filter change
@@ -128,8 +128,8 @@ export default function ProductCategories() {
             {product_categories.map((category: string, key: number) => (
               <div
                 key={key}
-                className={`flex justify-start w-full sm:p-2  items-center font-tthoves-semiBold sm:font-bold text-sm lg:text-md cursor-pointer ${selectedCategory === category || (selectedCategory === null && key === 0)
-                  ? "text-primary bg-purple-100 rounded-full"
+                className={`flex justify-start w-full sm:p-2  items-center font-tthoves-semiBold sm:font-bold text-sm lg:text-base cursor-pointer ${selectedCategory === category || (selectedCategory === null && key === 0)
+                  ? "text-primary bg-purple-100"
                   : "hover:text-primary hover:bg-purple-50"
                   }`}
                 onClick={() => handleCategorySelection(category)}
@@ -191,13 +191,14 @@ export default function ProductCategories() {
                             />
                           </svg>
                         </span>
-                        <span className="font-tthoves text-md">{feature}</span>
+                        <span className="font-tthoves text-base">{feature}</span>
                       </li>
                     ))}
                   </ul>
                 )}
 
-                
+
+                {isAllowedFlag ? (
                   <Link
                     href={productDetails.link}
                     className="text-primary mt-4 text-base font-bold hover:scale-125"
@@ -223,6 +224,28 @@ export default function ProductCategories() {
                       </div>
                     </div>
                   </Link>
+                ) : (
+                  <div className="text-primary mt-4 text-base font-bold flex space-x-2 mt-4 items-center">
+                    <div>Coming soon</div>
+                    <div>
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.16699 7.00008H12.8337M12.8337 7.00008L7.00033 1.16675M12.8337 7.00008L7.00033 12.8334"
+                          stroke="#4A1FCC"
+                          strokeWidth="1.66667"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
 

@@ -41,7 +41,7 @@ const PlodeDownloade: React.FC<PlodeDownloadeProps> = ({
         {/* Buttons Section */}
         {
           <JumpingButtons
-            ishorizontal="true"
+            ishorizontal="false"
             text1={jumppingdata?.text1 || ""}
             text2={jumppingdata?.text2 || ""}
             bgColor={jumppingdata?.bgColor || ""}

@@ -9,7 +9,7 @@ export default function TermsContent() {
         www.yudurobotics.com, YOU AGREE TO BE BOUND BY THESE TERMS.{" "}
       </p>
       <br />
-      <p>
+      <p className="font-tthoves">
         Welcome to www.yudurobotics.com (“this website”). Yudu Robotics is a
         branch of{" "}
         <span className="font-tthoves-medium">Evobi Automations Pvt. Ltd.</span>{" "}
@@ -21,7 +21,7 @@ export default function TermsContent() {
         </span>{" "}
       </p>
       <br />
-      <p>
+      <p className="font-tthoves">
         <p className="font-tthoves-medium my-3">
           1. Purpose and Scope of Services
         </p>
@@ -31,7 +31,7 @@ export default function TermsContent() {
         you agree to engage solely with its content for informational purposes.
       </p>{" "}
       <br />
-      <p>
+      <p className="font-tthoves">
         <p className="font-tthoves-medium my-3">
           2. Intellectual Property Rights
         </p>
@@ -41,7 +41,7 @@ export default function TermsContent() {
         any materials from this website without prior written permission.
       </p>{" "}
       <br />
-      <p>
+      <p className="font-tthoves">
         <p className="font-tthoves-medium my-3">3. Prohibited Activities</p>You
         agree not to engage in any of the following activities while using our
         website:
@@ -67,7 +67,7 @@ export default function TermsContent() {
         </div>
       </p>{" "}
       <br />
-      <p>
+      <p className="font-tthoves">
         <p className="font-tthoves-medium my-3">4. Limitation of Liability</p>
         This website is provided on an “as-is” basis for informational purposes
         only. Yudu Robotics disclaims all warranties related to the accuracy,
@@ -76,7 +76,7 @@ export default function TermsContent() {
         website.
       </p>{" "}
       <br />
-      <p>
+      <p className="font-tthoves">
         <p className="font-tthoves-medium my-3">5. User-Generated Content</p>If
         you choose to provide feedback, suggestions, or other user-generated
         content, you grant Yudu Robotics a non-exclusive, royalty-free license
@@ -85,14 +85,14 @@ export default function TermsContent() {
         defamatory, or misleading information.
       </p>{" "}
       <br />
-      <p>
+      <p className="font-tthoves">
         <p className="font-tthoves-medium my-3">6. Changes to Terms</p>Yudu
         Robotics may update these Terms periodically to reflect changes in
         services or practices. Continued use of our website constitutes
         acceptance of these changes.
       </p>{" "}
       <br />
-      <p>
+      <p className="font-tthoves">
         <p className="font-tthoves-medium my-3">
           7. External Links and Third-Party
         </p>
@@ -102,14 +102,14 @@ export default function TermsContent() {
         advise reviewing the terms of any linked sites.
       </p>{" "}
       <br />
-      <p>
+      <p className="font-tthoves">
         <p className="font-tthoves-medium my-3">8. Governing Law These</p>Terms
         are governed by the laws of India. Any disputes related to these Terms,
         or your use of the website shall be resolved exclusively in the courts
         of Bangalore, Karnataka, India.
       </p>{" "}
       <br />
-      <p>
+      <p className="font-tthoves">
         <p className="font-tthoves-medium my-3">9. Contact Information​</p>If
         you have any questions or concerns, please reach out to our support team
         at

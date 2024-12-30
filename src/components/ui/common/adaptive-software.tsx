@@ -27,13 +27,13 @@ const SoftwareAdaptive: React.FC<SoftwareAdaptiveProps> = ({ data, image, produc
     <div className="flex flex-col sm:-translate-y-2 sm:-mb-52 md:-translate-y-20 md:-mb-20 lg:-translate-y-16 lg:-mb-16 xl:-translate-y-48 xl:-mb-48 2xl:-translate-y-8 2xl:-mb-8">
       <div className="w-full flex justify-between">
         <div className="w-full  flex flex-col space-y-2 pl-3 sm:pl-16">
-          <h1 className="text-primary sm:text-sm md:text-sm lg:text-md xl:text-md font-tthoves-medium ">
+          <h1 className="text-primary sm:text-sm md:text-sm lg:text-base xl:text-base font-tthoves-medium ">
             {data?.title || "Software"}
           </h1>
           <h2 className="text-4xl lg:text-5xl xl:text-6xl font-piepie tracking-wide  w-[100%] sm:pt-5 md:pt-2">
             {highlightWords("Playfully Adaptive", ["Adaptive"], "text-primary")}
           </h2>
-          <h2 className="font-tthoves sm:text-sm md:text-md lg:text-lg xl:text-xl text-secondary-foreground pt-3 w-[70%] ">
+          <h2 className="font-tthoves sm:text-sm md:text-base lg:text-lg xl:text-xl text-secondary-foreground pt-3 w-[70%] ">
             {`${product} adjusts itself to suit anyone, whether you're just starting out or ready to tackle big projects.`}
           </h2>
         </div>

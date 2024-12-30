@@ -69,7 +69,7 @@ export default function Peecee() {
               </div>
 
               {/* Subtext */}
-              <div className="text-lg text-opacity-35 text-primary-foreground sm:text-sm md:text-md lg:text-lg xl:text-xl font-tthoves w-[100%] sm:w-[60%] sm:text-start text-center">
+              <div className="text-lg text-opacity-35 text-primary-foreground sm:text-sm md:text-base lg:text-lg xl:text-xl font-tthoves w-[100%] sm:w-[60%] sm:text-start text-center">
                 {data.subheading}
               </div>
             </div>
@@ -113,8 +113,8 @@ export default function Peecee() {
         <div className="py-8 lg:py-16">
           <Unboxing product="PeeCee TED"/>
         </div>
-        <div className="text-sm py-24 mb-0 text-center font-bold flex flex-col space-y-6 justify-center items-center">
-          <p className="text-lg sm:text-lg md:text-md lg:text-lg xl:text-xl font-tthoves-semiBold">
+        <div className="text-sm py-24 my-8 text-center font-bold flex flex-col space-y-6 justify-center items-center">
+          <p className="text-lg sm:text-lg md:text-base lg:text-lg xl:text-xl font-tthoves-semiBold">
             <span className="text-[#4A4A4F] opacity-70">
               Hover over each feature below to{" "}
             </span>

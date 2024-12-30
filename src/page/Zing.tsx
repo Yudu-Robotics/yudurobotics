@@ -39,7 +39,7 @@ export default function Zing() {
               </div>
 
               {/* Subtext */}
-              <div className="font-tthoves text-opacity-35 text-primary-foreground sm:text-sm md:text-md lg:text-lg xl:text-xl  w-[100%] sm:w-[60%] text-lg ">
+              <div className="font-tthoves text-opacity-35 text-primary-foreground sm:text-sm md:text-base lg:text-lg xl:text-xl  w-[100%] sm:w-[60%] text-lg ">
                 {data.subheading}
               </div>
             </div>
@@ -80,7 +80,7 @@ export default function Zing() {
       </div>
       <div className="py-8 lg:py-16 px-4 sm:px-12 lg:px-28 text-black ">
         <ProductCeoReviewsContainer comment={data} />
-        <div className="py-8 lg:py-12">
+        <div className="py-8 lg:py-24">
           <Unboxing product="Zing"/>
         </div>
         <div className="text-xl py-24 text-center  flex flex-col space-y-6 justify-center items-center">

@@ -17,7 +17,7 @@ function FlexibleLearning({ newProduct = false, title, desc, product }: propsVal
         {renderSvg("middleHeaderSection")}
       </div>
       <div className="bg-primary w-full -mt-1">
-        <div className="flex flex-col  md:flex-row md:space-x-16 py-10 sm:px-10 md:px-20">
+        <div className="flex flex-col  md:flex-row md:space-x-16 lg:space-x-8 py-10 sm:px-10 md:px-12 lg:px-8 xl:px-20">
           <div className="w-full flex flex-col md:justify-start md:items-start md:space-y-8 space-y-4">
             {newProduct && (
               <div className="w-full mx-3">
@@ -29,12 +29,12 @@ function FlexibleLearning({ newProduct = false, title, desc, product }: propsVal
 
             <div className="space-y-4 px-3 ">
               {/* Main Headline */}
-              <div className="font-piepie text-4xl md:text-5xl lg:text-7xl text-primary-foreground">
+              <div className="font-piepie text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-primary-foreground">
                 {title || "Flexible Learning Paths"}
               </div>
 
               {/* Subtext */}
-              <div className="pt-5 font-tthoves text-lg md:text-lg lg:text-2xl opacity-80 lg:w-[80%] text-primary-foreground ">
+              <div className="pt-5 font-tthoves text-lg md:text-lg lg:text-xl xl:text-2xl opacity-80 lg:w-[80%] text-primary-foreground">
                 {desc ||
                   `${product}’s curriculum offers flexibility, allowing kits to be used independently or combined. The Adaptive LMS supports a self-paced learning approach, suitable for both individual study and flipped classrooms.`}
               </div>
@@ -43,8 +43,8 @@ function FlexibleLearning({ newProduct = false, title, desc, product }: propsVal
               <JumpingButtons ishorizontal="true" />
             </div> */}
           </div>
-          <div className="w-full  flex justify-center items-center p-8 ">
-            <img src="assets/peecee/gril.png" className="" />
+          <div className="w-full  flex justify-center items-center p-4">
+            <img src="assets/peecee/gril.png" alt="" />
           </div>
         </div>
       </div>

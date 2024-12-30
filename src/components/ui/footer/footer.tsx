@@ -102,7 +102,7 @@ const Footer = () => {
     {
       type: "Phone",
       text: "Mon-Fri from 8am to 5pm.",
-      contact_by: "+91 9606755032",
+      contact_by: "+91 960 675 5032",
       icon_image: <FooterIcon iconType="phone" color={iconColor[index]} />,
     },
   ];
@@ -189,7 +189,7 @@ const Footer = () => {
                   <div>{value.icon_image}</div>
                   <h1 className="font-tthoves ">{value.type}</h1>
                   <p className="font-tthoves opacity-70">{value.text}</p>
-                  <p className="w-[70%] xl:text-lg md:text-md font-tthoves">
+                  <p className="w-[70%] xl:text-lg md:text-base font-tthoves">
                     {value.contact_by}
                   </p>
                 </div>
@@ -245,7 +245,7 @@ const Footer = () => {
 
         <BottomFooter />
 
-        <div className="flex flex-col space-y-4  lg:space-x-32 justify-start lg:justify-start lg:flex-row lg:space-y-0 ">
+        <div className="flex flex-col space-y-4 lg:space-x-32 justify-start lg:justify-start lg:flex-row lg:space-y-0 ">
           <p className="text-xs lg:text-lg font-tthoves opacity-70">
             © 2024 Yudu Robotics. All rights reserved.
           </p>

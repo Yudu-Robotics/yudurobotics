@@ -19,7 +19,7 @@ const FAQs = ({ product }: { product: string }) => {
         <h1 className="w-full font-piepie text-center  text-3xl sm:text-4xl text-black sm:racking-wider">
           Got Questions? We’ve Got Answers
         </h1>
-        <p className="text-secondary-foreground text-center text-lg sm:text-start sm:text-sm md:text-md lg:text-lg xl:text-xl pt-4 font-tthoves">
+        <p className="text-secondary-foreground text-center text-lg sm:text-start sm:text-sm md:text-base lg:text-lg xl:text-xl pt-4 font-tthoves">
           Find the information you need with our frequently asked questions.
         </p>
       </div>
@@ -34,7 +34,7 @@ const FAQs = ({ product }: { product: string }) => {
               onClick={() => toggleFAQ(index)}
               className="flex justify-between items-center w-full focus:outline-none"
             >
-              <h3 className="text-md text-start lg:text-lg xl:text-xl text-[#0A041A] font-tthoves-medium">
+              <h3 className="text-base text-start lg:text-lg xl:text-xl text-[#0A041A] font-tthoves-medium">
                 {item.question}
               </h3>
               <img

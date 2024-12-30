@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Drawer, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"; // Chevron Down
@@ -16,16 +16,24 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
     { name: "Our Products", link: "/products" },
     { name: "The Partner Program", link: "/partner" },
   ];
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // Smooth scrolling effect
+      behavior: "smooth",
     });
+  };
+
+  const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>, link: string) => {
+    if (window.location.pathname === link) {
+      event.preventDefault();
+      window.location.href = link;
+    }
   };
 
   const productsData = [
     {
-      category: "Microcontrollers",
+      category: "Codable Kits",
       products: [
         {
           name: "TED",
@@ -76,14 +84,14 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
       ],
     },
     {
-      category: "Toys",
+      category: "Mechanical",
       products: [
         {
           name: "Play Dynamex",
           description:
             "Colorful plastic blocks inspiring creativity and hands-on building.",
           image: "toy",
-          link: "/toys/play-dynamex",
+          link: "/Mechanical/play-dynamex",
         },
       ],
     },
@@ -98,6 +106,26 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
   const [isOurProductOpen, setIsOurProductOpen] = useState(false);
   const [openSubOption, setOpenSubOption] = useState<string | null>(null);
   const [isSocialOpen, setIsSocialOpen] = useState(true);
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Show the button only after scrolling down 200px
+      if (window.scrollY > 350) {
+        setShowScrollToTop(true);
+      } else {
+        setShowScrollToTop(false);
+      }
+    };
+
+    // Attach scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   // const toggleDrawer = (open: boolean) => (event: any) => {
   //   setIsDrawerOpen(open);
@@ -181,7 +209,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
                                 </div>
                                 {/* Details */}
                                 <div>
-                                  <h3 className="text-md font-tthoves-semiBold text-black">
+                                  <h3 className="text-base font-tthoves-semiBold text-black">
                                     {product.name}
                                   </h3>
                                   <p className="text-sm text-gray-700">
@@ -315,7 +343,8 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
                 >
                   <Link
                     href={item.link}
-                    className="text-primary-foreground text-center text-md px-3 hover:text-purple-600"
+                    onClick={(e) => handleLinkClick(e, item.link)}
+                    className="text-primary-foreground text-center text-base px-3 hover:text-purple-600"
                   >
                     {item.name}
                   </Link>
@@ -329,16 +358,18 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
         {drawerList()}
       </Drawer>
       <FloatingWhatsApp />
-      <button
-        onClick={scrollToTop}
-        className="fixed bottom-0 right-4 z-40  text-white p-3 rounded-full shadow-lg transition-all "
-        title="Scroll to top"
-      >
-        <img src="assets/home/Arrowup.png" alt="scroll-up" />
-        
-      </button>
-      <main>{children}</main>
-      <div className="w-full -mb-1">{renderSvg("bottomSection")}</div>
+      {showScrollToTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-0 right-4 z-40  text-white p-3 rounded-full shadow-lg transition-all "
+          title="Scroll to top"
+        >
+          <img src="assets/home/Arrowup.png" alt="scroll-up" />
+
+        </button>
+      )}
+      <main className="mb-24">{children}</main>
+      <div className="w-full -mb-1 mt-24 pt-24">{renderSvg("bottomSection")}</div>
       <div className="px-8 lg:px-28 py-4 bg-primary">
         <Footer />
       </div>

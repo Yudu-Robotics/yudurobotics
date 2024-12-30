@@ -77,8 +77,8 @@ export default function Section3() {
               key={item.id}
               className="sm:w-1/4  h-1/4 flex flex-col  justify-center "
             >
-              <h2 className="font-bold text-lg">{item.title}</h2>
-              <p className="sm:px-16">{item.desc}</p>
+              <h2 className="font-tthoves-bold text-base">{item.title}</h2>
+              <p className="font-tthoves sm:px-4 lg:px-16 text-base">{item.desc}</p>
             </div>
           ))}
         </div>

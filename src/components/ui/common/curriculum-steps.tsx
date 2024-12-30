@@ -12,11 +12,11 @@ const CurriculumSteps: React.FC<{
   return (
     <div>
       {/* Arrow Image */}
-      <div className="flex xs:ml-40 xs:mr-10 xs:mt-[-80px]"> {/* Added right margin */}
+      <div className="flex xs:ml-40 xs:mr-10 xs:mt-[-50px]"> {/* Added right margin */}
         <img
           src={renderImg("handArrow")}
           alt="Hand Arrow"
-          className="md:-mb-8 rotate-[174.77deg]" // Applying rotation here
+          className="md:-mb-16 rotate-[0.77deg]" // Applying rotation here
         />
       </div>
 
@@ -25,7 +25,7 @@ const CurriculumSteps: React.FC<{
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Heading and Subheading Section */}
         <div className="flex flex-col md:space-y-2 space-y-1">
-          <h1 className="font-tthoves-semiBold sm:text-sm md:text-md lg:text-lg xl:text-xl text-primary">
+          <h1 className="font-tthoves-semiBold sm:text-sm md:text-base lg:text-lg xl:text-xl text-primary">
             Curriculum
           </h1>
 
@@ -60,10 +60,10 @@ const CurriculumSteps: React.FC<{
             <>
               {data.step.length / 2 > index && (
                 <div key={index} className="flex flex-col space-y-1 py-2">
-                  <h1 className="font-tthoves-semiBold text-[#303036] text-xl sm:text-sm md:text-md lg:text-lg xl:text-xl">
+                  <h1 className="font-tthoves-semiBold text-[#303036] text-xl sm:text-sm md:text-base lg:text-lg xl:text-xl">
                     {value.title}
                   </h1>
-                  <p className="ont-tthoves text-lg sm:text-sm md:text-sm lg:text-md xl:text-md text-secondary-foreground">
+                  <p className="font-tthoves text-lg sm:text-sm md:text-sm lg:text-base xl:text-base text-secondary-foreground">
                     {value.desc}
                   </p>
                 </div>
@@ -78,10 +78,10 @@ const CurriculumSteps: React.FC<{
             <>
               {data.step.length / 2 <= index && (
                 <div key={index} className="flex flex-col space-y-1 py-2">
-                  <h1 className="font-tthoves-semiBold text-[#303036] text-xl sm:text-sm md:text-md lg:text-lg xl:text-xl">
+                  <h1 className="font-tthoves-semiBold text-[#303036] text-xl sm:text-sm md:text-base lg:text-lg xl:text-xl">
                     {value.title}
                   </h1>
-                  <p className="font-tthoves text-lg sm:text-sm md:text-sm lg:text-md xl:text-md text-secondary-foreground">
+                  <p className="font-tthoves text-lg sm:text-sm md:text-sm lg:text-base xl:text-base text-secondary-foreground">
                     {value.desc}
                   </p>
                 </div>

@@ -154,7 +154,7 @@ export const products = [
     description:
       "TED is your all-in-one buddy, packed and ready to jump into action whenever you are.",
     image: "assets/roboki/Ted8.svg",
-    category: "Micro-controller",
+    category: "Codable",
     type: "Hardware",
     ageGroup: "9-12",
     link: "/peecee",
@@ -165,7 +165,7 @@ export const products = [
     description:
       "An intelligent camera powered by AI for dynamic object detection, tracking, and insights.",
     image: "assets/roboki/AI-I-8.svg",
-    category: "Micro-controller",
+    category: "Codable",
     type: "Hardware",
     ageGroup: "9-12",
     link: "",
@@ -175,7 +175,7 @@ export const products = [
     description:
       "A durable and upgradable kit packed with everything you need to build, learn and explore robotics.",
     image: "assets/roboki/roboki8.svg",
-    category: "Micro-controller",
+    category: "Codable",
     type: "Hardware",
     ageGroup: "9-12",
     link: "/roboki",
@@ -186,7 +186,7 @@ export const products = [
     description:
       "Affordable alternative to Arduino, offering superior customization options and advanced capabilities to unleash your creativity.",
     image: "assets/roboki/Toki8.svg",
-    category: "Micro-controller",
+    category: "Codable",
     type: "Hardware",
     ageGroup: "9-12",
     link: "",
@@ -213,7 +213,7 @@ export const products = [
     description:
       "The one-stop-shop to interact with your devices and learn more about robotics and logic.",
     image: "assets/roboki/Plode0.svg",
-    category: "Micro-controller",
+    category: "Software",
     type: "Software",
     ageGroup: "12+",
     link: "",
@@ -251,7 +251,7 @@ export const products = [
     ageGroup: "12+",
     link: "",
   },
-  {
+  /* {
     name: "Firepen 3D",
     description:
       "High-precision 3D printer for creative, customizable, and rapid prototyping solutions.",
@@ -261,13 +261,13 @@ export const products = [
     ageGroup: "12+",
     link: "",
     features: ["Spool Break Detection", "Removable Magnetic Bed", "Display Screen: Color with Touch Screen", "Maximum Printing size: 200mm x 200mm x 190mm"]
-  },
+  }, */
   {
     name: "Play Dynamex",
     description:
       "Colorful plastic blocks inspiring creativity, imagination, and hands-on building fun.",
     image: "assets/products/Playdynamics1.svg",
-    category: "Toys",
+    category: "Mechanical",
     type: "Hardware",
     ageGroup: "9-12",
     link: "",
@@ -1184,13 +1184,13 @@ export const mockData: { [key: string]: ProductData } = {
               "Supports WiFi, Bluetooth 5.0, and USB connections. Program and control Crawl-e using Plode for a comprehensive robotic experience.",
             video: "versatile",
           },
-          {
+          /* {
             icon: "assets/zing/Featured icon (17).png",
             heading: "DIY-Friendly Design",
             description:
               "Designed with replaceable parts and a 3D simulator coming soon, making it easy to customize and repair.",
             video: "friendly",
-          },
+          }, */
         ],
       },
       software_experience: [
@@ -1324,12 +1324,12 @@ export const mockData: { [key: string]: ProductData } = {
     images: ["assets/klawb/klawb.png", "assets/klawb/klawbhardware1.png"],
     sectionHeader: "headerSection",
     ceoComment:
-      "Klaw-B’s accuracy and ease of use have made it an essential tool in our automation process.",
+      "Klaw-b’s accuracy and ease of use have made it an essential tool in our automation process.",
     features_data: {
       section1: {
         heading: "Ready to Go, Right Out of the Box",
         subheading:
-          "Klaw-B is your precision robotic arm, engineered for accuracy and flexibility. With its advanced mechanics, Klaw-B handles intricate tasks effortlessly, making it ideal for both complex projects and hands-on experiments.",
+          "Klaw-b is your precision robotic arm, engineered for accuracy and flexibility. With its advanced mechanics, Klaw-b handles intricate tasks effortlessly, making it ideal for both complex projects and hands-on experiments.",
         centerImage: "assets/klawb/klawbhardware1.png",
         features: [
           {
@@ -1372,7 +1372,7 @@ export const mockData: { [key: string]: ProductData } = {
       hardware_precision: {
         heading: "Precision Redefined",
         subheading:
-          "With advanced mechanics and flexible reach, Klaw-B handles complex tasks effortlessly. Its robust build ensures reliable performance, while intuitive controls make integration seamless.",
+          "With advanced mechanics and flexible reach, Klaw-b handles complex tasks effortlessly. Its robust build ensures reliable performance, while intuitive controls make integration seamless.",
         centerImage: "assets/klawb/klaw-2.png",
         features: [
           {
@@ -1469,7 +1469,7 @@ export const mockData: { [key: string]: ProductData } = {
     working: {
       heading: "How It Works",
       subheading:
-        "Link Klaw-B to the Plode app for precise control over tasks and automation. Program its movements and operations effortlessly with intuitive coding.",
+        "Link Klaw-b to the Plode app for precise control over tasks and automation. Program its movements and operations effortlessly with intuitive coding.",
       section1: {
         image: "assets/klawb/klawb-work.png",
         heading: "Explore & Create",
@@ -2213,7 +2213,7 @@ export const mockData: { [key: string]: ProductData } = {
         text2: "Join Forces",
         bgColor: "#2CF7A4",
         textColor: "#0A4029",
-        link: "#footer-contact-form-container",
+        link: "#footer-contact-form-component",
       },
       {
         text1: "Learn",

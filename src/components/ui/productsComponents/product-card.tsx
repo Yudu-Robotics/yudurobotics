@@ -17,10 +17,12 @@ const ProductCard: React.FC<ProductCardProps> = ({
   handleClick = () => {}, // Default is an empty function
 }) => (
   <div
-    {...(product.link && product.link !== "" && product.link !== "#" && { onClick: handleClick })}
+    onClick={() => {
+      handleClick();
+    }}
     className={`flex sm:flex-col space-y-2 p-2 sm:p-4 text-black rounded-lg transition-all duration-200 hover:bg-card-foreground hover:scale-90 
-        ${isSelected ? "bg-card-foreground scale-90" : ""}
-      `}
+      ${isSelected ? "bg-card-foreground scale-90" : ""}
+    `}
   >
     {/* Product Image */}
     <div className="w-1/2 h-full flex justify-center items-center sm:w-full">

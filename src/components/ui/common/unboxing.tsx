@@ -18,7 +18,7 @@ function Unboxing({product}: propsValue) {
       icon: "strong",
       heading: "Playful Yet Strong",
       subheading:
-        `Don’t let the playful look fool you—${product} is built to withstand all the drops, bumps, and scrapes that come with serious fun and it comes in a colorful sturdy storage BOX designed for reuseability.`,
+        `Don’t let the playful look fool you—${product} is built to withstand all the drops, bumps, and scrapes that come with serious fun and it comes in a colorful sturdy storage box designed for reuseability.`,
     },
   ];
   return (
@@ -49,7 +49,7 @@ function Unboxing({product}: propsValue) {
                   <h1 className="font-tthoves-semiBold text-xl xl:text-2xl">
                     {value.heading}
                   </h1>
-                  <h2 className="text-md sm:text-md xl:text-xl text-secondary-foreground md:w-[80%] pt-1 font-tthoves">
+                  <h2 className="text-base sm:text-base xl:text-xl text-secondary-foreground md:w-[80%] pt-1 font-tthoves">
                     {value.subheading}
                   </h2>
                 </div>

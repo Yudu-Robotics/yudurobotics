@@ -58,19 +58,19 @@ const VersatileSoftware: React.FC<SoftwareAdaptiveProps> = ({
                 "text-primary"
               )}
         </h2>
-        <h2 className="text-lg font-tthoves sm:text-sm md:text-md lg:text-lg xl:text-xl text-secondary-foreground pt-2 w-[100%] lg:w-[40%]">
+        <h2 className="text-lg font-tthoves sm:text-sm md:text-base lg:text-lg xl:text-xl text-secondary-foreground pt-2 w-[100%] lg:w-[40%]">
           {data?.desc ||
             "Plode is ready for anything, handling everything from your first coding steps to your wildest ideas."}
         </h2>
         <p className="text-[#5423E6] font-tthoves-medium">{data?.subheading}</p>
       </div>
-      <div className="4">
+      <div className="grid grid-col sm:space-x-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-12">
         {(data?.features || features)?.map((feature: any, index: any) => (
           <div
             key={index}
-            className="flex  flex-col h-full justify-center items-center text-center space-y-2 mt-4 "
+            className="flex flex-col h-full justify-center items-center text-center space-y-2 mt-4 "
           >
-            <div className="sm:h-[80%] p-5 md:p-16 flex justify-center items-center rounded-xxl">
+            <div className="sm:h-[80%] p-5 md:p-16 lg:p-0 flex justify-center items-center rounded-xxl">
               <div className="flex justify-between items-center h-full">
                 {videoNmae ? (
                   <video

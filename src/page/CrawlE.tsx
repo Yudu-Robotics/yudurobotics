@@ -39,7 +39,7 @@ export default function CrawlE() {
               </div>
 
               {/* Subtext */}
-              <div className="font-tthoves text-opacity-35 text-primary-foreground sm:text-sm md:text-md lg:text-lg xl:text-xl  w-[100%] sm:w-[60%] text-lg ">
+              <div className="font-tthoves text-opacity-35 text-primary-foreground sm:text-sm md:text-base lg:text-lg xl:text-xl  w-[100%] sm:w-[60%] text-lg ">
                 {data.subheading}
               </div>
             </div>
@@ -72,15 +72,15 @@ export default function CrawlE() {
         {/* <img src={renderImg("headerSection")} className="w-full" /> */}
         {renderSvg(data.sectionHeader)}
       </div>
-      <div className="px-4 sm:px-12 lg:px-28 text-black py-5 lg:py-10">
+      <div className="px-4 sm:px-12 lg:px-16 text-black py-5 lg:py-10">
         <div className="py-8 lg:py-16">
           <ProductCeoReviewsContainer comment={data} />
         </div>
-        <div className="py-8 lg:py-12">
+        <div className="py-8 lg:py-24">
           <Unboxing product="Crawl-e" />
         </div>
-        <div className="text-sm py-24 mb-6 text-center font-bold flex flex-col space-y-6 justify-center items-center">
-          <div className="text-lg sm:text-lg md:text-md lg:text-lg xl:text-xl font-tthoves-semiBold">
+        <div className="text-sm py-24 my-8 mb-6 text-center font-bold flex flex-col space-y-6 justify-center items-center">
+          <div className="text-lg sm:text-lg md:text-base lg:text-lg xl:text-xl font-tthoves-semiBold">
             <p className="opacity-70">
               Hover over each feature below to{" "}
               <span className="text-primary italic">see it in action!</span>

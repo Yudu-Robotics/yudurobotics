@@ -21,8 +21,8 @@ const JumpingButtons: React.FC<JumpingButtonsProps> = ({
       className={`${
         ishorizontal == "true"
           ? "flex flex-row"
-          : "flex flex-row lg:flex-col lg:space-y-10"
-      } justify-center items-center space-x-10 px-12 font-tthoves`}
+          : "flex flex-row lg:flex-col lg:space-y-10 px-12"
+      } justify-center items-center space-x-10 font-tthoves`}
     >
       <div>
         {link && link !== "#" ? (

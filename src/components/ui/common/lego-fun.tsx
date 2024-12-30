@@ -12,7 +12,7 @@ const LegoFun: React.FC<{ legoFun: LegoFun }> = ({ legoFun }) => {
     <div className="w-full h-full  flex flex-col md:flex-row justify-between items-center pb-10 md:mt-7 mb-8">
       <div className=" w-full mt-12 md:mt-4 h-full bg-yellow-300-700 flex items-center space-y-2 justify-center text-start">
         <div className="">
-          <h1 className="font-tthoves-semiBold text-primary sm:text-sm md:text-md lg:text-lg xl:text-xl font-tthoves-medium ">
+          <h1 className="font-tthoves-semiBold text-primary sm:text-sm md:text-base lg:text-lg xl:text-xl font-tthoves-medium ">
             Hardware
           </h1>
           <h2 className="text-4xl lg:text-6xl xl:text-7xl font-piepie tracking-wide ">

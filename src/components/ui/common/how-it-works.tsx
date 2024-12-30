@@ -22,8 +22,8 @@ interface HowItWork {
 
 const Working: React.FC<{ data: HowItWork }> = ({ data }) => {
   return (
-    <div className="max-w-full flex flex-col space-y-10 py-16">
-      <div className="flex flex-col space-y-2 justify-centerv items-center text-center">
+    <div className="max-w-full flex flex-col space-y-10 py-24">
+      <div className="flex flex-col space-y-2 py-8 justify-centerv items-center text-center">
         <h1 className="text-primary text-lg font-tthoves-semiBold ">
           Hardware
         </h1>

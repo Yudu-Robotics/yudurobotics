@@ -2,7 +2,7 @@
 import "../globals.css";
 import Footer from "@/components/ui/footer/footer";
 import renderSvg from "@/svgImport";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Drawer, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"; // Chevron Down
@@ -25,6 +25,13 @@ export default function ProductLayout({
     { name: "Our Products", link: "/products" },
     { name: "The Partner Program", link: "/partner" },
   ];
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   const productsData = [
     {
@@ -100,6 +107,26 @@ export default function ProductLayout({
 
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isSocialOpen, setIsSocialOpen] = useState(true);
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Show the button only after scrolling down 200px
+      if (window.scrollY > 350) {
+        setShowScrollToTop(true);
+      } else {
+        setShowScrollToTop(false);
+      }
+    };
+
+    // Attach scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const toggleDrawer = (open: boolean) => (event: React.MouseEvent | React.KeyboardEvent) => {
     if (event.type === "keydown" && ((event as React.KeyboardEvent).key === "Tab" || (event as React.KeyboardEvent).key === "Shift")) {
@@ -181,7 +208,7 @@ export default function ProductLayout({
                                 </div>
                                 {/* Details */}
                                 <div>
-                                  <h3 className="text-md font-tthoves-semiBold text-black">
+                                  <h3 className="text-base font-tthoves-semiBold text-black">
                                     {product.name}
                                   </h3>
                                   <p className="text-sm text-gray-700">
@@ -320,7 +347,7 @@ export default function ProductLayout({
                       {
                         <Link
                           href={item.link}
-                          className="text-primary-foreground text-center text-md px-3 hover:text-destructive font-tthoves-semiBold"
+                          className="text-primary-foreground text-center text-base px-3 hover:text-destructive font-tthoves-semiBold"
                         >
                           {item.name}
                         </Link>
@@ -342,12 +369,22 @@ export default function ProductLayout({
           </div>
 
           <FloatingWhatsApp />
+          {showScrollToTop && (
+            <button
+              onClick={scrollToTop}
+              className="fixed bottom-0 right-4 z-40  text-white p-3 rounded-full shadow-lg transition-all "
+              title="Scroll to top"
+            >
+              <img src="assets/home/Arrowup.png" alt="scroll-up" />
+
+            </button>
+          )}
 
           {/* Main Content */}
           {children}
 
           {/* Footer */}
-          <div className="w-full -mb-1 mt-24">{renderSvg("bottomSection")}</div>
+          <div className="w-full -mb-1 mt-24 pt-24">{renderSvg("bottomSection")}</div>
           <div className="px-8 lg:px-28 py-4 bg-primary">
             <Footer />
           </div>

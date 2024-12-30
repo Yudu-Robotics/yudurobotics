@@ -9,10 +9,10 @@ function GlobalAwards() {
       <div className="font-piepie text-4xl text-center lg:text-start lg:text-5xl w-full lg:w-[50%]">
         Being recognized globally
       </div>
-      <div className="flex flex-col lg:flex-row lg:space-x-10 xs:space-y-[64px]">
+      <div className="flex flex-col lg:flex-row lg:space-x-10">
         {awardsImage.map((image: string, index: number) => (
           <div key={index} className="flex">
-            <img src={renderImg(image)} alt="logo" className="p-5" />
+            <img src={renderImg(image)} alt="logo" className="p-5 m-4" />
           </div>
         ))}
       </div>

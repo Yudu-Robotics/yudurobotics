@@ -42,7 +42,7 @@ const PlodeSoftware: React.FC<PlodeSoftwareProps> = ({
                 </div>
 
                 {/* Subtext */}
-                <div className="font-tthoves text-primary-foreground ext-lg sm:text-lg md:text-md lg:text-lg xl:text-xl w-[100%] lg:w-[50%]">
+                <div className="font-tthoves text-primary-foreground ext-lg sm:text-lg md:text-base lg:text-lg xl:text-xl w-[100%] lg:w-[50%]">
                   {subheading ||
                     "Roboki’s Plode software is as fun as it is powerful—tailored to inspire creativity, adapt to all levels, and make coding feel like a breeze."}
                 </div>
@@ -51,14 +51,14 @@ const PlodeSoftware: React.FC<PlodeSoftwareProps> = ({
 
             {/* Buttons Section */}
 
-            <JumpingButtons
+            {/* <JumpingButtons
               ishorizontal="true"
               text1={jumppingdata?.text1 || ""}
               text2={jumppingdata?.text2 || ""}
               bgColor={jumppingdata?.bgColor || ""}
               textColor={jumppingdata?.textColor || ""}
               link={jumppingdata?.link || ""}
-            />
+            /> */}
           </div>
         </div>
         <div className="w-full -mt-1">

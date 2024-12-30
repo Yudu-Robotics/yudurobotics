@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ProductCard from "./product-card";
 import { products } from "@/data/mockData";
 import CustomHeading from "../common/custom-heading-props";
@@ -28,6 +28,13 @@ const AllProductsComponent = () => {
     { name: "9-12", active: false },
     { name: "12+", active: false },
   ];
+
+  useEffect(() => {
+    setFilters(initialFilters);
+    setAgeGroups(initialAgeGroups);
+    setSearchTerm("");
+    setSelectedCategory("");
+  }, []);
 
   const [filters, setFilters] = useState(initialFilters);
   const [ageGroups, setAgeGroups] = useState(initialAgeGroups);
@@ -63,14 +70,14 @@ const AllProductsComponent = () => {
   };
 
   // Get active filter (type) and age group
-  const activeFilter = filters.find((filter) => filter.active)?.name;
-  const activeAgeGroup = ageGroups.find((ageGroup) => ageGroup.active)?.name;
+  const activeFilters = filters.filter((filter) => filter.active).map((filter) => filter.name);
+  const activeAgeGroups = ageGroups.filter((ageGroup) => ageGroup.active).map((ageGroup) => ageGroup.name);
 
-  // Filter products based on type, age group, category, and search term
+  // Filter products based on multiple criteria
   const filteredProducts = products.filter(
     (product) =>
-      (!activeFilter || product.type === activeFilter) &&
-      (!activeAgeGroup || product.ageGroup === activeAgeGroup) &&
+      (activeFilters.length === 0 || activeFilters.includes(product.type)) &&
+      (activeAgeGroups.length === 0 || activeAgeGroups.includes(product.ageGroup)) &&
       (!selectedCategory || product.category === selectedCategory) &&
       (!searchTerm || product.name.toLowerCase().startsWith(searchTerm))
   );
@@ -89,15 +96,15 @@ const AllProductsComponent = () => {
   return (
     <div className="container mx-auto p-4">
       {/* Filters and Search */}
-      <div className="flex flex-wrap items-center justify-between gap-4 p-4 rounded-lg">
+      <div className="flex flex-wrap items-center justify-between gap-4 p-4 rounded-lg font-tthoves-medium">
         {/* Filters */}
         <div className="flex border border-gray-300 rounded-lg overflow-hidden w-full xl:w-[28%] bg-white h-[40px]">
           {filters.map((filter, index) => (
             <button
               key={index}
               className={`flex-1 text-center text-sm px-4 py-2 border-r last:border-r-0 whitespace-nowrap transition-colors h-full ${filter.active
-                ? "font-bold text-purple-600 bg-purple-100"
-                : "font-medium text-gray-700 hover:bg-gray-100"
+                ? "font-tthoves-bold text-purple-600 bg-purple-100"
+                : "font-tthoves-medium text-gray-700 hover:bg-gray-100"
                 }`}
               onClick={() => handleFilterChange(index)}
             >
@@ -112,8 +119,8 @@ const AllProductsComponent = () => {
             <button
               key={index}
               className={`flex-1 text-center text-sm px-4 py-2 border-r last:border-r-0 whitespace-nowrap transition-colors h-full ${ageGroup.active
-                ? "font-bold text-purple-600 bg-purple-100"
-                : "font-medium text-gray-700 hover:bg-gray-100"
+                ? "font-tthoves-bold text-purple-600 bg-purple-100"
+                : "font-tthoves-medium text-gray-700 hover:bg-gray-100"
                 }`}
               onClick={() => handleAgeGroupChange(index)}
             >
@@ -124,23 +131,24 @@ const AllProductsComponent = () => {
 
 
         {/* Product Category Dropdown */}
-        <div className="relative w-full  xl:w-[23%]">
+        <div className="relative w-full  xl:w-[23%] font-tthoves">
           <select
             className="w-full h-[40px] px-4 py-2 rounded-lg border border-gray-300 text-gray-700 focus:ring-2 focus:ring-purple-600 bg-white"
             value={selectedCategory}
             onChange={handleCategoryChange}
           >
             <option value="">Product Category</option>
-            <option value="Codable Kits">Codable</option>
+            <option value="Codable">Codable Kits</option>
             <option value="Electronics">Electronics</option>
             <option value="Animatronics">Animatronics</option>
+            <option value="Mechanical">Mechanical</option>
             <option value="Curriculum">Curriculum</option>
-            <option value="Mechanical">Robotics</option>
+            <option value="Software">Software</option>
           </select>
         </div>
 
         {/* Search Input */}
-        <div className="relative w-full  xl:w-[23%]">
+        <div className="relative w-full  xl:w-[23%] font-tthoves">
           <input
             type="text"
             className="w-full h-[40px] pl-10 pr-4 py-2 rounded-lg border border-gray-300 text-gray-700 focus:ring-2 focus:ring-purple-600 focus:outline-none bg-white"

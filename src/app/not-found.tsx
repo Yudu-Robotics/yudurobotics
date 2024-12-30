@@ -69,7 +69,7 @@ const NotFoundPage = () => {
         </div>
       </div>
       <WrongPageComponent />
-      <div className="w-full -mb-1">
+      <div className="w-full -mb-1 mt-24 pt-24">
         {renderSvg("bottomSectionForNotFound")}
       </div>
 

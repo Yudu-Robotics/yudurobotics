@@ -39,12 +39,12 @@ export default function Section2() {
       </div>
       <div className="grid sm:grid-cols-2 grid-cols-1 sm:w-3/4 sm:px-12">
         {data.map((item, index) => (
-          <div key={index} className="p-5 m-5">
+          <div key={index} className="p-5">
             <div className=" h-[50px] w-[50px] rounded-full mb-5 bg-[#5423E6] flex justify-center items-center">
               <img src={item.src} />
             </div>
-            <h2 className=" mt-5 font-bold">{item.title}</h2>
-            <p className="mt-2 text-sm">{item.desc}</p>
+            <h2 className=" mt-5 lg:mt-16 font-tthoves-bold text-sm md:text-base lg:text-lg xl:text-xl">{item.title}</h2>
+            <div className="mt-2 w-[80%] font-tthoves text-sm lg:text-base">{item.desc}</div>
           </div>
         ))}
       </div>
