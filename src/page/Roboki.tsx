@@ -23,7 +23,7 @@ export default function Roboki() {
   const data = mockData.roboki;
   return (
     <>
-      <div className="flex flex-col px-8 lg:px-28 sm:py-4 bg-primary ">
+      <div className="px-4 sm:px-8 md:px-16 lg:px-20 xl:px-28 bg-primary xs:pt-16 sm:pt-20 md:pt-16 lg:pt-20 xl:pt-24 ">
         <div className="flex flex-col space-y-16 lg:flex-row lg:space-y-0 justify-between py-10">
           <div className="w-full">
             {/* Main Text */}
@@ -78,7 +78,7 @@ export default function Roboki() {
         <div className="py-8 lg:py-12">
           <Unboxing product="Roboki"/>
         </div>
-        <div className="text-sm py-24 text-center font-bold flex flex-col space-y-6 justify-center items-center">
+        <div className="text-sm py-24 text-center font-bold  flex flex-col space-y-6 justify-center items-center">
           <p className="text-lg sm:text-lg md:text-md lg:text-lg xl:text-xl font-tthoves-semiBold">
             <span className="text-[#4A4A4F] opacity-70">
               Hover over each feature below to{" "}
@@ -98,7 +98,7 @@ export default function Roboki() {
           <PlodeSoftware jumppingdata={data.jumppingButton?.[1] || {}} />
         </div>
         <div className="">
-          <SoftwareAdaptive image="playroboki" />
+          <SoftwareAdaptive image="playroboki" product="Roboki" />
         </div>
         <div className=" md:py-20">
           <VersatileSoftware name="roboki" />

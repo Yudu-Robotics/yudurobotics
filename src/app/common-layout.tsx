@@ -16,6 +16,12 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
     { name: "Our Products", link: "/products" },
     { name: "The Partner Program", link: "/partner" },
   ];
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Smooth scrolling effect
+    });
+  };
 
   const productsData = [
     {
@@ -323,6 +329,14 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
         {drawerList()}
       </Drawer>
       <FloatingWhatsApp />
+      <button
+        onClick={scrollToTop}
+        className="fixed bottom-0 right-4 z-40  text-white p-3 rounded-full shadow-lg transition-all "
+        title="Scroll to top"
+      >
+        <img src="assets/home/Arrowup.png" alt="scroll-up" />
+        
+      </button>
       <main>{children}</main>
       <div className="w-full -mb-1">{renderSvg("bottomSection")}</div>
       <div className="px-8 lg:px-28 py-4 bg-primary">

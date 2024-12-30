@@ -23,7 +23,7 @@ export default function KlawB() {
   const data = mockData.klaw_b;
   return (
     <>
-      <div className="px-8 lg:px-28 py-4 bg-primary">
+      <div className="px-4 sm:px-8 md:px-16 lg:px-20 xl:px-28 bg-primary xs:pt-16 sm:pt-20 md:pt-16 lg:pt-20 xl:pt-24">
         <div className="flex flex-col space-y-16 lg:flex-row lg:space-y-0 justify-between py-10">
           <div className="w-full">
             {/* Main Text */}
@@ -111,14 +111,14 @@ export default function KlawB() {
             data={data.working}
           />{" "}
         </div>
-        <div className="">
+        <div className="py-16">
           <PlodeSoftware
             jumppingdata={data.jumppingButton?.[1] || {}}
             subheading="Klaw-b’s Plode software is as fun as it is powerful—tailored to inspire creativity, adapt to all levels, and make coding feel like a breeze."
           />
         </div>
         <div className="lg:-mt-52 ">
-          <SoftwareAdaptive image="playklawb" />
+          <SoftwareAdaptive image="playklawb" product="KlawB" />
         </div>
         <div className=" md:py-20">
           <VersatileSoftware name="klaw" />

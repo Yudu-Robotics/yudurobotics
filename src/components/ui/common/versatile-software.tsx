@@ -44,7 +44,7 @@ const VersatileSoftware: React.FC<SoftwareAdaptiveProps> = ({
     },
   ];
   return (
-    <div className="max-w-full  flex flex-col space-y-10 py-10 xl:py-14  sm:mt-40 md:mt-12 xl:mt-1">
+    <div className="w-full flex flex-col space-y-10 py-10 xl:py-14 sm:mt-40 md:mt-12 xl:mt-16">
       <div className="flex flex-col space-y-2 justify-centerv items-center text-center">
         <h1 className="text-primary text-lg font-tthoves-medium ">
           {data ? "" : "Software"}
@@ -70,7 +70,7 @@ const VersatileSoftware: React.FC<SoftwareAdaptiveProps> = ({
             key={index}
             className="flex  flex-col h-full justify-center items-center text-center space-y-2 mt-4 "
           >
-            <div className="sm:h-[80%] p-5 flex justify-center items-center rounded-xxl">
+            <div className="sm:h-[80%] p-5 md:p-16 flex justify-center items-center rounded-xxl">
               <div className="flex justify-between items-center h-full">
                 {videoNmae ? (
                   <video

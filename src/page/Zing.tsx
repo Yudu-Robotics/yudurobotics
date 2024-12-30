@@ -23,7 +23,7 @@ export default function Zing() {
   const data = mockData.zing;
   return (
     <>
-      <div className="px-8 lg:px-28 py-4 bg-primary">
+      <div className="px-4 sm:px-8 md:px-16 lg:px-20 xl:px-28 bg-primary xs:pt-16 sm:pt-20 md:pt-16 lg:pt-20 xl:pt-24">
         <div className="flex flex-col space-y-16 lg:flex-row lg:space-y-0 justify-between py-10">
           <div className="w-full">
             {/* Main Text */}
@@ -83,7 +83,7 @@ export default function Zing() {
         <div className="py-8 lg:py-12">
           <Unboxing product="Zing"/>
         </div>
-        <div className="text-xl py-8 lg:py-16 text-center  flex flex-col space-y-6 justify-center items-center">
+        <div className="text-xl py-24 text-center  flex flex-col space-y-6 justify-center items-center">
           <p className="font-tthoves-semiBold opacity-70">
             Hover over each feature below to{" "}
             <span className="text-primary italic">see it in action!</span>
@@ -104,7 +104,7 @@ export default function Zing() {
           />
         </div>
         <div className="lg:-mt-52 ">
-          <SoftwareAdaptive image="playzing" />
+          <SoftwareAdaptive image="playzing" product="Zing" />
         </div>
         <div className=" md:py-20">
           <VersatileSoftware name="zing" />

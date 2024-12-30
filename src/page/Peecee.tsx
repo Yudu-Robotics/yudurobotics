@@ -53,7 +53,7 @@ export default function Peecee() {
   const data = mockData.peecee;
   return (
     <>
-      <div className="px-8 sm:px-16 lg:px-20 xl:px-28 py-0 sm:py-4 bg-primary">
+      <div className="px-8 sm:px-8 lg:px-16 xl:px-28 bg-primary xs:pt-16 sm:pt-20 md:pt-16 lg:pt-20 xl:pt-24">
         <div className="flex flex-col space-y-8 sm:space-y-16 lg:flex-row lg:space-y-0 justify-between py-10">
           <div className="w-full">
             {/* Main Text */}
@@ -110,10 +110,10 @@ export default function Peecee() {
         <div className="py-8 lg:py-16">
           <ProductCeoReviewsContainer comment={data} />
         </div>
-        <div className="py-8 lg:py-12">
+        <div className="py-8 lg:py-16">
           <Unboxing product="PeeCee TED"/>
         </div>
-        <div className="text-sm py-4 mb-0 text-center font-bold flex flex-col space-y-6 justify-center items-center">
+        <div className="text-sm py-24 mb-0 text-center font-bold flex flex-col space-y-6 justify-center items-center">
           <p className="text-lg sm:text-lg md:text-md lg:text-lg xl:text-xl font-tthoves-semiBold">
             <span className="text-[#4A4A4F] opacity-70">
               Hover over each feature below to{" "}
@@ -123,7 +123,7 @@ export default function Peecee() {
           {renderSvg("doubleArrow")}
         </div>
         <div>{<HardwareProductFeatures hardware={data.features_data} />}</div>
-        <div className="">
+        <div className="mt-16">
           <div className="flex  justify-center items-center ">
             <ExtraFeatures
               // @ts-ignore
@@ -132,7 +132,7 @@ export default function Peecee() {
               showArrow={true}
             />
           </div>
-          <div className="flex py-10 justify-center items-center">
+          <div className="flex py-16 justify-center items-center">
             <TeamPlay
               // @ts-ignore
               hardware={data.features_data}
@@ -159,7 +159,7 @@ export default function Peecee() {
           />
         </div>
         <div className="  ">
-          <SoftwareAdaptive image="playpeecee" />
+          <SoftwareAdaptive image="playpeecee" product="Peecee" />
         </div>
         <div className=" md:py-20 xl:py-24">
           <VersatileSoftware name="peecee" />

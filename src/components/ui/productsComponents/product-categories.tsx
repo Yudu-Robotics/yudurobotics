@@ -49,13 +49,13 @@ export default function ProductCategories() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(product_categories[0]); // Set the default to the first category
   const [productDetails, setProductDetails] = useState<Products>(initialProductDetails);
   const [selectedProduct, setSelectedProduct] = useState<number>(0);
-  const allowedProductNames = ["TED", "Roboki", "Zing", "Crawl-e", "Klaw-b"];
-  const [isAllowedFlag, setIsAllowedFlag] = useState<boolean>(true);
+  //const allowedProductNames = ["TED", "Roboki", "Zing", "Crawl-e", "Klaw-b", "Toki"];
+  //const [isAllowedFlag, setIsAllowedFlag] = useState<boolean>(true);
 
   // Update product details when the category or other filters change
   useEffect(() => {
     if (filteredProducts.length > 0) {
-      filteredProducts.length == 1 ? setIsAllowedFlag(false) : setIsAllowedFlag(true);
+      //filteredProducts.length == 1 ? setIsAllowedFlag(false) : setIsAllowedFlag(true);
       setProductDetails(filteredProducts[0]);
     } else {
       setProductDetails(initialProductDetails);
@@ -64,10 +64,12 @@ export default function ProductCategories() {
 
   // handle ProductClick
   const handleProductClick = (index: number, product: Products) => {
+    console.log("index = ", index);
+    console.log("Product = ", product);
     setProductDetails(product);
     setSelectedProduct(index);
-    let isAllowed = allowedProductNames.includes(product.name);
-    setIsAllowedFlag(isAllowed);
+    //let isAllowed = allowedProductNames.includes(product.name);
+    //setIsAllowedFlag(isAllowed);
   };
 
   // Handle filter change
@@ -154,13 +156,6 @@ export default function ProductCategories() {
                   />
                 )}
               </div>
-              {/* <div className="hidden sm:flex justify-center my-8">
-                <Link href="/products">
-                  <button className="px-4 py-2 bg-primary font-bold text-white rounded-lg border-2 hover:border-destructive transition-all duration-200">
-                    All Products
-                  </button>
-                </Link>
-              </div> */}
             </div>
             <div className="hidden sm:flex flex-col space-y-4 bg-card-foreground rounded-xlg lg:w-[90%] p-8 ">
               <div>
@@ -202,7 +197,7 @@ export default function ProductCategories() {
                   </ul>
                 )}
 
-                {isAllowedFlag && (
+                
                   <Link
                     href={productDetails.link}
                     className="text-primary mt-4 text-base font-bold hover:scale-125"
@@ -228,7 +223,6 @@ export default function ProductCategories() {
                       </div>
                     </div>
                   </Link>
-                )}
               </div>
             </div>
 

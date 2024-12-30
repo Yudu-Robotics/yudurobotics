@@ -48,14 +48,14 @@ const HardwareProductFeatures: React.FC<{ hardware: HardwareData }> = ({
 
   return (
     <div>
-      <div className="flex flex-col justify-center space-y-2 items-center text-center mt-16">
+      <div className="flex flex-col justify-center space-y-2 items-center text-center mt-16 pt-4">
         <h1 className="text-primary text-lg  xl:text-lg text-left sm:text-center w-full font-tthoves-semiBold text-[#CCBD1F]">
           Hardware
         </h1>
-        <h2 className="text-4xl lg:text-5xl xl:text-6xl w-[100%] lg:w-[50%] font-piepie tracking-wide  text-left sm:text-center">
+        <h2 className="text-4xl lg:text-5xl xl:text-6xl w-[100%] lg:w-[75%] font-piepie tracking-wide  text-left sm:text-center">
           {highlightWords(section1.heading, ["Ready to Go"], "text-primary")}
         </h2>
-        <h2 className="sm:w-[50%] text-lg sm:text-sm md:text-md lg:text-lg xl:text-xl text-secondary-foreground pt-3 text-left sm:text-center font-tthoves">
+        <h2 className="sm:w-[90%] md:w-[75%] text-lg sm:text-sm md:text-md lg:text-lg xl:text-xl text-secondary-foreground pt-3 text-left sm:text-center font-tthoves">
           {section1.subheading}
         </h2>
       </div>

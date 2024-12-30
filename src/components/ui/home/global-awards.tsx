@@ -11,7 +11,9 @@ function GlobalAwards() {
       </div>
       <div className="flex flex-col lg:flex-row lg:space-x-10 xs:space-y-[64px]">
         {awardsImage.map((image: string, index: number) => (
-          <img src={renderImg(image)} alt="logo" className="p-5" />
+          <div key={index} className="flex">
+            <img src={renderImg(image)} alt="logo" className="p-5" />
+          </div>
         ))}
       </div>
     </div>

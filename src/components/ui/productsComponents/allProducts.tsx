@@ -91,13 +91,13 @@ const AllProductsComponent = () => {
       {/* Filters and Search */}
       <div className="flex flex-wrap items-center justify-between gap-4 p-4 rounded-lg">
         {/* Filters */}
-        <div className="flex border border-gray-300 rounded-lg overflow-hidden w-full  xl:w-[28%] bg-white h-[40px]">
+        <div className="flex border border-gray-300 rounded-lg overflow-hidden w-full xl:w-[28%] bg-white h-[40px]">
           {filters.map((filter, index) => (
             <button
               key={index}
               className={`flex-1 text-center text-sm px-4 py-2 border-r last:border-r-0 whitespace-nowrap transition-colors h-full ${filter.active
-                  ? "font-bold text-purple-600 bg-purple-100"
-                  : "font-medium text-gray-700 hover:bg-gray-100"
+                ? "font-bold text-purple-600 bg-purple-100"
+                : "font-medium text-gray-700 hover:bg-gray-100"
                 }`}
               onClick={() => handleFilterChange(index)}
             >
@@ -107,13 +107,13 @@ const AllProductsComponent = () => {
         </div>
 
         {/* Age Groups */}
-        <div className="flex border border-gray-300 rounded-lg overflow-hidden w-full  xl:w-[19%] bg-white h-[40px]">
+        <div className="flex border border-gray-300 rounded-lg overflow-hidden w-full xl:w-[19%] bg-white h-[40px]">
           {ageGroups.map((ageGroup, index) => (
             <button
               key={index}
               className={`flex-1 text-center text-sm px-4 py-2 border-r last:border-r-0 whitespace-nowrap transition-colors h-full ${ageGroup.active
-                  ? "font-bold text-purple-600 bg-purple-100"
-                  : "font-medium text-gray-700 hover:bg-gray-100"
+                ? "font-bold text-purple-600 bg-purple-100"
+                : "font-medium text-gray-700 hover:bg-gray-100"
                 }`}
               onClick={() => handleAgeGroupChange(index)}
             >
@@ -121,6 +121,7 @@ const AllProductsComponent = () => {
             </button>
           ))}
         </div>
+
 
         {/* Product Category Dropdown */}
         <div className="relative w-full  xl:w-[23%]">

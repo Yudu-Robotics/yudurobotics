@@ -1002,12 +1002,12 @@ export const mockData: { [key: string]: ProductData } = {
               "Enjoy WiFi, Bluetooth 5.0, and USB support. Program and control Zing using Plode for a full-featured experience.",
             video: "versatilezing",
           },
-          {
-            icon: "assets/zing/Featured icon (17).png",
-            heading: "DIY-Friendly Design",
-            description:
-              "Built to be repair-friendly with replaceable servos. A 3D simulator is coming soon to enhance your programming adventures.",
-          },
+          // {
+          //   icon: "assets/zing/Featured icon (17).png",
+          //   heading: "DIY-Friendly Design",
+          //   description:
+          //     "Built to be repair-friendly with replaceable servos. A 3D simulator is coming soon to enhance your programming adventures.",
+          // },
         ],
       },
       software_experience: [
@@ -1340,9 +1340,9 @@ export const mockData: { [key: string]: ProductData } = {
           },
           {
             icon: "assets/klawb/Featured icon (25).png",
-            heading: "Versatile Connectivity",
+            heading: "Expandable Capabilities",
             description:
-              "Equipped with WiFi, Bluetooth 5.0, and USB for seamless integration with your devices. Supports battery operation with a DC adapter included.",
+              "The control board offers extensive expandability options, making Klaw-b adaptable for a wide range of projects and accessories",
           },
           {
             icon: "assets/klawb/Featured icon (26).png",

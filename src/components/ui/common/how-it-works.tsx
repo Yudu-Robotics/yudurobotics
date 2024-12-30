@@ -22,7 +22,7 @@ interface HowItWork {
 
 const Working: React.FC<{ data: HowItWork }> = ({ data }) => {
   return (
-    <div className="max-w-full flex flex-col space-y-10 py-10">
+    <div className="max-w-full flex flex-col space-y-10 py-16">
       <div className="flex flex-col space-y-2 justify-centerv items-center text-center">
         <h1 className="text-primary text-lg font-tthoves-semiBold ">
           Hardware
@@ -30,7 +30,7 @@ const Working: React.FC<{ data: HowItWork }> = ({ data }) => {
         <h2 className="text-4xl lg:text-5xl xl:text-7xl font-piepie  ">
           {highlightWords(data.heading, ["Works"], "text-primary")}
         </h2>
-        <h2 className="font-tthoves text-sm text-secondary-foreground sm:text-lg xl:text-xl  w-[100%] lg:w-[40%]">
+        <h2 className="font-tthoves text-sm text-secondary-foreground sm:text-lg xl:text-xl w-[90%] md:w-[70%] lg:w-[75%]">
           {data.subheading}
         </h2>
       </div>
@@ -47,9 +47,9 @@ const Working: React.FC<{ data: HowItWork }> = ({ data }) => {
               {data.section1.description}
             </h2>
             <a className="text-sm text-primary flex justify-center items-center space-x-2">
-              <p>Learn more </p>
+              {/* <p>Learn more </p> */}
               <div>
-                <svg
+                {/* <svg
                   width="12"
                   height="12"
                   viewBox="0 0 14 14"
@@ -63,7 +63,7 @@ const Working: React.FC<{ data: HowItWork }> = ({ data }) => {
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
-                </svg>
+                </svg> */}
               </div>
             </a>
           </div>
@@ -78,9 +78,9 @@ const Working: React.FC<{ data: HowItWork }> = ({ data }) => {
               {data.section2.description}
             </h2>
             <a className="text-sm text-primary flex justify-center items-center space-x-2">
-              <p>Learn more </p>
+              {/* <p>Learn more </p> */}
               <div className="">
-                <svg
+                {/* <svg
                   width="12"
                   height="12"
                   viewBox="0 0 14 14"
@@ -94,7 +94,7 @@ const Working: React.FC<{ data: HowItWork }> = ({ data }) => {
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
-                </svg>
+                </svg> */}
               </div>
             </a>
           </div>

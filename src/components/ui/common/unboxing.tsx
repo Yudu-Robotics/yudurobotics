@@ -23,8 +23,8 @@ function Unboxing({product}: propsValue) {
   ];
   return (
     <div className="flex flex-col space-y-12 md:space-y-32">
-      <div className="flex flex-col space-y-6 md:space-y-0 md:flex-row md:space-x-32 justify-center  ">
-        <div className="w-full md:w-3/4 flex flex-col space-y-2 ">
+      <div className="flex flex-col space-y-6 md:space-y-0 md:flex-row md:space-x-20 lg:space-x-16 xl:space-x-12 justify-center">
+        <div className="w-full flex flex-col space-y-2 ">
           <h1 className="text-primary text-lg font-tthoves-medium xl:text-lg">
             Hardware
           </h1>
@@ -37,15 +37,15 @@ function Unboxing({product}: propsValue) {
           </h2>
         </div>
 
-        <div className="w-full md:w-3/4 flex flex-col space-y-8 justify-center sm:pt-0 pt-4">
+        <div className="w-full flex flex-col space-y-8 justify-center sm:pt-0 md:pt-4">
           {features.map(
             (
               value: { icon: string; heading: string; subheading: string },
               index: number
             ) => (
-              <div key={index} className="flex space-x-2">
+              <div key={index} className="flex space-x-1">
                 <div>{renderSvg(value.icon)}</div>
-                <div className="sm:pl-3 flex flex-col space-y-1 mt-2">
+                <div className="sm:pl-3 flex flex-col space-y-1">
                   <h1 className="font-tthoves-semiBold text-xl xl:text-2xl">
                     {value.heading}
                   </h1>

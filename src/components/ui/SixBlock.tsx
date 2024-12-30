@@ -25,17 +25,17 @@ interface SixBlockProps {
 const SixBlock: React.FC<SixBlockProps> = ({ data }) => {
   return (
     <>
-      <div className="w-full py-15 text-center ">
-        <p className="text-yellow-500 font-bold">{data.title}</p>
-        <div className="w-full  flex flex-col justify-center items-center sm:gap-5 ">
-          <div className="font-piepie text-4xl md:text-6xl lg:text-7xl text-primary-foreground text-center xs:w-[90%]">
+      <div className="w-full py-16 md:pt-8 text-center ">
+        <p className="text-yellow-500 md:pt-4 font-tthoves-bold text-sm">{data.title}</p>
+        <div className="w-full  flex flex-col justify-center items-center md:pt-2 sm:gap-5 ">
+          <div className="font-piepie text-4xl md:text-6xl lg:text-7xl text-primary-foreground text-center xs:w-full md:w-[90%] lg:w-[80%] xl:w-[70%] md:pt-4">
             {highlightWords(
               data.heading,
               data.wordsToHighlight.text1,
               "text-primary"
             )}
           </div>
-          <p className="font-tthoves sm:w-2/3 xl:w-[60%] text-lg sm:text-lg  text-center py-5 sm:py-0 text-secondary-foreground">
+          <p className="font-tthoves xl:w-[60%] text-lg sm:text-lg md:pt-5 text-center py-12 md:py-8 text-secondary-foreground">
             {data.subheading}
           </p>
         </div>
@@ -57,7 +57,7 @@ const SixBlock: React.FC<SixBlockProps> = ({ data }) => {
                     <div className="w-full h-[30vh] rounded-xxl bg-red-600"></div>
                   )}
                 </div>
-                <div className="pt-4 md:pt-8">
+                <div className="py-8 md:py-12">
                   <div className="text-xl font-bold text-center font-tthoves-semiBold">
                     {item.title}
                   </div>

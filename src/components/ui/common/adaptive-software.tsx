@@ -2,25 +2,27 @@ import { highlightWords } from "@/app/utility/highlightWords";
 import renderImg from "@/imgImport";
 import renderSvg from "@/svgImport";
 import React from "react";
+
 interface SoftwareAdaptiveProps {
   data?: any;
   image?: any;
+  product?: string;
 }
-const SoftwareAdaptive: React.FC<SoftwareAdaptiveProps> = ({ data, image }) => {
+
+const SoftwareAdaptive: React.FC<SoftwareAdaptiveProps> = ({ data, image, product }) => {
   const features = [
     {
       icon: "monitor",
       heading: "True Multiplatform Freedom",
-      description:
-        "Code wherever you like—Linux, Windows, iOS, Android, or straight from the cloud. With Plode, Zing is always by your side.",
+      description: `Code wherever you like—Linux, Windows, iOS, Android, or straight from the cloud. With ${product}, ${product} is always by your side.`,
     },
     {
       icon: "rocket",
       heading: "PlayMode for Instant Fun",
-      description:
-        "Dive into Zing’s features without a single line of code—use the camera, chat with speech recognition, or let AI do the work. Just play and explore!",
+      description: `Dive into ${product}’s features without a single line of code—use the camera, chat with speech recognition, or let AI do the work. Just play and explore!`,
     },
   ];
+
   return (
     <div className="flex flex-col sm:-translate-y-2 sm:-mb-52 md:-translate-y-20 md:-mb-20 lg:-translate-y-16 lg:-mb-16 xl:-translate-y-48 xl:-mb-48 2xl:-translate-y-8 2xl:-mb-8">
       <div className="w-full flex justify-between">
@@ -32,13 +34,9 @@ const SoftwareAdaptive: React.FC<SoftwareAdaptiveProps> = ({ data, image }) => {
             {highlightWords("Playfully Adaptive", ["Adaptive"], "text-primary")}
           </h2>
           <h2 className="font-tthoves sm:text-sm md:text-md lg:text-lg xl:text-xl text-secondary-foreground pt-3 w-[70%] ">
-            Plode adjusts itself to suit anyone, whether you're just starting
-            out or ready to tackle big projects.
+            {`${product} adjusts itself to suit anyone, whether you're just starting out or ready to tackle big projects.`}
           </h2>
         </div>
-        {/* <div className="sm:w-1/2  flex justify-center   pl-3 sm:pl-16">
-          <img src={renderImg(data?.img) || ""} className="w-full" />
-        </div> */}
       </div>
 
       <div className="w-full flex flex-col justify-between gap-8 md:flex-row md:gap-4 lg:gap-6 xl:gap-8 2xl:gap-10">
@@ -63,7 +61,7 @@ const SoftwareAdaptive: React.FC<SoftwareAdaptiveProps> = ({ data, image }) => {
                 <h3 className=" text-xl xl:text-2xl sm:py-3 font-tthoves-semiBold">
                   {feature?.title || feature.heading}
                 </h3>
-                <p className="font-tthoves text-secondary-foreground text-lg sm:text-sm md:text-md lg:text-lg xl:text-xl">
+                <p className="font-tthoves text-secondary-foreground text-base sm:text-sm md:text-base lg:text-lg xl:text-xl">
                   {feature?.desc || feature.description}
                 </p>
               </div>
@@ -74,4 +72,6 @@ const SoftwareAdaptive: React.FC<SoftwareAdaptiveProps> = ({ data, image }) => {
     </div>
   );
 };
+
+
 export default SoftwareAdaptive;
