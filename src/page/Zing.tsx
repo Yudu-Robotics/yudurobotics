@@ -152,7 +152,7 @@ export default function Zing() {
           <GetInTouch />
         </div>
         <div>
-          <Curious />
+        <Curious jumppingButton={data?.jumppingButton || []} />
         </div>
       </div>
     </>

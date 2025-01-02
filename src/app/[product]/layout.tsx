@@ -199,7 +199,7 @@ export default function ProductLayout({
 
                                 {/* Image */}
                                 <div className="flex flex-cols">
-                                  {/* {console.log('KKKKKKKKKK',product.image)} */}
+                                
                                   <img
                                     src={renderImg(product.image)}
                                     alt={product.name}

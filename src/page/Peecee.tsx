@@ -51,7 +51,7 @@ export default function Peecee() {
   };
  
   const data = mockData.peecee;
-  // console.log('IIIIIIIII',data?.jumppingButton)
+ 
   return (
     <>
       <div className="px-8 sm:px-8 lg:px-16 xl:px-28 bg-primary xs:pt-16 sm:pt-20 md:pt-16 lg:pt-20 xl:pt-24">

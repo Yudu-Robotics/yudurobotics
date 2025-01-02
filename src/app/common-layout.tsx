@@ -200,7 +200,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
 
                                 {/* Image */}
                                 <div className="flex flex-cols">
-                                  {/* {console.log('KKKKKKKKKK',product.image)} */}
+                                 
                                   <img
                                     src={renderImg(product.image)}
                                     alt={product.name}
