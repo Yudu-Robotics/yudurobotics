@@ -1,5 +1,6 @@
+"use client"
 import renderImg from "@/imgImport";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CeoReviewsContainer from "../ceo-reviews";
 import { highlightWords } from "@/app/utility/highlightWords";
 const data = [
@@ -35,6 +36,22 @@ const data = [
   },
 ];
 function Section1() {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 768);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="w-full h-auto">
       <div></div>
@@ -43,21 +60,21 @@ function Section1() {
           <div className="xl:px-12 ">
             <p className=" text-center items-center font-piepie text-6xl md:text-4xl lg:text-6xl xl:text-8xl  text-primary-foreground">
               “We’re not{" "}
-              <span className="relative inline-block z-0">
+              <span className="relative inline-block z-10">
                 playing
                 <img
                   src={renderImg("imgonp")}
                   alt="Image"
-                  className="absolute xs:-bottom-4 xs:-left-14 sm:-left-12 md:-top-16 lg:-top-12 -z-10"
+                  className="absolute xs:-bottom-4 xs:-left-14 sm:-left-12 md:-top-16 lg:-top-12 -z-20"
                 />
               </span>{" "}
               small. We’re{" "}
-              <span className="relative inline-block z-0">
+              <span className="relative inline-block z-10">
                 making
                 <img
                   src={renderImg("imgong")}
                   alt="Image"
-                  className="absolute xs:-bottom-4 xs:-left-14 sm:-bottom-4 sm:-left-14 md:-bottom-20 md:-right-24 lg:top-2 lg:-right-12 -z-10"
+                  className="absolute xs:-bottom-4 xs:-left-14 sm:-left-12 sm:-bottom-4 md:-bottom-20 md:-right-24 lg:top-2 lg:-right-2 -z-50"
                 />
               </span>{" "}
               robots to{" "}
@@ -71,7 +88,7 @@ function Section1() {
               </span>{" "}
               <br />
               <span className="relative inline-block z-0">
-                minds<img src={renderImg("imgonm")} alt="" className="absolute xs:-bottom-4 xs:-left-14 lg:-top-12 lg:left-2 sm:-left-12 md:bottom-4 md:left-2 -z-10" /></span>{" "}
+                minds<img src={renderImg("imgonm")} alt="" className="absolute xs:-bottom-4 xs:-left-14 lg:-top-12 lg:left-2 sm:-left-8 sm:bottom-8 md:bottom-4 md:left-2 -z-10" /></span>{" "}
               and change the game!”
             </p>
           </div>
@@ -105,29 +122,52 @@ function Section1() {
         <img src={renderImg("arrow1")} alt="arrow image" />
       </div>
       <div className="bg-red h-full w-full">
-        <div className="w-full flex flex-col justify-between lg:-translate-y-16">
-          {data.map((item: any) => (
-            <div
-              key={item.id}
-              className="flex justify-between sm:my-8 my-3 sm:flex-row flex-col px-5"
-            >
-              {/* Left section - 70% width on desktop, full width on mobile */}
-              <div className="font-piepie sm:text-[60px] sm:w-[90%]" style={{ lineHeight: "1" }}>
-                <span className="block">{item.title1}</span>
-                <span className={`font-piepie sm:text-[60px] sm:w-[70%] ${item.bg} block`}>
-                  {item.title2}
-                </span>
+        {isSmallScreen ? (
+          <div className="w-full flex flex-col justify-between lg:-translate-y-16">
+            {data.map((item: any) => (
+              <div
+                key={item.id}
+                className="grid grid-cols-1 justify-between sm:my-8 my-8 sm:flex-row flex-col px-5"
+              >
+                {/* Left section - 70% width on desktop, full width on mobile */}
+                <div className="font-piepie text-[48px] sm:text-[60px] w-full" style={{ lineHeight: "1" }}>
+                  <span className="block">{item.title1}</span>
+                  <span className={`font-piepie text-[48px] sm:text-[60px] w-full ${item.bg} block`}>
+                    {item.title2}
+                  </span>
+                </div>
+                {/* Right section - 30% width on desktop, full width on mobile */}
+                <div className="w-[90%] mt-8 text-lg flex items-center h-auto">
+                  {item.desc}
+                </div>
               </div>
-              {/* Right section - 30% width on desktop, full width on mobile */}
-              <div className="w-full sm:w-[30%] text-lg sm:text-base flex items-center h-auto">
-                {item.desc}
+            ))}
+          </div>
+        ) : (
+          <div className="w-full flex flex-col justify-between lg:-translate-y-16">
+            {data.map((item: any) => (
+              <div
+                key={item.id}
+                className="flex justify-between sm:my-8 my-3 sm:flex-row flex-col px-5"
+              >
+                {/* Left section - 70% width on desktop, full width on mobile */}
+                <div className="font-piepie sm:text-[60x] md:text-[48px] lg:text-[60px] sm:w-[60%] md:w-[70%]" style={{ lineHeight: "1" }}>
+                  <span className="block">{item.title1}</span>
+                  <span className={`font-piepie sm:text-[36px] md:text-[48px] lg:text-[60px] sm:w-[70%] md:w-[70%] ${item.bg} block`}>
+                    {item.title2}
+                  </span>
+                </div>
+                {/* Right section - 30% width on desktop, full width on mobile */}
+                <div className="w-full sm:w-[30%] text-lg sm:text-base flex items-center h-auto">
+                  {item.desc}
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
 
-      <div className="sm:my-28 mx-3 ">
+      <div className="sm:my-28 mx-4">
         <CeoReviewsContainer />
       </div>
     </div>

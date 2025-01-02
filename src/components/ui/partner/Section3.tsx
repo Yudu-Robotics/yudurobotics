@@ -1,8 +1,25 @@
+"use client"
 import { highlightWords } from "@/app/utility/highlightWords";
 import renderImg from "@/imgImport";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export default function Section3() {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 768);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const heading1 = "Here’s how you can";
   const heading2 = "Partner With Us";
   const subheading =
@@ -37,52 +54,48 @@ export default function Section3() {
 
   return (
     <div>
-      <div className="text-black flex justify-center flex-col items-center">
-        <div className="font-piepie text-5xl md:text-6xl lg:text-7xl  text-primary-foreground text-[#000000] px-3 sm:px-0">
-          {highlightWords(heading1, [heading1], "text-black")}
+      <div className="text-black text-center flex justify-center flex-col items-center">
+        <div className="sm:w-[90%] md:w-[70%] font-piepie text-5xl md:text-6xl lg:text-7xl tex-center text-primary-foreground text-[#0A041A] px-4">
+          {highlightWords(heading1, [heading1], "text-[#0A041A]")}
         </div>
-        <div className="font-piepie text-5xl md:text-6xl lg:text-7xl  text-primary-foreground text-[#000000] px-3 sm:px-0">
+        <div className="font-piepie text-5xl md:text-6xl lg:text-7xl  text-primary-foreground text-[#0A041A] px-4">
           {highlightWords(heading2, [heading2], "text-[#5423E6]")}
         </div>
-        <p className="sm:px-10 px-3 text-sm mt-5">{subheading}</p>
+        <p className="sm:w-[80%] md:w-[60%] lg:px-10 px-3 text-lg mt-5 text-[#4A4A4F]">{subheading}</p>
       </div>
-      <div className="my-10 w-full flex sm:flex-col flex-row">
-        <div className="sm:w-full h-screen w-1/4 flex sm:h-[50px] sm:px-14 sm:flex-row flex-col justify-center items-center">
-          {Array.from({ length: 4 }).map((_, index) => (
-            <div
-              key={index}
-              className={`sm:w-1/4 h-1/4 flex ${
-                index === 3 ? "justify-start" : "justify-end"
-              } items-center sm:flex-row flex-col`}
-            >
-              <div
-                className={`flex-1 sm:h-[5px] w-[10px] ${
-                  index === 0 ? "" : "bg-[#5423E6]"
-                }`}
-              ></div>
-              <div className="h-[50px] w-[50px] bg-[#5423E6] rounded-full flex justify-center items-center">
-                <img src={data[index].src} />
-              </div>
-              <div
-                className={`flex-1 sm:h-[5px] w-[10px] ${
-                  index === 3 ? "" : "bg-[#5423E6]"
-                }`}
-              ></div>
-            </div>
-          ))}
-        </div>
-        <div className="text-black flex sm:flex-row flex-col sm:px-14 text-center sm:w-full w-3/4 my-5 h-screen sm:h-auto">
+      {isSmallScreen ? (
+        <div className="grid grid-cols-1 px-4 my-12">
           {data.map((item) => (
             <div
               key={item.id}
-              className="sm:w-1/4  h-1/4 flex flex-col  justify-center "
+              className="w-full px-2 my-4"
             >
-              <h2 className="font-tthoves-bold text-base">{item.title}</h2>
-              <p className="font-tthoves sm:px-4 lg:px-16 text-base">{item.desc}</p>
+              <div className="h-[50px] w-[50px] bg-[#5423E6] rounded-full flex justify-center items-center mb-2">
+                <img src={item.src} alt={item.title} />
+              </div>
+              <div className="w-full px-2 relative pl-16 sm:bottom-16 md:bottom-16">
+                <h2 className="font-tthoves-bold align-left text-base text-[#303036]">{item.title}</h2>
+                <p className="font-tthoves text-base md:text-base text-[#4A4A4F]">{item.desc}</p>
+              </div>
             </div>
           ))}
         </div>
-      </div>
+      ) : (
+        <div className="flex flex-row justify-between items-start my-10 px-10">
+          {data.map((item) => (
+            <div
+              key={item.id}
+              className="flex flex-col items-center text-center mx-4"
+            >
+              <div className="h-[50px] w-[50px] bg-[#5423E6] rounded-full flex justify-center items-center mb-4">
+                <img src={item.src} alt={item.title} />
+              </div>
+              <h2 className="font-tthoves-bold text-base text-[#303036]">{item.title}</h2>
+              <p className="font-tthoves px-4 text-sm md:text-base text-[#4A4A4F]">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      )}
 
       {/* <img
         src={renderImg("play")}
