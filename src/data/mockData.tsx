@@ -108,6 +108,7 @@ type ProductData = {
   jumppingButton?: {
     text1: string;
     text2: string;
+    text3?:string;
     bgColor: string;
     textColor: string;
     link: string;
@@ -454,6 +455,35 @@ export const mockData: { [key: string]: ProductData } = {
         textColor: "#FAF9FE",
         link: "#footer-contact-form-component",
       },
+      {
+        text1: "Lemme",
+        text2: "Explore",
+        bgColor: "#FF0000",
+        textColor: "#FAF9FE",
+        link: "#footer-contact-form-component",
+      },
+      {
+        text1: "Lemme",
+        text2: "Explore",
+        bgColor: "#FF0000",
+        textColor: "#FAF9FE",
+        link: "#footer-contact-form-component",
+      },
+      {
+        text1: "Lemme",
+        text2: "Explore",
+        bgColor: "#FF0000",
+        textColor: "#FAF9FE",
+        link: "#footer-contact-form-component",
+      },
+      {
+        text1: "Lemee",
+        text2: "Learn ",
+        text3: "More",
+        bgColor: "#FF0000",
+        textColor: "#FAF9FE",
+        link: "/partner",
+      },
     ],
   },
   peecee: {
@@ -733,6 +763,14 @@ export const mockData: { [key: string]: ProductData } = {
         textColor: "#FAF9FE",
         link: "#",
       },
+      {
+        text1: "Lemee",
+        text2: "Learn ",
+        text3: "More",
+        bgColor: "#602CF7",
+        textColor: "#FAF9FE",
+        link: "/partner",
+      },
     ],
     plugandplay: {
       title: "Hardware",
@@ -943,6 +981,14 @@ export const mockData: { [key: string]: ProductData } = {
         textColor: "#FAF9FE",
         link: "",
       },
+      {
+        text1: "Lemee",
+        text2: "Learn ",
+        text3: "More",
+        bgColor: "#602CF7",
+        textColor: "#FAF9FE",
+        link: "/partner",
+      },
     ],
   },
   zing: {
@@ -1124,6 +1170,14 @@ export const mockData: { [key: string]: ProductData } = {
         bgColor: "#F72D3E",
         textColor: "#FAF9FE",
         link: "",
+      },
+      {
+        text1: "Lemee",
+        text2: "Learn ",
+        text3: "More",
+        bgColor: "#F72D3E",
+        textColor: "#FAF9FE",
+        link: "/partner",
       },
     ],
   },
@@ -1308,6 +1362,15 @@ export const mockData: { [key: string]: ProductData } = {
         textColor: "#FAF9FE",
         link: "#",
       },
+      {
+        text1: "Lemee",
+        text2: "Learn ",
+        text3: "More",
+        bgColor: "#F72D3E",
+        textColor: "#FAF9FE",
+        link: "/partner",
+      },
+      
     ],
   },
   klaw_b: {
@@ -1515,6 +1578,14 @@ export const mockData: { [key: string]: ProductData } = {
         bgColor: "#F7812D",
         textColor: "#FAF9FE",
         link: "#",
+      },
+      {
+        text1: "Lemee",
+        text2: "Learn ",
+        text3: "More",
+        bgColor: "#F7812E",
+        textColor: "#FAF9FE",
+        link: "/partner",
       },
     ],
   },
@@ -1809,6 +1880,14 @@ export const mockData: { [key: string]: ProductData } = {
         bgColor: "#2CF7A4",
         textColor: "#FAF9FE",
         link: "#",
+      },
+      {
+        text1: "Lemee",
+        text2: "Learn ",
+        text3: "More",
+        bgColor: "#2CF7A4",
+        textColor: "#FAF9FE",
+        link: "/partner",
       },
     ],
     plugandplay: {
@@ -2235,6 +2314,14 @@ export const mockData: { [key: string]: ProductData } = {
         bgColor: "#2CF7A4",
         textColor: "#FAF9FE",
         link: "#",
+      },
+      {
+        text1: "Lemee",
+        text2: "Learn ",
+        text3: "More",
+        bgColor: "#2CF7A4",
+        textColor: "#FAF9FE",
+        link: "/partner",
       },
     ],
   },

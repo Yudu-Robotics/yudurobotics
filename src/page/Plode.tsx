@@ -18,6 +18,7 @@ import renderImg from "@/imgImport";
 import renderSvg from "@/svgImport";
 import React from "react";
 import Getstart from "@/components/ui/plode/getStart";
+import Curious from "@/components/ui/common/Curious";
 
 export default function Plode() {
   const data = mockData.plode;
@@ -284,6 +285,9 @@ export default function Plode() {
         </div>
         <div>
           <GetInTouch />
+        </div>
+        <div>
+        <Curious jumppingButton={data?.jumppingButton || []} />
         </div>
       </div>
     </>

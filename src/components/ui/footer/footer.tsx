@@ -122,7 +122,7 @@ const Footer = () => {
   return (
     <div className="text-primary-foreground flex flex-col justify-around">
       {/* First Section */}
-      <div className="flex flex-col space-y-16 lg:flex-row lg:justify-between">
+      {/* <div className="flex flex-col space-y-16 lg:flex-row lg:justify-between">
         <div className="flex flex-col justify-center text-start items-center lg:items-start lg:text-start">
           <h1 className="font-piepie text-4xl lg:text-6xl">
             Ready to Innovate Together?
@@ -143,7 +143,7 @@ const Footer = () => {
             />
           )}
         </div>
-      </div>
+      </div> */}
       {/* Contact us Section */}
       <div className="py-20">
         <div className="flex flex-col  lg:items-start">
@@ -260,8 +260,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="h-[80vh]  w-full flex justify-center items-center">
-        <img src={renderImg("madeInIndia")} alt="" />
+      <div className="h-[90vh]  w-full flex justify-center items-center">
+        <img src={renderImg("madeInIndia")} alt=""  className=" w-auto object-contain"/>
       </div>
     </div>
   );

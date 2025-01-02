@@ -372,7 +372,7 @@ export default function ProductLayout({
           {showScrollToTop && (
             <button
               onClick={scrollToTop}
-              className="fixed bottom-0 right-4 z-40  text-white p-3 rounded-full shadow-lg transition-all "
+              className="fixed bottom-0 right-4  z-40  text-white p-3 rounded-full shadow-lg transition-all "
               title="Scroll to top"
             >
               <img src="assets/home/Arrowup.png" alt="scroll-up" />

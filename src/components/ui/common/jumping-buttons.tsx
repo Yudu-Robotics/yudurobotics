@@ -4,6 +4,7 @@ interface JumpingButtonsProps {
   ishorizontal?: string;
   text1?: string;
   text2?: string;
+  text3?: string;
   bgColor?: string;
   textColor?: string;
   link?: string;
@@ -12,6 +13,7 @@ const JumpingButtons: React.FC<JumpingButtonsProps> = ({
   ishorizontal = "false",
   text1,
   text2,
+  text3,
   bgColor,
   textColor,
   link = "",
@@ -40,6 +42,10 @@ const JumpingButtons: React.FC<JumpingButtonsProps> = ({
               <span className="block italic font-tthoves-bold">
                 {text2 || "Explore"}
               </span>
+              {text3!==" " &&(
+                <span className="block font-tthoves-semiBold">{text3}</span>
+              )}
+              
             </div>
           </Link>
         ) : (

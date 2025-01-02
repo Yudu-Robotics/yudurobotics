@@ -24,7 +24,7 @@ import { mockData } from "@/data/mockData";
 import renderImg from "@/imgImport";
 import renderSvg from "@/svgImport";
 import React from "react";
-
+import Curious from "@/components/ui/common/Curious";
 export default function Peecee() {
   interface PlugAndPlayAccessory {
     title: string;
@@ -49,8 +49,9 @@ export default function Peecee() {
     subheading: "Default Subheading",
     tableData: [],
   };
-
+ 
   const data = mockData.peecee;
+  // console.log('IIIIIIIII',data?.jumppingButton)
   return (
     <>
       <div className="px-8 sm:px-8 lg:px-16 xl:px-28 bg-primary xs:pt-16 sm:pt-20 md:pt-16 lg:pt-20 xl:pt-24">
@@ -218,6 +219,10 @@ export default function Peecee() {
         </div>
         <div className="pb-16 ">
           <GetInTouch />
+        </div>
+        <div>
+      
+        <Curious jumppingButton={data?.jumppingButton || []} />
         </div>
       </div>
     </>

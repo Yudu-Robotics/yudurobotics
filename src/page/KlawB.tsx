@@ -18,7 +18,7 @@ import { mockData } from "@/data/mockData";
 import renderImg from "@/imgImport";
 import renderSvg from "@/svgImport";
 import React from "react";
-
+import Curious from "@/components/ui/common/Curious";
 export default function KlawB() {
   const data = mockData.klaw_b;
   return (
@@ -163,6 +163,9 @@ export default function KlawB() {
         </div>
         <div>
           <GetInTouch />
+        </div>
+        <div>
+        <Curious jumppingButton={data?.jumppingButton || []} />
         </div>
       </div>
     </>

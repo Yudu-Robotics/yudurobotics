@@ -18,6 +18,7 @@ import { mockData } from "@/data/mockData";
 import renderImg from "@/imgImport";
 import renderSvg from "@/svgImport";
 import React from "react";
+import Curious from "@/components/ui/common/Curious";
 
 export default function CrawlE() {
   const data = mockData.crawl_e;
@@ -150,6 +151,9 @@ export default function CrawlE() {
         </div>
         <div>
           <GetInTouch />
+        </div>
+        <div>
+        <Curious jumppingButton={data?.jumppingButton || []} />
         </div>
       </div>
     </>

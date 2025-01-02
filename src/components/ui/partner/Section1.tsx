@@ -48,7 +48,7 @@ function Section1() {
                 <img
                   src={renderImg("imgonp")}
                   alt="Image"
-                  className="absolute md:-top-12 lg:-top-4 -z-10"
+                  className="absolute xs:-bottom-4 xs:-left-14 sm:-left-12 md:-top-16 lg:-top-12 -z-10"
                 />
               </span>{" "}
               small. We’re{" "}
@@ -57,7 +57,7 @@ function Section1() {
                 <img
                   src={renderImg("imgong")}
                   alt="Image"
-                  className="absolute md:-bottom-20 md:-right-24 lg:top-2 lg:right-2 -z-10"
+                  className="absolute xs:-bottom-4 xs:-left-14 sm:-bottom-4 sm:-left-14 md:-bottom-20 md:-right-24 lg:top-2 lg:-right-12 -z-10"
                 />
               </span>{" "}
               robots to{" "}
@@ -66,12 +66,12 @@ function Section1() {
                 <img
                   src={renderImg("afterw")}
                   alt="Image"
-                  className="absolute top-6 -right-16 -z-10 "
+                  className="absolute md:-right-32 top-6 -right-16 -z-10 "
                 />
               </span>{" "}
               <br />
               <span className="relative inline-block z-0">
-                minds<img src={renderImg("imgonm")} alt="" className="absolute lg:-top-6 lg:left-2 md:bottom-4 md:left-2 -z-10" /></span>{" "}
+                minds<img src={renderImg("imgonm")} alt="" className="absolute xs:-bottom-4 xs:-left-14 lg:-top-12 lg:left-2 sm:-left-12 md:bottom-4 md:left-2 -z-10" /></span>{" "}
               and change the game!”
             </p>
           </div>

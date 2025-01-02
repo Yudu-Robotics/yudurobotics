@@ -13,7 +13,7 @@ import GetInTouch from "@/components/ui/common/get-in-touch";
 import renderSvg from "@/svgImport";
 import { highlightWords } from "../utility/highlightWords";
 import TestimonialBanner from "@/components/ui/common/testimonial-banner";
-
+import Curious from "@/components/ui/common/Curious";
 const FAQs = dynamic(() => import("@/components/ui/home/faqs"), {
   ssr: false, // This disables server-side rendering for the FAQ component
 });
@@ -115,6 +115,9 @@ export default async function HomePage() {
 
         <div className="sm:mb-24 ">
           <GetInTouch />
+        </div>
+        <div>
+        <Curious jumppingButton={data?.jumppingButton || []} />
         </div>
       </div>
     </>

@@ -18,6 +18,7 @@ import { mockData } from "@/data/mockData";
 import renderImg from "@/imgImport";
 import renderSvg from "@/svgImport";
 import React from "react";
+import Curious from "@/components/ui/common/Curious";
 
 export default function Roboki() {
   const data = mockData.roboki;
@@ -143,6 +144,9 @@ export default function Roboki() {
         </div>
         <div>
           <GetInTouch />
+        </div>
+        <div>
+        <Curious jumppingButton={data?.jumppingButton || []} />
         </div>
       </div>
     </>
