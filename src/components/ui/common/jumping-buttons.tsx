@@ -23,14 +23,14 @@ const JumpingButtons: React.FC<JumpingButtonsProps> = ({
       className={`${
         ishorizontal == "true"
           ? "flex flex-row"
-          : "flex flex-row lg:flex-col lg:space-y-10 px-12"
-      } justify-center items-center space-x-10 font-tthoves`}
+          : "flex flex-row lg:flex-col lg:space-y-10 px-8"
+      } justify-center items-center space-x-8 font-tthoves`}
     >
       <div>
         {link && link !== "#" ? (
           <Link href={link}>
             <div
-              className={`rounded-full text-xs lg:text-lg h-32 w-32 lg:h-40 lg:w-40 flex flex-col justify-center items-center transform transition duration-500 hover:translate-y-4`}
+              className={`rounded-full text-md lg:text-lg h-32 w-32  lg:h-40 lg:w-40 flex flex-col justify-center items-center transform transition duration-500 hover:translate-y-4`}
               style={{
                 backgroundColor: bgColor || "#F00",
                 color: textColor || "#FFF",
@@ -50,7 +50,7 @@ const JumpingButtons: React.FC<JumpingButtonsProps> = ({
           </Link>
         ) : (
           <div
-            className={`rounded-full text-xs lg:text-lg h-32 w-32 lg:h-40 lg:w-40 flex flex-col justify-center items-center transform transition duration-500 hover:translate-y-4`}
+            className={`rounded-full text-md lg:text-lg h-32 w-32 lg:h-40 lg:w-40 flex flex-col justify-center items-center transform transition duration-500 hover:translate-y-4`}
             style={{
               backgroundColor: bgColor || "#F00",
               color: textColor || "#FFF",

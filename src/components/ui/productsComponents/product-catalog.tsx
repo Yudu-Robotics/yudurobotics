@@ -11,10 +11,10 @@ export default function ProductCatalog() {
           <div className="flex justify-between ">
             <div className="w-full  lg:w-[40%] lg:text-start font-piepie text-3xl lg:text-6xl tracking-wide">
               <span className="">See what</span>{" "}
-              <span className=" text-primary">we</span>{" "}
+              <span className=" md:text-primary">we</span>{" "}
               <span className="">have</span>{" "}
-              <span className="text-primary">been</span>{" "}
-              <span className="text-primary">cooking</span>
+              <span className="md:text-primary">been</span>{" "}
+              <span className="md:text-primary">cooking</span>
             </div>
             {/* update in zigzag */}
             <div className=" -translate-x-30 -translate-y-40">

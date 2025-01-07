@@ -24,7 +24,7 @@ export default async function HomePage() {
             </div>
             <br />
             <br />
-            <div className="sm:w-[80vw]  w-[80vw] text-center text-lg font-normal">
+            <div className="sm:w-[80vw]  w-[80vw] text-center text-lg font-tthoves">
               This is what ChatGPT says we should write. I mean, of course, it
               does the job. But then, that’s not what we are here to do, are we?
               <br /> <br />

@@ -20,12 +20,12 @@ const ProductCard: React.FC<ProductCardProps> = ({
     onClick={() => {
       handleClick();
     }}
-    className={`flex sm:flex-col space-y-2 p-2 sm:p-4 text-black rounded-lg transition-all duration-200 hover:bg-card-foreground hover:scale-90 
+    className={`flex md:flex-col space-y-2 p-2 md:p-4 text-black rounded-lg transition-all duration-200 hover:bg-card-foreground hover:scale-90 
       ${isSelected ? "bg-card-foreground scale-90" : ""}
     `}
   >
     {/* Product Image */}
-    <div className="w-1/2 h-full flex justify-center items-center sm:w-full">
+    <div className="w-1/2 h-full flex justify-center items-center md:w-full">
       <div className="w-full flex justify-center items-center">
         <img
           src={product.image}
@@ -38,24 +38,28 @@ const ProductCard: React.FC<ProductCardProps> = ({
     </div>
 
     {/* Product Description */}
-    <div className="w-1/2 sm:w-full ml-3 sm:ml-0">
+    <div className="w-1/2 md:w-full ml-3 md:ml-0">
       <h3 className="text-lg font-tthoves-semiBold mb-2 lg:text-xl">
         {product.name}
       </h3>
-      <p className="text-start font-tthoves text-secondary-foreground text-xs tracking-wide lg:text-sm hidden sm:flex ">
+      <p className="text-start font-tthoves text-secondary-foreground text-xs tracking-wide lg:text-sm hidden md:flex">
         {product.description}
       </p>
-      <p className="text-start text-secondary-foreground text-sm w-full tracking-wide lg:text-sm  sm:hidden font-tthoves">
+      <p className="text-start text-secondary-foreground text-sm w-full tracking-wide lg:text-sm md:hidden font-tthoves">
         {product.description.substring(0, 50) + "..."}
       </p>
 
-      {product.link && (product.link !== "") && (
+      {product.link && product.link !== "" ? (
         <Link
           href={product.link}
-          className="text-[#4A1FCC] text-sm sm:hidden font-tthoves-semiBold"
+          className="text-[#4A1FCC] text-sm md:hidden font-tthoves-semiBold"
         >
           Learn more {"->"}
         </Link>
+      ) : (
+        <div className="text-sm text-[#4A1FCC] mt-2 md:hidden font-tthoves-semiBold">
+          Coming Soon
+        </div>
       )}
     </div>
   </div>

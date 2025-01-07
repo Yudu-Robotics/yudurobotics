@@ -22,8 +22,8 @@ const PlodeDownloade: React.FC<PlodeDownloadeProps> = ({
 }) => {
    
   return (
-    <div className="bg-primary rounded-xlg sm:rounded-xxl xs:mt-14  ,mm ldd dvdvdszfes sm:mt-11">
-      <div className="flex flex-col space-y-16 lg:flex-row lg:space-y-0 justify-between py-8 px-5 sm:px-10 lg:py-16 lg:px-20 p-4">
+    <div className="bg-primary rounded-[2.25rem] sm:rounded-[2.25rem] xs:mt-14 sm:mt-11">
+      <div className="flex flex-col space-y-16 lg:flex-row lg:space-y-0 justify-between py-8 px-2 xs:px-8 sm:px-10 lg:py-16 lg:px-20 p-4">
         <div className="w-full">
           {/* Main Text */}
 
@@ -41,7 +41,7 @@ const PlodeDownloade: React.FC<PlodeDownloadeProps> = ({
         </div>
       
         {/* Buttons Section */}
-        {
+        {/* {
          
           <JumpingButtons
             ishorizontal="false"
@@ -52,7 +52,21 @@ const PlodeDownloade: React.FC<PlodeDownloadeProps> = ({
             textColor={jumppingdata?.textColor || ""}
             link={jumppingdata?.link || ""}
           />
-        }
+        } */}
+        <div className="">
+        {
+         
+         <JumpingButtons
+           ishorizontal="false"
+           text1={jumppingdata?.text1 || ""}
+           text2={jumppingdata?.text2 || ""}
+           // bgColor={jumppingdata?.bgColor || ""}
+           bgColor={jumppingdata?.bgColor || ""}
+           textColor={jumppingdata?.textColor || ""}
+           link={jumppingdata?.link || ""}
+         />
+       }
+        </div>
       </div>
     </div>
   );

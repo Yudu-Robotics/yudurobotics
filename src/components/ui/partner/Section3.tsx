@@ -63,17 +63,17 @@ export default function Section3() {
         </div>
         <p className="sm:w-[80%] md:w-[60%] lg:px-10 px-3 text-lg mt-5 text-[#4A4A4F]">{subheading}</p>
       </div>
-      {isSmallScreen ? (
-        <div className="grid grid-cols-1 px-4 my-12">
+      {/* {isSmallScreen ? (
+        <div className="grid grid-cols-1 px-4 my-16">
           {data.map((item) => (
             <div
               key={item.id}
-              className="w-full px-2 my-4"
+              className="w-full px-2 my-2 "
             >
               <div className="h-[50px] w-[50px] bg-[#5423E6] rounded-full flex justify-center items-center mb-2">
                 <img src={item.src} alt={item.title} />
               </div>
-              <div className="w-full px-2 relative pl-16 sm:bottom-16 md:bottom-16">
+              <div className="w-full px-2 relative pl-16 xs:bottom-16 md:bottom-16">
                 <h2 className="font-tthoves-bold align-left text-base text-[#303036]">{item.title}</h2>
                 <p className="font-tthoves text-base md:text-base text-[#4A4A4F]">{item.desc}</p>
               </div>
@@ -87,6 +87,36 @@ export default function Section3() {
               key={item.id}
               className="flex flex-col items-center text-center mx-4"
             >
+              <div className="h-[50px] w-[50px] bg-[#5423E6] rounded-full flex justify-center items-center mb-4">
+                <img src={item.src} alt={item.title} />
+              </div>
+              <h2 className="font-tthoves-bold text-base text-[#303036]">{item.title}</h2>
+              <p className="font-tthoves px-4 text-sm md:text-base text-[#4A4A4F]">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      )} */}
+      {isSmallScreen ? (
+        <div className="relative grid grid-cols-1 px-4 my-16">
+          {data.map((item, index) => (
+            <div key={item.id} className="relative w-full px-2 my-2 flex">
+              <div className="h-[50px] w-[50px] bg-[#5423E6] rounded-full flex justify-center items-center mb-2 relative z-10" style={{ borderRadius: '100%' }}>
+                <img src={item.src} alt={item.title} className=""/>
+              </div>
+              <div className="w-full px-2 relative pl-16">
+                <h2 className="font-tthoves-bold text-base text-[#303036]">{item.title}</h2>
+                <p className="font-tthoves text-base text-[#4A4A4F]">{item.desc}</p>
+              </div>
+              {index !== data.length - 1 && (
+                <div className="absolute left-[25px] top-[60px]  h-[calc(100%-50px)] w-[2px] bg-[#5423E6]"></div>
+              )}
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div className="flex flex-row justify-between items-start my-10 px-10">
+          {data.map((item) => (
+            <div key={item.id} className="flex flex-col items-center text-center mx-4">
               <div className="h-[50px] w-[50px] bg-[#5423E6] rounded-full flex justify-center items-center mb-4">
                 <img src={item.src} alt={item.title} />
               </div>

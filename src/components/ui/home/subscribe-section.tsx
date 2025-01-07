@@ -69,7 +69,7 @@ export default function SubscribeSection() {
   };
 
   return (
-    <div className="bg-primary rounded-xxl text-primary-foreground px-5 sm:px-8 py-8 sm:py-16 flex flex-col items-center justify-center">
+    <div className="bg-primary rounded-[2.5rem] md:rounded-[4rem] text-primary-foreground px-5 xs:px-8 py-8 xs:py-16 flex flex-col items-center justify-center">
       {/* Main Heading */}
       <h1 className="text-3xl md:text-5xl mb-4 text-center font-piepie tracking-wide">
         Partner with Yudu

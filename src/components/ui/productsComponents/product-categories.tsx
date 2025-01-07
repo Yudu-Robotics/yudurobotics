@@ -157,7 +157,7 @@ export default function ProductCategories() {
                 )}
               </div>
             </div>
-            <div className="hidden sm:flex flex-col space-y-4 bg-card-foreground rounded-xlg lg:w-[90%] p-8 ">
+            <div className="hidden md:flex flex-col space-y-4 bg-card-foreground rounded-xlg lg:w-[90%] p-8 ">
               <div>
                 <img src={productDetails.image} className="w-[100%]" />
               </div>
@@ -282,6 +282,7 @@ export default function ProductCategories() {
           </div>
         </Link>
       </div>
+      <div className="border-b border-gray-300 flex-grow pt-6"></div>
     </div>
   );
 }

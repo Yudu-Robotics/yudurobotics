@@ -93,7 +93,7 @@ export default function BottomFooter() {
     setActiveDialog(null);
   };
   return (
-    <footer className="py-6 font-tthoves">
+    <footer className="py-6  font-tthoves">
       <div className="">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 item-center">
           {footerData.map((section, index) => (
@@ -158,7 +158,7 @@ export default function BottomFooter() {
           </div>
         </DialogContent>
       </Dialog>
-      <div className=" sm:hidden flex-col space-y-4 mt-4">
+      {/* <div className=" sm:hidden flex-col space-y-4 mt-4">
         <h1 className="text-xl">Get the Plode app</h1>
         <div className="flex gap-5">
           <a
@@ -184,7 +184,7 @@ export default function BottomFooter() {
             />
           </a>
         </div>
-      </div>
+      </div> */}
     </footer>
   );
 }

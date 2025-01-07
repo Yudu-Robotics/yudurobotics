@@ -361,7 +361,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
       {showScrollToTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-0 right-4 z-40  text-white p-2 rounded-full shadow-lg transition-all "
+          className="fixed bottom-0 sm:right-4 z-40 xs:-right-2 text-white p-2 rounded-full shadow-lg transition-all "
           title="Scroll to top"
         >
           <img src="assets/home/Arrowup.png" alt="scroll-up" />
@@ -370,7 +370,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
       )}
       <main className="mb-24">{children}</main>
       {/* <div className="w-full -mb-1 mt-24 pt-24">{renderSvg("bottomSection")}</div> */}
-      <div className="px-8 lg:px-28 py-4 bg-primary">
+      <div className="px-4 lg:px-28 py-4 bg-primary">
         <Footer />
       </div>
     </div>

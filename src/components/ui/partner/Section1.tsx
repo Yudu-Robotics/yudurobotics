@@ -58,37 +58,46 @@ function Section1() {
       <div className="flex flex-col items-center space-y-6">
         <div className="flex flex-col items-center justify-center">
           <div className="xl:px-12 ">
-            <p className=" text-center items-center font-piepie text-6xl md:text-4xl lg:text-6xl xl:text-8xl  text-primary-foreground">
+            <p className=" text-center items-center font-tthoves text-6xl md:text-4xl lg:text-6xl xl:text-8xl  text-primary-foreground">
               “We’re not{" "}
               <span className="relative inline-block z-10">
                 playing
                 <img
                   src={renderImg("imgonp")}
                   alt="Image"
-                  className="absolute xs:-bottom-4 xs:-left-14 sm:-left-12 md:-top-16 lg:-top-12 -z-20"
+                  className="absolute xs:-top-16 xs:-left-6 sm:-left-12 md:-top-16 lg:-top-8 -z-20"
                 />
               </span>{" "}
-              small. We’re{" "}
+              small.{" "} 
+              <span className="relative inline-block z-40">
+              We’re
+                {/* <img
+                  src={renderImg("imgong")}
+                  alt="Image"
+                  className="absolute xs:-bottom-4 xs:-left-10 sm:-left-12 sm:-bottom-4 md:-bottom-20 md:-right-24 lg:top-2 lg:-right-2 -z-50"
+                /> */}
+              </span>{" "}
+             
               <span className="relative inline-block z-10">
                 making
                 <img
                   src={renderImg("imgong")}
                   alt="Image"
-                  className="absolute xs:-bottom-4 xs:-left-14 sm:-left-12 sm:-bottom-4 md:-bottom-20 md:-right-24 lg:top-2 lg:-right-2 -z-50"
+                  className="absolute xs:-bottom-4 xs:-left-10 sm:-left-12 sm:-bottom-4 md:-bottom-10 md:-right-24 lg:top-4 lg:-right-2 -z-50"
                 />
               </span>{" "}
-              robots to{" "}
+              <span className="relative inline-block z-20">robots</span> to{" "}
               <span className=" relative inline-block z-0">
                 blow
                 <img
                   src={renderImg("afterw")}
                   alt="Image"
-                  className="absolute md:-right-32 top-6 -right-16 -z-10 "
+                  className="absolute xs:-top-2 md:-right-60 lg:-right-32 top-6 -right-16 -z-10 "
                 />
               </span>{" "}
               <br />
               <span className="relative inline-block z-0">
-                minds<img src={renderImg("imgonm")} alt="" className="absolute xs:-bottom-4 xs:-left-14 lg:-top-12 lg:left-2 sm:-left-8 sm:bottom-8 md:bottom-4 md:left-2 -z-10" /></span>{" "}
+                minds<img src={renderImg("imgonm")} alt="" className="absolute xs:-bottom-4 xs:-left-14 lg:-top-12 lg:left-2 sm:-left-12 sm:bottom-4 md:bottom-4 md:left-2 -z-50" /></span>{" "}
               and change the game!”
             </p>
           </div>
@@ -121,7 +130,7 @@ function Section1() {
       >
         <img src={renderImg("arrow1")} alt="arrow image" />
       </div>
-      <div className="bg-red h-full w-full">
+      <div className="bg-red h-full w-full p-4 xs:mb-12 md:mb-4">
         {isSmallScreen ? (
           <div className="w-full flex flex-col justify-between lg:-translate-y-16">
             {data.map((item: any) => (
@@ -130,9 +139,9 @@ function Section1() {
                 className="grid grid-cols-1 justify-between sm:my-8 my-8 sm:flex-row flex-col px-5"
               >
                 {/* Left section - 70% width on desktop, full width on mobile */}
-                <div className="font-piepie text-[48px] sm:text-[60px] w-full" style={{ lineHeight: "1" }}>
+                <div className="font-tthoves text-[60px] sm:text-[60px] w-full font-bold" style={{ lineHeight: "1" }}>
                   <span className="block">{item.title1}</span>
-                  <span className={`font-piepie text-[48px] sm:text-[60px] w-full ${item.bg} block`}>
+                  <span className={`font-tthoves text-[60px] sm:text-[60px] w-full  ${item.bg} block`}>
                     {item.title2}
                   </span>
                 </div>
