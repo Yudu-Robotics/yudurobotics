@@ -57,33 +57,39 @@ function Section1() {
       <div></div>
       <div className="flex flex-col items-center space-y-6">
         <div className="flex flex-col items-center justify-center">
-          <div className="xl:px-12 ">
-            <p className=" text-center items-center font-tthoves text-6xl md:text-4xl lg:text-6xl xl:text-8xl  text-primary-foreground">
+          <div className="xl:px-12 xs:p-12 md:p-2">
+            <p className=" text-center items-center font-tthoves text-6xl md:text-4xl lg:text-6xl xl:text-8xl  text-primary-foreground" style={{
+              fontFamily: "'YourFontFamily', sans-serif",  /* Replace with your desired font family */
+              fontWeight: 1000,   /* Bold weight */
+              lineHeight: "1.2", /* Line height */
+              textUnderlinePosition: "from-font",
+              textDecorationSkipInk: "none"
+            }}>
               “We’re not{" "}
               <span className="relative inline-block z-10">
                 playing
                 <img
                   src={renderImg("imgonp")}
                   alt="Image"
-                  className="absolute xs:-top-16 xs:-left-6 sm:-left-12 md:-top-16 lg:-top-8 -z-20"
+                  className="absolute xs:-top-56 xs:left-52 sm:-top-36 sm:left-52 md:-top-20 lg:-top-16 -z-20"
                 />
               </span>{" "}
-              small.{" "} 
+              small.{" "}
               <span className="relative inline-block z-40">
-              We’re
+                We’re
                 {/* <img
                   src={renderImg("imgong")}
                   alt="Image"
                   className="absolute xs:-bottom-4 xs:-left-10 sm:-left-12 sm:-bottom-4 md:-bottom-20 md:-right-24 lg:top-2 lg:-right-2 -z-50"
                 /> */}
               </span>{" "}
-             
+
               <span className="relative inline-block z-10">
                 making
                 <img
                   src={renderImg("imgong")}
                   alt="Image"
-                  className="absolute xs:-bottom-4 xs:-left-10 sm:-left-12 sm:-bottom-4 md:-bottom-10 md:-right-24 lg:top-4 lg:-right-2 -z-50"
+                  className="absolute xs:-bottom-4 xs:-left-16 sm:-left-12 sm:-bottom-4 md:-bottom-20 md:-left-2 lg:-top-4 lg:-left-8  -z-50"
                 />
               </span>{" "}
               <span className="relative inline-block z-20">robots</span> to{" "}
@@ -92,16 +98,17 @@ function Section1() {
                 <img
                   src={renderImg("afterw")}
                   alt="Image"
-                  className="absolute xs:-top-2 md:-right-60 lg:-right-32 top-6 -right-16 -z-10 "
+                  className="absolute xs:-top-2 md:-right-16 lg:-right-30 lg:top-2 top-6 -right-16 -z-10 "
                 />
               </span>{" "}
               <br />
               <span className="relative inline-block z-0">
-                minds<img src={renderImg("imgonm")} alt="" className="absolute xs:-bottom-4 xs:-left-14 lg:-top-12 lg:left-2 sm:-left-12 sm:bottom-4 md:bottom-4 md:left-2 -z-50" /></span>{" "}
+                minds<img src={renderImg("imgonm")} alt="" className="absolute xs:-bottom-4 xs:-left-14 lg:-top-4 lg:-left-16 sm:-left-12 sm:bottom-4 md:-bottom-12 md:-left-56 -z-50" /></span>{" "}
+              <br />
               and change the game!”
             </p>
           </div>
-          <div className="w-[80%] sm:w-full flex items-center justify-center mt-5 sm:ml-64">
+          <div className="w-[80%] sm:w-full flex items-center justify-center mt-2 mb-4 sm:ml-6">
             <img src={renderImg("line")} />
           </div>
         </div>
@@ -121,7 +128,7 @@ function Section1() {
           </div>
           <br />
           <br />
-          So here’s what we’re <span className="font-bold">NOT</span> about
+          So here’s what we’re <span className="font-bold italic">NOT</span> about
         </div>
       </div>
       <div
@@ -136,17 +143,20 @@ function Section1() {
             {data.map((item: any) => (
               <div
                 key={item.id}
-                className="grid grid-cols-1 justify-between sm:my-8 my-8 sm:flex-row flex-col px-5"
+                className="grid grid-cols-1  justify-between sm:my-6 my-8 sm:flex-row flex-col px-5"
               >
                 {/* Left section - 70% width on desktop, full width on mobile */}
-                <div className="font-tthoves text-[60px] sm:text-[60px] w-full font-bold" style={{ lineHeight: "1" }}>
-                  <span className="block">{item.title1}</span>
-                  <span className={`font-tthoves text-[60px] sm:text-[60px] w-full  ${item.bg} block`}>
+                <div className="font-tthoves text-[60px] sm:text-[60px] w-full  font-display  font-bold  text-left underline-offset-from-font decoration-skip-ink-none" style={{ fontWeight: 900, lineHeight: "1",  fontFamily: "'YourFontFamily', sans-serif", textDecorationSkipInk: "none", textUnderlinePosition: "from-font" }}>
+                  <span className="block">
+                    {item.title1.split(" ")[0]} <span className="italic">{item.title1.split(" ")[1]}</span> {item.title1.split(" ").slice(2).join(" ")}
+                  </span>
+                  <span className={`font-tthoves text-[60px] sm:text-[60px] w-full  ${item.bg} block`}style={{ fontWeight: 900, lineHeight: "1", fontFamily: "'YourFontFamily', sans-serif", textDecorationSkipInk: "none", textUnderlinePosition: "from-font" }}>
                     {item.title2}
                   </span>
                 </div>
                 {/* Right section - 30% width on desktop, full width on mobile */}
-                <div className="w-[90%] mt-8 text-lg flex items-center h-auto">
+                <div className="w-[80%] mt-4 text-lg flex items-center h-auto text-left font-light leading-[var(--Lineheighttext-lg)] decoration-skip-ink-none" style={{ fontFamily: 'var(--Fontfamilyfont-family-body)', fontSize: 'var(--Fontsizetext-lg)' }}>
+
                   {item.desc}
                 </div>
               </div>
@@ -167,7 +177,7 @@ function Section1() {
                   </span>
                 </div>
                 {/* Right section - 30% width on desktop, full width on mobile */}
-                <div className="w-full sm:w-[30%] text-lg sm:text-base flex items-center h-auto">
+                <div className="w-full sm:w-[30%] text-lg sm:text-base flex items-center h-auto font-light">
                   {item.desc}
                 </div>
               </div>

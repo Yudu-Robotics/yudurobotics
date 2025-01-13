@@ -5,11 +5,11 @@ export default function ProductCatalog() {
   return (
       <div className=" ">
         <div className="flex flex-col space-y-4 pt-14">
-          <h2 className="font-tthoves-semiBold text-primary text-base md:text-xl text-start ">
+          <h2 className="font-tthoves-semiBold text-primary text-base md:text-xl text-start mb-2 ">
             Product Catalog
           </h2>
           <div className="flex justify-between ">
-            <div className="w-full  lg:w-[40%] lg:text-start font-piepie text-3xl lg:text-6xl tracking-wide">
+            <div className="  md:w-[50%] lg:w-[40%] lg:text-start font-piepie text-4xl lg:text-6xl tracking-wide">
               <span className="">See what</span>{" "}
               <span className=" md:text-primary">we</span>{" "}
               <span className="">have</span>{" "}
@@ -22,8 +22,8 @@ export default function ProductCatalog() {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-            <p className="text-secondary-foreground text-base lg:text-xl w-full md:w-[50%] font-tthoves mb-4 md:mb-0">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center mt-1">
+            <p className="text-secondary-foreground text-base lg:text-xl w-full md:w-[50%] font-tthoves mb-2 md:mb-0">
               Discover the exciting products we've been developing—each designed
               to push the boundaries of robotics.
             </p>

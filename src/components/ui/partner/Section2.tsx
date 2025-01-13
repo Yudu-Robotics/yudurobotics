@@ -30,23 +30,24 @@ export default function Section2() {
   ];
   const bg = "text-[#000000]";
   return (
-    <div className="w-full flex lg:flex-row flex-col text-black">
+    <div className="w-full flex lg:flex-row flex-col text-black ">
       <div className="lg:w-1/3 px-4">
-        <div className="font-piepie text-5xl md:text-6xl lg:text-7xl   ">
+        <div className="font-piepie text-5xl md:text-6xl lg:text-7xl">
           {highlightWords(heading, [heading], "text-[#0A041A]")}
         </div>
-        <div className="w-2/3 mt-5">{subhading}</div>
+        <div className="font-[var(--Fontfamilyfont-family-body)] text-[var(--Fontsizetext-md)] font-normal leading-[var(--Lineheighttext-md)] text-left decoration-skip-ink-none text-gray-500 mt-3">{subhading}</div>
       </div>
       <div className="grid mt-8 lg:mt-0 sm:grid-cols-1 lg:grid-cols-2 grid-cols-1 lg:w-3/4 lg:px-12">
         {data.map((item, index) => (
           <div key={index} className="p-5">
-            <div className=" h-[50px] w-[50px] rounded-full mb-5 bg-[#5423E6] flex justify-center items-center">
-              <img src={item.src} />
+            <div className="h-[50px] w-[50px] rounded-full mb-5 bg-[#5423E6] flex justify-center items-center">
+              <img src={item.src} alt={`Image for ${item.title}`} />
             </div>
-            <h2 className=" mt-5 text-lg font-bold font-tthoves-semiBold">{item.title}</h2>
-            <p className="mt-2 text-base font-tthoves">{item.desc}</p>
+            <h2 className="mt-5 mb-2 text-lg font-semibold font-tthoves-semiBold ">{item.title}</h2>
+            <p className="mt-4 text-base font-tthoves  text-gray-500">{item.desc}</p>
           </div>
         ))}
+
       </div>
     </div>
   );

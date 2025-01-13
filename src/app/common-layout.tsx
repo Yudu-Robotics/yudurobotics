@@ -197,18 +197,16 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
                                 key={productIndex}
                                 className="flex items-start space-x-4 mb-4"
                               >
-
                                 {/* Image */}
-                                <div className="flex flex-cols">
-                                 
+                                <div className="w-32 h-20 flex-shrink-0">
                                   <img
                                     src={renderImg(product.image)}
                                     alt={product.name}
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-cover rounded-md"
                                   />
                                 </div>
                                 {/* Details */}
-                                <div>
+                                <div className="flex-1">
                                   <h3 className="text-base font-tthoves-semiBold text-black">
                                     {product.name}
                                   </h3>
@@ -226,6 +224,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
                             ))}
                           </div>
                         )}
+
                       </div>
                     ))}
                     <div className="mt-4" onClick={() => setIsDrawerOpen(false)}>

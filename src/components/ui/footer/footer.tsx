@@ -162,7 +162,7 @@ const Footer = () => {
           id="footer-contact-form-component"
           className="flex flex-col space-y-8 lg:flex-row lg:space-y-0 justify-between py-4 lg:py-20 "
         >
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:w-[50%] ">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 py-4 lg:w-[50%] ">
             {contact_options.map(
               (
                 value:

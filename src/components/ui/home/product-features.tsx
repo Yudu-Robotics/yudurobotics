@@ -58,19 +58,24 @@ function ProductFeatures() {
             link="/zing"
           />
         </div>
-        <div className="relative w-full py-16 mt-10 lg:mt-0">
+        <div className="relative w-full py-16 md:mt-12   lg:mt-0">
           {/* Background image */}
           <img
-            className="w-full"
+            className="w-full hidden md:block lg:block"
             src={renderImg("productBackground")}
             alt="Background"
           />
 
           {/* Humanoid image - placed on top */}
           <img
-            className="absolute -inset-[1.825rem] xs:-inset-9 sm:-inset-[2.125rem] md:-inset-16 w-full h-full object-contain"
+            className="absolute -inset-[1.825rem] xs:-inset-[2.3rem] sm:-inset-[2.125rem] md:-inset-16 w-full h-full object-contain hidden md:block lg:block"
             src={renderImg("humanoid")}
             alt="Humanoid"
+          />
+          <img
+            className="w-full h-full object-contain xs:block sm:block md:hidden"
+            src={renderImg("humanoidSmall")}
+            alt="Humanoid for small screens"
           />
         </div>
         <div className="h-[10px] w-full flex justify-center gap-4">

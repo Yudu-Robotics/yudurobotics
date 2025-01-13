@@ -37,6 +37,7 @@ const curv = "assets/home/curv.png";
 
 // zing
 const humanoid = "assets/zing/Humanoid.png";
+const humanoidSmall = "assets/zing/zingping.png"
 const productBackground = "assets/zing/productBackground.png";
 const productCrawle = "assets/zing/productCrawle.png";
 const playzing = "assets/zing/playzing.png";
@@ -179,6 +180,9 @@ function renderImg(imgName: string) {
     // zing
     case "humanoid":
       return humanoid;
+
+    case "humanoidSmall":
+      return humanoidSmall;  
 
     case "productBackground":
       return productBackground;

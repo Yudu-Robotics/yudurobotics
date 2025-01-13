@@ -25,7 +25,7 @@ export default function Curious({ jumppingButton }: CuriousProps) {
 
   return (
     <div className="w-full relative mb-2 ">
-    <div className="bg-primary  rounded-[2.25rem] sm:rounded-[2.5rem] p-4 sm:p-10 mt-16  lg:mt-40 relative shadow-xl overflow-hidden">
+    <div className="bg-primary  rounded-[2.25rem] sm:rounded-[2.5rem] p-6 sm:p-6 md:p-8 mt-16  lg:mt-40 relative shadow-xl overflow-hidden">
       {/* Gradient Blur Effect */}
       <div className="absolute inset-0 rounded-xlg sm:rounded-xxl bg-gradient-to-r from-purple-500 via-transparent to-purple-500 opacity-50 blur-lg -z-10"></div>
 

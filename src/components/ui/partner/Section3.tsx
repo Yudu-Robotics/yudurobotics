@@ -99,16 +99,16 @@ export default function Section3() {
       {isSmallScreen ? (
         <div className="relative grid grid-cols-1 px-4 my-16">
           {data.map((item, index) => (
-            <div key={item.id} className="relative w-full px-2 my-2 flex">
-              <div className="h-[50px] w-[50px] bg-[#5423E6] rounded-full flex justify-center items-center mb-2 relative z-10" style={{ borderRadius: '100%' }}>
+            <div key={item.id} className="relative w-full px-1 my-6 flex">
+              <div className="h-[50px] w-[50px] bg-[#5423E6] rounded-full flex justify-center items-center mb-2 relative z-10  gap-0 "  style={{ borderRadius: '100%' }}>
                 <img src={item.src} alt={item.title} className=""/>
               </div>
-              <div className="w-full px-2 relative pl-16">
-                <h2 className="font-tthoves-bold text-base text-[#303036]">{item.title}</h2>
-                <p className="font-tthoves text-base text-[#4A4A4F]">{item.desc}</p>
+              <div className="  w-[279px] h-[134px] p-4 pt-[var(--spacing-4xl)]  gap-[var(--spacing-sm)] flex-grow">
+                <h2 className="font-tthoves-bold text-base text-[#303036]  font-semibold leading-[var(--Lineheighttext-md)] text-left mb-2">{item.title}</h2>
+                <p className="font-tthoves text-base text-[#4A4A4F]  font-light leading-[var(--Lineheighttext-md)] text-left underline-offset-from-font decoration-skip-ink-none ">{item.desc}</p>
               </div>
               {index !== data.length - 1 && (
-                <div className="absolute left-[25px] top-[60px]  h-[calc(100%-50px)] w-[2px] bg-[#5423E6]"></div>
+                <div className="absolute left-[25px] top-[60px]  h-[calc(100%-20px)] w-[2px] bg-[#5423E6]"></div>
               )}
             </div>
           ))}

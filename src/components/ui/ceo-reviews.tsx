@@ -17,7 +17,7 @@ const CeoReviewsContainer: React.FC<CeoProps> = ({ data }) => {
         </div>
 
         <div className="flex items-center">
-          <p className="text-center  items-center font-TThoves text-2xl md:text-4xl lg:text-5xl  text-primary-foreground">
+          <p className="text-center  items-center font-TThoves text-2xl md:text-4xl lg:text-5xl  text-primary-foreground text-[var(--Fontsizedisplay-sm)] font-bold leading-[var(--Lineheightdisplay-sm)] text-center underline-offset-from-font decoration-skip-ink-none" style={{fontFamily: "'YourFontFamily', sans-serif", fontWeight: 1000,textUnderlinePosition: "from-font",textDecorationSkipInk: "none"}}>
             {data?.desc ||
               "Yudu Robotics has been an incredible partner, blending creativity with cutting-edge tech to drive innovation like never before."}
           </p>
@@ -52,3 +52,10 @@ const CeoReviewsContainer: React.FC<CeoProps> = ({ data }) => {
 };
 
 export default CeoReviewsContainer;
+// style={{
+//   fontFamily: "'YourFontFamily', sans-serif",  /* Replace with your desired font family */
+//   fontWeight: 1000,   /* Bold weight */
+//   lineHeight: "1.2", /* Line height */
+//   textUnderlinePosition: "from-font",
+//   textDecorationSkipInk: "none"
+// }}>

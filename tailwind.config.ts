@@ -10,12 +10,12 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
-        xs:"375px",
+        xs: "375px",
         sm: "425px",
         md: "768px",
         lg: "1024px",
         xl: "1280px",
-        '2xl': "1536px",
+        "2xl": "1536px",
       },
       fontFamily: {
         heading: "Poppins",
@@ -26,10 +26,15 @@ const config: Config = {
         "tthoves-semiBold": ["TTHovesDemiBold", "sans-serif"],
         "tthoves-medium": ["TTHovesMedium", "sans-serif"]
       },
+      fontSize: {
+        md: "var(--Fontsizetext-md)", // Custom font size for medium text
+      },
+      lineHeight: {
+        md: "var(--Lineheighttext-md)", // Custom line height for medium text
+      },
       colors: {
         customBlue: "#3f00ff",
         customWhite: "#ffffff",
-
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -45,7 +50,6 @@ const config: Config = {
           foreground: "hsl(var(--primary-foreground))",
           ver: "hsl(var(--primary-ver))",
         },
-
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
@@ -117,4 +121,5 @@ const config: Config = {
     safelist: ["peecee", "roboki", "zing", "crawl-e", "klaw-b", "plode"],
   },
 };
+
 export default config;
