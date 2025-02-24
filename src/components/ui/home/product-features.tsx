@@ -1,8 +1,21 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import JumpingButtons from "../common/jumping-buttons";
 import renderImg from "@/imgImport";
+import { Squircle } from "corner-smoothing";
 
 function ProductFeatures() {
+  const [cornerRadius, setCornerRadius] = useState(80);
+
+  useEffect(() => {
+    const updateCornerRadius = () => {
+      setCornerRadius(window.innerWidth >= 1024 ? 120 : 80);
+    };
+    updateCornerRadius();
+    window.addEventListener("resize", updateCornerRadius);
+    return () => window.removeEventListener("resize", updateCornerRadius);
+  }, []);
+
   const features = [
     { id: 1, text: "17 Degrees of Freedom" },
     { id: 2, text: "Full Aluminium Body" },
@@ -10,11 +23,15 @@ function ProductFeatures() {
   ];
   return (
     <>
-      <div className="bg-primary rounded-xxl text-primary-foreground px-8  lg:px-16 pt-12 sm:pt-20 tracking-wide pb-6">
+      <Squircle
+        cornerRadius={cornerRadius}
+        className="bg-primary text-primary-foreground px-8 lg:px-16 pt-12 sm:pt-20 tracking-wide pb-6"
+      >
+        {/* <div className="bg-primary rounded-xxl text-primary-foreground px-8  lg:px-16 pt-12 sm:pt-20 tracking-wide pb-6"> */}
         <div className="flex flex-col justify-between space-y-16 lg:flex-row lg:space-y-0">
           <div className="w-[100%] lg:w-[55%]">
             <h6 className="font-tthoves"> Newly Launched!</h6>
-            <h1 className="font-piepie text-3xl lg:text-6xl tracking-wide ">
+            <h1 className="font-cobaltRidge text-3xl lg:text-6xl tracking-wide ">
               Meet <span className="text-destructive">Zing</span>: The Fun and
               Lively Humanoid Robot
             </h1>
@@ -36,9 +53,9 @@ function ProductFeatures() {
                       <path
                         d="M1.75 5L5.25 8.5L12.25 1.5"
                         stroke="#FFFFFF"
-                        stroke-width="2.33333"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth="2.33333"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       />
                     </svg>
                   </div>
@@ -83,7 +100,8 @@ function ProductFeatures() {
           {/* <div className="w-[40px] h-full bg-[#ffffff] rounded-xl"></div>
           <div className="w-[40px] h-full bg-[#ffffff] rounded-xl"></div> */}
         </div>
-      </div>
+        {/* </div> */}
+      </Squircle>
     </>
   );
 }

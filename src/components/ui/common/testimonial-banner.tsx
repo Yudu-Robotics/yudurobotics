@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 // pages/TestimonialBanner.tsx
 
 import renderImg from "@/imgImport";
@@ -7,7 +8,7 @@ import renderSvg from "@/svgImport";
 export default function TestimonialBanner() {
   return (
     <div className="flex flex-col space-y-16 py-20">
-      <div className="flex justify-between px-10 lg:px-40">
+      <div className="hidden lg:flex justify-between px-10 lg:px-40">
         <div>{renderSvg("star1")}</div>
         <div>{renderSvg("star1")}</div>
       </div>
@@ -18,7 +19,7 @@ export default function TestimonialBanner() {
         </div>
       </div>
 
-      <div className="flex justify-center items-center">
+      <div className="hidden lg:flex justify-center items-center">
         {renderSvg("star1")}
       </div>
     </div>
