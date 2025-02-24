@@ -124,7 +124,7 @@ const Footer = () => {
       {/* First Section */}
       {/* <div className="flex flex-col space-y-16 lg:flex-row lg:justify-between">
         <div className="flex flex-col justify-center text-start items-center lg:items-start lg:text-start">
-          <h1 className="font-piepie text-4xl lg:text-6xl">
+          <h1 className="font-cobaltRidge text-4xl lg:text-6xl">
             Ready to Innovate Together?
           </h1>
           <h1 className=" py-4 opacity-70 font-tthoves">
@@ -149,7 +149,7 @@ const Footer = () => {
         <div className="flex flex-col  lg:items-start">
           <h1 className="font-tthoves">Contact us</h1>
 
-          <h1 className="font-piepie text-3xl lg:text-4xl ">
+          <h1 className="font-cobaltRidge text-3xl lg:text-4xl ">
             Chat to our friendly team
           </h1>
           <h1 className="font-tthoves py-4 opacity-70">
@@ -167,25 +167,32 @@ const Footer = () => {
               (
                 value:
                   | {
-                    type: string;
-                    text: string;
-                    contact_by: string;
-                    icon_image: any;
-                  }
+                      type: string;
+                      text: string;
+                      contact_by: string;
+                      icon_image: any;
+                    }
                   | {
-                    type: string;
-                    text: string;
-                    contact_by: string;
-                    icon_image: string;
-                  },
+                      type: string;
+                      text: string;
+                      contact_by: string;
+                      icon_image: string;
+                    },
                 key: number
               ) => (
-                <div key={key} className={`flex flex-col space-y-2 ${value.type === "Live chat" ? "cursor-pointer" : "cursor-default"
-                  }`} onClick={() => {
+                <div
+                  key={key}
+                  className={`flex flex-col space-y-2 ${
+                    value.type === "Live chat"
+                      ? "cursor-pointer"
+                      : "cursor-default"
+                  }`}
+                  onClick={() => {
                     if (value.type === "Live chat") {
                       handleClick(); // Trigger the Live Chat click event
                     }
-                  }}>
+                  }}
+                >
                   <div>{value.icon_image}</div>
                   <h1 className="font-tthoves ">{value.type}</h1>
                   <p className="font-tthoves opacity-70">{value.text}</p>
@@ -261,7 +268,11 @@ const Footer = () => {
         </div>
       </div>
       <div className="h-[90vh]  w-full flex justify-center items-center">
-        <img src={renderImg("madeInIndia")} alt=""  className=" w-auto object-contain"/>
+        <img
+          src={renderImg("madeInIndia")}
+          alt=""
+          className=" w-auto object-contain"
+        />
       </div>
     </div>
   );

@@ -21,10 +21,11 @@ const config: Config = {
         heading: "Poppins",
         body: ["TTHovesRegular", "sans-serif"],
         piepie: ["PiePie", "sans-serif"],
+        cobaltRidge: ["CobaltRidge", "sans-serif"],
         tthoves: ["TTHovesRegular", "sans-serif"],
         "tthoves-bold": ["TTHovesBold", "sans-serif"],
         "tthoves-semiBold": ["TTHovesDemiBold", "sans-serif"],
-        "tthoves-medium": ["TTHovesMedium", "sans-serif"]
+        "tthoves-medium": ["TTHovesMedium", "sans-serif"],
       },
       fontSize: {
         md: "var(--Fontsizetext-md)", // Custom font size for medium text

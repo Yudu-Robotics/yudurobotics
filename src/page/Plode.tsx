@@ -53,7 +53,7 @@ export default function Plode() {
 
             <div className="space-y-4 flex flex-col items-start ">
               {/* Main Headline */}
-              <div className="font-piepie text-5xl md:text-6xl lg:text-7xl  text-primary-foreground lg:w-[80%]">
+              <div className="font-cobaltRidge text-5xl md:text-6xl lg:text-7xl  text-primary-foreground lg:w-[80%]">
                 {highlightWords(
                   data.heading,
                   data.wordsToHighlight.text1,
@@ -231,7 +231,7 @@ export default function Plode() {
             <div className="sm:w-2/3 h-full w-full  bg-red-600 rounded-xxl"></div>
           </div>
           <div className="sm:w-1/2 p-5">
-            <p className="text-black font-piepie text-3xl md:text-6xl lg:text-6xl   sm:w-[70%]">
+            <p className="text-black font-cobaltRidge text-3xl md:text-6xl lg:text-6xl   sm:w-[70%]">
               <span className="text-[#5423E6]">Script Programming – </span>
               Take Control with Text-Based Code
             </p>
@@ -287,7 +287,7 @@ export default function Plode() {
           <GetInTouch />
         </div>
         <div>
-        <Curious jumppingButton={data?.jumppingButton || []} />
+          <Curious jumppingButton={data?.jumppingButton || []} />
         </div>
       </div>
     </>

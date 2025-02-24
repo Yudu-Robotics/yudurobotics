@@ -16,7 +16,7 @@ const FAQs = ({ product }: { product: string }) => {
   return (
     <div className="flex flex-col space-y-4 pt-16 ">
       <div className="flex flex-col space-y-2 justify-center items-center">
-        <h1 className="w-full font-piepie text-center  text-3xl sm:text-4xl text-black sm:racking-wider">
+        <h1 className="w-full font-cobaltRidge text-center  text-3xl sm:text-4xl text-black sm:racking-wider">
           Got Questions? We’ve Got Answers
         </h1>
         <p className="text-secondary-foreground text-center text-lg sm:text-start sm:text-sm md:text-base lg:text-lg xl:text-xl pt-4 font-tthoves">
@@ -26,10 +26,7 @@ const FAQs = ({ product }: { product: string }) => {
       {/* <div className="flex flex-col space-y-6 justify-start items-center"> */}
       <div className="max-w-4xl mx-auto px-4 py-0 lg:py-10">
         {filteredFAQs.map((item, index) => (
-          <div
-            key={index}
-            className="border-b border-[#E3E3E4] py-6"
-          >
+          <div key={index} className="border-b border-[#E3E3E4] py-6">
             <button
               onClick={() => toggleFAQ(index)}
               className="flex justify-between items-center w-full focus:outline-none"

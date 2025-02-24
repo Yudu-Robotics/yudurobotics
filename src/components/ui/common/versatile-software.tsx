@@ -49,7 +49,7 @@ const VersatileSoftware: React.FC<SoftwareAdaptiveProps> = ({
         <h1 className="text-primary text-lg font-tthoves-medium ">
           {data ? "" : "Software"}
         </h1>
-        <h2 className="text-4xl lg:text-5xl xl:text-7xl font-piepie tracking-wide ">
+        <h2 className="text-4xl lg:text-5xl xl:text-7xl font-cobaltRidge tracking-wide ">
           {data
             ? highlightWords(data.title, [data.colorTitle], "text-primary")
             : highlightWords(

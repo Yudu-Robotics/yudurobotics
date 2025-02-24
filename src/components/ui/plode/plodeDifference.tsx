@@ -16,7 +16,7 @@ function plodeDifference({ data }: propsValue) {
         <div className="flex flex-col space-y-16  md:space-x-16 py-10 px-10 md:px-20">
           <div className="flex">
             <div className="sm:w-2/3">
-              <div className="font-piepie text-2xl md:text-4xl lg:text-6xl text-primary-foreground">
+              <div className="font-cobaltRidge text-2xl md:text-4xl lg:text-6xl text-primary-foreground">
                 {data.title}
               </div>
               <div className="text-[#BBA5FE] mt-5 sm:w-2/3">{data.desc}</div>

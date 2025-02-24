@@ -4,12 +4,16 @@
 
 @layer base {
   :root {
-    --primary: 255, 80%, 52%; /* Blue*/
+    --primary: 255, 80%, 52%;
+    /* Blue*/
     --primary-ver: 155, 93%, 57%;
-    --primary-foreground: 0 0% 100%; /* white for background and other */
-    --destructive: 55, 80%, 52%; /* Yellow for Highlight*/
+    --primary-foreground: 0 0% 100%;
+    /* white for background and other */
+    --destructive: 55, 80%, 52%;
+    /* Yellow for Highlight*/
     --secondary: 252 92% 66%;
-    --secondary-foreground: 240, 3%, 30%; /* gray color for light text*/
+    --secondary-foreground: 240, 3%, 30%;
+    /* gray color for light text*/
 
     --background: 0 0% 100%;
     --foreground: 0 0% 100%;
@@ -33,15 +37,20 @@
     --chart-4: 257 79% 52%;
     --chart-5: 257 79% 52%;
 
-    --radius: 1rem; /* Keep the border radius unchanged */
+    --radius: 1rem;
+    /* Keep the border radius unchanged */
   }
 
   .peecee {
-    --primary: 55, 80%, 52%; /* Yellow  */
+    --primary: 55, 80%, 52%;
+    /* Yellow  */
     --primary-ver: 255, 93%, 57%;
-    --primary-foreground: 55, 73%, 6%; /* Black */
-    --destructive: 354, 86%, 56%; /* red for highlight text*/
-    --secondary-foreground: 240, 3%, 30%; /* gray color for light text*/
+    --primary-foreground: 55, 73%, 6%;
+    /* Black */
+    --destructive: 354, 86%, 56%;
+    /* red for highlight text*/
+    --secondary-foreground: 240, 3%, 30%;
+    /* gray color for light text*/
 
     --background: 0 0% 100%;
     --foreground: 0 0% 100%;
@@ -72,12 +81,16 @@
   }
 
   .zing {
-    --primary: 199, 73%, 60%; /* SkyBlue*/
+    --primary: 199, 73%, 60%;
+    /* SkyBlue*/
     --primary-ver: 355, 93%, 57%;
-    --primary-foreground: 0 0% 100%; /* white for background and other */
-    --destructive: 55, 80%, 52%; /* Yellow for Highlight*/
+    --primary-foreground: 0 0% 100%;
+    /* white for background and other */
+    --destructive: 55, 80%, 52%;
+    /* Yellow for Highlight*/
     --secondary: 252 92% 66%;
-    --secondary-foreground: 240, 3%, 30%; /* gray color for light text*/
+    --secondary-foreground: 240, 3%, 30%;
+    /* gray color for light text*/
 
     --background: 0 0% 100%;
     --foreground: 0 0% 100%;
@@ -101,16 +114,21 @@
     --chart-4: 257 79% 52%;
     --chart-5: 257 79% 52%;
 
-    --radius: 1rem; /* Keep the border radius unchanged */
+    --radius: 1rem;
+    /* Keep the border radius unchanged */
   }
 
   .klaw {
-    --primary: 146, 75%, 62%; /* Green*/
+    --primary: 146, 75%, 62%;
+    /* Green*/
     --primary-ver: 25, 93%, 57%;
-    --primary-foreground: 55, 73%, 6%; /* Black */
-    --destructive: 255, 93%, 57%; /* indego for Highlight*/
+    --primary-foreground: 55, 73%, 6%;
+    /* Black */
+    --destructive: 255, 93%, 57%;
+    /* indego for Highlight*/
     --secondary: 252 92% 66%;
-    --secondary-foreground: 240, 3%, 30%; /* gray color for light text*/
+    --secondary-foreground: 240, 3%, 30%;
+    /* gray color for light text*/
 
     --background: 0 0% 100%;
     --foreground: 0 0% 100%;
@@ -134,7 +152,8 @@
     --chart-4: 257 79% 52%;
     --chart-5: 257 79% 52%;
 
-    --radius: 1rem; /* Keep the border radius unchanged */
+    --radius: 1rem;
+    /* Keep the border radius unchanged */
   }
 
   .dark {
@@ -169,6 +188,7 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -185,6 +205,11 @@
   src: url("../../fonts/PiepieFonts.ttf") format("woff2");
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "CobaltRidge";
+  src: url("../../fonts/CobaltRidge.otf") format("opentype");
 }
 
 @font-face {

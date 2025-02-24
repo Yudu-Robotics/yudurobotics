@@ -41,7 +41,7 @@ const LatestPosts = () => {
           {" "}
           Latest Posts
         </h1>
-        <h2 className="text-lg lg:text-3xl font-piepie ">
+        <h2 className="text-lg lg:text-3xl font-cobaltRidge ">
           Dive into Our Insights
         </h2>
         <h3 className="text-secondary-foreground text-center text-sm lg:text-lg">
@@ -67,7 +67,7 @@ const LatestPosts = () => {
                 {value.author_name} {" . "} {value.date}
               </h1>
               <div className="flex justify-between py-2">
-                <h1 className="font-piepie text-base lg:text-lg w-[90%] lg:w-[70%] ">
+                <h1 className="font-cobaltRidge text-base lg:text-lg w-[90%] lg:w-[70%] ">
                   {value.title}
                 </h1>
                 <img

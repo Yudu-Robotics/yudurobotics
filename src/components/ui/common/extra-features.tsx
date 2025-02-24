@@ -35,7 +35,7 @@ const ExtraFeatures: React.FC<{
         <h1 className="text-primary text-lg  xl:text-lg text-left  w-full font-tthoves-semiBold text-[#CCBD1F] ">
           {title}
         </h1>
-        <h2 className="text-4xl lg:text-5xl xl:text-7xl font-piepie tracking-wide  w-[100%] lg:w-[50%]">
+        <h2 className="text-4xl lg:text-5xl xl:text-7xl font-cobaltRidge tracking-wide  w-[100%] lg:w-[50%]">
           {highlightWords(data?.heading, ["Effortless"], "text-primary")}
         </h2>
         <h2 className="text-lg text-secondary-foreground xl:text-xl w-[100%] lg:w-[35%] font-tthoves">
@@ -95,12 +95,12 @@ const ExtraFeatures: React.FC<{
               />
             )}
             {/* Arrow Image Below the Central Right Image */}
-            
-            <img src={renderImg("arrowdown")} 
-            alt="Arrow Image" 
-            className="absolute bottom-[-150px] right-[10px] w-25 h-35 translate-x-0 translate-y-0 filter brightness-20 md:right-[50px] lg:translate-x-[-40px] md:translate-y-[-30px] xs:translate-x-[40px] xs:translate-y-[-35px] sm:translate-y-[-40px] lg:translate-x-[50px] lg:translate-y-[-10px] " />
 
-            
+            <img
+              src={renderImg("arrowdown")}
+              alt="Arrow Image"
+              className="absolute bottom-[-150px] right-[10px] w-25 h-35 translate-x-0 translate-y-0 filter brightness-20 md:right-[50px] lg:translate-x-[-40px] md:translate-y-[-30px] xs:translate-x-[40px] xs:translate-y-[-35px] sm:translate-y-[-40px] lg:translate-x-[50px] lg:translate-y-[-10px] "
+            />
           </div>
         </div>
       </div>

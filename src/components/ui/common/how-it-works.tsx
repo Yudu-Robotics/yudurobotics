@@ -27,7 +27,7 @@ const Working: React.FC<{ data: HowItWork }> = ({ data }) => {
         <h1 className="text-primary text-lg font-tthoves-semiBold ">
           Hardware
         </h1>
-        <h2 className="text-4xl lg:text-5xl xl:text-7xl font-piepie  ">
+        <h2 className="text-4xl lg:text-5xl xl:text-7xl font-cobaltRidge  ">
           {highlightWords(data.heading, ["Works"], "text-primary")}
         </h2>
         <h2 className="font-tthoves text-sm text-secondary-foreground sm:text-lg xl:text-xl w-[90%] md:w-[70%] lg:w-[75%]">
@@ -59,9 +59,9 @@ const Working: React.FC<{ data: HowItWork }> = ({ data }) => {
                   <path
                     d="M1.16663 6.99984H12.8333M12.8333 6.99984L6.99996 1.1665M12.8333 6.99984L6.99996 12.8332"
                     stroke="#1FCC84"
-                    stroke-width="1.66667"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="1.66667"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg> */}
               </div>
@@ -90,9 +90,9 @@ const Working: React.FC<{ data: HowItWork }> = ({ data }) => {
                   <path
                     d="M1.16663 6.99984H12.8333M12.8333 6.99984L6.99996 1.1665M12.8333 6.99984L6.99996 12.8332"
                     stroke="#1FCC84"
-                    stroke-width="1.66667"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="1.66667"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg> */}
               </div>

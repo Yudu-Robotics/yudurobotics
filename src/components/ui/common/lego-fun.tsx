@@ -15,7 +15,7 @@ const LegoFun: React.FC<{ legoFun: LegoFun }> = ({ legoFun }) => {
           <h1 className="font-tthoves-semiBold text-primary sm:text-sm md:text-base lg:text-lg xl:text-xl font-tthoves-medium ">
             Hardware
           </h1>
-          <h2 className="text-4xl lg:text-6xl xl:text-7xl font-piepie tracking-wide ">
+          <h2 className="text-4xl lg:text-6xl xl:text-7xl font-cobaltRidge tracking-wide ">
             {highlightWords(legoFun.heading, [""], "text-primary")}
           </h2>
           <h2 className="text-lg text-secondary-foreground font-tthoves w-[100%] lg:w-[80%] xl:text-xl mt-4">

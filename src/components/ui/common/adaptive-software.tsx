@@ -9,7 +9,11 @@ interface SoftwareAdaptiveProps {
   product?: string;
 }
 
-const SoftwareAdaptive: React.FC<SoftwareAdaptiveProps> = ({ data, image, product }) => {
+const SoftwareAdaptive: React.FC<SoftwareAdaptiveProps> = ({
+  data,
+  image,
+  product,
+}) => {
   const features = [
     {
       icon: "monitor",
@@ -30,7 +34,7 @@ const SoftwareAdaptive: React.FC<SoftwareAdaptiveProps> = ({ data, image, produc
           <h1 className="text-primary sm:text-sm md:text-sm lg:text-base xl:text-base font-tthoves-medium ">
             {data?.title || "Software"}
           </h1>
-          <h2 className="text-4xl lg:text-5xl xl:text-6xl font-piepie tracking-wide  w-[100%] sm:pt-5 md:pt-2">
+          <h2 className="text-4xl lg:text-5xl xl:text-6xl font-cobaltRidge tracking-wide  w-[100%] sm:pt-5 md:pt-2">
             {highlightWords("Playfully Adaptive", ["Adaptive"], "text-primary")}
           </h2>
           <h2 className="font-tthoves sm:text-sm md:text-base lg:text-lg xl:text-xl text-secondary-foreground pt-3 w-[70%] ">
@@ -72,6 +76,5 @@ const SoftwareAdaptive: React.FC<SoftwareAdaptiveProps> = ({ data, image, produc
     </div>
   );
 };
-
 
 export default SoftwareAdaptive;

@@ -8,7 +8,7 @@ const Ourteam = () => {
       <div className="flex flex-col space-y-3">
         <h1 className="text-primary text-sm"> Our team</h1>
         <div className="flex flex-col space-y-4 lg:space-y-0 lg:flex lg:flex-row lg:justify-between lg:items-end">
-          <p className="font-piepie text-3xl text-black lg:w-[50%] tracking-wide">
+          <p className="font-cobaltRidge text-3xl text-black lg:w-[50%] tracking-wide">
             Meet the Minds Behind the Magic - the folks{" "}
             <span className="text-primary">work with you</span>
           </p>

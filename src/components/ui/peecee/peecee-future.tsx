@@ -24,7 +24,7 @@ const PeeceeFuture: React.FC<{ peeceeFuture: PeeceeFuture }> = ({
           Hardware
         </h1>
 
-        <h2 className="text-4xl lg:text-6xl xl:text-7xl font-piepie tracking-wide">
+        <h2 className="text-4xl lg:text-6xl xl:text-7xl font-cobaltRidge tracking-wide">
           {highlightWords(
             peeceeFuture.heading,
             ["Future-Proof"],

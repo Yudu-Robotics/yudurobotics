@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { highlightWords } from "@/app/utility/highlightWords";
 import renderImg from "@/imgImport";
 import React, { useEffect, useState } from "react";
@@ -55,13 +55,15 @@ export default function Section3() {
   return (
     <div>
       <div className="text-black text-center flex justify-center flex-col items-center">
-        <div className="sm:w-[90%] md:w-[70%] font-piepie text-5xl md:text-6xl lg:text-7xl tex-center text-primary-foreground text-[#0A041A] px-4">
+        <div className="sm:w-[90%] md:w-[70%] font-cobaltRidge text-5xl md:text-6xl lg:text-7xl tex-center text-primary-foreground text-[#0A041A] px-4">
           {highlightWords(heading1, [heading1], "text-[#0A041A]")}
         </div>
-        <div className="font-piepie text-5xl md:text-6xl lg:text-7xl  text-primary-foreground text-[#0A041A] px-4">
+        <div className="font-cobaltRidge text-5xl md:text-6xl lg:text-7xl  text-primary-foreground text-[#0A041A] px-4">
           {highlightWords(heading2, [heading2], "text-[#5423E6]")}
         </div>
-        <p className="sm:w-[80%] md:w-[60%] lg:px-10 px-3 text-lg mt-5 text-[#4A4A4F]">{subheading}</p>
+        <p className="sm:w-[80%] md:w-[60%] lg:px-10 px-3 text-lg mt-5 text-[#4A4A4F]">
+          {subheading}
+        </p>
       </div>
       {/* {isSmallScreen ? (
         <div className="grid grid-cols-1 px-4 my-16">
@@ -100,12 +102,19 @@ export default function Section3() {
         <div className="relative grid grid-cols-1 px-4 my-16">
           {data.map((item, index) => (
             <div key={item.id} className="relative w-full px-1 my-6 flex">
-              <div className="h-[50px] w-[50px] bg-[#5423E6] rounded-full flex justify-center items-center mb-2 relative z-10  gap-0 "  style={{ borderRadius: '100%' }}>
-                <img src={item.src} alt={item.title} className=""/>
+              <div
+                className="h-[50px] w-[50px] bg-[#5423E6] rounded-full flex justify-center items-center mb-2 relative z-10  gap-0 "
+                style={{ borderRadius: "100%" }}
+              >
+                <img src={item.src} alt={item.title} className="" />
               </div>
               <div className="  w-[279px] h-[134px] p-4 pt-[var(--spacing-4xl)]  gap-[var(--spacing-sm)] flex-grow">
-                <h2 className="font-tthoves-bold text-base text-[#303036]  font-semibold leading-[var(--Lineheighttext-md)] text-left mb-2">{item.title}</h2>
-                <p className="font-tthoves text-base text-[#4A4A4F]  font-light leading-[var(--Lineheighttext-md)] text-left underline-offset-from-font decoration-skip-ink-none ">{item.desc}</p>
+                <h2 className="font-tthoves-bold text-base text-[#303036]  font-semibold leading-[var(--Lineheighttext-md)] text-left mb-2">
+                  {item.title}
+                </h2>
+                <p className="font-tthoves text-base text-[#4A4A4F]  font-light leading-[var(--Lineheighttext-md)] text-left underline-offset-from-font decoration-skip-ink-none ">
+                  {item.desc}
+                </p>
               </div>
               {index !== data.length - 1 && (
                 <div className="absolute left-[25px] top-[60px]  h-[calc(100%-20px)] w-[2px] bg-[#5423E6]"></div>
@@ -116,12 +125,19 @@ export default function Section3() {
       ) : (
         <div className="flex flex-row justify-between items-start my-10 px-10">
           {data.map((item) => (
-            <div key={item.id} className="flex flex-col items-center text-center mx-4">
+            <div
+              key={item.id}
+              className="flex flex-col items-center text-center mx-4"
+            >
               <div className="h-[50px] w-[50px] bg-[#5423E6] rounded-full flex justify-center items-center mb-4">
                 <img src={item.src} alt={item.title} />
               </div>
-              <h2 className="font-tthoves-bold text-base text-[#303036]">{item.title}</h2>
-              <p className="font-tthoves px-4 text-sm md:text-base text-[#4A4A4F]">{item.desc}</p>
+              <h2 className="font-tthoves-bold text-base text-[#303036]">
+                {item.title}
+              </h2>
+              <p className="font-tthoves px-4 text-sm md:text-base text-[#4A4A4F]">
+                {item.desc}
+              </p>
             </div>
           ))}
         </div>

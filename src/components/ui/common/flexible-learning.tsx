@@ -9,7 +9,12 @@ interface propsValue {
   desc?: string;
   product?: string;
 }
-function FlexibleLearning({ newProduct = false, title, desc, product }: propsValue) {
+function FlexibleLearning({
+  newProduct = false,
+  title,
+  desc,
+  product,
+}: propsValue) {
   return (
     <div>
       <div className="w-full -rotate-180">
@@ -29,7 +34,7 @@ function FlexibleLearning({ newProduct = false, title, desc, product }: propsVal
 
             <div className="space-y-4 px-3 ">
               {/* Main Headline */}
-              <div className="font-piepie text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-primary-foreground">
+              <div className="font-cobaltRidge text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-primary-foreground">
                 {title || "Flexible Learning Paths"}
               </div>
 

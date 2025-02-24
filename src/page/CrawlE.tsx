@@ -31,7 +31,7 @@ export default function CrawlE() {
 
             <div className="space-y-4">
               {/* Main Headline */}
-              <div className="font-piepie text-5xl md:text-6xl lg:text-7xl  text-primary-foreground lg:w-[80%]">
+              <div className="font-cobaltRidge text-5xl md:text-6xl lg:text-7xl  text-primary-foreground lg:w-[80%]">
                 {highlightWords(
                   data.heading,
                   data.wordsToHighlight.text1,
@@ -153,7 +153,7 @@ export default function CrawlE() {
           <GetInTouch />
         </div>
         <div>
-        <Curious jumppingButton={data?.jumppingButton || []} />
+          <Curious jumppingButton={data?.jumppingButton || []} />
         </div>
       </div>
     </>

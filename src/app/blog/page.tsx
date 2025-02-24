@@ -16,7 +16,7 @@ export default async function BlogPage() {
     <div className="px-8 lg:px-28 py-10 lg:py-10 text-black ">
       <div className="flex flex-col space-y-3 py-10">
         <h1 className="text-sm text-primary font-tthoves-medium">Our blog</h1>
-        <h2 className="text-lg lg:text-4xl font-piepie">
+        <h2 className="text-lg lg:text-4xl font-cobaltRidge">
           Resources and insights
         </h2>
         <p className="text-secondary-foreground">
@@ -68,7 +68,7 @@ export default async function BlogPage() {
                 </div>
               </div>
               <div className="flex flex-col space-y-3">
-                <h1 className="font-piepie text-base lg:text-3xl w-[90%] lg:w-[70%] ">
+                <h1 className="font-cobaltRidge text-base lg:text-3xl w-[90%] lg:w-[70%] ">
                   {data[0].title}
                 </h1>
                 <p className="text-secondary-foreground">
@@ -129,7 +129,7 @@ export default async function BlogPage() {
                       </div>
                     </div>
                     <div className="flex justify-between">
-                      <h1 className="font-piepie text-base lg:text-lg w-[90%] lg:w-[70%] ">
+                      <h1 className="font-cobaltRidge text-base lg:text-lg w-[90%] lg:w-[70%] ">
                         {value.title}
                       </h1>
                       <img

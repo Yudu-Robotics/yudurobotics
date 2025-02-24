@@ -17,7 +17,7 @@ const GetStart: React.FC<GetStartProps> = ({ title, desc }) => {
 
             <div className="space-y-4">
               {/* Main Headline */}
-              <div className="font-piepie text-2xl md:text-3xl lg:text-5xl   text-primary-foreground lg:w-[70%]">
+              <div className="font-cobaltRidge text-2xl md:text-3xl lg:text-5xl   text-primary-foreground lg:w-[70%]">
                 {title}
               </div>
 

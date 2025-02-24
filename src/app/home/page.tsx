@@ -42,7 +42,7 @@ export default async function HomePage() {
 
             <div className="space-y-4 border">
               {/* Main Headline */}
-              <div className="font-piepie text-4xl md:text-6xl lg:text-7xl  text-primary-foreground text-center sm:text-left sm:w-[95%] leading-8 space-x-2">
+              <div className="font-cobaltRidge text-4xl md:text-6xl lg:text-7xl text-primary-foreground text-center md:text-left sm:space-x-4 md:w-[95%] leading-8 space-x-2">
                 {highlightWords(
                   data.heading,
                   data.wordsToHighlight.text1,
@@ -51,7 +51,7 @@ export default async function HomePage() {
               </div>
 
               {/* Subtext */}
-              <div className="text-[#F2D8FE] text-lg md:text-lg lg:text-xl font-tthoves w-[100%] lg:w-[50%] text-center sm:text-left">
+              <div className="text-[#F2D8FE] text-lg md:text-lg lg:text-xl font-tthoves w-[100%] lg:w-[50%] text-center md:text-left">
                 {data.subheading}
               </div>
             </div>
@@ -70,7 +70,7 @@ export default async function HomePage() {
         </div>
         <div className="py-10">
           {/* <a href=""> */}
-            <img src={renderImg("homeImage")} className="w-full" />
+          <img src={renderImg("homeImage")} className="w-full" />
           {/* </a> */}
         </div>
         <div className="py-8 lg:py-16">
@@ -117,7 +117,7 @@ export default async function HomePage() {
           <GetInTouch />
         </div>
         <div>
-        <Curious jumppingButton={data?.jumppingButton || []} />
+          <Curious jumppingButton={data?.jumppingButton || []} />
         </div>
       </div>
     </>

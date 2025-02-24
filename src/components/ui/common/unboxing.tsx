@@ -2,23 +2,21 @@ import renderImg from "@/imgImport";
 import renderSvg from "@/svgImport";
 import React from "react";
 
-interface propsValue{
+interface propsValue {
   product?: string;
 }
 
-function Unboxing({product}: propsValue) {
+function Unboxing({ product }: propsValue) {
   const features = [
     {
       icon: "smileyFace",
       heading: "Cute and Cuddly Design",
-      subheading:
-        `With its super cute form factor, ${product} is as friendly as it looks—perfect for young learners who want a companion, not just a tool.`,
+      subheading: `With its super cute form factor, ${product} is as friendly as it looks—perfect for young learners who want a companion, not just a tool.`,
     },
     {
       icon: "strong",
       heading: "Playful Yet Strong",
-      subheading:
-        `Don’t let the playful look fool you—${product} is built to withstand all the drops, bumps, and scrapes that come with serious fun and it comes in a colorful sturdy storage box designed for reuseability.`,
+      subheading: `Don’t let the playful look fool you—${product} is built to withstand all the drops, bumps, and scrapes that come with serious fun and it comes in a colorful sturdy storage box designed for reuseability.`,
     },
   ];
   return (
@@ -28,12 +26,12 @@ function Unboxing({product}: propsValue) {
           <h1 className="text-primary text-lg font-tthoves-medium xl:text-lg">
             Hardware
           </h1>
-          <h2 className="text-[#1A1804] text-4xl lg:text-6xl xl:text-7xl font-piepie tracking-wide xl:w-[80%]">
+          <h2 className="text-[#1A1804] text-4xl lg:text-6xl xl:text-7xl font-cobaltRidge tracking-wide xl:w-[80%]">
             Built to Last and Play
           </h2>
           <h2 className="text-lg sm:text-lg xl:text-xl text-secondary-foreground pt-2 sm:pt-4 font-tthoves">
-            {product} is designed to be as tough as it is fun, ready for all
-            the adventures you can dream up.
+            {product} is designed to be as tough as it is fun, ready for all the
+            adventures you can dream up.
           </h2>
         </div>
 

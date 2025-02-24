@@ -31,7 +31,7 @@ export default function Roboki() {
 
             <div className="space-y-4 w-full ">
               {/* Main Headline */}
-              <div className="font-piepie text-5xl md:text-6xl lg:text-7xl xl:text-8xl  text-primary-foreground w-[100%] lg:w-[80%] sm:text-start text-center ">
+              <div className="font-cobaltRidge text-5xl md:text-6xl lg:text-7xl xl:text-8xl  text-primary-foreground w-[100%] lg:w-[80%] sm:text-start text-center ">
                 {highlightWords(
                   data.heading,
                   data.wordsToHighlight.text1,
@@ -77,7 +77,7 @@ export default function Roboki() {
           <ProductCeoReviewsContainer comment={data} />
         </div>
         <div className="py-8 lg:py-24">
-          <Unboxing product="Roboki"/>
+          <Unboxing product="Roboki" />
         </div>
         <div className="text-sm py-24 my-8 text-center font-bold  flex flex-col space-y-6 justify-center items-center">
           <p className="text-lg sm:text-lg md:text-base lg:text-lg xl:text-xl font-tthoves-semiBold">
@@ -121,7 +121,7 @@ export default function Roboki() {
           <CeoComments />
         </div>{" "} */}
         <div className="py-20">
-          <FlexibleLearning product="Roboki"/>
+          <FlexibleLearning product="Roboki" />
         </div>
         <div className="py-16 md:py-20">
           <ExtraFeatures
@@ -146,7 +146,7 @@ export default function Roboki() {
           <GetInTouch />
         </div>
         <div>
-        <Curious jumppingButton={data?.jumppingButton || []} />
+          <Curious jumppingButton={data?.jumppingButton || []} />
         </div>
       </div>
     </>

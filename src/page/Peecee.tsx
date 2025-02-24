@@ -49,9 +49,9 @@ export default function Peecee() {
     subheading: "Default Subheading",
     tableData: [],
   };
- 
+
   const data = mockData.peecee;
- 
+
   return (
     <>
       <div className="px-8 sm:px-8 lg:px-16 xl:px-28 bg-primary pt-16 sm:pt-20 md:pt-16 lg:pt-20 xl:pt-24">
@@ -61,7 +61,7 @@ export default function Peecee() {
 
             <div className="space-y-4 ">
               {/* Main Headline */}
-              <div className="font-piepie text-5xl md:text-6xl lg:text-7xl xl:text-8xl  text-primary-foreground lg:w-[60%] xl:w-[60%] sm:text-start text-center">
+              <div className="font-cobaltRidge text-5xl md:text-6xl lg:text-7xl xl:text-8xl  text-primary-foreground lg:w-[60%] xl:w-[60%] sm:text-start text-center">
                 {highlightWords(
                   data.heading,
                   data.wordsToHighlight.text1,
@@ -112,7 +112,7 @@ export default function Peecee() {
           <ProductCeoReviewsContainer comment={data} />
         </div>
         <div className="py-8 lg:py-16">
-          <Unboxing product="PeeCee TED"/>
+          <Unboxing product="PeeCee TED" />
         </div>
         <div className="text-sm py-24 my-8 text-center font-bold flex flex-col space-y-6 justify-center items-center">
           <p className="text-lg sm:text-lg md:text-base lg:text-lg xl:text-xl font-tthoves-semiBold">
@@ -182,7 +182,7 @@ export default function Peecee() {
           <CeoComments />
         </div>{" "} */}
         <div className="py-20">
-          <FlexibleLearning product="PeeCee TED"/>
+          <FlexibleLearning product="PeeCee TED" />
         </div>
         <div className="flex flex-col md:space-y-36 space-y-20">
           <CurriculumSteps
@@ -221,8 +221,7 @@ export default function Peecee() {
           <GetInTouch />
         </div>
         <div>
-      
-        <Curious jumppingButton={data?.jumppingButton || []} />
+          <Curious jumppingButton={data?.jumppingButton || []} />
         </div>
       </div>
     </>

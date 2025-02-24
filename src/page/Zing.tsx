@@ -31,7 +31,7 @@ export default function Zing() {
 
             <div className="space-y-4">
               {/* Main Headline */}
-              <div className="font-piepie text-5xl md:text-6xl lg:text-7xl  text-primary-foreground lg:w-[80%]">
+              <div className="font-cobaltRidge text-5xl md:text-6xl lg:text-7xl  text-primary-foreground lg:w-[80%]">
                 {highlightWords(
                   data.heading,
                   data.wordsToHighlight.text1,
@@ -82,7 +82,7 @@ export default function Zing() {
       <div className="py-8 lg:py-16 px-4 sm:px-12 lg:px-28 text-black ">
         <ProductCeoReviewsContainer comment={data} />
         <div className="py-8 lg:py-24">
-          <Unboxing product="Zing"/>
+          <Unboxing product="Zing" />
         </div>
         <div className="text-xl py-24 text-center  flex flex-col space-y-6 justify-center items-center">
           <p className="font-tthoves-semiBold opacity-70">
@@ -127,7 +127,7 @@ export default function Zing() {
           <CeoComments />
         </div>{" "} */}
         <div className="py-20">
-          <FlexibleLearning product="Zing"/>
+          <FlexibleLearning product="Zing" />
         </div>
         <div className="py-16 md:py-20">
           <ExtraFeatures
@@ -152,7 +152,7 @@ export default function Zing() {
           <GetInTouch />
         </div>
         <div>
-        <Curious jumppingButton={data?.jumppingButton || []} />
+          <Curious jumppingButton={data?.jumppingButton || []} />
         </div>
       </div>
     </>
