@@ -57,7 +57,7 @@ const Footer = () => {
   const index =
     route.indexOf(lastSegment) !== -1 ? route.indexOf(lastSegment) : -1;
 
-  let ishorizontal: string = "true";
+  const ishorizontal: string = "true";
   let text1: string = "I'm here to";
   let text2: string = "Join Forces";
   let bgColor: string = "#2CF7A4";
@@ -203,8 +203,17 @@ const Footer = () => {
               )
             )}
           </div>
-
-          <ContactForm />
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.7277701730914!2d77.6595308!3d12.860851499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6d68e15b4c7f%3A0x26b1f4d88e3e6927!2sYudu%20Robotics!5e0!3m2!1sen!2sin!4v1740458636266!5m2!1sen!2sin"
+            // width="600"
+            height="450"
+            className="rounded-xl max-w-[600px] w-full "
+            style={{ border: 0 }}
+            // allowFullScreen=""
+            loading="lazy"
+            // referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          {/* <ContactForm /> */}
         </div>
       </div>
 
