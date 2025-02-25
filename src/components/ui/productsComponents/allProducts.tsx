@@ -70,14 +70,19 @@ const AllProductsComponent = () => {
   };
 
   // Get active filter (type) and age group
-  const activeFilters = filters.filter((filter) => filter.active).map((filter) => filter.name);
-  const activeAgeGroups = ageGroups.filter((ageGroup) => ageGroup.active).map((ageGroup) => ageGroup.name);
+  const activeFilters = filters
+    .filter((filter) => filter.active)
+    .map((filter) => filter.name);
+  const activeAgeGroups = ageGroups
+    .filter((ageGroup) => ageGroup.active)
+    .map((ageGroup) => ageGroup.name);
 
   // Filter products based on multiple criteria
   const filteredProducts = products.filter(
     (product) =>
       (activeFilters.length === 0 || activeFilters.includes(product.type)) &&
-      (activeAgeGroups.length === 0 || activeAgeGroups.includes(product.ageGroup)) &&
+      (activeAgeGroups.length === 0 ||
+        activeAgeGroups.includes(product.ageGroup)) &&
       (!selectedCategory || product.category === selectedCategory) &&
       (!searchTerm || product.name.toLowerCase().startsWith(searchTerm))
   );
@@ -102,10 +107,11 @@ const AllProductsComponent = () => {
           {filters.map((filter, index) => (
             <button
               key={index}
-              className={`flex-1 text-center text-sm px-4 py-2 border-r last:border-r-0 whitespace-nowrap transition-colors h-full ${filter.active
-                ? "font-tthoves-bold text-purple-600 bg-purple-100"
-                : "font-tthoves-medium text-gray-700 hover:bg-gray-100"
-                }`}
+              className={`flex-1 text-center text-sm px-4 py-2 border-r last:border-r-0 whitespace-nowrap transition-colors h-full ${
+                filter.active
+                  ? "font-tthoves-bold text-purple-600 bg-purple-100"
+                  : "font-tthoves-medium text-gray-700 hover:bg-gray-100"
+              }`}
               onClick={() => handleFilterChange(index)}
             >
               {filter.name}
@@ -118,17 +124,17 @@ const AllProductsComponent = () => {
           {ageGroups.map((ageGroup, index) => (
             <button
               key={index}
-              className={`flex-1 text-center text-sm px-4 py-2 border-r last:border-r-0 whitespace-nowrap transition-colors h-full ${ageGroup.active
-                ? "font-tthoves-bold text-purple-600 bg-purple-100"
-                : "font-tthoves-medium text-gray-700 hover:bg-gray-100"
-                }`}
+              className={`flex-1 text-center text-sm px-4 py-2 border-r last:border-r-0 whitespace-nowrap transition-colors h-full ${
+                ageGroup.active
+                  ? "font-tthoves-bold text-purple-600 bg-purple-100"
+                  : "font-tthoves-medium text-gray-700 hover:bg-gray-100"
+              }`}
               onClick={() => handleAgeGroupChange(index)}
             >
               {ageGroup.name}
             </button>
           ))}
         </div>
-
 
         {/* Product Category Dropdown */}
         <div className="relative w-full  xl:w-[23%] font-tthoves">
@@ -156,7 +162,11 @@ const AllProductsComponent = () => {
             value={searchTerm}
             onChange={handleSearchChange}
           />
-          <img src={renderImg("search")} alt="search" className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+          <img
+            src={renderImg("search")}
+            alt="search"
+            className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400"
+          />
         </div>
       </div>
 
@@ -164,17 +174,15 @@ const AllProductsComponent = () => {
       <div className="mb-8">
         <CustomHeading title="Hardware" />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {hardwareProducts.map((product) => (
+          {hardwareProducts.map((product) =>
             product.link && product.link !== "#" ? (
-              <Link href={product.link} key={product.name}>
-                <ProductCard product={product} />
-              </Link>
+              <ProductCard product={product} key={product.name} />
             ) : (
               <div key={product.name} className="cursor-pointer">
                 <ProductCard product={product} />
               </div>
             )
-          ))}
+          )}
         </div>
       </div>
 
@@ -182,17 +190,15 @@ const AllProductsComponent = () => {
       <div className="mb-8">
         <CustomHeading title="Software" />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {softwareProducts.map((product) => (
+          {softwareProducts.map((product) =>
             product.link && product.link !== "#" ? (
-              <Link href={product.link} key={product.name}>
-                <ProductCard product={product} />
-              </Link>
+              <ProductCard product={product} key={product.name} />
             ) : (
               <div key={product.name} className="cursor-pointer">
                 <ProductCard product={product} />
               </div>
             )
-          ))}
+          )}
         </div>
       </div>
 
@@ -200,17 +206,18 @@ const AllProductsComponent = () => {
       <div className="mb-8">
         <CustomHeading title="Curriculum" />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {curriculumProducts.map((product) => (
+          {curriculumProducts.map((product) =>
             product.link && product.link !== "#" ? (
-              <Link href={product.link} key={product.name}>
-                <ProductCard product={product} />
-              </Link>
+              // <Link href={product.link} key={product.name}>
+              //   <ProductCard product={product} />
+              // </Link>
+              <ProductCard product={product} key={product.name} />
             ) : (
               <div key={product.name} className="cursor-pointer">
                 <ProductCard product={product} />
               </div>
             )
-          ))}
+          )}
         </div>
       </div>
 

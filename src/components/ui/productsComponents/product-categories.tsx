@@ -6,6 +6,7 @@ import renderImg from "@/imgImport";
 import SearchAndFilter from "../home/search-filter";
 import Link from "next/link";
 import { products } from "@/data/mockData";
+import Image from "next/image";
 
 interface Products {
   name: string;
@@ -74,7 +75,7 @@ export default function ProductCategories() {
     console.log("Product = ", product);
     setProductDetails(product);
     setSelectedProduct(index);
-    let isAllowed = allowedProductNames.includes(product.name);
+    const isAllowed = allowedProductNames.includes(product.name);
     setIsAllowedFlag(isAllowed);
   };
 
@@ -167,7 +168,13 @@ export default function ProductCategories() {
             </div>
             <div className="hidden md:flex flex-col space-y-4 bg-card-foreground rounded-xlg lg:w-[90%] p-8 ">
               <div>
-                <img src={productDetails.image} className="w-[100%]" />
+                <Image
+                  width={500}
+                  height={500}
+                  alt=""
+                  src={productDetails.image}
+                  className="w-[100%]"
+                />
               </div>
               <div>
                 <h1 className="font-tthoves-semiBold text-xl">
@@ -238,7 +245,7 @@ export default function ProductCategories() {
                     </div>
                   </Link>
                 ) : (
-                  <div className="text-primary mt-4 text-base font-bold flex space-x-2 mt-4 items-center">
+                  <div className="text-primary text-base font-bold flex space-x-2 mt-4 items-center">
                     <div>Coming soon</div>
                     <div>
                       <svg

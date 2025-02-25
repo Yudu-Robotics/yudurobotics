@@ -14,6 +14,7 @@ import renderSvg from "@/svgImport";
 import { highlightWords } from "../utility/highlightWords";
 import TestimonialBanner from "@/components/ui/common/testimonial-banner";
 import Curious from "@/components/ui/common/Curious";
+import Image from "next/image";
 const FAQs = dynamic(() => import("@/components/ui/home/faqs"), {
   ssr: false, // This disables server-side rendering for the FAQ component
 });
@@ -70,7 +71,13 @@ export default async function HomePage() {
         </div>
         <div className="py-10">
           {/* <a href=""> */}
-          <img src={renderImg("homeImage")} className="w-full" />
+          <Image
+            src={renderImg("homeImage")}
+            width={1000}
+            height={1000}
+            alt="home-image"
+            className="w-full h-96 md:h-full object-cover md:object-contain rounded-xxl"
+          />
           {/* </a> */}
         </div>
         <div className="py-8 lg:py-16">

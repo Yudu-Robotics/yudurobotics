@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 interface ProductCardProps {
@@ -27,7 +28,9 @@ const ProductCard: React.FC<ProductCardProps> = ({
     {/* Product Image */}
     <div className="w-1/2 h-full flex justify-center items-center md:w-full">
       <div className="w-full flex justify-center items-center">
-        <img
+        <Image
+          width={1000}
+          height={1000}
           src={product.image}
           alt={product.name}
           className="object-cover w-full h-full"

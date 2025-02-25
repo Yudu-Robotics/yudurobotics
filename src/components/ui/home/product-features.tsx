@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import JumpingButtons from "../common/jumping-buttons";
 import renderImg from "@/imgImport";
 import { Squircle } from "corner-smoothing";
+import Image from "next/image";
 
 function ProductFeatures() {
   const [cornerRadius, setCornerRadius] = useState(80);
@@ -77,19 +78,25 @@ function ProductFeatures() {
         </div>
         <div className="relative w-full py-16 md:mt-12   lg:mt-0">
           {/* Background image */}
-          <img
+          <Image
+            width={500}
+            height={500}
             className="w-full hidden md:block lg:block"
             src={renderImg("productBackground")}
             alt="Background"
           />
 
           {/* Humanoid image - placed on top */}
-          <img
+          <Image
+            width={500}
+            height={500}
             className="absolute -inset-[1.825rem] xs:-inset-[2.3rem] sm:-inset-[2.125rem] md:-inset-16 w-full h-full object-contain hidden md:block lg:block"
             src={renderImg("humanoid")}
             alt="Humanoid"
           />
-          <img
+          <Image
+            width={500}
+            height={500}
             className="w-full h-full object-contain xs:block sm:block md:hidden"
             src={renderImg("humanoidSmall")}
             alt="Humanoid for small screens"

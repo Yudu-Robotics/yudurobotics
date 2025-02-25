@@ -1,394 +1,276 @@
-//Mobile images
-const crawlem = "assets/crawle/crawlem.png";
-const robokim = "assets/roboki/robokim.png";
-const zingm = "assets/zing/zingm.png";
-const peeceem = "assets/peecee/peeceem.png";
-const klawbm = "assets/klawb/klawbm.png";
+// Define all possible image names
+type ImageName =
+  // Mobile images
+  | "crawlem"
+  | "robokim"
+  | "zingm"
+  | "peeceem"
+  | "klawbm"
+  // Roboki
+  | "playroboki"
+  // Klawb
+  | "playklawb"
+  | "arrowdown"
+  // Crawle
+  | "playcrawle"
+  // Basic /assets
+  | "logo"
+  | "favicon"
+  | "logoblack"
+  | "good"
+  | "india"
+  | "reddot"
+  | "check"
+  // Home
+  | "headerSection"
+  | "footerSection"
+  | "homeImage"
+  | "star1"
+  | "star2"
+  | "blurStar"
+  | "avtarGroup"
+  | "appStore"
+  | "googlePlay"
+  | "zigzaginhome"
+  | "curv"
+  | "x-close"
+  // Zing
+  | "humanoid"
+  | "humanoidSmall"
+  | "productBackground"
+  | "productCrawle"
+  | "playzing"
+  // Other
+  | "arrow"
+  | "searchIcon"
+  | "arrowUpRight"
+  | "handDrawArrow2"
+  | "iphone"
+  | "monitorAndPhone"
+  | "imagePlaceholder"
+  | "imagePlaceholder2"
+  | "stars"
+  | "girls"
+  | "macbook"
+  | "videoPlayer"
+  | "testimonial"
+  | "aimodel"
+  | "fivecoding"
+  | "threestep"
+  | "search"
+  // Peecee
+  | "peecee"
+  | "avatar"
+  | "profileImage"
+  | "handArrow"
+  | "playpeecee"
+  // Testimonial
+  | "bannerImg1"
+  | "bannerImg2"
+  | "bannerImg3"
+  | "bannerImg4"
+  | "bannerImg5"
+  | "bannerImg6"
+  | "bg1"
+  | "bg2"
+  | "bg3"
+  | "bg4"
+  | "bg5"
+  | "bg6"
+  | "bg7"
+  // Partner
+  | "play"
+  | "arrow1"
+  | "Icon"
+  | "peace"
+  | "result"
+  | "robot"
+  | "hand"
+  | "plan"
+  | "strong"
+  | "winning"
+  | "line"
+  | "imgonp"
+  | "imgonm"
+  | "imgong"
+  | "afterw"
+  // Plode
+  | "plodeHomeImg"
+  | "zigzag"
+  | "uparrow"
+  | "fixable"
+  | "instant"
+  | "real"
+  | "whitezigzag"
+  | "leftarrow"
+  | "rightarrow"
+  | "playstore"
+  // Not Found
+  | "notFound"
+  | "playtrons"
+  // Footer
+  | "madeInIndia"
+  // Mobile menu
+  | "ted8"
+  | "toy"
+  | "Crawle1"
+  | "Zing1"
+  | "Roboki1"
+  | "AIIII"
+  | "Toki0";
 
-//Roboki
-const playroboki = "assets/roboki/playroboki.png";
-// klawb
-const playklawb = "assets/klawb/playklawb.png";
-const arrowdown = "assets/klawb/Hand-drawn.svg";
-// crawle
-const playcrawle = "assets/crawle/playcrawle.png";
+// Image path constants
+const IMAGE_PATHS = {
+  // Mobile images
+  crawlem: "/assets/crawle/crawlem.png",
+  robokim: "/assets/roboki/robokim.png",
+  zingm: "/assets/zing/zingm.png",
+  peeceem: "/assets/peecee/peeceem.png",
+  klawbm: "/assets/klawb/klawbm.png",
 
-//other
-const logo = "assets/Logo.png";
-const favicon = "assets/favicon.png";
-const logoblack = "assets/logoblack.png";
-const good = "assets/other/good.svg";
-const india = "assets/other/india.svg";
-const reddot = "assets/other/reddot.svg";
-const check = "assets/home/Check icon.svg"
+  // Roboki
+  playroboki: "/assets/roboki/playroboki.png",
 
-// home
-const headerSection = "assets/other/Section Seperators.svg";
-const footerSection = "assets/home/FooterSection.png";
-const homeImage = "assets/home/homeImage.png";
-const star1 = "assets/home/star1.png";
-const star2 = "assets/home/star2.png";
-const blurStar = "assets/home/blurStar.png";
-const avtarGroup = "assets/home/Avatar group.png";
-const appStore = "assets/home/AppStoreBadge.png";
-const googlePlay = "assets/home/GooglePlayBadge.png";
-const zigzaginhome = "assets/home/zigzaginhome.svg";
-const curv = "assets/home/curv.png";
+  // Klawb
+  playklawb: "/assets/klawb/playklawb.png",
+  arrowdown: "/assets/klawb/Hand-drawn.svg",
 
-// zing
-const humanoid = "assets/zing/Humanoid.png";
-const humanoidSmall = "assets/zing/zingping.png"
-const productBackground = "assets/zing/productBackground.png";
-const productCrawle = "assets/zing/productCrawle.png";
-const playzing = "assets/zing/playzing.png";
+  // Crawle
+  playcrawle: "/assets/crawle/playcrawle.png",
 
-// other
-const arrow = "assets/other/arrow.png";
-const searchIcon = "assets/other/searchIcon.png";
-const arrowUpRight = "assets/other/arrow-up-right.png";
-const handDrawArrow2 = "assets/other/Hand-drawn-arrow-2.png";
-const iphone = "assets/other/iPhone.png";
-const monitorAndPhone = "assets/other/monitor-phone.png";
-const imagePlaceholder = "assets/other/imagePlaceholder.png";
-const imagePlaceholder2 = "assets/other/imagePlaceholder2.png";
-const stars = "assets/other/Stars.png";
-const girls = "assets/other/girls.png";
-const macbook = "assets/other/macbook.png";
-const videoPlayer = "assets/other/video-player.png";
-const testimonial = "assets/other/testimonial.png";
-const aimodel = "assets/other/aimodel.png";
-const fivecoding = "assets/other/fivecoding.png";
-const threestep = "assets/other/threestep.png";
-const search = "assets/icons/search-lg.png";
+  // Basic /assets
+  logo: "/assets/Logo.png",
+  favicon: "/assets/favicon.png",
+  logoblack: "/assets/logoblack.png",
+  good: "/assets/other/good.svg",
+  india: "/assets/other/india.svg",
+  reddot: "/assets/other/reddot.svg",
+  check: "/assets/home/Check icon.svg",
 
-// peecee
-const peecee = "assets/peecee/peecee.png";
-const avatar = "assets/peecee/Avatar.png";
-const profileImage = "assets/peecee/profileImage.png";
-const handArrow = "assets/peecee/hand-arrow.png";
-const playpeecee = "assets/peecee/playpeecee.png";
+  // Home
+  headerSection: "/assets/other/Section Seperators.svg",
+  footerSection: "/assets/home/FooterSection.png",
+  homeImage: "/assets/home/homeImage.png",
+  star1: "/assets/home/star1.png",
+  star2: "/assets/home/star2.png",
+  blurStar: "/assets/home/blurStar.png",
+  avtarGroup: "/assets/home/Avatar group.png",
+  appStore: "/assets/home/AppStoreBadge.png",
+  googlePlay: "/assets/home/GooglePlayBadge.png",
+  zigzaginhome: "/assets/home/zigzaginhome.svg",
+  curv: "/assets/home/curv.png",
+  "x-close": "/assets/home/x-close.svg",
 
-// testimonial
+  // Zing
+  humanoid: "/assets/zing/Humanoid.png",
+  humanoidSmall: "/assets/zing/zingping.png",
+  productBackground: "/assets/zing/productBackground.png",
+  productCrawle: "/assets/zing/productCrawle.png",
+  playzing: "/assets/zing/playzing.png",
 
-const bannerImg1 = "assets/testimonial/Mask group.png";
-const bannerImg2 = "assets/testimonial/Mask group (1).png";
-const bannerImg3 = "assets/testimonial/Mask group (2).png";
-const bannerImg4 = "assets/testimonial/Mask group (3).png";
-const bannerImg5 = "assets/testimonial/Mask group (4).png";
-const bannerImg6 = "assets/testimonial/Mask group (5).png";
+  // Other
+  arrow: "/assets/other/arrow.png",
+  searchIcon: "/assets/other/searchIcon.png",
+  arrowUpRight: "/assets/other/arrow-up-right.png",
+  handDrawArrow2: "/assets/other/Hand-drawn-arrow-2.png",
+  iphone: "/assets/other/iPhone.png",
+  monitorAndPhone: "/assets/other/monitor-phone.png",
+  imagePlaceholder: "/assets/other/imagePlaceholder.png",
+  imagePlaceholder2: "/assets/other/imagePlaceholder2.png",
+  stars: "/assets/other/Stars.png",
+  girls: "/assets/other/girls.png",
+  macbook: "/assets/other/macbook.png",
+  videoPlayer: "/assets/other/video-player.png",
+  testimonial: "/assets/other/testimonial.png",
+  aimodel: "/assets/other/aimodel.png",
+  fivecoding: "/assets/other/fivecoding.png",
+  threestep: "/assets/other/threestep.png",
+  search: "/assets/icons/search-lg.png",
 
-const bg1 = "assets/testimonial/bg-featured product.png";
-const bg2 = "assets/testimonial/bg-featured product (1).png";
-const bg3 = "assets/testimonial/bg-featured product (2).png";
-const bg4 = "assets/testimonial/bg-featured product (3).png";
-const bg5 = "assets/testimonial/bg-featured product (4).png";
-const bg6 = "assets/testimonial/bg-featured product (5).png";
-const bg7 = "assets/testimonial/bg-featured product (6).png";
+  // Peecee
+  peecee: "/assets/peecee/peecee.png",
+  avatar: "/assets/peecee/Avatar.png",
+  profileImage: "/assets/peecee/profileImage.png",
+  handArrow: "/assets/peecee/hand-arrow.png",
+  playpeecee: "/assets/peecee/playpeecee.png",
 
-//Partner
-const play = "assets/partner/playbutton.png";
-const arrow1 = "assets/partner/arrow.svg";
-const Icon = "assets/partner/Icon.svg";
-const peace = "assets/partner/peace.svg";
-const result = "assets/partner/result.svg";
-const robot = "assets/partner/robot.svg";
-const hand = "assets/partner/hand.svg";
-const plan = "assets/partner/plan.svg";
-const strong = "assets/partner/strong.svg";
-const winning = "assets/partner/winning.svg";
-const line = "assets/partner/line.svg";
-const imgonp = "assets/partner/imgonp.svg";
-const imgonm = "assets/partner/imgonm.svg";
-const imgong = "assets/partner/imgong.svg";
-const afterw = "assets/partner/afterw.svg";
+  // Testimonial
+  bannerImg1: "/assets/testimonial/Mask group.png",
+  bannerImg2: "/assets/testimonial/Mask group (1).png",
+  bannerImg3: "/assets/testimonial/Mask group (2).png",
+  bannerImg4: "/assets/testimonial/Mask group (3).png",
+  bannerImg5: "/assets/testimonial/Mask group (4).png",
+  bannerImg6: "/assets/testimonial/Mask group (5).png",
+  bg1: "/assets/testimonial/bg-featured product.png",
+  bg2: "/assets/testimonial/bg-featured product (1).png",
+  bg3: "/assets/testimonial/bg-featured product (2).png",
+  bg4: "/assets/testimonial/bg-featured product (3).png",
+  bg5: "/assets/testimonial/bg-featured product (4).png",
+  bg6: "/assets/testimonial/bg-featured product (5).png",
+  bg7: "/assets/testimonial/bg-featured product (6).png",
 
-//plode
-const plodeHomeImg = "assets/plode/plodeHomeImg.png";
-const zigzag = "assets/plode/zigzag.svg";
-const uparrow = "assets/plode/uparrow.svg";
-const fixable = "assets/plode/fixable.svg";
-const instant = "assets/plode/instant.svg";
-const real = "assets/plode/real.svg";
-const whitezigzag = "assets/plode/whitezigzag.svg";
-const leftarrow = "assets/plode/leftarrow.svg";
-const rightarrow = "assets/plode/rightarrow.svg";
-const playstore = "assets/plode/playstore.png";
+  // Partner
+  play: "/assets/partner/playbutton.png",
+  arrow1: "/assets/partner/arrow.svg",
+  Icon: "/assets/partner/Icon.svg",
+  peace: "/assets/partner/peace.svg",
+  result: "/assets/partner/result.svg",
+  robot: "/assets/partner/robot.svg",
+  hand: "/assets/partner/hand.svg",
+  plan: "/assets/partner/plan.svg",
+  strong: "/assets/partner/strong.svg",
+  winning: "/assets/partner/winning.svg",
+  line: "/assets/partner/line.svg",
+  imgonp: "/assets/partner/imgonp.svg",
+  imgonm: "/assets/partner/imgonm.svg",
+  imgong: "/assets/partner/imgong.svg",
+  afterw: "/assets/partner/afterw.svg",
 
-//Not Found
-const notFound = "assets/notFound.png";
-const playtrons = "assets/playtrons.png";
+  // Plode
+  plodeHomeImg: "/assets/plode/plodeHomeImg.png",
+  zigzag: "/assets/plode/zigzag.svg",
+  uparrow: "/assets/plode/uparrow.svg",
+  fixable: "/assets/plode/fixable.svg",
+  instant: "/assets/plode/instant.svg",
+  real: "/assets/plode/real.svg",
+  whitezigzag: "/assets/plode/whitezigzag.svg",
+  leftarrow: "/assets/plode/leftarrow.svg",
+  rightarrow: "/assets/plode/rightarrow.svg",
+  playstore: "/assets/plode/playstore.png",
 
-//footer
-const madeInIndia = "assets/madeInIndia.svg";
- 
-//mobile menu
-const ted8="assets/roboki/Ted8.svg"
-const toy = "/assets/other/playdynamex1.svg"
-const Crawle1 = "/assets/other/Crawle1.svg"
-const Zing1 ="/assets/other/Zing1.svg"
-const Roboki1="assets/roboki/roboki8.svg"
-const AIIII = "assets/roboki/AI-I-8.svg"
-const Toki0 = "assets/roboki/Toki8.svg"
+  // Not Found
+  notFound: "/assets/notFound.png",
+  playtrons: "/assets/playtrons.png",
 
-function renderImg(imgName: string) {
-  switch (imgName) {
-    // home
-    case "logo":
-      return logo;
-    case "logoblack":
-      return logoblack;
+  // Footer
+  madeInIndia: "/assets/madeInIndia.svg",
 
-    case "favicon":
-      return favicon;
+  // Mobile menu
+  ted8: "/assets/roboki/Ted8.svg",
+  toy: "//assets/other/playdynamex1.svg",
+  Crawle1: "//assets/other/Crawle1.svg",
+  Zing1: "//assets/other/Zing1.svg",
+  Roboki1: "/assets/roboki/roboki8.svg",
+  AIIII: "/assets/roboki/AI-I-8.svg",
+  Toki0: "/assets/roboki/Toki8.svg",
+} as const;
 
-    // case "arrowdown":
-    //   return arrowdown;
+/**
+ * Renders an image path based on the provided image name
+ * @param imgName - The name of the image to render
+ * @returns The path to the requested image or a fallback image if not found
+ */
+function renderImg(imgName: ImageName): string {
+  const imagePath = IMAGE_PATHS[imgName];
 
-    case "headerSection":
-      return headerSection;
-
-    case "footerSection":
-      return footerSection;
-
-    case "appStore":
-      return appStore;
-
-    case "googlePlay":
-      return googlePlay;
-
-    case "homeImage":
-      return homeImage;
-
-    case "blurStar":
-      return blurStar;
-
-    case "star1":
-      return star1;
-
-    case "star2":
-      return star2;
-
-    case "avtarGroup":
-      return avtarGroup;
-    case "videoPlayer":
-      return videoPlayer;
-    case "zigzaginhome":
-      return zigzaginhome;
-    case "curv":
-      return curv;
-
-    // zing
-    case "humanoid":
-      return humanoid;
-
-    case "humanoidSmall":
-      return humanoidSmall;  
-
-    case "productBackground":
-      return productBackground;
-    case "productCrawle":
-      return productCrawle;
-    case "playzing":
-      return playzing;
-
-    case "playcrawle":
-      return playcrawle;
-    // peecee
-    case "peecee":
-      return peecee;
-    case "avatar":
-      return avatar;
-    case "profileImage":
-      return profileImage;
-    case "handArrow":
-      return handArrow;
-    case "playpeecee":
-      return playpeecee;
-
-    //Roboki
-    case "playroboki":
-      return playroboki;
-
-    // other
-    case "arrow":
-      return arrow;
-    case "monitorAndPhone":
-      return monitorAndPhone;
-    case "imagePlaceholder":
-      return imagePlaceholder;
-    case "imagePlaceholder2":
-      return imagePlaceholder2;
-    case "girls":
-      return girls;
-    case "macbook":
-      return macbook;
-    case "handDrawArrow2":
-      return handDrawArrow2;
-    case "check":
-      return check;
-
-    case "arrowUpRight":
-      return arrowUpRight;
-    case "testimonial":
-      return testimonial;
-
-    case "searchIcon":
-      return searchIcon;
-    case "iphone":
-      return iphone;
-    case "stars":
-      return stars;
-
-    case "aimodel":
-      return aimodel;
-    case "fivecoding":
-      return fivecoding;
-    case "threestep":
-      return threestep;
-
-    case "good":
-      return good;
-    case "india":
-      return india;
-    case "reddot":
-      return reddot;
-    case "search":
-      return search;
-
-    // testimonial
-    case "bannerImg1":
-      return bannerImg1;
-    case "bannerImg2":
-      return bannerImg2;
-    case "bannerImg3":
-      return bannerImg3;
-    case "bannerImg4":
-      return bannerImg4;
-    case "bannerImg5":
-      return bannerImg5;
-    case "bannerImg6":
-      return bannerImg6;
-    case "bg1":
-      return bg1;
-    case "bg2":
-      return bg2;
-    case "bg3":
-      return bg3;
-    case "bg4":
-      return bg4;
-    case "bg5":
-      return bg5;
-    case "bg6":
-      return bg6;
-    case "bg7":
-      return bg7;
-
-    //partner
-    case "play":
-      return play;
-    case "arrow1":
-      return arrow1;
-    case "Icon":
-      return Icon;
-    case "peace":
-      return peace;
-    case "result":
-      return result;
-    case "robot":
-      return robot;
-    case "hand":
-      return hand;
-    case "plan":
-      return plan;
-    case "strong":
-      return strong;
-    case "winning":
-      return winning;
-    case "line":
-      return line;
-    case "imgonp":
-      return imgonp;
-    case "imgonm":
-      return imgonm;
-    case "imgong":
-      return imgong;
-    case "afterw":
-      return afterw;
-
-    //plode
-    case "plodeHomeImg":
-      return plodeHomeImg;
-    case "zigzag":
-      return zigzag;
-    case "uparrow":
-      return uparrow;
-    case "fixable":
-      return fixable;
-    case "instant":
-      return instant;
-    case "real":
-      return real;
-    case "whitezigzag":
-      return whitezigzag;
-    case "leftarrow":
-      return leftarrow;
-    case "rightarrow":
-      return rightarrow;
-    case "playstore":
-      return playstore;
-
-    // Klawb
-    case "playklawb":
-      return playklawb;
-
-    case "arrowdown":
-      return arrowdown;  
-
-    //Mobile images
-
-    case "crawlem":
-      return crawlem;
-    case "robokim":
-      return robokim;
-    case "zingm":
-      return zingm;
-    case "peeceem":
-      return peeceem;
-    case "crawlem":
-      return crawlem;
-    case "klawbm":
-      return klawbm;
-
-    //Not Found
-    case "notFound":
-      return notFound;
-
-    //footer
-    case "madeInIndia":
-      return madeInIndia;
-
-      case "ted8":
-        return ted8;
-
-        case "toy":
-          return toy;
-
-          case "Crawle1":
-          return Crawle1;
-
-          case "Zing1":
-          return Zing1;
-
-          case "Roboki1":
-          return Roboki1;
-
-          case "AIIII":
-          return AIIII;
-          case "Toki0 ":
-            return Toki0;
-
-
+  if (!imagePath) {
+    console.warn(`Image "${imgName}" not found in renderImg`);
+    return IMAGE_PATHS.notFound;
   }
+
+  return imagePath;
 }
 
+// Export types and function
+export type { ImageName };
 export default renderImg;
