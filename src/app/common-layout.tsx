@@ -7,14 +7,16 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore"; // Chevron Down
 import ExpandLessIcon from "@mui/icons-material/ExpandLess"; // Chevron Up
 import Link from "next/link";
 import renderImg from "@/imgImport";
+import type { ImageName } from "@/imgImport";
 import Footer from "@/components/ui/footer/footer";
 import renderSvg from "@/svgImport";
 import FloatingWhatsApp from "@/components/ui/common/floating-whatsapp";
+import Image from "next/image";
 
 const ClientLayout = ({ children }: { children: React.ReactNode }) => {
   const NavBarItems = [
-    { name: "Our Products", link: "/products" },
-    { name: "The Partner Program", link: "/partner" },
+    { name: "Our Products", link: "/products", id: "products" },
+    { name: "The Partner Program", link: "/partner", id: "partner" },
   ];
 
   const scrollToTop = () => {
@@ -24,18 +26,33 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
     });
   };
 
-  const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>, link: string) => {
+  const handleLinkClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    link: string
+  ) => {
     if (window.location.pathname === link) {
       event.preventDefault();
       window.location.href = link;
     }
   };
-
-  const productsData = [
+  type Product = {
+    id: number;
+    name: string;
+    description: string;
+    image: ImageName; // Use the ImageName type here
+    link: string;
+  };
+  const productsData: {
+    id: string;
+    category: string;
+    products: Product[];
+  }[] = [
     {
+      id: "1",
       category: "Codable Kits",
       products: [
         {
+          id: 1,
           name: "TED",
           description:
             "TED is your all-in-one buddy, packed and ready to jump into action whenever you are.",
@@ -43,6 +60,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
           link: "/peecee",
         },
         {
+          id: 2,
           name: "AI-1",
           description:
             "An intelligent camera powered by AI for dynamic object detection, tracking, and insights.",
@@ -50,6 +68,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
           link: "",
         },
         {
+          id: 3,
           name: "Roboki",
           description:
             "A durable and upgradable kit packed with everything you need to build, learn and explore robotics.",
@@ -57,18 +76,21 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
           link: "/roboki",
         },
         {
+          id: 4,
           name: "Toki",
           description:
             "Affordable alternative to Arduino, offering superior customization options and advanced capabilities to unleash your creativity.",
-          image: "Toki0 ",
+          image: "Toki0",
           link: "",
         },
       ],
     },
     {
+      id: "2",
       category: "Animatronics",
       products: [
         {
+          id: 1,
           name: "Zing",
           description:
             "A lifelike humanoid robot, perfect for interactive learning.",
@@ -76,6 +98,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
           link: "/animatronics/zing",
         },
         {
+          id: 2,
           name: "Crawl-e",
           description: "A versatile hexapod explorer designed for learning.",
           image: "Crawle1",
@@ -84,9 +107,11 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
       ],
     },
     {
+      id: "3",
       category: "Mechanical",
       products: [
         {
+          id: 1,
           name: "Play Dynamex",
           description:
             "Colorful plastic blocks inspiring creativity and hands-on building.",
@@ -97,15 +122,27 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
     },
   ];
   const social_share = [
-    { icon: "assets/home/Twitter.svg", link: "https://twitter.com/YuduRobotics/" },
-    { icon: "assets/home/Linkedin.svg", link: "https://www.linkedin.com/showcase/yudu-robotics/" },
-    { icon: "assets/home/Instagram.svg", link: "https://www.instagram.com/yudurobotics/" },
-    { icon: "assets/home/Youtube.svg", link: "https://www.youtube.com/@YuduRobotics" },
+    {
+      icon: "assets/home/Twitter.svg",
+      link: "https://twitter.com/YuduRobotics/",
+    },
+    {
+      icon: "assets/home/Linkedin.svg",
+      link: "https://www.linkedin.com/showcase/yudu-robotics/",
+    },
+    {
+      icon: "assets/home/Instagram.svg",
+      link: "https://www.instagram.com/yudurobotics/",
+    },
+    {
+      icon: "assets/home/Youtube.svg",
+      link: "https://www.youtube.com/@YuduRobotics",
+    },
   ];
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isOurProductOpen, setIsOurProductOpen] = useState(false);
   const [openSubOption, setOpenSubOption] = useState<string | null>(null);
-  const [isSocialOpen, setIsSocialOpen] = useState(true);
+  // const [isSocialOpen, setIsSocialOpen] = useState(true);
   const [showScrollToTop, setShowScrollToTop] = useState(false);
 
   useEffect(() => {
@@ -130,132 +167,153 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
   // const toggleDrawer = (open: boolean) => (event: any) => {
   //   setIsDrawerOpen(open);
   // };
-  const toggleDrawer = (open: boolean) => (event: React.MouseEvent | React.KeyboardEvent) => {
-    if (event.type === "keydown" && ((event as React.KeyboardEvent).key === "Tab" || (event as React.KeyboardEvent).key === "Shift")) {
-      return;
-    }
-    setIsDrawerOpen(open);
-  };
-
-
+  const toggleDrawer =
+    (open: boolean) => (event: React.MouseEvent | React.KeyboardEvent) => {
+      if (
+        event.type === "keydown" &&
+        ((event as React.KeyboardEvent).key === "Tab" ||
+          (event as React.KeyboardEvent).key === "Shift")
+      ) {
+        return;
+      }
+      setIsDrawerOpen(open);
+    };
 
   const drawerList = () => (
     <div className="w-full pt-4 px-4 text-primary-foreground">
       {/* Header */}
       <div className="mb-6 flex justify-between items-center">
-        <img src={renderImg("logoblack")} alt="logo" />
-        <div
-          className="cursor-pointer"
-          onClick={() => setIsDrawerOpen(false)}
-        >
-          <img src="assets/home/x-close.svg" alt="Close" className="w-6 h-6" />
+        <Image
+          width={100}
+          height={100}
+          src={renderImg("logoblack")}
+          alt="logo"
+        />
+        {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
+        <div className="cursor-pointer" onClick={() => setIsDrawerOpen(false)}>
+          <Image
+            width={100}
+            height={100}
+            src="assets/home/x-close.svg"
+            alt="Close"
+            className="w-6 h-6"
+          />
         </div>
       </div>
 
       <div className="flex flex-col space-y-4 border-b  border-gray-300 pb-6">
-        {NavBarItems.map((item, key) => (
-          <div key={key} className="font-tthoves-semiBold text-primary ">
-            {item.name === "Our Products" ? (
-              <>
-                <div
-                  onClick={() => setIsOurProductOpen(!isOurProductOpen)}
-                  className="text-base font-tthoves-semiBold text-black transition-colors duration-300 ease-in-out hover:text-purple-600 cursor-pointer flex justify-between items-center"
-                >
-                  {item.name}
-                  {isOurProductOpen ? (
-                    <ExpandLessIcon className="ml-2" />
-                  ) : (
-                    <ExpandMoreIcon className="ml-2" />
-                  )}
-                </div>
-                {isOurProductOpen && (
-                  <div className="flex flex-col items-start mt-2 ml-2">
-                    {productsData.map((category, index) => (
-                      <div key={index} className="mb-4">
-                        <button
-                          onClick={() =>
-                            setOpenSubOption(
-                              openSubOption === category.category
-                                ? "null text-primary bg-purple-100 rounded-full"
-                                : category.category
-                            )
-                          }
-                          className="text-base font-tthoves-semiBold text-gray-700 transition-colors duration-300 ease-in-out hover:text-purple-600"
-                        >
-                          {category.category}
-                          {openSubOption === category.category ?
-                            (
+        {NavBarItems.map((item) => {
+          const { id } = item;
+          return (
+            <div key={id} className="font-tthoves-semiBold text-primary ">
+              {item.name === "Our Products" ? (
+                <>
+                  {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
+                  <div
+                    onClick={() => setIsOurProductOpen(!isOurProductOpen)}
+                    className="text-base font-tthoves-semiBold text-black transition-colors duration-300 ease-in-out hover:text-purple-600 cursor-pointer flex justify-between items-center"
+                  >
+                    {item.name}
+                    {isOurProductOpen ? (
+                      <ExpandLessIcon className="ml-2" />
+                    ) : (
+                      <ExpandMoreIcon className="ml-2" />
+                    )}
+                  </div>
+                  {isOurProductOpen && (
+                    <div className="flex flex-col items-start mt-2 ml-2">
+                      {productsData.map((category) => (
+                        <div key={category.id} className="mb-4">
+                          <button
+                            type="button"
+                            onClick={() =>
+                              setOpenSubOption(
+                                openSubOption === category.category
+                                  ? "null text-primary bg-purple-100 rounded-full"
+                                  : category.category
+                              )
+                            }
+                            className="text-base font-tthoves-semiBold text-gray-700 transition-colors duration-300 ease-in-out hover:text-purple-600"
+                          >
+                            {category.category}
+                            {openSubOption === category.category ? (
                               <ExpandLessIcon className="ml-2" />
                             ) : (
                               <ExpandMoreIcon className="ml-2" />
                             )}
-                        </button>
-                        {openSubOption === category.category && (
-                          <div className="flex flex-col space-y-4 mt-2">
-                            {category.products.map((product, productIndex) => (
-                              <div
-                                key={productIndex}
-                                className="flex items-start space-x-4 mb-4"
-                              >
-                                {/* Image */}
-                                <div className="w-32 h-20 flex-shrink-0">
-                                  <img
-                                    src={renderImg(product.image)}
-                                    alt={product.name}
-                                    className="w-full h-full object-cover rounded-md"
-                                  />
+                          </button>
+                          {openSubOption === category.category && (
+                            <div className="flex flex-col space-y-4 mt-2">
+                              {category.products.map((product) => (
+                                <div
+                                  key={product.id}
+                                  className="flex items-start space-x-4 mb-4"
+                                >
+                                  {/* Image */}
+                                  <div className="w-32 h-20 flex-shrink-0">
+                                    <Image
+                                      width={100}
+                                      height={100}
+                                      src={renderImg(product.image)}
+                                      alt={product.name}
+                                      className="w-full h-full object-cover rounded-md"
+                                    />
+                                  </div>
+                                  {/* Details */}
+                                  <div className="flex-1">
+                                    <h3 className="text-base font-tthoves-semiBold text-black">
+                                      {product.name}
+                                    </h3>
+                                    <p className="text-sm text-gray-700">
+                                      {product.description}
+                                    </p>
+                                    <Link
+                                      href={product.link || "#"}
+                                      className="text-blue-600 text-sm mt-1 block"
+                                    >
+                                      Learn More &rarr;
+                                    </Link>
+                                  </div>
                                 </div>
-                                {/* Details */}
-                                <div className="flex-1">
-                                  <h3 className="text-base font-tthoves-semiBold text-black">
-                                    {product.name}
-                                  </h3>
-                                  <p className="text-sm text-gray-700">
-                                    {product.description}
-                                  </p>
-                                  <Link
-                                    href={product.link || "#"}
-                                    className="text-blue-600 text-sm mt-1 block"
-                                  >
-                                    Learn More &rarr;
-                                  </Link>
-                                </div>
-                              </div>
-                            ))}
-                          </div>
-                        )}
-
-                      </div>
-                    ))}
-                    <div className="mt-4" onClick={() => setIsDrawerOpen(false)}>
-                      <Link
-                        href="/products"
-                        className="text-blue-600 text-sm font-medium block"
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                      <button
+                        type="button"
+                        className="mt-4"
+                        onClick={() => setIsDrawerOpen(false)}
                       >
-                        View all products →
-                      </Link>
+                        <Link
+                          href="/products"
+                          className="text-blue-600 text-sm font-medium block"
+                        >
+                          View all products →
+                        </Link>
+                      </button>
                     </div>
-                  </div>
-                )}
-              </>
-            ) : (
-              <div className="flex flex-col space-y-  gap-1  border-t border-gray-400 pt-6">
-                <Link
-                  href={item.link}
-                  className="text-base font-tthoves-semiBold text-black transition-colors duration-300 ease-in-out hover:text-purple-600"
-                >
-                  {item.name}
-                </Link>
-              </div>
-            )}
-          </div>
-        ))}
-
+                  )}
+                </>
+              ) : (
+                <div className="flex flex-col space-y-  gap-1  border-t border-gray-400 pt-6">
+                  <Link
+                    href={item.link}
+                    className="text-base font-tthoves-semiBold text-black transition-colors duration-300 ease-in-out hover:text-purple-600"
+                  >
+                    {item.name}
+                  </Link>
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
       {/* Footer Links */}
       <div
         // onClick={() => setIsDrawerOpen(false)}
-        className="flex flex-col grid grid-cols-1 gap-0 h-full space-y-2 border-t border-gray-300 pt-6">
+        className="flex flex-col grid grid-cols-1 gap-0 h-full space-y-2 border-t border-gray-300 pt-6"
+      >
         {/* <Link
           href="/about"
           className="text-sm text-gray-400 font-tthoves-semiBold hover:text-destructive"
@@ -268,47 +326,43 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
         >
           Contact us
         </Link> */}
-        <div
-          onClick={() => setIsDrawerOpen(false)}>
+        <button type="button" onClick={() => setIsDrawerOpen(false)}>
           <Link
             href="#Contact"
             className="text-sm text-gray-400 font-tthoves-semiBold hover:text-purple-600"
           >
             Contact us
           </Link>
-        </div>
+        </button>
         <div className="relative">
-          {isSocialOpen && (
-            <div className="w-full rounded-md">
-              <div className="flex justify-center gap-x-8 w-full">
-                {social_share.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 text-sm text-gray-700 hover:bg-gray-100"
-                    style={{ display: 'flex', alignItems: 'center' }}
-                  >
-                    <img
-                      src={social.icon}
-                      alt="social icon"
-                      className="w-full h-6 mb-10" // Adjust icon size
-                    />
-                    <span className="sr-only">{social.link}</span> {/* Screen reader text */}
-                  </a>
-                ))}
-              </div>
-
-
+          {/* {isSocialOpen && ( */}
+          <div className="w-full rounded-md">
+            <div className="flex justify-center gap-x-8 w-full">
+              {social_share.map((social) => (
+                <a
+                  key={social.link}
+                  href={social.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  style={{ display: "flex", alignItems: "center" }}
+                >
+                  <img
+                    src={social.icon}
+                    alt="social icon"
+                    className="w-full h-6 mb-10" // Adjust icon size
+                  />
+                  <span className="sr-only">{social.link}</span>{" "}
+                  {/* Screen reader text */}
+                </a>
+              ))}
             </div>
-          )}
+          </div>
+          {/* )} */}
         </div>
-
 
         {/* Add more footer links as needed */}
       </div>
-
     </div>
   );
 
@@ -335,9 +389,9 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
               </IconButton>
             </div>
             <div className="space-x-4 hidden lg:flex lg:justify-center lg:items-center text-primary-foreground">
-              {NavBarItems.map((item, key) => (
+              {NavBarItems.map((item) => (
                 <div
-                  key={key}
+                  key={item.id}
                   className="relative group font-tthoves-semiBold"
                 >
                   <Link
@@ -359,12 +413,17 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
       <FloatingWhatsApp />
       {showScrollToTop && (
         <button
+          type="button"
           onClick={scrollToTop}
           className="fixed bottom-0 sm:right-4 z-40 xs:-right-2 text-white p-2 rounded-full shadow-lg transition-all "
           title="Scroll to top"
         >
-          <img src="assets/home/Arrowup.png" alt="scroll-up" />
-
+          <Image
+            width={50}
+            height={50}
+            src="/assets/home/Arrowup.png"
+            alt="scroll-up"
+          />
         </button>
       )}
       <main className="mb-24">{children}</main>

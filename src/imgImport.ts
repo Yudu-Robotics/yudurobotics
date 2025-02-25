@@ -246,13 +246,13 @@ const IMAGE_PATHS = {
   madeInIndia: "/assets/madeInIndia.svg",
 
   // Mobile menu
-  ted8: "/assets/roboki/Ted8.svg",
-  toy: "//assets/other/playdynamex1.svg",
-  Crawle1: "//assets/other/Crawle1.svg",
-  Zing1: "//assets/other/Zing1.svg",
-  Roboki1: "/assets/roboki/roboki8.svg",
-  AIIII: "/assets/roboki/AI-I-8.svg",
-  Toki0: "/assets/roboki/Toki8.svg",
+  ted8: "/assets/roboki/Ted8.png",
+  toy: "/assets/other/playdynamex1.png",
+  Crawle1: "/assets/other/Crawle1.png",
+  Zing1: "/assets/other/Zing1.png",
+  Roboki1: "/assets/roboki/roboki8.png",
+  AIIII: "/assets/roboki/AI-I-8.png",
+  Toki0: "/assets/roboki/Toki8.png",
 } as const;
 
 /**
