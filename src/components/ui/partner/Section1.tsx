@@ -69,18 +69,18 @@ function Section1() {
                 textDecorationSkipInk: "none",
               }}
             >
-              “We’re not{" "}
+              “We build{" "}
               <span className="relative inline-block z-10">
-                playing
+                robots
                 <img
                   src={renderImg("imgonp")}
                   alt="Image"
                   className="absolute xs:-top-56 xs:left-52 sm:-top-36 sm:left-52 md:-top-20 lg:-top-16 -z-20"
                 />
               </span>{" "}
-              small.{" "}
+              to amaze,{" "}
               <span className="relative inline-block z-40">
-                We’re
+                inspire,
                 {/* <img
                   src={renderImg("imgong")}
                   alt="Image"
@@ -88,16 +88,16 @@ function Section1() {
                 /> */}
               </span>{" "}
               <span className="relative inline-block z-10">
-                making
+                and
                 <img
                   src={renderImg("imgong")}
                   alt="Image"
                   className="absolute xs:-bottom-4 xs:-left-16 sm:-left-12 sm:-bottom-4 md:-bottom-20 md:-left-2 lg:-top-4 lg:-left-8  -z-50"
                 />
               </span>{" "}
-              <span className="relative inline-block z-20">robots</span> to{" "}
+              <span className="relative inline-block z-20">redefine </span> the{" "}
               <span className=" relative inline-block z-0">
-                blow
+                game!
                 <img
                   src={renderImg("afterw")}
                   alt="Image"
@@ -105,7 +105,7 @@ function Section1() {
                 />
               </span>{" "}
               <br />
-              <span className="relative inline-block z-0">
+              {/* <span className="relative inline-block z-0">
                 minds
                 <img
                   src={renderImg("imgonm")}
@@ -114,7 +114,7 @@ function Section1() {
                 />
               </span>{" "}
               <br />
-              and change the game!”
+              and change the game!” */}
             </p>
           </div>
           <div className="w-[80%] sm:w-full flex items-center justify-center mt-2 mb-4 sm:ml-6">
