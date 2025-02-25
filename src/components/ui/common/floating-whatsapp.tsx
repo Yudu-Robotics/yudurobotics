@@ -10,7 +10,11 @@ const FloatingWhatsApp = () => {
   };
 
   return (
-    <div onClick={handleClick} className="fixed bottom-20 sm:right-4  xs:-right-2 shadow-2xl" style={{ zIndex: 100}}>
+    <div
+      onClick={handleClick}
+      className="fixed bottom-20 sm:right-4  xs:-right-2"
+      style={{ zIndex: 100 }}
+    >
       <div>{renderSvg("floatingWhatsApp")}</div>
     </div>
   );
