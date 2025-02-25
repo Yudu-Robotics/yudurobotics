@@ -49,7 +49,7 @@ export default function Zing() {
           {
             <div className=" flex items-end  ">
               <JumpingButtons
-                ishorizontal="true"
+                ishorizontal={true}
                 text1={data?.jumppingButton?.[0]?.text1 || ""}
                 text2={data?.jumppingButton?.[0]?.text2 || ""}
                 bgColor={data?.jumppingButton?.[0]?.bgColor || ""}

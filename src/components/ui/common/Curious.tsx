@@ -2,7 +2,7 @@
 
 import JumpingButtons from "./jumping-buttons";
 import React from "react";
-import renderImg from "@/imgImport";
+// import renderImg from "@/imgImport";
 
 interface JumpingData {
   text1?: string;
@@ -25,7 +25,7 @@ export default function Curious({ jumppingButton }: CuriousProps) {
     <div className="w-full relative mb-2 ">
       <div className="bg-primary  rounded-[2.25rem] sm:rounded-[2.5rem] p-6 sm:p-6 md:p-8 mt-16  lg:mt-40 relative shadow-xl overflow-hidden">
         {/* Gradient Blur Effect */}
-        <div className="absolute inset-0 rounded-xlg sm:rounded-xxl bg-gradient-to-r from-purple-500 via-transparent to-purple-500 opacity-50 blur-lg -z-10"></div>
+        <div className="absolute inset-0 rounded-xlg sm:rounded-xxl bg-gradient-to-r from-purple-500 via-transparent to-purple-500 opacity-50 blur-lg -z-10" />
 
         <div className="flex flex-col space-y-16 lg:flex-row lg:space-y-0 justify-between items-center lg:items-start py-4 px-4 sm:px-8 lg:py-8 md:px-12 lg:px-16 xl:px-20">
           {/* Text Section */}
@@ -40,7 +40,8 @@ export default function Curious({ jumppingButton }: CuriousProps) {
 
               {/* Subtitle */}
               <div className="font-tthoves text-primary-foreground text-lg lg:text-lg xl:text-xl w-[100%] lg:w-[60%] pt-4 opacity-70">
-                Here's what's in it for you (spoiler: It's awesome!)
+                Here&apos;s what&apos;s in it for you (spoiler: It&apos;s
+                awesome!)
               </div>
             </div>
           </div>

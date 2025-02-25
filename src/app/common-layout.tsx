@@ -184,10 +184,11 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
       {/* Header */}
       <div className="mb-6 flex justify-between items-center">
         <Image
-          width={100}
-          height={100}
+          width={500}
+          height={500}
           src={renderImg("logoblack")}
           alt="logo"
+          className="w-auto h-10"
         />
         {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
         <div className="cursor-pointer" onClick={() => setIsDrawerOpen(false)}>
@@ -312,15 +313,15 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
       {/* Footer Links */}
       <div
         // onClick={() => setIsDrawerOpen(false)}
-        className="flex flex-col grid grid-cols-1 gap-0 h-full space-y-2 border-t border-gray-300 pt-6"
+        className="grid grid-cols-1 place-items-start gap-0 h-full space-y-2 border-t border-gray-300 pt-6"
       >
         {/* <Link
           href="/about"
           className="text-sm text-gray-400 font-tthoves-semiBold hover:text-destructive"
         >
           About us
-        </Link> */}
-        {/* <Link
+        </Link>
+        <Link
           href="#Contact"
           className="text-sm text-gray-400 font-tthoves-semiBold hover:text-destructive"
         >
@@ -334,7 +335,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
             Contact us
           </Link>
         </button>
-        <div className="relative">
+        <div className="relative place-items-center w-full">
           {/* {isSocialOpen && ( */}
           <div className="w-full rounded-md">
             <div className="flex justify-center gap-x-8 w-full">
@@ -345,9 +346,10 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 text-sm text-gray-700 hover:bg-gray-100"
-                  style={{ display: "flex", alignItems: "center" }}
                 >
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     src={social.icon}
                     alt="social icon"
                     className="w-full h-6 mb-10" // Adjust icon size

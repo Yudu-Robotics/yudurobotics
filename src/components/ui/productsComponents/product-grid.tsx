@@ -1,6 +1,6 @@
-import { useState } from "react";
+// import { useState } from "react";
 import ProductCard from "./product-card";
-import Link from "next/link";
+// import Link from "next/link";
 
 interface Products {
   name: string;

@@ -1,5 +1,5 @@
 import renderImg from "@/imgImport";
-import React from "react";
+// import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Image from "next/image";
 interface CeoProps {
@@ -23,11 +23,11 @@ const CeoReviewsContainer: React.FC<CeoProps> = ({ data }) => {
         />
       </div>
       <div className="flex flex-col items-center space-y-6">
-        <div className="flex items-center"></div>
+        <div className="flex items-center" />
 
         <div className="flex items-center">
           <p
-            className="text-center  items-center font-TThoves text-2xl md:text-4xl lg:text-5xl  text-primary-foreground text-[var(--Fontsizedisplay-sm)] font-bold leading-[var(--Lineheightdisplay-sm)] underline-offset-from-font decoration-skip-ink-none"
+            className="text-center items-center font-TThoves text-2xl md:text-4xl lg:text-5xl  text-primary-foreground text-[var(--Fontsizedisplay-sm)] font-bold leading-[var(--Lineheightdisplay-sm)] underline-offset-from-font decoration-skip-ink-none"
             style={{
               fontFamily: "'YourFontFamily', sans-serif",
               fontWeight: 1000,
@@ -73,8 +73,17 @@ const CeoReviewsContainer: React.FC<CeoProps> = ({ data }) => {
           />
         </div>
       </div>
-      <div className="hidden lg:block absolute md:-translate-y-60 xl:-translate-y-40 -left-40">
+      {/* <div className="hidden lg:block absolute md:-translate-y-60 xl:-translate-y-40  -left-40">
         <img alt="" src={renderImg("curv")} className="" />
+      </div> */}
+      <div className="hidden lg:block absolute md:-translate-y-60 xl:-translate-y-40  -left-40">
+        <Image
+          width={500}
+          height={500}
+          alt=""
+          src={renderImg("curv")}
+          className="w-56 hidden md:block  "
+        />
       </div>
     </div>
   );

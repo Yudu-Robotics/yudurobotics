@@ -48,7 +48,7 @@ export default function Roboki() {
           {/* Buttons Section */}
           {
             <JumpingButtons
-              ishorizontal="true"
+              ishorizontal={true}
               text1={data?.jumppingButton?.[0]?.text1 || ""}
               text2={data?.jumppingButton?.[0]?.text2 || ""}
               bgColor={data?.jumppingButton?.[0]?.bgColor || ""}

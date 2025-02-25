@@ -17,7 +17,8 @@ const ProductCard: React.FC<ProductCardProps> = ({
   isSelected = false, // Default value is false
   handleClick = () => {}, // Default is an empty function
 }) => (
-  <div
+  <button
+    type="button"
     onClick={() => {
       handleClick();
     }}
@@ -65,7 +66,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         </div>
       )}
     </div>
-  </div>
+  </button>
 );
 
 export default ProductCard;

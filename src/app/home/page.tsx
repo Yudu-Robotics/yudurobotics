@@ -61,7 +61,7 @@ export default async function HomePage() {
           {/* Buttons Section */}
 
           <JumpingButtons
-            ishorizontal="true"
+            ishorizontal={true}
             text1="I'm here to"
             text2="Join Forces"
             bgColor="#2CF7A4"
