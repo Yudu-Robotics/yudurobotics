@@ -1,4 +1,5 @@
 // components/ContactForm.tsx
+"use client";
 import { useState } from "react";
 import {
   Dialog,
@@ -114,7 +115,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className=" flex items-center lg:w-[35%]" id="Contact">
+    <div className="flex items-center w-full md:w-[55%] mt-10" id="Contact">
       <div className="bg-white rounded-lg shadow-lg p-4  w-[100%]">
         <form onSubmit={handleSubmit} className="space-y-8">
           {/* Form Fields */}
