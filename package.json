@@ -26,6 +26,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "corner-smoothing": "^0.1.5",
+    "framer-motion": "^12.4.7",
     "gsap": "^3.12.5",
     "lucide-react": "^0.476.0",
     "mini-svg-data-uri": "^1.4.4",

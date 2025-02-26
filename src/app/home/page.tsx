@@ -15,9 +15,10 @@ import { highlightWords } from "../utility/highlightWords";
 import TestimonialBanner from "@/components/ui/common/testimonial-banner";
 import Curious from "@/components/ui/common/Curious";
 import Image from "next/image";
-import BlurText from "../../components/bits/BlurText";
+// import BlurText from "../../components/bits/BlurText";
 import { TextAnimate } from "@/components/magicui/text-animate";
 import AnimatedContent from "@/components/bits/AnimatedContent";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 const FAQs = dynamic(() => import("@/components/ui/home/faqs"), {
   ssr: false, // This disables server-side rendering for the FAQ component
 });
@@ -54,17 +55,24 @@ export default async function HomePage() {
             <div className="space-y-4 border">
               {/* Main Headline */}
               <div className="font-cobaltRidge w-full text-wrap text-4xl md:text-6xl lg:text-7xl text-primary-foreground text-center md:text-left  md:w-[95%] leading-8">
-                <BlurText
-                  text={highlightWords(
+                {/* <FlipText className="text-4xl font-bold -tracking-widest text-black dark:text-white md:text-7xl md:leading-[5rem]"> */}
+                <TextGenerateEffect
+                  words={highlightWords(
                     data.heading,
                     data.wordsToHighlight.text1,
                     "text-destructive"
                   )}
+                />
+
+                {/* </FlipText> */}
+
+                {/* <BlurText
+                  text=
                   delay={50}
                   animateBy="words"
                   direction="top"
                   className="font-cobaltRidge w-full text-wrap text-4xl md:text-6xl lg:text-7xl text-primary-foreground text-center md:text-left  md:w-[95%] leading-8"
-                />
+                /> */}
                 {/* {highlightWords(
                   data.heading,
                   data.wordsToHighlight.text1,
