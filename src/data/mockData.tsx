@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // mockData.js
 type ProductData = {
   heading: string;
@@ -19,6 +20,7 @@ type ProductData = {
         icon: string;
         heading: string;
         description: string;
+        // biome-ignore lint/suspicious/noExplicitAny: <explanation>
         video?: any;
       }[];
     };
@@ -30,6 +32,7 @@ type ProductData = {
         icon: string;
         heading: string;
         description: string;
+        // biome-ignore lint/suspicious/noExplicitAny: <explanation>
         video?: any;
       }[];
     };
@@ -126,14 +129,17 @@ type ProductData = {
       video?: string;
     }[];
   };
+  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
   adaptive?: any;
+  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
   versatile?: any;
+  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
   plodeDifference?: any;
 };
-interface PlugAndPlayAccessory {
-  title: string;
-  desc: string;
-}
+// interface PlugAndPlayAccessory {
+//   title: string;
+//   desc: string;
+// }
 type BlogData = {
   title: string;
   description: string;

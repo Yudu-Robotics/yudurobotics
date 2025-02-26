@@ -50,7 +50,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         {product.description}
       </p>
       <p className="text-start text-secondary-foreground text-sm w-full tracking-wide lg:text-sm md:hidden font-tthoves">
-        {product.description.substring(0, 50) + "..."}
+        {`${product.description.substring(0, 50)}...`}
       </p>
 
       {product.link && product.link !== "" ? (

@@ -3,6 +3,7 @@ import renderImg from "@/imgImport";
 import React, { useEffect, useState } from "react";
 import CeoReviewsContainer from "../ceo-reviews";
 import { highlightWords } from "@/app/utility/highlightWords";
+import Image from "next/image";
 const data = [
   {
     title1: "We’re NOT",
@@ -54,7 +55,7 @@ function Section1() {
 
   return (
     <div className="w-full h-auto">
-      <div></div>
+      {/* <div></div> */}
       <div className="flex flex-col items-center space-y-6">
         <div className="flex flex-col items-center justify-center">
           <div className="xl:px-12 xs:p-12 md:p-2">
@@ -72,7 +73,9 @@ function Section1() {
               “We build{" "}
               <span className="relative inline-block z-10">
                 robots
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   src={renderImg("imgonp")}
                   alt="Image"
                   className="absolute xs:-top-56 xs:left-52 sm:-top-36 sm:left-52 md:-top-20 lg:-top-16 -z-20"

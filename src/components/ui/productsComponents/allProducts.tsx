@@ -1,20 +1,22 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ProductCard from "./product-card";
 import { products } from "@/data/mockData";
 import CustomHeading from "../common/custom-heading-props";
-import Link from "next/link";
-import renderImg from "@/imgImport";
+// import Link from "next/link";
+// import renderImg from "@/imgImport";
+import { Search } from "lucide-react";
+import { useRouter } from "next/navigation";
 
-interface Products {
-  name: string;
-  description: string;
-  image: string;
-  link: string;
-  type: string;
-  category: string;
-  ageGroup: string;
-}
+// interface Products {
+//   name: string;
+//   description: string;
+//   image: string;
+//   link: string;
+//   type: string;
+//   category: string;
+//   ageGroup: string;
+// }
 
 const AllProductsComponent = () => {
   const initialFilters = [
@@ -40,7 +42,7 @@ const AllProductsComponent = () => {
   const [ageGroups, setAgeGroups] = useState(initialAgeGroups);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("");
-
+  const router = useRouter();
   // Handle filter change
   const handleFilterChange = (index: number) => {
     const updatedFilters = filters.map((filter, i) => ({
@@ -106,7 +108,8 @@ const AllProductsComponent = () => {
         <div className="flex border border-gray-300 rounded-lg overflow-hidden w-full xl:w-[28%] bg-white h-[40px]">
           {filters.map((filter, index) => (
             <button
-              key={index}
+              type="button"
+              key={filter.name}
               className={`flex-1 text-center text-sm px-4 py-2 border-r last:border-r-0 whitespace-nowrap transition-colors h-full ${
                 filter.active
                   ? "font-tthoves-bold text-purple-600 bg-purple-100"
@@ -123,7 +126,8 @@ const AllProductsComponent = () => {
         <div className="flex border border-gray-300 rounded-lg overflow-hidden w-full xl:w-[19%] bg-white h-[40px]">
           {ageGroups.map((ageGroup, index) => (
             <button
-              key={index}
+              type="button"
+              key={ageGroup.name}
               className={`flex-1 text-center text-sm px-4 py-2 border-r last:border-r-0 whitespace-nowrap transition-colors h-full ${
                 ageGroup.active
                   ? "font-tthoves-bold text-purple-600 bg-purple-100"
@@ -162,11 +166,7 @@ const AllProductsComponent = () => {
             value={searchTerm}
             onChange={handleSearchChange}
           />
-          <img
-            src={renderImg("search")}
-            alt="search"
-            className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400"
-          />
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
         </div>
       </div>
 
@@ -176,7 +176,11 @@ const AllProductsComponent = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {hardwareProducts.map((product) =>
             product.link && product.link !== "#" ? (
-              <ProductCard product={product} key={product.name} />
+              <ProductCard
+                product={product}
+                key={product.name}
+                handleClick={() => router.push(product.link)}
+              />
             ) : (
               <div key={product.name} className="cursor-pointer">
                 <ProductCard product={product} />
@@ -192,7 +196,11 @@ const AllProductsComponent = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {softwareProducts.map((product) =>
             product.link && product.link !== "#" ? (
-              <ProductCard product={product} key={product.name} />
+              <ProductCard
+                product={product}
+                key={product.name}
+                handleClick={() => router.push(product.link)}
+              />
             ) : (
               <div key={product.name} className="cursor-pointer">
                 <ProductCard product={product} />
@@ -211,7 +219,11 @@ const AllProductsComponent = () => {
               // <Link href={product.link} key={product.name}>
               //   <ProductCard product={product} />
               // </Link>
-              <ProductCard product={product} key={product.name} />
+              <ProductCard
+                product={product}
+                key={product.name}
+                handleClick={() => router.push(product.link)}
+              />
             ) : (
               <div key={product.name} className="cursor-pointer">
                 <ProductCard product={product} />

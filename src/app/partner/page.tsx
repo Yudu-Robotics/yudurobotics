@@ -1,5 +1,5 @@
 import CeoReviewsContainer from "@/components/ui/ceo-reviews";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 import { mockData } from "@/data/mockData";
 import renderSvg from "@/svgImport";
 import Section1 from "@/components/ui/partner/Section1";
@@ -7,9 +7,9 @@ import PlodeDownloade from "@/components/ui/common/plode-download";
 import Section2 from "@/components/ui/partner/Section2";
 import Section3 from "@/components/ui/partner/Section3";
 
-const FAQs = dynamic(() => import("@/components/ui/home/faqs"), {
-  ssr: false, // This disables server-side rendering for the FAQ component
-});
+// const FAQs = dynamic(() => import("@/components/ui/home/faqs"), {
+//   ssr: false, // This disables server-side rendering for the FAQ component
+// });
 
 export default async function HomePage() {
   const data = mockData.partner;
@@ -18,13 +18,13 @@ export default async function HomePage() {
       <div className="sm:px-0 md:px-4 lg:px-20 py-4 bg-primary">
         <div className="flex flex-col space-y-16 lg:flex-row lg:space-y-0 justify-between py-10">
           <div className="h-[85vh] w-auto flex flex-col justify-center items-center">
-            <div className="sm:w-[80vw] w-[80vw] font-tthoves-medium text-xl text-center text-xl font-semibold leading-normal text-center  decoration-skip-ink-none">
+            <div className="sm:w-[80vw] w-[80vw] font-tthoves-medium  text-xl font-semibold leading-normal text-center  decoration-skip-ink-none">
               “We’re here to build a world where robotics sparks creativity and
               inspires young minds.”
             </div>
             <br />
             <br />
-            <div className="sm:w-[80vw]  w-[80vw] text-center lg:text-lg md:text-md sm:text-sm font-tthoves xs:text-sm font-normal leading-snug text-center  decoration-skip-ink-none">
+            <div className="sm:w-[80vw]  w-[80vw] lg:text-lg md:text-md sm:text-sm font-tthoves xs:text-sm font-normal leading-snug text-center  decoration-skip-ink-none">
               This is what ChatGPT says we should write. I mean, of course, it
               does the job. But then, that’s not what we are here to do, are we?
               <br /> <br />

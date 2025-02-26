@@ -117,7 +117,7 @@ export default function Section3() {
                 </p>
               </div>
               {index !== data.length - 1 && (
-                <div className="absolute left-[25px] top-[60px]  h-[calc(100%-20px)] w-[2px] bg-[#5423E6]"></div>
+                <div className="absolute left-[25px] top-[60px]  h-[calc(100%-20px)] w-[2px] bg-[#5423E6]" />
               )}
             </div>
           ))}

@@ -76,13 +76,13 @@ const CeoReviewsContainer: React.FC<CeoProps> = ({ data }) => {
       {/* <div className="hidden lg:block absolute md:-translate-y-60 xl:-translate-y-40  -left-40">
         <img alt="" src={renderImg("curv")} className="" />
       </div> */}
-      <div className="hidden lg:block absolute md:-translate-y-60 xl:-translate-y-40  -left-40">
+      <div className="hidden lg:block absolute md:-translate-y-60 xl:-translate-y-40  -left-40 z-40">
         <Image
           width={500}
           height={500}
           alt=""
           src={renderImg("curv")}
-          className="w-56 hidden md:block  "
+          className="w-56 hidden md:block"
         />
       </div>
     </div>

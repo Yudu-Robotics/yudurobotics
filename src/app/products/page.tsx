@@ -1,12 +1,12 @@
-import { blogData, products } from "@/data/mockData";
-import renderImg from "@/imgImport";
-import { highlightWords } from "../utility/highlightWords";
-import ProductGrid from "@/components/ui/productsComponents/product-grid";
-import ProductCard from "@/components/ui/productsComponents/product-card";
+// import { blogData, products } from "@/data/mockData";
+// import renderImg from "@/imgImport";
+// import { highlightWords } from "../utility/highlightWords";
+// import ProductGrid from "@/components/ui/productsComponents/product-grid";
+// import ProductCard from "@/components/ui/productsComponents/product-card";
 import AllProductsComponent from "@/components/ui/productsComponents/allProducts";
 
 export default async function ProductsPage() {
-  const data = blogData;
+  // const data = blogData;
 
   return (
     <>
