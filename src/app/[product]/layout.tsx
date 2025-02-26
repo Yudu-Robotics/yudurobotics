@@ -10,6 +10,8 @@ import ExpandLessIcon from "@mui/icons-material/ExpandLess"; // Chevron Up
 import Link from "next/link";
 import FloatingWhatsApp from "@/components/ui/common/floating-whatsapp";
 import renderImg from "@/imgImport";
+import type { ImageName } from "@/imgImport";
+import Image from "next/image";
 
 export default function ProductLayout({
   children,
@@ -18,8 +20,8 @@ export default function ProductLayout({
   children: React.ReactNode;
   params: { product: string };
 }) {
-  let currentProduct = params.product == "roboki" ? "peecee" : params.product;
-  currentProduct = currentProduct == "crawl_e" ? "zing" : currentProduct;
+  let currentProduct = params.product === "roboki" ? "peecee" : params.product;
+  currentProduct = currentProduct === "crawl_e" ? "zing" : currentProduct;
 
   const NavBarItems = [
     { name: "Our Products", link: "/products" },
@@ -41,28 +43,28 @@ export default function ProductLayout({
           name: "TED",
           description:
             "TED is your all-in-one buddy, packed and ready to jump into action whenever you are.",
-          image: "ted8",
+          image: "ted8" as ImageName,
           link: "/peecee",
         },
         {
           name: "AI-1",
           description:
             "An intelligent camera powered by AI for dynamic object detection, tracking, and insights.",
-          image: "AIIII",
+          image: "AIIII" as ImageName,
           link: "",
         },
         {
           name: "Roboki",
           description:
             "A durable and upgradable kit packed with everything you need to build, learn and explore robotics.",
-          image: "Roboki1",
+          image: "Roboki1" as ImageName,
           link: "/roboki",
         },
         {
           name: "Toki",
           description:
             "Affordable alternative to Arduino, offering superior customization options and advanced capabilities to unleash your creativity.",
-          image: "Toki0 ",
+          image: "Toki0" as ImageName, // Remove the trailing space
           link: "",
         },
       ],
@@ -74,13 +76,13 @@ export default function ProductLayout({
           name: "Zing",
           description:
             "A lifelike humanoid robot, perfect for interactive learning.",
-          image: "Zing1",
+          image: "Zing1" as ImageName,
           link: "/animatronics/zing",
         },
         {
           name: "Crawl-e",
           description: "A versatile hexapod explorer designed for learning.",
-          image: "Crawle1",
+          image: "Crawle1" as ImageName,
           link: "/animatronics/crawl-e",
         },
       ],
@@ -92,17 +94,29 @@ export default function ProductLayout({
           name: "Play Dynamex",
           description:
             "Colorful plastic blocks inspiring creativity and hands-on building.",
-          image: "toy",
+          image: "toy" as ImageName,
           link: "/toys/play-dynamex",
         },
       ],
     },
   ];
   const social_share = [
-    { icon: "assets/home/Twitter.svg", link: "https://twitter.com/YuduRobotics/" },
-    { icon: "assets/home/Linkedin.svg", link: "https://www.linkedin.com/showcase/yudu-robotics/" },
-    { icon: "assets/home/Instagram.svg", link: "https://www.instagram.com/yudurobotics/" },
-    { icon: "assets/home/Youtube.svg", link: "https://www.youtube.com/@YuduRobotics" },
+    {
+      icon: "assets/home/Twitter.svg",
+      link: "https://twitter.com/YuduRobotics/",
+    },
+    {
+      icon: "assets/home/Linkedin.svg",
+      link: "https://www.linkedin.com/showcase/yudu-robotics/",
+    },
+    {
+      icon: "assets/home/Instagram.svg",
+      link: "https://www.instagram.com/yudurobotics/",
+    },
+    {
+      icon: "assets/home/Youtube.svg",
+      link: "https://www.youtube.com/@YuduRobotics",
+    },
   ];
 
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -128,12 +142,17 @@ export default function ProductLayout({
     };
   }, []);
 
-  const toggleDrawer = (open: boolean) => (event: React.MouseEvent | React.KeyboardEvent) => {
-    if (event.type === "keydown" && ((event as React.KeyboardEvent).key === "Tab" || (event as React.KeyboardEvent).key === "Shift")) {
-      return;
-    }
-    setIsDrawerOpen(open);
-  };
+  const toggleDrawer =
+    (open: boolean) => (event: React.MouseEvent | React.KeyboardEvent) => {
+      if (
+        event.type === "keydown" &&
+        ((event as React.KeyboardEvent).key === "Tab" ||
+          (event as React.KeyboardEvent).key === "Shift")
+      ) {
+        return;
+      }
+      setIsDrawerOpen(open);
+    };
 
   const [isOurProductOpen, setIsOurProductOpen] = useState(false);
   const [openSubOption, setOpenSubOption] = useState<string | null>(null);
@@ -143,10 +162,7 @@ export default function ProductLayout({
       {/* Header */}
       <div className="mb-6 flex justify-between items-center">
         <img src={renderImg("logoblack")} alt="logo" />
-        <div
-          className="cursor-pointer"
-          onClick={() => setIsDrawerOpen(false)}
-        >
+        <div className="cursor-pointer" onClick={() => setIsDrawerOpen(false)}>
           <img src="assets/home/x-close.svg" alt="Close" className="w-6 h-6" />
         </div>
       </div>
@@ -156,7 +172,8 @@ export default function ProductLayout({
           <div key={key} className="font-tthoves-semiBold text-primary ">
             {item.name === "Our Products" ? (
               <>
-                <div
+                <button
+                  type="button"
                   onClick={() => setIsOurProductOpen(!isOurProductOpen)}
                   className="text-base font-tthoves-semiBold text-black transition-colors duration-300 ease-in-out hover:text-purple-600 cursor-pointer flex justify-between items-center"
                 >
@@ -166,12 +183,13 @@ export default function ProductLayout({
                   ) : (
                     <ExpandMoreIcon className="ml-2" />
                   )}
-                </div>
+                </button>
                 {isOurProductOpen && (
                   <div className="flex flex-col items-start mt-2 ml-2">
                     {productsData.map((category, index) => (
                       <div key={index} className="mb-4">
                         <button
+                          type="button"
                           onClick={() =>
                             setOpenSubOption(
                               openSubOption === category.category
@@ -182,12 +200,11 @@ export default function ProductLayout({
                           className="text-base font-tthoves-semiBold text-gray-700 transition-colors duration-300 ease-in-out hover:text-purple-600"
                         >
                           {category.category}
-                          {openSubOption === category.category ?
-                            (
-                              <ExpandLessIcon className="ml-2" />
-                            ) : (
-                              <ExpandMoreIcon className="ml-2" />
-                            )}
+                          {openSubOption === category.category ? (
+                            <ExpandLessIcon className="ml-2" />
+                          ) : (
+                            <ExpandMoreIcon className="ml-2" />
+                          )}
                         </button>
                         {openSubOption === category.category && (
                           <div className="flex flex-col space-y-4 mt-2">
@@ -196,11 +213,9 @@ export default function ProductLayout({
                                 key={productIndex}
                                 className="flex items-start space-x-4 mb-4"
                               >
-
                                 {/* Image */}
                                 <div className="flex flex-cols">
-                                
-                                  <img
+                                  <Image
                                     src={renderImg(product.image)}
                                     alt={product.name}
                                     className="w-full h-full object-cover"
@@ -227,7 +242,10 @@ export default function ProductLayout({
                         )}
                       </div>
                     ))}
-                    <div className="mt-4" onClick={() => setIsDrawerOpen(false)}>
+                    <div
+                      className="mt-4"
+                      onClick={() => setIsDrawerOpen(false)}
+                    >
                       <Link
                         href="/products"
                         className="text-blue-600 text-sm font-medium block"
@@ -250,12 +268,12 @@ export default function ProductLayout({
             )}
           </div>
         ))}
-
       </div>
       {/* Footer Links */}
       <div
         // onClick={() => setIsDrawerOpen(false)}
-        className="flex flex-col grid grid-cols-1 gap-0 h-full space-y-2 border-t border-gray-300 pt-6">
+        className="flex flex-col grid grid-cols-1 gap-0 h-full space-y-2 border-t border-gray-300 pt-6"
+      >
         {/* <Link
           href="/about"
           className="text-sm text-gray-400 font-tthoves-semiBold hover:text-destructive"
@@ -268,8 +286,7 @@ export default function ProductLayout({
         >
           Contact us
         </Link> */}
-        <div
-          onClick={() => setIsDrawerOpen(false)}>
+        <div onClick={() => setIsDrawerOpen(false)}>
           <Link
             href="#Contact"
             className="text-sm text-gray-400 font-tthoves-semiBold hover:text-purple-600"
@@ -288,27 +305,24 @@ export default function ProductLayout({
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-4 text-sm text-gray-700 hover:bg-gray-100"
-                    style={{ display: 'flex', alignItems: 'center' }}
+                    style={{ display: "flex", alignItems: "center" }}
                   >
                     <img
                       src={social.icon}
                       alt="social icon"
                       className="w-full h-6 mb-10" // Adjust icon size
                     />
-                    <span className="sr-only">{social.link}</span> {/* Screen reader text */}
+                    <span className="sr-only">{social.link}</span>{" "}
+                    {/* Screen reader text */}
                   </a>
                 ))}
               </div>
-
-
             </div>
           )}
         </div>
 
-
         {/* Add more footer links as needed */}
       </div>
-
     </div>
   );
 
@@ -376,7 +390,6 @@ export default function ProductLayout({
               title="Scroll to top"
             >
               <img src="assets/home/Arrowup.png" alt="scroll-up" />
-
             </button>
           )}
 
@@ -384,12 +397,13 @@ export default function ProductLayout({
           {children}
 
           {/* Footer */}
-          <div className="w-full -mb-1 mt-24 pt-24">{renderSvg("bottomSection")}</div>
+          <div className="w-full -mb-1 mt-24 pt-24">
+            {renderSvg("bottomSection")}
+          </div>
           <div className="px-8 lg:px-28 py-4 bg-primary">
             <Footer />
           </div>
         </div>
-
       </body>
     </html>
   );

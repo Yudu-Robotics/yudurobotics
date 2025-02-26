@@ -1,6 +1,8 @@
 import { highlightWords } from "@/app/utility/highlightWords";
 import renderImg from "@/imgImport";
+import type { ImageName } from "@/imgImport";
 import renderVideo from "@/videoImport";
+import Image from "next/image";
 import { title } from "process";
 import React from "react";
 
@@ -17,13 +19,13 @@ const VersatileSoftware: React.FC<SoftwareAdaptiveProps> = ({
   const images = ["threestep", "fivecoding", "aimodel"];
   if (name === "peecee") {
     var videoNmae = ["steppeecee", "codingpeecee", "aimodelpeecee"];
-  } else if (name == "zing") {
+  } else if (name === "zing") {
     var videoNmae = ["stepzing", "codingzing", "aimodelzing"];
-  } else if (name == "klaw") {
+  } else if (name === "klaw") {
     var videoNmae = ["stepklaw", "codingklaw", "aimodelklaw"];
-  } else if (name == "roboki") {
+  } else if (name === "roboki") {
     var videoNmae = ["steprobo", "codingrobo", "airobo"];
-  } else if (name == "crawle") {
+  } else if (name === "crawle") {
     var videoNmae = ["stepcrawle", "codingcrawle", "aimodelcrawle"];
   }
   const features = [
@@ -82,7 +84,7 @@ const VersatileSoftware: React.FC<SoftwareAdaptiveProps> = ({
                     style={{}}
                   />
                 ) : (
-                  <img src={renderImg(images[index])} />
+                  <Image src={renderImg(images[index] as ImageName)} alt="" />
                 )}
               </div>
             </div>
