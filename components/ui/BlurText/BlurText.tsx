@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
-import { useRef, useEffect, useState, ReactNode } from "react";
-import { useSprings, animated, SpringValue } from "@react-spring/web";
+import { useRef, useEffect, useState, type ReactNode } from "react";
+import { useSprings, animated, type SpringValue } from "@react-spring/web";
 import React from "react";
 
 interface BlurTextProps {
@@ -11,7 +12,9 @@ interface BlurTextProps {
   direction?: "top" | "bottom";
   threshold?: number;
   rootMargin?: string;
+  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
   animationFrom?: Record<string, any>;
+  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
   animationTo?: Record<string, any>[];
   easing?: (t: number) => number | string;
   onAnimationComplete?: () => void;
@@ -51,6 +54,7 @@ const BlurText: React.FC<BlurTextProps> = ({
   }
 
   // Default animations based on direction
+  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
   const defaultFrom: Record<string, any> =
     direction === "top"
       ? {
@@ -64,6 +68,7 @@ const BlurText: React.FC<BlurTextProps> = ({
           transform: "translate3d(0,50px,0)",
         };
 
+  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
   const defaultTo: Record<string, any>[] = [
     {
       filter: "blur(5px)",
@@ -100,6 +105,7 @@ const BlurText: React.FC<BlurTextProps> = ({
       from: animationFrom || defaultFrom,
       to: inView
         ? async (
+            // biome-ignore lint/suspicious/noExplicitAny: <explanation>
             next: (arg: Record<string, SpringValue<any>>) => Promise<void>
           ) => {
             for (const step of animationTo || defaultTo) {
@@ -115,6 +121,7 @@ const BlurText: React.FC<BlurTextProps> = ({
           }
         : animationFrom || defaultFrom,
       delay: i * delay,
+      // biome-ignore lint/suspicious/noExplicitAny: <explanation>
       config: { easing: easing as any },
     }))
   );

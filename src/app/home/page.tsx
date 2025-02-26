@@ -17,6 +17,7 @@ import Curious from "@/components/ui/common/Curious";
 import Image from "next/image";
 import BlurText from "../../../components/ui/BlurText/BlurText";
 import { TextAnimate } from "@/components/magicui/text-animate";
+import AnimatedContent from "../../../component/ui/AnimatedContent/AnimatedContent";
 const FAQs = dynamic(() => import("@/components/ui/home/faqs"), {
   ssr: false, // This disables server-side rendering for the FAQ component
 });
@@ -113,22 +114,89 @@ export default async function HomePage() {
       {/* Middle Part */}
       <div className="px-4 md:px-12 lg:px-16 text-black py-5 lg:py-10 xl:px-28 ">
         <div className="py-5 lg:py-10">
-          <GlobalAwards />
+          <AnimatedContent
+            distance={150}
+            direction="vertical"
+            reverse={false}
+            config={{ tension: 80, friction: 20 }}
+            initialOpacity={0.2}
+            animateOpacity
+            scale={1.1}
+            threshold={0.2}
+          >
+            <GlobalAwards />
+          </AnimatedContent>
         </div>
         <div id="product-features-component" className=" lg:mx-0 lg:py-10">
-          <ProductFeatures />
+          <AnimatedContent
+            distance={150}
+            direction="vertical"
+            reverse={false}
+            config={{ tension: 80, friction: 20 }}
+            initialOpacity={0.2}
+            animateOpacity
+            scale={1.1}
+            threshold={0.2}
+          >
+            <ProductFeatures />
+          </AnimatedContent>
         </div>
         <div>
-          <ProductCatalog />
+          <AnimatedContent
+            distance={150}
+            direction="vertical"
+            reverse={false}
+            config={{ tension: 80, friction: 20 }}
+            initialOpacity={0.2}
+            animateOpacity
+            scale={1.1}
+            threshold={0.2}
+          >
+            <ProductCatalog />
+          </AnimatedContent>
         </div>
         <div className="py-6 w-full">
-          <ProductCategories />
+          <AnimatedContent
+            distance={150}
+            direction="horizontal"
+            reverse={false}
+            config={{ tension: 80, friction: 20 }}
+            initialOpacity={0.2}
+            animateOpacity
+            scale={1.1}
+            threshold={0.2}
+          >
+            {/* <GlobalAwards /> */}
+            <ProductCategories />
+          </AnimatedContent>
         </div>
         <div className="-mx-8 lg:-mx-28">
-          <TestimonialBanner />
+          <AnimatedContent
+            distance={150}
+            direction="horizontal"
+            reverse={false}
+            config={{ tension: 80, friction: 20 }}
+            initialOpacity={0.2}
+            animateOpacity
+            scale={1.1}
+            threshold={0.2}
+          >
+            <TestimonialBanner />
+          </AnimatedContent>
         </div>
         <div className=" sm:mx-0">
-          <SubscribeSection />
+          <AnimatedContent
+            distance={150}
+            direction="vertical"
+            reverse={false}
+            config={{ tension: 80, friction: 20 }}
+            initialOpacity={0.2}
+            animateOpacity
+            scale={1.1}
+            threshold={0.2}
+          >
+            <SubscribeSection />
+          </AnimatedContent>
         </div>
 
         {/* <div className="py-10 lg:py-20">
@@ -139,14 +207,47 @@ export default async function HomePage() {
         </div> */}
 
         <div className="py-5 lg:py-20  sm:mx-0">
-          <FAQs product="home" />
+          <AnimatedContent
+            distance={150}
+            direction="vertical"
+            reverse={false}
+            config={{ tension: 80, friction: 20 }}
+            initialOpacity={0.2}
+            animateOpacity
+            scale={1.1}
+            threshold={0.2}
+          >
+            <FAQs product="home" />
+          </AnimatedContent>
         </div>
 
         <div className="sm:mb-24 ">
-          <GetInTouch />
+          <AnimatedContent
+            distance={150}
+            direction="vertical"
+            reverse={false}
+            config={{ tension: 80, friction: 20 }}
+            initialOpacity={0.2}
+            animateOpacity
+            scale={1.1}
+            threshold={0.2}
+          >
+            <GetInTouch />
+          </AnimatedContent>
         </div>
         <div>
-          <Curious jumppingButton={data?.jumppingButton || []} />
+          <AnimatedContent
+            distance={150}
+            direction="vertical"
+            reverse={false}
+            config={{ tension: 80, friction: 20 }}
+            initialOpacity={0.2}
+            animateOpacity
+            scale={1.1}
+            threshold={0.2}
+          >
+            <Curious jumppingButton={data?.jumppingButton || []} />
+          </AnimatedContent>
         </div>
       </div>
     </>
