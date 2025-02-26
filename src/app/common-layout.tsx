@@ -394,12 +394,12 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
               {NavBarItems.map((item) => (
                 <div
                   key={item.id}
-                  className="relative group font-tthoves-semiBold"
+                  className="relative group font-tthoves-semiBold hover:scale-105 transition-all ease-in-out"
                 >
                   <Link
                     href={item.link}
                     onClick={(e) => handleLinkClick(e, item.link)}
-                    className="text-primary-foreground text-center text-base px-3 hover:text-purple-600"
+                    className="text-primary-foreground text-center text-base px-3  transition-all"
                   >
                     {item.name}
                   </Link>
