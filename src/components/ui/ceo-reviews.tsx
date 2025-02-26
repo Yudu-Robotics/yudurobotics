@@ -2,6 +2,7 @@ import renderImg from "@/imgImport";
 // import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Image from "next/image";
+import { TypingAnimation } from "../magicui/typing-animation";
 interface CeoProps {
   data?: {
     name: string;
@@ -26,7 +27,7 @@ const CeoReviewsContainer: React.FC<CeoProps> = ({ data }) => {
         <div className="flex items-center" />
 
         <div className="flex items-center">
-          <p
+          <div
             className="text-center items-center font-TThoves text-2xl md:text-4xl lg:text-5xl  text-primary-foreground text-[var(--Fontsizedisplay-sm)] font-bold leading-[var(--Lineheightdisplay-sm)] underline-offset-from-font decoration-skip-ink-none"
             style={{
               fontFamily: "'YourFontFamily', sans-serif",
@@ -35,9 +36,11 @@ const CeoReviewsContainer: React.FC<CeoProps> = ({ data }) => {
               textDecorationSkipInk: "none",
             }}
           >
-            {data?.desc ||
-              "Yudu Robotics has been an incredible partner, blending creativity with cutting-edge tech to drive innovation like never before."}
-          </p>
+            <TypingAnimation duration={50}>
+              {data?.desc ||
+                "Yudu Robotics has been an incredible partner, blending creativity with cutting-edge tech to drive innovation like never before."}
+            </TypingAnimation>
+          </div>
         </div>
       </div>
       <div className="flex flex-col justify-center items-center mt-8">

@@ -15,6 +15,8 @@ import { highlightWords } from "../utility/highlightWords";
 import TestimonialBanner from "@/components/ui/common/testimonial-banner";
 import Curious from "@/components/ui/common/Curious";
 import Image from "next/image";
+import BlurText from "../../../components/ui/BlurText/BlurText";
+import { TextAnimate } from "@/components/magicui/text-animate";
 const FAQs = dynamic(() => import("@/components/ui/home/faqs"), {
   ssr: false, // This disables server-side rendering for the FAQ component
 });
@@ -50,17 +52,30 @@ export default async function HomePage() {
 
             <div className="space-y-4 border">
               {/* Main Headline */}
-              <div className="font-cobaltRidge text-4xl md:text-6xl lg:text-7xl text-primary-foreground text-center md:text-left sm:space-x-4 md:w-[95%] leading-8 space-x-2">
-                {highlightWords(
+              <div className="font-cobaltRidge w-full text-wrap text-4xl md:text-6xl lg:text-7xl text-primary-foreground text-center md:text-left  md:w-[95%] leading-8">
+                <BlurText
+                  text={highlightWords(
+                    data.heading,
+                    data.wordsToHighlight.text1,
+                    "text-destructive"
+                  )}
+                  delay={50}
+                  animateBy="words"
+                  direction="top"
+                  className="font-cobaltRidge w-full text-wrap text-4xl md:text-6xl lg:text-7xl text-primary-foreground text-center md:text-left  md:w-[95%] leading-8"
+                />
+                {/* {highlightWords(
                   data.heading,
                   data.wordsToHighlight.text1,
                   "text-destructive"
-                )}
+                )} */}
               </div>
 
               {/* Subtext */}
               <div className="text-[#F2D8FE] text-lg md:text-lg lg:text-xl font-tthoves w-[100%] lg:w-[50%] text-center md:text-left">
-                {data.subheading}
+                <TextAnimate animation="slideUp" by="word">
+                  {data.subheading}
+                </TextAnimate>
               </div>
             </div>
           </div>
