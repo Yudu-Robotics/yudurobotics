@@ -175,10 +175,11 @@ const AllProductsComponent = () => {
       <div className="mb-8">
         <CustomHeading title="Hardware" />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {hardwareProducts.map((product) =>
+          {hardwareProducts.map((product, i) =>
             product.link && product.link !== "#" ? (
               <AnimatedContent
                 key={product.name}
+                delay={i * 100}
                 distance={150}
                 direction="vertical"
                 reverse={false}
@@ -197,6 +198,7 @@ const AllProductsComponent = () => {
               <div key={product.name} className="cursor-pointer">
                 <AnimatedContent
                   key={product.name}
+                  delay={i * 100}
                   distance={150}
                   direction="vertical"
                   reverse={false}
