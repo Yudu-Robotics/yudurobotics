@@ -32,8 +32,15 @@ export default async function HomePage() {
   ];
   return (
     <>
-      <div className="px-4 sm:px-8 md:px-16 lg:px-20 xl:px-28 bg-primary pt-16 sm:pt-20 md:pt-16 lg:pt-20 xl:pt-24">
-        <div className="flex flex-col space-y-16 lg:flex-row lg:space-y-0 justify-between py-10">
+      <div className="px-4 sm:px-8 md:px-16 lg:px-20 xl:px-28 bg-primary pt-16 sm:pt-20 md:pt-16 lg:pt-20 xl:pt-24 relative">
+        {/* Grid background with lower z-index */}
+        <div className="absolute inset-0 dark:bg-grid-white/[0.2] bg-grid-black/[0.2] z-0" />
+
+        {/* Gradient overlay with higher z-index */}
+        <div className="absolute pointer-events-none inset-0 bg-primary [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)] z-10" />
+
+        {/* Content with highest z-index */}
+        <div className="relative z-20 flex flex-col space-y-16 lg:flex-row lg:space-y-0 justify-between py-10">
           <div className="w-full">
             {/* <a href="#product-features-component" className="mb-6 ">
               <NewFeaturesCard />
@@ -76,11 +83,11 @@ export default async function HomePage() {
             width={1000}
             height={1000}
             alt="home-image"
-            className="w-full h-96 md:h-full object-cover md:object-contain rounded-xxl"
+            className="w-full h-96 md:h-full object-cover md:object-contain rounded-xxl relative z-40"
           />
           {/* </a> */}
         </div>
-        <div className="py-8 lg:py-16">
+        <div className="py-8 lg:py-16 relative z-40">
           <CeoReviewsContainer data={partnerDetails[0]} />
         </div>
       </div>
