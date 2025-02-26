@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 import { tree } from "next/dist/build/templates/app-page";
 import FooterIcon from "./fotterIcon";
 import Link from "next/link";
+import { Hourglass } from "lucide-react";
 
 const Footer = () => {
   const route = [
@@ -93,11 +94,10 @@ const Footer = () => {
       icon_image: <FooterIcon iconType="livechat" color={iconColor[index]} />,
     },
     {
-      type: "Office",
+      type: "Working hours",
       text: "Come say hello at our office HQ.",
-      contact_by:
-        "No.29, Bereterna Agrahara, Next to Play Factory, Hosur Main Road, Electronic City, Bangalore, Karnataka, India",
-      icon_image: <FooterIcon iconType="map" color={iconColor[index]} />,
+      contact_by: "Monday to Saturday 9:00 AM to 6:00 PM",
+      icon_image: <Hourglass />,
     },
     {
       type: "Phone",
