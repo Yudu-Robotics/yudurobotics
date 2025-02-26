@@ -2,7 +2,7 @@ import renderImg from "@/imgImport";
 // import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Image from "next/image";
-import { TypingAnimation } from "../magicui/typing-animation";
+import ScrollFloat from "../bits/ScrollFloat";
 interface CeoProps {
   data?: {
     name: string;
@@ -36,10 +36,20 @@ const CeoReviewsContainer: React.FC<CeoProps> = ({ data }) => {
               textDecorationSkipInk: "none",
             }}
           >
-            <TypingAnimation duration={50}>
+            <ScrollFloat
+              animationDuration={1}
+              ease="back.inOut(2)"
+              scrollStart="center bottom+=50%"
+              scrollEnd="bottom bottom-=40%"
+              stagger={0.03}
+            >
               {data?.desc ||
                 "Yudu Robotics has been an incredible partner, blending creativity with cutting-edge tech to drive innovation like never before."}
-            </TypingAnimation>
+            </ScrollFloat>
+            {/* <TypingAnimation duration={50}>
+              {data?.desc ||
+                "Yudu Robotics has been an incredible partner, blending creativity with cutting-edge tech to drive innovation like never before."}
+            </TypingAnimation> */}
           </div>
         </div>
       </div>

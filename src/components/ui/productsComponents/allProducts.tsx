@@ -7,6 +7,7 @@ import CustomHeading from "../common/custom-heading-props";
 // import renderImg from "@/imgImport";
 import { Search } from "lucide-react";
 import { useRouter } from "next/navigation";
+import AnimatedContent from "@/components/bits/AnimatedContent";
 
 // interface Products {
 //   name: string;
@@ -176,14 +177,37 @@ const AllProductsComponent = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {hardwareProducts.map((product) =>
             product.link && product.link !== "#" ? (
-              <ProductCard
-                product={product}
+              <AnimatedContent
                 key={product.name}
-                handleClick={() => router.push(product.link)}
-              />
+                distance={150}
+                direction="vertical"
+                reverse={false}
+                config={{ tension: 80, friction: 20 }}
+                initialOpacity={0.2}
+                animateOpacity
+                scale={1.1}
+                threshold={0.2}
+              >
+                <ProductCard
+                  product={product}
+                  handleClick={() => router.push(product.link)}
+                />
+              </AnimatedContent>
             ) : (
               <div key={product.name} className="cursor-pointer">
-                <ProductCard product={product} />
+                <AnimatedContent
+                  key={product.name}
+                  distance={150}
+                  direction="vertical"
+                  reverse={false}
+                  config={{ tension: 80, friction: 20 }}
+                  initialOpacity={0.2}
+                  animateOpacity
+                  scale={1.1}
+                  threshold={0.2}
+                >
+                  <ProductCard product={product} />
+                </AnimatedContent>
               </div>
             )
           )}
@@ -196,14 +220,37 @@ const AllProductsComponent = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {softwareProducts.map((product) =>
             product.link && product.link !== "#" ? (
-              <ProductCard
-                product={product}
+              <AnimatedContent
                 key={product.name}
-                handleClick={() => router.push(product.link)}
-              />
+                distance={150}
+                direction="vertical"
+                reverse={false}
+                config={{ tension: 80, friction: 20 }}
+                initialOpacity={0.2}
+                animateOpacity
+                scale={1.1}
+                threshold={0.2}
+              >
+                <ProductCard
+                  product={product}
+                  handleClick={() => router.push(product.link)}
+                />
+              </AnimatedContent>
             ) : (
               <div key={product.name} className="cursor-pointer">
-                <ProductCard product={product} />
+                <AnimatedContent
+                  key={product.name}
+                  distance={150}
+                  direction="vertical"
+                  reverse={false}
+                  config={{ tension: 80, friction: 20 }}
+                  initialOpacity={0.2}
+                  animateOpacity
+                  scale={1.1}
+                  threshold={0.2}
+                >
+                  <ProductCard product={product} />
+                </AnimatedContent>{" "}
               </div>
             )
           )}
@@ -219,14 +266,37 @@ const AllProductsComponent = () => {
               // <Link href={product.link} key={product.name}>
               //   <ProductCard product={product} />
               // </Link>
-              <ProductCard
-                product={product}
+              <AnimatedContent
                 key={product.name}
-                handleClick={() => router.push(product.link)}
-              />
+                distance={150}
+                direction="vertical"
+                reverse={false}
+                config={{ tension: 80, friction: 20 }}
+                initialOpacity={0.2}
+                animateOpacity
+                scale={1.1}
+                threshold={0.2}
+              >
+                <ProductCard
+                  product={product}
+                  handleClick={() => router.push(product.link)}
+                />
+              </AnimatedContent>
             ) : (
               <div key={product.name} className="cursor-pointer">
-                <ProductCard product={product} />
+                <AnimatedContent
+                  key={product.name}
+                  distance={150}
+                  direction="vertical"
+                  reverse={false}
+                  config={{ tension: 80, friction: 20 }}
+                  initialOpacity={0.2}
+                  animateOpacity
+                  scale={1.1}
+                  threshold={0.2}
+                >
+                  <ProductCard product={product} />
+                </AnimatedContent>{" "}
               </div>
             )
           )}

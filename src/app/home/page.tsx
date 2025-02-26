@@ -15,9 +15,9 @@ import { highlightWords } from "../utility/highlightWords";
 import TestimonialBanner from "@/components/ui/common/testimonial-banner";
 import Curious from "@/components/ui/common/Curious";
 import Image from "next/image";
-import BlurText from "../../../components/ui/BlurText/BlurText";
+import BlurText from "../../components/bits/BlurText";
 import { TextAnimate } from "@/components/magicui/text-animate";
-import AnimatedContent from "../../../component/ui/AnimatedContent/AnimatedContent";
+import AnimatedContent from "@/components/bits/AnimatedContent";
 const FAQs = dynamic(() => import("@/components/ui/home/faqs"), {
   ssr: false, // This disables server-side rendering for the FAQ component
 });
