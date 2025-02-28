@@ -16,7 +16,7 @@ const nextConfig = {
     webVitalsAttribution: ["CLS", "LCP", "FCP", "FID", "TTFB", "INP"],
   },
   bundlePagesRouterDependencies: true,
-  output: "export",
+  // output: "export",
   trailingSlash: true,
   eslint: {
     ignoreDuringBuilds: true,
@@ -59,8 +59,8 @@ const nextConfig = {
       },
     ];
   },
-  basePath: "/yudurobotics",
-  assetPrefix: "/yudurobotics/",
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH,
+  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH,
   async redirects() {
     return [
       {
