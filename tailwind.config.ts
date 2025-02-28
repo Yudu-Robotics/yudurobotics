@@ -46,11 +46,11 @@ const config: Config = {
         // Ignore spelling for custom font names
         /* cspell:disable */
         piepie: ["PiePie", "sans-serif"],
-        cobaltRidge: ["var(--font-cobalt)", "sans-serif"],
-        tthoves: ["var(--font-tthoves-regular)", "sans-serif"],
-        "tthoves-bold": ["var(--font-tthoves-bold)", "sans-serif"],
-        "tthoves-semiBold": ["var(--font-tthoves-demibold)", "sans-serif"],
-        "tthoves-medium": ["var(--font-tthoves-medium)", "sans-serif"],
+        cobaltRidge: ["CobaltRidge", "sans-serif"],
+        tthoves: ["TTHovesRegular", "sans-serif"],
+        "tthoves-bold": ["TTHovesBold", "sans-serif"],
+        "tthoves-semiBold": ["TTHovesDemiBold", "sans-serif"],
+        "tthoves-medium": ["TTHovesMedium", "sans-serif"],
         /* cspell:enable */
       },
       fontSize: {

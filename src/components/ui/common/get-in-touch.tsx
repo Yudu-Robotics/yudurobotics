@@ -1,5 +1,5 @@
 import renderImg from "@/imgImport";
-import React, { memo } from "react";
+import React from "react";
 import { Button } from "./view-products-buttons";
 import Image from "next/image";
 
@@ -30,4 +30,4 @@ const GetInTouch = () => {
   );
 };
 
-export default memo(GetInTouch);
+export default GetInTouch;

@@ -242,8 +242,7 @@ export default function ProductLayout({
                         )}
                       </div>
                     ))}
-                    <button
-                      type="button"
+                    <div
                       className="mt-4"
                       onClick={() => setIsDrawerOpen(false)}
                     >
@@ -253,7 +252,7 @@ export default function ProductLayout({
                       >
                         View all products →
                       </Link>
-                    </button>
+                    </div>
                   </div>
                 )}
               </>

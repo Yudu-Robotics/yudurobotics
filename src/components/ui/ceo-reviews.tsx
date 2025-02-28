@@ -55,7 +55,7 @@ const CeoReviewsContainer: React.FC<CeoProps> = ({ data }) => {
       </div>
       <div className="flex flex-col justify-center items-center mt-8">
         <Avatar>
-          <AvatarImage src="https://github.com/shadcn.png" alt="ceo" />
+          <AvatarImage src="https://github.com/shadcn.png" />
           <AvatarFallback>CEO</AvatarFallback>
         </Avatar>
 

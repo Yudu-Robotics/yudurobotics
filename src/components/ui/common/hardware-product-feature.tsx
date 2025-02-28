@@ -125,15 +125,12 @@ const HardwareProductFeatures: React.FC<{ hardware: HardwareData }> = ({
             <div className="relative flex justify-center">
               {selectedIndex === -1 ||
               !hardware?.section1?.features[selectedIndex]?.video ? (
-                // Update Image components with proper width/height and loading attributes
                 <Image
                   width={488}
                   height={696}
                   src={hardware.section1.centerImage}
                   alt="Product"
                   className="w-full h-auto"
-                  loading="lazy"
-                  sizes="(max-width: 768px) 100vw, 488px"
                 />
               ) : (
                 <video
