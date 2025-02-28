@@ -1,10 +1,7 @@
 import CeoReviewsContainer from "@/components/ui/ceo-reviews";
 import GlobalAwards from "@/components/ui/home/global-awards";
-import ProductFeatures from "@/components/ui/home/product-features";
 import renderImg from "@/imgImport";
 import JumpingButtons from "../../components/ui/common/jumping-buttons";
-import ProductCatalog from "@/components/ui/productsComponents/product-catalog";
-import ProductCategories from "@/components/ui/productsComponents/product-categories";
 import SubscribeSection from "@/components/ui/home/subscribe-section";
 import dynamic from "next/dynamic";
 import { mockData } from "@/data/mockData";
@@ -19,10 +16,35 @@ import Image from "next/image";
 import { TextAnimate } from "@/components/magicui/text-animate";
 import AnimatedContent from "@/components/bits/AnimatedContent";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+const ProductCatalog = dynamic(
+  () => import("@/components/ui/productsComponents/product-catalog"),
+  {
+    loading: () => (
+      <div className="h-64 w-full animate-pulse bg-gray-200 rounded-lg" />
+    ),
+  }
+);
+
+const ProductCategories = dynamic(
+  () => import("@/components/ui/productsComponents/product-categories"),
+  {
+    loading: () => (
+      <div className="h-64 w-full animate-pulse bg-gray-200 rounded-lg" />
+    ),
+  }
+);
+const ProductFeatures = dynamic(
+  () => import("@/components/ui/home/product-features"),
+  {
+    loading: () => (
+      <div className="h-64 w-full animate-pulse bg-gray-200 rounded-lg" />
+    ),
+    ssr: true,
+  }
+);
 const FAQs = dynamic(() => import("@/components/ui/home/faqs"), {
   ssr: false, // This disables server-side rendering for the FAQ component
 });
-
 export default async function HomePage() {
   const data = mockData.home;
   const partnerDetails = [
@@ -57,6 +79,7 @@ export default async function HomePage() {
               <div className="font-cobaltRidge w-full text-wrap text-4xl md:text-6xl lg:text-7xl text-primary-foreground text-center md:text-left  md:w-[95%] leading-8">
                 {/* <FlipText className="text-4xl font-bold -tracking-widest text-black dark:text-white md:text-7xl md:leading-[5rem]"> */}
                 <TextGenerateEffect
+                  duration={0.4}
                   words={highlightWords(
                     data.heading,
                     data.wordsToHighlight.text1,
@@ -108,6 +131,8 @@ export default async function HomePage() {
             height={1000}
             alt="home-image"
             className="w-full h-96 md:h-full object-cover md:object-contain rounded-xxl relative z-40"
+            priority // Already correctly set for LCP optimization
+            sizes="(max-width: 768px) 100vw, 1000px" // Add sizes attribute
           />
           {/* </a> */}
         </div>
@@ -137,14 +162,14 @@ export default async function HomePage() {
         </div>
         <div id="product-features-component" className=" lg:mx-0 lg:py-10">
           <AnimatedContent
-            distance={150}
+            distance={100} // Reduced from 150
             direction="vertical"
             reverse={false}
-            config={{ tension: 80, friction: 20 }}
-            initialOpacity={0.2}
+            config={{ tension: 60, friction: 14 }} // Optimized spring physics
+            initialOpacity={0.4} // Increased from 0.2
             animateOpacity
-            scale={1.1}
-            threshold={0.2}
+            scale={1.05} // Reduced from 1.1
+            threshold={0.1} // Lower threshold for earlier animation
           >
             <ProductFeatures />
           </AnimatedContent>

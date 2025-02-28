@@ -207,11 +207,11 @@
   font-style: normal;
 }
 
-@font-face {
+/* @font-face {
   font-family: "CobaltRidge";
   src: url("../../fonts/CobaltRidge.otf") format("opentype");
-}
-
+} */
+/* 
 @font-face {
   font-family: "TTHovesBold";
   src: url("../../fonts/TT\ Hoves\ Bold.otf") format("opentype");
@@ -238,4 +238,4 @@
   src: url("../../fonts/TT\ Hoves\ Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
-}
+} */

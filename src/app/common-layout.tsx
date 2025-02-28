@@ -12,20 +12,27 @@ import Footer from "@/components/ui/footer/footer";
 import renderSvg from "@/svgImport";
 import FloatingWhatsApp from "@/components/ui/common/floating-whatsapp";
 import Image from "next/image";
+import { useRouter } from 'next/navigation';
 
 const ClientLayout = ({ children }: { children: React.ReactNode }) => {
+  const router = useRouter();
+  
+  useEffect(() => {
+    // Prefetch important routes
+    router.prefetch('/home');
+    router.prefetch('/products');
+    router.prefetch('/partner');
+  }, [router]);
   const NavBarItems = [
     { name: "Our Products", link: "/products", id: "products" },
     { name: "The Partner Program", link: "/partner", id: "partner" },
   ];
-
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   };
-
   const handleLinkClick = (
     event: React.MouseEvent<HTMLAnchorElement>,
     link: string
