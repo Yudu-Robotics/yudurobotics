@@ -160,7 +160,7 @@ export const products = [
     name: "TED",
     description:
       "TED is your all-in-one buddy, packed and ready to jump into action whenever you are.",
-    image: "/assets/roboki/Ted8.png",
+    image: "/assets/roboki/Ted8.webp",
     category: "Codable",
     type: "Hardware",
     ageGroup: "9-12",
@@ -175,7 +175,7 @@ export const products = [
     name: "AI-1",
     description:
       "An intelligent camera powered by AI for dynamic object detection, tracking, and insights.",
-    image: "/assets/roboki/AI-I-8.png",
+    image: "/assets/roboki/AI-I-8.webp",
     category: "Codable",
     type: "Hardware",
     ageGroup: "9-12",
@@ -185,7 +185,7 @@ export const products = [
     name: "Roboki",
     description:
       "A durable and upgradable kit packed with everything you need to build, learn and explore robotics.",
-    image: "/assets/roboki/roboki8.png",
+    image: "/assets/roboki/roboki8.webp",
     category: "Codable",
     type: "Hardware",
     ageGroup: "9-12",
@@ -200,7 +200,7 @@ export const products = [
     name: "Toki",
     description:
       "Affordable alternative to Arduino, offering superior customization options and advanced capabilities to unleash your creativity.",
-    image: "/assets/roboki/Toki8.png",
+    image: "/assets/roboki/Toki8.webp",
     category: "Codable",
     type: "Hardware",
     ageGroup: "9-12",
@@ -231,7 +231,7 @@ export const products = [
     name: "Plode",
     description:
       "The one-stop-shop to interact with your devices and learn more about robotics and logic.",
-    image: "/assets/roboki/Plode0.png",
+    image: "/assets/roboki/Plode0.webp",
     category: "Software",
     type: "Software",
     ageGroup: "12+",
@@ -241,7 +241,7 @@ export const products = [
     name: "Play Trons",
     description:
       "Big Ideas for Little Hands ! This beginner-friendly kit introduces kids to electronics with plug-and-play modules for endless creative projects.",
-    image: "/assets/roboki/Playtrons6.png",
+    image: "/assets/roboki/Playtrons6.webp",
     category: "Electronics",
     type: "Hardware",
     ageGroup: "Age 5-8",
@@ -256,7 +256,7 @@ export const products = [
     name: "Zing",
     description:
       "Advanced humanoid robot designed for interactive learning, companionship, and play.",
-    image: "/assets/zing/zing2.png",
+    image: "/assets/zing/zing2.webp",
     category: "Animatronics",
     type: "Hardware",
     ageGroup: "12+",
@@ -272,7 +272,7 @@ export const products = [
     name: "Tinker Bunker",
     description:
       "Experience hands-on learning with engaging courses and projects that inspire creativity and innovation.",
-    image: "/assets/roboki/TinkerBunker0.png",
+    image: "/assets/roboki/TinkerBunker0.webp",
     category: "Curriculum",
     type: "Curriculum",
     ageGroup: "12+",
@@ -293,7 +293,7 @@ export const products = [
     name: "Play Dynamex",
     description:
       "Colorful plastic blocks inspiring creativity, imagination, and hands-on building fun.",
-    image: "/assets/products/Playdynamics1.png",
+    image: "/assets/products/Playdynamics1.webp",
     category: "Mechanical",
     type: "Hardware",
     ageGroup: "9-12",
@@ -308,7 +308,7 @@ export const products = [
     name: "Crawl-e",
     description:
       "A 6-legged marvel with 18 motors which brings the thrill of robotic exploration to life.",
-    image: "/assets/zing/cral-e.png",
+    image: "/assets/zing/cral-e.webp",
     category: "Animatronics",
     type: "Hardware",
     ageGroup: "12+",
@@ -333,7 +333,7 @@ export const products = [
     name: "Klaw-b",
     description:
       "A versatile robotic arm with a built-in gripper, perfect for hands-on learning and creative projects.",
-    image: "/assets/roboki/Klaw-b10.png",
+    image: "/assets/roboki/Klaw-b10.webp",
     category: "Animatronics",
     type: "Hardware",
     ageGroup: "12+",
@@ -365,7 +365,7 @@ export const mockData: { [key: string]: ProductData } = {
     },
     subheading:
       "Unleash the power of creative robotics. Yudu makes the impossible fun, helping you build, play, and explore with groundbreaking tech.",
-    images: ["/assets/peecee/peecee.png", "/images/home2.jpg"],
+    images: ["/assets/peecee/peecee.webp", "/images/home2.jpg"],
     sectionHeader: "headerSection",
     ceoComment: "",
     ceoName: "",
@@ -376,7 +376,7 @@ export const mockData: { [key: string]: ProductData } = {
         heading: "Ready to Go, Right Out of the Box",
         subheading:
           "PeeCee TED is your all-in-one buddy, packed and ready to jump into action whenever you are.",
-        centerImage: "/assets/peecee/peeceehardware1.png",
+        centerImage: "/assets/peecee/peeceehardware1.webp",
         features: [
           {
             icon: "/assets/peecee/Featured icon.png",
@@ -421,7 +421,7 @@ export const mockData: { [key: string]: ProductData } = {
           heading: "Effortless Experience",
           subheading:
             "Everything about Plode is designed to make your experience smooth, simple, and super fun.",
-          centerImage: "/assets/other/monitor-phone.png",
+          centerImage: "/assets/other/monitor-phone.webp",
           features: [
             {
               icon: "userFriendly",
@@ -454,7 +454,7 @@ export const mockData: { [key: string]: ProductData } = {
       cirriculum: {
         heading: "Feedback and Reflection",
         subheading: "Enhance learning with continuous feedback and reflection.",
-        centerImage: "/assets/other/circulamImage.png",
+        centerImage: "/assets/other/circulamImage.webp",
         features: [
           {
             icon: "checkpoint",
@@ -532,7 +532,10 @@ export const mockData: { [key: string]: ProductData } = {
     },
     subheading:
       "PeeCee TED is your all-in-one buddy, packed and ready to jump into action whenever you are.",
-    images: ["/assets/peecee/peecee.png", "/assets/peecee/peeceehardware1.png"],
+    images: [
+      "/assets/peecee/peecee.webp",
+      "/assets/peecee/peeceehardware1.webp",
+    ],
     sectionHeader: "headerSection",
     ceoComment:
       "PeeCee’s innovative design and seamless plastic building block integration make it a game-changer for our tech projects.",
@@ -544,7 +547,7 @@ export const mockData: { [key: string]: ProductData } = {
         heading: "Ready to Go, Right Out of the Box",
         subheading:
           "PeeCee TED is your all-in-one buddy, packed and ready to jump into action whenever you are.",
-        centerImage: "/assets/peecee/peeceehardware1.png",
+        centerImage: "/assets/peecee/peeceehardware1.webp",
         features: [
           {
             icon: "/assets/peecee/Featured icon.png",
@@ -594,7 +597,7 @@ export const mockData: { [key: string]: ProductData } = {
         heading: "Effortless Connectivity",
         subheading:
           "PeeCee TED is all about making connections easy and fun, so kids can dive right into the world of coding and creativity.",
-        centerImage: "/assets/peecee/peeceehardware2.png",
+        centerImage: "/assets/peecee/peeceehardware2.webp",
         features: [
           {
             icon: "iot",
@@ -631,14 +634,14 @@ export const mockData: { [key: string]: ProductData } = {
         heading: "Team Play!",
         subheading:
           "Got more than one PeeCee TED? Let them chat and collaborate on projects together—because teamwork makes the dream work!",
-        centerImage: "/assets/peecee/peeceehardware3.png",
+        centerImage: "/assets/peecee/peeceehardware3.webp",
       },
       software_experience: [
         {
           heading: "Effortless Experience",
           subheading:
             "Everything about Plode is designed to make your experience smooth, simple, and super fun.",
-          centerImage: "/assets/other/monitor-phone.png",
+          centerImage: "/assets/other/monitor-phone.webp",
           features: [
             {
               icon: "userFriendly",
@@ -671,7 +674,7 @@ export const mockData: { [key: string]: ProductData } = {
       cirriculum: {
         heading: "Feedback and Reflection",
         subheading: "Enhance learning with continuous feedback and reflection.",
-        centerImage: "/assets/other/circulamImage.png",
+        centerImage: "/assets/other/circulamImage.webp",
         features: [
           {
             icon: "checkpoint",
@@ -760,13 +763,13 @@ export const mockData: { [key: string]: ProductData } = {
       heading: "Building Fun",
       subheading:
         "PeeCee TED is best buddies with colourful building block kits, so you can build, expand, and create to your heart’s content.",
-      centerImage: "/assets/other/lego-fun.png",
+      centerImage: "/assets/other/lego-fun.webp",
     },
     futureProff: {
       heading: "Future-Proof with Edge Connectors",
       subheading:
         "As your skills grow, so does PeeCee TED! Expand with edge connector capabilities and take on even bigger challenges.",
-      centerImage: "/assets/peecee/peecee-future.png",
+      centerImage: "/assets/peecee/peecee-future.webp",
     },
     components: {
       shared: ["Navbar", "Footer", "ProductCard"],
@@ -860,7 +863,10 @@ export const mockData: { [key: string]: ProductData } = {
     companyName: "Think Pro Academy",
     subheading:
       "A durable and upgradable kit packed with everything you need to build, learn, and explore robotics. Perfect for kids, hobbyists, and budding engineers alike.",
-    images: ["/assets/roboki/roboki.png", "/assets/roboki/robokihardware1.png"],
+    images: [
+      "/assets/roboki/roboki.webp",
+      "/assets/roboki/robokihardware1.webp",
+    ],
     sectionHeader: "middleHeaderSection",
     ceoComment:
       "Roboki’s seamless integration and flexibility have made learning and creating so much more engaging for our users.",
@@ -869,7 +875,7 @@ export const mockData: { [key: string]: ProductData } = {
         heading: "Ready to Go, Right Out of the Box",
         subheading:
           "Roboki is your go-to companion, always ready to learn, play, and create with you. Whether it's coding or hands-on projects, Roboki is packed with powerful features and endless possibilities.",
-        centerImage: "/assets/roboki/robokihardware1.png",
+        centerImage: "/assets/roboki/robokihardware1.webp",
         features: [
           {
             icon: "/assets/roboki/Featured icon (6).png",
@@ -919,7 +925,7 @@ export const mockData: { [key: string]: ProductData } = {
           heading: "Effortless Experience",
           subheading:
             "Everything about Plode is designed to make your experience smooth, simple, and super fun.",
-          centerImage: "/assets/other/monitor-phone.png",
+          centerImage: "/assets/other/monitor-phone.webp",
           features: [
             {
               icon: "userFriendly",
@@ -952,7 +958,7 @@ export const mockData: { [key: string]: ProductData } = {
       cirriculum: {
         heading: "Feedback and Reflection",
         subheading: "Enhance learning with continuous feedback and reflection.",
-        centerImage: "/assets/other/circulamImage.png",
+        centerImage: "/assets/other/circulamImage.webp",
         features: [
           {
             icon: "checkpoint",
@@ -984,7 +990,7 @@ export const mockData: { [key: string]: ProductData } = {
       heading: "Building Fun",
       subheading:
         "Combine Roboki with colorful building block kits to create fun, interactive projects. Build, code, and bring your ideas to life with endless possibilities.",
-      centerImage: "/assets/other/lego-fun.png",
+      centerImage: "/assets/other/lego-fun.webp",
     },
     components: {
       shared: ["Navbar", "Footer", "ProductCard"],
@@ -1040,7 +1046,7 @@ export const mockData: { [key: string]: ProductData } = {
     companyName: "Think Pro Academy",
     subheading:
       "A 30 cm marvel with 17 degrees of freedom, crafted for endless exploration and creativity.",
-    images: ["/assets/zing/zing.png", "/assets/zing/zinghardware1.png"],
+    images: ["/assets/zing/zing.webp", "/assets/zing/zinghardware1.webp"],
     sectionHeader: "sideHeaderSection",
     ceoComment:
       "Zing’s lifelike movements and intuitive controls have redefined interactive robotics for our team.",
@@ -1049,7 +1055,7 @@ export const mockData: { [key: string]: ProductData } = {
         heading: "Ready to Go, Right Out of the Box",
         subheading:
           "Zing is your ultimate robotic companion, ready to engage and entertain whenever you are. With advanced features and lifelike movement, Zing brings your ideas to life with ease.",
-        centerImage: "/assets/zing/zinghardware1.png",
+        centerImage: "/assets/zing/zinghardware1.webp",
         features: [
           {
             icon: "/assets/zing/Featured icon (12).png",
@@ -1099,7 +1105,7 @@ export const mockData: { [key: string]: ProductData } = {
           heading: "Effortless Experience",
           subheading:
             "Everything about Plode is designed to make your experience smooth, simple, and super fun.",
-          centerImage: "/assets/other/monitor-phone.png",
+          centerImage: "/assets/other/monitor-phone.webp",
           features: [
             {
               icon: "userFriendly",
@@ -1132,7 +1138,7 @@ export const mockData: { [key: string]: ProductData } = {
       cirriculum: {
         heading: "Feedback and Reflection",
         subheading: "Enhance learning with continuous feedback and reflection.",
-        centerImage: "/assets/other/circulamImage.png",
+        centerImage: "/assets/other/circulamImage.webp",
         features: [
           {
             icon: "checkpoint",
@@ -1164,13 +1170,13 @@ export const mockData: { [key: string]: ProductData } = {
       subheading:
         "Connect Zing to the Plode app to program lifelike movements and interactive behaviors. Easily control its actions with user-friendly coding tools.",
       section1: {
-        image: "/assets/zing/zingwork.png",
+        image: "/assets/zing/zingwork.webp",
         heading: "Explore & Create",
         description:
           "Dive into projects and experiments, expanding your robotics skills with Zing.",
       },
       section2: {
-        image: "/assets/zing/zing-plode.png",
+        image: "/assets/zing/zing-plode.webp",
         heading: "Program with Plode",
         description:
           "Easy-to-use software lets you program actions by moving motors and capturing movements.",
@@ -1230,7 +1236,7 @@ export const mockData: { [key: string]: ProductData } = {
     companyName: "Magnum School Solutions",
     subheading:
       "This 6-legged marvel with 18 motors brings the thrill of robotic exploration to life with nimble moves and high-tech features.",
-    images: ["/assets/crawle/crawle.png", "/assets/crawle/crawlehard1.png"],
+    images: ["/assets/crawle/crawle.webp", "/assets/crawle/crawlehard1.png"],
     sectionHeader: "middleHeaderSection",
     ceoComment:
       "Crawl-E’s versatile design and reliable performance have been key to our exploration projects.",
@@ -1239,7 +1245,7 @@ export const mockData: { [key: string]: ProductData } = {
         heading: "Ready to Go, Right Out of the Box",
         subheading:
           "Crawl-E is your versatile hexapod explorer, designed to tackle diverse terrains with ease. Its six-legged movement ensures stability and adaptability, making every adventure exciting and dynamic.",
-        centerImage: "/assets/crawle/crawlehardware1.png",
+        centerImage: "/assets/crawle/crawlehardware1.webp",
         features: [
           {
             icon: "/assets/zing/Featured icon (12).png",
@@ -1290,7 +1296,7 @@ export const mockData: { [key: string]: ProductData } = {
           heading: "Effortless Experience",
           subheading:
             "Everything about Plode is designed to make your experience smooth, simple, and super fun.",
-          centerImage: "/assets/other/monitor-phone.png",
+          centerImage: "/assets/other/monitor-phone.webp",
           features: [
             {
               icon: "userFriendly",
@@ -1323,7 +1329,7 @@ export const mockData: { [key: string]: ProductData } = {
       cirriculum: {
         heading: "Feedback and Reflection",
         subheading: "Enhance learning with continuous feedback and reflection.",
-        centerImage: "/assets/other/circulamImage.png",
+        centerImage: "/assets/other/circulamImage.webp",
         features: [
           {
             icon: "checkpoint",
@@ -1355,13 +1361,13 @@ export const mockData: { [key: string]: ProductData } = {
       subheading:
         "Pair Crawl-e with the Plode app for seamless navigation across any terrain. Customize its movements and exploration patterns with simple coding features.",
       section1: {
-        image: "/assets/crawle/crawle-work.png",
+        image: "/assets/crawle/crawle-work.webp",
         heading: "Explore & Create",
         description:
           "Dive into projects and experiments, expanding your robotics skills with Crawl-e.",
       },
       section2: {
-        image: "/assets/crawle/crawle-plode.png",
+        image: "/assets/crawle/crawle-plode.webp",
         heading: "Program with Plode",
         description:
           "Easy-to-use software lets you program actions by moving motors and capturing movements.",
@@ -1421,7 +1427,7 @@ export const mockData: { [key: string]: ProductData } = {
     companyName: "Dabotics India Pvt Ltd",
     subheading:
       "A versatile robotic arm with a built-in gripper, perfect for hands-on learning and creative projects. Control it manually or program its movements with ease.",
-    images: ["/assets/klawb/klawb.png", "/assets/klawb/klawbhardware1.png"],
+    images: ["/assets/klawb/klawb.webp", "/assets/klawb/klawbhardware1.webp"],
     sectionHeader: "headerSection",
     ceoComment:
       "Klaw-b’s accuracy and ease of use have made it an essential tool in our automation process.",
@@ -1430,7 +1436,7 @@ export const mockData: { [key: string]: ProductData } = {
         heading: "Ready to Go, Right Out of the Box",
         subheading:
           "Klaw-b is your precision robotic arm, engineered for accuracy and flexibility. With its advanced mechanics, Klaw-b handles intricate tasks effortlessly, making it ideal for both complex projects and hands-on experiments.",
-        centerImage: "/assets/klawb/klawbhardware1.png",
+        centerImage: "/assets/klawb/klawbhardware1.webp",
         features: [
           {
             icon: "/assets/klawb/Featured icon (24).png",
@@ -1473,7 +1479,7 @@ export const mockData: { [key: string]: ProductData } = {
         heading: "Precision Redefined",
         subheading:
           "With advanced mechanics and flexible reach, Klaw-b handles complex tasks effortlessly. Its robust build ensures reliable performance, while intuitive controls make integration seamless.",
-        centerImage: "/assets/klawb/klaw-2.png",
+        centerImage: "/assets/klawb/klaw-2.webp",
         features: [
           {
             icon: "strong",
@@ -1506,7 +1512,7 @@ export const mockData: { [key: string]: ProductData } = {
           heading: "Effortless Experience",
           subheading:
             "Everything about Plode is designed to make your experience smooth, simple, and super fun.",
-          centerImage: "/assets/other/monitor-phone.png",
+          centerImage: "/assets/other/monitor-phone.webp",
           features: [
             {
               icon: "userFriendly",
@@ -1539,7 +1545,7 @@ export const mockData: { [key: string]: ProductData } = {
       cirriculum: {
         heading: "Feedback and Reflection",
         subheading: "Enhance learning with continuous feedback and reflection.",
-        centerImage: "/assets/other/circulamImage.png",
+        centerImage: "/assets/other/circulamImage.webp",
         features: [
           {
             icon: "checkpoint",
@@ -1571,13 +1577,13 @@ export const mockData: { [key: string]: ProductData } = {
       subheading:
         "Link Klaw-b to the Plode app for precise control over tasks and automation. Program its movements and operations effortlessly with intuitive coding.",
       section1: {
-        image: "/assets/klawb/klawb-work.png",
+        image: "/assets/klawb/klawb-work.webp",
         heading: "Explore & Create",
         description:
           "Dive into projects and experiments, expanding your robotics skills with Zing.",
       },
       section2: {
-        image: "/assets/klawb/klawb-plode.png",
+        image: "/assets/klawb/klawb-plode.webp",
         heading: "Program with Plode",
         description:
           "Easy-to-use software lets you program actions by moving motors and capturing movements.",
@@ -1639,7 +1645,7 @@ export const mockData: { [key: string]: ProductData } = {
     subheading:
       "The one-stop-shop to interact with your devices and learn more about coding and robotics. Play with your device or write a creative code of your own.",
     images: [
-      "/assets/plode/plodeHomeImg.png",
+      "/assets/plode/plodeHomeImg.webp",
       "/assets/crawle/crawlehard1.png",
     ],
     sectionHeader: "headerSection",
@@ -1650,7 +1656,7 @@ export const mockData: { [key: string]: ProductData } = {
         heading: "Data Mode - Explore, Measure, and Visualise",
         subheading:
           "Plode’s Data Mode provides a powerful way to monitor, measure, and visualise data from both internal sensors and external accessories. Tailored to your kit’s capabilities, it offers a seamless step-by-step setup for precise data capture and analysis.",
-        centerImage: "/assets/crawle/crawlehardware1.png",
+        centerImage: "/assets/crawle/crawlehardware1.webp",
         features: [
           {
             icon: "/assets/partner/icon/selector.png",
@@ -1689,7 +1695,7 @@ export const mockData: { [key: string]: ProductData } = {
           heading: "Dynamic Play Mode - Tailored to Your Kit",
           subheading:
             "With Plode, the Play mode adapts to the unique features of each kit, delivering an intuitive and interactive experience. No coding required—just one-tap actions designed for seamless control and fun exploration.",
-          centerImage: "/assets/other/imagePlaceholder2.png",
+          centerImage: "/assets/other/imagePlaceholder2.webp",
           features: [
             {
               icon: "userFriendly",
@@ -1722,7 +1728,7 @@ export const mockData: { [key: string]: ProductData } = {
           heading: "App Mode - Smart Control with Minimal Coding",
           subheading:
             "Enable smart features through the app and design custom logic to control the kit with your phone.",
-          centerImage: "/assets/other/imagePlaceholder2.png",
+          centerImage: "/assets/other/imagePlaceholder2.webp",
           features: [
             {
               icon: "userFriendly",
@@ -1756,7 +1762,7 @@ export const mockData: { [key: string]: ProductData } = {
             "Block-Based Programming - Play with Logic, Master the Basics",
           subheading:
             "In block-based programming, users assemble pre-defined code blocks that connect like puzzle pieces. It’s a fun and intuitive way to learn the fundamentals of coding.",
-          centerImage: "/assets/other/imagePlaceholder2.png",
+          centerImage: "/assets/other/imagePlaceholder2.webp",
           features: [
             {
               icon: "userFriendly",
@@ -1783,7 +1789,7 @@ export const mockData: { [key: string]: ProductData } = {
           heading: "Python Programming - Simple Syntax, Powerful Control",
           subheading:
             "Python programming provides an easy entry point into text-based coding. It’s focused on controlling hardware with accessible syntax and pre-configured libraries.",
-          centerImage: "/assets/other/imagePlaceholder2.png",
+          centerImage: "/assets/other/imagePlaceholder2.webp",
           features: [
             {
               icon: "userFriendly",
@@ -1810,7 +1816,7 @@ export const mockData: { [key: string]: ProductData } = {
           heading: "Project-Based Programming - Create Real-World Solutions",
           subheading:
             "Take your learning to the next level by building your own projects. With project-based programming, you can design, assemble, and control your hardware, experiencing how ideas take shape through hands-on experimentation.",
-          centerImage: "/assets/other/imagePlaceholder2.png",
+          centerImage: "/assets/other/imagePlaceholder2.webp",
           features: [
             {
               icon: "userFriendly",
@@ -1843,7 +1849,7 @@ export const mockData: { [key: string]: ProductData } = {
       cirriculum: {
         heading: "Feedback and Reflection",
         subheading: "Enhance learning with continuous feedback and reflection.",
-        centerImage: "/assets/other/circulamImage.png",
+        centerImage: "/assets/other/circulamImage.webp",
         features: [
           {
             icon: "checkpoint",
@@ -1875,13 +1881,13 @@ export const mockData: { [key: string]: ProductData } = {
       subheading:
         "Pair Crawl-e with the Plode app for seamless navigation across any terrain. Customize its movements and exploration patterns with simple coding features.",
       section1: {
-        image: "/assets/crawle/crawle-work.png",
+        image: "/assets/crawle/crawle-work.webp",
         heading: "Explore & Create",
         description:
           "Dive into projects and experiments, expanding your robotics skills with Crawl-e.",
       },
       section2: {
-        image: "/assets/crawle/crawle-plode.png",
+        image: "/assets/crawle/crawle-plode.webp",
         heading: "Program with Plode",
         description:
           "Easy-to-use software lets you program actions by moving motors and capturing movements.",
@@ -2079,7 +2085,7 @@ export const mockData: { [key: string]: ProductData } = {
     subheading:
       "The one-stop-shop to interact with your devices and learn more about coding and robotics. Play with your device or write a creative code of your own.",
     images: [
-      "/assets/plode/plodeHomeImg.png",
+      "/assets/plode/plodeHomeImg.webp",
       "/assets/crawle/crawlehard1.png",
     ],
     sectionHeader: "headerSection",
@@ -2090,7 +2096,7 @@ export const mockData: { [key: string]: ProductData } = {
         heading: "Data Mode - Explore, Measure, and Visualise",
         subheading:
           "Plode’s Data Mode provides a powerful way to monitor, measure, and visualise data from both internal sensors and external accessories. Tailored to your kit’s capabilities, it offers a seamless step-by-step setup for precise data capture and analysis.",
-        centerImage: "/assets/crawle/crawlehardware1.png",
+        centerImage: "/assets/crawle/crawlehardware1.webp",
         features: [
           {
             icon: "/assets/partner/icon/selector.png",
@@ -2129,7 +2135,7 @@ export const mockData: { [key: string]: ProductData } = {
           heading: "Dynamic Play Mode - Tailored to Your Kit",
           subheading:
             "With Plode, the Play mode adapts to the unique features of each kit, delivering an intuitive and interactive experience. No coding required—just one-tap actions designed for seamless control and fun exploration.",
-          centerImage: "/assets/other/imagePlaceholder2.png",
+          centerImage: "/assets/other/imagePlaceholder2.webp",
           features: [
             {
               icon: "userFriendly",
@@ -2162,7 +2168,7 @@ export const mockData: { [key: string]: ProductData } = {
           heading: "App Mode - Smart Control with Minimal Coding",
           subheading:
             "Enable smart features through the app and design custom logic to control the kit with your phone.",
-          centerImage: "/assets/other/imagePlaceholder2.png",
+          centerImage: "/assets/other/imagePlaceholder2.webp",
           features: [
             {
               icon: "userFriendly",
@@ -2196,7 +2202,7 @@ export const mockData: { [key: string]: ProductData } = {
             "Block-Based Programming - Play with Logic, Master the Basics",
           subheading:
             "In block-based programming, users assemble pre-defined code blocks that connect like puzzle pieces. It’s a fun and intuitive way to learn the fundamentals of coding.",
-          centerImage: "/assets/other/imagePlaceholder2.png",
+          centerImage: "/assets/other/imagePlaceholder2.webp",
           features: [
             {
               icon: "userFriendly",
@@ -2223,7 +2229,7 @@ export const mockData: { [key: string]: ProductData } = {
           heading: "Python Programming - Simple Syntax, Powerful Control",
           subheading:
             "Python programming provides an easy entry point into text-based coding. It’s focused on controlling hardware with accessible syntax and pre-configured libraries.",
-          centerImage: "/assets/other/imagePlaceholder2.png",
+          centerImage: "/assets/other/imagePlaceholder2.webp",
           features: [
             {
               icon: "userFriendly",
@@ -2250,7 +2256,7 @@ export const mockData: { [key: string]: ProductData } = {
           heading: "Project-Based Programming - Create Real-World Solutions",
           subheading:
             "Take your learning to the next level by building your own projects. With project-based programming, you can design, assemble, and control your hardware, experiencing how ideas take shape through hands-on experimentation.",
-          centerImage: "/assets/other/imagePlaceholder2.png",
+          centerImage: "/assets/other/imagePlaceholder2.webp",
           features: [
             {
               icon: "userFriendly",
@@ -2283,7 +2289,7 @@ export const mockData: { [key: string]: ProductData } = {
       cirriculum: {
         heading: "Feedback and Reflection",
         subheading: "Enhance learning with continuous feedback and reflection.",
-        centerImage: "/assets/other/circulamImage.png",
+        centerImage: "/assets/other/circulamImage.webp",
         features: [
           {
             icon: "checkpoint",
@@ -2374,7 +2380,7 @@ export const blogData: BlogData = [
     title: "UX review presentations",
     description:
       "How do you create compelling presentations that wow your colleagues and impress your managers?",
-    image: "/assets/blog/Image1.png",
+    image: "/assets/blog/Image1.webp",
     content:
       "Artificial Intelligence (AI) has become a key player in shaping the future of technology. From self-driving cars to intelligent personal assistants, AI is pushing the boundaries of what machines can do...",
     topic: "Technology",
@@ -2390,7 +2396,7 @@ export const blogData: BlogData = [
     title: "Migrating to Linear 101",
     description:
       "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get started.",
-    image: "/assets/blog/image2.png",
+    image: "/assets/blog/Image2.webp",
     content:
       "Sustainable living is not just a trend; it's a necessity. By making small, conscious changes in our daily lives, we can significantly reduce our carbon footprint and help protect the environment...",
     topic: "Lifestyle",
@@ -2406,7 +2412,7 @@ export const blogData: BlogData = [
     title: "Mastering JavaScript: A Beginner's Guide",
     description:
       "Everything you need to know to get started with JavaScript. Everything you need to know to get started with JavaScript.Everything you need to know to get started with JavaScript.Everything you need to know to get started with JavaScript.Everything you need to know to get started with JavaScript.Everything you need to know to get started with JavaScript.",
-    image: "/assets/blog/image2.png",
+    image: "/assets/blog/Image2.webp",
     content:
       "JavaScript is a powerful and versatile language that every web developer should master. In this guide, we'll cover the basics of JavaScript and provide tips on how to become proficient in the language...",
     topic: "Programming",
@@ -2422,7 +2428,7 @@ export const blogData: BlogData = [
     title: "Migrating to Linear 101",
     description:
       "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get started.",
-    image: "/assets/blog/image2.png",
+    image: "/assets/blog/Image2.webp",
     content:
       "Sustainable living is not just a trend; it's a necessity. By making small, conscious changes in our daily lives, we can significantly reduce our carbon footprint and help protect the environment...",
     topic: "Lifestyle",
@@ -2438,7 +2444,7 @@ export const blogData: BlogData = [
     title: "Mastering JavaScript: A Beginner's Guide",
     description:
       "Everything you need to know to get started with JavaScript. Everything you need to know to get started with JavaScript.Everything you need to know to get started with JavaScript.Everything you need to know to get started with JavaScript.Everything you need to know to get started with JavaScript.Everything you need to know to get started with JavaScript.",
-    image: "/assets/blog/image2.png",
+    image: "/assets/blog/Image2.webp",
     content:
       "JavaScript is a powerful and versatile language that every web developer should master. In this guide, we'll cover the basics of JavaScript and provide tips on how to become proficient in the language...",
     topic: "Programming",
@@ -2454,7 +2460,7 @@ export const blogData: BlogData = [
     title: "Migrating to Linear 101",
     description:
       "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get started.",
-    image: "/assets/blog/image2.png",
+    image: "/assets/blog/Image2.webp",
     content:
       "Sustainable living is not just a trend; it's a necessity. By making small, conscious changes in our daily lives, we can significantly reduce our carbon footprint and help protect the environment...",
     topic: "Lifestyle",
@@ -2470,7 +2476,7 @@ export const blogData: BlogData = [
     title: "Mastering JavaScript: A Beginner's Guide",
     description:
       "Everything you need to know to get started with JavaScript. Everything you need to know to get started with JavaScript.Everything you need to know to get started with JavaScript.Everything you need to know to get started with JavaScript.Everything you need to know to get started with JavaScript.Everything you need to know to get started with JavaScript.",
-    image: "/assets/blog/image2.png",
+    image: "/assets/blog/Image2.webp",
     content:
       "JavaScript is a powerful and versatile language that every web developer should master. In this guide, we'll cover the basics of JavaScript and provide tips on how to become proficient in the language...",
     topic: "Programming",
@@ -2486,7 +2492,7 @@ export const blogData: BlogData = [
     title: "Migrating to Linear 101",
     description:
       "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get started.",
-    image: "/assets/blog/image2.png",
+    image: "/assets/blog/Image2.webp",
     content:
       "Sustainable living is not just a trend; it's a necessity. By making small, conscious changes in our daily lives, we can significantly reduce our carbon footprint and help protect the environment...",
     topic: "Lifestyle",
@@ -2502,7 +2508,7 @@ export const blogData: BlogData = [
     title: "Mastering JavaScript: A Beginner's Guide",
     description:
       "Everything you need to know to get started with JavaScript. Everything you need to know to get started with JavaScript.Everything you need to know to get started with JavaScript.Everything you need to know to get started with JavaScript.Everything you need to know to get started with JavaScript.Everything you need to know to get started with JavaScript.",
-    image: "/assets/blog/image2.png",
+    image: "/assets/blog/Image2.webp",
     content:
       "JavaScript is a powerful and versatile language that every web developer should master. In this guide, we'll cover the basics of JavaScript and provide tips on how to become proficient in the language...",
     topic: "Programming",
@@ -2518,7 +2524,7 @@ export const blogData: BlogData = [
     title: "Migrating to Linear 101",
     description:
       "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get started.",
-    image: "/assets/blog/image2.png",
+    image: "/assets/blog/Image2.webp",
     content:
       "Sustainable living is not just a trend; it's a necessity. By making small, conscious changes in our daily lives, we can significantly reduce our carbon footprint and help protect the environment...",
     topic: "Lifestyle",
@@ -2533,7 +2539,7 @@ export const blogData: BlogData = [
   {
     title: "Mastering JavaScript: A Beginner's Guide",
     description: "Everything you need to know to get started with JavaScript.",
-    image: "/assets/blog/image2.png",
+    image: "/assets/blog/Image2.webp",
     content:
       "JavaScript is a powerful and versatile language that every web developer should master. In this guide, we'll cover the basics of JavaScript and provide tips on how to become proficient in the language...",
     topic: "Programming",
@@ -2549,7 +2555,7 @@ export const blogData: BlogData = [
     title: "Migrating to Linear 101",
     description:
       "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get started.",
-    image: "/assets/blog/image2.png",
+    image: "/assets/blog/Image2.webp",
     content:
       "Sustainable living is not just a trend; it's a necessity. By making small, conscious changes in our daily lives, we can significantly reduce our carbon footprint and help protect the environment...",
     topic: "Lifestyle",
@@ -2564,7 +2570,7 @@ export const blogData: BlogData = [
   {
     title: "Mastering JavaScript: A Beginner's Guide",
     description: "Everything you need to know to get started with JavaScript.",
-    image: "/assets/blog/image2.png",
+    image: "/assets/blog/Image2.webp",
     content:
       "JavaScript is a powerful and versatile language that every web developer should master. In this guide, we'll cover the basics of JavaScript and provide tips on how to become proficient in the language...",
     topic: "Programming",

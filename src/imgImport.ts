@@ -122,26 +122,26 @@ type ImageName =
 // Image path constants
 const IMAGE_PATHS = {
   // Mobile images
-  crawlem: "/assets/crawle/crawlem.png",
-  robokim: "/assets/roboki/robokim.png",
-  zingm: "/assets/zing/zingm.png",
-  peeceem: "/assets/peecee/peeceem.png",
-  klawbm: "/assets/klawb/klawbm.png",
+  crawlem: "/assets/crawle/crawlem.webp",
+  robokim: "/assets/roboki/robokim.webp",
+  zingm: "/assets/zing/zingm.webp",
+  peeceem: "/assets/peecee/peeceem.webp",
+  klawbm: "/assets/klawb/klawbm.webp",
 
   // Roboki
-  playroboki: "/assets/roboki/playroboki.png",
+  playroboki: "/assets/roboki/playroboki.webp",
 
   // Klawb
-  playklawb: "/assets/klawb/playklawb.png",
+  playklawb: "/assets/klawb/playklawb.webp",
   arrowdown: "/assets/klawb/Hand-drawn.svg",
 
   // Crawle
-  playcrawle: "/assets/crawle/playcrawle.png",
+  playcrawle: "/assets/crawle/playcrawle.webp",
 
   // Basic /assets
   logo: "/assets/Logo.png",
   favicon: "/assets/favicon.png",
-  logoblack: "/assets/logoblack.png",
+  logoblack: "/assets/logoblack.webp",
   good: "/assets/other/good.svg",
   india: "/assets/other/india.svg",
   reddot: "/assets/other/reddot.svg",
@@ -149,8 +149,8 @@ const IMAGE_PATHS = {
 
   // Home
   headerSection: "/assets/other/Section Seperators.svg",
-  footerSection: "/assets/home/FooterSection.png",
-  homeImage: "/assets/home/homeImage.png",
+  footerSection: "/assets/home/FooterSection.webp",
+  homeImage: "/assets/home/homeImage.webp",
   star1: "/assets/home/star1.png",
   star2: "/assets/home/star2.png",
   blurStar: "/assets/home/blurStar.png",
@@ -158,59 +158,59 @@ const IMAGE_PATHS = {
   appStore: "/assets/home/AppStoreBadge.png",
   googlePlay: "/assets/home/GooglePlayBadge.png",
   zigzaginhome: "/assets/home/zigzaginhome.svg",
-  curv: "/assets/home/curv.png",
+  curv: "/assets/home/curv.webp",
   "x-close": "/assets/home/x-close.svg",
 
   // Zing
-  humanoid: "/assets/zing/Humanoid.png",
-  humanoidSmall: "/assets/zing/zingping.png",
-  productBackground: "/assets/zing/productBackground.png",
-  productCrawle: "/assets/zing/productCrawle.png",
-  playzing: "/assets/zing/playzing.png",
+  humanoid: "/assets/zing/Humanoid.webp",
+  humanoidSmall: "/assets/zing/zingping.webp",
+  productBackground: "/assets/zing/productBackground.webp",
+  productCrawle: "/assets/zing/productCrawle.webp",
+  playzing: "/assets/zing/playzing.webp",
 
   // Other
-  arrow: "/assets/other/arrow.png",
+  arrow: "/assets/other/arrow.webp",
   searchIcon: "/assets/other/searchIcon.png",
   arrowUpRight: "/assets/other/arrow-up-right.png",
-  handDrawArrow2: "/assets/other/Hand-drawn-arrow-2.png",
-  iphone: "/assets/other/iPhone.png",
-  monitorAndPhone: "/assets/other/monitor-phone.png",
-  imagePlaceholder: "/assets/other/imagePlaceholder.png",
-  imagePlaceholder2: "/assets/other/imagePlaceholder2.png",
+  handDrawArrow2: "/assets/other/Hand-drawn-arrow-2.webp",
+  iphone: "/assets/other/iPhone.webp",
+  monitorAndPhone: "/assets/other/monitor-phone.webp",
+  imagePlaceholder: "/assets/other/imagePlaceholder.webp",
+  imagePlaceholder2: "/assets/other/imagePlaceholder2.webp",
   stars: "/assets/other/Stars.png",
-  girls: "/assets/other/girls.png",
-  macbook: "/assets/other/macbook.png",
-  videoPlayer: "/assets/other/video-player.png",
-  testimonial: "/assets/other/testimonial.png",
-  aimodel: "/assets/other/aimodel.png",
-  fivecoding: "/assets/other/fivecoding.png",
-  threestep: "/assets/other/threestep.png",
+  girls: "/assets/other/girls.webp",
+  macbook: "/assets/other/macbook.webp",
+  videoPlayer: "/assets/other/video-player.webp",
+  testimonial: "/assets/other/testimonial.webp",
+  aimodel: "/assets/other/aimodel.webp",
+  fivecoding: "/assets/other/fivecoding.webp",
+  threestep: "/assets/other/threestep.webp",
   search: "/assets/icons/search-lg.png",
 
   // Peecee
-  peecee: "/assets/peecee/peecee.png",
+  peecee: "/assets/peecee/peecee.webp",
   avatar: "/assets/peecee/Avatar.png",
-  profileImage: "/assets/peecee/profileImage.png",
-  handArrow: "/assets/peecee/hand-arrow.png",
-  playpeecee: "/assets/peecee/playpeecee.png",
+  profileImage: "/assets/peecee/profileImage.webp",
+  handArrow: "/assets/peecee/hand-arrow.webp",
+  playpeecee: "/assets/peecee/playpeecee.webp",
 
   // Testimonial
-  bannerImg1: "/assets/testimonial/Mask group.png",
-  bannerImg2: "/assets/testimonial/Mask group (1).png",
-  bannerImg3: "/assets/testimonial/Mask group (2).png",
-  bannerImg4: "/assets/testimonial/Mask group (3).png",
-  bannerImg5: "/assets/testimonial/Mask group (4).png",
-  bannerImg6: "/assets/testimonial/Mask group (5).png",
-  bg1: "/assets/testimonial/bg-featured product.png",
-  bg2: "/assets/testimonial/bg-featured product (1).png",
-  bg3: "/assets/testimonial/bg-featured product (2).png",
-  bg4: "/assets/testimonial/bg-featured product (3).png",
-  bg5: "/assets/testimonial/bg-featured product (4).png",
-  bg6: "/assets/testimonial/bg-featured product (5).png",
-  bg7: "/assets/testimonial/bg-featured product (6).png",
+  bannerImg1: "/assets/testimonial/Mask group.webp",
+  bannerImg2: "/assets/testimonial/Mask group (1).webp",
+  bannerImg3: "/assets/testimonial/Mask group (2).webp",
+  bannerImg4: "/assets/testimonial/Mask group (3).webp",
+  bannerImg5: "/assets/testimonial/Mask group (4).webp",
+  bannerImg6: "/assets/testimonial/Mask group (5).webp",
+  bg1: "/assets/testimonial/bg-featured product.webp",
+  bg2: "/assets/testimonial/bg-featured product (1).webp",
+  bg3: "/assets/testimonial/bg-featured product (2).webp",
+  bg4: "/assets/testimonial/bg-featured product (3).webp",
+  bg5: "/assets/testimonial/bg-featured product (4).webp",
+  bg6: "/assets/testimonial/bg-featured product (5).webp",
+  bg7: "/assets/testimonial/bg-featured product (6).webp",
 
   // Partner
-  play: "/assets/partner/playbutton.png",
+  play: "/assets/partner/playbutton.webp",
   arrow1: "/assets/partner/arrow.svg",
   Icon: "/assets/partner/Icon.svg",
   peace: "/assets/partner/peace.svg",
@@ -227,7 +227,7 @@ const IMAGE_PATHS = {
   afterw: "/assets/partner/afterw.svg",
 
   // Plode
-  plodeHomeImg: "/assets/plode/plodeHomeImg.png",
+  plodeHomeImg: "/assets/plode/plodeHomeImg.webp",
   zigzag: "/assets/plode/zigzag.svg",
   uparrow: "/assets/plode/uparrow.svg",
   fixable: "/assets/plode/fixable.svg",
@@ -239,20 +239,20 @@ const IMAGE_PATHS = {
   playstore: "/assets/plode/playstore.png",
 
   // Not Found
-  notFound: "/assets/notFound.png",
+  notFound: "/assets/notFound.webp",
   playtrons: "/assets/playtrons.png",
 
   // Footer
   madeInIndia: "/assets/madeInIndia.svg",
 
   // Mobile menu
-  ted8: "/assets/roboki/Ted8.png",
-  toy: "/assets/other/playdynamex1.png",
-  Crawle1: "/assets/other/Crawle1.png",
-  Zing1: "/assets/other/Zing1.png",
-  Roboki1: "/assets/roboki/roboki8.png",
-  AIIII: "/assets/roboki/AI-I-8.png",
-  Toki0: "/assets/roboki/Toki8.png",
+  ted8: "/assets/roboki/Ted8.webp",
+  toy: "/assets/other/playdynamex1.webp",
+  Crawle1: "/assets/other/Crawle1.webp",
+  Zing1: "/assets/other/Zing1.webp",
+  Roboki1: "/assets/roboki/roboki8.webp",
+  AIIII: "/assets/roboki/AI-I-8.webp",
+  Toki0: "/assets/roboki/Toki8.webp",
 } as const;
 
 /**

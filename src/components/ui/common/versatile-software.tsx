@@ -30,17 +30,17 @@ const VersatileSoftware: React.FC<SoftwareAdaptiveProps> = ({
   }
   const features = [
     {
-      image: "assets/other/threestep.png",
+      image: "assets/other/threestep.webp",
       title: "3-Step Programming",
       desc: "Coding is as easy as Select, Assemble, and Code. Perfect for first-timers, this approach makes building projects feel like child’s play.",
     },
     {
-      image: "assets/other/fivecoding.png",
+      image: "assets/other/fivecoding.webp",
       title: "5 Coding Styles",
       desc: "3 visual modes (Hexa Programming, Flowchart, Scratch-style) or go pro with C and Python scripts.",
     },
     {
-      image: "assets/other/aimodel.png",
+      image: "assets/other/aimodel.webp",
       title: "AI Mode & App Mode",
       desc: "Just speak and code, or create apps that control your physical projects—Plode makes it all possible.",
     },

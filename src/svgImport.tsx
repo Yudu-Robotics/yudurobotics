@@ -2803,7 +2803,7 @@ const floatingWhatsApp = (
     <Image
       width={50}
       height={50}
-      src="/assets/floatingWhatsApp.png"
+      src="/assets/floatingWhatsApp.webp"
       className="object-contain h-16 float-end w-12"
       alt="Floating WhatsApp"
     />

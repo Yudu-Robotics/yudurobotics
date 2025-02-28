@@ -49,7 +49,7 @@ function FlexibleLearning({
             </div> */}
           </div>
           <div className="w-full  flex justify-center items-center p-4">
-            <img src="assets/peecee/gril.png" alt="" />
+            <img src="assets/peecee/gril.webp" alt="" />
           </div>
         </div>
       </div>
