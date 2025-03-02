@@ -135,7 +135,7 @@ export default function Plode() {
           robotics journey to life with effortless, hands-on fun.
         </p>
       </div>
-      <div className="px-4 sm:px-12 lg:px-28  text-black py-5 lg:py-10">
+      <div className="px-4 md:px-12 lg:px-16 text-black py-5 lg:py-10 xl:px-28 ">
         <div className="py-8 lg:py-16">
           <ProductCeoReviewsContainer comment={data} />
         </div>
@@ -277,7 +277,7 @@ export default function Plode() {
             desc="Plode’s Code Mode offers a complete learning experience, from drag-and-drop assembly to advanced coding in Python and C. Whether you’re building your first project or perfecting a complex solution, our tools are designed to make learning programming fun, engaging, and rewarding."
           />
         </div>
-        <div className="-mx-8 lg:-mx-28">
+        <div className="w-screen -mx-4 md:-mx-12 lg:-mx-16 xl:-mx-28">
           <TestimonialBanner />
         </div>
         <div className="py-5 lg:py-20">

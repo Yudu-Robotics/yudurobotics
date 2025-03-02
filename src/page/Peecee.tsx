@@ -120,7 +120,7 @@ export default function Peecee() {
         {/* <img src={renderImg("headerSection")} className="w-full" /> */}
         {/* {renderSvg(data.sectionHeader)} */}
       </div>
-      <div className="px-8 lg:px-28 text-black py-5 lg:py-10 ">
+      <div className="px-4 md:px-12 lg:px-16 text-black py-5 lg:py-10 xl:px-28 ">
         <div className="py-5 lg:py-10">
           <AnimatedContent
             distance={150}
@@ -424,7 +424,7 @@ export default function Peecee() {
             desc="Explore our comprehensive curriculum designed to make coding and robotics accessible and exciting. Get started with structured lessons and hands-on projects today!"
           />
         </div> */}
-        <div className="-mx-8 lg:-mx-28">
+        <div className="w-screen -mx-4 md:-mx-12 lg:-mx-16 xl:-mx-28">
           <AnimatedContent
             distance={150}
             direction="vertical"
