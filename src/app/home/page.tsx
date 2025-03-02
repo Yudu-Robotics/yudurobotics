@@ -78,14 +78,14 @@ export default async function HomePage() {
               {/* Main Headline */}
               <div className="font-cobaltRidge w-full text-wrap text-4xl md:text-6xl lg:text-7xl text-primary-foreground text-center md:text-left  md:w-[95%] leading-8">
                 {/* <FlipText className="text-4xl font-bold -tracking-widest text-black dark:text-white md:text-7xl md:leading-[5rem]"> */}
-                <TextGenerateEffect
+                {/* <TextGenerateEffect
                   duration={0.4}
-                  words={highlightWords(
-                    data.heading,
-                    data.wordsToHighlight.text1,
-                    "text-destructive"
-                  )}
-                />
+                  words= /> */}
+                {highlightWords(
+                  data.heading,
+                  data.wordsToHighlight.text1,
+                  "text-destructive"
+                )}
 
                 {/* </FlipText> */}
 

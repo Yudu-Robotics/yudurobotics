@@ -179,7 +179,7 @@ const AllProductsComponent = () => {
             product.link && product.link !== "#" ? (
               <AnimatedContent
                 key={product.name}
-                delay={i * 100}
+                // delay={i * 100}
                 distance={150}
                 direction="vertical"
                 reverse={false}
@@ -198,7 +198,7 @@ const AllProductsComponent = () => {
               <div key={product.name} className="cursor-pointer">
                 <AnimatedContent
                   key={product.name}
-                  delay={i * 100}
+                  // delay={i * 100}
                   distance={150}
                   direction="vertical"
                   reverse={false}
