@@ -203,7 +203,7 @@ export default async function HomePage() {
             <ProductCategories />
           </AnimatedContent>
         </div>
-        <div className="-mx-8 lg:-mx-28">
+        <div className="w-screen -mx-4 md:-mx-12 lg:-mx-16 xl:-mx-28">
           <AnimatedContent
             distance={150}
             direction="horizontal"

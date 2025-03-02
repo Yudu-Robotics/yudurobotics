@@ -12,6 +12,47 @@ import FloatingWhatsApp from "@/components/ui/common/floating-whatsapp";
 import renderImg from "@/imgImport";
 import type { ImageName } from "@/imgImport";
 import Image from "next/image";
+import localFont from "next/font/local";
+
+const cobaltRidge = localFont({
+  src: "./../../../fonts/CobaltRidge.otf",
+  variable: "--font-cobalt",
+  display: "swap",
+  preload: true,
+  fallback: ["system-ui", "sans-serif"],
+});
+
+const ttHovesRegular = localFont({
+  src: "./../../../fonts/TT Hoves Regular.otf",
+  variable: "--font-tthoves-regular",
+  display: "swap",
+  preload: true,
+  fallback: ["system-ui", "sans-serif"],
+});
+
+const ttHovesMedium = localFont({
+  src: "./../../../fonts/TT Hoves Medium.otf",
+  variable: "--font-tthoves-medium",
+  display: "swap",
+  preload: true,
+  fallback: ["system-ui", "sans-serif"],
+});
+
+const ttHovesDemiBold = localFont({
+  src: "./../../../fonts/TT Hoves DemiBold.otf",
+  variable: "--font-tthoves-demibold",
+  display: "swap",
+  preload: true,
+  fallback: ["system-ui", "sans-serif"],
+});
+
+const ttHovesBold = localFont({
+  src: "./../../../fonts/TT Hoves Bold.otf",
+  variable: "--font-tthoves-bold",
+  display: "swap",
+  preload: true,
+  fallback: ["system-ui", "sans-serif"],
+});
 
 export default function ProductLayout({
   children,
@@ -329,7 +370,13 @@ export default function ProductLayout({
 
   return (
     <html lang="en">
-      <body className={currentProduct == "klaw_b" ? "klaw" : currentProduct}>
+      <body
+        className={`${currentProduct === "klaw_b" ? "klaw" : currentProduct} ${
+          cobaltRidge.variable
+        } ${ttHovesRegular.variable} ${ttHovesMedium.variable} ${
+          ttHovesDemiBold.variable
+        } ${ttHovesBold.variable}`}
+      >
         <div className="overflow-x-hidden ">
           <div className="fixed w-full top-0 left-0 h-[75px] z-50">
             <div className="px-8 lg:px-28 py-4 bg-primary">
@@ -386,6 +433,7 @@ export default function ProductLayout({
           <FloatingWhatsApp />
           {showScrollToTop && (
             <button
+              type="button"
               onClick={scrollToTop}
               className="fixed bottom-0 right-4  z-40  text-white p-3 rounded-full shadow-lg transition-all "
               title="Scroll to top"

@@ -108,6 +108,7 @@ export default function Peecee() {
               className="w-full"
               style={{ marginTop: "-9%" }}
               alt="Example"
+              priority
             />
           </div>
         </AnimatedContent>
@@ -117,7 +118,7 @@ export default function Peecee() {
       </div>
       <div className="w-full -mt-1">
         {/* <img src={renderImg("headerSection")} className="w-full" /> */}
-        {renderSvg(data.sectionHeader)}
+        {/* {renderSvg(data.sectionHeader)} */}
       </div>
       <div className="px-8 lg:px-28 text-black py-5 lg:py-10 ">
         <div className="py-5 lg:py-10">

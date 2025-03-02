@@ -143,7 +143,7 @@ export default function CrawlE() {
             desc="Explore our comprehensive curriculum designed to make coding and robotics accessible and exciting. Get started with structured lessons and hands-on projects today!"
           />
         </div> */}
-        <div className="-mx-8 lg:-mx-28">
+        <div className="w-screen -mx-4 md:-mx-12 lg:-mx-16 xl:-mx-28">
           <TestimonialBanner />
         </div>
         <div className="py-5 lg:py-20">

@@ -3,13 +3,13 @@
 import ClientLayout from "../common-layout";
 
 export default function PartnerLayout({
-	children,
+  children,
 }: {
-	children: React.ReactNode;
+  children: React.ReactNode;
 }) {
-	return (
-		<div className="overflow-x-hidden">
-			<ClientLayout>{children}</ClientLayout>
-		</div>
-	);
+  return (
+    // <div className="overflow-x-hidden">
+    <ClientLayout>{children}</ClientLayout>
+    // </div>
+  );
 }
