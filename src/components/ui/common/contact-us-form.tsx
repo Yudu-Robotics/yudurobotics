@@ -115,13 +115,13 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="flex items-center w-full md:w-[55%] mt-10" id="Contact">
-      <div className="bg-white rounded-lg shadow-lg p-4  w-[100%]">
+    <div className="flex items-center w-full md:p-1" id="Contact">
+      <div className="bg-white border border-primary rounded-lg shadow-lg p-4  w-[100%]">
         <form onSubmit={handleSubmit} className="space-y-8">
           {/* Form Fields */}
 
           <div className="w-full">
-            <label className="block font-sm  font-tthoves-medium mt-2 text-secondary-foreground">
+            <label className="block font-sm font-tthoves-medium mt-2 text-secondary-foreground">
               Full Name <span className="text-primary">*</span>
             </label>
             <input
@@ -204,7 +204,7 @@ export default function ContactForm() {
               onChange={handleChange}
               className="mt-1 block w-full px-4 py-2  text-sm text-secondary-foreground rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="Leave us a message..."
-              rows={8}
+              rows={5}
               required
               style={{ border: "1px solid #D6D6D8" }}
             ></textarea>
