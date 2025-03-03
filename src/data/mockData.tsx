@@ -358,7 +358,7 @@ export const products = [
 
 export const mockData: { [key: string]: ProductData } = {
   home: {
-    heading: "From Playful Robots and Dronesto Precision 3D Printers",
+    heading: "From Playful Robots and Drones to Precision 3D Printers",
     wordsToHighlight: {
       text1: ["Playful Robots and Drones", "3D Printers"],
       text2: ["Zing"],

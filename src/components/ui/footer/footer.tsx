@@ -9,6 +9,7 @@ import { tree } from "next/dist/build/templates/app-page";
 import FooterIcon from "./fotterIcon";
 import Link from "next/link";
 import { Hourglass } from "lucide-react";
+import Image from "next/image";
 
 const Footer = () => {
   const route = [
@@ -101,7 +102,7 @@ const Footer = () => {
     },
     {
       type: "Phone",
-      text: "Mon-Fri from 8am to 5pm.",
+      text: "",
       contact_by: "+91 960 675 5032",
       icon_image: <FooterIcon iconType="phone" color={iconColor[index]} />,
     },
@@ -277,10 +278,12 @@ const Footer = () => {
         </div>
       </div>
       <div className="h-[90vh]  w-full flex justify-center items-center">
-        <img
+        <Image
+          width={1000}
+          height={1000}
           src={renderImg("madeInIndia")}
           alt=""
-          className=" w-auto object-contain"
+          className=" w-auto h-36 object-contain"
         />
       </div>
     </div>

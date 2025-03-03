@@ -105,7 +105,7 @@ export default async function HomePage() {
 
               {/* Subtext */}
               <div className="text-[#F2D8FE] text-lg md:text-lg lg:text-xl font-tthoves w-[100%] lg:w-[50%] text-center md:text-left">
-                <TextAnimate animation="slideUp" by="word">
+                <TextAnimate animation="slideUp" by="line">
                   {data.subheading}
                 </TextAnimate>
               </div>
@@ -145,7 +145,7 @@ export default async function HomePage() {
         {renderSvg("headerSection")}
       </div>
       {/* Middle Part */}
-      <div className="px-4 md:px-12 lg:px-16 text-black py-5 lg:py-10 xl:px-28 ">
+      <div className="px-4 md:px-12 lg:px-16 text-black py-5 lg:py-10 xl:px-28 max-w-screen overflow-hidden">
         <div className="py-5 lg:py-10">
           <AnimatedContent
             distance={150}
@@ -191,7 +191,7 @@ export default async function HomePage() {
         <div className="py-6 w-full">
           <AnimatedContent
             distance={150}
-            direction="horizontal"
+            direction="vertical"
             reverse={false}
             config={{ tension: 80, friction: 20 }}
             initialOpacity={0.2}
@@ -206,7 +206,7 @@ export default async function HomePage() {
         <div className="w-screen -mx-4 md:-mx-12 lg:-mx-16 xl:-mx-28">
           <AnimatedContent
             distance={150}
-            direction="horizontal"
+            direction="vertical"
             reverse={false}
             config={{ tension: 80, friction: 20 }}
             initialOpacity={0.2}

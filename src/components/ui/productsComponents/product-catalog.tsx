@@ -24,7 +24,7 @@ export default function ProductCatalog() {
               width={100}
               height={100}
               alt=""
-              className="w-2/5 md:w-2/3 lg:w-56 float-right"
+              className="w-2/5 md:w-2/3 lg:w-56 xl:w-2/3 float-right"
               src={renderImg("zigzaginhome")}
             />
           </div>

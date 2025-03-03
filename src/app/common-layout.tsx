@@ -14,6 +14,7 @@ import FloatingWhatsApp from "@/components/ui/common/floating-whatsapp";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import localFont from "next/font/local";
+import { ArrowUp, X } from "lucide-react";
 
 const cobaltRidge = localFont({
   src: "./../../fonts/CobaltRidge.otf",
@@ -171,19 +172,19 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
   ];
   const social_share = [
     {
-      icon: "assets/home/Twitter.svg",
+      icon: "/assets/home/Twitter.svg",
       link: "https://twitter.com/YuduRobotics/",
     },
     {
-      icon: "assets/home/Linkedin.svg",
+      icon: "/assets/home/Linkedin.svg",
       link: "https://www.linkedin.com/showcase/yudu-robotics/",
     },
     {
-      icon: "assets/home/Instagram.svg",
+      icon: "/assets/home/Instagram.svg",
       link: "https://www.instagram.com/yudurobotics/",
     },
     {
-      icon: "assets/home/Youtube.svg",
+      icon: "/assets/home/Youtube.svg",
       link: "https://www.youtube.com/@YuduRobotics",
     },
   ];
@@ -237,16 +238,11 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
           src={renderImg("logoblack")}
           alt="logo"
           className="w-auto h-10"
+          priority
         />
         {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
         <div className="cursor-pointer" onClick={() => setIsDrawerOpen(false)}>
-          <Image
-            width={100}
-            height={100}
-            src="assets/home/x-close.svg"
-            alt="Close"
-            className="w-6 h-6"
-          />
+          <X className="w-6 h-6" color="black" />
         </div>
       </div>
 
@@ -477,15 +473,12 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
             <button
               type="button"
               onClick={scrollToTop}
-              className="fixed bottom-0 sm:right-4 z-40 xs:-right-2 text-white p-2 rounded-full shadow-lg transition-all "
+              className="fixed bottom-2 sm:right-4 z-40 right-2 text-white flex justify-center items-center p-2 w-16 h-16 bg-white rounded-full shadow-lg transition-all "
               title="Scroll to top"
             >
-              <Image
-                width={50}
-                height={50}
-                src="/assets/home/Arrowup.png"
-                alt="scroll-up"
-              />
+              {/* <div> */}
+              <ArrowUp color="black" />
+              {/* </div> */}
             </button>
           )}
           <main className="mb-24">{children}</main>

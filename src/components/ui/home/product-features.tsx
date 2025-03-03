@@ -5,6 +5,7 @@ import renderImg from "@/imgImport";
 import { Squircle } from "corner-smoothing";
 import Image from "next/image";
 import { Check } from "lucide-react";
+import { TypingAnimation } from "@/components/magicui/typing-animation";
 
 function ProductFeatures() {
   const [cornerRadius, setCornerRadius] = useState(80);
@@ -42,14 +43,18 @@ function ProductFeatures() {
               exploration and creativity.
             </p>
             <ul className="space-y-4 ">
-              {features.map((feature) => (
+              {features.map((feature, i) => (
                 <li key={feature.id} className="flex space-x-2 ">
                   <div className="border  flex justify-center items-center">
                     <Check />
                   </div>
-                  <span className="text-xl font-tthoves opacity-50">
+                  <TypingAnimation
+                    delay={i * 2}
+                    as={"span"}
+                    className="text-xl font-tthoves opacity-50"
+                  >
                     {feature.text}
-                  </span>
+                  </TypingAnimation>
                 </li>
               ))}
             </ul>

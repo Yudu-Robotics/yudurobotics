@@ -57,7 +57,6 @@ export default function Section2() {
           ))}
         </div>
       </div>
-      <ContactForm />
     </div>
   );
 }
