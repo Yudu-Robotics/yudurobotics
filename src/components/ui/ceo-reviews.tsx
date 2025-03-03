@@ -36,7 +36,7 @@ const CeoReviewsContainer: React.FC<CeoProps> = ({ data }) => {
               textDecorationSkipInk: "none",
             }}
           >
-            <TextAnimate animation="slideUp" by="word" duration={0.1}>
+            <TextAnimate animation="fadeIn" by="line">
               {data?.desc ||
                 "Yudu Robotics has been an incredible partner, blending creativity with cutting-edge tech to drive innovation like never before."}
             </TextAnimate>
@@ -49,7 +49,7 @@ const CeoReviewsContainer: React.FC<CeoProps> = ({ data }) => {
       </div>
       <div className="flex flex-col justify-center items-center mt-8">
         <Avatar>
-          <AvatarImage src="https://github.com/shadcn.png" alt="ceo" />
+          <AvatarImage src={renderImg("ceoAvatar")} alt="ceo" />
           <AvatarFallback>CEO</AvatarFallback>
         </Avatar>
 

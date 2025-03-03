@@ -59,8 +59,8 @@ function ProductFeatures() {
           <div className="relative w-full py-16 md:mt-12 lg:mt-0">
             {/* Background image */}
             <Image
-              width={500}
-              height={500}
+              width={1000}
+              height={1000}
               className="w-full hidden md:block lg:block"
               src={renderImg("productBackground")}
               alt="Background"
@@ -68,8 +68,8 @@ function ProductFeatures() {
 
             {/* Humanoid image - placed on top */}
             <Image
-              width={500}
-              height={500}
+              width={1000}
+              height={1000}
               className="absolute -inset-[1.825rem] xs:-inset-[2.3rem] sm:-inset-[2.125rem] md:-inset-16 w-full h-full object-contain hidden md:block lg:block"
               src={renderImg("humanoid")}
               alt="Humanoid"

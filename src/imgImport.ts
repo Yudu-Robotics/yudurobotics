@@ -34,6 +34,7 @@ type ImageName =
   | "zigzaginhome"
   | "curv"
   | "x-close"
+  | "ceoAvatar"
   // Zing
   | "humanoid"
   | "humanoidSmall"
@@ -150,6 +151,7 @@ const IMAGE_PATHS = {
   // Home
   headerSection: "/assets/other/Section Seperators.svg",
   footerSection: "/assets/home/FooterSection.webp",
+  ceoAvatar: "/assets/home/ceoreview.webp",
   homeImage: "/assets/home/homeImage.webp",
   star1: "/assets/home/star1.png",
   star2: "/assets/home/star2.png",
