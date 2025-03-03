@@ -15,7 +15,7 @@ import Image from "next/image";
 // import BlurText from "../../components/bits/BlurText";
 import { TextAnimate } from "@/components/magicui/text-animate";
 import AnimatedContent from "@/components/bits/AnimatedContent";
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+// import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 const ProductCatalog = dynamic(
   () => import("@/components/ui/productsComponents/product-catalog"),
   {

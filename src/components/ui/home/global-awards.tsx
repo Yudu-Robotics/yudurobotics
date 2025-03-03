@@ -3,7 +3,7 @@ import renderImg from "@/imgImport";
 import type { ImageName } from "@/imgImport";
 import Image from "next/image";
 import React from "react";
-import ScrollFloat from "../../bits/ScrollFloat";
+import { TextAnimate } from "@/components/magicui/text-animate";
 
 function GlobalAwards() {
   const awardsImage: ImageName[] = ["reddot", "good", "india"];
@@ -11,15 +11,9 @@ function GlobalAwards() {
   return (
     <div className="flex flex-col lg:flex-row justify-center items-center space-y-2 lg:space-y-0">
       <div className="font-cobaltRidge text-4xl text-center lg:text-start lg:text-5xl w-full lg:w-[50%]">
-        <ScrollFloat
-          animationDuration={1}
-          ease="back.inOut(2)"
-          scrollStart="center bottom+=50%"
-          scrollEnd="bottom bottom-=40%"
-          stagger={0.03}
-        >
+        <TextAnimate animation="slideUp" by="word">
           Being recognized globally
-        </ScrollFloat>
+        </TextAnimate>
       </div>
       <div className="flex flex-col lg:flex-row lg:space-x-10">
         {awardsImage.map((image) => (
