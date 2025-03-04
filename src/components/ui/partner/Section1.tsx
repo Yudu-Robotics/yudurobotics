@@ -66,10 +66,8 @@ function Section1() {
         <div className="flex flex-col items-center justify-center">
           <div className="xl:px-12 xs:p-12 md:p-2">
             <p
-              className=" text-center items-center font-tthoves text-6xl md:text-4xl lg:text-6xl xl:text-8xl  text-primary-foreground"
+              className=" text-center items-center font-cobaltRidge text-6xl md:text-4xl lg:text-6xl xl:text-8xl  text-primary-foreground"
               style={{
-                fontFamily:
-                  "'YourFontFamily', sans-serif" /* Replace with your desired font family */,
                 fontWeight: 1000 /* Bold weight */,
                 lineHeight: "1.2" /* Line height */,
                 textUnderlinePosition: "from-font",
