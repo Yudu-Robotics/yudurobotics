@@ -43,7 +43,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
     {/* Product Description */}
     <div className="w-1/2 md:w-full ml-3 md:ml-0">
-      <h3 className="text-lg font-tthoves-semiBold mb-2 lg:text-xl">
+      <h3 className="text-lg text-left font-tthoves-semiBold mb-2 lg:text-xl">
         {product.name}
       </h3>
       <p className="text-start font-tthoves text-secondary-foreground text-xs tracking-wide lg:text-sm hidden md:flex">
