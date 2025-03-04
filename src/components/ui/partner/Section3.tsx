@@ -1,25 +1,25 @@
 "use client";
 import { highlightWords } from "@/app/utility/highlightWords";
 import renderImg from "@/imgImport";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import ContactForm from "../common/contact-us-form";
 
 export default function Section3() {
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  // const [isSmallScreen, setIsSmallScreen] = useState(false);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 768);
-    };
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setIsSmallScreen(window.innerWidth <= 768);
+  //   };
 
-    handleResize();
+  //   handleResize();
 
-    window.addEventListener("resize", handleResize);
+  //   window.addEventListener("resize", handleResize);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, []);
 
   const heading1 = "Here’s how you can";
   const heading2 = "Partner With Us";

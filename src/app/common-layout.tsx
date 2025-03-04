@@ -473,7 +473,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
             <button
               type="button"
               onClick={scrollToTop}
-              className="fixed bottom-2 sm:right-4 z-40 right-2 text-white flex justify-center items-center p-2 w-16 h-16 bg-white rounded-full shadow-lg transition-all "
+              className="fixed bottom-2 sm:right-4 z-40 right-2 text-white flex border-2 border-blue-950/40 justify-center items-center p-2 w-16 h-16 bg-white rounded-full shadow-lg transition-all "
               title="Scroll to top"
             >
               {/* <div> */}

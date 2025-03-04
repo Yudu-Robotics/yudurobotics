@@ -16,8 +16,8 @@ export default async function HomePage() {
   const data = mockData.partner;
   return (
     <>
-      <div className="sm:px-0 md:px-4 lg:px-20 py-4 bg-primary">
-        <div className="flex flex-col space-y-16 lg:flex-row lg:space-y-0 justify-between py-10">
+      <div className="sm:px-0 md:px-4 lg:px-20 py-4 bg-primary w-screen overflow-x-hidden sm:overflow-visible">
+        <div className="flex flex-col space-y-16 lg:flex-row lg:space-y-0 justify-center py-10">
           <div className="h-[85vh] w-auto flex flex-col justify-center items-center">
             <div className="sm:w-[80vw] w-[80vw] font-tthoves-medium  text-xl font-semibold leading-normal text-center  decoration-skip-ink-none">
               <AnimatedContent
@@ -75,7 +75,18 @@ export default async function HomePage() {
         />
       </div>
       <div className="py-16 lg:py-20 px-4 md:px-8 lg:px-16">
-        <Section2 />
+        <AnimatedContent
+          distance={150}
+          direction="vertical"
+          reverse={false}
+          config={{ tension: 80, friction: 20 }}
+          initialOpacity={0.2}
+          animateOpacity
+          scale={1.1}
+          threshold={0.2}
+        >
+          <Section2 />
+        </AnimatedContent>
       </div>
       <div className="py-8 md:py-14 lg:py-20">
         <Section3 />
