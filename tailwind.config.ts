@@ -116,10 +116,14 @@ const config: Config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "loop-scroll": "loop-scroll 15s linear infinite",
-        "mobile-scroll": "mobile-scroll 20s linear infinite",
+        "loop-scroll": "loop 20s linear infinite",
+        "mobile-scroll": "loop 15s linear infinite",
       },
       keyframes: {
+        loop: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
         "loop-scroll": {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-70%)" },

@@ -104,7 +104,7 @@ export default async function HomePage() {
               </div>
 
               {/* Subtext */}
-              <div className="text-[#F2D8FE] text-lg md:text-lg lg:text-xl font-tthoves w-[100%] lg:w-[50%] text-center md:text-left">
+              <div className="text-[#F2D8FE] text-lg md:text-lg lg:text-xl font-tthoves font-medium w-[100%] lg:w-[50%] text-center md:text-left">
                 <TextAnimate animation="slideUp" by="line">
                   {data.subheading}
                 </TextAnimate>
