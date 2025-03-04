@@ -99,7 +99,7 @@ const Footer = () => {
       type: "Working hours",
       text: "Come say hello at our office HQ.",
       contact_by: "Monday to Saturday 9:00 AM to 6:00 PM",
-      icon_image: <Hourglass iconType="livechat" color={iconColor[index]} />,
+      icon_image: <Hourglass color={iconColor[index]} />,
     },
     // {
     //   type: "Phone",
@@ -118,7 +118,7 @@ const Footer = () => {
   }
 
   const handleClick = () => {
-    window.open(`https://wa.me/919606755032`, "_blank");
+    window.open("https://wa.me/919606755032", "_blank");
   };
 
   return (
@@ -167,19 +167,13 @@ const Footer = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 py-4 lg:w-[50%] ">
             {contact_options.map(
               (
-                value:
-                  | {
-                      type: string;
-                      text: string;
-                      contact_by: string;
-                      icon_image: any;
-                    }
-                  | {
-                      type: string;
-                      text: string;
-                      contact_by: string;
-                      icon_image: string;
-                    },
+                value: {
+                  type: string;
+                  text: string;
+                  contact_by: string;
+                  icon_image: JSX.Element;
+                  contact_by2?: string;
+                },
                 key: number
               ) => (
                 <button
