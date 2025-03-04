@@ -1,74 +1,74 @@
 "use client";
 import { highlightWords } from "@/app/utility/highlightWords";
-import renderImg from "@/imgImport";
+// import renderImg from "@/imgImport";
 import React from "react";
 import ContactForm from "../common/contact-us-form";
 
 export default function Section3() {
-  // const [isSmallScreen, setIsSmallScreen] = useState(false);
+	// const [isSmallScreen, setIsSmallScreen] = useState(false);
 
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     setIsSmallScreen(window.innerWidth <= 768);
-  //   };
+	// useEffect(() => {
+	//   const handleResize = () => {
+	//     setIsSmallScreen(window.innerWidth <= 768);
+	//   };
 
-  //   handleResize();
+	//   handleResize();
 
-  //   window.addEventListener("resize", handleResize);
+	//   window.addEventListener("resize", handleResize);
 
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, []);
+	//   return () => {
+	//     window.removeEventListener("resize", handleResize);
+	//   };
+	// }, []);
 
-  const heading1 = "Here’s how you can";
-  const heading2 = "Partner With Us";
-  const subheading =
-    "And hey, don’t take it from us—check out what our partners have to say about their experience";
+	const heading1 = "Here’s how you can";
+	const heading2 = "Partner With Us";
+	const subheading =
+		"And hey, don’t take it from us—check out what our partners have to say about their experience";
 
-  const data = [
-    {
-      id: 1,
-      title: "Say Hello",
-      desc: "Send us a message or give us a quick call. We’re here to chat, learn about what you need, and figure out how we can help.",
-      src: renderImg("hand"),
-    },
-    {
-      id: 2,
-      title: "Let’s Make a Plan",
-      desc: "We’ll put together a game plan that fits your needs—nothing cookie-cutter. We’re all about making this partnership work for you.",
-      src: renderImg("plan"),
-    },
-    {
-      id: 3,
-      title: "Get Set Up",
-      desc: "We’ll handle all the heavy lifting. Our team will get you up and running with the robots, the curriculum, and any training you need. We’re with you every step of the way.",
-      src: renderImg("strong"),
-    },
-    {
-      id: 4,
-      title: "Keep Winning",
-      desc: "This isn’t a one-and-done. We’ll keep the support rolling, updating your resources, and making sure everything runs smoothly while you focus on the bigger picture.",
-      src: renderImg("winning"),
-    },
-  ];
+	// const data = [
+	// 	{
+	// 		id: 1,
+	// 		title: "Say Hello",
+	// 		desc: "Send us a message or give us a quick call. We’re here to chat, learn about what you need, and figure out how we can help.",
+	// 		src: renderImg("hand"),
+	// 	},
+	// 	{
+	// 		id: 2,
+	// 		title: "Let’s Make a Plan",
+	// 		desc: "We’ll put together a game plan that fits your needs—nothing cookie-cutter. We’re all about making this partnership work for you.",
+	// 		src: renderImg("plan"),
+	// 	},
+	// 	{
+	// 		id: 3,
+	// 		title: "Get Set Up",
+	// 		desc: "We’ll handle all the heavy lifting. Our team will get you up and running with the robots, the curriculum, and any training you need. We’re with you every step of the way.",
+	// 		src: renderImg("strong"),
+	// 	},
+	// 	{
+	// 		id: 4,
+	// 		title: "Keep Winning",
+	// 		desc: "This isn’t a one-and-done. We’ll keep the support rolling, updating your resources, and making sure everything runs smoothly while you focus on the bigger picture.",
+	// 		src: renderImg("winning"),
+	// 	},
+	// ];
 
-  return (
-    <>
-      <div className="text-black text-center flex justify-center flex-col items-center">
-        <div className="font-cobaltRidge text-5xl md:text-6xl lg:text-7xl tex-center text-primary-foreground text-[#0A041A] px-4">
-          {highlightWords(heading1, [heading1], "text-[#0A041A]")}
-        </div>
-        <div className="font-cobaltRidge text-5xl md:text-6xl lg:text-7xl  text-primary-foreground text-[#0A041A] px-4">
-          {highlightWords(heading2, [heading2], "text-[#5423E6]")}
-        </div>
-        <p className="sm:w-[80%] md:w-[60%] lg:px-10 px-3 text-lg mt-5 text-[#4A4A4F]">
-          {subheading}
-        </p>
-      </div>
-      <div className="flex flex-col md:flex-row justify-center items-center xl:px-20 ">
-        <div className="flex-1 w-full">
-          {/* {isSmallScreen ? (
+	return (
+		<>
+			<div className="text-black text-center flex justify-center flex-col items-center">
+				<div className="font-cobaltRidge text-5xl md:text-6xl lg:text-7xl tex-center text-primary-foreground text-[#0A041A] px-4">
+					{highlightWords(heading1, [heading1], "text-[#0A041A]")}
+				</div>
+				<div className="font-cobaltRidge text-5xl md:text-6xl lg:text-7xl  text-primary-foreground text-[#0A041A] px-4">
+					{highlightWords(heading2, [heading2], "text-[#5423E6]")}
+				</div>
+				<p className="sm:w-[80%] md:w-[60%] lg:px-10 px-3 text-lg mt-5 text-[#4A4A4F]">
+					{subheading}
+				</p>
+			</div>
+			<div className="flex md:w-1/2 m-auto mt-4 flex-col md:flex-row justify-center items-center xl:px-20 ">
+				{/* <div className="flex-1 w-full"> */}
+				{/* {isSmallScreen ? (
         <div className="grid grid-cols-1 px-4 my-16">
           {data.map((item) => (
             <div
@@ -101,8 +101,8 @@ export default function Section3() {
           ))}
         </div>
       )} */}
-          {/* {isSmallScreen ? ( */}
-          <div className="relative grid grid-cols-1 px-4 my-16">
+				{/* {isSmallScreen ? ( */}
+				{/* <div className="relative grid grid-cols-1 px-4 my-16">
             {data.map((item, index) => (
               <div key={item.id} className="relative w-full px-1 my-6 flex">
                 <div
@@ -124,8 +124,8 @@ export default function Section3() {
                 )}
               </div>
             ))}
-          </div>
-          {/* ) : (
+          </div> */}
+				{/* ) : (
           <div className="flex flex-row justify-between items-start my-10 px-10">
             {data.map((item) => (
               <div
@@ -146,16 +146,16 @@ export default function Section3() {
           </div>
         )} */}
 
-          {/* <img
+				{/* <img
         src={renderImg("play")}
         alt="Play button for video content"
         className="w-full sm:px-12 sm:my-10 my-4 h-[30vh] sm:h-auto px-3"
       /> */}
-        </div>
-        <div className="flex-1 w-full px-4 xl:w-auto xl:px-10">
-          <ContactForm />
-        </div>
-      </div>
-    </>
-  );
+				{/* </div> */}
+				<div className="flex-1 w-11/12 md:w-1/2 px-4 xl:px-10">
+					<ContactForm />
+				</div>
+			</div>
+		</>
+	);
 }
