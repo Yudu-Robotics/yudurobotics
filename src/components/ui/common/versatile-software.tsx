@@ -77,7 +77,7 @@ const VersatileSoftware: React.FC<SoftwareAdaptiveProps> = ({
                 {videoNmae ? (
                   <video
                     src={renderVideo(videoNmae[index])}
-                    className="rounded-xxl"
+                    className="rounded-xxl max-h-72"
                     autoPlay
                     loop
                     muted
