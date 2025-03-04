@@ -1,4 +1,3 @@
-"use client";
 import ClientLayout from "../common-layout";
 
 export default function HomeLayout({
