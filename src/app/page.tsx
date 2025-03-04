@@ -1,6 +1,10 @@
-import { redirect } from "next/navigation";
+// import { redirect } from "next/navigation";
 
-export default async function Home() {
-  redirect("/home");
-  return <main />;
+export async function getStaticProps() {
+  return {
+    redirect: {
+      destination: "/home",
+      permanent: true, // triggers 308
+    },
+  };
 }
