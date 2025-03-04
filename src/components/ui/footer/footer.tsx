@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import JumpingButtons from "../common/jumping-buttons";
+// import JumpingButtons from "../common/jumping-buttons";
 import renderImg from "@/imgImport";
-import ContactForm from "../common/contact-us-form";
+// import ContactForm from "../common/contact-us-form";
 import BottomFooter from "./bottom-footer";
 import renderSvg from "@/svgImport";
 import { usePathname } from "next/navigation";
-import { tree } from "next/dist/build/templates/app-page";
+// import { tree } from "next/dist/build/templates/app-page";
 import FooterIcon from "./fotterIcon";
 import Link from "next/link";
 import { Hourglass } from "lucide-react";
@@ -59,11 +59,11 @@ const Footer = () => {
   const index =
     route.indexOf(lastSegment) !== -1 ? route.indexOf(lastSegment) : -1;
 
-  const ishorizontal: string = "true";
-  let text1: string = "I'm here to";
-  let text2: string = "Join Forces";
-  let bgColor: string = "#2CF7A4";
-  let textColor: string = "#0A4029";
+  // const ishorizontal: string = "true";
+  // let text1: string = "I'm here to";
+  // let text2: string = "Join Forces";
+  // let bgColor: string = "#2CF7A4";
+  // let textColor: string = "#0A4029";
 
   interface Style {
     bgColor: string;
@@ -83,9 +83,10 @@ const Footer = () => {
   };
   const contact_options = [
     {
-      type: "Email",
+      type: "Contacts",
       text: "Our friendly team is here to help.",
       contact_by: "support@yudurobotics.com",
+      contact_by2: "+91 960 675 5032",
       icon_image: <FooterIcon iconType="mail" color={iconColor[index]} />,
     },
     {
@@ -98,22 +99,22 @@ const Footer = () => {
       type: "Working hours",
       text: "Come say hello at our office HQ.",
       contact_by: "Monday to Saturday 9:00 AM to 6:00 PM",
-      icon_image: <Hourglass />,
+      icon_image: <Hourglass iconType="livechat" color={iconColor[index]} />,
     },
-    {
-      type: "Phone",
-      text: "",
-      contact_by: "+91 960 675 5032",
-      icon_image: <FooterIcon iconType="phone" color={iconColor[index]} />,
-    },
+    // {
+    //   type: "Phone",
+    //   text: "",
+    //   contact_by: "+91 960 675 5032",
+    //   icon_image: <FooterIcon iconType="phone" color={iconColor[index]} />,
+    // },
   ];
 
   if (index in styles) {
-    const { bgColor: newBgColor, textColor: newTextColor } = styles[index];
-    bgColor = newBgColor;
-    textColor = newTextColor;
-    text1 = "I'm Ready to";
-    text2 = "Join Forces";
+    // const { bgColor: newBgColor, textColor: newTextColor } = styles[index];
+    // bgColor = newBgColor;
+    // textColor = newTextColor;
+    // text1 = "I'm Ready to";
+    // text2 = "Join Forces";
   }
 
   const handleClick = () => {
@@ -181,9 +182,10 @@ const Footer = () => {
                     },
                 key: number
               ) => (
-                <div
+                <button
+                  type="button"
                   key={key}
-                  className={`flex flex-col space-y-2 ${
+                  className={`flex flex-col space-y-2 text-left ${
                     value.type === "Live chat"
                       ? "cursor-pointer"
                       : "cursor-default"
@@ -195,16 +197,20 @@ const Footer = () => {
                   }}
                 >
                   <div>{value.icon_image}</div>
-                  <h1 className="font-tthoves ">{value.type}</h1>
+                  <h1 className="font-tthoves">{value.type}</h1>
                   <p className="font-tthoves opacity-70">{value.text}</p>
                   <p className="w-[70%] xl:text-lg md:text-base font-tthoves">
                     {value.contact_by}
                   </p>
-                </div>
+                  <p className="w-[70%] xl:text-lg md:text-base font-tthoves">
+                    {value.contact_by2}
+                  </p>
+                </button>
               )
             )}
           </div>
           <iframe
+            title="map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.7277701730914!2d77.6595308!3d12.860851499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6d68e15b4c7f%3A0x26b1f4d88e3e6927!2sYudu%20Robotics!5e0!3m2!1sen!2sin!4v1740458636266!5m2!1sen!2sin"
             // width="600"
             height="450"
@@ -213,7 +219,7 @@ const Footer = () => {
             // allowFullScreen=""
             loading="lazy"
             // referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+          />
           {/* <ContactForm /> */}
         </div>
       </div>
