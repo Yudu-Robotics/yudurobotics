@@ -174,10 +174,10 @@ const IMAGE_PATHS = {
   productCrawle: "/assets/zing/productCrawle.webp",
   playzing: "/assets/zing/playzing.webp",
   // ceo
-  filepe: "/assets/ceo/filepe.webp",
-  vivek: "/assets/ceo/vivek.webp",
-  shekhar: "/assets/ceo/shekhar.webp",
-  gowtham: "/assets/ceo/gowtham.webp",
+  filepe: "/assets/ceo/Filepe.webp",
+  vivek: "/assets/ceo/Vivek.webp",
+  shekhar: "/assets/ceo/Shekhar.webp",
+  gowtham: "/assets/ceo/Gowtham.webp",
   // Other
   arrow: "/assets/other/arrow.webp",
   searchIcon: "/assets/other/searchIcon.png",

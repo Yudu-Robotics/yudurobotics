@@ -141,6 +141,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
                 <Link
                   href="/home"
                   className="flex space-x-3 items-center w-[50%] lg:w-[20%]"
+                  area-label="logo"
                 >
                   {renderSvg("logoYudoRobo")}
                 </Link>

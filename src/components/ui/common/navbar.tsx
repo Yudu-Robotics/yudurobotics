@@ -278,12 +278,13 @@ const Navbar = ({ setIsDrawerOpen }: NavbarProps) => {
           <div className="w-full rounded-md">
             <div className="flex justify-center gap-x-8 w-full">
               {social_share.map((social) => (
-                <a
+                <Link
                   key={social.link}
                   href={social.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  aria-label="social link"
                 >
                   <Image
                     width={100}
@@ -294,7 +295,7 @@ const Navbar = ({ setIsDrawerOpen }: NavbarProps) => {
                   />
                   <span className="sr-only">{social.link}</span>{" "}
                   {/* Screen reader text */}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

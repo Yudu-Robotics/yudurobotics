@@ -17,13 +17,19 @@ function GlobalAwards() {
       </div>
       <div className="flex flex-col lg:flex-row lg:space-x-10">
         {awardsImage.map((image) => (
-          <div key={image} className="flex">
+          <div key={image} className="flex items-center justify-center">
             <Image
-              width={100}
-              height={100}
+              width={120}
+              height={65}
               src={renderImg(image)}
-              alt="logo"
-              className="p-5 m-4 h-40 w-40"
+              alt={`${image} award`}
+              className="p-5 m-4"
+              style={{
+                width: 'auto',
+                height: 'auto',
+                maxWidth: '160px',
+                objectFit: 'contain',
+              }}
             />
           </div>
         ))}
