@@ -1,4 +1,4 @@
-import renderImg from "@/imgImport";
+import renderImg, { type ImageName } from "@/imgImport";
 // import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Image from "next/image";
@@ -9,6 +9,7 @@ interface CeoProps {
     designation: string;
     company: string;
     desc: string;
+    src: ImageName;
   };
 }
 const CeoReviewsContainer: React.FC<CeoProps> = ({ data }) => {
@@ -37,8 +38,7 @@ const CeoReviewsContainer: React.FC<CeoProps> = ({ data }) => {
             }}
           >
             <TextAnimate animation="fadeIn" by="line">
-              {data?.desc ||
-                "Yudu Robotics has been an incredible partner, blending creativity with cutting-edge tech to drive innovation like never before."}
+              {data?.desc || "here is the description"}
             </TextAnimate>
             {/* <TypingAnimation duration={50}>
               {data?.desc ||
@@ -49,17 +49,20 @@ const CeoReviewsContainer: React.FC<CeoProps> = ({ data }) => {
       </div>
       <div className="flex flex-col justify-center items-center mt-8">
         <Avatar>
-          <AvatarImage src={renderImg("ceoAvatar")} alt="ceo" />
+          <AvatarImage
+            src={renderImg(data?.src ? data.src : "ceoAvatar")}
+            alt="ceo"
+          />
           <AvatarFallback>CEO</AvatarFallback>
         </Avatar>
 
         <h4 className="mt-2 text-xl font-tthoves-semiBold">
-          {data?.name || "Mr Filepe Gracia"}
+          {data?.name || "name of ceo"}
         </h4>
         <p className="font-tthoves">
-          {data?.designation && data?.company
+          {data?.designation
             ? `${data?.designation} , ${data?.company}`
-            : "Marketing Head , Inroprin - Peru"}
+            : ` ${data?.company}`}
         </p>
       </div>
       <div className="lg:flex justify-end lg:-mt-16 lg:px-10 hidden relative ">

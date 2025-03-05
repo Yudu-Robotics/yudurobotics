@@ -15,6 +15,7 @@ import Image from "next/image";
 // import BlurText from "../../components/bits/BlurText";
 import { TextAnimate } from "@/components/magicui/text-animate";
 import AnimatedContent from "@/components/bits/AnimatedContent";
+import type { PartnerDetail } from "@/lib/types";
 // import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 const ProductCatalog = dynamic(
   () => import("@/components/ui/productsComponents/product-catalog"),
@@ -45,17 +46,19 @@ const ProductFeatures = dynamic(
 const FAQs = dynamic(() => import("@/components/ui/home/faqs"), {
   ssr: false, // This disables server-side rendering for the FAQ component
 });
+// Add this interface before the HomePage component
+
 export default async function HomePage() {
   const data = mockData.home;
-  const partnerDetails = [
+  const partnerDetails: PartnerDetail[] = [
     {
       name: "Mr Filepe Gracia",
       company: "Inroprin - Peru",
       designation: "Marketing Head",
-      src: "",
+      src: "filepe",
       desc: "Impressed by the quality of the kits and program, happy with the services and looking forward to expand in Peru markets.",
     },
-  ];
+  ]; // the partner list is defined here as an array because in future if there is multiple partner we can add them here
   return (
     <>
       <div className="px-4 sm:px-8 md:px-16 lg:px-20 xl:px-28 bg-primary pt-16 sm:pt-20 md:pt-16 lg:pt-20 xl:pt-24 relative">

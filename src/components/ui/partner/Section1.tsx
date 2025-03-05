@@ -5,6 +5,7 @@ import CeoReviewsContainer from "../ceo-reviews";
 // import { highlightWords } from "@/app/utility/highlightWords";
 import Image from "next/image";
 import AnimatedContent from "@/components/bits/AnimatedContent";
+import type { PartnerDetail } from "@/lib/types";
 const data = [
   {
     id: 1,
@@ -42,6 +43,15 @@ const data = [
     desc: "No disappearing acts here. Our solutions come with full support—think of us as your trusty sidekick, ready for high-fives when things go right and back-up when they don’t.",
   },
 ];
+const partnerDetails: PartnerDetail[] = [
+  {
+    name: "Gowtham",
+    company: "Air Stem Labs",
+    designation: "",
+    src: "gowtham",
+    desc: "Impressed by the quality of the kits and program, happy with the services and looking forward to expand in Peru markets.",
+  },
+]; // the partner list is defined here as an array because in future if there is multiple partner we can add them here
 function Section1() {
   // const [isSmallScreen, setIsSmallScreen] = useState(false);
 
@@ -208,7 +218,7 @@ function Section1() {
       </AnimatedContent>
 
       <div className="sm:my-28 mx-4">
-        <CeoReviewsContainer />
+        <CeoReviewsContainer data={partnerDetails[0]} />
       </div>
     </div>
   );

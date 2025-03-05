@@ -35,6 +35,10 @@ type ImageName =
   | "curv"
   | "x-close"
   | "ceoAvatar"
+  | "filepe"
+  | "vivek"
+  | "shekhar"
+  | "gowtham"
   // Zing
   | "humanoid"
   | "humanoidSmall"
@@ -169,7 +173,11 @@ const IMAGE_PATHS = {
   productBackground: "/assets/zing/productBackground.webp",
   productCrawle: "/assets/zing/productCrawle.webp",
   playzing: "/assets/zing/playzing.webp",
-
+  // ceo
+  filepe: "/assets/ceo/filepe.webp",
+  vivek: "/assets/ceo/vivek.webp",
+  shekhar: "/assets/ceo/shekhar.webp",
+  gowtham: "/assets/ceo/gowtham.webp",
   // Other
   arrow: "/assets/other/arrow.webp",
   searchIcon: "/assets/other/searchIcon.png",
