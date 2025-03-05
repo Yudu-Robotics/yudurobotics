@@ -75,7 +75,6 @@ const VersatileSoftware: React.FC<SoftwareAdaptiveProps> = ({ data, name }) => {
         <p className="text-[#5423E6] font-tthoves-medium">{data?.subheading}</p>
       </div>
       <div className="grid grid-col grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-12">
-        {/* biome-ignore lint/suspicious/noExplicitAny: <explanation> */}
         {(data?.features || features)?.map(
           (feature: Feature, index: number) => (
             <div
