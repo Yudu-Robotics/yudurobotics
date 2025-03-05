@@ -109,7 +109,7 @@ export default function CrawlE() {
         </div>
 
         <div className=" md:py-20">
-          <VersatileSoftware color="red-100" name="crawle" />
+          <VersatileSoftware name="crawle" />
         </div>
         <div>
           <ExtraFeatures
