@@ -1,6 +1,6 @@
 // import { redirect } from "next/navigation";
 
-export async function page() {
+export async function Page() {
   return {
     redirect: {
       destination: "/home",
