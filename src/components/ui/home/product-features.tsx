@@ -8,11 +8,11 @@ import { Check } from "lucide-react";
 import { TypingAnimation } from "@/components/magicui/typing-animation";
 
 function ProductFeatures() {
-  const [cornerRadius, setCornerRadius] = useState(80);
+  const [cornerRadius, setCornerRadius] = useState(40);
 
   useEffect(() => {
     const updateCornerRadius = () => {
-      setCornerRadius(window.innerWidth >= 1024 ? 120 : 80);
+      setCornerRadius(window.innerWidth >= 1024 ? 120 : 40);
     };
     updateCornerRadius();
     window.addEventListener("resize", updateCornerRadius);

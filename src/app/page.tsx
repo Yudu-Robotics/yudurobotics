@@ -1,6 +1,6 @@
 // import { redirect } from "next/navigation";
 
-export async function getStaticProps() {
+export async function page() {
   return {
     redirect: {
       destination: "/home",
