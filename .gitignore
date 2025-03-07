@@ -37,3 +37,5 @@ next-env.d.ts
 
 # next.js
 /analyze
+
+bun.lockb*
