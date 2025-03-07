@@ -58,8 +58,13 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/assets/favicon.ico",
+        width: 1200,
+        height: 630,
+        alt: "Yudu Robotics - Unleashing the power of creative robotics",
+        type: "image/jpeg",
       },
     ],
+    type: "website",
   },
 };
 
