@@ -11,7 +11,7 @@ export const metadata: Metadata = {
       "From Playful Robots and Drones to Precision 3D Printers Unleash the power of creative robotics. Yudu makes the impossible fun",
     images: [
       {
-        url: "/logo.png",
+        url: "/preview.png",
         width: 1200,
         height: 630,
         alt: "Yudu Robotics - Unleashing the power of creative robotics",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: "Yudu Robotics",
     description:
       "From Playful Robots and Drones to Precision 3D Printers Unleash the power of creative robotics. Yudu makes the impossible fun",
-    images: ["/logo.png"],
+    images: ["/preview.png"],
   },
   keywords: [
     "Yudu Robotics",
