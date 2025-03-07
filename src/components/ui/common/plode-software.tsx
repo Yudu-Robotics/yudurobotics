@@ -37,7 +37,7 @@ const PlodeSoftware: React.FC<PlodeSoftwareProps> = ({
 
               <div className="space-y-4 px-3">
                 {/* Main Headline */}
-                <div className="font-piepie text-4xl md:text-6xl lg:text-7xl text-primary-foreground">
+                <div className="font-cobaltRidge text-4xl md:text-6xl lg:text-7xl text-primary-foreground">
                   Plode: Smart and Simple Software
                 </div>
 

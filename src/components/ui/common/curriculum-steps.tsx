@@ -12,14 +12,15 @@ const CurriculumSteps: React.FC<{
   return (
     <div>
       {/* Arrow Image */}
-      <div className="flex xs:ml-40 xs:mr-10 xs:mt-[-50px]"> {/* Added right margin */}
+      <div className="flex xs:ml-40 xs:mr-10 xs:mt-[-50px]">
+        {" "}
+        {/* Added right margin */}
         <img
           src={renderImg("handArrow")}
           alt="Hand Arrow"
           className="md:-mb-16 rotate-[0.77deg]" // Applying rotation here
         />
       </div>
-
 
       {/* Main Grid Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -30,7 +31,7 @@ const CurriculumSteps: React.FC<{
           </h1>
 
           <div className="flex flex-col gap-8">
-            <h2 className="text-4xl lg:text-4xl xl:text-6xl font-piepie w-[100%] md:w-[80%]">
+            <h2 className="text-4xl lg:text-4xl xl:text-6xl font-cobaltRidge w-[100%] md:w-[80%]">
               {data.heading}
             </h2>
             <h3 className="text-xl text-secondary-foreground font-tthoves">
@@ -38,15 +39,12 @@ const CurriculumSteps: React.FC<{
             </h3>
           </div>
 
-
-
-          {/* <h2 className="text-4xl md:text-5xl font-piepie w-[100%] md:w-[80%] gap-8 xs:mb-4">
+          {/* <h2 className="text-4xl md:text-5xl font-cobaltRidge w-[100%] md:w-[80%] gap-8 xs:mb-4">
             {data.heading}
           </h2>
           <h3 className="text-xl text-secondary-foreground font-tthoves xs:mt-[32px] gap-4">
             {data.subheading}
           </h3> */}
-
         </div>
 
         {/* Left Column (First Half of Steps) */}

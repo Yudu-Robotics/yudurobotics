@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 interface ProductCardProps {
@@ -16,7 +17,8 @@ const ProductCard: React.FC<ProductCardProps> = ({
   isSelected = false, // Default value is false
   handleClick = () => {}, // Default is an empty function
 }) => (
-  <div
+  <button
+    type="button"
     onClick={() => {
       handleClick();
     }}
@@ -27,7 +29,9 @@ const ProductCard: React.FC<ProductCardProps> = ({
     {/* Product Image */}
     <div className="w-1/2 h-full flex justify-center items-center md:w-full">
       <div className="w-full flex justify-center items-center">
-        <img
+        <Image
+          width={1000}
+          height={1000}
           src={product.image}
           alt={product.name}
           className="object-cover w-full h-full"
@@ -39,14 +43,14 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
     {/* Product Description */}
     <div className="w-1/2 md:w-full ml-3 md:ml-0">
-      <h3 className="text-lg font-tthoves-semiBold mb-2 lg:text-xl">
+      <h3 className="text-lg text-left font-tthoves-semiBold mb-2 lg:text-xl">
         {product.name}
       </h3>
       <p className="text-start font-tthoves text-secondary-foreground text-xs tracking-wide lg:text-sm hidden md:flex">
         {product.description}
       </p>
       <p className="text-start text-secondary-foreground text-sm w-full tracking-wide lg:text-sm md:hidden font-tthoves">
-        {product.description.substring(0, 50) + "..."}
+        {`${product.description.substring(0, 50)}...`}
       </p>
 
       {product.link && product.link !== "" ? (
@@ -62,7 +66,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         </div>
       )}
     </div>
-  </div>
+  </button>
 );
 
 export default ProductCard;

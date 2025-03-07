@@ -30,7 +30,7 @@ export default function KlawB() {
 
             <div className="space-y-4 h-full">
               {/* Main Headline */}
-              <div className="w-2/3 font-piepie text-5xl md:text-6xl lg:text-7xl  text-primary-foreground ">
+              <div className="w-2/3 font-cobaltRidge text-5xl md:text-6xl lg:text-7xl  text-primary-foreground ">
                 {highlightWords(
                   data.heading,
                   data.wordsToHighlight.text1,
@@ -45,7 +45,7 @@ export default function KlawB() {
               {/* Buttons Section */}
               <div className="flex justify-start w-full">
                 <JumpingButtons
-                  ishorizontal="true"
+                  ishorizontal={true}
                   text1={data?.jumppingButton?.[0]?.text1 || ""}
                   text2={data?.jumppingButton?.[0]?.text2 || ""}
                   bgColor={data?.jumppingButton?.[0]?.bgColor || ""}
@@ -72,12 +72,12 @@ export default function KlawB() {
         {/* <img src={renderImg("headerSection")} className="w-full" /> */}
         {renderSvg(data.sectionHeader)}
       </div>
-      <div className="py-8 lg:py-16 px-4 sm:px-12 lg:px-20 text-black ">
+      <div className="px-4 md:px-12 lg:px-16 text-black py-5 lg:py-10 xl:px-28 ">
         <div className="py-8 lg:py-16">
           <ProductCeoReviewsContainer comment={data} />
         </div>
         <div className="py-8 lg:py-24">
-          <Unboxing product="Klaw-b"/>
+          <Unboxing product="Klaw-b" />
         </div>
         <div className="text-sm py-24 my-8 text-center font-bold flex flex-col space-y-6 justify-center items-center">
           <div className="text-lg sm:text-lg md:text-base lg:text-lg xl:text-xl font-tthoves-semiBold">
@@ -140,7 +140,7 @@ export default function KlawB() {
           <CeoComments />
         </div>{" "} */}
         <div className="py-20">
-          <FlexibleLearning product="Klaw-b"/>
+          <FlexibleLearning product="Klaw-b" />
         </div>
         <div className="py-16 md:py-20">
           <ExtraFeatures
@@ -155,7 +155,7 @@ export default function KlawB() {
             desc="Explore our comprehensive curriculum designed to make coding and robotics accessible and exciting. Get started with structured lessons and hands-on projects today!"
           />
         </div> */}
-        <div className="-mx-8 lg:-mx-28">
+        <div className="w-screen -mx-4 md:-mx-12 lg:-mx-16 xl:-mx-28">
           <TestimonialBanner />
         </div>
         <div className="py-5 lg:py-20">
@@ -165,7 +165,7 @@ export default function KlawB() {
           <GetInTouch />
         </div>
         <div>
-        <Curious jumppingButton={data?.jumppingButton || []} />
+          <Curious jumppingButton={data?.jumppingButton || []} />
         </div>
       </div>
     </>

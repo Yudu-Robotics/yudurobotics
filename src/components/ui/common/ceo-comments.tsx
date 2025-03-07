@@ -10,7 +10,7 @@ const CeoComments: React.FC<CeoCommentsProps> = ({ title }) => {
         <div className="w-[50%] md:w-[25%]">
           <img src={renderImg("stars")} alt="" className="w-full" />
         </div>
-        <h1 className="font-piepie text-sm md:text-5xl">
+        <h1 className="font-cobaltRidge text-sm md:text-5xl">
           {title ||
             "Crawl-E’s adaptability and stability have taken our robotics projects to the next level."}
         </h1>
@@ -31,7 +31,7 @@ const CeoComments: React.FC<CeoCommentsProps> = ({ title }) => {
               <img src={renderImg("leftarrow")} alt="" />
             </div>
             <div className="rounded-full md:px-4  border-secondary-foreground text-secondary-foreground">
-              <img src={renderImg("rightarrow")} alt=""/>
+              <img src={renderImg("rightarrow")} alt="" />
             </div>
           </div>
         </div>

@@ -1,5 +1,3 @@
-"use client";
-import React from "react";
 import ClientLayout from "../common-layout";
 
 export default function HomeLayout({
@@ -8,8 +6,8 @@ export default function HomeLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="overflow-x-hidden">
-      <ClientLayout>{children}</ClientLayout>
-    </div>
+    // <div className="overflow-x-hidden">
+    <ClientLayout>{children}</ClientLayout>
+    // </div>
   );
 }

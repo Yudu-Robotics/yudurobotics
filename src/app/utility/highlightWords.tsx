@@ -14,11 +14,13 @@ export function highlightWords(
   return parts?.map((part, index) => {
     if (wordsToHighlight.includes(part)) {
       return (
+        // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
         <span key={index} className={highlightClass}>
           {part}
         </span>
       );
     }
+    // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
     return <span key={index}>{part}</span>;
   });
 }

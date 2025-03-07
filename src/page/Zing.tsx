@@ -31,7 +31,7 @@ export default function Zing() {
 
             <div className="space-y-4">
               {/* Main Headline */}
-              <div className="font-piepie text-5xl md:text-6xl lg:text-7xl  text-primary-foreground lg:w-[80%]">
+              <div className="font-cobaltRidge text-5xl md:text-6xl lg:text-7xl  text-primary-foreground lg:w-[80%]">
                 {highlightWords(
                   data.heading,
                   data.wordsToHighlight.text1,
@@ -49,7 +49,7 @@ export default function Zing() {
           {
             <div className=" flex items-end  ">
               <JumpingButtons
-                ishorizontal="true"
+                ishorizontal={true}
                 text1={data?.jumppingButton?.[0]?.text1 || ""}
                 text2={data?.jumppingButton?.[0]?.text2 || ""}
                 bgColor={data?.jumppingButton?.[0]?.bgColor || ""}
@@ -79,10 +79,10 @@ export default function Zing() {
         {/* <img src={renderImg("headerSection")} className="w-full" /> */}
         {renderSvg(data.sectionHeader)}
       </div>
-      <div className="py-8 lg:py-16 px-4 sm:px-12 lg:px-28 text-black ">
+      <div className="px-4 md:px-12 lg:px-16 text-black py-5 lg:py-10 xl:px-28 ">
         <ProductCeoReviewsContainer comment={data} />
         <div className="py-8 lg:py-24">
-          <Unboxing product="Zing"/>
+          <Unboxing product="Zing" />
         </div>
         <div className="text-xl py-24 text-center  flex flex-col space-y-6 justify-center items-center">
           <p className="font-tthoves-semiBold opacity-70">
@@ -127,7 +127,7 @@ export default function Zing() {
           <CeoComments />
         </div>{" "} */}
         <div className="py-20">
-          <FlexibleLearning product="Zing"/>
+          <FlexibleLearning product="Zing" />
         </div>
         <div className="py-16 md:py-20">
           <ExtraFeatures
@@ -142,7 +142,7 @@ export default function Zing() {
             desc="Explore our comprehensive curriculum designed to make coding and robotics accessible and exciting. Get started with structured lessons and hands-on projects today!"
           />
         </div> */}
-        <div className="-mx-8 lg:-mx-28">
+        <div className="w-screen -mx-4 md:-mx-12 lg:-mx-16 xl:-mx-28">
           <TestimonialBanner />
         </div>
         <div className="py-5 lg:py-20">
@@ -152,7 +152,7 @@ export default function Zing() {
           <GetInTouch />
         </div>
         <div>
-        <Curious jumppingButton={data?.jumppingButton || []} />
+          <Curious jumppingButton={data?.jumppingButton || []} />
         </div>
       </div>
     </>

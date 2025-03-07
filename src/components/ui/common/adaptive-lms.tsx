@@ -11,7 +11,7 @@ const AdaptiveLMS = () => {
         <h1 className="font-tthoves-semiBold text-lg sm:text-sm md:text-base lg:text-lg xl:text-xl text-primary">
           Curriculum
         </h1>
-        <h2 className="text-4xl lg:text-5xl xl:text-7xl font-piepie">
+        <h2 className="text-4xl lg:text-5xl xl:text-7xl font-cobaltRidge">
           Adaptive LMS
         </h2>
         <p className="font-tthoves text-lg sm:text-sm md:text-base lg:text-lg xl:text-xl text-secondary-foreground mt-3">

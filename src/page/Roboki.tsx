@@ -31,7 +31,7 @@ export default function Roboki() {
 
             <div className="space-y-4 w-full ">
               {/* Main Headline */}
-              <div className="font-piepie text-5xl md:text-6xl lg:text-7xl xl:text-8xl  text-primary-foreground w-[100%] lg:w-[80%] sm:text-start text-center ">
+              <div className="font-cobaltRidge text-5xl md:text-6xl lg:text-7xl xl:text-8xl  text-primary-foreground w-[100%] lg:w-[80%] sm:text-start text-center ">
                 {highlightWords(
                   data.heading,
                   data.wordsToHighlight.text1,
@@ -48,7 +48,7 @@ export default function Roboki() {
           {/* Buttons Section */}
           {
             <JumpingButtons
-              ishorizontal="true"
+              ishorizontal={true}
               text1={data?.jumppingButton?.[0]?.text1 || ""}
               text2={data?.jumppingButton?.[0]?.text2 || ""}
               bgColor={data?.jumppingButton?.[0]?.bgColor || ""}
@@ -72,12 +72,12 @@ export default function Roboki() {
         {/* <img src={renderImg("headerSection")} className="w-full" /> */}
         {renderSvg(data.sectionHeader)}
       </div>
-      <div className="px-4 sm:px-12 lg:px-16 text-black py-5 lg:py-10">
+      <div className="px-4 md:px-12 lg:px-16 text-black py-5 lg:py-10 xl:px-28 ">
         <div className="py-8 lg:py-16">
           <ProductCeoReviewsContainer comment={data} />
         </div>
         <div className="py-8 lg:py-24">
-          <Unboxing product="Roboki"/>
+          <Unboxing product="Roboki" />
         </div>
         <div className="text-sm py-24 my-8 text-center font-bold  flex flex-col space-y-6 justify-center items-center">
           <p className="text-lg sm:text-lg md:text-base lg:text-lg xl:text-xl font-tthoves-semiBold">
@@ -121,7 +121,7 @@ export default function Roboki() {
           <CeoComments />
         </div>{" "} */}
         <div className="py-20">
-          <FlexibleLearning product="Roboki"/>
+          <FlexibleLearning product="Roboki" />
         </div>
         <div className="py-16 md:py-20">
           <ExtraFeatures
@@ -136,7 +136,7 @@ export default function Roboki() {
             desc="Explore our comprehensive curriculum designed to make coding and robotics accessible and exciting. Get started with structured lessons and hands-on projects today!"
           />
         </div> */}
-        <div className="-mx-8 lg:-mx-28">
+        <div className="w-screen -mx-4 md:-mx-12 lg:-mx-16 xl:-mx-28">
           <TestimonialBanner />
         </div>
         <div className="py-5 lg:py-20">
@@ -146,7 +146,7 @@ export default function Roboki() {
           <GetInTouch />
         </div>
         <div>
-        <Curious jumppingButton={data?.jumppingButton || []} />
+          <Curious jumppingButton={data?.jumppingButton || []} />
         </div>
       </div>
     </>

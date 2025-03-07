@@ -4,42 +4,42 @@ export default function TeamGrid() {
     {
       name: "Sandeep",
       title: "Founder & CEO",
-      imgSrc: "assets/home/Image (1).png",
+      imgSrc: "assets/home/Image (1).webp",
     },
     {
       name: "Varun",
       title: "Engineering Manager",
-      imgSrc: "assets/home/Image (2).png",
+      imgSrc: "assets/home/Image (2).webp",
     },
     {
       name: "Abhijith",
       title: "Product Manager",
-      imgSrc: "assets/home/Image (3).png",
+      imgSrc: "assets/home/Image (3).webp",
     },
     {
       name: "Dhanesh",
       title: "Frontend Developer",
-      imgSrc: "assets/home/Image (4).png",
+      imgSrc: "assets/home/Image (4).webp",
     },
     {
       name: "Goutham",
       title: "Backend Developer",
-      imgSrc: "assets/home/Image (5).png",
+      imgSrc: "assets/home/Image (5).webp",
     },
     {
       name: "Pavan",
       title: "Product Designer",
-      imgSrc: "assets/home/Image (6).png",
+      imgSrc: "assets/home/Image (6).webp",
     },
     {
       name: "Arjun",
       title: "UX Researcher",
-      imgSrc: "assets/home/Image (7).png",
+      imgSrc: "assets/home/Image (7).webp",
     },
     {
       name: "Aishwarya",
       title: "Customer Success",
-      imgSrc: "assets/home/Image (8).png",
+      imgSrc: "assets/home/Image (8).webp",
     },
   ];
 

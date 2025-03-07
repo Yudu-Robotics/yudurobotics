@@ -30,7 +30,7 @@ export function WrongPageComponent() {
     <div className="px-8 lg:px-28  text-black flex justify-center flex-col items-center space-y-20 bg-primary">
       {/* <div className="flex flex-col space-y-3 ">
         <h1 className="text-xs text-primary">404 error</h1>
-        <h2 className="text-2xl lg:text-4xl font-piepie">We lost this page</h2>
+        <h2 className="text-2xl lg:text-4xl font-cobaltRidge">We lost this page</h2>
         <h3 className="text-secondary-foreground">
           {
             "We searched high and low, but couldn’t find what you’re looking for. Let us find a better place for you to go."

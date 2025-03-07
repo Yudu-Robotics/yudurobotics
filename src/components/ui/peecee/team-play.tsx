@@ -27,7 +27,7 @@ const TeamPlay: React.FC<{ hardware: HardwareData }> = ({ hardware }) => {
         <h1 className="font-tthoves-semiBold w-full text-left  sm:text-center text-primary sm:text-sm md:text-base lg:text-lg xl:text-xl font-tthoves-medium ">
           Hardware
         </h1>
-        <h2 className="w-full text-left  sm:text-center  text-4xl lg:text-5xl xl:text-6xl font-piepie tracking-wide ">
+        <h2 className="w-full text-left  sm:text-center  text-4xl lg:text-5xl xl:text-6xl font-cobaltRidge tracking-wide ">
           {highlightWords(section3.heading, ["Play!"], "text-primary")}
         </h2>
         <h2 className="w-full font-tthoves text-left  sm:text-center  sm:text-sm md:text-base lg:text-lg xl:text-xl text-secondary-foreground  text-lg lg:w-[80%] pt-2">

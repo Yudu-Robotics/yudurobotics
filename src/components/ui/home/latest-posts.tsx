@@ -11,7 +11,7 @@ const LatestPosts = () => {
       title: "Future of Robotics: Trends to Watch",
       desc: "Explore emergin robotics trends shaping the future.",
       tags: ["Design", "Research", "Presentation"],
-      image: "assets/home/ProductImage1.png",
+      image: "assets/home/ProductImage1.webp",
       color: "green-500",
     },
     {
@@ -20,7 +20,7 @@ const LatestPosts = () => {
       title: "How Robotics is Transforming Education",
       desc: "Discover how robots are revolutionizing learning environments.",
       tags: ["Product", "Tools", "Robotics"],
-      image: "assets/home/ProductImage2.png",
+      image: "assets/home/ProductImage2.webp",
       color: "red-100",
     },
     {
@@ -29,7 +29,7 @@ const LatestPosts = () => {
       title: "Behind the Scenes: Building a Robotic Masterpiece",
       desc: "A glimpse into the creative process of our latest project.",
       tags: ["Software Development", "Robotics"],
-      image: "assets/home/ProductImage3.png",
+      image: "assets/home/ProductImage3.webp",
       color: "purple-500",
     },
   ];
@@ -41,7 +41,7 @@ const LatestPosts = () => {
           {" "}
           Latest Posts
         </h1>
-        <h2 className="text-lg lg:text-3xl font-piepie ">
+        <h2 className="text-lg lg:text-3xl font-cobaltRidge ">
           Dive into Our Insights
         </h2>
         <h3 className="text-secondary-foreground text-center text-sm lg:text-lg">
@@ -67,7 +67,7 @@ const LatestPosts = () => {
                 {value.author_name} {" . "} {value.date}
               </h1>
               <div className="flex justify-between py-2">
-                <h1 className="font-piepie text-base lg:text-lg w-[90%] lg:w-[70%] ">
+                <h1 className="font-cobaltRidge text-base lg:text-lg w-[90%] lg:w-[70%] ">
                   {value.title}
                 </h1>
                 <img

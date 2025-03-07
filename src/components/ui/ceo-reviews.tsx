@@ -1,51 +1,99 @@
-import renderImg from "@/imgImport";
-import React from "react";
+import renderImg, { type ImageName } from "@/imgImport";
+// import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import Image from "next/image";
+import { TextAnimate } from "../magicui/text-animate";
 interface CeoProps {
-  data?: any;
+  data?: {
+    name: string;
+    designation: string;
+    company: string;
+    desc: string;
+    src: ImageName;
+  };
 }
 const CeoReviewsContainer: React.FC<CeoProps> = ({ data }) => {
   return (
     <div className="w-full relative">
       <div>
-        <img alt="" src={renderImg("star1")} className="" />
+        <Image
+          width={500}
+          height={500}
+          alt=""
+          src={renderImg("star1")}
+          className="h-8 w-8 hidden md:block"
+        />
       </div>
       <div className="flex flex-col items-center space-y-6">
-        <div className="flex items-center">
-          
-          
-        </div>
+        <div className="flex items-center" />
 
         <div className="flex items-center">
-          <p className="text-center  items-center font-TThoves text-2xl md:text-4xl lg:text-5xl  text-primary-foreground text-[var(--Fontsizedisplay-sm)] font-bold leading-[var(--Lineheightdisplay-sm)] text-center underline-offset-from-font decoration-skip-ink-none" style={{fontFamily: "'YourFontFamily', sans-serif", fontWeight: 1000,textUnderlinePosition: "from-font",textDecorationSkipInk: "none"}}>
-            {data?.desc ||
-              "Yudu Robotics has been an incredible partner, blending creativity with cutting-edge tech to drive innovation like never before."}
-          </p>
+          <div
+            className="text-center items-center font-TThoves text-2xl md:text-4xl lg:text-5xl  text-primary-foreground text-[var(--Fontsizedisplay-sm)] font-bold leading-[var(--Lineheightdisplay-sm)] underline-offset-from-font decoration-skip-ink-none"
+            style={{
+              fontFamily: "'YourFontFamily', sans-serif",
+              fontWeight: 1000,
+              textUnderlinePosition: "from-font",
+              textDecorationSkipInk: "none",
+            }}
+          >
+            <TextAnimate animation="fadeIn" by="line">
+              {data?.desc || "here is the description"}
+            </TextAnimate>
+            {/* <TypingAnimation duration={50}>
+              {data?.desc ||
+                "Yudu Robotics has been an incredible partner, blending creativity with cutting-edge tech to drive innovation like never before."}
+            </TypingAnimation> */}
+          </div>
         </div>
       </div>
       <div className="flex flex-col justify-center items-center mt-8">
         <Avatar>
-          <AvatarImage src="https://github.com/shadcn.png" />
+          <AvatarImage
+            src={renderImg(data?.src ? data.src : "ceoAvatar")}
+            alt="ceo"
+          />
           <AvatarFallback>CEO</AvatarFallback>
         </Avatar>
 
         <h4 className="mt-2 text-xl font-tthoves-semiBold">
-          {data?.name || "Mr Filepe Gracia"}
+          {data?.name || "name of ceo"}
         </h4>
         <p className="font-tthoves">
-          {data?.designation && data?.company
+          {data?.designation
             ? `${data?.designation} , ${data?.company}`
-            : "Marketing Head , Inroprin - Peru"}
+            : ` ${data?.company}`}
         </p>
       </div>
       <div className="lg:flex justify-end lg:-mt-16 lg:px-10 hidden relative ">
-        <img alt="" src={renderImg("star2")} className="" />
-        <div className=" absolute right-0  -top-9 ">
-          <img alt="" src={renderImg("star1")} className=" w-10 " />
+        <div className="">
+          <Image
+            width={500}
+            height={500}
+            alt=""
+            src={renderImg("star1")}
+            className="h-10 w-10 hidden md:block absolute right-16 top-4 "
+          />
+          <Image
+            width={500}
+            height={500}
+            alt=""
+            src={renderImg("star2")}
+            className="h-8 w-8 hidden md:block"
+          />
         </div>
       </div>
-      <div className="hidden lg:block absolute md:-translate-y-60 xl:-translate-y-40 -left-40">
+      {/* <div className="hidden lg:block absolute md:-translate-y-60 xl:-translate-y-40  -left-40">
         <img alt="" src={renderImg("curv")} className="" />
+      </div> */}
+      <div className="hidden lg:block absolute md:-translate-y-60 xl:-translate-y-40  -left-40 z-40">
+        <Image
+          width={500}
+          height={500}
+          alt=""
+          src={renderImg("curv")}
+          className="w-56 hidden md:block"
+        />
       </div>
     </div>
   );

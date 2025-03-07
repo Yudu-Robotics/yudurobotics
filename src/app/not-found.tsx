@@ -1,27 +1,27 @@
 // pages/404.tsx
 "use client";
-import Link from "next/link";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-} from "@/components/ui/navigation-menu";
+// import Link from "next/link";
+// import {
+//   NavigationMenu,
+//   NavigationMenuContent,
+//   NavigationMenuIndicator,
+//   NavigationMenuItem,
+//   NavigationMenuLink,
+//   NavigationMenuList,
+//   NavigationMenuTrigger,
+//   NavigationMenuViewport,
+// } from "@/components/ui/navigation-menu";
 
 import React from "react";
-import renderImg from "@/imgImport";
+// import renderImg from "@/imgImport";
 import Footer from "@/components/ui/footer/footer";
 import renderSvg from "@/svgImport";
 import { WrongPageComponent } from "@/components/ui/not-found-component";
 
 const NotFoundPage = () => {
   const NavBarItems = [
-    { name: "Our Products", link: "/products" },
-    { name: "The Partner Program", link: "/partner" },
+    { name: "Our Products", link: "/products", key: "products" },
+    { name: "The Partner Program", link: "/partner", key: "partner" },
     // "Crazies Behind",
     // "Resources",
     // "Blogs",
@@ -40,9 +40,11 @@ const NotFoundPage = () => {
             {renderSvg("logoYudoRobo")}
           </a>
           <div className="space-x-4 hidden lg:flex lg:justify-center lg:items-center text-primary-foreground">
-            {NavBarItems.map((item, key: number) => (
-              <div key={key}>
-                {/* {key == 0 ? (
+            {NavBarItems.map((item) => {
+              const { key, name, link } = item;
+              return (
+                <div key={key}>
+                  {/* {key == 0 ? (
                   <NavigationMenu>
                     <NavigationMenuList>
                       <NavigationMenuItem>
@@ -50,21 +52,22 @@ const NotFoundPage = () => {
                           {item.name}
                         </NavigationMenuTrigger>
                         {/* <NavigationMenuContent> */}
-                {/* <NavigationMenuLink>Link</NavigationMenuLink> */}
-                {/* </NavigationMenuContent> */}
-                {/* </NavigationMenuItem>
+                  {/* <NavigationMenuLink>Link</NavigationMenuLink> */}
+                  {/* </NavigationMenuContent> */}
+                  {/* </NavigationMenuItem>
                     </NavigationMenuList>
                   </NavigationMenu>
                 ) : ( */}
-                <a
-                  href={item.link}
-                  className="text-primary-foreground font-tthoves-semiBold text-center text-sm px-3 hover:text-destructive bg-primary"
-                >
-                  {item.name}
-                </a>
-                {/* // )} */}
-              </div>
-            ))}
+                  <a
+                    href={link}
+                    className="text-primary-foreground font-tthoves-semiBold text-center text-sm px-3 hover:text-destructive bg-primary"
+                  >
+                    {name}
+                  </a>
+                  {/* // )} */}
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
