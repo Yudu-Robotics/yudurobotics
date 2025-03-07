@@ -3,6 +3,8 @@ import withBundleAnalyzer from "@next/bundle-analyzer";
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
+  basePath: process.env.NODE_ENV === 'production' ? '/yudurobotics' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/yudurobotics/' : '',
   experimental: {
     optimizePackageImports: [
       "lucid-react",
