@@ -515,7 +515,7 @@ export const mockData: { [key: string]: ProductData } = {
         link: "#footer-contact-form-component",
       },
       {
-        text1: "Lemee",
+        text1: "Lemme",
         text2: "Learn ",
         text3: "More",
         bgColor: "#00FFA3",
@@ -805,7 +805,7 @@ export const mockData: { [key: string]: ProductData } = {
         link: "#",
       },
       {
-        text1: "Lemee",
+        text1: "Lemme",
         text2: "Learn ",
         text3: "More",
         bgColor: "#602CF7",
@@ -1026,7 +1026,7 @@ export const mockData: { [key: string]: ProductData } = {
         link: "",
       },
       {
-        text1: "Lemee",
+        text1: "Lemme",
         text2: "Learn ",
         text3: "More",
         bgColor: "#602CF7",
@@ -1216,7 +1216,7 @@ export const mockData: { [key: string]: ProductData } = {
         link: "",
       },
       {
-        text1: "Lemee",
+        text1: "Lemme",
         text2: "Learn ",
         text3: "More",
         bgColor: "#F72D3E",
@@ -1407,7 +1407,7 @@ export const mockData: { [key: string]: ProductData } = {
         link: "#",
       },
       {
-        text1: "Lemee",
+        text1: "Lemme",
         text2: "Learn ",
         text3: "More",
         bgColor: "#F72D3E",
@@ -1623,7 +1623,7 @@ export const mockData: { [key: string]: ProductData } = {
         link: "#",
       },
       {
-        text1: "Lemee",
+        text1: "Lemme",
         text2: "Learn ",
         text3: "More",
         bgColor: "#F7812E",
@@ -1927,7 +1927,7 @@ export const mockData: { [key: string]: ProductData } = {
         link: "#",
       },
       {
-        text1: "Lemee",
+        text1: "Lemme",
         text2: "Learn ",
         text3: "More",
         bgColor: "#2CF7A4",
@@ -2364,7 +2364,7 @@ export const mockData: { [key: string]: ProductData } = {
         link: "#",
       },
       {
-        text1: "Lemee",
+        text1: "Lemme",
         text2: "Learn ",
         text3: "More",
         bgColor: "#2CF7A4",

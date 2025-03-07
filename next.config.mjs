@@ -2,10 +2,10 @@ import withBundleAnalyzer from "@next/bundle-analyzer";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
-  basePath: process.env.NODE_ENV === 'production' ? `/yudurobotics` : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? `/yudurobotics` : '',
-  trailingSlash: true,
+  //output: "export",
+  //basePath: process.env.NODE_ENV === 'production' ? `/yudurobotics` : '/yudurobotics',
+  //assetPrefix: process.env.NODE_ENV === 'production' ? `/yudurobotics/` : '/yudurobotics/',
+  //trailingSlash: true,
   experimental: {
     optimizePackageImports: [
       "lucid-react",
@@ -16,10 +16,10 @@ const nextConfig = {
     ],
     optimizeCss: true, // Enable CSS optimization
     scrollRestoration: true,
-    serverActions: true,
+    //serverActions: true,
     webVitalsAttribution: ["CLS", "LCP", "FCP", "FID", "TTFB", "INP"],
   },
-  bundlePagesRouterDependencies: true,
+  //bundlePagesRouterDependencies: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
