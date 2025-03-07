@@ -3,8 +3,9 @@ import withBundleAnalyzer from "@next/bundle-analyzer";
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  basePath: process.env.NODE_ENV === 'production' ? '/yudurobotics' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/yudurobotics/' : '',
+  basePath: process.env.NODE_ENV === 'production' ? `/yudurobotics` : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? `/yudurobotics` : '',
+  trailingSlash: true,
   experimental: {
     optimizePackageImports: [
       "lucid-react",
@@ -30,9 +31,6 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
     contentDispositionType: "attachment",
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-  },
-  compiler: {
-    removeConsole: process.env.NODE_ENV === "production",
   },
   compress: true,
   poweredByHeader: false,
