@@ -63,16 +63,25 @@ export const metadata: Metadata = {
         alt: "Yudu Robotics - Unleashing the power of creative robotics",
         type: "image/png",
       },
-      {
-        url: "/assets/logo.png",
-        width: 600,
-        height: 600,
-        alt: "Yudu Robotics - Unleashing the power of creative robotics",
-        type: "image/png",
-      },
     ],
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Yudu Robotics",
+    description:
+      "From Playful Robots and Drones to Precision 3D Printers Unleash the power of creative robotics. Yudu makes the impossible fun",
+    images: ["/assets/logo.png"],
+  },
+  keywords: [
+    "Yudu Robotics",
+    "Robots",
+    "Drones",
+    "3D Printers",
+    "Robotics",
+    "Technology",
+    "Innovation",
+  ],
 };
 
 export default function RootLayout({
