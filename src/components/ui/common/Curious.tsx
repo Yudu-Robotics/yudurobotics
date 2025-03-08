@@ -33,7 +33,7 @@ export default function Curious({ jumppingButton }: CuriousProps) {
             <div className="space-y-4">
               {/* Main Heading */}
               <div className="font-cobaltRidge text-4xl md:text-3xl lg:text-4xl xl:text-6xl text-primary-foreground leading-tight">
-                Curious about the
+                Curious about
                 <br />
                 <span className="text-destructive">Partnering with Us?</span>
               </div>

@@ -1,38 +1,6 @@
 export const faqData = [
   {
     product: "home",
-    // faqs: [
-    //     {
-    //         question: "What does Yudu Robotics do?",
-    //         answer:
-    //             "We create innovative, playful robotics kits that inspire creativity and push the boundaries of technology.",
-    //     },
-    //     {
-    //         question: "Who can use Yudu products?",
-    //         answer:
-    //             "Yudu products are designed for everyone, from beginners exploring robotics to professionals advancing their skills.",
-    //     },
-    //     {
-    //         question: "What platforms are Yudu products compatible with?",
-    //         answer:
-    //             "Yudu products are compatible with Android and iOS with the app being available on Playstore and App Store. It also works on Windows and macOS.",
-    //     },
-    //     {
-    //         question: "How can I purchase Yudu products?",
-    //         answer:
-    //             "Please contact our sales team for purchase options or submit your inquiry using the form on our website and we will reach out to you.",
-    //     },
-    //     {
-    //         question: "Do you ship internationally?",
-    //         answer:
-    //             "Yes, we offer international shipping. Shipping rates and availability depend on your location.",
-    //     },
-    //     {
-    //         question: "How do I get started with Yudu products?",
-    //         answer:
-    //             "You can get started by exploring the beginner-friendly guides and tutorials provided with your kit.",
-    //     },
-    // ],
     faqs: [
       {
         question: "What are the offerings for partners?",
@@ -72,7 +40,10 @@ export const faqData = [
       {
         question: "Why should I choose Yudo Robotics?",
         answer:
-          "Yudo Robotics stands out for three key reasons:\n1. Expertise & Reliability – With over a decade of experience, we understand robotics better than anyone else. Our commitment to quality, innovation, and trust makes us a reliable partner for all your robotics needs.\n2. Comprehensive Solutions – We offer a wide range of products, from 3D printers to drones and programmable kits, all under one roof. Our seamlessly integrated software Plode ensures smooth operation across all hardware, providing a cost-effective, single-stop solution.\n3. Future-Ready Learning & Design – Our products and curriculum are designed to meet next-generation standards, with AI-driven learning management for smart student progress tracking. Our cutting-edge design approach ensures high performance and ease of use.",
+          "Yudo Robotics stands out for three key reasons:\n\n" +
+          "1. Expertise & Reliability – With over a decade of experience, we understand robotics better than anyone else. Our commitment to quality, innovation, and trust makes us a reliable partner for all your robotics needs.\n\n" +
+          "2. Comprehensive Solutions – We offer a wide range of products, from 3D printers to drones and programmable kits, all under one roof. Our seamlessly integrated software Plode ensures smooth operation across all hardware, providing a cost-effective, single-stop solution.\n\n" +
+          "3. Future-Ready Learning & Design – Our products and curriculum are designed to meet next-generation standards, with AI-driven learning management for smart student progress tracking. Our cutting-edge design approach ensures high performance and ease of use.",
       },
     ],
   },
@@ -117,7 +88,7 @@ export const faqData = [
       },
       {
         question:
-          "What is the purpose of PeeCee TED’s expressive LED eyes and smile?",
+          "What is the purpose of PeeCee TED's expressive LED eyes and smile?",
         answer:
           "The RGB LED eyes and the LED smile provide visual feedback and enable PeeCee TED to interact with users in an engaging way.",
       },
@@ -197,7 +168,7 @@ export const faqData = [
           "Zing combines humanoid movements, interactive sensors, and versatile programming options to provide an engaging learning experience.",
       },
       {
-        question: "What are Zing’s basic movements and actions?",
+        question: "What are Zing's basic movements and actions?",
         answer:
           "Zing can perform basic human-like actions such as walking, dancing, and turning its head.",
       },
@@ -212,7 +183,7 @@ export const faqData = [
           "Zing supports block-based programming for beginners and Python for advanced users through the Plode App. It is also compatible with IDEs like Arduino IDE and Thonny IDE.",
       },
       {
-        question: "What is Zing’s degree of freedom (DOF)?",
+        question: "What is Zing's degree of freedom (DOF)?",
         answer:
           "Zing has 16 degrees of freedom, enabling human-like movements.",
       },
@@ -267,17 +238,17 @@ export const faqData = [
           "Crawl-e can be controlled wirelessly through the Plode app using Bluetooth or USB, offering joystick controls, pre-programmed actions, and voice commands.",
       },
       {
-        question: "What are the advantages of Crawl-e’s leg design?",
+        question: "What are the advantages of Crawl-e's leg design?",
         answer:
           "The leg design provides flexibility, stability, and mobility, enabling smooth walking, climbing, and directional changes across different terrains.",
       },
       {
         question: "How does Crawl-e maintain balance?",
         answer:
-          "Crawl-e’s center of gravity and weight distribution are carefully managed to ensure stability and smooth movement, even on uneven surfaces.",
+          "Crawl-e's center of gravity and weight distribution are carefully managed to ensure stability and smooth movement, even on uneven surfaces.",
       },
       {
-        question: "Can I customize Crawl-e’s actions?",
+        question: "Can I customize Crawl-e's actions?",
         answer:
           "Yes, through the Plode app, users can create custom movement sequences and define behaviors based on sensor inputs.",
       },
@@ -322,9 +293,9 @@ export const faqData = [
           "Yes, Klaw can be enhanced with external plug-ins such as ultrasonic sensors, cameras, or LEDs for expanded functionality.",
       },
       {
-        question: "What is the role of the Plode app in Klaw’s control?",
+        question: "What is the role of the Plode app in Klaw's control?",
         answer:
-          "The Plode app allows users to manage Klaw’s movements, tasks, and programming with options like joystick control, block-based programming, and Python scripts.",
+          "The Plode app allows users to manage Klaw's movements, tasks, and programming with options like joystick control, block-based programming, and Python scripts.",
       },
       {
         question: "What programming methods are supported by Klaw?",

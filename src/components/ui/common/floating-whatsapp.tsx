@@ -45,7 +45,7 @@ const FloatingWhatsApp = () => {
           <div>{renderSvg("floatingWhatsApp")}</div>
         </button>
       </PopoverTrigger>
-      <PopoverContent className="w-80 p-0 bg-gray-50 mr-2 md:mr-4 rounded-lg">
+      <PopoverContent className="w-80 p-0 bg-gray-50 mr-2 md:mr-4 rounded-lg font-tthoves">
         <div className="flex justify-between items-center bg-green-600 p-3 text-white rounded-t-lg">
           <h4 className="font-medium">Chat with us!</h4>
           <button
