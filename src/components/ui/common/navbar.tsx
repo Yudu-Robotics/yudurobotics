@@ -96,7 +96,7 @@ const Navbar = ({ setIsDrawerOpen }: NavbarProps) => {
           description:
             "Colorful plastic blocks inspiring creativity and hands-on building.",
           image: "toy",
-          link: "/play-dynamex",
+          link: "",
         },
       ],
     },
