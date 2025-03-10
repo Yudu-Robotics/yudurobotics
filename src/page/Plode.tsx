@@ -93,7 +93,7 @@ export default function Plode() {
         <div className="py-8 lg:py-16 -mx-10">
           <ProductCeoReviewsContainer comment={data} />
         </div>
-        <div className="hidden text-sm py-24 my-8 text-center font-bold sm:flex flex-col space-y-6 justify-center items-center">
+        <div className="hidden text-sm py-24 my-8 text-center font-bold md:flex flex-col space-y-6 justify-center items-center">
           <p className="text-[#4A4A4F]">
             <span className="text-black ">
               Hover over each feature below to{" "}

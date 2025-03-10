@@ -84,7 +84,7 @@ export default function Zing() {
         <div className="py-8 lg:py-24">
           <Unboxing product="Zing" />
         </div>
-        <div className="hidden text-sm py-24 my-8 text-center font-bold sm:flex flex-col space-y-6 justify-center items-center">
+        <div className="hidden text-sm py-24 my-8 text-center font-bold md:flex flex-col space-y-6 justify-center items-center">
           <p className="font-tthoves-semiBold opacity-70">
             Hover over each feature below to{" "}
             <span className="text-primary italic">see it in action!</span>

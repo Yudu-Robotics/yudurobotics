@@ -166,7 +166,7 @@ export default function Peecee() {
           scale={1.1}
           threshold={0.2}
         >
-          <div className="hidden text-sm py-24 my-8 text-center font-bold sm:flex flex-col space-y-6 justify-center items-center">
+          <div className="hidden text-sm py-24 my-8 text-center font-bold md:flex flex-col space-y-6 justify-center items-center">
             <p className="text-lg sm:text-lg md:text-base lg:text-lg xl:text-xl font-tthoves-semiBold">
               <span className="text-[#4A4A4F] opacity-70">
                 Hover over each feature below to{" "}
