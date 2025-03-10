@@ -44,13 +44,44 @@ const ttHovesBold = localFont({
 // import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
-import Head from "next/head";
 
 // const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Yudo Robotics",
-  description: "LMS",
+  title: "Yudu Robotics",
+  description:
+    "From Playful Robots and Drones to Precision 3D Printers Unleash the power of creative robotics. Yudu makes the impossible fun, helping you build, play, and explore with groundbreaking tech.",
+  openGraph: {
+    title: "Yudu Robotics",
+    description:
+      "From Playful Robots and Drones to Precision 3D Printers Unleash the power of creative robotics. Yudu makes the impossible fun",
+    images: [
+      {
+        url: "/preview.png",
+        width: 1200,
+        height: 630,
+        alt: "Yudu Robotics - Unleashing the power of creative robotics",
+        type: "image/png",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Yudu Robotics",
+    description:
+      "From Playful Robots and Drones to Precision 3D Printers Unleash the power of creative robotics. Yudu makes the impossible fun",
+    images: ["/preview.png"],
+  },
+  keywords: [
+    "Yudu Robotics",
+    "Robots",
+    "Drones",
+    "3D Printers",
+    "Robotics",
+    "Technology",
+    "Innovation",
+  ],
 };
 
 export default function RootLayout({
@@ -63,20 +94,6 @@ export default function RootLayout({
       lang="en"
       className={`${cobaltRidge.variable} ${ttHovesRegular.variable} ${ttHovesMedium.variable} ${ttHovesDemiBold.variable} ${ttHovesBold.variable} w-screen overflow-x-hidden`}
     >
-      <Head>
-        <title>Yudu Robotics</title>
-        <meta
-          name="description"
-          content="From Playful Robots and Drones to Precision 3D Printers Unleash the power of creative robotics. Yudu makes the impossible fun, helping you build, play, and explore with groundbreaking tech."
-          key="desc"
-        />
-        <meta property="og:title" content="Yudu Robotics" />
-        <meta
-          property="og:description"
-          content="From Playful Robots and Drones to Precision 3D Printers Unleash the power of creative robotics. Yudu makes the impossible fun, "
-        />
-        <meta property="og:image" content="/assets/favicon.ico" />
-      </Head>
       <body>
         <ThemeProvider
           attribute="class"

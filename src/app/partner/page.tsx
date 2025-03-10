@@ -18,7 +18,7 @@ const partnerDetails: PartnerDetail[] = [
     company: "Think Pro Academy",
     designation: "",
     src: "vivek",
-    desc: "Impressed by the quality of the kits and program, happy with the services and looking forward to expand in Peru markets.",
+    desc: "Yudu Robotics and Roboki with the Plode app have made robotics fun and easy to learn, simplifying complex concepts through engaging visual programming.",
   },
 ]; // the partner list is defined here as an array because in future if there is multiple partner we can add them here
 export default async function HomePage() {

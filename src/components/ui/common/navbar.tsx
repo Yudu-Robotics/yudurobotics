@@ -75,14 +75,14 @@ const Navbar = ({ setIsDrawerOpen }: NavbarProps) => {
           description:
             "A lifelike humanoid robot, perfect for interactive learning.",
           image: "Zing1",
-          link: "/animatronics/zing",
+          link: "/zing",
         },
         {
           id: 2,
           name: "Crawl-e",
           description: "A versatile hexapod explorer designed for learning.",
           image: "Crawle1",
-          link: "/animatronics/crawl-e",
+          link: "/crawl-e",
         },
       ],
     },
@@ -96,7 +96,7 @@ const Navbar = ({ setIsDrawerOpen }: NavbarProps) => {
           description:
             "Colorful plastic blocks inspiring creativity and hands-on building.",
           image: "toy",
-          link: "/Mechanical/play-dynamex",
+          link: "",
         },
       ],
     },

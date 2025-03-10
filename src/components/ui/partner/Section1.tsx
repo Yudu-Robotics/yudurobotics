@@ -49,7 +49,7 @@ const partnerDetails: PartnerDetail[] = [
     company: "Air Stem Labs",
     designation: "",
     src: "gowtham",
-    desc: "Impressed by the quality of the kits and program, happy with the services and looking forward to expand in Peru markets.",
+    desc: "Yudu Robotics has been a fantastic partner in revolutionizing how we teach robotics. Using Roboki with the Plode app has made visual programming simple and engaging, helping students grasp complex concepts while having fun",
   },
 ]; // the partner list is defined here as an array because in future if there is multiple partner we can add them here
 function Section1() {
