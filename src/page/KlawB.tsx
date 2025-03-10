@@ -79,7 +79,7 @@ export default function KlawB() {
         <div className="py-8 lg:py-24">
           <Unboxing product="Klaw-b" />
         </div>
-        <div className="text-sm py-24 my-8 text-center font-bold flex flex-col space-y-6 justify-center items-center">
+        <div className="hidden text-sm py-24 my-8 text-center font-bold sm:flex flex-col space-y-6 justify-center items-center">
           <div className="text-lg sm:text-lg md:text-base lg:text-lg xl:text-xl font-tthoves-semiBold">
             <p className="opacity-70 mt-8">
               Hover over each feature below to{" "}
