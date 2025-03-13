@@ -2,6 +2,7 @@ import renderImg from "@/imgImport";
 import React, { memo } from "react";
 import { Button } from "./view-products-buttons";
 import Image from "next/image";
+import { sendGAEvent, sendGTMEvent } from "@next/third-parties/google";
 
 const GetInTouch = () => {
   return (
@@ -24,7 +25,15 @@ const GetInTouch = () => {
       </div>
 
       <a href="#footer-contact-form-component" className="">
-        <Button className="rounded-full">Get in touch</Button>
+        <Button
+          className="rounded-full"
+          onClick={() => {
+            sendGTMEvent({ event: "buttonClicked", value: "whatsapp clicks" });
+            sendGAEvent({ event: "buttonClicked", value: "whatsapp clicks" });
+          }}
+        >
+          Get in touch
+        </Button>
       </a>
     </div>
   );
