@@ -2799,7 +2799,7 @@ const headerImageBackground = (
 );
 
 const floatingWhatsApp = (
-  <div className=" right-4 bg-[#602CF7]  h-16 w-16 p-4 rounded-md flex justify-center items-center shadow-lg">
+  <div className=" right-4 bg-primary  h-16 w-16 p-4 rounded-md flex justify-center items-center shadow-lg">
     <Image
       width={50}
       height={50}
