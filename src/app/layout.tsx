@@ -44,10 +44,12 @@ const ttHovesBold = localFont({
 // import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 
 // const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://yudurobotics.com"),
   title: "Yudu Robotics",
   description:
     "From Playful Robots and Drones to Precision 3D Printers Unleash the power of creative robotics. Yudu makes the impossible fun, helping you build, play, and explore with groundbreaking tech.",
@@ -94,6 +96,8 @@ export default function RootLayout({
       lang="en"
       className={`${cobaltRidge.variable} ${ttHovesRegular.variable} ${ttHovesMedium.variable} ${ttHovesDemiBold.variable} ${ttHovesBold.variable} w-screen overflow-x-hidden`}
     >
+      <GoogleTagManager gtmId="GTM-5G8Q4Z7Q" />
+      <GoogleAnalytics gaId="G-D90W2RDVFK" />
       <body>
         <ThemeProvider
           attribute="class"

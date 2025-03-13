@@ -13,6 +13,8 @@ import localFont from "next/font/local";
 import { ArrowUp } from "lucide-react";
 import Navbar from "@/components/ui/common/navbar";
 
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+
 const cobaltRidge = localFont({
   src: "./../../fonts/CobaltRidge.otf",
   variable: "--font-cobalt",
@@ -133,6 +135,8 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
       <head>
         <link rel="icon" href="assets/favicon.ico" />
       </head>
+      <GoogleTagManager gtmId="GTM-5G8Q4Z7Q" />
+      <GoogleAnalytics gaId="G-D90W2RDVFK" />
       <body>
         <div className="group">
           <div className="fixed w-screen top-0 left-0 h-[75px] z-50">

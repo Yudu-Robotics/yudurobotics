@@ -1,3 +1,4 @@
+"use client";
 // components/ui/FloatingWhatsApp.tsx
 import React, { useEffect, useState } from "react";
 import renderSvg from "@/svgImport";
@@ -9,6 +10,7 @@ import {
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import ContactForm from "./contact-us-form";
 import { X } from "lucide-react";
+import { sendGAEvent, sendGTMEvent } from "@next/third-parties/google";
 
 const FloatingWhatsApp = () => {
   // const router = useRouter();
@@ -30,6 +32,8 @@ const FloatingWhatsApp = () => {
   }, []);
 
   const handleClick = () => {
+    sendGTMEvent({ event: "buttonClicked", value: "whatsapp clicks" });
+    sendGAEvent({ event: "buttonClicked", value: "whatsapp clicks" });
     window.open(`https://wa.me/${phoneNumber}`, "_blank");
   };
 
