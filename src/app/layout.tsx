@@ -49,6 +49,7 @@ import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 // const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://yudurobotics.com"),
   title: "Yudu Robotics",
   description:
     "From Playful Robots and Drones to Precision 3D Printers Unleash the power of creative robotics. Yudu makes the impossible fun, helping you build, play, and explore with groundbreaking tech.",

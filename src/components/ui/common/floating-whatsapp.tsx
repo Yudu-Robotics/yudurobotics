@@ -1,3 +1,4 @@
+"use client";
 // components/ui/FloatingWhatsApp.tsx
 import React, { useEffect, useState } from "react";
 import renderSvg from "@/svgImport";

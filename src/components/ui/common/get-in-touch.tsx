@@ -1,3 +1,4 @@
+"use client";
 import renderImg from "@/imgImport";
 import React, { memo } from "react";
 import { Button } from "./view-products-buttons";
