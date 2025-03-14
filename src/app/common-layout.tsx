@@ -14,6 +14,7 @@ import { ArrowUp } from "lucide-react";
 import Navbar from "@/components/ui/common/navbar";
 
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+import Script from "next/script";
 
 const cobaltRidge = localFont({
   src: "./../../fonts/CobaltRidge.otf",
@@ -134,10 +135,43 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
     >
       <head>
         <link rel="icon" href="assets/favicon.ico" />
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-D90W2RDVFK"
+        />
+
+        <Script id="google-analytics">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-D90W2RDVFK');`}
+        </Script>
+
+        <Script id="google-tag-manager">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5G8Q4Z7Q');
+
+            `}
+        </Script>
       </head>
       <GoogleTagManager gtmId="GTM-5G8Q4Z7Q" />
       <GoogleAnalytics gaId="G-D90W2RDVFK" />
       <body>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-5G8Q4Z7Q"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+            title="Google Tag Manager"
+          />
+        </noscript>
+
         <div className="group">
           <div className="fixed w-screen top-0 left-0 h-[75px] z-50">
             <div className="px-8 lg:px-28 py-4 bg-primary">
