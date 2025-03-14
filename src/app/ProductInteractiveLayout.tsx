@@ -101,7 +101,7 @@ export default function ProductInteractiveLayout({
         <button
           type="button"
           onClick={scrollToTop}
-          className="fixed bottom-0 right-4 z-40 text-white p-3 rounded-full shadow-lg transition-all"
+          className="fixed bottom-2 sm:right-4 z-40 right-2 text-white flex border-2 border-blue-950/40 justify-center items-center p-2 w-16 h-16 bg-white rounded-full shadow-lg transition-all "
           title="Scroll to top"
         >
           <ArrowUp color="black" />
