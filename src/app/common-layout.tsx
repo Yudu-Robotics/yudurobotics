@@ -144,7 +144,9 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
           {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-
+   gtag('consent', 'default', {
+                    'analytics_storage': 'denied'
+                });
 gtag('config', 'G-D90W2RDVFK');`}
         </Script>
 
