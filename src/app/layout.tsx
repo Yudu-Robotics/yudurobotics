@@ -84,6 +84,39 @@ export const metadata: Metadata = {
     "Robotics",
     "Technology",
     "Innovation",
+    "DIY Kits",
+    "Educational Toys",
+    "STEM Toys",
+    "Robotic Kits",
+    "Robotics Lab Kits",
+    "Electronic Learning Kits",
+    "Robotic Toys for Kids",
+    "STEM Toys for Kids",
+    "Robotics for All Ages",
+    "Educational Gifts for Kids",
+    "Coding Toys",
+    "Block-based Coding",
+    "Visual Programming",
+    "AI Robotics",
+    "Multiple Project Kits",
+    "All Terrain Robots",
+    "School Robotics Lab",
+    "Educational STEM Kits",
+    "Learning Materials",
+    "Teaching Kits",
+    "Humanoid Robots",
+    "AI Learning Kits",
+    "Microcontroller Kits",
+    "Animatronics",
+    "Affordable Robotic Kits",
+    "Premium Robotics",
+    "Event Display Robots",
+    "Lab Equipment",
+    "School Projects",
+    "App-controlled Toys",
+    "Building Block Toys",
+    "International Robotics",
+    "Arduino Compatible",
   ],
 };
 
@@ -107,7 +140,9 @@ export default function RootLayout({
           {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-
+   gtag('consent', 'default', {
+                    'analytics_storage': 'denied'
+                });
 gtag('config', 'G-D90W2RDVFK');`}
         </Script>
 

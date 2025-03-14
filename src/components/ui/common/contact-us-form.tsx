@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // components/ContactForm.tsx
 "use client";
 import { useState } from "react";
@@ -10,8 +11,22 @@ import {
 } from "@/components/ui/dialog";
 import PrivacyContent from "../../ui/footer/PrivacyContent";
 import TermsContent from "../../ui/footer/TermsContent";
+import { cn } from "@/lib/utils";
 
-export default function ContactForm() {
+// Add these props to the component
+interface ContactFormProps {
+  submitButtonText?: string;
+  defaultEnquiryType?: string;
+  className?: string;
+  classNameInner?: string;
+}
+
+export default function ContactForm({
+  submitButtonText = "Send message",
+  defaultEnquiryType = "",
+  className = "",
+  classNameInner = "",
+}: ContactFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
@@ -19,7 +34,7 @@ export default function ContactForm() {
     "entry.1725892135": "", // Full Name
     "entry.2098983406": "", // Email
     "entry.1155783579": "", // Phone
-    "entry.1655141018": "", // Enquiry Type
+    "entry.1655141018": defaultEnquiryType, // Enquiry Type with default value
     "entry.557944683": "", // Message
     privacyPolicy: false,
   });
@@ -115,99 +130,95 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="flex items-center w-full md:p-1" id="Contact">
-      <div className="bg-white border border-primary rounded-lg shadow-lg p-4  w-[100%]">
-        <form onSubmit={handleSubmit} className="space-y-8">
-          {/* Form Fields */}
-
-          <div className="w-full">
-            <label className="block font-sm font-tthoves-medium mt-2 text-secondary-foreground">
-              Full Name <span className="text-primary">*</span>
-            </label>
+    <div
+      className={`flex items-center w-full md:p-1 ${className}`}
+      id="Contact"
+    >
+      <div
+        className={cn(
+          "bg-white border border-primary rounded-sm shadow-lg p-4 w-[90%] mx-auto",
+          classNameInner
+        )}
+      >
+        <form onSubmit={handleSubmit} className="space-y-4">
+          {/* Updated Form Fields with floating labels */}
+          <div className="relative">
             <input
               type="text"
               name="entry.1725892135"
               value={formData["entry.1725892135"]}
               onChange={handleChange}
-              className="mt-1 block w-full px-4 py-2 text-sm text-secondary-foreground rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
-              placeholder="Full name"
+              placeholder=" "
               required
-              style={{ border: "1px solid #D6D6D8" }}
+              className="block px-4 py-3 w-full text-sm text-secondary-foreground bg-transparent border border-[#D6D6D8] rounded-sm appearance-none focus:outline-none focus:ring-0 focus:border-primary peer"
             />
-          </div>
-          <div className="w-full">
-            <label className="block font-sm font-tthoves-medium text-secondary-foreground">
-              Email <span className="text-primary">*</span>
+            <label className="absolute text-sm text-secondary-foreground duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-focus:text-primary peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">
+              Full Name
             </label>
+          </div>
+
+          <div className="relative">
             <input
               type="email"
               name="entry.2098983406"
               value={formData["entry.2098983406"]}
               onChange={handleChange}
-              className="mt-1 block w-full px-4 py-2  text-sm rounded-md text-secondary-foreground shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
-              placeholder="you@company.com"
+              placeholder=" "
               required
-              style={{ border: "1px solid #D6D6D8" }}
+              className="block px-4 py-3 w-full text-sm text-secondary-foreground bg-transparent border border-[#D6D6D8] rounded-sm appearance-none focus:outline-none focus:ring-0 focus:border-primary peer"
             />
+            <label className="absolute text-sm text-secondary-foreground duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-focus:text-primary peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">
+              Email
+            </label>
           </div>
 
-          <div>
-            <label className="block font-sm font-tthoves-medium text-secondary-foreground">
-              Phone <span className="text-primary">*</span>
-            </label>
+          <div className="relative">
             <input
               type="text"
               name="entry.1155783579"
               value={formData["entry.1155783579"]}
               onChange={handleChange}
-              className="mt-1 block w-full px-4 py-2  text-sm rounded-md text-secondary-foreground shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
-              placeholder="Enter your phone number"
+              placeholder=" "
               required
-              style={{ border: "1px solid #D6D6D8" }}
+              className="block px-4 py-3 w-full text-sm text-secondary-foreground bg-transparent border border-[#D6D6D8] rounded-sm appearance-none focus:outline-none focus:ring-0 focus:border-primary peer"
             />
-          </div>
-          <div>
-            <label className="block font-sm font-tthoves-medium text-secondary-foreground">
-              Enquiry Type <span className="text-primary">*</span>
+            <label className="absolute text-sm text-secondary-foreground duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-focus:text-primary peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">
+              Phone
             </label>
+          </div>
+
+          <div className="relative">
             <select
               name="entry.1655141018"
               value={formData["entry.1655141018"]}
               onChange={handleChange}
-              className="mt-1 block w-full px-4 py-2 text-sm text-secondary-foreground rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary appearance-none"
               required
-              style={{
-                border: "1px solid #D6D6D8",
-                paddingRight: "2.5rem",
-                backgroundImage:
-                  'url(\'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="%234A4A4F" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>\')',
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "calc(100% - 0.5rem) center",
-                backgroundSize: "1.5rem",
-              }}
+              className="block px-4 py-3 w-full text-sm text-secondary-foreground bg-transparent border border-[#D6D6D8] rounded-sm appearance-none focus:outline-none focus:ring-0 focus:border-primary peer"
             >
-              <option value="" disabled>
-                Select an option
-              </option>
+              <option value="" disabled></option>
               <option value="Partner">Partner</option>
               <option value="Product Enquiry">Product Enquiry</option>
+              <option value="Book a free demo">Book a free demo</option>
               <option value="Others">Others</option>
             </select>
-          </div>
-          <div>
-            <label className="block font-sm font-tthoves-medium text-secondary-foreground">
-              Message <span className="text-primary">*</span>
+            <label className="absolute text-sm text-secondary-foreground duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-focus:text-primary peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">
+              Enquiry Type
             </label>
+          </div>
+
+          <div className="relative">
             <textarea
               name="entry.557944683"
               value={formData["entry.557944683"]}
               onChange={handleChange}
-              className="mt-1 block w-full px-4 py-2  text-sm text-secondary-foreground rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
-              placeholder="Leave us a message..."
-              rows={5}
+              placeholder=" "
+              rows={4}
               required
-              style={{ border: "1px solid #D6D6D8" }}
+              className="block px-4 py-3 w-full text-sm text-secondary-foreground bg-transparent border border-[#D6D6D8] rounded-sm appearance-none focus:outline-none focus:ring-0 focus:border-primary peer"
             ></textarea>
+            <label className="absolute text-sm text-secondary-foreground duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-focus:text-primary peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">
+              Message
+            </label>
           </div>
 
           {/* Privacy Policy */}
@@ -247,10 +258,10 @@ export default function ContactForm() {
           <div>
             <button
               type="submit"
-              className="w-full py-3 px-6 bg-primary cursor-pointer text-primary-foreground rounded-full shadow-lg font-tthoves-medium text-lg hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+              className="w-full py-3 px-6 bg-primary cursor-pointer text-primary-foreground rounded-md shadow-lg font-tthoves-medium text-lg hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
               disabled={isSubmitting}
             >
-              {isSubmitting ? "Submitting..." : "Send message"}
+              {isSubmitting ? "Submitting..." : submitButtonText}
             </button>
           </div>
         </form>
