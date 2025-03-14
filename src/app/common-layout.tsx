@@ -159,8 +159,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             `}
         </Script>
       </head>
-      <GoogleTagManager gtmId="GTM-5G8Q4Z7Q" />
-      <GoogleAnalytics gaId="G-D90W2RDVFK" />
+
       <body>
         <noscript>
           <iframe
@@ -239,6 +238,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <Footer />
           </div>
         </div>
+        <GoogleTagManager gtmId="GTM-5G8Q4Z7Q" />
+        <GoogleAnalytics gaId="G-D90W2RDVFK" />
       </body>
     </html>
   );
