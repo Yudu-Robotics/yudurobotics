@@ -8,6 +8,7 @@ interface JumpingButtonsProps {
   bgColor?: string;
   textColor?: string;
   link?: string;
+  onClick?: () => void;
 }
 const JumpingButtons: React.FC<JumpingButtonsProps> = ({
   ishorizontal = false,
@@ -17,6 +18,7 @@ const JumpingButtons: React.FC<JumpingButtonsProps> = ({
   bgColor,
   textColor,
   link = "",
+  onClick,
 }) => {
   return (
     <div
@@ -48,8 +50,10 @@ const JumpingButtons: React.FC<JumpingButtonsProps> = ({
             </div>
           </Link>
         ) : (
-          <div
-            className="rounded-md text-md lg:text-lg h-32 w-32 lg:h-40 lg:w-40 flex flex-col justify-center items-center transform transition duration-500 hover:translate-y-4"
+          <button
+            type="button"
+            onClick={onClick}
+            className="rounded-2xl border border-green-500 text-md lg:text-lg h-20 w-32  lg:h-30 lg:w-40 flex flex-col justify-center items-center transform transition duration-500 hover:translate-y-4"
             style={{
               backgroundColor: bgColor || "#F00",
               color: textColor || "#FFF",
@@ -58,10 +62,13 @@ const JumpingButtons: React.FC<JumpingButtonsProps> = ({
             <span className="block font-tthoves-semiBold">
               {text1 || "Lemme"}
             </span>
-            <span className="block italic font-tthoves-bold  ">
+            <span className="block italic font-tthoves-bold">
               {text2 || "Explore"}
             </span>
-          </div>
+            {text3 !== " " && (
+              <span className="block font-tthoves-semiBold">{text3}</span>
+            )}
+          </button>
         )}
 
         <div

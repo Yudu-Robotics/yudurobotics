@@ -1,7 +1,7 @@
 import CeoReviewsContainer from "@/components/ui/ceo-reviews";
 import GlobalAwards from "@/components/ui/home/global-awards";
 import renderImg from "@/imgImport";
-import JumpingButtons from "../../components/ui/common/jumping-buttons";
+// import JumpingButtons from "../../components/ui/common/jumping-buttons";
 import SubscribeSection from "@/components/ui/home/subscribe-section";
 import dynamic from "next/dynamic";
 import { mockData } from "@/data/mockData";
@@ -17,6 +17,8 @@ import { TextAnimate } from "@/components/magicui/text-animate";
 import AnimatedContent from "@/components/bits/AnimatedContent";
 import type { PartnerDetail } from "@/lib/types";
 // import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import JumpingButtonsSection from "@/components/ui/home/jumping-buttons-section";
+
 const ProductCatalog = dynamic(
   () => import("@/components/ui/productsComponents/product-catalog"),
   {
@@ -115,16 +117,8 @@ export default async function HomePage() {
             </div>
           </div>
 
-          {/* Buttons Section */}
-
-          <JumpingButtons
-            ishorizontal={true}
-            text1="I'm here to"
-            text2="Join Forces"
-            bgColor="#2CF7A4"
-            textColor="#0A4029"
-            link="/partner"
-          />
+          {/* Replace the JumpingButtons with JumpingButtonsSection */}
+          <JumpingButtonsSection />
         </div>
         <div className="py-10">
           {/* <a href=""> */}
