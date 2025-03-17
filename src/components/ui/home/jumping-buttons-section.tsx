@@ -38,7 +38,7 @@ export default function JumpingButtonsSection() {
             submitButtonText="Book a free demo"
             defaultEnquiryType="Book a free demo"
             className="md:p-0 p-0"
-            classNameInner="border-none w-[100%] mx-0"
+            classNameInner="border-none w-full mx-0 p-4"
           />
         </DialogContent>
       </Dialog>

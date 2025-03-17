@@ -44,6 +44,7 @@ export default function ContactForm({
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     const { name, value, type, checked } = e.target;
     setFormData((prevData) => ({
@@ -95,7 +96,8 @@ export default function ContactForm({
 
     // Convert to URLSearchParams for submission
     const formDataStr = new URLSearchParams(transformedData).toString();
-    const url = `https://docs.google.com/forms/d/e/1FAIpQLSeehS-RjlfQrM6CaPUBqEWNkqIvAquMViMqa6mDAJcVDW9q1A/formResponse`;
+    const url =
+      "https://docs.google.com/forms/d/e/1FAIpQLSeehS-RjlfQrM6CaPUBqEWNkqIvAquMViMqa6mDAJcVDW9q1A/formResponse";
 
     try {
       await fetch(url, {
@@ -130,16 +132,8 @@ export default function ContactForm({
   };
 
   return (
-    <div
-      className={`flex items-center w-full md:p-1 ${className}`}
-      id="Contact"
-    >
-      <div
-        className={cn(
-          "bg-white border border-primary rounded-sm shadow-lg p-4 w-[90%] mx-auto",
-          classNameInner
-        )}
-      >
+    <div className={`flex items-center w-full ${className}`}>
+      <div className={cn("w-full mx-auto", classNameInner)}>
         <form onSubmit={handleSubmit} className="space-y-4">
           {/* Updated Form Fields with floating labels */}
           <div className="relative">
@@ -193,9 +187,10 @@ export default function ContactForm({
               value={formData["entry.1655141018"]}
               onChange={handleChange}
               required
+              disabled={defaultEnquiryType !== ""}
               className="block px-4 py-3 w-full text-sm text-secondary-foreground bg-transparent border border-[#D6D6D8] rounded-sm appearance-none focus:outline-none focus:ring-0 focus:border-primary peer"
             >
-              <option value="" disabled></option>
+              <option value="" disabled />
               <option value="Partner">Partner</option>
               <option value="Product Enquiry">Product Enquiry</option>
               <option value="Book a free demo">Book a free demo</option>
@@ -215,7 +210,7 @@ export default function ContactForm({
               rows={4}
               required
               className="block px-4 py-3 w-full text-sm text-secondary-foreground bg-transparent border border-[#D6D6D8] rounded-sm appearance-none focus:outline-none focus:ring-0 focus:border-primary peer"
-            ></textarea>
+            />
             <label className="absolute text-sm text-secondary-foreground duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-focus:text-primary peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">
               Message
             </label>
@@ -241,6 +236,7 @@ export default function ContactForm({
               >
                 You agree to our friendly{" "}
                 <button
+                  type="button"
                   onClick={(e) => {
                     e.preventDefault(); // Prevent form submission
                     handleDialogOpen("privacy");

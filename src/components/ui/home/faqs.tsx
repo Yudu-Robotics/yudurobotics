@@ -34,16 +34,16 @@ const FAQs = ({ product }: { product: string }) => {
               className="border-b border-[#E3E3E4] py-3"
             >
               <div className="flex w-full justify-between items-center">
-                <AccordionTrigger className="flex justify-between items-center w-full outline-none hover:no-underline gap-4">
+                <AccordionTrigger className="flex justify-between items-start w-full outline-none hover:no-underline gap-4">
                   <span className="text-base text-start lg:text-lg xl:text-xl text-[#0A041A] font-tthoves-medium">
                     {item.question}
                   </span>
                   {/* Custom Icon */}
+                  <div data-state="closed" className="accordion-icon">
+                    <PlusCircle color="#BDBDBF" className="h-6 w-6" />
+                    <MinusCircle color="#BDBDBF" className="h-6 w-6" />
+                  </div>{" "}
                 </AccordionTrigger>
-                <div data-state="closed" className="accordion-icon">
-                  <PlusCircle color="#BDBDBF" className="h-6 w-6" />
-                  <MinusCircle color="#BDBDBF" className="h-6 w-6" />
-                </div>
               </div>
               <AccordionContent className="font-tthoves text-secondary-foreground text-sm lg:text-md xl:text-lg">
                 {item.answer.split("\n").map((line, i) => (
