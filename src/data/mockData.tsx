@@ -356,6 +356,12 @@ export const products = [
   // },
 ];
 
+const getWhatsAppLink = (productName: string) => {
+  return `https://wa.me/919606755032?text=Hi,%20I%20want%20to%20buy%20${encodeURIComponent(
+    productName
+  )}`;
+};
+
 export const mockData: { [key: string]: ProductData } = {
   home: {
     heading: "From Playful Robots and Drones to Precision 3D Printers",
@@ -388,31 +394,31 @@ export const mockData: { [key: string]: ProductData } = {
             icon: "/assets/peecee/Featured icon (1).png",
             heading: "Brainy 3-Core Processor",
             description:
-              "PeeCee TED’s got the brains to handle anything you throw at it, making your ideas come to life without a hitch.",
+              "PeeCee TED's got the brains to handle anything you throw at it, making your ideas come to life without a hitch.",
           },
           {
             icon: "/assets/peecee/Featured icon (2).png",
             heading: "Buzz-worthy",
             description:
-              "PeeCee TED’s buzzer gives you instant audio feedback, making your projects not just fun to see, but fun to hear too!",
+              "PeeCee TED's buzzer gives you instant audio feedback, making your projects not just fun to see, but fun to hear too!",
           },
           {
             icon: "/assets/peecee/Featured icon (3).png",
             heading: "Sensors Galore",
             description:
-              "From color and light to touch and temperature, PeeCee TED’s built-in sensors give you the power to interact with the world around you in all kinds of cool ways.",
+              "From color and light to touch and temperature, PeeCee TED's built-in sensors give you the power to interact with the world around you in all kinds of cool ways.",
           },
           {
             icon: "/assets/peecee/Featured icon (4).png",
             heading: "Expressive LEDs",
             description:
-              "Let PeeCee TED show off with customizable LED displays—whether it’s a smiley face or a light show, the possibilities are endless.",
+              "Let PeeCee TED show off with customizable LED displays—whether it's a smiley face or a light show, the possibilities are endless.",
           },
           {
             icon: "/assets/peecee/Featured icon (5).png",
             heading: "Rainbow Bright",
             description:
-              "With 12 RGB LEDs, you can add a splash of color to your projects—because everything’s better in color, right?",
+              "With 12 RGB LEDs, you can add a splash of color to your projects—because everything's better in color, right?",
           },
         ],
       },
@@ -538,7 +544,7 @@ export const mockData: { [key: string]: ProductData } = {
     ],
     sectionHeader: "headerSection",
     ceoComment:
-      "PeeCee’s innovative design and seamless plastic building block integration make it a game-changer for our tech projects.",
+      "PeeCee's innovative design and seamless plastic building block integration make it a game-changer for our tech projects.",
     ceoName: "Mr Murugappan Vishwanath",
     ceoPosition: "Founder",
     companyName: "iThink",
@@ -560,35 +566,35 @@ export const mockData: { [key: string]: ProductData } = {
             icon: "/assets/peecee/Featured icon (1).png",
             heading: "Brainy 3-Core Processor",
             description:
-              "PeeCee TED’s got the brains to handle anything you throw at it, making your ideas come to life without a hitch.",
+              "PeeCee TED's got the brains to handle anything you throw at it, making your ideas come to life without a hitch.",
             video: "brainy",
           },
           {
             icon: "/assets/peecee/Featured icon (2).png",
             heading: "Buzz-worthy",
             description:
-              "PeeCee TED’s buzzer gives you instant audio feedback, making your projects not just fun to see, but fun to hear too!",
+              "PeeCee TED's buzzer gives you instant audio feedback, making your projects not just fun to see, but fun to hear too!",
             video: "buzz",
           },
           {
             icon: "/assets/peecee/Featured icon (3).png",
             heading: "Sensors Galore",
             description:
-              "From color and light to touch and temperature, PeeCee TED’s built-in sensors give you the power to interact with the world around you in all kinds of cool ways.",
+              "From color and light to touch and temperature, PeeCee TED's built-in sensors give you the power to interact with the world around you in all kinds of cool ways.",
             video: "sensors",
           },
           {
             icon: "/assets/peecee/Featured icon (4).png",
             heading: "Expressive LEDs",
             description:
-              "Let PeeCee TED show off with customizable LED displays—whether it’s a smiley face or a light show, the possibilities are endless.",
+              "Let PeeCee TED show off with customizable LED displays—whether it's a smiley face or a light show, the possibilities are endless.",
             video: "expressive",
           },
           {
             icon: "/assets/peecee/Featured icon (5).png",
             heading: "Rainbow Bright",
             description:
-              "With 12 RGB LEDs, you can add a splash of color to your projects—because everything’s better in color, right?",
+              "With 12 RGB LEDs, you can add a splash of color to your projects—because everything's better in color, right?",
             video: "rainbow",
           },
         ],
@@ -603,7 +609,7 @@ export const mockData: { [key: string]: ProductData } = {
             icon: "iot",
             heading: "IoT Magic via the Cloud",
             description:
-              "Connect PeeCee TED to the cloud and unlock a world of IoT possibilities. Smart projects? Data at your fingertips? It’s all just a tap away!",
+              "Connect PeeCee TED to the cloud and unlock a world of IoT possibilities. Smart projects? Data at your fingertips? It's all just a tap away!",
             video: "iot",
           },
 
@@ -618,7 +624,7 @@ export const mockData: { [key: string]: ProductData } = {
             icon: "wifi",
             heading: "Wire-Free Wonder",
             description:
-              "Program PeeCee TED from anywhere—whether you’re on the cloud or on your phone. No wires, no limits—just pure creative freedom.",
+              "Program PeeCee TED from anywhere—whether you're on the cloud or on your phone. No wires, no limits—just pure creative freedom.",
             video: "wire",
           },
           {
@@ -722,7 +728,7 @@ export const mockData: { [key: string]: ProductData } = {
               },
               {
                 title: "Gear Up",
-                desc: "Gather the components you’ll need for the project.",
+                desc: "Gather the components you'll need for the project.",
               },
               {
                 title: "Test and Tweak",
@@ -762,7 +768,7 @@ export const mockData: { [key: string]: ProductData } = {
     legofun: {
       heading: "Building Fun",
       subheading:
-        "PeeCee TED is best buddies with colourful building block kits, so you can build, expand, and create to your heart’s content.",
+        "PeeCee TED is best buddies with colourful building block kits, so you can build, expand, and create to your heart's content.",
       centerImage: "/assets/other/lego-fun.webp",
     },
     futureProff: {
@@ -781,7 +787,7 @@ export const mockData: { [key: string]: ProductData } = {
         text2: "Now!",
         bgColor: "#602CF7",
         textColor: "#FAF9FE",
-        link: "#footer-contact-form-component",
+        link: getWhatsAppLink("PeeCee TED"),
       },
       {
         text1: "Learn",
@@ -869,7 +875,7 @@ export const mockData: { [key: string]: ProductData } = {
     ],
     sectionHeader: "middleHeaderSection",
     ceoComment:
-      "Roboki’s seamless integration and flexibility have made learning and creating so much more engaging for our users.",
+      "Roboki's seamless integration and flexibility have made learning and creating so much more engaging for our users.",
     features_data: {
       section1: {
         heading: "Ready to Go, Right Out of the Box",
@@ -1002,7 +1008,7 @@ export const mockData: { [key: string]: ProductData } = {
         text2: "Now!",
         bgColor: "#602CF7",
         textColor: "#FAF9FE",
-        link: "#footer-contact-form-component",
+        link: getWhatsAppLink("Roboki"),
       },
       {
         text1: "Learn",
@@ -1049,7 +1055,7 @@ export const mockData: { [key: string]: ProductData } = {
     images: ["/assets/zing/zing.webp", "/assets/zing/zinghardware1.webp"],
     sectionHeader: "sideHeaderSection",
     ceoComment:
-      "Zing’s lifelike movements and intuitive controls have redefined interactive robotics for our team.",
+      "Zing's lifelike movements and intuitive controls have redefined interactive robotics for our team.",
     features_data: {
       section1: {
         heading: "Ready to Go, Right Out of the Box",
@@ -1190,28 +1196,28 @@ export const mockData: { [key: string]: ProductData } = {
       {
         text1: "Own One",
         text2: "Now!",
-        bgColor: "#F72D3E",
+        bgColor: "#602CF7",
         textColor: "#FAF9FE",
-        link: "#footer-contact-form-component",
+        link: getWhatsAppLink("Zing"),
       },
       {
         text1: "Learn",
         text2: "More",
-        bgColor: "#F72D3E",
+        bgColor: "#602CF7",
         textColor: "#FAF9FE",
         link: "https://edu.plode.org",
       },
       {
         text1: "Download",
         text2: "Plode App",
-        bgColor: "#F72D3E",
+        bgColor: "#602CF7",
         textColor: "#FAF9FE",
         link: "https://edu.plode.org",
       },
       {
         text1: "Start",
         text2: "Learning",
-        bgColor: "#F72D3E",
+        bgColor: "#602CF7",
         textColor: "#FAF9FE",
         link: "",
       },
@@ -1219,7 +1225,7 @@ export const mockData: { [key: string]: ProductData } = {
         text1: "Lemme",
         text2: "Learn ",
         text3: "More",
-        bgColor: "#F72D3E",
+        bgColor: "#602CF7",
         textColor: "#FAF9FE",
         link: "/partner",
       },
@@ -1239,7 +1245,7 @@ export const mockData: { [key: string]: ProductData } = {
     images: ["/assets/crawle/crawle.webp", "/assets/crawle/crawlehard1.png"],
     sectionHeader: "middleHeaderSection",
     ceoComment:
-      "Crawl-E’s versatile design and reliable performance have been key to our exploration projects.",
+      "Crawl-E's versatile design and reliable performance have been key to our exploration projects.",
     features_data: {
       section1: {
         heading: "Ready to Go, Right Out of the Box",
@@ -1381,28 +1387,28 @@ export const mockData: { [key: string]: ProductData } = {
       {
         text1: "Own One",
         text2: "Now!",
-        bgColor: "#F72D3E",
+        bgColor: "#602CF7",
         textColor: "#FAF9FE",
-        link: "#footer-contact-form-component",
+        link: getWhatsAppLink("Crawl-E"),
       },
       {
         text1: "Learn",
         text2: "More",
-        bgColor: "#F72D3E",
+        bgColor: "#602CF7",
         textColor: "#FAF9FE",
         link: "https://edu.plode.org",
       },
       {
         text1: "Download",
         text2: "Plode App",
-        bgColor: "#F72D3E",
+        bgColor: "#602CF7",
         textColor: "#FAF9FE",
         link: "https://edu.plode.org",
       },
       {
         text1: "Start",
         text2: "Learning",
-        bgColor: "#F72D3E",
+        bgColor: "#602CF7",
         textColor: "#FAF9FE",
         link: "#",
       },
@@ -1410,7 +1416,7 @@ export const mockData: { [key: string]: ProductData } = {
         text1: "Lemme",
         text2: "Learn ",
         text3: "More",
-        bgColor: "#F72D3E",
+        bgColor: "#602CF7",
         textColor: "#FAF9FE",
         link: "/partner",
       },
@@ -1430,7 +1436,7 @@ export const mockData: { [key: string]: ProductData } = {
     images: ["/assets/klawb/klawb.webp", "/assets/klawb/klawbhardware1.webp"],
     sectionHeader: "headerSection",
     ceoComment:
-      "Klaw-b’s accuracy and ease of use have made it an essential tool in our automation process.",
+      "Klaw-b's accuracy and ease of use have made it an essential tool in our automation process.",
     features_data: {
       section1: {
         heading: "Ready to Go, Right Out of the Box",
@@ -1485,7 +1491,7 @@ export const mockData: { [key: string]: ProductData } = {
             icon: "strong",
             heading: "Robust Design",
             description:
-              "Klaw-b features a sturdy metal body and a built-in gripper for precise handling and manipulation of objects. With a lift capacity of up to 100 grams, it’s designed to tackle a range of tasks.",
+              "Klaw-b features a sturdy metal body and a built-in gripper for precise handling and manipulation of objects. With a lift capacity of up to 100 grams, it's designed to tackle a range of tasks.",
           },
           {
             icon: "dimension",
@@ -1597,28 +1603,28 @@ export const mockData: { [key: string]: ProductData } = {
       {
         text1: "Own One",
         text2: "Now!",
-        bgColor: "#F7812D",
+        bgColor: "#602CF7",
         textColor: "#FAF9FE",
-        link: "#footer-contact-form-component",
+        link: getWhatsAppLink("Klaw-B"),
       },
       {
         text1: "Learn",
         text2: "More",
-        bgColor: "#F7812D",
+        bgColor: "#602CF7",
         textColor: "#FAF9FE",
         link: "https://edu.plode.org",
       },
       {
         text1: "Download",
         text2: "Plode App",
-        bgColor: "#F7812D",
+        bgColor: "#602CF7",
         textColor: "#FAF9FE",
         link: "https://edu.plode.org",
       },
       {
         text1: "Start",
         text2: "Learning",
-        bgColor: "#F7812D",
+        bgColor: "#602CF7",
         textColor: "#FAF9FE",
         link: "#",
       },
@@ -1626,7 +1632,7 @@ export const mockData: { [key: string]: ProductData } = {
         text1: "Lemme",
         text2: "Learn ",
         text3: "More",
-        bgColor: "#F7812E",
+        bgColor: "#602CF7",
         textColor: "#FAF9FE",
         link: "/partner",
       },
@@ -1655,7 +1661,7 @@ export const mockData: { [key: string]: ProductData } = {
       section1: {
         heading: "Data Mode - Explore, Measure, and Visualise",
         subheading:
-          "Plode’s Data Mode provides a powerful way to monitor, measure, and visualise data from both internal sensors and external accessories. Tailored to your kit’s capabilities, it offers a seamless step-by-step setup for precise data capture and analysis.",
+          "Plode's Data Mode provides a powerful way to monitor, measure, and visualise data from both internal sensors and external accessories. Tailored to your kit's capabilities, it offers a seamless step-by-step setup for precise data capture and analysis.",
         centerImage: "/assets/crawle/crawlehardware1.webp",
         features: [
           {
@@ -1668,7 +1674,7 @@ export const mockData: { [key: string]: ProductData } = {
             icon: "/assets/partner/icon/settime.png",
             heading: "Set Time Interval",
             description:
-              "Customise the frequency for data readings, ensuring your measurements align with your experiment’s needs.",
+              "Customise the frequency for data readings, ensuring your measurements align with your experiment's needs.",
           },
           {
             icon: "/assets/partner/icon/plot.png",
@@ -1686,7 +1692,7 @@ export const mockData: { [key: string]: ProductData } = {
             icon: "/assets/partner/icon/setgraph.png",
             heading: "Set Graph Type",
             description:
-              " Visualise your data with Line or Bar Graphs to spot trends or analyse patterns effortlessly.",
+              " Visualise your data with Line or Bar Graphs to spot trends or analyse patterns effortlessly.",
           },
         ],
       },
@@ -1761,7 +1767,7 @@ export const mockData: { [key: string]: ProductData } = {
           heading:
             "Block-Based Programming - Play with Logic, Master the Basics",
           subheading:
-            "In block-based programming, users assemble pre-defined code blocks that connect like puzzle pieces. It’s a fun and intuitive way to learn the fundamentals of coding.",
+            "In block-based programming, users assemble pre-defined code blocks that connect like puzzle pieces. It's a fun and intuitive way to learn the fundamentals of coding.",
           centerImage: "/assets/other/imagePlaceholder2.webp",
           features: [
             {
@@ -1788,7 +1794,7 @@ export const mockData: { [key: string]: ProductData } = {
         {
           heading: "Python Programming - Simple Syntax, Powerful Control",
           subheading:
-            "Python programming provides an easy entry point into text-based coding. It’s focused on controlling hardware with accessible syntax and pre-configured libraries.",
+            "Python programming provides an easy entry point into text-based coding. It's focused on controlling hardware with accessible syntax and pre-configured libraries.",
           centerImage: "/assets/other/imagePlaceholder2.webp",
           features: [
             {
@@ -1899,30 +1905,30 @@ export const mockData: { [key: string]: ProductData } = {
     },
     jumppingButton: [
       {
-        text1: "Button",
-        text2: "CTA",
-        bgColor: "#2CF7A4",
-        textColor: "#0A4029",
-        link: "https://play.google.com/store/apps/details?id=com.bibox.bisoftsuite&hl=en_IN&pli=1",
+        text1: "Own One",
+        text2: "Now!",
+        bgColor: "#602CF7",
+        textColor: "#FAF9FE",
+        link: getWhatsAppLink("Plode"),
       },
       {
         text1: "Learn",
         text2: "More",
-        bgColor: "#2CF7A4",
+        bgColor: "#602CF7",
         textColor: "#FAF9FE",
         link: "#",
       },
       {
         text1: "Download",
         text2: "Plode App",
-        bgColor: "#2CF7A4",
+        bgColor: "#602CF7",
         textColor: "#FAF9FE",
         link: "https://play.google.com/store/apps/details?id=com.bibox.bisoftsuite&hl=en_IN&pli=1",
       },
       {
         text1: "Start",
         text2: "Learning",
-        bgColor: "#2CF7A4",
+        bgColor: "#602CF7",
         textColor: "#FAF9FE",
         link: "#",
       },
@@ -1930,7 +1936,7 @@ export const mockData: { [key: string]: ProductData } = {
         text1: "Lemme",
         text2: "Learn ",
         text3: "More",
-        bgColor: "#2CF7A4",
+        bgColor: "#602CF7",
         textColor: "#FAF9FE",
         link: "/partner",
       },
@@ -1984,7 +1990,7 @@ export const mockData: { [key: string]: ProductData } = {
         {
           src: "rocket",
           title: "Effortless Device Pairing",
-          desc: "With Plode, connecting to your kit is quick and seamless. Select a specific kit or tap Auto to let the app do the work for you. The app instantly scans for the appropriate device, ensuring you’re ready to jump into action without delays. Whether you're working with a specific kit or exploring, Plode keeps things smooth and connected.",
+          desc: "With Plode, connecting to your kit is quick and seamless. Select a specific kit or tap Auto to let the app do the work for you. The app instantly scans for the appropriate device, ensuring you're ready to jump into action without delays. Whether you're working with a specific kit or exploring, Plode keeps things smooth and connected.",
         },
       ],
       img: "zigzag",
@@ -2095,7 +2101,7 @@ export const mockData: { [key: string]: ProductData } = {
       section1: {
         heading: "Data Mode - Explore, Measure, and Visualise",
         subheading:
-          "Plode’s Data Mode provides a powerful way to monitor, measure, and visualise data from both internal sensors and external accessories. Tailored to your kit’s capabilities, it offers a seamless step-by-step setup for precise data capture and analysis.",
+          "Plode's Data Mode provides a powerful way to monitor, measure, and visualise data from both internal sensors and external accessories. Tailored to your kit's capabilities, it offers a seamless step-by-step setup for precise data capture and analysis.",
         centerImage: "/assets/crawle/crawlehardware1.webp",
         features: [
           {
@@ -2108,7 +2114,7 @@ export const mockData: { [key: string]: ProductData } = {
             icon: "/assets/partner/icon/settime.png",
             heading: "Set Time Interval",
             description:
-              "Customise the frequency for data readings, ensuring your measurements align with your experiment’s needs.",
+              "Customise the frequency for data readings, ensuring your measurements align with your experiment's needs.",
           },
           {
             icon: "/assets/partner/icon/plot.png",
@@ -2126,7 +2132,7 @@ export const mockData: { [key: string]: ProductData } = {
             icon: "/assets/partner/icon/setgraph.png",
             heading: "Set Graph Type",
             description:
-              " Visualise your data with Line or Bar Graphs to spot trends or analyse patterns effortlessly.",
+              " Visualise your data with Line or Bar Graphs to spot trends or analyse patterns effortlessly.",
           },
         ],
       },
@@ -2201,7 +2207,7 @@ export const mockData: { [key: string]: ProductData } = {
           heading:
             "Block-Based Programming - Play with Logic, Master the Basics",
           subheading:
-            "In block-based programming, users assemble pre-defined code blocks that connect like puzzle pieces. It’s a fun and intuitive way to learn the fundamentals of coding.",
+            "In block-based programming, users assemble pre-defined code blocks that connect like puzzle pieces. It's a fun and intuitive way to learn the fundamentals of coding.",
           centerImage: "/assets/other/imagePlaceholder2.webp",
           features: [
             {
@@ -2228,7 +2234,7 @@ export const mockData: { [key: string]: ProductData } = {
         {
           heading: "Python Programming - Simple Syntax, Powerful Control",
           subheading:
-            "Python programming provides an easy entry point into text-based coding. It’s focused on controlling hardware with accessible syntax and pre-configured libraries.",
+            "Python programming provides an easy entry point into text-based coding. It's focused on controlling hardware with accessible syntax and pre-configured libraries.",
           centerImage: "/assets/other/imagePlaceholder2.webp",
           features: [
             {
@@ -2395,7 +2401,7 @@ export const blogData: BlogData = [
   {
     title: "Migrating to Linear 101",
     description:
-      "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get started.",
+      "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here's how to get started.",
     image: "/assets/blog/Image2.webp",
     content:
       "Sustainable living is not just a trend; it's a necessity. By making small, conscious changes in our daily lives, we can significantly reduce our carbon footprint and help protect the environment...",
@@ -2427,7 +2433,7 @@ export const blogData: BlogData = [
   {
     title: "Migrating to Linear 101",
     description:
-      "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get started.",
+      "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here's how to get started.",
     image: "/assets/blog/Image2.webp",
     content:
       "Sustainable living is not just a trend; it's a necessity. By making small, conscious changes in our daily lives, we can significantly reduce our carbon footprint and help protect the environment...",
@@ -2459,7 +2465,7 @@ export const blogData: BlogData = [
   {
     title: "Migrating to Linear 101",
     description:
-      "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get started.",
+      "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here's how to get started.",
     image: "/assets/blog/Image2.webp",
     content:
       "Sustainable living is not just a trend; it's a necessity. By making small, conscious changes in our daily lives, we can significantly reduce our carbon footprint and help protect the environment...",
@@ -2491,7 +2497,7 @@ export const blogData: BlogData = [
   {
     title: "Migrating to Linear 101",
     description:
-      "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get started.",
+      "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here's how to get started.",
     image: "/assets/blog/Image2.webp",
     content:
       "Sustainable living is not just a trend; it's a necessity. By making small, conscious changes in our daily lives, we can significantly reduce our carbon footprint and help protect the environment...",
@@ -2523,7 +2529,7 @@ export const blogData: BlogData = [
   {
     title: "Migrating to Linear 101",
     description:
-      "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get started.",
+      "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here's how to get started.",
     image: "/assets/blog/Image2.webp",
     content:
       "Sustainable living is not just a trend; it's a necessity. By making small, conscious changes in our daily lives, we can significantly reduce our carbon footprint and help protect the environment...",
@@ -2554,7 +2560,7 @@ export const blogData: BlogData = [
   {
     title: "Migrating to Linear 101",
     description:
-      "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get started.",
+      "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here's how to get started.",
     image: "/assets/blog/Image2.webp",
     content:
       "Sustainable living is not just a trend; it's a necessity. By making small, conscious changes in our daily lives, we can significantly reduce our carbon footprint and help protect the environment...",
@@ -2590,7 +2596,7 @@ export const positions = [
     department: "Design",
     departmentColor: "text-blue-600 bg-blue-100 border-blue-200",
     description:
-      "We’re looking for a mid-level product designer to join our team.",
+      "We're looking for a mid-level product designer to join our team.",
     remote: true,
     type: "Full-time",
   },
@@ -2599,7 +2605,7 @@ export const positions = [
     department: "Software Development",
     departmentColor: "text-red-600 bg-red-100 border-red-200",
     description:
-      "We’re looking for an experienced engineering manager to join our team.",
+      "We're looking for an experienced engineering manager to join our team.",
     remote: true,
     type: "Full-time",
   },
@@ -2608,7 +2614,7 @@ export const positions = [
     department: "Design",
     departmentColor: "text-blue-600 bg-blue-100 border-blue-200",
     description:
-      "We’re looking for a mid-level product designer to join our team.",
+      "We're looking for a mid-level product designer to join our team.",
     remote: true,
     type: "Full-time",
   },
@@ -2617,7 +2623,7 @@ export const positions = [
     department: "Software Development",
     departmentColor: "text-red-600 bg-red-100 border-red-200",
     description:
-      "We’re looking for an experienced engineering manager to join our team.",
+      "We're looking for an experienced engineering manager to join our team.",
     remote: true,
     type: "Full-time",
   },
@@ -2626,7 +2632,7 @@ export const positions = [
     department: "Design",
     departmentColor: "text-blue-600 bg-blue-100 border-blue-200",
     description:
-      "We’re looking for a mid-level product designer to join our team.",
+      "We're looking for a mid-level product designer to join our team.",
     remote: true,
     type: "Full-time",
   },
@@ -2635,7 +2641,7 @@ export const positions = [
     department: "Software Development",
     departmentColor: "text-red-600 bg-red-100 border-red-200",
     description:
-      "We’re looking for an experienced engineering manager to join our team.",
+      "We're looking for an experienced engineering manager to join our team.",
     remote: true,
     type: "Full-time",
   },

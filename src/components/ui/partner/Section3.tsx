@@ -59,14 +59,17 @@ export default function Section3() {
         <div className="font-cobaltRidge text-5xl md:text-6xl lg:text-7xl tex-center text-primary-foreground text-[#0A041A] px-4">
           {highlightWords(heading1, [heading1], "text-[#0A041A]")}
         </div>
-        <div className="font-cobaltRidge text-5xl md:text-6xl lg:text-7xl  text-primary-foreground text-[#0A041A] px-4">
+        <div
+          className="font-cobaltRidge text-5xl md:text-6xl lg:text-7xl  text-primary-foreground text-[#0A041A] px-4"
+          id="footer-contact-form-component"
+        >
           {highlightWords(heading2, [heading2], "text-[#5423E6]")}
         </div>
         <p className="sm:w-[80%] md:w-[60%] lg:px-10 px-3 text-lg mt-5 text-[#4A4A4F]">
           {subheading}
         </p>
       </div>
-      <div className="flex md:w-1/2 m-auto mt-4 flex-col md:flex-row justify-center items-center xl:px-20 ">
+      <div className="flex md:w-1/2 m-auto mt-4 flex-col md:flex-row justify-center items-center xl:px-20">
         {/* <div className="flex-1 w-full"> */}
         {/* {isSmallScreen ? (
         <div className="grid grid-cols-1 px-4 my-16">
@@ -152,8 +155,14 @@ export default function Section3() {
         className="w-full sm:px-12 sm:my-10 my-4 h-[30vh] sm:h-auto px-3"
       /> */}
         {/* </div> */}
-        <div className="flex-1 w-11/12 md:w-1/2 px-4 xl:px-10" id="contact">
-          <ContactForm />
+        <div className="bg-white border border-primary rounded-sm shadow-lg p-4 md:w-[80%]  mx-auto">
+          <div>
+            <h1 className="font-cobaltRidge text-primary">Partner with us</h1>
+            <p className="font-tthoves-medium text-[#5423E6]">
+              Please fill in the form below to partner enquiry
+            </p>
+          </div>
+          <ContactForm defaultEnquiryType="Partner" classNameInner="pt-4" />
         </div>
       </div>
     </>
