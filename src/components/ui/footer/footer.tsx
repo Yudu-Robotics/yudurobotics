@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from "react";
 // import JumpingButtons from "../common/jumping-buttons";
 import renderImg from "@/imgImport";
@@ -161,7 +162,7 @@ const Footer = () => {
         </div>
 
         <div
-          id="footer-contact-form-component"
+          id="footer-map"
           className="flex flex-col space-y-8 lg:flex-row lg:space-y-0 justify-between py-4 lg:py-20 "
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 py-4 lg:w-[50%] ">

@@ -49,8 +49,8 @@ const FloatingWhatsApp = () => {
           <div>{renderSvg("floatingWhatsApp")}</div>
         </button>
       </PopoverTrigger>
-      <PopoverContent className="w-80 p-0 bg-gray-50 mr-2 md:mr-4 rounded-lg font-tthoves">
-        <div className="flex justify-between items-center bg-green-600 p-3 text-white rounded-t-lg">
+      <PopoverContent className="w-80 p-0 bg-gray-50 mr-2 md:mr-4 rounded-lg font-cobaltRidge">
+        <div className="flex justify-between items-center bg-primary p-3 text-white rounded-t-lg">
           <h4 className="font-medium">Chat with us!</h4>
           <button
             type="button"
@@ -61,7 +61,7 @@ const FloatingWhatsApp = () => {
           </button>
         </div>
         <div className="p-4 space-y-4">
-          <div className="bg-white rounded-lg p-3 shadow-sm">
+          <div className="bg-white rounded-lg p-3 shadow-sm font-tthoves">
             <p className="text-sm text-gray-600 mb-1">Hi! 👋</p>
             <p className="text-sm text-gray-600">How can i help you</p>
           </div>
@@ -69,7 +69,7 @@ const FloatingWhatsApp = () => {
             <button
               type="button"
               onClick={handleClick}
-              className="w-full bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition-colors"
+              className="w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-green-700 transition-colors"
             >
               WhatsApp
             </button>
@@ -78,7 +78,7 @@ const FloatingWhatsApp = () => {
               onClick={() => {
                 setShowContactForm(true);
               }}
-              className="w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-secondary transition-colors"
+              className="w-full bg-muted/90 text-white py-2 px-4 rounded-md hover:bg-secondary transition-colors"
             >
               Contact Us
             </button>

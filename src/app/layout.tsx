@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-
+import Clarity from "@microsoft/clarity";
 const cobaltRidge = localFont({
   src: "./../../fonts/CobaltRidge.otf",
   variable: "--font-cobalt",
@@ -84,6 +84,39 @@ export const metadata: Metadata = {
     "Robotics",
     "Technology",
     "Innovation",
+    "DIY Kits",
+    "Educational Toys",
+    "STEM Toys",
+    "Robotic Kits",
+    "Robotics Lab Kits",
+    "Electronic Learning Kits",
+    "Robotic Toys for Kids",
+    "STEM Toys for Kids",
+    "Robotics for All Ages",
+    "Educational Gifts for Kids",
+    "Coding Toys",
+    "Block-based Coding",
+    "Visual Programming",
+    "AI Robotics",
+    "Multiple Project Kits",
+    "All Terrain Robots",
+    "School Robotics Lab",
+    "Educational STEM Kits",
+    "Learning Materials",
+    "Teaching Kits",
+    "Humanoid Robots",
+    "AI Learning Kits",
+    "Microcontroller Kits",
+    "Animatronics",
+    "Affordable Robotic Kits",
+    "Premium Robotics",
+    "Event Display Robots",
+    "Lab Equipment",
+    "School Projects",
+    "App-controlled Toys",
+    "Building Block Toys",
+    "International Robotics",
+    "Arduino Compatible",
   ],
 };
 
@@ -92,6 +125,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  Clarity.init("qo1dspuq4k");
   return (
     <html
       lang="en"
@@ -107,7 +141,9 @@ export default function RootLayout({
           {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-
+   gtag('consent', 'default', {
+                    'analytics_storage': 'denied'
+                });
 gtag('config', 'G-D90W2RDVFK');`}
         </Script>
 
@@ -119,6 +155,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5G8Q4Z7Q');
 
+            `}
+        </Script>
+        <Script id="microsoft-clarity">
+          {`
+          (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "qo1dspuq4k");
             `}
         </Script>
       </head>
