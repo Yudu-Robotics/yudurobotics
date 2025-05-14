@@ -40,7 +40,7 @@ const Footer = () => {
     { name: "twitterIcon", link: "https://twitter.com/YuduRobotics/" },
     {
       name: "linkedInIcon",
-      link: "https://www.linkedin.com/showcase/yudu-robotics/",
+      link: "https://www.linkedin.com/company/yudurobotics/posts/?feedView=all",
     },
     // { name: "fbIcon", link: "" },
     { name: "instaIcon", link: "https://www.instagram.com/yudurobotics/" },
@@ -99,7 +99,7 @@ const Footer = () => {
     {
       type: "Working hours",
       text: "Come say hello at our office HQ.",
-      contact_by: "Monday to Saturday 9:00 AM to 6:00 PM",
+      contact_by: "Monday to Friday 9:00 AM to 6:00 PM",
       icon_image: <Hourglass color={iconColor[index]} />,
     },
     // {
