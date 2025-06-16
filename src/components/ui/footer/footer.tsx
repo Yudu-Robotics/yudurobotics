@@ -265,7 +265,7 @@ const Footer = () => {
 
         <div className="flex flex-col space-y-4 lg:space-x-32 justify-start lg:justify-start lg:flex-row lg:space-y-0 ">
           <p className="text-xs lg:text-lg font-tthoves opacity-70">
-            © 2025 Yudu Robotics. All rights reserved.
+            © 2025 Yudu Robotics. A division of Evobi Automations Pvt.Ltd. All rights reserved.
           </p>
           <div className="flex space-x-6">
             {social_share.map((item, key) => (
